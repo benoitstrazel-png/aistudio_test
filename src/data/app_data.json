@@ -1,0 +1,464 @@
+{
+  "seasonStats": {
+    "totalGoals": 1737,
+    "goalsPerMatch": 2.84,
+    "goalsPerDay": 25.54
+  },
+  "nextMatches": [
+    {
+      "id": 4987,
+      "homeTeam": "Auxerre",
+      "awayTeam": "Reims",
+      "date": "2025-12-18",
+      "odds": {
+        "home": 1.79,
+        "draw": 3.99,
+        "away": 3.5
+      },
+      "prediction": {
+        "score": "1-1",
+        "winner": "Auxerre",
+        "confidence": 50,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.502864130072412,
+          "N": 0.22556757437300654,
+          "2": 0.25718152087690244
+        }
+      }
+    },
+    {
+      "id": 3818,
+      "homeTeam": "Brest",
+      "awayTeam": "Lyon",
+      "date": "2025-12-19",
+      "odds": {
+        "home": 1.96,
+        "draw": 4.42,
+        "away": 2.96
+      },
+      "prediction": {
+        "score": "2-1",
+        "winner": "Brest",
+        "confidence": 45,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.45820047978385314,
+          "N": 0.2035680622646663,
+          "2": 0.30407916342199426
+        }
+      }
+    },
+    {
+      "id": 8444,
+      "homeTeam": "Rennes",
+      "awayTeam": "Montpellier",
+      "date": "2025-12-20",
+      "odds": {
+        "home": 1.35,
+        "draw": 5.91,
+        "away": 7.57
+      },
+      "prediction": {
+        "score": "2-1",
+        "winner": "Rennes",
+        "confidence": 66,
+        "advice": "Victoire Rennes",
+        "probs": {
+          "1": 0.6679767647154475,
+          "N": 0.1522698900931905,
+          "2": 0.11884822647399357
+        }
+      }
+    },
+    {
+      "id": 3713,
+      "homeTeam": "Le Havre",
+      "awayTeam": "Lens",
+      "date": "2025-12-18",
+      "odds": {
+        "home": 3.4,
+        "draw": 3.73,
+        "away": 1.86
+      },
+      "prediction": {
+        "score": "1-1",
+        "winner": "Lens",
+        "confidence": 48,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.2645587403947865,
+          "N": 0.24157306188906735,
+          "2": 0.48507355701275273
+        }
+      }
+    },
+    {
+      "id": 6183,
+      "homeTeam": "Metz",
+      "awayTeam": "Nantes",
+      "date": "2025-12-23",
+      "odds": {
+        "home": 2.13,
+        "draw": 3.65,
+        "away": 2.78
+      },
+      "prediction": {
+        "score": "1-1",
+        "winner": "Metz",
+        "confidence": 42,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.42173624630234713,
+          "N": 0.24676191311441592,
+          "2": 0.3237421142122475
+        }
+      }
+    },
+    {
+      "id": 4756,
+      "homeTeam": "Lille",
+      "awayTeam": "Marseille",
+      "date": "2025-12-24",
+      "odds": {
+        "home": 1.93,
+        "draw": 4.05,
+        "away": 3.06
+      },
+      "prediction": {
+        "score": "1-1",
+        "winner": "Lille",
+        "confidence": 46,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.46584224455788825,
+          "N": 0.2224155626107813,
+          "2": 0.29459299385954907
+        }
+      }
+    },
+    {
+      "id": 9503,
+      "homeTeam": "St Etienne",
+      "awayTeam": "Nice",
+      "date": "2025-12-23",
+      "odds": {
+        "home": 6.73,
+        "draw": 5.67,
+        "away": 1.39
+      },
+      "prediction": {
+        "score": "1-2",
+        "winner": "Nice",
+        "confidence": 64,
+        "advice": "Victoire Nice",
+        "probs": {
+          "1": 0.13369097447595374,
+          "N": 0.1586118539296953,
+          "2": 0.6489949007301267
+        }
+      }
+    },
+    {
+      "id": 2689,
+      "homeTeam": "PSG",
+      "awayTeam": "Toulouse",
+      "date": "2025-12-23",
+      "odds": {
+        "home": 1.29,
+        "draw": 7.72,
+        "away": 11.49
+      },
+      "prediction": {
+        "score": "3-0",
+        "winner": "PSG",
+        "confidence": 69,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.699656593710726,
+          "N": 0.11656350851315458,
+          "2": 0.0783005021423357
+        }
+      }
+    },
+    {
+      "id": 2992,
+      "homeTeam": "Strasbourg",
+      "awayTeam": "Clermont",
+      "date": "2025-12-20",
+      "odds": {
+        "home": 1.32,
+        "draw": 5.24,
+        "away": 8.01
+      },
+      "prediction": {
+        "score": "2-0",
+        "winner": "Strasbourg",
+        "confidence": 68,
+        "advice": "Victoire Strasbourg",
+        "probs": {
+          "1": 0.6834998344511538,
+          "N": 0.1716363923169258,
+          "2": 0.11238808750116713
+        }
+      }
+    },
+    {
+      "id": 7762,
+      "homeTeam": "Lorient",
+      "awayTeam": "Angers",
+      "date": "2025-12-24",
+      "odds": {
+        "home": 1.88,
+        "draw": 4.03,
+        "away": 3.18
+      },
+      "prediction": {
+        "score": "1-1",
+        "winner": "Lorient",
+        "confidence": 47,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.4775451862529968,
+          "N": 0.22351588550052415,
+          "2": 0.282753083328856
+        }
+      }
+    }
+  ],
+  "standings": [
+    {
+      "team": "PSG",
+      "points": 160,
+      "played": 68,
+      "projectedPoints": 80,
+      "status": "live"
+    },
+    {
+      "team": "Monaco",
+      "points": 128,
+      "played": 68,
+      "projectedPoints": 64,
+      "status": "live"
+    },
+    {
+      "team": "Lille",
+      "points": 119,
+      "played": 68,
+      "projectedPoints": 59,
+      "status": "live"
+    },
+    {
+      "team": "Nice",
+      "points": 115,
+      "played": 68,
+      "projectedPoints": 57,
+      "status": "live"
+    },
+    {
+      "team": "Marseille",
+      "points": 115,
+      "played": 68,
+      "projectedPoints": 57,
+      "status": "live"
+    },
+    {
+      "team": "Brest",
+      "points": 111,
+      "played": 68,
+      "projectedPoints": 55,
+      "status": "live"
+    },
+    {
+      "team": "Lyon",
+      "points": 110,
+      "played": 68,
+      "projectedPoints": 55,
+      "status": "live"
+    },
+    {
+      "team": "Lens",
+      "points": 103,
+      "played": 68,
+      "projectedPoints": 51,
+      "status": "live"
+    },
+    {
+      "team": "Strasbourg",
+      "points": 96,
+      "played": 68,
+      "projectedPoints": 48,
+      "status": "live"
+    },
+    {
+      "team": "Rennes",
+      "points": 87,
+      "played": 68,
+      "projectedPoints": 43,
+      "status": "live"
+    },
+    {
+      "team": "Toulouse",
+      "points": 85,
+      "played": 68,
+      "projectedPoints": 42,
+      "status": "live"
+    },
+    {
+      "team": "Reims",
+      "points": 80,
+      "played": 68,
+      "projectedPoints": 40,
+      "status": "live"
+    },
+    {
+      "team": "Nantes",
+      "points": 69,
+      "played": 68,
+      "projectedPoints": 34,
+      "status": "live"
+    },
+    {
+      "team": "Le Havre",
+      "points": 66,
+      "played": 68,
+      "projectedPoints": 33,
+      "status": "live"
+    },
+    {
+      "team": "Montpellier",
+      "points": 58,
+      "played": 68,
+      "projectedPoints": 29,
+      "status": "live"
+    },
+    {
+      "team": "Auxerre",
+      "points": 42,
+      "played": 34,
+      "projectedPoints": 42,
+      "status": "live"
+    },
+    {
+      "team": "Angers",
+      "points": 36,
+      "played": 34,
+      "projectedPoints": 36,
+      "status": "live"
+    },
+    {
+      "team": "St Etienne",
+      "points": 30,
+      "played": 34,
+      "projectedPoints": 30,
+      "status": "live"
+    },
+    {
+      "team": "Lorient",
+      "points": 29,
+      "played": 34,
+      "projectedPoints": 29,
+      "status": "live"
+    },
+    {
+      "team": "Metz",
+      "points": 29,
+      "played": 34,
+      "projectedPoints": 29,
+      "status": "live"
+    },
+    {
+      "team": "Clermont",
+      "points": 25,
+      "played": 34,
+      "projectedPoints": 25,
+      "status": "live"
+    }
+  ],
+  "teamStats": {
+    "Nice": {
+      "att": 1.2470588235294118,
+      "def": 0.8235294117647058
+    },
+    "Lille": {
+      "att": 1.2235294117647058,
+      "def": 0.8235294117647058
+    },
+    "Marseille": {
+      "att": 1.4823529411764707,
+      "def": 1.035294117647059
+    },
+    "Reims": {
+      "att": 0.8823529411764707,
+      "def": 1.1058823529411765
+    },
+    "PSG": {
+      "att": 2.0352941176470587,
+      "def": 0.8
+    },
+    "Lorient": {
+      "att": 1.011764705882353,
+      "def": 1.5529411764705883
+    },
+    "Brest": {
+      "att": 1.2352941176470589,
+      "def": 1.0941176470588236
+    },
+    "Lens": {
+      "att": 1.0235294117647058,
+      "def": 0.8941176470588236
+    },
+    "Clermont": {
+      "att": 0.6117647058823529,
+      "def": 1.4117647058823528
+    },
+    "Monaco": {
+      "att": 1.5411764705882354,
+      "def": 0.9764705882352942
+    },
+    "Montpellier": {
+      "att": 0.7764705882352941,
+      "def": 1.4941176470588236
+    },
+    "Le Havre": {
+      "att": 0.8705882352941176,
+      "def": 1.3647058823529412
+    },
+    "Nantes": {
+      "att": 0.8117647058823529,
+      "def": 1.2588235294117647
+    },
+    "Toulouse": {
+      "att": 1.011764705882353,
+      "def": 1.0470588235294118
+    },
+    "Rennes": {
+      "att": 1.2235294117647058,
+      "def": 1.1294117647058823
+    },
+    "Metz": {
+      "att": 0.8235294117647058,
+      "def": 1.3647058823529412
+    },
+    "Strasbourg": {
+      "att": 1.1058823529411765,
+      "def": 1.1058823529411765
+    },
+    "Lyon": {
+      "att": 1.3411764705882354,
+      "def": 1.188235294117647
+    },
+    "St Etienne": {
+      "att": 0.9176470588235294,
+      "def": 1.811764705882353
+    },
+    "Auxerre": {
+      "att": 1.1294117647058823,
+      "def": 1.2
+    },
+    "Angers": {
+      "att": 0.7529411764705882,
+      "def": 1.2470588235294118
+    }
+  }
+}

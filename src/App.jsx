@@ -5,10 +5,14 @@ import MatchPrediction from './components/MatchPrediction';
 import Standings from './components/Standings';
 import PlayerStats from './components/PlayerStats';
 import MatchHistory from './components/MatchHistory';
-import { MOCK_DATA, TEAM_STATS } from './data/mockData';
+// Load JSON directly (Vite supports this)
+import APP_DATA from './data/app_data.json';
+import PLAYERS_DATA from './data/players.json';
+// Fallback stats if needed
+const TEAM_STATS = APP_DATA.teamStats || {};
 
 function App() {
-    const [selectedMatch, setSelectedMatch] = useState(MOCK_DATA.nextMatches[0]);
+    const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0]);
 
     return (
         <div className="container">
@@ -22,7 +26,7 @@ function App() {
             <main className="grid grid-cols-1 gap-4">
                 {/* Top Stats Row */}
                 <section>
-                    <DashboardStats stats={MOCK_DATA.seasonStats} />
+                    <DashboardStats stats={APP_DATA.seasonStats} />
                 </section>
 
                 {/* Main Content Grid */}
@@ -49,8 +53,8 @@ function App() {
 
                     {/* Right Column: League Info & Players */}
                     <div className="flex flex-col gap-4">
-                        <Standings standings={MOCK_DATA.standings} />
-                        <PlayerStats players={MOCK_DATA.players} homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} />
+                        <Standings standings={APP_DATA.standings} />
+                        <PlayerStats players={PLAYERS_DATA} homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} />
                     </div>
 
                 </div>
