@@ -11,8 +11,37 @@ import PLAYERS_DATA from './data/players.json';
 // Fallback stats if needed
 const TEAM_STATS = APP_DATA.teamStats || {};
 
+import { predictMatchLive } from './utils/prediction';
+
 function App() {
-    const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0]);
+    // Default to first match or mock
+    const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0] || {});
+    const [teams, setTeams] = useState([]);
+
+    useEffect(() => {
+        if (APP_DATA.teamStats) {
+            setTeams(Object.keys(APP_DATA.teamStats).sort());
+        }
+    }, []);
+
+    const handleTeamChange = (type, teamName) => {
+        const newMatch = { ...selectedMatch };
+        if (type === 'home') newMatch.homeTeam = teamName;
+        if (type === 'away') newMatch.awayTeam = teamName;
+
+        // Re-calculate prediction
+        const pred = predictMatchLive(newMatch.homeTeam, newMatch.awayTeam, TEAM_STATS);
+        newMatch.prediction = pred;
+
+        // Update odds roughly based on conf
+        newMatch.odds = {
+            home: (3 - (pred.confidence / 100) * 2).toFixed(2),
+            draw: 3.50,
+            away: (3 + (pred.confidence / 100)).toFixed(2)
+        };
+
+        setSelectedMatch(newMatch);
+    };
 
     return (
         <div className="container">
@@ -35,12 +64,24 @@ function App() {
                     {/* Left Column: Match Focus */}
                     <div className="flex flex-col gap-4">
                         <div className="card">
-                            <h2 className="text-accent">Prochain Match</h2>
-                            {/* Selector for other matches could go here */}
-                            <div className="flex justify-between items-center" style={{ marginBottom: '1rem' }}>
-                                <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{selectedMatch.homeTeam}</span>
-                                <span className="text-secondary">vs</span>
-                                <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{selectedMatch.awayTeam}</span>
+                            <h2 className="text-accent">Simulateur de Match</h2>
+
+                            <div className="flex justify-between items-center gap-4 mb-4">
+                                <select
+                                    className="p-2 rounded bg-slate-700 text-white w-full"
+                                    value={selectedMatch.homeTeam}
+                                    onChange={(e) => handleTeamChange('home', e.target.value)}
+                                >
+                                    {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                                </select>
+                                <span className="text-secondary font-bold">VS</span>
+                                <select
+                                    className="p-2 rounded bg-slate-700 text-white w-full"
+                                    value={selectedMatch.awayTeam}
+                                    onChange={(e) => handleTeamChange('away', e.target.value)}
+                                >
+                                    {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                                </select>
                             </div>
 
                             <MatchPrediction match={selectedMatch} />
@@ -53,7 +94,11 @@ function App() {
 
                     {/* Right Column: League Info & Players */}
                     <div className="flex flex-col gap-4">
-                        <Standings standings={APP_DATA.standings} />
+                        <Standings
+                            standings={APP_DATA.standings}
+                            matches={APP_DATA.matchesPlayed}
+                            currentWeek={APP_DATA.currentWeek}
+                        />
                         <PlayerStats players={PLAYERS_DATA} homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} />
                     </div>
 

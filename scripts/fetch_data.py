@@ -63,8 +63,9 @@ def get_football_data_legacy(start_year, end_year):
     return pd.DataFrame()
 
 if __name__ == "__main__":
-    # Example usage: Fetch last 2 seasons
-    df = get_football_data_legacy(2023, 2024)
+    # Fetch last 3 seasons: 23-24, 24-25, 25-26
+    # Passing 2025 will generate url with code '2526'
+    df = get_football_data_legacy(2023, 2025)
     if not df.empty:
         output_path = os.path.join(os.path.dirname(__file__), '..', 'src', 'data', 'matches_legacy.json')
         os.makedirs(os.path.dirname(output_path), exist_ok=True)

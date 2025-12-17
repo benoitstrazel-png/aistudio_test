@@ -69,83 +69,109 @@ def main():
     with open(LEGACY_PATH, 'r') as f:
         matches = json.load(f)
         
-    # 1. Calc Stats
-    team_stats = {}
-    total_goals = 0
-    total_games = 0
+    # 1. Calc Stats (Base Strength from 2024-2025)
+    matches_24_25 = [m for m in matches if '2024' in str(m.get('season', '')) or '2025' in str(m.get('date', ''))]
     
-    # Filter only recent season
-    matches = [m for m in matches if '2025' in str(m.get('season', '')) or '2024' in str(m.get('season', ''))]
-    
-    for m in matches:
-        h, a = m['home_team'], m['away_team']
-        hg = m['full_time_home_goals']
-        ag = m['full_time_away_goals']
-        
-        if h not in team_stats: team_stats[h] = {'gf': 0, 'ga': 0, 'pl': 0}
-        if a not in team_stats: team_stats[a] = {'gf': 0, 'ga': 0, 'pl': 0}
-        
-        team_stats[h]['gf'] += hg; team_stats[h]['ga'] += ag; team_stats[h]['pl'] += 1
-        team_stats[a]['gf'] += ag; team_stats[a]['ga'] += hg; team_stats[a]['pl'] += 1
-        
-        total_goals += (hg + ag)
-        total_games += 1
-        
-    avg_g_game = total_goals / total_games if total_games else 2.5
-    
-    final_stats = {}
-    for t, s in team_stats.items():
-        if s['pl'] == 0: continue
-        g_avg = s['gf'] / s['pl']
-        ga_avg = s['ga'] / s['pl']
-        # Strength relative to league avg/2 (approx 1.25 goals per team)
-        final_stats[t] = {
-            'att': g_avg / 1.25,
-            'def': ga_avg / 1.25
-        }
-    
-    # 2. Generate Future Fixtures (Next Matchday simulation)
-    # We pair teams that haven't played recently or random for demo
-    teams = list(final_stats.keys())
-    random.shuffle(teams)
-    
-    future_matches = []
-    while len(teams) >= 2:
-        h = teams.pop()
-        a = teams.pop()
-        
-        pred = predict_one_match(h, a, final_stats)
-        
-        match = {
-            "id": random.randint(1000, 9999),
-            "homeTeam": h,
-            "awayTeam": a,
-            "date": (datetime.now() + timedelta(days=random.randint(1, 7))).strftime("%Y-%m-%d"),
-            "odds": {
-                "home": round(1/max(0.01, pred['probs']['1']) * 0.9, 2),
-                "draw": round(1/max(0.01, pred['probs']['N']) * 0.9, 2),
-                "away": round(1/max(0.01, pred['probs']['2']) * 0.9, 2)
-            },
-            "prediction": pred
-        }
-        future_matches.append(match)
-        
-    # 3. Stats Summary
-    season_stats = {
-        "totalGoals": int(total_goals),
-        "goalsPerMatch": round(avg_g_game, 2),
-        "goalsPerDay": round(avg_g_game * 9, 2) # approx 9 games/day
-    }
-    
-    # 4. Standings
-    # Re-calculate standings from legacy matches
-    standings_map = {}
-    for m in matches:
+    # Calculate base strength from last season
+    team_stats_base = {}
+    for m in matches_24_25:
         h, a = m['home_team'], m['away_team']
         hg, ag = m['full_time_home_goals'], m['full_time_away_goals']
         
-        if h not in standings_map: standings_map[h] = {'pts': 0, 'p': 0, 'w': 0, 'd': 0, 'l': 0}
-        if a not in standings_map: standings_map[a] = {'pts': 0, 'p': 0, 'w': 0, 'd': 0, 'l': 0}
+        if h not in team_stats_base: team_stats_base[h] = {'gf': 0, 'ga': 0, 'pl': 0}
+        if a not in team_stats_base: team_stats_base[a] = {'gf': 0, 'ga': 0, 'pl': 0}
+        
+        team_stats_base[h]['gf'] += hg; team_stats_base[h]['ga'] += ag; team_stats_base[h]['pl'] += 1
+        team_stats_base[a]['gf'] += ag; team_stats_base[a]['ga'] += hg; team_stats_base[a]['pl'] += 1
+        
+    final_stats = {}
+    teams_list = list(team_stats_base.keys())
+    if not teams_list:
+        # Fallback teams if json is empty
+        teams_list = ["PSG", "Marseille", "Lyon", "Monaco", "Lille", "Lens", "Rennes", "Nice", "Brest", "Reims", "Strasbourg", "Toulouse", "Montpellier", "Nantes", "Le Havre", "Auxerre", "St Etienne", "Angers"]
+        
+    avg_g_league = 1.35 # Approx goals per team per match
+    
+    for t in teams_list:
+        s = team_stats_base.get(t, {'gf': 45, 'ga': 45, 'pl': 34}) # Default stats
+        g_avg = s['gf'] / max(1, s['pl'])
+        ga_avg = s['ga'] / max(1, s['pl'])
+        final_stats[t] = {
+            'att': g_avg / avg_g_league,
+            'def': ga_avg / avg_g_league
+        }
+
+    # 2. MATCHES 2025-2026 (REAL)
+    # Since we fetched real 25-26 data, we use it directly.
+    all_season_matches = [m for m in matches if '2025-2026' in str(m.get('season','')) or ('2025' in str(m.get('date','')) and int(str(m.get('date','')).split('-')[1]) > 7) ]
+    
+    # STRICT FILTER: Only keep teams that played in 2025-2026
+    current_season_teams = set()
+    for m in all_season_matches:
+        current_season_teams.add(m['home_team'])
+        current_season_teams.add(m['away_team'])
+        
+    # Update teams_list to strict set
+    if current_season_teams:
+        teams_list = list(current_season_teams)
+    
+    # If fetch was empty (early season), barely any matches
+    if not all_season_matches:
+        print("No real 2025-26 matches found yet in CSV. Using dummy simulation disabled.")
+        if not current_season_teams: teams_list = list(team_stats_base.keys()) # Fallback
+        
+    print(f"Using {len(all_season_matches)} real matches from CSV. Found {len(teams_list)} active teams.")
+    
+    # 3. Generate Future Matches (Next Week)
+    # We predict next matches based on logic or random pairing if no schedule
+    next_matches = []
+    
+    # Generate random next fixtures based on available teams
+    teams_playing = list(teams_list)
+    random.shuffle(teams_playing)
+    start_next_date = (datetime.now() + timedelta(days=3)).strftime("%Y-%m-%d")
+    
+    while len(teams_playing) >= 2:
+        h = teams_playing.pop()
+        a = teams_playing.pop()
+        pred = predict_one_match(h, a, final_stats)
+        
+        m_obj = {
+            "id": random.randint(10000, 99999),
+            "homeTeam": h,
+            "awayTeam": a,
+            "date": start_next_date,
+            "odds": {
+                "home": round(1/max(0.05, pred['probs']['1']) * 0.92, 2),
+                "draw": round(1/max(0.05, pred['probs']['N']) * 0.92, 2),
+                "away": round(1/max(0.05, pred['probs']['2']) * 0.92, 2)
+            },
+            "prediction": pred
+        }
+        next_matches.append(m_obj)
+            
+    # Fallback if season over or empty schedule
+    if not next_matches:
+        # Just generate random pair
+        h, a = random.sample(teams_list, 2)
+        if h == "Bye" or a == "Bye": h, a = "PSG", "Marseille"
+        pred = predict_one_match(h, a, final_stats)
+        next_matches.append({
+            "id": 999, "homeTeam": h, "awayTeam": a, "date": "2025-12-20",
+            "odds": {"home": 2.0, "draw": 3.0, "away": 4.0}, "prediction": pred
+        })
+
+    # 4. Standings Calculation (Only 2025-2026 matches)
+    standings_map = {}
+    for t in teams_list:
+        if t != "Bye": standings_map[t] = {'pts': 0, 'p': 0, 'w': 0, 'd': 0, 'l': 0}
+        
+    for m in all_season_matches:
+        h, a = m['home_team'], m['away_team']
+        hg, ag = m['full_time_home_goals'], m['full_time_away_goals']
+        
+        if h not in standings_map: continue
+        if a not in standings_map: continue
         
         standings_map[h]['p'] += 1; standings_map[a]['p'] += 1
         
@@ -159,7 +185,7 @@ def main():
             
     standings_list = []
     for t, s in standings_map.items():
-        proj = s['pts'] / s['p'] * 34 if s['p'] > 0 else 0
+        proj = s['pts'] / max(1, s['p']) * 34
         standings_list.append({
             "team": t,
             "points": s['pts'],
@@ -169,18 +195,54 @@ def main():
         })
     standings_list.sort(key=lambda x: x['points'], reverse=True)
     
+    # 5. Stats Summary
+    total_goals = sum(m['full_time_home_goals'] + m['full_time_away_goals'] for m in all_season_matches)
+    n_games = len(all_season_matches)
+    season_stats = {
+        "totalGoals": total_goals,
+        "goalsPerMatch": round(total_goals / max(1, n_games), 2),
+        "goalsPerDay": round(total_goals / max(1, n_games / 9), 1)
+    }
+
+    # Add Matchday info roughly
+    # Sort by date
+    all_season_matches.sort(key=lambda x: x['date'])
+    
+    # Simple algorithm to assign Matchweek (J1, J2...)
+    # We track how many games each team played
+    team_games = {t: 0 for t in teams_list}
+    export_matches = []
+    
+    for m in all_season_matches:
+        h, a = m['home_team'], m['away_team']
+        # The matchweek is roughly max(games_h, games_a) + 1
+        # But for global consistency, we group by date blocks usually.
+        # Let's just increment per team
+        week = max(team_games.get(h,0), team_games.get(a,0)) + 1
+        
+        # update
+        team_games[h] = team_games.get(h,0) + 1
+        team_games[a] = team_games.get(a,0) + 1
+        
+        m_copy = m.copy()
+        m_copy['week'] = week
+        export_matches.append(m_copy)
+
     # Save Everything
     full_data = {
         "seasonStats": season_stats,
-        "nextMatches": future_matches,
+        "nextMatches": next_matches,
         "standings": standings_list,
-        "teamStats": final_stats # Needed for Radar
+        "teamStats": final_stats,
+        "matchesPlayed": export_matches, # NEW for Time Travel
+        "currentWeek": max(team_games.values()) if team_games else 1
     }
     
     with open(os.path.join(DATA_DIR, 'app_data.json'), 'w') as f:
         json.dump(full_data, f, indent=2)
         
-    print("App Data Generated successfully.")
+    print(f"Generated 2025-2026 Season Data: {len(all_season_matches)} matches played, {len(next_matches)} upcoming.")
+
 
 if __name__ == "__main__":
     main()
