@@ -9,6 +9,8 @@ import LeagueCalendar from './components/LeagueCalendar';
 import InfoTooltip from './components/ui/InfoTooltip';
 import TeamLogo from './components/ui/TeamLogo'; // New Component
 import AuthPage from './components/AuthPage';
+import ExpertAnalysis from './components/ExpertAnalysis';
+import FocusPlayers from './components/FocusPlayers';
 import { getLeagueLogo } from './utils/logos';
 
 // Load JSON directly (Vite supports this)
@@ -204,6 +206,9 @@ function App() {
                             </div>
                         </section>
 
+                        {/* NEW: FOCUS PLAYERS Section */}
+                        <FocusPlayers homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} />
+
                         {/* 3. SECTION CALENDRIER */}
                         <section>
                             <div className="section-title text-accent">
@@ -234,6 +239,10 @@ function App() {
                         </section>
                     </div>
 
+                </div>
+
+                <div className="mt-12">
+                    <ExpertAnalysis nextMatches={APP_DATA.nextMatches} />
                 </div>
             </main>
         </div>

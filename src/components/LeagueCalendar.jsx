@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import InfoTooltip from './ui/InfoTooltip';
 import TeamLogo from './ui/TeamLogo';
+import BettingSimulator from './BettingSimulator';
 
 const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
     const [selectedWeek, setSelectedWeek] = useState(currentWeek + 1);
@@ -65,10 +66,11 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                     let displayScore = match.prediction?.score || '-';
 
                     if (match.status === 'SCHEDULED' && match.prediction?.score) {
-                        let parts = match.prediction.score.split('-').map(x => parseInt(x));
-                        if (parts.length === 2) {
-                            let [h, a] = parts;
-                            const totalGoals = h + a;
+                        const scoreParts = match.prediction.score.split('-');
+                        let h = parseInt(scoreParts[0]);
+                        let a = parseInt(scoreParts[1]);
+
+                        if (!isNaN(h) && !isNaN(a)) {
                             const isOver2_5 = match.prediction.goals_pred?.includes('+2.5');
                             const isUnder2_5 = match.prediction.goals_pred?.includes('-2.5');
 
@@ -76,7 +78,7 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
 
                             // NEW: Allow Draws if confidence is low (< 45%) and original score was a draw
                             // This matches the logic capable of seeing 1-1 as a Draw even if Winner says "Lens" (36%)
-                            const originalIsDraw = parts[0] === parts[1];
+                            const originalIsDraw = h === a;
                             const isWeakPrediction = winnerConf < 45;
 
                             let forceWinner = true;
@@ -181,6 +183,9 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                     );
                 })}
             </div>
+
+            {/* Betting Simulator Module - Integrated at bottom */}
+            <BettingSimulator matches={matches} />
         </div>
     );
 };

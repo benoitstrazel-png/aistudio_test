@@ -1,0 +1,1428 @@
+{
+    "PSG": [
+        {
+            "name": "Gianluigi Donnarumma",
+            "position": "G",
+            "rating": 8.0,
+            "mj": 0,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Lucas Chevalier",
+            "position": "G",
+            "rating": 7.8,
+            "mj": 20,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Matvey Safonov",
+            "position": "G",
+            "rating": 7.2,
+            "mj": 4,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Achraf Hakimi",
+            "position": "D",
+            "rating": 8.1,
+            "mj": 14,
+            "goals": 2,
+            "assists": 2
+        },
+        {
+            "name": "Nuno Mendes",
+            "position": "D",
+            "rating": 8.0,
+            "mj": 18,
+            "goals": 4,
+            "assists": 4
+        },
+        {
+            "name": "Marquinhos",
+            "position": "D",
+            "rating": 7.9,
+            "mj": 13,
+            "goals": 1,
+            "assists": 0
+        },
+        {
+            "name": "Willian Pacho",
+            "position": "D",
+            "rating": 7.5,
+            "mj": 19,
+            "goals": 2,
+            "assists": 0
+        },
+        {
+            "name": "Lucas Hernandez",
+            "position": "D",
+            "rating": 7.4,
+            "mj": 14,
+            "goals": 0,
+            "assists": 1
+        },
+        {
+            "name": "Lucas Beraldo",
+            "position": "D",
+            "rating": 7.3,
+            "mj": 9,
+            "goals": 1,
+            "assists": 0
+        },
+        {
+            "name": "Ilya Zabarnyi",
+            "position": "D",
+            "rating": 7.4,
+            "mj": 18,
+            "goals": 1,
+            "assists": 0
+        },
+        {
+            "name": "Vitinha",
+            "position": "M",
+            "rating": 8.2,
+            "mj": 23,
+            "goals": 5,
+            "assists": 8
+        },
+        {
+            "name": "Joao Neves",
+            "position": "M",
+            "rating": 8.1,
+            "mj": 14,
+            "goals": 6,
+            "assists": 2
+        },
+        {
+            "name": "Warren Zaïre-Emery",
+            "position": "M",
+            "rating": 7.9,
+            "mj": 24,
+            "goals": 1,
+            "assists": 1
+        },
+        {
+            "name": "Fabian Ruiz",
+            "position": "M",
+            "rating": 7.7,
+            "mj": 18,
+            "goals": 2,
+            "assists": 2
+        },
+        {
+            "name": "Lee Kang-In",
+            "position": "M",
+            "rating": 7.8,
+            "mj": 21,
+            "goals": 2,
+            "assists": 3
+        },
+        {
+            "name": "Senny Mayulu",
+            "position": "M",
+            "rating": 7.2,
+            "mj": 18,
+            "goals": 3,
+            "assists": 2
+        },
+        {
+            "name": "Bradley Barcola",
+            "position": "A",
+            "rating": 8.0,
+            "mj": 21,
+            "goals": 5,
+            "assists": 2
+        },
+        {
+            "name": "Ousmane Dembélé",
+            "position": "A",
+            "rating": 8.1,
+            "mj": 13,
+            "goals": 3,
+            "assists": 3
+        },
+        {
+            "name": "Gonçalo Ramos",
+            "position": "A",
+            "rating": 8.0,
+            "mj": 22,
+            "goals": 7,
+            "assists": 0
+        },
+        {
+            "name": "Khvicha Kvaratskhelia",
+            "position": "A",
+            "rating": 8.3,
+            "mj": 21,
+            "goals": 6,
+            "assists": 5
+        },
+        {
+            "name": "Désiré Doué",
+            "position": "A",
+            "rating": 7.6,
+            "mj": 11,
+            "goals": 4,
+            "assists": 1
+        },
+        {
+            "name": "Marco Asensio",
+            "position": "A",
+            "rating": 7.4,
+            "mj": 0,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Ibrahim Mbaye",
+            "position": "A",
+            "rating": 6.8,
+            "mj": 19,
+            "goals": 1,
+            "assists": 2
+        }
+    ],
+    "Marseille": [
+        {
+            "name": "Geronimo Rulli",
+            "position": "G",
+            "rating": 7.6,
+            "mj": 19,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Jeffrey de Lange",
+            "position": "G",
+            "rating": 6.8,
+            "mj": 3,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Leonardo Balerdi",
+            "position": "D",
+            "rating": 7.5,
+            "mj": 16,
+            "goals": 0,
+            "assists": 1
+        },
+        {
+            "name": "Chancel Mbemba",
+            "position": "D",
+            "rating": 7.3,
+            "mj": 0,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Derek Cornelius",
+            "position": "D",
+            "rating": 7.0,
+            "mj": 0,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Michael Murillo",
+            "position": "D",
+            "rating": 7.2,
+            "mj": 18,
+            "goals": 2,
+            "assists": 0
+        },
+        {
+            "name": "Benjamin Pavard",
+            "position": "D",
+            "rating": 7.6,
+            "mj": 18,
+            "goals": 1,
+            "assists": 2
+        },
+        {
+            "name": "Nayef Aguerd",
+            "position": "D",
+            "rating": 7.3,
+            "mj": 15,
+            "goals": 1,
+            "assists": 0
+        },
+        {
+            "name": "Lilian Brassier",
+            "position": "D",
+            "rating": 7.0,
+            "mj": 0,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Pierre-Emile Højbjerg",
+            "position": "M",
+            "rating": 7.9,
+            "mj": 20,
+            "goals": 2,
+            "assists": 1
+        },
+        {
+            "name": "Angel Gomes",
+            "position": "M",
+            "rating": 7.7,
+            "mj": 17,
+            "goals": 3,
+            "assists": 0
+        },
+        {
+            "name": "Timothy Weah",
+            "position": "M",
+            "rating": 7.5,
+            "mj": 18,
+            "goals": 2,
+            "assists": 2
+        },
+        {
+            "name": "Matt O'Riley",
+            "position": "M",
+            "rating": 7.6,
+            "mj": 18,
+            "goals": 1,
+            "assists": 3
+        },
+        {
+            "name": "Bilal Nadir",
+            "position": "M",
+            "rating": 7.1,
+            "mj": 14,
+            "goals": 0,
+            "assists": 4
+        },
+        {
+            "name": "Mason Greenwood",
+            "position": "A",
+            "rating": 8.4,
+            "mj": 21,
+            "goals": 14,
+            "assists": 4
+        },
+        {
+            "name": "Pierre-Emerick Aubameyang",
+            "position": "A",
+            "rating": 8.3,
+            "mj": 20,
+            "goals": 8,
+            "assists": 10
+        },
+        {
+            "name": "Igor Paixao",
+            "position": "A",
+            "rating": 7.8,
+            "mj": 19,
+            "goals": 7,
+            "assists": 2
+        },
+        {
+            "name": "Robinio Vaz",
+            "position": "A",
+            "rating": 7.3,
+            "mj": 18,
+            "goals": 4,
+            "assists": 2
+        },
+        {
+            "name": "Amine Gouiri",
+            "position": "A",
+            "rating": 7.5,
+            "mj": 7,
+            "goals": 1,
+            "assists": 1
+        },
+        {
+            "name": "Elye Wahi",
+            "position": "A",
+            "rating": 7.4,
+            "mj": 0,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Jonathan Rowe",
+            "position": "A",
+            "rating": 7.2,
+            "mj": 0,
+            "goals": 0,
+            "assists": 0
+        }
+    ],
+    "Lyon": [
+        {
+            "name": "Lucas Perri",
+            "position": "G",
+            "rating": 7.3
+        },
+        {
+            "name": "Anthony Lopes",
+            "position": "G",
+            "rating": 6.8
+        },
+        {
+            "name": "Moussa Niakhaté",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Duje Caleta-Car",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Nicolas Tagliafico",
+            "position": "D",
+            "rating": 7.1
+        },
+        {
+            "name": "Clinton Mata",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Abner",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Nemanja Matic",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Corentin Tolisso",
+            "position": "M",
+            "rating": 7.3
+        },
+        {
+            "name": "Maxence Caqueret",
+            "position": "M",
+            "rating": 7.1
+        },
+        {
+            "name": "Jordan Veretout",
+            "position": "M",
+            "rating": 7.0
+        },
+        {
+            "name": "Rayan Cherki",
+            "position": "M",
+            "rating": 7.4
+        },
+        {
+            "name": "Alexandre Lacazette",
+            "position": "A",
+            "rating": 7.6
+        },
+        {
+            "name": "Malick Fofana",
+            "position": "A",
+            "rating": 7.5
+        },
+        {
+            "name": "Georges Mikautadze",
+            "position": "A",
+            "rating": 7.3
+        },
+        {
+            "name": "Said Benrahma",
+            "position": "A",
+            "rating": 7.1
+        },
+        {
+            "name": "Ernest Nuamah",
+            "position": "A",
+            "rating": 7.0
+        }
+    ],
+    "Monaco": [
+        {
+            "name": "Philipp Köhn",
+            "position": "G",
+            "rating": 7.1
+        },
+        {
+            "name": "Radoslaw Majecki",
+            "position": "G",
+            "rating": 6.9
+        },
+        {
+            "name": "Thilo Kehrer",
+            "position": "D",
+            "rating": 7.3
+        },
+        {
+            "name": "Mohammed Salisu",
+            "position": "D",
+            "rating": 7.1
+        },
+        {
+            "name": "Wilfried Singo",
+            "position": "D",
+            "rating": 7.4
+        },
+        {
+            "name": "Vanderson",
+            "position": "D",
+            "rating": 7.3
+        },
+        {
+            "name": "Caio Henrique",
+            "position": "D",
+            "rating": 7.2
+        },
+        {
+            "name": "Denis Zakaria",
+            "position": "M",
+            "rating": 7.6
+        },
+        {
+            "name": "Lamine Camara",
+            "position": "M",
+            "rating": 7.3
+        },
+        {
+            "name": "Aleksandr Golovin",
+            "position": "M",
+            "rating": 7.5
+        },
+        {
+            "name": "Maghnes Akliouche",
+            "position": "M",
+            "rating": 7.4
+        },
+        {
+            "name": "Takumi Minamino",
+            "position": "A",
+            "rating": 7.3
+        },
+        {
+            "name": "Eliesse Ben Seghir",
+            "position": "A",
+            "rating": 7.5
+        },
+        {
+            "name": "Folarin Balogun",
+            "position": "A",
+            "rating": 7.2
+        },
+        {
+            "name": "Breel Embolo",
+            "position": "A",
+            "rating": 7.1
+        },
+        {
+            "name": "George Ilenikhena",
+            "position": "A",
+            "rating": 6.9
+        }
+    ],
+    "Lille": [
+        {
+            "name": "Lucas Chevalier",
+            "position": "G",
+            "rating": 7.7
+        },
+        {
+            "name": "Bafodé Diakité",
+            "position": "D",
+            "rating": 7.2
+        },
+        {
+            "name": "Alexsandro",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Thomas Meunier",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Tiago Santos",
+            "position": "D",
+            "rating": 7.3
+        },
+        {
+            "name": "Gabriel Gudmundsson",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Benjamin André",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Angel Gomes",
+            "position": "M",
+            "rating": 7.4
+        },
+        {
+            "name": "Ayyoub Bouaddi",
+            "position": "M",
+            "rating": 6.8
+        },
+        {
+            "name": "Edon Zhegrova",
+            "position": "A",
+            "rating": 7.6
+        },
+        {
+            "name": "Jonathan David",
+            "position": "A",
+            "rating": 7.9
+        },
+        {
+            "name": "Osame Sahraoui",
+            "position": "A",
+            "rating": 7.1
+        },
+        {
+            "name": "Matias Fernandez-Pardo",
+            "position": "A",
+            "rating": 6.8
+        }
+    ],
+    "Lens": [
+        {
+            "name": "Wesley Saïd",
+            "position": "A",
+            "rating": 7.2,
+            "mj": 16,
+            "goals": 6,
+            "assists": 2
+        },
+        {
+            "name": "Adrien Thomasson",
+            "position": "M",
+            "rating": 7.0,
+            "mj": 15,
+            "goals": 1,
+            "assists": 4
+        },
+        {
+            "name": "Ruben Aguilar",
+            "position": "D",
+            "rating": 6.8,
+            "mj": 16,
+            "goals": 0,
+            "assists": 1
+        },
+        {
+            "name": "Florian Sotoca",
+            "position": "A",
+            "rating": 7.1,
+            "mj": 11,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Malang Sarr",
+            "position": "D",
+            "rating": 6.7,
+            "mj": 15,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Jonathan Gradit",
+            "position": "D",
+            "rating": 6.9,
+            "mj": 10,
+            "goals": 0,
+            "assists": 0
+        }
+    ],
+    "Rennes": [
+        {
+            "name": "Steve Mandanda",
+            "position": "G",
+            "rating": 7.2
+        },
+        {
+            "name": "Alidu Seidu",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Christopher Wooh",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Adrien Truffert",
+            "position": "D",
+            "rating": 7.3
+        },
+        {
+            "name": "Hans Hateboer",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Azor Matusiwa",
+            "position": "M",
+            "rating": 7.0
+        },
+        {
+            "name": "Glen Kamara",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Ludovic Blas",
+            "position": "M",
+            "rating": 7.3
+        },
+        {
+            "name": "Albert Gronbaek",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Amine Gouiri",
+            "position": "A",
+            "rating": 7.4
+        },
+        {
+            "name": "Arnaud Kalimuendo",
+            "position": "A",
+            "rating": 7.3
+        },
+        {
+            "name": "Jota",
+            "position": "A",
+            "rating": 7.1
+        }
+    ],
+    "Nice": [
+        {
+            "name": "Jonathan Clauss",
+            "position": "D",
+            "rating": 7.3,
+            "mj": 20,
+            "goals": 1,
+            "assists": 2
+        },
+        {
+            "name": "Jeremie Boga",
+            "position": "A",
+            "rating": 7.2,
+            "mj": 20,
+            "goals": 2,
+            "assists": 1
+        },
+        {
+            "name": "Melvin Bard",
+            "position": "D",
+            "rating": 7.0,
+            "mj": 24,
+            "goals": 1,
+            "assists": 0
+        },
+        {
+            "name": "Terem Moffi",
+            "position": "A",
+            "rating": 7.1,
+            "mj": 15,
+            "goals": 3,
+            "assists": 0
+        },
+        {
+            "name": "Morgan Sanson",
+            "position": "M",
+            "rating": 7.0,
+            "mj": 20,
+            "goals": 0,
+            "assists": 1
+        },
+        {
+            "name": "Dante",
+            "position": "D",
+            "rating": 7.1,
+            "mj": 5,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Ali Abdi",
+            "position": "D",
+            "rating": 6.8,
+            "mj": 15,
+            "goals": 0,
+            "assists": 0
+        },
+        {
+            "name": "Tanguy Ndombele",
+            "position": "M",
+            "rating": 6.9,
+            "mj": 3,
+            "goals": 0,
+            "assists": 0
+        }
+    ],
+    "Brest": [
+        {
+            "name": "Marco Bizot",
+            "position": "G",
+            "rating": 7.3
+        },
+        {
+            "name": "Brendan Chardonnet",
+            "position": "D",
+            "rating": 7.1
+        },
+        {
+            "name": "Julien Le Cardinal",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Kenny Lala",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Jordan Amavi",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Pierre Lees-Melou",
+            "position": "M",
+            "rating": 7.6
+        },
+        {
+            "name": "Mahdi Camara",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Hugo Magnetti",
+            "position": "M",
+            "rating": 7.0
+        },
+        {
+            "name": "Romain Del Castillo",
+            "position": "A",
+            "rating": 7.4
+        },
+        {
+            "name": "Ludovic Ajorque",
+            "position": "A",
+            "rating": 7.2
+        },
+        {
+            "name": "Mama Baldé",
+            "position": "A",
+            "rating": 7.0
+        },
+        {
+            "name": "Abdallah Sima",
+            "position": "A",
+            "rating": 7.1
+        }
+    ],
+    "Paris FC": [
+        {
+            "name": "Obed Nkambadio",
+            "position": "G",
+            "rating": 6.8
+        },
+        {
+            "name": "Timothée Kolodziejczak",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Moustapha Mbow",
+            "position": "D",
+            "rating": 6.6
+        },
+        {
+            "name": "Mathys Tourraine",
+            "position": "D",
+            "rating": 6.5
+        },
+        {
+            "name": "Tuomas Ollila",
+            "position": "D",
+            "rating": 6.4
+        },
+        {
+            "name": "Maxime Lopez",
+            "position": "M",
+            "rating": 7.5
+        },
+        {
+            "name": "Ilan Kebbal",
+            "position": "M",
+            "rating": 7.4
+        },
+        {
+            "name": "Vincent Marchetti",
+            "position": "M",
+            "rating": 6.8
+        },
+        {
+            "name": "Jean-Philippe Krasso",
+            "position": "A",
+            "rating": 7.3
+        },
+        {
+            "name": "Alimami Gory",
+            "position": "A",
+            "rating": 7.0
+        },
+        {
+            "name": "Nouha Dicko",
+            "position": "A",
+            "rating": 6.6
+        }
+    ],
+    "Strasbourg": [
+        {
+            "name": "Djordje Petrovic",
+            "position": "G",
+            "rating": 7.0
+        },
+        {
+            "name": "Saidou Sow",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Abakar Sylla",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Guela Doué",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Andrey Santos",
+            "position": "M",
+            "rating": 7.4
+        },
+        {
+            "name": "Habib Diarra",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Sebastian Nanasi",
+            "position": "M",
+            "rating": 7.3
+        },
+        {
+            "name": "Dilane Bakwa",
+            "position": "A",
+            "rating": 7.1
+        },
+        {
+            "name": "Emanuel Emegha",
+            "position": "A",
+            "rating": 7.0
+        },
+        {
+            "name": "Diego Moreira",
+            "position": "A",
+            "rating": 6.9
+        }
+    ],
+    "Toulouse": [
+        {
+            "name": "Guillaume Restes",
+            "position": "G",
+            "rating": 7.2
+        },
+        {
+            "name": "Rasmus Nicolaisen",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Charlie Cresswell",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Djibril Sidibé",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Gabriel Suazo",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Vincent Sierro",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Cristian Casseres",
+            "position": "M",
+            "rating": 6.8
+        },
+        {
+            "name": "Yann Gboho",
+            "position": "M",
+            "rating": 7.3
+        },
+        {
+            "name": "Zakaria Aboukhlal",
+            "position": "A",
+            "rating": 7.2
+        },
+        {
+            "name": "Joshua King",
+            "position": "A",
+            "rating": 6.7
+        },
+        {
+            "name": "Frank Magri",
+            "position": "A",
+            "rating": 6.8
+        }
+    ],
+    "Montpellier": [
+        {
+            "name": "Benjamin Lecomte",
+            "position": "G",
+            "rating": 7.0
+        },
+        {
+            "name": "Becir Omeragic",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Modibo Sagnan",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Issiaga Sylla",
+            "position": "D",
+            "rating": 6.6
+        },
+        {
+            "name": "Falaye Sacko",
+            "position": "D",
+            "rating": 6.5
+        },
+        {
+            "name": "Teji Savanier",
+            "position": "M",
+            "rating": 7.6
+        },
+        {
+            "name": "Joris Chotard",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Jordan Ferri",
+            "position": "M",
+            "rating": 6.7
+        },
+        {
+            "name": "Arnaud Nordin",
+            "position": "A",
+            "rating": 7.1
+        },
+        {
+            "name": "Akor Adams",
+            "position": "A",
+            "rating": 7.0
+        },
+        {
+            "name": "Moussa Tamari",
+            "position": "A",
+            "rating": 7.2
+        }
+    ],
+    "Reims": [
+        {
+            "name": "Yehvann Diouf",
+            "position": "G",
+            "rating": 7.1
+        },
+        {
+            "name": "Emmanuel Agbadou",
+            "position": "D",
+            "rating": 7.2
+        },
+        {
+            "name": "Joseph Okumu",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Aurelio Buta",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Sergio Akieme",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Marshall Munetsi",
+            "position": "M",
+            "rating": 7.1
+        },
+        {
+            "name": "Teddy Teuma",
+            "position": "M",
+            "rating": 7.4
+        },
+        {
+            "name": "Valentin Atangana",
+            "position": "M",
+            "rating": 6.8
+        },
+        {
+            "name": "Junya Ito",
+            "position": "A",
+            "rating": 7.5
+        },
+        {
+            "name": "Keito Nakamura",
+            "position": "A",
+            "rating": 7.3
+        },
+        {
+            "name": "Oumar Diakité",
+            "position": "A",
+            "rating": 7.0
+        }
+    ],
+    "Nantes": [
+        {
+            "name": "Alban Lafont",
+            "position": "G",
+            "rating": 7.2
+        },
+        {
+            "name": "Nicolas Pallois",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Jean-Charles Castelletto",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Nathan Zézé",
+            "position": "D",
+            "rating": 7.1
+        },
+        {
+            "name": "Pedro Chirivella",
+            "position": "M",
+            "rating": 7.0
+        },
+        {
+            "name": "Douglas Augusto",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Johann Lepenant",
+            "position": "M",
+            "rating": 7.1
+        },
+        {
+            "name": "Moses Simon",
+            "position": "A",
+            "rating": 7.4
+        },
+        {
+            "name": "Mostafa Mohamed",
+            "position": "A",
+            "rating": 7.2
+        },
+        {
+            "name": "Tino Kadewere",
+            "position": "A",
+            "rating": 6.8
+        }
+    ],
+    "Le Havre": [
+        {
+            "name": "Arthur Desmas",
+            "position": "G",
+            "rating": 7.0
+        },
+        {
+            "name": "Arouna Sangante",
+            "position": "D",
+            "rating": 7.1
+        },
+        {
+            "name": "Gautier Lloris",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Christopher Operi",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Abdoulaye Touré",
+            "position": "M",
+            "rating": 6.8
+        },
+        {
+            "name": "Daler Kuzyaev",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Yassine Kechta",
+            "position": "M",
+            "rating": 7.0
+        },
+        {
+            "name": "Josué Casimir",
+            "position": "A",
+            "rating": 6.6
+        },
+        {
+            "name": "Emmanuel Sabbi",
+            "position": "A",
+            "rating": 6.7
+        }
+    ],
+    "Auxerre": [
+        {
+            "name": "Donovan Leon",
+            "position": "G",
+            "rating": 6.9
+        },
+        {
+            "name": "Jubal",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Gabriel Osho",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Paul Joly",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Raveloson",
+            "position": "M",
+            "rating": 6.8
+        },
+        {
+            "name": "Elisha Owusu",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Gaetan Perrin",
+            "position": "A",
+            "rating": 7.1
+        },
+        {
+            "name": "Lassine Sinayoko",
+            "position": "A",
+            "rating": 6.9
+        },
+        {
+            "name": "Hamed Junior Traoré",
+            "position": "A",
+            "rating": 7.2
+        }
+    ],
+    "Angers": [
+        {
+            "name": "Yahia Fofana",
+            "position": "G",
+            "rating": 7.1
+        },
+        {
+            "name": "Cedric Hountondji",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Jordan Lefort",
+            "position": "D",
+            "rating": 6.6
+        },
+        {
+            "name": "Himad Abdelli",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Jean-Eudes Aholou",
+            "position": "M",
+            "rating": 6.8
+        },
+        {
+            "name": "Harris Belkebla",
+            "position": "M",
+            "rating": 6.7
+        },
+        {
+            "name": "Jim Allevinah",
+            "position": "A",
+            "rating": 6.8
+        },
+        {
+            "name": "Lois Diony",
+            "position": "A",
+            "rating": 6.7
+        },
+        {
+            "name": "Farid El Melali",
+            "position": "A",
+            "rating": 6.9
+        }
+    ],
+    "Saint-Etienne": [
+        {
+            "name": "Gautier Larsonneur",
+            "position": "G",
+            "rating": 7.2
+        },
+        {
+            "name": "Yunis Abdelhamid",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Dylan Batubinsika",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Dennis Appiah",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Mathieu Cafaro",
+            "position": "M",
+            "rating": 7.0
+        },
+        {
+            "name": "Aimen Moueffek",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Zuriko Davitashvili",
+            "position": "A",
+            "rating": 7.4
+        },
+        {
+            "name": "Ibrahim Sissoko",
+            "position": "A",
+            "rating": 7.0
+        },
+        {
+            "name": "Lucas Stassin",
+            "position": "A",
+            "rating": 6.8
+        }
+    ],
+    "Lorient": [
+        {
+            "name": "Yvon Mvogo",
+            "position": "G",
+            "rating": 7.1
+        },
+        {
+            "name": "Montassar Talbi",
+            "position": "D",
+            "rating": 7.0
+        },
+        {
+            "name": "Julien Laporte",
+            "position": "D",
+            "rating": 6.8
+        },
+        {
+            "name": "Laurent Abergel",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Julien Ponceau",
+            "position": "M",
+            "rating": 6.9
+        },
+        {
+            "name": "Mohamed Bamba",
+            "position": "A",
+            "rating": 7.1
+        },
+        {
+            "name": "Eli Junior Kroupi",
+            "position": "A",
+            "rating": 7.3
+        }
+    ],
+    "Metz": [
+        {
+            "name": "Alexsandro Oukidja",
+            "position": "G",
+            "rating": 6.8
+        },
+        {
+            "name": "Matthieu Udol",
+            "position": "D",
+            "rating": 7.1
+        },
+        {
+            "name": "Ismael Traoré",
+            "position": "D",
+            "rating": 6.7
+        },
+        {
+            "name": "Kevin Van Den Kerkhof",
+            "position": "D",
+            "rating": 6.9
+        },
+        {
+            "name": "Gauthier Hein",
+            "position": "M",
+            "rating": 7.2
+        },
+        {
+            "name": "Ablie Jallow",
+            "position": "A",
+            "rating": 7.0
+        },
+        {
+            "name": "Cheikh Sabaly",
+            "position": "A",
+            "rating": 6.9
+        }
+    ]
+}
