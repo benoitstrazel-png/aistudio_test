@@ -8,6 +8,7 @@ import MatchHistory from './components/MatchHistory';
 import LeagueCalendar from './components/LeagueCalendar';
 import InfoTooltip from './components/ui/InfoTooltip';
 import TeamLogo from './components/ui/TeamLogo'; // New Component
+import AuthPage from './components/AuthPage';
 import { getLeagueLogo } from './utils/logos';
 
 // Load JSON directly (Vite supports this)
@@ -20,6 +21,9 @@ const TEAM_STATS = APP_DATA.teamStats || {};
 import { predictMatchLive } from './utils/prediction';
 
 function App() {
+    // Auth State
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
     // Default to first match or mock
     const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0] || {});
     // List of strict 18 teams for 2025-2026 Season
@@ -35,6 +39,11 @@ function App() {
         // Enforce strict L1 Team list
         setTeams(L1_TEAMS_2025);
     }, []);
+
+    // AUTH GATE
+    if (!isAuthenticated) {
+        return <AuthPage onLogin={() => setIsAuthenticated(true)} />;
+    }
 
     const handleTeamChange = (type, teamName) => {
         const newMatch = { ...selectedMatch };

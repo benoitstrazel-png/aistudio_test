@@ -97,16 +97,29 @@ export const calculateStandingsAtWeek = (currentStandings, schedule, targetWeek,
                 const isOver2_5 = match.prediction.goals_pred?.includes('+2.5');
                 const isUnder2_5 = match.prediction.goals_pred?.includes('-2.5');
 
-                // 1. Force Winner Consistency
+                // 1. Force Winner Consistency (Modified Logic)
                 // Note: We need to match team names. 'winner' usually equals match.homeTeam or .awayTeam
-                if (winner === match.homeTeam && h <= a) {
-                    h = a + 1;
-                } else if (winner === match.awayTeam && a <= h) {
-                    a = h + 1;
-                } else if ((winner === 'Draw' || winner === 'Nul') && h !== a) {
-                    // Force draw
-                    const m = Math.max(h, a);
-                    h = m; a = m;
+
+                // NEW: Check if we should respect the DRAW despite a weak winner prediction
+                const originalIsDraw = h === a;
+                const winnerConf = match.prediction.winner_conf || 0;
+                const isWeakPrediction = winnerConf < 45; // Threshold to allow draws
+
+                let forceWinner = true;
+                if (originalIsDraw && isWeakPrediction) {
+                    forceWinner = false; // Keep the draw
+                }
+
+                if (forceWinner) {
+                    if (winner === match.homeTeam && h <= a) {
+                        h = a + 1;
+                    } else if (winner === match.awayTeam && a <= h) {
+                        a = h + 1;
+                    } else if ((winner === 'Draw' || winner === 'Nul') && h !== a) {
+                        // Force draw
+                        const m = Math.max(h, a);
+                        h = m; a = m;
+                    }
                 }
 
                 // 2. Force Goals Consistency (+/- 2.5)

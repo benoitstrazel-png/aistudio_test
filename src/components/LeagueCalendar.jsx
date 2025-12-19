@@ -73,9 +73,23 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                             const isUnder2_5 = match.prediction.goals_pred?.includes('-2.5');
 
                             // 1. Force Winner Consistency first
-                            if (winnerDisplay === match.homeTeam && h <= a) h = a + 1;
-                            else if (winnerDisplay === match.awayTeam && a <= h) a = h + 1;
-                            else if (winnerDisplay === "Nul" && h !== a) { const m = Math.max(h, a); h = m; a = m; }
+
+                            // NEW: Allow Draws if confidence is low (< 45%) and original score was a draw
+                            // This matches the logic capable of seeing 1-1 as a Draw even if Winner says "Lens" (36%)
+                            const originalIsDraw = parts[0] === parts[1];
+                            const isWeakPrediction = winnerConf < 45;
+
+                            let forceWinner = true;
+                            if (originalIsDraw && isWeakPrediction) {
+                                forceWinner = false; // We accept the draw
+                                winnerDisplay = "Nul"; // Update display text to reflect the logic change
+                            }
+
+                            if (forceWinner) {
+                                if (winnerDisplay === match.homeTeam && h <= a) h = a + 1;
+                                else if (winnerDisplay === match.awayTeam && a <= h) a = h + 1;
+                                else if (winnerDisplay === "Nul" && h !== a) { const m = Math.max(h, a); h = m; a = m; }
+                            }
 
                             // 2. Force Goals Consistency (experimental)
                             if (isUnder2_5 && (h + a) > 2) {
