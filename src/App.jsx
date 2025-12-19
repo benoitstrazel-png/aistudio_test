@@ -25,8 +25,10 @@ function App() {
     const [teams, setTeams] = useState([]);
 
     useEffect(() => {
+        // Fallback robust loading: Use teamStats which contains all initialized teams
         if (APP_DATA.teamStats) {
-            setTeams(Object.keys(APP_DATA.teamStats).sort());
+            const loadedTeams = Object.keys(APP_DATA.teamStats).filter(t => t && t.length > 2).sort();
+            setTeams(loadedTeams);
         }
     }, []);
 
@@ -55,7 +57,12 @@ function App() {
             {/* BRAND HEADER with L1 Logo */}
             <header className="flex justify-between items-end pt-8 pb-4 mb-4 border-b border-white/5">
                 <div className="flex items-center gap-4">
-                    <img src={getLeagueLogo()} alt="Ligue 1" className="h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(206,240,2,0.5)] bg-white/90 rounded-xl p-1" />
+                    <img
+                        src={getLeagueLogo()}
+                        alt="Ligue 1"
+                        className="object-contain drop-shadow-[0_0_15px_rgba(206,240,2,0.5)] bg-white/90 rounded-xl p-1"
+                        style={{ height: '40px', width: 'auto' }}
+                    />
                     <div>
                         <h1 className="text-2xl font-black text-white m-0 tracking-tighter uppercase italic">
                             Ligue 1 <span className="text-accent not-italic">Sim</span>

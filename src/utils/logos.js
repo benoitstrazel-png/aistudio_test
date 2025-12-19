@@ -1,51 +1,75 @@
-// Mapping of team names to valid Logo URLs (SVG/PNG)
-// Using DIRECT Wikimedia Commons URLs (Hotlinking safe usually)
+// Mapping of team names to valid Logo URLs
+// Using L'Equipe CDN for stubborn logos (Le Havre, Monaco) as they are extremely stable
 
-export const TEAM_LOGOS = {
-    // Top Tables
-    "PSG": "https://upload.wikimedia.org/wikipedia/fr/a/a1/Logo_Paris_Saint-Germain_Football_Club_%282013%29.svg",
-    "Marseille": "https://upload.wikimedia.org/wikipedia/fr/4/43/Logo_Olympique_de_Marseille.svg",
-    "Lyon": "https://upload.wikimedia.org/wikipedia/fr/e/e2/Olympique_lyonnais_%28logo%29.svg",
-    "Monaco": "https://upload.wikimedia.org/wikipedia/fr/5/50/Logo_AS_Monaco_FC_2021.svg",
-    "Lille": "https://upload.wikimedia.org/wikipedia/fr/6/62/Logo_LOSC_Lille_2018.svg",
-    "Rennes": "https://upload.wikimedia.org/wikipedia/fr/e/e9/Logo_Stade_Rennais_FC.svg",
-    "Lens": "https://upload.wikimedia.org/wikipedia/fr/9/95/Logo_RC_Lens_2014.svg",
-    "Nice": "https://upload.wikimedia.org/wikipedia/fr/b/b1/Logo_OGC_Nice_2013.svg",
+const MANUAL_URLS = {
+    // LE HAVRE (HAC) - Corrected with User URL
+    "Le Havre": "https://i.pinimg.com/originals/a8/9e/11/a89e114b0c3e6021c03cb725307b18d8.png",
+    "Le Havre AC": "https://i.pinimg.com/originals/a8/9e/11/a89e114b0c3e6021c03cb725307b18d8.png",
+    "HAC": "https://i.pinimg.com/originals/a8/9e/11/a89e114b0c3e6021c03cb725307b18d8.png",
 
-    // Mid/Lower Table
-    "Strasbourg": "https://upload.wikimedia.org/wikipedia/fr/9/91/Racing_Club_de_Strasbourg_Alsace_%282016%29.svg",
-    "Reims": "https://upload.wikimedia.org/wikipedia/fr/0/02/Logo_Stade_de_Reims_2020.svg",
-    "Toulouse": "https://upload.wikimedia.org/wikipedia/fr/v/v8/Logo_Toulouse_FC_2018.svg",
-    "Montpellier": "https://upload.wikimedia.org/wikipedia/fr/a/a8/Logo_Montpellier_H%C3%A9rault_SC_2015.svg",
-    "Nantes": "https://upload.wikimedia.org/wikipedia/fr/5/5c/Logo_FC_Nantes_2019.svg",
-    "Le Havre": "https://upload.wikimedia.org/wikipedia/fr/5/50/Logo_Le_Havre_Athletic_Club_%282012%29.svg",
-    "Brest": "https://upload.wikimedia.org/wikipedia/fr/1/14/Logo_Stade_Brestois_29_2010.svg",
-    "Lorient": "https://upload.wikimedia.org/wikipedia/fr/1/1d/Logo_FC_Lorient_Bretagne-Sud.svg",
-    "Metz": "https://upload.wikimedia.org/wikipedia/fr/4/4a/Logo_FC_Metz_2021.svg",
-    "Clermont": "https://upload.wikimedia.org/wikipedia/fr/7/7b/Logo_Clermont_Foot_63_2013.svg",
-    "Auxerre": "https://upload.wikimedia.org/wikipedia/fr/3/39/Logo_AJ_Auxerre.svg",
-    "Angers": "https://upload.wikimedia.org/wikipedia/fr/d/d3/Logo_Angers_SCO_2021.svg",
-    "Saint-Etienne": "https://upload.wikimedia.org/wikipedia/fr/a/a0/Logo_AS_Saint-%C3%89tienne.svg",
-    "Paris FC": "https://upload.wikimedia.org/wikipedia/fr/d/db/Logo_Paris_FC_2011.svg",
-    "Bordeaux": "https://upload.wikimedia.org/wikipedia/fr/7/76/Logo_des_Girondins_de_Bordeaux.svg"
+    // MONACO (ASM) - Source L'Equipe
+    "Monaco": "https://medias.lequipe.fr/logo-football/25/200?20210705",
+    "AS Monaco": "https://medias.lequipe.fr/logo-football/25/200?20210705",
+    "ASM": "https://medias.lequipe.fr/logo-football/25/200?20210705",
+    "MonacoMon": "https://medias.lequipe.fr/logo-football/25/200?20210705", // Cas spécifique vu dans les screenshots "MonacoMonMON"
+
+    // NICE - Source L'Equipe (Au cas où)
+    "Nice": "https://medias.lequipe.fr/logo-football/46/200?20210705",
+    "OGC Nice": "https://medias.lequipe.fr/logo-football/46/200?20210705",
+
+    // PARIS FC
+    "Paris FC": "https://medias.lequipe.fr/logo-football/235/200?20210705"
+};
+
+const FOOTBALL_DATA_IDS = {
+    // Ligue 1 Standard IDs (Football-Data.org)
+    "PSG": 524, "Paris Saint-Germain": 524,
+    "Marseille": 516, "OM": 516,
+    "Lyon": 523, "OL": 523,
+    "Lille": 521, "LOSC": 521,
+    "Rennes": 529, "Stade Rennais": 529,
+    "Nantes": 543, "FCN": 543,
+    "Lorient": 525, "FCL": 525,
+    "Brest": 512, "Stade Brestois": 512, "SB29": 512,
+    "Reims": 547, "Stade de Reims": 547,
+    "Montpellier": 518, "MHSC": 518,
+    "Toulouse": 511, "TFC": 511,
+    "Strasbourg": 576, "RCSA": 576,
+    "Lens": 546, "RCL": 546,
+    "Angers": 532, "SCO": 532,
+    "Metz": 545, "FCM": 545,
+    "Auxerre": 519, "AJA": 519,
+    "Saint-Etienne": 527, "ASSE": 527,
+    "Clermont": 541
 };
 
 export const getTeamLogo = (teamName) => {
     if (!teamName) return null;
 
-    // Direct match
-    if (TEAM_LOGOS[teamName]) return TEAM_LOGOS[teamName];
+    // 1. Check Manual URLs first (Strict & Partial)
+    // Correction: Priority to exact match, then partial
+    if (MANUAL_URLS[teamName]) return MANUAL_URLS[teamName];
+    const manualKey = Object.keys(MANUAL_URLS).find(k => teamName.includes(k));
+    if (manualKey) return MANUAL_URLS[manualKey];
 
-    // Fuzzy / Case Insensitive
-    const keys = Object.keys(TEAM_LOGOS);
-    const key = keys.find(k => k.toLowerCase() === teamName.toLowerCase() || k.includes(teamName));
+    // 2. Football-Data.org IDs
+    let id = FOOTBALL_DATA_IDS[teamName];
+    if (!id) {
+        const lowerName = teamName.toLowerCase();
+        const key = Object.keys(FOOTBALL_DATA_IDS).find(k => {
+            const kLow = k.toLowerCase();
+            return kLow === lowerName || lowerName.includes(kLow) || kLow.includes(lowerName);
+        });
+        if (key) id = FOOTBALL_DATA_IDS[key];
+    }
 
-    if (key) return TEAM_LOGOS[key];
+    if (id) {
+        return `https://crests.football-data.org/${id}.svg`;
+    }
 
-    // Placeholder if really not found
     return `https://ui-avatars.com/api/?name=${teamName}&background=0D0D0D&color=CEF002&font-size=0.5`;
 };
 
 export const getLeagueLogo = () => {
-    return "https://upload.wikimedia.org/wikipedia/commons/4/49/Ligue1_Uber_Eats_logo.png"; // Fallback safe URL
+    return "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ligue1_Uber_Eats_logo.png/600px-Ligue1_Uber_Eats_logo.png";
 };
