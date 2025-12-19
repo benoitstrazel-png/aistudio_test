@@ -6,8 +6,112 @@
   },
   "nextMatches": [
     {
-      "id": 49455,
-      "homeTeam": "Rennes",
+      "id": 72609,
+      "homeTeam": "Lorient",
+      "awayTeam": "Lens",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Lens",
+        "winner_conf": 50,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 50,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.2412843633530405,
+          "N": 0.24067307305751637,
+          "2": 0.509277177008585
+        }
+      }
+    },
+    {
+      "id": 73400,
+      "homeTeam": "Monaco",
+      "awayTeam": "Rennes",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "Monaco",
+        "winner_conf": 54,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 54,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5435087025891061,
+          "N": 0.20271901840707504,
+          "2": 0.2264104715817979
+        }
+      }
+    },
+    {
+      "id": 13574,
+      "homeTeam": "Toulouse",
+      "awayTeam": "Metz",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 11,
+        "winner": "Toulouse",
+        "winner_conf": 62,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 62,
+        "advice": "Victoire Toulouse",
+        "probs": {
+          "1": 0.6260732652446921,
+          "N": 0.2031627243094882,
+          "2": 0.15211183108371637
+        }
+      }
+    },
+    {
+      "id": 82823,
+      "homeTeam": "Nantes",
+      "awayTeam": "Auxerre",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Auxerre",
+        "winner_conf": 38,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 38,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.34689949559449457,
+          "N": 0.26679566367052115,
+          "2": 0.38223474090543536
+        }
+      }
+    },
+    {
+      "id": 12106,
+      "homeTeam": "Marseille",
       "awayTeam": "Le Havre",
       "date": "2025-12-22",
       "odds": {
@@ -17,129 +121,23 @@
       },
       "prediction": {
         "score": "2-0",
-        "winner": "Rennes",
-        "confidence": 61,
-        "advice": "Victoire Rennes",
+        "score_conf": 11,
+        "winner": "Marseille",
+        "winner_conf": 70,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 61,
+        "confidence": 70,
+        "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.6134475522333104,
-          "N": 0.20088406802384082,
-          "2": 0.1643460597226032
+          "1": 0.703474864201512,
+          "N": 0.1501151340514791,
+          "2": 0.09658224991628328
         }
       }
     },
     {
-      "id": 90539,
-      "homeTeam": "Nice",
-      "awayTeam": "Marseille",
-      "date": "2025-12-22",
-      "odds": {
-        "home": 2.5,
-        "draw": 3.2,
-        "away": 2.8
-      },
-      "prediction": {
-        "score": "1-1",
-        "winner": "Nice",
-        "confidence": 37,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.3751425442372786,
-          "N": 0.24306040442928695,
-          "2": 0.37292719805439256
-        }
-      }
-    },
-    {
-      "id": 86770,
+      "id": 50806,
       "homeTeam": "Lille",
-      "awayTeam": "Monaco",
-      "date": "2025-12-22",
-      "odds": {
-        "home": 2.5,
-        "draw": 3.2,
-        "away": 2.8
-      },
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lille",
-        "confidence": 46,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.46877567216232136,
-          "N": 0.23346334296382656,
-          "2": 0.286070879274877
-        }
-      }
-    },
-    {
-      "id": 43293,
-      "homeTeam": "Metz",
-      "awayTeam": "PSG",
-      "date": "2025-12-22",
-      "odds": {
-        "home": 2.5,
-        "draw": 3.2,
-        "away": 2.8
-      },
-      "prediction": {
-        "score": "0-3",
-        "winner": "PSG",
-        "confidence": 72,
-        "advice": "Victoire PSG",
-        "probs": {
-          "1": 0.06798308362333202,
-          "N": 0.11416199420645728,
-          "2": 0.7235485056453641
-        }
-      }
-    },
-    {
-      "id": 51181,
-      "homeTeam": "Lyon",
-      "awayTeam": "Angers",
-      "date": "2025-12-22",
-      "odds": {
-        "home": 2.5,
-        "draw": 3.2,
-        "away": 2.8
-      },
-      "prediction": {
-        "score": "1-0",
-        "winner": "Lyon",
-        "confidence": 59,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.5940742388726266,
-          "N": 0.21941774180454782,
-          "2": 0.17319081593151409
-        }
-      }
-    },
-    {
-      "id": 50954,
-      "homeTeam": "Nantes",
-      "awayTeam": "Lens",
-      "date": "2025-12-22",
-      "odds": {
-        "home": 2.5,
-        "draw": 3.2,
-        "away": 2.8
-      },
-      "prediction": {
-        "score": "0-1",
-        "winner": "Lens",
-        "confidence": 50,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.22347312059718144,
-          "N": 0.2675384772184583,
-          "2": 0.5049419206875578
-        }
-      }
-    },
-    {
-      "id": 12285,
-      "homeTeam": "Brest",
       "awayTeam": "Paris FC",
       "date": "2025-12-22",
       "odds": {
@@ -148,42 +146,24 @@
         "away": 2.8
       },
       "prediction": {
-        "score": "2-1",
-        "winner": "Brest",
-        "confidence": 57,
-        "advice": "+2.5 Buts",
+        "score": "2-0",
+        "score_conf": 10,
+        "winner": "Lille",
+        "winner_conf": 66,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 61,
+        "confidence": 66,
+        "advice": "Victoire Lille",
         "probs": {
-          "1": 0.5737229797992539,
-          "N": 0.1977243278961206,
-          "2": 0.20012592171146545
+          "1": 0.6677934503290777,
+          "N": 0.169962873306075,
+          "2": 0.12416527138448806
         }
       }
     },
     {
-      "id": 81443,
-      "homeTeam": "Toulouse",
-      "awayTeam": "Lorient",
-      "date": "2025-12-22",
-      "odds": {
-        "home": 2.5,
-        "draw": 3.2,
-        "away": 2.8
-      },
-      "prediction": {
-        "score": "2-1",
-        "winner": "Toulouse",
-        "confidence": 58,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.5819507674783381,
-          "N": 0.21059903161161225,
-          "2": 0.1891709878332868
-        }
-      }
-    },
-    {
-      "id": 44547,
-      "homeTeam": "Auxerre",
+      "id": 68532,
+      "homeTeam": "Lyon",
       "awayTeam": "Strasbourg",
       "date": "2025-12-22",
       "odds": {
@@ -193,13 +173,69 @@
       },
       "prediction": {
         "score": "1-1",
-        "winner": "Strasbourg",
-        "confidence": 37,
+        "score_conf": 11,
+        "winner": "Lyon",
+        "winner_conf": 48,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 48,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.36323486689539686,
-          "N": 0.252609243736918,
-          "2": 0.37772417403657976
+          "1": 0.4834886033293321,
+          "N": 0.23013520539775031,
+          "2": 0.2735757004603032
+        }
+      }
+    },
+    {
+      "id": 40185,
+      "homeTeam": "PSG",
+      "awayTeam": "Nice",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 10,
+        "winner": "PSG",
+        "winner_conf": 65,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 61,
+        "confidence": 65,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.6575178859776791,
+          "N": 0.17417904891312672,
+          "2": 0.13205809230684898
+        }
+      }
+    },
+    {
+      "id": 18323,
+      "homeTeam": "Angers",
+      "awayTeam": "Brest",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Brest",
+        "winner_conf": 42,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 42,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.30780478489110913,
+          "N": 0.2641250073371117,
+          "2": 0.4236217524172335
         }
       }
     }
@@ -234,13 +270,6 @@
       "status": "live"
     },
     {
-      "team": "Lyon",
-      "points": 27,
-      "played": 16,
-      "projectedPoints": 57,
-      "status": "live"
-    },
-    {
       "team": "Rennes",
       "points": 27,
       "played": 16,
@@ -248,14 +277,21 @@
       "status": "live"
     },
     {
-      "team": "Monaco",
+      "team": "Lyon",
+      "points": 27,
+      "played": 16,
+      "projectedPoints": 57,
+      "status": "live"
+    },
+    {
+      "team": "Strasbourg",
       "points": 23,
       "played": 16,
       "projectedPoints": 48,
       "status": "live"
     },
     {
-      "team": "Strasbourg",
+      "team": "Monaco",
       "points": 23,
       "played": 16,
       "projectedPoints": 48,
@@ -2297,8 +2333,104 @@
       "prediction": null
     },
     {
-      "id": "fix_sim_Le Havre_Strasbourg",
+      "id": "fix_sim_Auxerre_Angers",
+      "homeTeam": "Auxerre",
+      "awayTeam": "Angers",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-0",
+        "score_conf": 13,
+        "winner": "Auxerre",
+        "winner_conf": 47,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 56,
+        "confidence": 47,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.4754798351975726,
+          "N": 0.2653153690253097,
+          "2": 0.2548888328280549
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Le Havre_Monaco",
       "homeTeam": "Le Havre",
+      "awayTeam": "Monaco",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-2",
+        "score_conf": 10,
+        "winner": "Monaco",
+        "winner_conf": 56,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 56,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.20353460681403565,
+          "N": 0.21243974718310638,
+          "2": 0.5656384547802626
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Le Havre_Toulouse",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Toulouse",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Toulouse",
+        "winner_conf": 43,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 43,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.29063879473334375,
+          "N": 0.26505545248129553,
+          "2": 0.4399710828606848
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lille_Lorient",
+      "homeTeam": "Lille",
+      "awayTeam": "Lorient",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 11,
+        "winner": "Lille",
+        "winner_conf": 68,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 61,
+        "confidence": 68,
+        "advice": "Victoire Lille",
+        "probs": {
+          "1": 0.6881023555057191,
+          "N": 0.15943707803504606,
+          "2": 0.10856051235705842
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nantes_Strasbourg",
+      "homeTeam": "Nantes",
       "awayTeam": "Strasbourg",
       "week": 17,
       "date": "2025-12-26",
@@ -2306,7 +2438,155 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Strasbourg",
+        "winner_conf": 45,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 52,
+        "confidence": 45,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.2782098200827828,
+          "N": 0.2576469243014062,
+          "2": 0.4587196252844311
+        }
+      }
+    },
+    {
+      "id": "fix_sim_PSG_Lyon",
+      "homeTeam": "PSG",
+      "awayTeam": "Lyon",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "PSG",
+        "winner_conf": 67,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 67,
+        "confidence": 67,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.6763252586868861,
+          "N": 0.14464618097520182,
+          "2": 0.10981545156705264
+        }
+      }
+    },
+    {
+      "id": "fix_sim_PSG_Paris FC",
+      "homeTeam": "PSG",
+      "awayTeam": "Paris FC",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "3-0",
+        "score_conf": 9,
+        "winner": "PSG",
+        "winner_conf": 70,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 70,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.7049890865613382,
+          "N": 0.08098460191848349,
+          "2": 0.04478134825179056
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Rennes_Angers",
+      "homeTeam": "Rennes",
+      "awayTeam": "Angers",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-0",
+        "score_conf": 12,
+        "winner": "Rennes",
+        "winner_conf": 57,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 57,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.5748442601462956,
+          "N": 0.22707040697048997,
+          "2": 0.1867206325602584
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Toulouse_Monaco",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Monaco",
+      "week": 17,
+      "date": "2025-12-26",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Monaco",
+        "winner_conf": 41,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 56,
+        "confidence": 41,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.3379523628866812,
+          "N": 0.24232192083866444,
+          "2": 0.4106825634211077
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Auxerre_Nice",
+      "homeTeam": "Auxerre",
+      "awayTeam": "Nice",
+      "week": 18,
+      "date": "2026-01-02",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Nice",
+        "winner_conf": 43,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 43,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.3048395919381912,
+          "N": 0.2555328357375373,
+          "2": 0.43380913245158237
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Le Havre_Strasbourg",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Strasbourg",
+      "week": 18,
+      "date": "2026-01-02",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Strasbourg",
+        "winner_conf": 45,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
         "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -2317,322 +2597,122 @@
       }
     },
     {
-      "id": "fix_sim_Lens_PSG",
+      "id": "fix_sim_Lens_Angers",
       "homeTeam": "Lens",
-      "awayTeam": "PSG",
-      "week": 17,
-      "date": "2025-12-26",
+      "awayTeam": "Angers",
+      "week": 18,
+      "date": "2026-01-02",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "PSG",
-        "confidence": 51,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.2407304903591224,
-          "N": 0.23770754817839698,
-          "2": 0.5119936072414877
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lyon_Lens",
-      "homeTeam": "Lyon",
-      "awayTeam": "Lens",
-      "week": 17,
-      "date": "2025-12-26",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 40,
+        "score": "1-0",
+        "score_conf": 16,
+        "winner": "Lens",
+        "winner_conf": 58,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 58,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.4033068752041275,
-          "N": 0.2590719249155169,
-          "2": 0.33241417096209913
+          "1": 0.5885479165233931,
+          "N": 0.24783512748412775,
+          "2": 0.15749722349779469
         }
       }
     },
     {
-      "id": "fix_sim_Nantes_Brest",
-      "homeTeam": "Nantes",
-      "awayTeam": "Brest",
-      "week": 17,
-      "date": "2025-12-26",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Brest",
-        "confidence": 46,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.2777136737850363,
-          "N": 0.24890946618232287,
-          "2": 0.46628941477522495
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nice_Metz",
-      "homeTeam": "Nice",
-      "awayTeam": "Metz",
-      "week": 17,
-      "date": "2025-12-26",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-0",
-        "winner": "Nice",
-        "confidence": 68,
-        "advice": "Victoire Nice",
-        "probs": {
-          "1": 0.6828855158693163,
-          "N": 0.17271926696051595,
-          "2": 0.11275395941745048
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nice_Strasbourg",
-      "homeTeam": "Nice",
-      "awayTeam": "Strasbourg",
-      "week": 17,
-      "date": "2025-12-26",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Nice",
-        "confidence": 49,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.4978287511659458,
-          "N": 0.24344858473549658,
-          "2": 0.25055295055571736
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Paris FC_Brest",
-      "homeTeam": "Paris FC",
-      "awayTeam": "Brest",
-      "week": 17,
-      "date": "2025-12-26",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Brest",
-        "confidence": 42,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.3296712627135968,
-          "N": 0.22718454621266462,
-          "2": 0.4279751083755358
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Rennes_Lorient",
-      "homeTeam": "Rennes",
-      "awayTeam": "Lorient",
-      "week": 17,
-      "date": "2025-12-26",
+      "id": "fix_sim_Marseille_Lyon",
+      "homeTeam": "Marseille",
+      "awayTeam": "Lyon",
+      "week": 18,
+      "date": "2026-01-02",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-1",
-        "winner": "Rennes",
-        "confidence": 61,
-        "advice": "Victoire Rennes",
-        "probs": {
-          "1": 0.6123695593289359,
-          "N": 0.18228113165513485,
-          "2": 0.16762953579712345
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Rennes_PSG",
-      "homeTeam": "Rennes",
-      "awayTeam": "PSG",
-      "week": 17,
-      "date": "2025-12-26",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-2",
-        "winner": "PSG",
-        "confidence": 58,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.19263176073332378,
-          "N": 0.1913396224198886,
-          "2": 0.5826564885242423
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Angers_Marseille",
-      "homeTeam": "Angers",
-      "awayTeam": "Marseille",
-      "week": 18,
-      "date": "2026-01-02",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "0-1",
+        "score_conf": 9,
         "winner": "Marseille",
+        "winner_conf": 55,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
         "confidence": 55,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.2044363776537241,
-          "N": 0.2301219115752659,
-          "2": 0.5544254079673362
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Angers_Toulouse",
-      "homeTeam": "Angers",
-      "awayTeam": "Toulouse",
-      "week": 18,
-      "date": "2026-01-02",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Toulouse",
-        "confidence": 40,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.3102856921513981,
-          "N": 0.2849304475265978,
-          "2": 0.4024101668917733
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Auxerre_Brest",
-      "homeTeam": "Auxerre",
-      "awayTeam": "Brest",
-      "week": 18,
-      "date": "2026-01-02",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Brest",
-        "confidence": 38,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.36412829246818407,
-          "N": 0.2448327438345041,
-          "2": 0.38269192753359477
+          "1": 0.5537286868212798,
+          "N": 0.20118249239590086,
+          "2": 0.21742414385901884
         }
       }
     },
     {
-      "id": "fix_sim_Le Havre_Metz",
-      "homeTeam": "Le Havre",
-      "awayTeam": "Metz",
-      "week": 18,
-      "date": "2026-01-02",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Le Havre",
-        "confidence": 48,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.4822196439689633,
-          "N": 0.24684615224119683,
-          "2": 0.2634626325869597
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lille_Brest",
-      "homeTeam": "Lille",
-      "awayTeam": "Brest",
-      "week": 18,
-      "date": "2026-01-02",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lille",
-        "confidence": 56,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.5602968471497738,
-          "N": 0.22047495738188022,
-          "2": 0.20467318905025225
-        }
-      }
-    },
-    {
-      "id": "fix_sim_PSG_Lorient",
-      "homeTeam": "PSG",
+      "id": "fix_sim_Monaco_Lorient",
+      "homeTeam": "Monaco",
       "awayTeam": "Lorient",
       "week": 18,
       "date": "2026-01-02",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "3-0",
-        "winner": "PSG",
-        "confidence": 70,
-        "advice": "Victoire PSG",
-        "probs": {
-          "1": 0.7018243035555151,
-          "N": 0.07176269452838603,
-          "2": 0.03715104116486538
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Paris FC_Monaco",
-      "homeTeam": "Paris FC",
-      "awayTeam": "Monaco",
-      "week": 18,
-      "date": "2026-01-02",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-2",
+        "score": "2-1",
+        "score_conf": 9,
         "winner": "Monaco",
-        "confidence": 53,
-        "advice": "+2.5 Buts",
+        "winner_conf": 67,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 68,
+        "confidence": 67,
+        "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.23540748059302927,
-          "N": 0.20138741764089346,
-          "2": 0.5335363157710369
+          "1": 0.6734337738708325,
+          "N": 0.1424564355533119,
+          "2": 0.1099079314721726
         }
       }
     },
     {
-      "id": "fix_sim_Paris FC_Nice",
-      "homeTeam": "Paris FC",
-      "awayTeam": "Nice",
+      "id": "fix_sim_Nantes_Angers",
+      "homeTeam": "Nantes",
+      "awayTeam": "Angers",
       "week": 18,
       "date": "2026-01-02",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Nice",
-        "confidence": 48,
-        "advice": "+2.5 Buts",
+        "score_conf": 13,
+        "winner": "Nantes",
+        "winner_conf": 38,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 62,
+        "confidence": 38,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.27293132928243513,
-          "N": 0.2327303731366903,
-          "2": 0.4825807707355814
+          "1": 0.38278714839137296,
+          "N": 0.2912936073145116,
+          "2": 0.3239661410310451
+        }
+      }
+    },
+    {
+      "id": "fix_sim_PSG_Brest",
+      "homeTeam": "PSG",
+      "awayTeam": "Brest",
+      "week": 18,
+      "date": "2026-01-02",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 9,
+        "winner": "PSG",
+        "winner_conf": 69,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 69,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.6949223362491816,
+          "N": 0.13505579466817097,
+          "2": 0.09431163246899048
         }
       }
     },
@@ -2646,7 +2726,11 @@
       "score": null,
       "prediction": {
         "score": "2-0",
+        "score_conf": 10,
         "winner": "Rennes",
+        "winner_conf": 65,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 62,
         "confidence": 65,
         "advice": "Victoire Rennes",
         "probs": {
@@ -2657,22 +2741,74 @@
       }
     },
     {
-      "id": "fix_sim_Auxerre_Nice",
+      "id": "fix_sim_Toulouse_Lorient",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Lorient",
+      "week": 18,
+      "date": "2026-01-02",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 10,
+        "winner": "Toulouse",
+        "winner_conf": 58,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 58,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5819507674783381,
+          "N": 0.21059903161161225,
+          "2": 0.1891709878332868
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Auxerre_PSG",
       "homeTeam": "Auxerre",
-      "awayTeam": "Nice",
+      "awayTeam": "PSG",
+      "week": 19,
+      "date": "2026-01-09",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "0-2",
+        "score_conf": 10,
+        "winner": "PSG",
+        "winner_conf": 65,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 63,
+        "confidence": 65,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.13202344136117583,
+          "N": 0.16981560163293008,
+          "2": 0.6570192662494068
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Le Havre_Angers",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Angers",
       "week": 19,
       "date": "2026-01-09",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Nice",
-        "confidence": 43,
+        "score_conf": 13,
+        "winner": "Le Havre",
+        "winner_conf": 39,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 39,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.3048395919381912,
-          "N": 0.2555328357375373,
-          "2": 0.43380913245158237
+          "1": 0.39333056552982687,
+          "N": 0.28482850528514964,
+          "2": 0.3194737610548099
         }
       }
     },
@@ -2686,7 +2822,11 @@
       "score": null,
       "prediction": {
         "score": "2-0",
+        "score_conf": 13,
         "winner": "Lens",
+        "winner_conf": 67,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 52,
         "confidence": 67,
         "advice": "Victoire Lens",
         "probs": {
@@ -2697,282 +2837,290 @@
       }
     },
     {
-      "id": "fix_sim_Lens_Nantes",
-      "homeTeam": "Lens",
-      "awayTeam": "Nantes",
-      "week": 19,
-      "date": "2026-01-09",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-0",
-        "winner": "Lens",
-        "confidence": 63,
-        "advice": "Victoire Lens",
-        "probs": {
-          "1": 0.6318354213759639,
-          "N": 0.22127636073982085,
-          "2": 0.13614150062639457
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lille_Nice",
+      "id": "fix_sim_Lille_Brest",
       "homeTeam": "Lille",
-      "awayTeam": "Nice",
+      "awayTeam": "Brest",
       "week": 19,
       "date": "2026-01-09",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 10,
         "winner": "Lille",
-        "confidence": 49,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.49122568755862767,
-          "N": 0.25121618059524803,
-          "2": 0.25107006966980433
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lorient_Strasbourg",
-      "homeTeam": "Lorient",
-      "awayTeam": "Strasbourg",
-      "week": 19,
-      "date": "2026-01-09",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Strasbourg",
-        "confidence": 45,
+        "winner_conf": 56,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 56,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.30163312762363387,
-          "N": 0.2326494339430551,
-          "2": 0.45348594756862276
+          "1": 0.5602968471497738,
+          "N": 0.22047495738188022,
+          "2": 0.20467318905025225
         }
       }
     },
     {
-      "id": "fix_sim_Lyon_Lorient",
-      "homeTeam": "Lyon",
-      "awayTeam": "Lorient",
+      "id": "fix_sim_Marseille_Auxerre",
+      "homeTeam": "Marseille",
+      "awayTeam": "Auxerre",
       "week": 19,
       "date": "2026-01-09",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-1",
-        "winner": "Lyon",
-        "confidence": 62,
-        "advice": "Victoire Lyon",
+        "score_conf": 10,
+        "winner": "Marseille",
+        "winner_conf": 64,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 62,
+        "confidence": 64,
+        "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.6292132451206196,
-          "N": 0.17410004764478434,
-          "2": 0.1532209976539019
+          "1": 0.6487705445171812,
+          "N": 0.17544521407361796,
+          "2": 0.1387661753070503
         }
       }
     },
     {
-      "id": "fix_sim_PSG_Metz",
-      "homeTeam": "PSG",
-      "awayTeam": "Metz",
+      "id": "fix_sim_Nantes_Nice",
+      "homeTeam": "Nantes",
+      "awayTeam": "Nice",
       "week": 19,
       "date": "2026-01-09",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "3-0",
+        "score": "0-1",
+        "score_conf": 13,
+        "winner": "Nice",
+        "winner_conf": 51,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 51,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.22946563431240502,
+          "N": 0.2528200108931144,
+          "2": 0.5116340928989067
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Rennes_PSG",
+      "homeTeam": "Rennes",
+      "awayTeam": "PSG",
+      "week": 19,
+      "date": "2026-01-09",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-2",
+        "score_conf": 9,
         "winner": "PSG",
-        "confidence": 71,
-        "advice": "Victoire PSG",
+        "winner_conf": 58,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 58,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.7148772539744637,
-          "N": 0.0621959210359138,
-          "2": 0.02763768400707211
+          "1": 0.19263176073332378,
+          "N": 0.1913396224198886,
+          "2": 0.5826564885242423
         }
       }
     },
     {
-      "id": "fix_sim_Rennes_Nantes",
-      "homeTeam": "Rennes",
-      "awayTeam": "Nantes",
+      "id": "fix_sim_Toulouse_Lyon",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Lyon",
       "week": 19,
       "date": "2026-01-09",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "winner": "Rennes",
-        "confidence": 61,
-        "advice": "Victoire Rennes",
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Toulouse",
+        "winner_conf": 40,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 40,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.6167159418870232,
-          "N": 0.20356474889777268,
-          "2": 0.16037987511035542
+          "1": 0.40052421292336743,
+          "N": 0.24854668738598942,
+          "2": 0.3435802832977095
         }
       }
     },
     {
-      "id": "fix_sim_Rennes_Paris FC",
-      "homeTeam": "Rennes",
+      "id": "fix_sim_Toulouse_Paris FC",
+      "homeTeam": "Toulouse",
       "awayTeam": "Paris FC",
       "week": 19,
       "date": "2026-01-09",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "winner": "Rennes",
-        "confidence": 58,
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Toulouse",
+        "winner_conf": 55,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 55,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.5863153385755384,
-          "N": 0.1910381122112551,
-          "2": 0.18955242612639503
+          "1": 0.554559932381572,
+          "N": 0.21815936880233858,
+          "2": 0.21133381053681569
         }
       }
     },
     {
-      "id": "fix_sim_Angers_Nice",
+      "id": "fix_sim_Angers_Metz",
       "homeTeam": "Angers",
-      "awayTeam": "Nice",
-      "week": 20,
-      "date": "2026-01-16",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "0-1",
-        "winner": "Nice",
-        "confidence": 46,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.25643198463398015,
-          "N": 0.27205852052182267,
-          "2": 0.46794735310145225
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lille_Le Havre",
-      "homeTeam": "Lille",
-      "awayTeam": "Le Havre",
-      "week": 20,
-      "date": "2026-01-16",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-0",
-        "winner": "Lille",
-        "confidence": 68,
-        "advice": "Victoire Lille",
-        "probs": {
-          "1": 0.6857272762682374,
-          "N": 0.17989334686651567,
-          "2": 0.10910666556778999
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lorient_Metz",
-      "homeTeam": "Lorient",
       "awayTeam": "Metz",
       "week": 20,
       "date": "2026-01-16",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Lorient",
-        "confidence": 51,
-        "advice": "+2.5 Buts",
+        "score": "1-0",
+        "score_conf": 13,
+        "winner": "Angers",
+        "winner_conf": 49,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 49,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.5117181666270281,
-          "N": 0.22073940734444858,
-          "2": 0.25098254352004
+          "1": 0.49813536732846153,
+          "N": 0.2570070826158361,
+          "2": 0.23941332228368184
         }
       }
     },
     {
-      "id": "fix_sim_Lorient_Nantes",
-      "homeTeam": "Lorient",
-      "awayTeam": "Nantes",
+      "id": "fix_sim_Lens_PSG",
+      "homeTeam": "Lens",
+      "awayTeam": "PSG",
       "week": 20,
       "date": "2026-01-16",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Lorient",
-        "confidence": 46,
+        "score_conf": 11,
+        "winner": "PSG",
+        "winner_conf": 51,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 52,
+        "confidence": 51,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.4644466434490207,
-          "N": 0.2435544996773109,
-          "2": 0.28357952423836763
+          "1": 0.2407304903591224,
+          "N": 0.23770754817839698,
+          "2": 0.5119936072414877
         }
       }
     },
     {
-      "id": "fix_sim_Lyon_Brest",
-      "homeTeam": "Lyon",
+      "id": "fix_sim_Lille_Auxerre",
+      "homeTeam": "Lille",
+      "awayTeam": "Auxerre",
+      "week": 20,
+      "date": "2026-01-16",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 11,
+        "winner": "Lille",
+        "winner_conf": 62,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 62,
+        "advice": "Victoire Lille",
+        "probs": {
+          "1": 0.6262171598284539,
+          "N": 0.20367635535606038,
+          "2": 0.1517509890423672
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lorient_Paris FC",
+      "homeTeam": "Lorient",
+      "awayTeam": "Paris FC",
+      "week": 20,
+      "date": "2026-01-16",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 9,
+        "winner": "Lorient",
+        "winner_conf": 42,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 42,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.423396158897451,
+          "N": 0.22229768786740875,
+          "2": 0.3361624903747947
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Monaco_Brest",
+      "homeTeam": "Monaco",
       "awayTeam": "Brest",
       "week": 20,
       "date": "2026-01-16",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 48,
+        "score": "2-1",
+        "score_conf": 10,
+        "winner": "Monaco",
+        "winner_conf": 55,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 55,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.4855964013276974,
-          "N": 0.2230021270331605,
-          "2": 0.2751682930960418
+          "1": 0.5547075628280327,
+          "N": 0.2019042475210282,
+          "2": 0.21647191414945763
         }
       }
     },
     {
-      "id": "fix_sim_Marseille_Nice",
-      "homeTeam": "Marseille",
-      "awayTeam": "Nice",
+      "id": "fix_sim_Monaco_Lyon",
+      "homeTeam": "Monaco",
+      "awayTeam": "Lyon",
       "week": 20,
       "date": "2026-01-16",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Marseille",
-        "confidence": 51,
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "Monaco",
+        "winner_conf": 52,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 52,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.5179383963482261,
-          "N": 0.22577084607102973,
-          "2": 0.2424623513819007
-        }
-      }
-    },
-    {
-      "id": "fix_sim_PSG_Nantes",
-      "homeTeam": "PSG",
-      "awayTeam": "Nantes",
-      "week": 20,
-      "date": "2026-01-16",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "3-0",
-        "winner": "PSG",
-        "confidence": 75,
-        "advice": "Victoire PSG",
-        "probs": {
-          "1": 0.755997841518356,
-          "N": 0.08908259937121912,
-          "2": 0.04069148883766251
+          "1": 0.5236693130228228,
+          "N": 0.20705291033700118,
+          "2": 0.24391166510364073
         }
       }
     },
@@ -2986,7 +3134,11 @@
       "score": null,
       "prediction": {
         "score": "2-0",
+        "score_conf": 11,
         "winner": "Strasbourg",
+        "winner_conf": 63,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
         "confidence": 63,
         "advice": "Victoire Strasbourg",
         "probs": {
@@ -2997,62 +3149,146 @@
       }
     },
     {
-      "id": "fix_sim_Toulouse_Monaco",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Monaco",
+      "id": "fix_sim_Strasbourg_Nice",
+      "homeTeam": "Strasbourg",
+      "awayTeam": "Nice",
       "week": 20,
       "date": "2026-01-16",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Monaco",
-        "confidence": 41,
+        "score_conf": 12,
+        "winner": "Strasbourg",
+        "winner_conf": 37,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 37,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.3783707152728194,
+          "N": 0.257882728425299,
+          "2": 0.35833631754757794
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Toulouse_Auxerre",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Auxerre",
+      "week": 20,
+      "date": "2026-01-16",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Toulouse",
+        "winner_conf": 50,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 50,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.5042005894702514,
+          "N": 0.2459934135614185,
+          "2": 0.2423056320132307
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Angers_Nice",
+      "homeTeam": "Angers",
+      "awayTeam": "Nice",
+      "week": 21,
+      "date": "2026-01-23",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "0-1",
+        "score_conf": 13,
+        "winner": "Nice",
+        "winner_conf": 46,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 46,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.25643198463398015,
+          "N": 0.27205852052182267,
+          "2": 0.46794735310145225
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Angers_PSG",
+      "homeTeam": "Angers",
+      "awayTeam": "PSG",
+      "week": 21,
+      "date": "2026-01-23",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "0-2",
+        "score_conf": 12,
+        "winner": "PSG",
+        "winner_conf": 68,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 56,
+        "confidence": 68,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.11032515612115354,
+          "N": 0.17265967647911015,
+          "2": 0.686051344267803
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Le Havre_Lyon",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Lyon",
+      "week": 21,
+      "date": "2026-01-23",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Lyon",
+        "winner_conf": 49,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 49,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.3379523628866812,
-          "N": 0.24232192083866444,
-          "2": 0.4106825634211077
+          "1": 0.2572990964287665,
+          "N": 0.2353177311521587,
+          "2": 0.4968078548363247
         }
       }
     },
     {
-      "id": "fix_sim_Angers_Le Havre",
-      "homeTeam": "Angers",
-      "awayTeam": "Le Havre",
+      "id": "fix_sim_Le Havre_Metz",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Metz",
       "week": 21,
       "date": "2026-01-23",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
-        "winner": "Angers",
-        "confidence": 44,
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Le Havre",
+        "winner_conf": 48,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 48,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.44607526466477077,
-          "N": 0.2783723410135356,
-          "2": 0.2726004873248886
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lens_Auxerre",
-      "homeTeam": "Lens",
-      "awayTeam": "Auxerre",
-      "week": 21,
-      "date": "2026-01-23",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-0",
-        "winner": "Lens",
-        "confidence": 56,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.5662175259551396,
-          "N": 0.23766950946050047,
-          "2": 0.18755857634102774
+          "1": 0.4822196439689633,
+          "N": 0.24684615224119683,
+          "2": 0.2634626325869597
         }
       }
     },
@@ -3066,7 +3302,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 10,
         "winner": "Lille",
+        "winner_conf": 55,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 56,
         "confidence": 55,
         "advice": "+2.5 Buts",
         "probs": {
@@ -3077,142 +3317,170 @@
       }
     },
     {
-      "id": "fix_sim_Lorient_Paris FC",
-      "homeTeam": "Lorient",
-      "awayTeam": "Paris FC",
-      "week": 21,
-      "date": "2026-01-23",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lorient",
-        "confidence": 42,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.423396158897451,
-          "N": 0.22229768786740875,
-          "2": 0.3361624903747947
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lyon_Monaco",
-      "homeTeam": "Lyon",
-      "awayTeam": "Monaco",
-      "week": 21,
-      "date": "2026-01-23",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 38,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.38529482404625903,
-          "N": 0.22419198218102018,
-          "2": 0.3732639065966061
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Metz_Nantes",
-      "homeTeam": "Metz",
-      "awayTeam": "Nantes",
-      "week": 21,
-      "date": "2026-01-23",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Metz",
-        "confidence": 39,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.3984325356995045,
-          "N": 0.2624529913743773,
-          "2": 0.334439972965051
-        }
-      }
-    },
-    {
-      "id": "fix_sim_PSG_Paris FC",
-      "homeTeam": "PSG",
-      "awayTeam": "Paris FC",
-      "week": 21,
-      "date": "2026-01-23",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "3-0",
-        "winner": "PSG",
-        "confidence": 70,
-        "advice": "Victoire PSG",
-        "probs": {
-          "1": 0.7049890865613382,
-          "N": 0.08098460191848349,
-          "2": 0.04478134825179056
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Strasbourg_Paris FC",
-      "homeTeam": "Strasbourg",
-      "awayTeam": "Paris FC",
+      "id": "fix_sim_Monaco_Auxerre",
+      "homeTeam": "Monaco",
+      "awayTeam": "Auxerre",
       "week": 21,
       "date": "2026-01-23",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-1",
-        "winner": "Strasbourg",
-        "confidence": 56,
-        "advice": "+2.5 Buts",
+        "score_conf": 10,
+        "winner": "Monaco",
+        "winner_conf": 62,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 62,
+        "confidence": 62,
+        "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.5681873359382659,
-          "N": 0.2060352444177928,
-          "2": 0.2034575810955045
+          "1": 0.6245207548433936,
+          "N": 0.18455260322261768,
+          "2": 0.1580380226909639
         }
       }
     },
     {
-      "id": "fix_sim_Toulouse_Nice",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Nice",
+      "id": "fix_sim_Nantes_Marseille",
+      "homeTeam": "Nantes",
+      "awayTeam": "Marseille",
+      "week": 21,
+      "date": "2026-01-23",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "0-2",
+        "score_conf": 10,
+        "winner": "Marseille",
+        "winner_conf": 59,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 56,
+        "confidence": 59,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.1766193537881174,
+          "N": 0.20786433502155763,
+          "2": 0.5968591210573175
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Paris FC_Brest",
+      "homeTeam": "Paris FC",
+      "awayTeam": "Brest",
       "week": 21,
       "date": "2026-01-23",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Toulouse",
-        "confidence": 36,
-        "advice": "Les deux marquent (BTTS)",
+        "score_conf": 10,
+        "winner": "Brest",
+        "winner_conf": 42,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 63,
+        "confidence": 42,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.366423725156833,
-          "N": 0.2681536378009603,
-          "2": 0.36152591106509624
+          "1": 0.3296712627135968,
+          "N": 0.22718454621266462,
+          "2": 0.4279751083755358
         }
       }
     },
     {
-      "id": "fix_sim_Brest_Le Havre",
-      "homeTeam": "Brest",
-      "awayTeam": "Le Havre",
+      "id": "fix_sim_Strasbourg_PSG",
+      "homeTeam": "Strasbourg",
+      "awayTeam": "PSG",
+      "week": 21,
+      "date": "2026-01-23",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-2",
+        "score_conf": 10,
+        "winner": "PSG",
+        "winner_conf": 59,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 62,
+        "confidence": 59,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.18463524270245163,
+          "N": 0.197165670126599,
+          "2": 0.5915587372686557
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Angers_Lille",
+      "homeTeam": "Angers",
+      "awayTeam": "Lille",
       "week": 22,
       "date": "2026-01-30",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "winner": "Brest",
-        "confidence": 60,
-        "advice": "Victoire Brest",
+        "score": "0-1",
+        "score_conf": 14,
+        "winner": "Lille",
+        "winner_conf": 52,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 52,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.6001889805222026,
-          "N": 0.20834093372802912,
-          "2": 0.1733564094038292
+          "1": 0.21288512723851363,
+          "N": 0.2587251533958692,
+          "2": 0.52329556560428
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Angers_Marseille",
+      "homeTeam": "Angers",
+      "awayTeam": "Marseille",
+      "week": 22,
+      "date": "2026-01-30",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "0-1",
+        "score_conf": 11,
+        "winner": "Marseille",
+        "winner_conf": 55,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 55,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.2044363776537241,
+          "N": 0.2301219115752659,
+          "2": 0.5544254079673362
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lens_Toulouse",
+      "homeTeam": "Lens",
+      "awayTeam": "Toulouse",
+      "week": 22,
+      "date": "2026-01-30",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-0",
+        "score_conf": 14,
+        "winner": "Lens",
+        "winner_conf": 49,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 49,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.4918809701894702,
+          "N": 0.26673228238138985,
+          "2": 0.2372423707781312
         }
       }
     },
@@ -3226,7 +3494,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 11,
         "winner": "Lorient",
+        "winner_conf": 37,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
         "confidence": 37,
         "advice": "+2.5 Buts",
         "probs": {
@@ -3237,148 +3509,200 @@
       }
     },
     {
-      "id": "fix_sim_Lyon_Nice",
+      "id": "fix_sim_Lyon_Auxerre",
       "homeTeam": "Lyon",
-      "awayTeam": "Nice",
-      "week": 22,
-      "date": "2026-01-30",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 41,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.4177825011886811,
-          "N": 0.24461129597239062,
-          "2": 0.32925698889113014
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Marseille_Lens",
-      "homeTeam": "Marseille",
-      "awayTeam": "Lens",
-      "week": 22,
-      "date": "2026-01-30",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Marseille",
-        "confidence": 50,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.5007785437114229,
-          "N": 0.24168497946237055,
-          "2": 0.24893955146086544
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Marseille_Rennes",
-      "homeTeam": "Marseille",
-      "awayTeam": "Rennes",
-      "week": 22,
-      "date": "2026-01-30",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
-        "winner": "Marseille",
-        "confidence": 57,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.5726890378553064,
-          "N": 0.19605741276196442,
-          "2": 0.2011370082030187
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Metz_Auxerre",
-      "homeTeam": "Metz",
       "awayTeam": "Auxerre",
       "week": 22,
       "date": "2026-01-30",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Auxerre",
-        "confidence": 42,
+        "score": "2-1",
+        "score_conf": 10,
+        "winner": "Lyon",
+        "winner_conf": 56,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 59,
+        "confidence": 56,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.31766696060117106,
-          "N": 0.24793084551420622,
-          "2": 0.4269499278725264
+          "1": 0.5614520926704115,
+          "N": 0.21251766436262304,
+          "2": 0.20740422873642794
         }
       }
     },
     {
-      "id": "fix_sim_Metz_Paris FC",
-      "homeTeam": "Metz",
-      "awayTeam": "Paris FC",
+      "id": "fix_sim_Lyon_Brest",
+      "homeTeam": "Lyon",
+      "awayTeam": "Brest",
       "week": 22,
       "date": "2026-01-30",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Paris FC",
-        "confidence": 39,
+        "score_conf": 10,
+        "winner": "Lyon",
+        "winner_conf": 48,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 62,
+        "confidence": 48,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.3583032860140394,
-          "N": 0.23427065650190476,
-          "2": 0.39542033579927083
+          "1": 0.4855964013276974,
+          "N": 0.2230021270331605,
+          "2": 0.2751682930960418
         }
       }
     },
     {
-      "id": "fix_sim_Nantes_Paris FC",
-      "homeTeam": "Nantes",
-      "awayTeam": "Paris FC",
+      "id": "fix_sim_Monaco_Nantes",
+      "homeTeam": "Monaco",
+      "awayTeam": "Nantes",
       "week": 22,
       "date": "2026-01-30",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Nantes",
-        "confidence": 39,
-        "advice": "+2.5 Buts",
+        "score": "2-0",
+        "score_conf": 11,
+        "winner": "Monaco",
+        "winner_conf": 68,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 68,
+        "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.39034832655005197,
-          "N": 0.2493325223880619,
-          "2": 0.3531516852660826
+          "1": 0.6882890155497313,
+          "N": 0.16243197349348779,
+          "2": 0.10883669204778706
         }
       }
     },
     {
-      "id": "fix_sim_PSG_Lille",
-      "homeTeam": "PSG",
-      "awayTeam": "Lille",
+      "id": "fix_sim_Monaco_Rennes",
+      "homeTeam": "Monaco",
+      "awayTeam": "Rennes",
       "week": 22,
       "date": "2026-01-30",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-1",
-        "winner": "PSG",
-        "confidence": 60,
-        "advice": "Victoire PSG",
+        "score_conf": 9,
+        "winner": "Monaco",
+        "winner_conf": 54,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 54,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.6077230476079096,
-          "N": 0.19679074511852945,
-          "2": 0.170610281500978
+          "1": 0.5435087025891061,
+          "N": 0.20271901840707504,
+          "2": 0.2264104715817979
         }
       }
     },
     {
-      "id": "fix_sim_Brest_Lens",
+      "id": "fix_sim_Nice_PSG",
+      "homeTeam": "Nice",
+      "awayTeam": "PSG",
+      "week": 22,
+      "date": "2026-01-30",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "PSG",
+        "winner_conf": 52,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 52,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.2338637066126325,
+          "N": 0.22170590732255682,
+          "2": 0.529081571158667
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Angers_Toulouse",
+      "homeTeam": "Angers",
+      "awayTeam": "Toulouse",
+      "week": 23,
+      "date": "2026-02-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Toulouse",
+        "winner_conf": 40,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 40,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.3102856921513981,
+          "N": 0.2849304475265978,
+          "2": 0.4024101668917733
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Brest_Auxerre",
       "homeTeam": "Brest",
+      "awayTeam": "Auxerre",
+      "week": 23,
+      "date": "2026-02-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Brest",
+        "winner_conf": 52,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 52,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5271139595173188,
+          "N": 0.2251709378851073,
+          "2": 0.23392123376540738
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Le Havre_PSG",
+      "homeTeam": "Le Havre",
+      "awayTeam": "PSG",
+      "week": 23,
+      "date": "2026-02-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "0-2",
+        "score_conf": 11,
+        "winner": "PSG",
+        "winner_conf": 70,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 62,
+        "confidence": 70,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.09126292353609239,
+          "N": 0.14416130728511622,
+          "2": 0.7093384205464494
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lorient_Lens",
+      "homeTeam": "Lorient",
       "awayTeam": "Lens",
       "week": 23,
       "date": "2026-02-06",
@@ -3386,19 +3710,47 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Brest",
-        "confidence": 37,
+        "score_conf": 11,
+        "winner": "Lens",
+        "winner_conf": 50,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 50,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.3703900132977087,
-          "N": 0.26414288733439717,
-          "2": 0.3610435329780985
+          "1": 0.2412843633530405,
+          "N": 0.24067307305751637,
+          "2": 0.509277177008585
         }
       }
     },
     {
-      "id": "fix_sim_Brest_Rennes",
-      "homeTeam": "Brest",
+      "id": "fix_sim_Lorient_Nantes",
+      "homeTeam": "Lorient",
+      "awayTeam": "Nantes",
+      "week": 23,
+      "date": "2026-02-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Lorient",
+        "winner_conf": 46,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 46,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.4644466434490207,
+          "N": 0.2435544996773109,
+          "2": 0.28357952423836763
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lyon_Rennes",
+      "homeTeam": "Lyon",
       "awayTeam": "Rennes",
       "week": 23,
       "date": "2026-02-06",
@@ -3406,73 +3758,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Brest",
-        "confidence": 43,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.4382790271541377,
-          "N": 0.230380291471468,
-          "2": 0.3179093174313228
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lorient_Angers",
-      "homeTeam": "Lorient",
-      "awayTeam": "Angers",
-      "week": 23,
-      "date": "2026-02-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lorient",
-        "confidence": 42,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.4217577016769455,
-          "N": 0.25816812891132807,
-          "2": 0.3147159519673393
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lorient_Marseille",
-      "homeTeam": "Lorient",
-      "awayTeam": "Marseille",
-      "week": 23,
-      "date": "2026-02-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-2",
-        "winner": "Marseille",
-        "confidence": 59,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.18563462642754527,
-          "N": 0.18700687817031025,
-          "2": 0.5906612043265612
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lyon_Paris FC",
-      "homeTeam": "Lyon",
-      "awayTeam": "Paris FC",
-      "week": 23,
-      "date": "2026-02-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
+        "score_conf": 10,
         "winner": "Lyon",
-        "confidence": 60,
-        "advice": "Victoire Lyon",
+        "winner_conf": 47,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 63,
+        "confidence": 47,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.6045035468426323,
-          "N": 0.18341972492968972,
-          "2": 0.1740111458499678
+          "1": 0.4738699005849625,
+          "N": 0.22256611380027688,
+          "2": 0.2867306806579782
         }
       }
     },
@@ -3486,7 +3782,11 @@
       "score": null,
       "prediction": {
         "score": "0-2",
+        "score_conf": 11,
         "winner": "Lille",
+        "winner_conf": 61,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 54,
         "confidence": 61,
         "advice": "Victoire Lille",
         "probs": {
@@ -3497,202 +3797,26 @@
       }
     },
     {
-      "id": "fix_sim_Monaco_Rennes",
-      "homeTeam": "Monaco",
-      "awayTeam": "Rennes",
+      "id": "fix_sim_Strasbourg_Monaco",
+      "homeTeam": "Strasbourg",
+      "awayTeam": "Monaco",
       "week": 23,
       "date": "2026-02-06",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
+        "score": "1-1",
+        "score_conf": 10,
         "winner": "Monaco",
-        "confidence": 54,
+        "winner_conf": 40,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 40,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.5435087025891061,
-          "N": 0.20271901840707504,
-          "2": 0.2264104715817979
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nice_Le Havre",
-      "homeTeam": "Nice",
-      "awayTeam": "Le Havre",
-      "week": 23,
-      "date": "2026-02-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-0",
-        "winner": "Nice",
-        "confidence": 63,
-        "advice": "Victoire Nice",
-        "probs": {
-          "1": 0.6389762165251341,
-          "N": 0.2035725701648261,
-          "2": 0.14026040184084
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Toulouse_Lens",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Lens",
-      "week": 23,
-      "date": "2026-02-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lens",
-        "confidence": 36,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.35282018291277134,
-          "N": 0.28361015445324145,
-          "2": 0.36114123852807445
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Brest_Lorient",
-      "homeTeam": "Brest",
-      "awayTeam": "Lorient",
-      "week": 24,
-      "date": "2026-02-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
-        "winner": "Brest",
-        "confidence": 60,
-        "advice": "Victoire Brest",
-        "probs": {
-          "1": 0.600594380174421,
-          "N": 0.18941322195366603,
-          "2": 0.1776135146033341
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lyon_Auxerre",
-      "homeTeam": "Lyon",
-      "awayTeam": "Auxerre",
-      "week": 24,
-      "date": "2026-02-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
-        "winner": "Lyon",
-        "confidence": 56,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.5614520926704115,
-          "N": 0.21251766436262304,
-          "2": 0.20740422873642794
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lyon_Rennes",
-      "homeTeam": "Lyon",
-      "awayTeam": "Rennes",
-      "week": 24,
-      "date": "2026-02-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 47,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.4738699005849625,
-          "N": 0.22256611380027688,
-          "2": 0.2867306806579782
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nantes_Angers",
-      "homeTeam": "Nantes",
-      "awayTeam": "Angers",
-      "week": 24,
-      "date": "2026-02-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Nantes",
-        "confidence": 38,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.38278714839137296,
-          "N": 0.2912936073145116,
-          "2": 0.3239661410310451
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nice_Lens",
-      "homeTeam": "Nice",
-      "awayTeam": "Lens",
-      "week": 24,
-      "date": "2026-02-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Nice",
-        "confidence": 41,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.41665723301816754,
-          "N": 0.2769351298902138,
-          "2": 0.3033876353877001
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nice_Rennes",
-      "homeTeam": "Nice",
-      "awayTeam": "Rennes",
-      "week": 24,
-      "date": "2026-02-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Nice",
-        "confidence": 49,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.49123379222837177,
-          "N": 0.2352842893990194,
-          "2": 0.2628054058422246
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Paris FC_Lille",
-      "homeTeam": "Paris FC",
-      "awayTeam": "Lille",
-      "week": 24,
-      "date": "2026-02-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lille",
-        "confidence": 54,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.22219019866309958,
-          "N": 0.21935678477518553,
-          "2": 0.5425136207510298
+          "1": 0.3476976073322795,
+          "N": 0.2337488143108556,
+          "2": 0.40636871260669494
         }
       }
     },
@@ -3700,13 +3824,17 @@
       "id": "fix_sim_Strasbourg_Toulouse",
       "homeTeam": "Strasbourg",
       "awayTeam": "Toulouse",
-      "week": 24,
-      "date": "2026-02-13",
+      "week": 23,
+      "date": "2026-02-06",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Strasbourg",
+        "winner_conf": 44,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
         "confidence": 44,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -3717,102 +3845,122 @@
       }
     },
     {
-      "id": "fix_sim_Toulouse_Lorient",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Lorient",
+      "id": "fix_sim_Auxerre_Rennes",
+      "homeTeam": "Auxerre",
+      "awayTeam": "Rennes",
       "week": 24,
       "date": "2026-02-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "winner": "Toulouse",
-        "confidence": 58,
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Rennes",
+        "winner_conf": 39,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 39,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.5819507674783381,
-          "N": 0.21059903161161225,
-          "2": 0.1891709878332868
+          "1": 0.3526854607110312,
+          "N": 0.2417805060454239,
+          "2": 0.3962867576851043
         }
       }
     },
     {
-      "id": "fix_sim_Auxerre_Angers",
-      "homeTeam": "Auxerre",
-      "awayTeam": "Angers",
-      "week": 25,
-      "date": "2026-02-20",
+      "id": "fix_sim_Brest_Rennes",
+      "homeTeam": "Brest",
+      "awayTeam": "Rennes",
+      "week": 24,
+      "date": "2026-02-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Brest",
+        "winner_conf": 43,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 61,
+        "confidence": 43,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.4382790271541377,
+          "N": 0.230380291471468,
+          "2": 0.3179093174313228
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Le Havre_Auxerre",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Auxerre",
+      "week": 24,
+      "date": "2026-02-13",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
         "winner": "Auxerre",
-        "confidence": 47,
+        "winner_conf": 37,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 37,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.4754798351975726,
-          "N": 0.2653153690253097,
-          "2": 0.2548888328280549
+          "1": 0.356356199947954,
+          "N": 0.2616616632561383,
+          "2": 0.3771930916618886
         }
       }
     },
     {
-      "id": "fix_sim_Brest_Strasbourg",
-      "homeTeam": "Brest",
-      "awayTeam": "Strasbourg",
-      "week": 25,
-      "date": "2026-02-20",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Brest",
-        "confidence": 44,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.44811189310229166,
-          "N": 0.23879458655972324,
-          "2": 0.30311228834829806
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Le Havre_PSG",
+      "id": "fix_sim_Le Havre_Marseille",
       "homeTeam": "Le Havre",
-      "awayTeam": "PSG",
-      "week": 25,
-      "date": "2026-02-20",
+      "awayTeam": "Marseille",
+      "week": 24,
+      "date": "2026-02-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-2",
-        "winner": "PSG",
-        "confidence": 70,
-        "advice": "Victoire PSG",
+        "score": "1-2",
+        "score_conf": 10,
+        "winner": "Marseille",
+        "winner_conf": 59,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 59,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.09126292353609239,
-          "N": 0.14416130728511622,
-          "2": 0.7093384205464494
+          "1": 0.18109992376222014,
+          "N": 0.2051812657594848,
+          "2": 0.5931095517081438
         }
       }
     },
     {
-      "id": "fix_sim_Lyon_Lille",
-      "homeTeam": "Lyon",
-      "awayTeam": "Lille",
-      "week": 25,
-      "date": "2026-02-20",
+      "id": "fix_sim_Lorient_Strasbourg",
+      "homeTeam": "Lorient",
+      "awayTeam": "Strasbourg",
+      "week": 24,
+      "date": "2026-02-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Lille",
-        "confidence": 38,
+        "score_conf": 11,
+        "winner": "Strasbourg",
+        "winner_conf": 45,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 59,
+        "confidence": 45,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.35813510855395086,
-          "N": 0.2464460569975484,
-          "2": 0.38751918266532326
+          "1": 0.30163312762363387,
+          "N": 0.2326494339430551,
+          "2": 0.45348594756862276
         }
       }
     },
@@ -3820,13 +3968,17 @@
       "id": "fix_sim_Metz_Toulouse",
       "homeTeam": "Metz",
       "awayTeam": "Toulouse",
-      "week": 25,
-      "date": "2026-02-20",
+      "week": 24,
+      "date": "2026-02-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Toulouse",
+        "winner_conf": 49,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 50,
         "confidence": 49,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -3837,62 +3989,266 @@
       }
     },
     {
-      "id": "fix_sim_Monaco_Lorient",
-      "homeTeam": "Monaco",
-      "awayTeam": "Lorient",
-      "week": 25,
-      "date": "2026-02-20",
+      "id": "fix_sim_PSG_Lille",
+      "homeTeam": "PSG",
+      "awayTeam": "Lille",
+      "week": 24,
+      "date": "2026-02-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-1",
-        "winner": "Monaco",
-        "confidence": 67,
-        "advice": "Victoire Monaco",
+        "score_conf": 10,
+        "winner": "PSG",
+        "winner_conf": 60,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 60,
+        "advice": "Victoire PSG",
         "probs": {
-          "1": 0.6734337738708325,
-          "N": 0.1424564355533119,
-          "2": 0.1099079314721726
+          "1": 0.6077230476079096,
+          "N": 0.19679074511852945,
+          "2": 0.170610281500978
         }
       }
     },
     {
-      "id": "fix_sim_Nantes_Marseille",
-      "homeTeam": "Nantes",
+      "id": "fix_sim_PSG_Marseille",
+      "homeTeam": "PSG",
       "awayTeam": "Marseille",
+      "week": 24,
+      "date": "2026-02-13",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "PSG",
+        "winner_conf": 60,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 67,
+        "confidence": 60,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.606582428670792,
+          "N": 0.17845831439436036,
+          "2": 0.17131565114897793
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Paris FC_Lens",
+      "homeTeam": "Paris FC",
+      "awayTeam": "Lens",
+      "week": 24,
+      "date": "2026-02-13",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Lens",
+        "winner_conf": 48,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 48,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.265881784324418,
+          "N": 0.24536681923394418,
+          "2": 0.4809170206319507
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Auxerre_Nantes",
+      "homeTeam": "Auxerre",
+      "awayTeam": "Nantes",
       "week": 25,
       "date": "2026-02-20",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-2",
-        "winner": "Marseille",
-        "confidence": 59,
-        "advice": "+2.5 Buts",
+        "score": "1-0",
+        "score_conf": 12,
+        "winner": "Auxerre",
+        "winner_conf": 51,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 51,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.1766193537881174,
-          "N": 0.20786433502155763,
-          "2": 0.5968591210573175
+          "1": 0.5193353546419988,
+          "N": 0.24608274817329237,
+          "2": 0.22724426896970285
         }
       }
     },
     {
-      "id": "fix_sim_Nice_PSG",
-      "homeTeam": "Nice",
-      "awayTeam": "PSG",
+      "id": "fix_sim_Brest_Lens",
+      "homeTeam": "Brest",
+      "awayTeam": "Lens",
       "week": 25,
       "date": "2026-02-20",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "PSG",
-        "confidence": 52,
+        "score_conf": 13,
+        "winner": "Brest",
+        "winner_conf": 37,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 52,
+        "confidence": 37,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.3703900132977087,
+          "N": 0.26414288733439717,
+          "2": 0.3610435329780985
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lyon_Lens",
+      "homeTeam": "Lyon",
+      "awayTeam": "Lens",
+      "week": 25,
+      "date": "2026-02-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Lyon",
+        "winner_conf": 40,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 40,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.4033068752041275,
+          "N": 0.2590719249155169,
+          "2": 0.33241417096209913
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Marseille_Lille",
+      "homeTeam": "Marseille",
+      "awayTeam": "Lille",
+      "week": 25,
+      "date": "2026-02-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Marseille",
+        "winner_conf": 45,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 45,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.2338637066126325,
-          "N": 0.22170590732255682,
-          "2": 0.529081571158667
+          "1": 0.45701043784507217,
+          "N": 0.23742057931143373,
+          "2": 0.2951983673276108
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Metz_Lorient",
+      "homeTeam": "Metz",
+      "awayTeam": "Lorient",
+      "week": 25,
+      "date": "2026-02-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Metz",
+        "winner_conf": 38,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 38,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.3883604876349101,
+          "N": 0.23579391031298966,
+          "2": 0.3644491752577152
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Metz_Monaco",
+      "homeTeam": "Metz",
+      "awayTeam": "Monaco",
+      "week": 25,
+      "date": "2026-02-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-2",
+        "score_conf": 10,
+        "winner": "Monaco",
+        "winner_conf": 61,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 63,
+        "confidence": 61,
+        "advice": "Victoire Monaco",
+        "probs": {
+          "1": 0.16741699862871698,
+          "N": 0.18650443732184274,
+          "2": 0.6129699387772148
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nice_Monaco",
+      "homeTeam": "Nice",
+      "awayTeam": "Monaco",
+      "week": 25,
+      "date": "2026-02-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Nice",
+        "winner_conf": 40,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 40,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.4074675812159914,
+          "N": 0.23976408819756562,
+          "2": 0.34288742992532245
+        }
+      }
+    },
+    {
+      "id": "fix_sim_PSG_Toulouse",
+      "homeTeam": "PSG",
+      "awayTeam": "Toulouse",
+      "week": 25,
+      "date": "2026-02-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 11,
+        "winner": "PSG",
+        "winner_conf": 70,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 62,
+        "confidence": 70,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.7032489122980885,
+          "N": 0.14944086789296046,
+          "2": 0.09653645053498038
         }
       }
     },
@@ -3906,7 +4262,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Paris FC",
+        "winner_conf": 45,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 50,
         "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -3917,102 +4277,122 @@
       }
     },
     {
-      "id": "fix_sim_Angers_Lille",
-      "homeTeam": "Angers",
-      "awayTeam": "Lille",
-      "week": 26,
-      "date": "2026-02-27",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "0-1",
-        "winner": "Lille",
-        "confidence": 52,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.21288512723851363,
-          "N": 0.2587251533958692,
-          "2": 0.52329556560428
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lorient_Le Havre",
-      "homeTeam": "Lorient",
-      "awayTeam": "Le Havre",
+      "id": "fix_sim_Auxerre_Strasbourg",
+      "homeTeam": "Auxerre",
+      "awayTeam": "Strasbourg",
       "week": 26,
       "date": "2026-02-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Lorient",
-        "confidence": 45,
+        "score_conf": 12,
+        "winner": "Strasbourg",
+        "winner_conf": 37,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 52,
+        "confidence": 37,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.4594051488167984,
-          "N": 0.23975696221606715,
-          "2": 0.29126402199565793
+          "1": 0.36323486689539686,
+          "N": 0.252609243736918,
+          "2": 0.37772417403657976
         }
       }
     },
     {
-      "id": "fix_sim_Marseille_Auxerre",
-      "homeTeam": "Marseille",
-      "awayTeam": "Auxerre",
+      "id": "fix_sim_Brest_Angers",
+      "homeTeam": "Brest",
+      "awayTeam": "Angers",
       "week": 26,
       "date": "2026-02-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "winner": "Marseille",
-        "confidence": 64,
-        "advice": "Victoire Marseille",
-        "probs": {
-          "1": 0.6487705445171812,
-          "N": 0.17544521407361796,
-          "2": 0.1387661753070503
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Metz_Brest",
-      "homeTeam": "Metz",
-      "awayTeam": "Brest",
-      "week": 26,
-      "date": "2026-02-27",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
+        "score": "1-0",
+        "score_conf": 12,
         "winner": "Brest",
-        "confidence": 51,
-        "advice": "+2.5 Buts",
+        "winner_conf": 56,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 56,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.24629308865029353,
-          "N": 0.22535525220210612,
-          "2": 0.5142153427838809
+          "1": 0.560571435685511,
+          "N": 0.23421930906318397,
+          "2": 0.1956163585428503
         }
       }
     },
     {
-      "id": "fix_sim_Nantes_Toulouse",
-      "homeTeam": "Nantes",
-      "awayTeam": "Toulouse",
+      "id": "fix_sim_Brest_Strasbourg",
+      "homeTeam": "Brest",
+      "awayTeam": "Strasbourg",
       "week": 26,
       "date": "2026-02-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Toulouse",
+        "score_conf": 11,
+        "winner": "Brest",
+        "winner_conf": 44,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 56,
         "confidence": 44,
-        "advice": "Les deux marquent (BTTS)",
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.28283534337689265,
-          "N": 0.2695920286808972,
-          "2": 0.44378121519386643
+          "1": 0.44811189310229166,
+          "N": 0.23879458655972324,
+          "2": 0.30311228834829806
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lens_Nantes",
+      "homeTeam": "Lens",
+      "awayTeam": "Nantes",
+      "week": 26,
+      "date": "2026-02-27",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-0",
+        "score_conf": 15,
+        "winner": "Lens",
+        "winner_conf": 63,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 63,
+        "advice": "Victoire Lens",
+        "probs": {
+          "1": 0.6318354213759639,
+          "N": 0.22127636073982085,
+          "2": 0.13614150062639457
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Metz_Paris FC",
+      "homeTeam": "Metz",
+      "awayTeam": "Paris FC",
+      "week": 26,
+      "date": "2026-02-27",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Paris FC",
+        "winner_conf": 39,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 39,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.3583032860140394,
+          "N": 0.23427065650190476,
+          "2": 0.39542033579927083
         }
       }
     },
@@ -4026,7 +4406,11 @@
       "score": null,
       "prediction": {
         "score": "2-0",
+        "score_conf": 10,
         "winner": "Nice",
+        "winner_conf": 64,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
         "confidence": 64,
         "advice": "Victoire Nice",
         "probs": {
@@ -4037,16 +4421,236 @@
       }
     },
     {
-      "id": "fix_sim_Paris FC_Marseille",
-      "homeTeam": "Paris FC",
-      "awayTeam": "Marseille",
+      "id": "fix_sim_PSG_Lorient",
+      "homeTeam": "PSG",
+      "awayTeam": "Lorient",
       "week": 26,
       "date": "2026-02-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
+        "score": "3-0",
+        "score_conf": 9,
+        "winner": "PSG",
+        "winner_conf": 70,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 70,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.7018243035555151,
+          "N": 0.07176269452838603,
+          "2": 0.03715104116486538
+        }
+      }
+    },
+    {
+      "id": "fix_sim_PSG_Monaco",
+      "homeTeam": "PSG",
+      "awayTeam": "Monaco",
+      "week": 26,
+      "date": "2026-02-27",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "PSG",
+        "winner_conf": 63,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 68,
+        "confidence": 63,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.6314905016413221,
+          "N": 0.16472280266817765,
+          "2": 0.14809970556702545
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Rennes_Nantes",
+      "homeTeam": "Rennes",
+      "awayTeam": "Nantes",
+      "week": 26,
+      "date": "2026-02-27",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 11,
+        "winner": "Rennes",
+        "winner_conf": 61,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 61,
+        "advice": "Victoire Rennes",
+        "probs": {
+          "1": 0.6167159418870232,
+          "N": 0.20356474889777268,
+          "2": 0.16037987511035542
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lens_Le Havre",
+      "homeTeam": "Lens",
+      "awayTeam": "Le Havre",
+      "week": 27,
+      "date": "2026-03-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-0",
+        "score_conf": 14,
+        "winner": "Lens",
+        "winner_conf": 63,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 63,
+        "advice": "Victoire Lens",
+        "probs": {
+          "1": 0.6308961778641023,
+          "N": 0.21786404723446914,
+          "2": 0.1393632813949683
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lorient_Marseille",
+      "homeTeam": "Lorient",
+      "awayTeam": "Marseille",
+      "week": 27,
+      "date": "2026-03-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
         "score": "1-2",
+        "score_conf": 9,
         "winner": "Marseille",
+        "winner_conf": 59,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 59,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.18563462642754527,
+          "N": 0.18700687817031025,
+          "2": 0.5906612043265612
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lyon_Nice",
+      "homeTeam": "Lyon",
+      "awayTeam": "Nice",
+      "week": 27,
+      "date": "2026-03-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Lyon",
+        "winner_conf": 41,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 41,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.4177825011886811,
+          "N": 0.24461129597239062,
+          "2": 0.32925698889113014
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Metz_Auxerre",
+      "homeTeam": "Metz",
+      "awayTeam": "Auxerre",
+      "week": 27,
+      "date": "2026-03-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Auxerre",
+        "winner_conf": 42,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 42,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.31766696060117106,
+          "N": 0.24793084551420622,
+          "2": 0.4269499278725264
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Metz_Brest",
+      "homeTeam": "Metz",
+      "awayTeam": "Brest",
+      "week": 27,
+      "date": "2026-03-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Brest",
+        "winner_conf": 51,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 51,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.24629308865029353,
+          "N": 0.22535525220210612,
+          "2": 0.5142153427838809
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Monaco_Lille",
+      "homeTeam": "Monaco",
+      "awayTeam": "Lille",
+      "week": 27,
+      "date": "2026-03-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Monaco",
+        "winner_conf": 42,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 42,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.42641208321055846,
+          "N": 0.23863955750738733,
+          "2": 0.32476521544016107
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Paris FC_Marseille",
+      "homeTeam": "Paris FC",
+      "awayTeam": "Marseille",
+      "week": 27,
+      "date": "2026-03-06",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-2",
+        "score_conf": 9,
+        "winner": "Marseille",
+        "winner_conf": 56,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
         "confidence": 56,
         "advice": "+2.5 Buts",
         "probs": {
@@ -4057,162 +4661,26 @@
       }
     },
     {
-      "id": "fix_sim_Strasbourg_Nice",
-      "homeTeam": "Strasbourg",
-      "awayTeam": "Nice",
-      "week": 26,
-      "date": "2026-02-27",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Strasbourg",
-        "confidence": 37,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.3783707152728194,
-          "N": 0.257882728425299,
-          "2": 0.35833631754757794
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Toulouse_Paris FC",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Paris FC",
-      "week": 26,
-      "date": "2026-02-27",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Toulouse",
-        "confidence": 55,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.554559932381572,
-          "N": 0.21815936880233858,
-          "2": 0.21133381053681569
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Angers_Lyon",
-      "homeTeam": "Angers",
-      "awayTeam": "Lyon",
-      "week": 27,
-      "date": "2026-03-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 45,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.2806864190725614,
-          "N": 0.2558855064920784,
-          "2": 0.4577023512737061
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lorient_Lens",
-      "homeTeam": "Lorient",
-      "awayTeam": "Lens",
-      "week": 27,
-      "date": "2026-03-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lens",
-        "confidence": 50,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.2412843633530405,
-          "N": 0.24067307305751637,
-          "2": 0.509277177008585
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Marseille_Lille",
-      "homeTeam": "Marseille",
-      "awayTeam": "Lille",
-      "week": 27,
-      "date": "2026-03-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Marseille",
-        "confidence": 45,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.45701043784507217,
-          "N": 0.23742057931143373,
-          "2": 0.2951983673276108
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Metz_Monaco",
-      "homeTeam": "Metz",
-      "awayTeam": "Monaco",
+      "id": "fix_sim_Paris FC_PSG",
+      "homeTeam": "Paris FC",
+      "awayTeam": "PSG",
       "week": 27,
       "date": "2026-03-06",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-2",
-        "winner": "Monaco",
-        "confidence": 61,
-        "advice": "Victoire Monaco",
-        "probs": {
-          "1": 0.16741699862871698,
-          "N": 0.18650443732184274,
-          "2": 0.6129699387772148
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Monaco_Nantes",
-      "homeTeam": "Monaco",
-      "awayTeam": "Nantes",
-      "week": 27,
-      "date": "2026-03-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-0",
-        "winner": "Monaco",
-        "confidence": 68,
-        "advice": "Victoire Monaco",
-        "probs": {
-          "1": 0.6882890155497313,
-          "N": 0.16243197349348779,
-          "2": 0.10883669204778706
-        }
-      }
-    },
-    {
-      "id": "fix_sim_PSG_Lyon",
-      "homeTeam": "PSG",
-      "awayTeam": "Lyon",
-      "week": 27,
-      "date": "2026-03-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
+        "score_conf": 8,
         "winner": "PSG",
+        "winner_conf": 67,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 68,
         "confidence": 67,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.6763252586868861,
-          "N": 0.14464618097520182,
-          "2": 0.10981545156705264
+          "1": 0.10343436540173377,
+          "N": 0.13729539824968073,
+          "2": 0.6790902756398957
         }
       }
     },
@@ -4226,7 +4694,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 11,
         "winner": "Strasbourg",
+        "winner_conf": 43,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
         "confidence": 43,
         "advice": "+2.5 Buts",
         "probs": {
@@ -4237,128 +4709,56 @@
       }
     },
     {
-      "id": "fix_sim_Toulouse_Auxerre",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Auxerre",
-      "week": 27,
-      "date": "2026-03-06",
+      "id": "fix_sim_Angers_Strasbourg",
+      "homeTeam": "Angers",
+      "awayTeam": "Strasbourg",
+      "week": 28,
+      "date": "2026-03-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Toulouse",
-        "confidence": 50,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.5042005894702514,
-          "N": 0.2459934135614185,
-          "2": 0.2423056320132307
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Toulouse_Lille",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Lille",
-      "week": 27,
-      "date": "2026-03-06",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lille",
+        "score_conf": 13,
+        "winner": "Strasbourg",
+        "winner_conf": 41,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 56,
         "confidence": 41,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.3124947453743583,
-          "N": 0.265752489758554,
-          "2": 0.4175259703547141
+          "1": 0.307087534327934,
+          "N": 0.2730537168135485,
+          "2": 0.4164718747311355
         }
       }
     },
     {
-      "id": "fix_sim_Brest_Angers",
+      "id": "fix_sim_Brest_Marseille",
       "homeTeam": "Brest",
-      "awayTeam": "Angers",
-      "week": 28,
-      "date": "2026-03-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-0",
-        "winner": "Brest",
-        "confidence": 56,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.560571435685511,
-          "N": 0.23421930906318397,
-          "2": 0.1956163585428503
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Brest_Auxerre",
-      "homeTeam": "Brest",
-      "awayTeam": "Auxerre",
+      "awayTeam": "Marseille",
       "week": 28,
       "date": "2026-03-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Brest",
-        "confidence": 52,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.5271139595173188,
-          "N": 0.2251709378851073,
-          "2": 0.23392123376540738
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Marseille_Lyon",
-      "homeTeam": "Marseille",
-      "awayTeam": "Lyon",
-      "week": 28,
-      "date": "2026-03-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
+        "score_conf": 10,
         "winner": "Marseille",
-        "confidence": 55,
+        "winner_conf": 43,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 63,
+        "confidence": 43,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.5537286868212798,
-          "N": 0.20118249239590086,
-          "2": 0.21742414385901884
+          "1": 0.31928598897452837,
+          "N": 0.22656234814536835,
+          "2": 0.4387989065515164
         }
       }
     },
     {
-      "id": "fix_sim_Monaco_Auxerre",
-      "homeTeam": "Monaco",
-      "awayTeam": "Auxerre",
-      "week": 28,
-      "date": "2026-03-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
-        "winner": "Monaco",
-        "confidence": 62,
-        "advice": "Victoire Monaco",
-        "probs": {
-          "1": 0.6245207548433936,
-          "N": 0.18455260322261768,
-          "2": 0.1580380226909639
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nantes_Le Havre",
-      "homeTeam": "Nantes",
+      "id": "fix_sim_Lorient_Le Havre",
+      "homeTeam": "Lorient",
       "awayTeam": "Le Havre",
       "week": 28,
       "date": "2026-03-13",
@@ -4366,33 +4766,137 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Nantes",
-        "confidence": 41,
-        "advice": "Les deux marquent (BTTS)",
+        "score_conf": 11,
+        "winner": "Lorient",
+        "winner_conf": 45,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 45,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.41919425894309525,
-          "N": 0.2720066919123731,
-          "2": 0.3053008659592974
+          "1": 0.4594051488167984,
+          "N": 0.23975696221606715,
+          "2": 0.29126402199565793
         }
       }
     },
     {
-      "id": "fix_sim_Nantes_Nice",
-      "homeTeam": "Nantes",
-      "awayTeam": "Nice",
+      "id": "fix_sim_Lyon_Lille",
+      "homeTeam": "Lyon",
+      "awayTeam": "Lille",
       "week": 28,
       "date": "2026-03-13",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "winner": "Nice",
-        "confidence": 51,
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Lille",
+        "winner_conf": 38,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 38,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.35813510855395086,
+          "N": 0.2464460569975484,
+          "2": 0.38751918266532326
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Metz_Nantes",
+      "homeTeam": "Metz",
+      "awayTeam": "Nantes",
+      "week": 28,
+      "date": "2026-03-13",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Metz",
+        "winner_conf": 39,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 52,
+        "confidence": 39,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.22946563431240502,
-          "N": 0.2528200108931144,
-          "2": 0.5116340928989067
+          "1": 0.3984325356995045,
+          "N": 0.2624529913743773,
+          "2": 0.334439972965051
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nice_Brest",
+      "homeTeam": "Nice",
+      "awayTeam": "Brest",
+      "week": 28,
+      "date": "2026-03-13",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Nice",
+        "winner_conf": 50,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 50,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5018070500046332,
+          "N": 0.23558666758331565,
+          "2": 0.25220428601189615
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nice_Rennes",
+      "homeTeam": "Nice",
+      "awayTeam": "Rennes",
+      "week": 28,
+      "date": "2026-03-13",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Nice",
+        "winner_conf": 49,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 49,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.49123379222837177,
+          "N": 0.2352842893990194,
+          "2": 0.2628054058422246
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Paris FC_Lille",
+      "homeTeam": "Paris FC",
+      "awayTeam": "Lille",
+      "week": 28,
+      "date": "2026-03-13",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Lille",
+        "winner_conf": 54,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 54,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.22219019866309958,
+          "N": 0.21935678477518553,
+          "2": 0.5425136207510298
         }
       }
     },
@@ -4406,7 +4910,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 13,
         "winner": "Strasbourg",
+        "winner_conf": 36,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 55,
         "confidence": 36,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -4417,62 +4925,26 @@
       }
     },
     {
-      "id": "fix_sim_Strasbourg_PSG",
-      "homeTeam": "Strasbourg",
-      "awayTeam": "PSG",
-      "week": 28,
-      "date": "2026-03-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-2",
-        "winner": "PSG",
-        "confidence": 59,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.18463524270245163,
-          "N": 0.197165670126599,
-          "2": 0.5915587372686557
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Toulouse_Marseille",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Marseille",
-      "week": 28,
-      "date": "2026-03-13",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Marseille",
-        "confidence": 44,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.30801804667493693,
-          "N": 0.24190800893021294,
-          "2": 0.44103510819827657
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Brest_Marseille",
-      "homeTeam": "Brest",
-      "awayTeam": "Marseille",
+      "id": "fix_sim_Angers_Le Havre",
+      "homeTeam": "Angers",
+      "awayTeam": "Le Havre",
       "week": 29,
       "date": "2026-03-20",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Marseille",
-        "confidence": 43,
-        "advice": "+2.5 Buts",
+        "score": "1-0",
+        "score_conf": 13,
+        "winner": "Angers",
+        "winner_conf": 44,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 44,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.31928598897452837,
-          "N": 0.22656234814536835,
-          "2": 0.4387989065515164
+          "1": 0.44607526466477077,
+          "N": 0.2783723410135356,
+          "2": 0.2726004873248886
         }
       }
     },
@@ -4486,7 +4958,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Brest",
+        "winner_conf": 45,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 52,
         "confidence": 45,
         "advice": "+2.5 Buts",
         "probs": {
@@ -4497,82 +4973,122 @@
       }
     },
     {
-      "id": "fix_sim_Le Havre_Auxerre",
-      "homeTeam": "Le Havre",
-      "awayTeam": "Auxerre",
-      "week": 29,
-      "date": "2026-03-20",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Auxerre",
-        "confidence": 37,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.356356199947954,
-          "N": 0.2616616632561383,
-          "2": 0.3771930916618886
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Metz_Lorient",
-      "homeTeam": "Metz",
+      "id": "fix_sim_Lyon_Lorient",
+      "homeTeam": "Lyon",
       "awayTeam": "Lorient",
       "week": 29,
       "date": "2026-03-20",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "Lyon",
+        "winner_conf": 62,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 62,
+        "advice": "Victoire Lyon",
+        "probs": {
+          "1": 0.6292132451206196,
+          "N": 0.17410004764478434,
+          "2": 0.1532209976539019
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lyon_Monaco",
+      "homeTeam": "Lyon",
+      "awayTeam": "Monaco",
+      "week": 29,
+      "date": "2026-03-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
         "score": "1-1",
-        "winner": "Metz",
+        "score_conf": 9,
+        "winner": "Lyon",
+        "winner_conf": 38,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
         "confidence": 38,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.3883604876349101,
-          "N": 0.23579391031298966,
-          "2": 0.3644491752577152
+          "1": 0.38529482404625903,
+          "N": 0.22419198218102018,
+          "2": 0.3732639065966061
         }
       }
     },
     {
-      "id": "fix_sim_Monaco_Angers",
-      "homeTeam": "Monaco",
-      "awayTeam": "Angers",
+      "id": "fix_sim_Marseille_Rennes",
+      "homeTeam": "Marseille",
+      "awayTeam": "Rennes",
       "week": 29,
       "date": "2026-03-20",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "winner": "Monaco",
-        "confidence": 65,
-        "advice": "Victoire Monaco",
+        "score": "2-1",
+        "score_conf": 10,
+        "winner": "Marseille",
+        "winner_conf": 57,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 57,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.6555073556137578,
-          "N": 0.18824909889401706,
-          "2": 0.13182824512310565
+          "1": 0.5726890378553064,
+          "N": 0.19605741276196442,
+          "2": 0.2011370082030187
         }
       }
     },
     {
-      "id": "fix_sim_Monaco_Lille",
-      "homeTeam": "Monaco",
-      "awayTeam": "Lille",
+      "id": "fix_sim_Nice_Lens",
+      "homeTeam": "Nice",
+      "awayTeam": "Lens",
       "week": 29,
       "date": "2026-03-20",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Monaco",
-        "confidence": 42,
-        "advice": "+2.5 Buts",
+        "score_conf": 13,
+        "winner": "Nice",
+        "winner_conf": 41,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 41,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.42641208321055846,
-          "N": 0.23863955750738733,
-          "2": 0.32476521544016107
+          "1": 0.41665723301816754,
+          "N": 0.2769351298902138,
+          "2": 0.3033876353877001
+        }
+      }
+    },
+    {
+      "id": "fix_sim_PSG_Nantes",
+      "homeTeam": "PSG",
+      "awayTeam": "Nantes",
+      "week": 29,
+      "date": "2026-03-20",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "3-0",
+        "score_conf": 12,
+        "winner": "PSG",
+        "winner_conf": 75,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 63,
+        "confidence": 75,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.755997841518356,
+          "N": 0.08908259937121912,
+          "2": 0.04069148883766251
         }
       }
     },
@@ -4586,7 +5102,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 11,
         "winner": "Paris FC",
+        "winner_conf": 49,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 56,
         "confidence": 49,
         "advice": "+2.5 Buts",
         "probs": {
@@ -4597,168 +5117,104 @@
       }
     },
     {
-      "id": "fix_sim_Strasbourg_Lyon",
-      "homeTeam": "Strasbourg",
-      "awayTeam": "Lyon",
+      "id": "fix_sim_Paris FC_Monaco",
+      "homeTeam": "Paris FC",
+      "awayTeam": "Monaco",
       "week": 29,
       "date": "2026-03-20",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Strasbourg",
-        "confidence": 41,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.4126789353502678,
-          "N": 0.23878177314606047,
-          "2": 0.3383382609286214
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Toulouse_Lyon",
-      "homeTeam": "Toulouse",
-      "awayTeam": "Lyon",
-      "week": 29,
-      "date": "2026-03-20",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Toulouse",
-        "confidence": 40,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.40052421292336743,
-          "N": 0.24854668738598942,
-          "2": 0.3435802832977095
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Auxerre_Rennes",
-      "homeTeam": "Auxerre",
-      "awayTeam": "Rennes",
-      "week": 30,
-      "date": "2026-03-27",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Rennes",
-        "confidence": 39,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.3526854607110312,
-          "N": 0.2417805060454239,
-          "2": 0.3962867576851043
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Le Havre_Angers",
-      "homeTeam": "Le Havre",
-      "awayTeam": "Angers",
-      "week": 30,
-      "date": "2026-03-27",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Le Havre",
-        "confidence": 39,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.39333056552982687,
-          "N": 0.28482850528514964,
-          "2": 0.3194737610548099
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Metz_Lyon",
-      "homeTeam": "Metz",
-      "awayTeam": "Lyon",
-      "week": 30,
-      "date": "2026-03-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-2",
-        "winner": "Lyon",
-        "confidence": 54,
+        "score_conf": 9,
+        "winner": "Monaco",
+        "winner_conf": 53,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 67,
+        "confidence": 53,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.2188218275457774,
-          "N": 0.2133933699156568,
-          "2": 0.5488572099418556
+          "1": 0.23540748059302927,
+          "N": 0.20138741764089346,
+          "2": 0.5335363157710369
         }
       }
     },
     {
-      "id": "fix_sim_Monaco_Brest",
-      "homeTeam": "Monaco",
-      "awayTeam": "Brest",
+      "id": "fix_sim_Brest_Lorient",
+      "homeTeam": "Brest",
+      "awayTeam": "Lorient",
       "week": 30,
       "date": "2026-03-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-1",
-        "winner": "Monaco",
-        "confidence": 55,
-        "advice": "+2.5 Buts",
+        "score_conf": 10,
+        "winner": "Brest",
+        "winner_conf": 60,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 64,
+        "confidence": 60,
+        "advice": "Victoire Brest",
         "probs": {
-          "1": 0.5547075628280327,
-          "N": 0.2019042475210282,
-          "2": 0.21647191414945763
+          "1": 0.600594380174421,
+          "N": 0.18941322195366603,
+          "2": 0.1776135146033341
         }
       }
     },
     {
-      "id": "fix_sim_Monaco_Marseille",
-      "homeTeam": "Monaco",
-      "awayTeam": "Marseille",
+      "id": "fix_sim_Lille_Nantes",
+      "homeTeam": "Lille",
+      "awayTeam": "Nantes",
       "week": 30,
       "date": "2026-03-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Monaco",
-        "confidence": 42,
-        "advice": "+2.5 Buts",
+        "score": "2-0",
+        "score_conf": 13,
+        "winner": "Lille",
+        "winner_conf": 68,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 52,
+        "confidence": 68,
+        "advice": "Victoire Lille",
         "probs": {
-          "1": 0.4228298272023679,
-          "N": 0.2197184425776779,
-          "2": 0.33751854141113746
+          "1": 0.6874019379579578,
+          "N": 0.18273555414691914,
+          "2": 0.10684187085886261
         }
       }
     },
     {
-      "id": "fix_sim_Nantes_Strasbourg",
-      "homeTeam": "Nantes",
-      "awayTeam": "Strasbourg",
+      "id": "fix_sim_Lyon_Paris FC",
+      "homeTeam": "Lyon",
+      "awayTeam": "Paris FC",
       "week": 30,
       "date": "2026-03-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "winner": "Strasbourg",
-        "confidence": 45,
-        "advice": "Les deux marquent (BTTS)",
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "Lyon",
+        "winner_conf": 60,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 60,
+        "advice": "Victoire Lyon",
         "probs": {
-          "1": 0.2782098200827828,
-          "N": 0.2576469243014062,
-          "2": 0.4587196252844311
+          "1": 0.6045035468426323,
+          "N": 0.18341972492968972,
+          "2": 0.1740111458499678
         }
       }
     },
     {
-      "id": "fix_sim_Paris FC_Lens",
-      "homeTeam": "Paris FC",
+      "id": "fix_sim_Marseille_Lens",
+      "homeTeam": "Marseille",
       "awayTeam": "Lens",
       "week": 30,
       "date": "2026-03-27",
@@ -4766,33 +5222,89 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Lens",
-        "confidence": 48,
+        "score_conf": 11,
+        "winner": "Marseille",
+        "winner_conf": 50,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 50,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.265881784324418,
-          "N": 0.24536681923394418,
-          "2": 0.4809170206319507
+          "1": 0.5007785437114229,
+          "N": 0.24168497946237055,
+          "2": 0.24893955146086544
         }
       }
     },
     {
-      "id": "fix_sim_Paris FC_PSG",
-      "homeTeam": "Paris FC",
-      "awayTeam": "PSG",
+      "id": "fix_sim_Marseille_Nantes",
+      "homeTeam": "Marseille",
+      "awayTeam": "Nantes",
       "week": 30,
       "date": "2026-03-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
-        "winner": "PSG",
-        "confidence": 67,
-        "advice": "Victoire PSG",
+        "score": "2-0",
+        "score_conf": 11,
+        "winner": "Marseille",
+        "winner_conf": 70,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 70,
+        "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.10343436540173377,
-          "N": 0.13729539824968073,
-          "2": 0.6790902756398957
+          "1": 0.707280601997064,
+          "N": 0.15234089225113193,
+          "2": 0.09468869049833847
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nice_Metz",
+      "homeTeam": "Nice",
+      "awayTeam": "Metz",
+      "week": 30,
+      "date": "2026-03-27",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 12,
+        "winner": "Nice",
+        "winner_conf": 68,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 68,
+        "advice": "Victoire Nice",
+        "probs": {
+          "1": 0.6828855158693163,
+          "N": 0.17271926696051595,
+          "2": 0.11275395941745048
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nice_Strasbourg",
+      "homeTeam": "Nice",
+      "awayTeam": "Strasbourg",
+      "week": 30,
+      "date": "2026-03-27",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Nice",
+        "winner_conf": 49,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 49,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.4978287511659458,
+          "N": 0.24344858473549658,
+          "2": 0.25055295055571736
         }
       }
     },
@@ -4806,7 +5318,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Lille",
+        "winner_conf": 40,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 54,
         "confidence": 40,
         "advice": "+2.5 Buts",
         "probs": {
@@ -4817,82 +5333,50 @@
       }
     },
     {
-      "id": "fix_sim_Auxerre_PSG",
-      "homeTeam": "Auxerre",
-      "awayTeam": "PSG",
-      "week": 31,
-      "date": "2026-04-03",
+      "id": "fix_sim_Rennes_Toulouse",
+      "homeTeam": "Rennes",
+      "awayTeam": "Toulouse",
+      "week": 30,
+      "date": "2026-03-27",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-2",
-        "winner": "PSG",
-        "confidence": 65,
-        "advice": "Victoire PSG",
-        "probs": {
-          "1": 0.13202344136117583,
-          "N": 0.16981560163293008,
-          "2": 0.6570192662494068
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Le Havre_Marseille",
-      "homeTeam": "Le Havre",
-      "awayTeam": "Marseille",
-      "week": 31,
-      "date": "2026-04-03",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-2",
-        "winner": "Marseille",
-        "confidence": 59,
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Rennes",
+        "winner_conf": 46,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 46,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.18109992376222014,
-          "N": 0.2051812657594848,
-          "2": 0.5931095517081438
+          "1": 0.46476123180480877,
+          "N": 0.24263096834956305,
+          "2": 0.2839350190805396
         }
       }
     },
     {
-      "id": "fix_sim_Le Havre_Toulouse",
-      "homeTeam": "Le Havre",
-      "awayTeam": "Toulouse",
+      "id": "fix_sim_Auxerre_Paris FC",
+      "homeTeam": "Auxerre",
+      "awayTeam": "Paris FC",
       "week": 31,
       "date": "2026-04-03",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Toulouse",
-        "confidence": 43,
-        "advice": "Les deux marquent (BTTS)",
+        "score_conf": 10,
+        "winner": "Auxerre",
+        "winner_conf": 48,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 59,
+        "confidence": 48,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.29063879473334375,
-          "N": 0.26505545248129553,
-          "2": 0.4399710828606848
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lens_Angers",
-      "homeTeam": "Lens",
-      "awayTeam": "Angers",
-      "week": 31,
-      "date": "2026-04-03",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-0",
-        "winner": "Lens",
-        "confidence": 58,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.5885479165233931,
-          "N": 0.24783512748412775,
-          "2": 0.15749722349779469
+          "1": 0.48864067218244694,
+          "N": 0.22709298991779997,
+          "2": 0.27021418854855395
         }
       }
     },
@@ -4906,7 +5390,11 @@
       "score": null,
       "prediction": {
         "score": "1-0",
+        "score_conf": 13,
         "winner": "Lille",
+        "winner_conf": 47,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 57,
         "confidence": 47,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -4917,196 +5405,20 @@
       }
     },
     {
-      "id": "fix_sim_Monaco_Lyon",
-      "homeTeam": "Monaco",
-      "awayTeam": "Lyon",
-      "week": 31,
-      "date": "2026-04-03",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
-        "winner": "Monaco",
-        "confidence": 52,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.5236693130228228,
-          "N": 0.20705291033700118,
-          "2": 0.24391166510364073
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nantes_Lyon",
-      "homeTeam": "Nantes",
-      "awayTeam": "Lyon",
-      "week": 31,
-      "date": "2026-04-03",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 50,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.25054106907376394,
-          "N": 0.2387962056345643,
-          "2": 0.5012590592755146
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Nice_Brest",
-      "homeTeam": "Nice",
-      "awayTeam": "Brest",
-      "week": 31,
-      "date": "2026-04-03",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Nice",
-        "confidence": 50,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.5018070500046332,
-          "N": 0.23558666758331565,
-          "2": 0.25220428601189615
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Rennes_Angers",
-      "homeTeam": "Rennes",
-      "awayTeam": "Angers",
-      "week": 31,
-      "date": "2026-04-03",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-0",
-        "winner": "Rennes",
-        "confidence": 57,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.5748442601462956,
-          "N": 0.22707040697048997,
-          "2": 0.1867206325602584
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Angers_PSG",
-      "homeTeam": "Angers",
-      "awayTeam": "PSG",
-      "week": 32,
-      "date": "2026-04-10",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "0-2",
-        "winner": "PSG",
-        "confidence": 68,
-        "advice": "Victoire PSG",
-        "probs": {
-          "1": 0.11032515612115354,
-          "N": 0.17265967647911015,
-          "2": 0.686051344267803
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Auxerre_Strasbourg",
-      "homeTeam": "Auxerre",
-      "awayTeam": "Strasbourg",
-      "week": 32,
-      "date": "2026-04-10",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Strasbourg",
-        "confidence": 37,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.36323486689539686,
-          "N": 0.252609243736918,
-          "2": 0.37772417403657976
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Le Havre_Monaco",
-      "homeTeam": "Le Havre",
-      "awayTeam": "Monaco",
-      "week": 32,
-      "date": "2026-04-10",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-2",
-        "winner": "Monaco",
-        "confidence": 56,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.20353460681403565,
-          "N": 0.21243974718310638,
-          "2": 0.5656384547802626
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lens_Toulouse",
-      "homeTeam": "Lens",
-      "awayTeam": "Toulouse",
-      "week": 32,
-      "date": "2026-04-10",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-0",
-        "winner": "Lens",
-        "confidence": 49,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.4918809701894702,
-          "N": 0.26673228238138985,
-          "2": 0.2372423707781312
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Lille_Lorient",
-      "homeTeam": "Lille",
-      "awayTeam": "Lorient",
-      "week": 32,
-      "date": "2026-04-10",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-0",
-        "winner": "Lille",
-        "confidence": 68,
-        "advice": "Victoire Lille",
-        "probs": {
-          "1": 0.6881023555057191,
-          "N": 0.15943707803504606,
-          "2": 0.10856051235705842
-        }
-      }
-    },
-    {
       "id": "fix_sim_Lille_Strasbourg",
       "homeTeam": "Lille",
       "awayTeam": "Strasbourg",
-      "week": 32,
-      "date": "2026-04-10",
+      "week": 31,
+      "date": "2026-04-03",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-0",
+        "score_conf": 11,
         "winner": "Lille",
+        "winner_conf": 55,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 52,
         "confidence": 55,
         "advice": "+2.5 Buts",
         "probs": {
@@ -5117,162 +5429,194 @@
       }
     },
     {
-      "id": "fix_sim_Nice_Monaco",
-      "homeTeam": "Nice",
-      "awayTeam": "Monaco",
-      "week": 32,
-      "date": "2026-04-10",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Nice",
-        "confidence": 40,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.4074675812159914,
-          "N": 0.23976408819756562,
-          "2": 0.34288742992532245
-        }
-      }
-    },
-    {
-      "id": "fix_sim_PSG_Marseille",
-      "homeTeam": "PSG",
-      "awayTeam": "Marseille",
-      "week": 32,
-      "date": "2026-04-10",
+      "id": "fix_sim_Marseille_Strasbourg",
+      "homeTeam": "Marseille",
+      "awayTeam": "Strasbourg",
+      "week": 31,
+      "date": "2026-04-03",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-1",
-        "winner": "PSG",
-        "confidence": 60,
-        "advice": "Victoire PSG",
+        "score_conf": 10,
+        "winner": "Marseille",
+        "winner_conf": 58,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 61,
+        "confidence": 58,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.606582428670792,
-          "N": 0.17845831439436036,
-          "2": 0.17131565114897793
+          "1": 0.5813441436483341,
+          "N": 0.20206573609867562,
+          "2": 0.19264475627171154
         }
       }
     },
     {
-      "id": "fix_sim_Rennes_Toulouse",
-      "homeTeam": "Rennes",
+      "id": "fix_sim_Nantes_Toulouse",
+      "homeTeam": "Nantes",
       "awayTeam": "Toulouse",
+      "week": 31,
+      "date": "2026-04-03",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Toulouse",
+        "winner_conf": 44,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 56,
+        "confidence": 44,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.28283534337689265,
+          "N": 0.2695920286808972,
+          "2": 0.44378121519386643
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nice_Le Havre",
+      "homeTeam": "Nice",
+      "awayTeam": "Le Havre",
+      "week": 31,
+      "date": "2026-04-03",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 12,
+        "winner": "Nice",
+        "winner_conf": 63,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 63,
+        "advice": "Victoire Nice",
+        "probs": {
+          "1": 0.6389762165251341,
+          "N": 0.2035725701648261,
+          "2": 0.14026040184084
+        }
+      }
+    },
+    {
+      "id": "fix_sim_PSG_Metz",
+      "homeTeam": "PSG",
+      "awayTeam": "Metz",
+      "week": 31,
+      "date": "2026-04-03",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "3-0",
+        "score_conf": 10,
+        "winner": "PSG",
+        "winner_conf": 71,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 63,
+        "confidence": 71,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.7148772539744637,
+          "N": 0.0621959210359138,
+          "2": 0.02763768400707211
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Rennes_Lorient",
+      "homeTeam": "Rennes",
+      "awayTeam": "Lorient",
+      "week": 31,
+      "date": "2026-04-03",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "Rennes",
+        "winner_conf": 61,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 61,
+        "advice": "Victoire Rennes",
+        "probs": {
+          "1": 0.6123695593289359,
+          "N": 0.18228113165513485,
+          "2": 0.16762953579712345
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Toulouse_Lens",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Lens",
+      "week": 31,
+      "date": "2026-04-03",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Lens",
+        "winner_conf": 36,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 59,
+        "confidence": 36,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.35282018291277134,
+          "N": 0.28361015445324145,
+          "2": 0.36114123852807445
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Auxerre_Brest",
+      "homeTeam": "Auxerre",
+      "awayTeam": "Brest",
       "week": 32,
       "date": "2026-04-10",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
-        "winner": "Rennes",
-        "confidence": 46,
+        "score_conf": 11,
+        "winner": "Brest",
+        "winner_conf": 38,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 38,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.46476123180480877,
-          "N": 0.24263096834956305,
-          "2": 0.2839350190805396
+          "1": 0.36412829246818407,
+          "N": 0.2448327438345041,
+          "2": 0.38269192753359477
         }
       }
     },
     {
-      "id": "fix_sim_Angers_Metz",
-      "homeTeam": "Angers",
-      "awayTeam": "Metz",
-      "week": 33,
-      "date": "2026-04-17",
+      "id": "fix_sim_Brest_Le Havre",
+      "homeTeam": "Brest",
+      "awayTeam": "Le Havre",
+      "week": 32,
+      "date": "2026-04-10",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
-        "winner": "Angers",
-        "confidence": 49,
-        "advice": "Les deux marquent (BTTS)",
+        "score": "2-0",
+        "score_conf": 10,
+        "winner": "Brest",
+        "winner_conf": 60,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 60,
+        "advice": "Victoire Brest",
         "probs": {
-          "1": 0.49813536732846153,
-          "N": 0.2570070826158361,
-          "2": 0.23941332228368184
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Angers_Strasbourg",
-      "homeTeam": "Angers",
-      "awayTeam": "Strasbourg",
-      "week": 33,
-      "date": "2026-04-17",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Strasbourg",
-        "confidence": 41,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.307087534327934,
-          "N": 0.2730537168135485,
-          "2": 0.4164718747311355
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Auxerre_Nantes",
-      "homeTeam": "Auxerre",
-      "awayTeam": "Nantes",
-      "week": 33,
-      "date": "2026-04-17",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-0",
-        "winner": "Auxerre",
-        "confidence": 51,
-        "advice": "Les deux marquent (BTTS)",
-        "probs": {
-          "1": 0.5193353546419988,
-          "N": 0.24608274817329237,
-          "2": 0.22724426896970285
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Auxerre_Paris FC",
-      "homeTeam": "Auxerre",
-      "awayTeam": "Paris FC",
-      "week": 33,
-      "date": "2026-04-17",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Auxerre",
-        "confidence": 48,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.48864067218244694,
-          "N": 0.22709298991779997,
-          "2": 0.27021418854855395
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Le Havre_Lyon",
-      "homeTeam": "Le Havre",
-      "awayTeam": "Lyon",
-      "week": 33,
-      "date": "2026-04-17",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 49,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.2572990964287665,
-          "N": 0.2353177311521587,
-          "2": 0.4968078548363247
+          "1": 0.6001889805222026,
+          "N": 0.20834093372802912,
+          "2": 0.1733564094038292
         }
       }
     },
@@ -5280,13 +5624,17 @@
       "id": "fix_sim_Lens_Monaco",
       "homeTeam": "Lens",
       "awayTeam": "Monaco",
-      "week": 33,
-      "date": "2026-04-17",
+      "week": 32,
+      "date": "2026-04-10",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Lens",
+        "winner_conf": 40,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
         "confidence": 40,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -5297,82 +5645,410 @@
       }
     },
     {
-      "id": "fix_sim_Lille_Nantes",
+      "id": "fix_sim_Lille_Nice",
       "homeTeam": "Lille",
-      "awayTeam": "Nantes",
+      "awayTeam": "Nice",
+      "week": 32,
+      "date": "2026-04-10",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Lille",
+        "winner_conf": 49,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 49,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.49122568755862767,
+          "N": 0.25121618059524803,
+          "2": 0.25107006966980433
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Marseille_Metz",
+      "homeTeam": "Marseille",
+      "awayTeam": "Metz",
+      "week": 32,
+      "date": "2026-04-10",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "3-0",
+        "score_conf": 10,
+        "winner": "Marseille",
+        "winner_conf": 72,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 72,
+        "advice": "Victoire Marseille",
+        "probs": {
+          "1": 0.7217812235122104,
+          "N": 0.11988790434934786,
+          "2": 0.07258622394643977
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Marseille_Nice",
+      "homeTeam": "Marseille",
+      "awayTeam": "Nice",
+      "week": 32,
+      "date": "2026-04-10",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Marseille",
+        "winner_conf": 51,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 51,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5179383963482261,
+          "N": 0.22577084607102973,
+          "2": 0.2424623513819007
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nantes_Lyon",
+      "homeTeam": "Nantes",
+      "awayTeam": "Lyon",
+      "week": 32,
+      "date": "2026-04-10",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Lyon",
+        "winner_conf": 50,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 50,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.25054106907376394,
+          "N": 0.2387962056345643,
+          "2": 0.5012590592755146
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nantes_Paris FC",
+      "homeTeam": "Nantes",
+      "awayTeam": "Paris FC",
+      "week": 32,
+      "date": "2026-04-10",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Nantes",
+        "winner_conf": 39,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 39,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.39034832655005197,
+          "N": 0.2493325223880619,
+          "2": 0.3531516852660826
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Rennes_Paris FC",
+      "homeTeam": "Rennes",
+      "awayTeam": "Paris FC",
+      "week": 32,
+      "date": "2026-04-10",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 9,
+        "winner": "Rennes",
+        "winner_conf": 58,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 65,
+        "confidence": 58,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5863153385755384,
+          "N": 0.1910381122112551,
+          "2": 0.18955242612639503
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lille_Le Havre",
+      "homeTeam": "Lille",
+      "awayTeam": "Le Havre",
       "week": 33,
       "date": "2026-04-17",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-0",
+        "score_conf": 13,
         "winner": "Lille",
+        "winner_conf": 68,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 53,
         "confidence": 68,
         "advice": "Victoire Lille",
         "probs": {
-          "1": 0.6874019379579578,
-          "N": 0.18273555414691914,
-          "2": 0.10684187085886261
+          "1": 0.6857272762682374,
+          "N": 0.17989334686651567,
+          "2": 0.10910666556778999
         }
       }
     },
     {
-      "id": "fix_sim_PSG_Brest",
-      "homeTeam": "PSG",
+      "id": "fix_sim_Lorient_Angers",
+      "homeTeam": "Lorient",
+      "awayTeam": "Angers",
+      "week": 33,
+      "date": "2026-04-17",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Lorient",
+        "winner_conf": 42,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 42,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.4217577016769455,
+          "N": 0.25816812891132807,
+          "2": 0.3147159519673393
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lorient_Metz",
+      "homeTeam": "Lorient",
+      "awayTeam": "Metz",
+      "week": 33,
+      "date": "2026-04-17",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Lorient",
+        "winner_conf": 51,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 51,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5117181666270281,
+          "N": 0.22073940734444858,
+          "2": 0.25098254352004
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Monaco_Angers",
+      "homeTeam": "Monaco",
+      "awayTeam": "Angers",
+      "week": 33,
+      "date": "2026-04-17",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-0",
+        "score_conf": 12,
+        "winner": "Monaco",
+        "winner_conf": 65,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 65,
+        "advice": "Victoire Monaco",
+        "probs": {
+          "1": 0.6555073556137578,
+          "N": 0.18824909889401706,
+          "2": 0.13182824512310565
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nantes_Brest",
+      "homeTeam": "Nantes",
       "awayTeam": "Brest",
       "week": 33,
       "date": "2026-04-17",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "winner": "PSG",
-        "confidence": 69,
-        "advice": "Victoire PSG",
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Brest",
+        "winner_conf": 46,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 46,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.6949223362491816,
-          "N": 0.13505579466817097,
-          "2": 0.09431163246899048
+          "1": 0.2777136737850363,
+          "N": 0.24890946618232287,
+          "2": 0.46628941477522495
         }
       }
     },
     {
-      "id": "fix_sim_PSG_Toulouse",
-      "homeTeam": "PSG",
-      "awayTeam": "Toulouse",
+      "id": "fix_sim_Rennes_Le Havre",
+      "homeTeam": "Rennes",
+      "awayTeam": "Le Havre",
       "week": 33,
       "date": "2026-04-17",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "2-0",
-        "winner": "PSG",
-        "confidence": 70,
-        "advice": "Victoire PSG",
+        "score_conf": 10,
+        "winner": "Rennes",
+        "winner_conf": 61,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 61,
+        "advice": "Victoire Rennes",
         "probs": {
-          "1": 0.7032489122980885,
-          "N": 0.14944086789296046,
-          "2": 0.09653645053498038
+          "1": 0.6134475522333104,
+          "N": 0.20088406802384082,
+          "2": 0.1643460597226032
         }
       }
     },
     {
-      "id": "fix_sim_Lens_Le Havre",
+      "id": "fix_sim_Strasbourg_Lyon",
+      "homeTeam": "Strasbourg",
+      "awayTeam": "Lyon",
+      "week": 33,
+      "date": "2026-04-17",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Strasbourg",
+        "winner_conf": 41,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 58,
+        "confidence": 41,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.4126789353502678,
+          "N": 0.23878177314606047,
+          "2": 0.3383382609286214
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Strasbourg_Paris FC",
+      "homeTeam": "Strasbourg",
+      "awayTeam": "Paris FC",
+      "week": 33,
+      "date": "2026-04-17",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "2-1",
+        "score_conf": 10,
+        "winner": "Strasbourg",
+        "winner_conf": 56,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 61,
+        "confidence": 56,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5681873359382659,
+          "N": 0.2060352444177928,
+          "2": 0.2034575810955045
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Toulouse_Nice",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Nice",
+      "week": 33,
+      "date": "2026-04-17",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Toulouse",
+        "winner_conf": 36,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 54,
+        "confidence": 36,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.366423725156833,
+          "N": 0.2681536378009603,
+          "2": 0.36152591106509624
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Angers_Lyon",
+      "homeTeam": "Angers",
+      "awayTeam": "Lyon",
+      "week": 34,
+      "date": "2026-04-24",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 12,
+        "winner": "Lyon",
+        "winner_conf": 45,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 45,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.2806864190725614,
+          "N": 0.2558855064920784,
+          "2": 0.4577023512737061
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Lens_Auxerre",
       "homeTeam": "Lens",
-      "awayTeam": "Le Havre",
+      "awayTeam": "Auxerre",
       "week": 34,
       "date": "2026-04-24",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-0",
+        "score_conf": 13,
         "winner": "Lens",
-        "confidence": 63,
-        "advice": "Victoire Lens",
+        "winner_conf": 56,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 56,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.6308961778641023,
-          "N": 0.21786404723446914,
-          "2": 0.1393632813949683
+          "1": 0.5662175259551396,
+          "N": 0.23766950946050047,
+          "2": 0.18755857634102774
         }
       }
     },
@@ -5386,7 +6062,11 @@
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 12,
         "winner": "Lens",
+        "winner_conf": 48,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
         "confidence": 48,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
@@ -5397,142 +6077,146 @@
       }
     },
     {
-      "id": "fix_sim_Lille_Auxerre",
-      "homeTeam": "Lille",
-      "awayTeam": "Auxerre",
+      "id": "fix_sim_Metz_Lyon",
+      "homeTeam": "Metz",
+      "awayTeam": "Lyon",
       "week": 34,
       "date": "2026-04-24",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "winner": "Lille",
-        "confidence": 62,
-        "advice": "Victoire Lille",
-        "probs": {
-          "1": 0.6262171598284539,
-          "N": 0.20367635535606038,
-          "2": 0.1517509890423672
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Marseille_Metz",
-      "homeTeam": "Marseille",
-      "awayTeam": "Metz",
-      "week": 34,
-      "date": "2026-04-24",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "3-0",
-        "winner": "Marseille",
-        "confidence": 72,
-        "advice": "Victoire Marseille",
-        "probs": {
-          "1": 0.7217812235122104,
-          "N": 0.11988790434934786,
-          "2": 0.07258622394643977
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Marseille_Nantes",
-      "homeTeam": "Marseille",
-      "awayTeam": "Nantes",
-      "week": 34,
-      "date": "2026-04-24",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-0",
-        "winner": "Marseille",
-        "confidence": 70,
-        "advice": "Victoire Marseille",
-        "probs": {
-          "1": 0.707280601997064,
-          "N": 0.15234089225113193,
-          "2": 0.09468869049833847
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Marseille_Strasbourg",
-      "homeTeam": "Marseille",
-      "awayTeam": "Strasbourg",
-      "week": 34,
-      "date": "2026-04-24",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
-        "winner": "Marseille",
-        "confidence": 58,
+        "score": "1-2",
+        "score_conf": 10,
+        "winner": "Lyon",
+        "winner_conf": 54,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 60,
+        "confidence": 54,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.5813441436483341,
-          "N": 0.20206573609867562,
-          "2": 0.19264475627171154
+          "1": 0.2188218275457774,
+          "N": 0.2133933699156568,
+          "2": 0.5488572099418556
         }
       }
     },
     {
-      "id": "fix_sim_PSG_Monaco",
-      "homeTeam": "PSG",
-      "awayTeam": "Monaco",
-      "week": 34,
-      "date": "2026-04-24",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-1",
-        "winner": "PSG",
-        "confidence": 63,
-        "advice": "Victoire PSG",
-        "probs": {
-          "1": 0.6314905016413221,
-          "N": 0.16472280266817765,
-          "2": 0.14809970556702545
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Rennes_Le Havre",
-      "homeTeam": "Rennes",
-      "awayTeam": "Le Havre",
-      "week": 34,
-      "date": "2026-04-24",
-      "status": "SCHEDULED",
-      "score": null,
-      "prediction": {
-        "score": "2-0",
-        "winner": "Rennes",
-        "confidence": 61,
-        "advice": "Victoire Rennes",
-        "probs": {
-          "1": 0.6134475522333104,
-          "N": 0.20088406802384082,
-          "2": 0.1643460597226032
-        }
-      }
-    },
-    {
-      "id": "fix_sim_Strasbourg_Monaco",
-      "homeTeam": "Strasbourg",
-      "awayTeam": "Monaco",
+      "id": "fix_sim_Monaco_Marseille",
+      "homeTeam": "Monaco",
+      "awayTeam": "Marseille",
       "week": 34,
       "date": "2026-04-24",
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
         "score": "1-1",
+        "score_conf": 9,
         "winner": "Monaco",
-        "confidence": 40,
+        "winner_conf": 42,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 66,
+        "confidence": 42,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.3476976073322795,
-          "N": 0.2337488143108556,
-          "2": 0.40636871260669494
+          "1": 0.4228298272023679,
+          "N": 0.2197184425776779,
+          "2": 0.33751854141113746
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Nantes_Le Havre",
+      "homeTeam": "Nantes",
+      "awayTeam": "Le Havre",
+      "week": 34,
+      "date": "2026-04-24",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Nantes",
+        "winner_conf": 41,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 56,
+        "confidence": 41,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.41919425894309525,
+          "N": 0.2720066919123731,
+          "2": 0.3053008659592974
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Paris FC_Nice",
+      "homeTeam": "Paris FC",
+      "awayTeam": "Nice",
+      "week": 34,
+      "date": "2026-04-24",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Nice",
+        "winner_conf": 48,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 57,
+        "confidence": 48,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.27293132928243513,
+          "N": 0.2327303731366903,
+          "2": 0.4825807707355814
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Toulouse_Lille",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Lille",
+      "week": 34,
+      "date": "2026-04-24",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 13,
+        "winner": "Lille",
+        "winner_conf": 41,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 41,
+        "advice": "Les deux marquent (BTTS)",
+        "probs": {
+          "1": 0.3124947453743583,
+          "N": 0.265752489758554,
+          "2": 0.4175259703547141
+        }
+      }
+    },
+    {
+      "id": "fix_sim_Toulouse_Marseille",
+      "homeTeam": "Toulouse",
+      "awayTeam": "Marseille",
+      "week": 34,
+      "date": "2026-04-24",
+      "status": "SCHEDULED",
+      "score": null,
+      "prediction": {
+        "score": "1-1",
+        "score_conf": 11,
+        "winner": "Marseille",
+        "winner_conf": 44,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 44,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.30801804667493693,
+          "N": 0.24190800893021294,
+          "2": 0.44103510819827657
         }
       }
     }

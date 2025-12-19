@@ -72,41 +72,57 @@ function App() {
                     {/* LEFT COLUMN (8/12) - Analysis */}
                     <div className="lg:col-span-8 flex flex-col gap-6">
 
-                        {/* Match Simulator Block */}
-                        <div className="card">
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="flex items-center">
-                                    <h2 className="text-accent">Simulateur & Analyse</h2>
-                                    <InfoTooltip text="Choisissez deux équipes pour simuler une rencontre. L'IA utilise la Forces d'Attaque/Défense (calculée sur l'historique récent) pour prédire le score." />
+                        {/* UNIFIED MATCH ANALYSIS BLOCK */}
+                        <div className="card border-t-4 border-accent">
+                            <div className="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
+                                <div>
+                                    <h2 className="text-accent text-xl flex items-center gap-2">
+                                        Centre d'Analyse
+                                        <InfoTooltip text="Analysez une rencontre spécifique. Sélectionnez les équipes ci-dessous pour mettre à jour la prédiction IA, le radar de forme et l'historique des confrontations." />
+                                    </h2>
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center gap-4 mb-6 bg-slate-800 p-4 rounded-xl">
-                                <select
-                                    className="p-2 rounded bg-slate-700 text-white w-full border border-slate-600 focus:border-accent outline-none"
-                                    value={selectedMatch.homeTeam}
-                                    onChange={(e) => handleTeamChange('home', e.target.value)}
-                                >
-                                    {teams.map(t => <option key={t} value={t}>{t}</option>)}
-                                </select>
-                                <span className="text-secondary font-bold text-xl">VS</span>
-                                <select
-                                    className="p-2 rounded bg-slate-700 text-white w-full border border-slate-600 focus:border-accent outline-none"
-                                    value={selectedMatch.awayTeam}
-                                    onChange={(e) => handleTeamChange('away', e.target.value)}
-                                >
-                                    {teams.map(t => <option key={t} value={t}>{t}</option>)}
-                                </select>
+                            {/* TARGETED FILTERS */}
+                            <div className="flex justify-between items-center gap-4 mb-8 bg-slate-800/50 p-4 rounded-xl border border-slate-700">
+                                <div className="w-full">
+                                    <label className="text-xs text-secondary mb-1 block uppercase tracking-wider">Domicile</label>
+                                    <select
+                                        className="p-3 rounded-lg bg-slate-900 text-white w-full border border-slate-600 focus:border-accent outline-none font-bold"
+                                        value={selectedMatch.homeTeam}
+                                        onChange={(e) => handleTeamChange('home', e.target.value)}
+                                    >
+                                        {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                                    </select>
+                                </div>
+
+                                <span className="text-accent font-black text-2xl mt-4">VS</span>
+
+                                <div className="w-full">
+                                    <label className="text-xs text-secondary mb-1 block uppercase tracking-wider">Extérieur</label>
+                                    <select
+                                        className="p-3 rounded-lg bg-slate-900 text-white w-full border border-slate-600 focus:border-accent outline-none font-bold"
+                                        value={selectedMatch.awayTeam}
+                                        onChange={(e) => handleTeamChange('away', e.target.value)}
+                                    >
+                                        {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                                    </select>
+                                </div>
                             </div>
 
-                            <div className="grid md:grid-cols-2 gap-6">
+                            {/* SIMULATION & RADAR */}
+                            <div className="grid md:grid-cols-2 gap-8 mb-8">
                                 <MatchPrediction match={selectedMatch} />
-                                <NextMatchRadar homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} teamStats={TEAM_STATS} />
+                                <div className="bg-slate-800/30 rounded-xl p-4">
+                                    <NextMatchRadar homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} teamStats={TEAM_STATS} />
+                                </div>
+                            </div>
+
+                            {/* HISTORY (Inside the same block) */}
+                            <div className="border-t border-slate-700 pt-6">
+                                <MatchHistory match={selectedMatch} />
                             </div>
                         </div>
-
-                        {/* History below simulation */}
-                        <MatchHistory match={selectedMatch} />
 
                         {/* Calendar Block (Full Width of Left col) */}
                         <LeagueCalendar

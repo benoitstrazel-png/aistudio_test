@@ -39,41 +39,67 @@ const LeagueCalendar = ({ schedule, currentWeek }) => {
                 </select>
             </div>
 
-            <div className="grid gap-3">
+            <div className="grid gap-4">
                 {matches.length === 0 && <p className="text-secondary text-center">Aucun match trouvé pour cette journée.</p>}
 
                 {matches.map(match => (
-                    <div key={match.id} className="glass-card p-3 flex justify-between items-center text-sm">
+                    <div key={match.id} className="glass-card p-4 flex flex-col gap-2">
 
-                        {/* Home Team */}
-                        <div className={`w-1/3 text-right font-bold ${match.prediction?.winner === match.homeTeam ? 'text-accent' : ''}`}>
-                            {match.homeTeam}
-                        </div>
+                        {/* Match Header: Teams & Score */}
+                        <div className="flex justify-between items-center mb-2">
+                            <div className={`w-1/3 text-right font-bold truncate ${match.prediction?.winner === match.homeTeam ? 'text-accent' : 'text-white'}`}>
+                                {match.homeTeam}
+                            </div>
 
-                        {/* Score / Prediction */}
-                        <div className="flex flex-col items-center justify-center w-24">
-                            {match.status === 'FINISHED' ? (
-                                <span className="text-xl font-bold font-mono text-white">
-                                    {match.score.home} - {match.score.away}
-                                </span>
-                            ) : (
-                                <>
-                                    <span className="text-lg font-bold font-mono text-accent animate-pulse">
-                                        {match.prediction ? match.prediction.score : '-'}
-                                    </span>
-                                    {match.prediction && (
-                                        <span className={`text-[10px] ${getConfColor(match.prediction.confidence)}`}>
-                                            {match.prediction.confidence}% Conf.
+                            <div className="flex flex-col items-center mx-2 min-w-[80px]">
+                                {match.status === 'FINISHED' ? (
+                                    <span className="text-2xl font-bold font-mono text-white">{match.score.home} - {match.score.away}</span>
+                                ) : (
+                                    <div className="flex flex-col items-center">
+                                        <span className="text-xl font-bold font-mono text-accent animate-pulse">
+                                            {match.prediction?.score || '-'}
                                         </span>
-                                    )}
-                                </>
-                            )}
+                                        {/* Score Confidence for Prediction */}
+                                        {match.prediction && (
+                                            <span className={`text-[10px] px-1 rounded ${getConfColor(match.prediction.score_conf)} bg-slate-800`}>
+                                                {match.prediction.score_conf || 15}% sûreté
+                                            </span>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className={`w-1/3 text-left font-bold truncate ${match.prediction?.winner === match.awayTeam ? 'text-accent' : 'text-white'}`}>
+                                {match.awayTeam}
+                            </div>
                         </div>
 
-                        {/* Away Team */}
-                        <div className={`w-1/3 text-left font-bold ${match.prediction?.winner === match.awayTeam ? 'text-accent' : ''}`}>
-                            {match.awayTeam}
-                        </div>
+                        {/* Prediction Details (Only if scheduled) */}
+                        {match.status === 'SCHEDULED' && match.prediction && (
+                            <div className="grid grid-cols-2 gap-2 text-xs border-t border-slate-700 pt-2 mt-1">
+                                {/* Winner Prediction */}
+                                <div className="flex flex-col items-center">
+                                    <span className="text-secondary mb-1">Vainqueur</span>
+                                    <div className="flex items-center gap-1">
+                                        <span className="font-bold text-white">{match.prediction.winner}</span>
+                                        <span className={`font-bold ${getConfColor(match.prediction.winner_conf)}`}>
+                                            ({match.prediction.winner_conf}%)
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Goals Prediction */}
+                                <div className="flex flex-col items-center border-l border-slate-700 pl-2">
+                                    <span className="text-secondary mb-1">Buts</span>
+                                    <div className="flex items-center gap-1">
+                                        <span className="font-bold text-white">{match.prediction.goals_pred}</span>
+                                        <span className={`font-bold ${getConfColor(match.prediction.goals_conf)}`}>
+                                            ({match.prediction.goals_conf}%)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
 
                     </div>
                 ))}

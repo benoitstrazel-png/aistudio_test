@@ -32,19 +32,33 @@ def predict_one_match(home, away, stats):
     score = "0-0"
     w_probs = {'1': 0, 'N': 0, '2': 0}
     
+    # Goal Stats
+    prob_over_2_5 = 0
+    
     for h in range(6):
         for a in range(6):
             prob = poisson_probability(h, exp_h) * poisson_probability(a, exp_a)
+            
+            # Max Score Prob (Exact Prediction Confidence)
             if prob > max_p:
                 max_p = prob
                 score = f"{h}-{a}"
-                
+            
+            # 1N2 Prob
             if h > a: w_probs['1'] += prob
             elif h == a: w_probs['N'] += prob
             else: w_probs['2'] += prob
             
+            # Over/Under 2.5
+            if (h + a) > 2.5:
+                prob_over_2_5 += prob
+            
     conf = max(w_probs.values())
     w_label = home if w_probs['1'] == conf else away if w_probs['2'] == conf else "Nul"
+    
+    # Goals Prediction
+    goals_label = "+2.5 Buts" if prob_over_2_5 > 0.5 else "-2.5 Buts"
+    goals_conf = prob_over_2_5 if prob_over_2_5 > 0.5 else (1.0 - prob_over_2_5)
     
     advice = "Aucun"
     if w_probs['1'] > 0.6: advice = f"Victoire {home}"
@@ -55,8 +69,12 @@ def predict_one_match(home, away, stats):
     
     return {
         "score": score,
+        "score_conf": round(max_p * 100), # Exact score confidence usually low (10-20%)
         "winner": w_label,
-        "confidence": int(conf * 100),
+        "winner_conf": int(conf * 100),
+        "goals_pred": goals_label,
+        "goals_conf": int(goals_conf * 100),
+        "confidence": int(conf * 100), # Legacy
         "advice": advice,
         "probs": w_probs
     }
