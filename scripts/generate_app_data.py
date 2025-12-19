@@ -292,7 +292,7 @@ def main():
             "prediction": None # No prediction needed for past
         })
 
-    # B. Add Future Matches (PDF + Fallback Simulation)
+    # B. Add Future Matches (Imported Calendar + Fallback Simulation)
     
     # Identify what has been played (Exact Home/Away pairs)
     played_pairs = set()
@@ -303,15 +303,18 @@ def main():
     last_played_week = max([m['week'] for m in full_schedule]) if full_schedule else 0
     start_sim_week = last_played_week + 1
     
-    # 1. Integrate PDF matches first
-    pdf_matches_count = 0
-    if pdf_calendar:
-        print(f"Integrating PDF Calendar matches...")
-        for m in pdf_calendar:
+    # 1. Integrate Imported Calendar matches first
+    imported_matches_count = 0
+    if pdf_calendar: # Variable name from loading line 125, let's keep it or rename it there too? 
+                     # I will rename it locally to imported_calendar for clarity but I need to check where it came from.
+                     # It came from: pdf_calendar = load_json(CALENDAR_PATH)
+        imported_calendar = pdf_calendar 
+        print(f"Integrating Imported Calendar matches...")
+        for m in imported_calendar:
             h, a = m['home_team'], m['away_team']
             week = m['week']
             
-            # Use PDF week if explicitly > last_played_week
+            # Use Imported week if explicitly > last_played_week
             # Order matters: (h, a)
             
             if week > last_played_week and (h, a) not in played_pairs:
@@ -320,16 +323,16 @@ def main():
                     est_date = (datetime.now() + timedelta(days=(week - last_played_week)*7)).strftime("%Y-%m-%d")
                     
                     full_schedule.append({
-                        "id": f"fix_pdf_{h}_{a}", "homeTeam": h, "awayTeam": a,
+                        "id": f"fix_ext_{h}_{a}", "homeTeam": h, "awayTeam": a,
                         "week": week, "date": est_date, "status": "SCHEDULED",
                         "score": None, "prediction": pred
                     })
                     played_pairs.add((h, a))
-                    pdf_matches_count += 1
+                    imported_matches_count += 1
     
     # 2. Fill REmaining Weeks (up to 34) with Synthetic Round Robin
     
-    print(f"Added {pdf_matches_count} future matches from PDF. Filling rest of season...")
+    print(f"Added {imported_matches_count} future matches from Import. Filling rest of season...")
     
     if len(teams_list) % 2 != 0: teams_list.append("Bye")
     n_teams = len(teams_list)
