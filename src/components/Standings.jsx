@@ -47,10 +47,22 @@ const Standings = ({ standings, schedule, currentWeek, highlightTeams = [] }) =>
 
         return (
             <div
-                className="w-3 h-3 rounded-full flex-shrink-0"
-                style={{ backgroundColor: bg }}
+                style={{
+                    backgroundColor: bg,
+                    width: '20px',
+                    height: '20px',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#000',
+                    fontSize: '10px',
+                    fontWeight: 'bold'
+                }}
                 title={result === 'W' ? 'Victoire' : result === 'D' ? 'Nul' : 'Défaite'}
-            />
+            >
+                {result}
+            </div>
         );
     };
 

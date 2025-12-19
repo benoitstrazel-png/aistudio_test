@@ -65,8 +65,10 @@ export const calculateStandingsAtWeek = (currentStandings, schedule, targetWeek,
         if (match.awayTeam) teams[normalize(match.awayTeam)] = initTeam(normalize(match.awayTeam), match.awayTeam);
     });
 
-    // 2. Process matches
-    schedule.forEach(match => {
+    // 2. Process matches (Sorted by Week to ensure correct chronological Form)
+    const sortedSchedule = [...schedule].sort((a, b) => (a.week || 0) - (b.week || 0));
+
+    sortedSchedule.forEach(match => {
         if (!match.week || match.week > targetWeek) return;
         if (processedMatchIds.has(match.id)) return; // CHANGE: Prevent double counting
 
@@ -85,8 +87,45 @@ export const calculateStandingsAtWeek = (currentStandings, schedule, targetWeek,
         else if (match.week <= targetWeek && match.prediction?.score) {
             const parts = match.prediction.score.split('-');
             if (parts.length === 2) {
-                homeScore = parseInt(parts[0]);
-                awayScore = parseInt(parts[1]);
+                let h = parseInt(parts[0]);
+                let a = parseInt(parts[1]);
+
+                // --- LOGIC SYNC WITH CALENDAR ---
+                // We must apply the same "Smart Score" logic to ensure Standings match the Calendar display
+
+                const winner = match.prediction.winner; // e.g. "Brest" or "Draw"
+                const isOver2_5 = match.prediction.goals_pred?.includes('+2.5');
+                const isUnder2_5 = match.prediction.goals_pred?.includes('-2.5');
+
+                // 1. Force Winner Consistency
+                // Note: We need to match team names. 'winner' usually equals match.homeTeam or .awayTeam
+                if (winner === match.homeTeam && h <= a) {
+                    h = a + 1;
+                } else if (winner === match.awayTeam && a <= h) {
+                    a = h + 1;
+                } else if ((winner === 'Draw' || winner === 'Nul') && h !== a) {
+                    // Force draw
+                    const m = Math.max(h, a);
+                    h = m; a = m;
+                }
+
+                // 2. Force Goals Consistency (+/- 2.5)
+                if (isUnder2_5 && (h + a) > 2) {
+                    // Must reduce score but keep winner result
+                    if (winner === match.homeTeam) { h = 1; a = 0; }      // 1-0
+                    else if (winner === match.awayTeam) { h = 0; a = 1; } // 0-1
+                    else { h = 1; a = 1; }                                // 1-1
+                }
+                else if (isOver2_5 && (h + a) < 3) {
+                    // Must increase score but keep winner result
+                    if (winner === match.homeTeam) { h = 2; a = 1; }      // 2-1
+                    else if (winner === match.awayTeam) { h = 1; a = 2; } // 1-2
+                    else { h = 2; a = 2; }                                // 2-2
+                }
+                // --------------------------------
+
+                homeScore = h;
+                awayScore = a;
             }
         }
 
