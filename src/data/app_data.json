@@ -6,200 +6,200 @@
   },
   "nextMatches": [
     {
-      "id": 27573,
-      "homeTeam": "Angers",
-      "awayTeam": "Nice",
-      "date": "2025-12-20",
+      "id": 18361,
+      "homeTeam": "Brest",
+      "awayTeam": "Auxerre",
+      "date": "2025-12-22",
       "odds": {
-        "home": 3.59,
-        "draw": 3.38,
-        "away": 1.97
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
       },
       "prediction": {
-        "score": "0-1",
-        "winner": "Nice",
-        "confidence": 46,
+        "score": "1-1",
+        "winner": "Brest",
+        "confidence": 52,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5271139595173188,
+          "N": 0.2251709378851073,
+          "2": 0.23392123376540738
+        }
+      }
+    },
+    {
+      "id": 89094,
+      "homeTeam": "PSG",
+      "awayTeam": "Metz",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "3-0",
+        "winner": "PSG",
+        "confidence": 71,
+        "advice": "Victoire PSG",
+        "probs": {
+          "1": 0.7148772539744637,
+          "N": 0.0621959210359138,
+          "2": 0.02763768400707211
+        }
+      }
+    },
+    {
+      "id": 88828,
+      "homeTeam": "Angers",
+      "awayTeam": "Nantes",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "1-0",
+        "winner": "Angers",
+        "confidence": 44,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.25643198463398015,
-          "N": 0.27205852052182267,
-          "2": 0.46794735310145225
+          "1": 0.4490037861026007,
+          "N": 0.28316637946912593,
+          "2": 0.2652372971372268
         }
       }
     },
     {
-      "id": 74268,
+      "id": 54472,
+      "homeTeam": "Strasbourg",
+      "awayTeam": "Lorient",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "2-1",
+        "winner": "Strasbourg",
+        "confidence": 59,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.5953048712980864,
+          "N": 0.1979743521112175,
+          "2": 0.18120799882905722
+        }
+      }
+    },
+    {
+      "id": 77293,
       "homeTeam": "Marseille",
-      "awayTeam": "Nantes",
-      "date": "2025-12-20",
-      "odds": {
-        "home": 1.3,
-        "draw": 6.04,
-        "away": 9.72
-      },
-      "prediction": {
-        "score": "2-0",
-        "winner": "Marseille",
-        "confidence": 70,
-        "advice": "Victoire Marseille",
-        "probs": {
-          "1": 0.707280601997064,
-          "N": 0.15234089225113193,
-          "2": 0.09468869049833847
-        }
-      }
-    },
-    {
-      "id": 75557,
-      "homeTeam": "Paris FC",
       "awayTeam": "Lille",
-      "date": "2025-12-20",
+      "date": "2025-12-22",
       "odds": {
-        "home": 4.14,
-        "draw": 4.19,
-        "away": 1.7
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
       },
       "prediction": {
         "score": "1-1",
-        "winner": "Lille",
-        "confidence": 54,
+        "winner": "Marseille",
+        "confidence": 45,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.22219019866309958,
-          "N": 0.21935678477518553,
-          "2": 0.5425136207510298
+          "1": 0.45701043784507217,
+          "N": 0.23742057931143373,
+          "2": 0.2951983673276108
         }
       }
     },
     {
-      "id": 64286,
-      "homeTeam": "Toulouse",
-      "awayTeam": "Metz",
-      "date": "2025-12-20",
+      "id": 31053,
+      "homeTeam": "Paris FC",
+      "awayTeam": "Monaco",
+      "date": "2025-12-22",
       "odds": {
-        "home": 1.47,
-        "draw": 4.53,
-        "away": 6.05
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
       },
       "prediction": {
-        "score": "2-0",
-        "winner": "Toulouse",
-        "confidence": 62,
-        "advice": "Victoire Toulouse",
-        "probs": {
-          "1": 0.6260732652446921,
-          "N": 0.2031627243094882,
-          "2": 0.15211183108371637
-        }
-      }
-    },
-    {
-      "id": 54172,
-      "homeTeam": "Lens",
-      "awayTeam": "PSG",
-      "date": "2025-12-20",
-      "odds": {
-        "home": 3.82,
-        "draw": 3.87,
-        "away": 1.8
-      },
-      "prediction": {
-        "score": "1-1",
-        "winner": "PSG",
-        "confidence": 51,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.2407304903591224,
-          "N": 0.23770754817839698,
-          "2": 0.5119936072414877
-        }
-      }
-    },
-    {
-      "id": 99947,
-      "homeTeam": "Monaco",
-      "awayTeam": "Le Havre",
-      "date": "2025-12-20",
-      "odds": {
-        "home": 1.34,
-        "draw": 5.74,
-        "away": 8.28
-      },
-      "prediction": {
-        "score": "2-0",
+        "score": "1-2",
         "winner": "Monaco",
-        "confidence": 68,
-        "advice": "Victoire Monaco",
+        "confidence": 53,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.6844433898721888,
-          "N": 0.1602077573926997,
-          "2": 0.11116905778098175
+          "1": 0.23540748059302927,
+          "N": 0.20138741764089346,
+          "2": 0.5335363157710369
         }
       }
     },
     {
-      "id": 60595,
-      "homeTeam": "Rennes",
-      "awayTeam": "Auxerre",
-      "date": "2025-12-20",
+      "id": 65290,
+      "homeTeam": "Toulouse",
+      "awayTeam": "Lyon",
+      "date": "2025-12-22",
       "odds": {
-        "home": 1.7,
-        "draw": 4.2,
-        "away": 4.12
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "1-1",
+        "winner": "Toulouse",
+        "confidence": 40,
+        "advice": "+2.5 Buts",
+        "probs": {
+          "1": 0.40052421292336743,
+          "N": 0.24854668738598942,
+          "2": 0.3435802832977095
+        }
+      }
+    },
+    {
+      "id": 37758,
+      "homeTeam": "Lens",
+      "awayTeam": "Le Havre",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
+      },
+      "prediction": {
+        "score": "1-0",
+        "winner": "Lens",
+        "confidence": 63,
+        "advice": "Victoire Lens",
+        "probs": {
+          "1": 0.6308961778641023,
+          "N": 0.21786404723446914,
+          "2": 0.1393632813949683
+        }
+      }
+    },
+    {
+      "id": 85070,
+      "homeTeam": "Rennes",
+      "awayTeam": "Nice",
+      "date": "2025-12-22",
+      "odds": {
+        "home": 2.5,
+        "draw": 3.2,
+        "away": 2.8
       },
       "prediction": {
         "score": "1-1",
         "winner": "Rennes",
-        "confidence": 54,
+        "confidence": 39,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.541306775824822,
-          "N": 0.21907664663032997,
-          "2": 0.22347497634807797
-        }
-      }
-    },
-    {
-      "id": 29736,
-      "homeTeam": "Brest",
-      "awayTeam": "Lorient",
-      "date": "2025-12-20",
-      "odds": {
-        "home": 1.53,
-        "draw": 4.86,
-        "away": 5.18
-      },
-      "prediction": {
-        "score": "2-1",
-        "winner": "Brest",
-        "confidence": 60,
-        "advice": "Victoire Brest",
-        "probs": {
-          "1": 0.600594380174421,
-          "N": 0.18941322195366603,
-          "2": 0.1776135146033341
-        }
-      }
-    },
-    {
-      "id": 10805,
-      "homeTeam": "Lyon",
-      "awayTeam": "Strasbourg",
-      "date": "2025-12-20",
-      "odds": {
-        "home": 1.9,
-        "draw": 4.0,
-        "away": 3.36
-      },
-      "prediction": {
-        "score": "1-1",
-        "winner": "Lyon",
-        "confidence": 48,
-        "advice": "+2.5 Buts",
-        "probs": {
-          "1": 0.4834886033293321,
-          "N": 0.23013520539775031,
-          "2": 0.2735757004603032
+          "1": 0.3971925113211792,
+          "N": 0.246700639925477,
+          "2": 0.3482845126076776
         }
       }
     }
@@ -220,13 +220,6 @@
       "status": "live"
     },
     {
-      "team": "Marseille",
-      "points": 32,
-      "played": 16,
-      "projectedPoints": 68,
-      "status": "live"
-    },
-    {
       "team": "Lille",
       "points": 32,
       "played": 16,
@@ -234,10 +227,10 @@
       "status": "live"
     },
     {
-      "team": "Rennes",
-      "points": 27,
+      "team": "Marseille",
+      "points": 32,
       "played": 16,
-      "projectedPoints": 57,
+      "projectedPoints": 68,
       "status": "live"
     },
     {
@@ -248,10 +241,10 @@
       "status": "live"
     },
     {
-      "team": "Monaco",
-      "points": 23,
+      "team": "Rennes",
+      "points": 27,
       "played": 16,
-      "projectedPoints": 48,
+      "projectedPoints": 57,
       "status": "live"
     },
     {
@@ -263,6 +256,13 @@
     },
     {
       "team": "Toulouse",
+      "points": 23,
+      "played": 16,
+      "projectedPoints": 48,
+      "status": "live"
+    },
+    {
+      "team": "Monaco",
       "points": 23,
       "played": 16,
       "projectedPoints": 48,
@@ -318,14 +318,14 @@
       "status": "live"
     },
     {
-      "team": "Metz",
+      "team": "Nantes",
       "points": 11,
       "played": 16,
       "projectedPoints": 23,
       "status": "live"
     },
     {
-      "team": "Nantes",
+      "team": "Metz",
       "points": 11,
       "played": 16,
       "projectedPoints": 23,

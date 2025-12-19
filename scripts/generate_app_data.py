@@ -122,33 +122,87 @@ def main():
         
     print(f"Using {len(all_season_matches)} real matches from CSV. Found {len(teams_list)} active teams.")
     
+    # Load PDF Calendar if available
+    pdf_calendar_path = os.path.join(DATA_DIR, 'calendar.json')
+    pdf_calendar = []
+    if os.path.exists(pdf_calendar_path):
+        with open(pdf_calendar_path, 'r') as f:
+            pdf_calendar = json.load(f)
+            
+    # Calculate Match Weeks (Moved Up)
+    all_season_matches.sort(key=lambda x: x['date'])
+    team_games = {t: 0 for t in teams_list}
+    export_matches = []
+    
+    for m in all_season_matches:
+        h, a = m['home_team'], m['away_team']
+        # The matchweek is roughly max(games_h, games_a) + 1
+        week = max(team_games.get(h,0), team_games.get(a,0)) + 1
+        
+        # update
+        team_games[h] = team_games.get(h,0) + 1
+        team_games[a] = team_games.get(a,0) + 1
+        
+        m_copy = m.copy()
+        m_copy['week'] = week
+        export_matches.append(m_copy)
+
+    # Determine Current Week
+    current_week = max(team_games.values()) if team_games else 1
+    next_week = current_week + 1
+    
     # 3. Generate Future Matches (Next Week)
-    # We predict next matches based on logic or random pairing if no schedule
     next_matches = []
     
-    # Generate random next fixtures based on available teams
-    teams_playing = list(teams_list)
-    random.shuffle(teams_playing)
-    start_next_date = (datetime.now() + timedelta(days=3)).strftime("%Y-%m-%d")
+    # Try to find next week in PDF Calendar
+    calendar_next_week = [m for m in pdf_calendar if m['week'] == next_week]
     
-    while len(teams_playing) >= 2:
-        h = teams_playing.pop()
-        a = teams_playing.pop()
-        pred = predict_one_match(h, a, final_stats)
+    # ... (rest of logic remains same)    
+    # Try to find next week in PDF Calendar
+    calendar_next_week = [m for m in pdf_calendar if m['week'] == next_week]
+    
+    if calendar_next_week:
+        print(f"Using PDF Calendar for J{next_week} ({len(calendar_next_week)} matches)")
+        future_date = (datetime.now() + timedelta(days=3)).strftime("%Y-%m-%d")
         
-        m_obj = {
-            "id": random.randint(10000, 99999),
-            "homeTeam": h,
-            "awayTeam": a,
-            "date": start_next_date,
-            "odds": {
-                "home": round(1/max(0.05, pred['probs']['1']) * 0.92, 2),
-                "draw": round(1/max(0.05, pred['probs']['N']) * 0.92, 2),
-                "away": round(1/max(0.05, pred['probs']['2']) * 0.92, 2)
-            },
-            "prediction": pred
-        }
-        next_matches.append(m_obj)
+        for m in calendar_next_week:
+            h, a = m['home_team'], m['away_team']
+            if h in final_stats and a in final_stats: # Verify teams exist
+                pred = predict_one_match(h, a, final_stats)
+                m_obj = {
+                    "id": random.randint(10000, 99999),
+                    "homeTeam": h,
+                    "awayTeam": a,
+                    "date": future_date, # PDF doesn't always have exact date, use estimated
+                    "week": next_week,
+                    "odds": {
+                        "home": round(1/max(0.05, pred['probs']['1']) * 0.92, 2),
+                        "draw": round(1/max(0.05, pred['probs']['N']) * 0.92, 2),
+                        "away": round(1/max(0.05, pred['probs']['2']) * 0.92, 2)
+                    },
+                    "prediction": pred
+                }
+                next_matches.append(m_obj)
+    
+    # Fallback to Random if PDF empty or week not found
+    if not next_matches:
+        print("PDF Calendar missing for next week. Using Random Falback.")
+        teams_playing = list(teams_list)
+        random.shuffle(teams_playing)
+        start_next_date = (datetime.now() + timedelta(days=3)).strftime("%Y-%m-%d")
+        
+        while len(teams_playing) >= 2:
+            h = teams_playing.pop()
+            a = teams_playing.pop()
+            pred = predict_one_match(h, a, final_stats)
+            next_matches.append({
+                "id": random.randint(10000, 99999),
+                "homeTeam": h,
+                "awayTeam": a,
+                "date": start_next_date,
+                "odds": {"home": 2.5, "draw": 3.2, "away": 2.8},
+                "prediction": pred
+            })
             
     # Fallback if season over or empty schedule
     if not next_matches:
@@ -205,28 +259,7 @@ def main():
     }
 
     # Add Matchday info roughly
-    # Sort by date
-    all_season_matches.sort(key=lambda x: x['date'])
-    
-    # Simple algorithm to assign Matchweek (J1, J2...)
-    # We track how many games each team played
-    team_games = {t: 0 for t in teams_list}
-    export_matches = []
-    
-    for m in all_season_matches:
-        h, a = m['home_team'], m['away_team']
-        # The matchweek is roughly max(games_h, games_a) + 1
-        # But for global consistency, we group by date blocks usually.
-        # Let's just increment per team
-        week = max(team_games.get(h,0), team_games.get(a,0)) + 1
-        
-        # update
-        team_games[h] = team_games.get(h,0) + 1
-        team_games[a] = team_games.get(a,0) + 1
-        
-        m_copy = m.copy()
-        m_copy['week'] = week
-        export_matches.append(m_copy)
+    # (Already Calculated above in export_matches)
 
     # Save Everything
     full_data = {
