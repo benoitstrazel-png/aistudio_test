@@ -1,108 +1,163 @@
 import React, { useState, useEffect } from 'react';
-import { simulateSeason } from '../utils/simulation';
-import InfoTooltip from './ui/InfoTooltip';
+import { calculateStandingsAtWeek } from '../utils/simulation';
 import TeamLogo from './ui/TeamLogo';
 
 const Standings = ({ standings, schedule, currentWeek, highlightTeams = [] }) => {
-    const [viewMode, setViewMode] = useState('live'); // 'live' or 'projected'
+    // State for selected week (Default to currentWeek)
+    const [viewWeek, setViewWeek] = useState(currentWeek);
     const [displayStandings, setDisplayStandings] = useState([]);
 
+    // Generate week options (Assuming 34 matchdays for L1)
+    const weeks = Array.from({ length: 34 }, (_, i) => i + 1);
+
     useEffect(() => {
-        if (viewMode === 'live') {
-            setDisplayStandings(standings || []);
-        } else {
-            // Calculate projection based on current stats + remaining schedule simulation
-            if (schedule && schedule.length > 0) {
-                // Simple projection: Current Points + (Remaining Matches * PPG) ? 
-                // Or better: Use the simulation utils if available. 
-                // For now, let's trigger a light simulation or just use the passed standings if simulation is expensive.
-                // Since we don't have the full simulation engine in frontend state easily, 
-                // we will assume 'standings' passed IS the latest live date.
-
-                // If the USER wants "End of Season Prediction", we need to simulate the remaining games.
-                // Let's use the helper 'simulateSeason' imported above.
-                const projected = simulateSeason(standings, schedule);
-                setDisplayStandings(projected);
-            }
+        if (standings && standings.length > 0 && schedule) {
+            // Calculate standings for the specific week requested
+            const calculated = calculateStandingsAtWeek(standings, schedule, viewWeek, currentWeek);
+            setDisplayStandings(calculated);
         }
-    }, [viewMode, standings, schedule]);
+    }, [viewWeek, standings, schedule, currentWeek]);
 
-    // Helper for Row Color (European Spots, Relegation)
-    const getRowClass = (index) => {
-        if (index < 3) return 'border-l-4 border-l-[#CEF002] bg-[#CEF002]/5'; // LDC (Green/Lime)
-        if (index === 3) return 'border-l-4 border-l-orange-400 bg-orange-400/5'; // Barrage LDC
-        if (index === 4) return 'border-l-4 border-l-yellow-400 bg-yellow-400/5'; // Europa
-        if (index === 5) return 'border-l-4 border-l-green-600 bg-green-600/5'; // Conf
-        if (index >= 15) return 'border-l-4 border-l-red-500 bg-red-500/5'; // Relegation/Barrage
-        return 'border-l-4 border-l-transparent';
+    // Determining Mode Label
+    let modeLabel = "Live";
+    let modeColor = "bg-yellow-400 text-black";
+    if (viewWeek < currentWeek) {
+        modeLabel = "Historique";
+        modeColor = "bg-slate-500 text-white";
+    } else if (viewWeek > currentWeek) {
+        modeLabel = "Prédiction";
+        modeColor = "bg-accent text-black"; // Cyber lime
+    }
+
+    // Styles for Rank indicators (Direct Hex colors for reliability)
+    const getRankColor = (rank) => {
+        if (rank <= 3) return { bg: '#CEF002', text: '#000000' }; // LDC (Lime)
+        if (rank === 4) return { bg: '#fb923c', text: '#000000' }; // Barrage/Europa (Orange)
+        if (rank === 5) return { bg: '#facc15', text: '#000000' }; // Europa (Yellow)
+        if (rank === 6) return { bg: '#16a34a', text: '#ffffff' }; // Conf (Green)
+        if (rank >= 16) return { bg: '#ef4444', text: '#ffffff' }; // Relegation (Red)
+        return { bg: 'transparent', text: '#94a3b8' };
     };
 
-    if (!standings || standings.length === 0) return <div className="card text-secondary p-4">Chargement du classement...</div>;
+    const FormBulle = ({ result }) => {
+        let bg = "#64748b"; // slate-500
+        if (result === 'W') bg = "#22c55e"; // green-500
+        if (result === 'D') bg = "#fb923c"; // orange-400
+        if (result === 'L') bg = "#ef4444"; // red-500
+
+        return (
+            <div
+                className="w-3 h-3 rounded-full flex-shrink-0"
+                style={{ backgroundColor: bg }}
+                title={result === 'W' ? 'Victoire' : result === 'D' ? 'Nul' : 'Défaite'}
+            />
+        );
+    };
+
+    if (!standings || standings.length === 0) return <div className="p-4 text-center">Chargement...</div>;
 
     return (
-        <div className="card overflow-hidden border border-white/5 bg-[#0B1426]">
+        <div className="card overflow-hidden border border-white/5 bg-[#0B1426] p-0">
 
-            {/* Header with Toggle */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4 border-b border-white/5 pb-4">
-                <div className="flex items-center gap-2">
-                    <h2 className="text-lg uppercase tracking-widest font-bold text-white mb-0">Classement</h2>
-                    <InfoTooltip text="Live: Classement actuel. Projeté: Simulation de la fin de saison par l'IA." />
-                </div>
+            {/* Header Controls */}
+            <div className="p-4 border-b border-white/5 flex flex-col gap-4">
+                <div className="flex justify-between items-center">
+                    <h2 className="section-title mb-0 flex items-center gap-2">
+                        🏆 Classement
+                        <span className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded ${modeColor}`}>
+                            {modeLabel}
+                        </span>
+                    </h2>
 
-                <div className="flex bg-slate-900 rounded-lg p-1 border border-white/10">
-                    <button
-                        onClick={() => setViewMode('live')}
-                        className={`px-3 py-1 text-xs font-bold rounded uppercase transition-all ${viewMode === 'live' ? 'bg-accent text-slate-900 shadow-lg' : 'text-secondary hover:text-white'}`}
-                    >
-                        Live
-                    </button>
-                    <button
-                        onClick={() => setViewMode('projected')}
-                        className={`px-3 py-1 text-xs font-bold rounded uppercase transition-all ${viewMode === 'projected' ? 'bg-accent text-slate-900 shadow-lg' : 'text-secondary hover:text-white'}`}
-                    >
-                        Prédictif
-                    </button>
+                    <div className="flex items-center gap-2">
+                        <button
+                            onClick={() => setViewWeek(Math.max(1, viewWeek - 1))}
+                            className="p-1 rounded bg-white/5 hover:bg-white/10 text-white"
+                            disabled={viewWeek <= 1}
+                        >
+                            ←
+                        </button>
+                        <select
+                            className="bg-slate-800 text-white text-sm p-1 rounded border border-white/10 font-bold"
+                            value={viewWeek}
+                            onChange={(e) => setViewWeek(parseInt(e.target.value))}
+                        >
+                            {weeks.map(w => (
+                                <option key={w} value={w}>J{w} {w === currentWeek ? '(Actuel)' : ''}</option>
+                            ))}
+                        </select>
+                        <button
+                            onClick={() => setViewWeek(Math.min(34, viewWeek + 1))}
+                            className="p-1 rounded bg-white/5 hover:bg-white/10 text-white"
+                            disabled={viewWeek >= 34}
+                        >
+                            →
+                        </button>
+                    </div>
                 </div>
             </div>
 
             {/* Table */}
-            <div className="overflow-x-auto max-h-[600px] overflow-y-auto pr-1 custom-scrollbar">
-                <table className="w-full text-sm text-left border-collapse">
-                    <thead className="text-[10px] uppercase bg-black/40 text-secondary font-bold sticky top-0 z-10 backdrop-blur-md">
+            <div className="overflow-x-auto">
+                <table className="w-full text-sm text-left">
+                    <thead className="bg-black/20 text-secondary text-[10px] uppercase tracking-wider font-bold">
                         <tr>
-                            <th className="p-3">#</th>
+                            <th className="p-3 text-center w-12">#</th>
                             <th className="p-3">Équipe</th>
-                            <th className="p-3 text-center">Pts</th>
-                            <th className="p-3 text-center hidden sm:table-cell">J</th>
-                            <th className="p-3 text-center hidden md:table-cell">Diff</th>
+                            <th className="p-3 text-center" title="Points">Pts</th>
+                            <th className="p-3 text-center" title="Joués">J</th>
+                            <th className="p-3 text-center hidden md:table-cell" title="Gagnés">G</th>
+                            <th className="p-3 text-center hidden md:table-cell" title="Nuls">N</th>
+                            <th className="p-3 text-center hidden md:table-cell" title="Perdus">P</th>
+                            <th className="p-3 text-center hidden md:table-cell" title="Buts Pour">BP</th>
+                            <th className="p-3 text-center hidden md:table-cell" title="Buts Contre">BC</th>
+                            <th className="p-3 text-center font-bold" title="Différence">Diff</th>
+                            <th className="p-3 text-center hidden sm:table-cell" title="Forme (5 derniers matchs)">Forme</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="divide-y divide-white/5">
                         {displayStandings.map((team, index) => {
-                            const isHighlighted = highlightTeams.includes(team.name);
-                            const rankColorClass = getRowClass(index);
+                            const isSelected = highlightTeams.includes(team.name);
+                            const rankStyle = getRankColor(index + 1);
 
                             return (
-                                <tr key={team.name}
-                                    className={`border-b border-white/5 transition-colors group
-                                    ${isHighlighted ? 'bg-accent/20' : 'hover:bg-white/5'}
-                                    ${rankColorClass}
-                                    `}>
-                                    <td className="p-3 font-mono font-bold w-12 text-center text-white/50">{index + 1}</td>
-
+                                <tr key={team.name} className={`hover:bg-white/5 transition-colors ${isSelected ? 'bg-accent/10' : ''}`}>
+                                    <td className="p-2 text-center">
+                                        <div
+                                            className="w-6 h-6 mx-auto flex items-center justify-center rounded font-bold text-xs"
+                                            style={{ backgroundColor: rankStyle.bg, color: rankStyle.text }}
+                                        >
+                                            {index + 1}
+                                        </div>
+                                    </td>
                                     <td className="p-3">
                                         <div className="flex items-center gap-3">
-                                            <TeamLogo teamName={team.name} size="sm" className="hidden sm:flex" />
-                                            <span className={`font-bold truncate max-w-[120px] sm:max-w-none ${isHighlighted ? 'text-accent' : 'text-white'}`}>
+                                            <TeamLogo teamName={team.name} size="sm" />
+                                            <span className={`font-bold ${isSelected ? 'text-accent' : 'text-white'}`}>
                                                 {team.name}
                                             </span>
                                         </div>
                                     </td>
+                                    <td className="p-3 text-center font-black text-accent text-base">{team.points}</td>
+                                    <td className="p-3 text-center text-secondary">{team.played}</td>
 
-                                    <td className="p-3 text-center font-black text-white text-base">{team.points}</td>
-                                    <td className="p-3 text-center opacity-70 hidden sm:table-cell font-mono text-xs">{team.played}</td>
-                                    <td className={`p-3 text-center font-bold hidden md:table-cell text-xs ${team.goalDiff > 0 ? 'text-green-400' : 'text-red-400'}`}>
-                                        {team.goalDiff > 0 ? `+${team.goalDiff}` : team.goalDiff}
+                                    <td className="p-3 text-center hidden md:table-cell text-white/50">{team.won}</td>
+                                    <td className="p-3 text-center hidden md:table-cell text-white/50">{team.drawn}</td>
+                                    <td className="p-3 text-center hidden md:table-cell text-white/50">{team.lost}</td>
+
+                                    <td className="p-3 text-center hidden md:table-cell text-green-400/70">{team.gf}</td>
+                                    <td className="p-3 text-center hidden md:table-cell text-red-400/70">{team.ga}</td>
+
+                                    <td className="p-3 text-center font-bold font-mono">{team.gd > 0 ? `+${team.gd}` : team.gd}</td>
+
+                                    <td className="p-3 text-center hidden sm:table-cell">
+                                        <div className="flex items-center justify-center gap-1.5 min-w-[80px]">
+                                            {team.recentForm && team.recentForm.length > 0 ? (
+                                                team.recentForm.map((f, i) => <FormBulle key={i} result={f} />)
+                                            ) : (
+                                                <span className="text-[10px] text-white/20">-</span>
+                                            )}
+                                        </div>
                                     </td>
                                 </tr>
                             );
@@ -111,12 +166,12 @@ const Standings = ({ standings, schedule, currentWeek, highlightTeams = [] }) =>
                 </table>
             </div>
 
-            {/* Legend */}
-            <div className="flex flex-wrap gap-3 p-3 text-[10px] text-secondary border-t border-white/5 bg-black/20">
-                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-[#CEF002]"></span> LDC</div>
-                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-orange-400"></span> Barrage LDC</div>
-                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-yellow-400"></span> Europa</div>
-                <div className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-red-500"></span> Relégation</div>
+            {/* Legend Footer */}
+            <div className="p-3 border-t border-white/5 bg-black/20 flex flex-wrap gap-4 text-[10px] text-secondary justify-center">
+                <div className="flex items-center gap-1"><span className="w-2 h-2 bg-[#CEF002] rounded-full"></span> LDC</div>
+                <div className="flex items-center gap-1"><span className="w-2 h-2 bg-orange-400 rounded-full"></span> Europa</div>
+                <div className="flex items-center gap-1"><span className="w-2 h-2 bg-green-600 rounded-full"></span> Conf</div>
+                <div className="flex items-center gap-1"><span className="w-2 h-2 bg-red-500 rounded-full"></span> Relégation</div>
             </div>
         </div>
     );

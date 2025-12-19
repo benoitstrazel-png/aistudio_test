@@ -68,6 +68,26 @@ function App() {
         setSelectedMatch(newMatch);
     };
 
+    const handleSwapTeams = () => {
+        const newMatch = { ...selectedMatch };
+        const temp = newMatch.homeTeam;
+        newMatch.homeTeam = newMatch.awayTeam;
+        newMatch.awayTeam = temp;
+
+        // Re-calculate prediction
+        const pred = predictMatchLive(newMatch.homeTeam, newMatch.awayTeam, TEAM_STATS);
+        newMatch.prediction = pred;
+
+        // Update odds
+        newMatch.odds = {
+            home: (3 - (pred.confidence / 100) * 2).toFixed(2),
+            draw: 3.50,
+            away: (3 + (pred.confidence / 100)).toFixed(2)
+        };
+
+        setSelectedMatch(newMatch);
+    };
+
     return (
         <div className="container min-h-screen pb-12">
 
@@ -129,7 +149,23 @@ function App() {
                                         </div>
                                     </div>
 
-                                    <div className="font-black text-2xl md:text-3xl italic text-white/20 px-2 shrink-0">VS</div>
+                                    <div className="flex flex-col items-center shrink-0 px-2">
+                                        <div className="font-black text-2xl md:text-3xl italic text-white/20">VS</div>
+                                        <button
+                                            onClick={handleSwapTeams}
+                                            className="mt-2 p-1.5 rounded-full bg-white/5 hover:bg-accent/20 text-secondary hover:text-accent transition-all active:scale-95 group"
+                                            title="Intervertir domicile/extérieur"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:rotate-180 transition-transform duration-500">
+                                                <path d="M20 17H4" />
+                                                <path d="M4 17l4-4" />
+                                                <path d="m8 21-4-4" />
+                                                <path d="M4 7h16" />
+                                                <path d="M20 7l-4-4" />
+                                                <path d="m16 11 4-4" />
+                                            </svg>
+                                        </button>
+                                    </div>
 
                                     <div className="flex items-center gap-3 flex-row-reverse text-right shrink-0">
                                         <TeamLogo teamName={selectedMatch.awayTeam} size="lg" />
