@@ -3,15 +3,13 @@ import InfoTooltip from './ui/InfoTooltip';
 import TeamLogo from './ui/TeamLogo';
 
 const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
-    const [selectedWeek, setSelectedWeek] = useState(currentWeek + 1); // Default to next week
+    const [selectedWeek, setSelectedWeek] = useState(currentWeek + 1);
     const [matches, setMatches] = useState([]);
 
-    // Available weeks (calculated from schedule max)
     const maxWeek = schedule.length > 0 ? Math.max(...schedule.map(m => m.week || 0)) : 34;
     const weeks = Array.from({ length: maxWeek }, (_, i) => i + 1);
 
     useEffect(() => {
-        // Filter matches for selected week
         setMatches(schedule.filter(m => m.week === selectedWeek));
     }, [selectedWeek, schedule]);
 
@@ -48,26 +46,22 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                     const isHighlighted = highlightTeams.includes(match.homeTeam) || highlightTeams.includes(match.awayTeam);
 
                     return (
-                        <div key={match.id} className={`glass-card p-4 transition-all hover:bg-white/5 
+                        <div key={match.id} className={`glass-card p-3 md:p-4 transition-all hover:bg-white/5 
                             ${isHighlighted ? 'border-accent bg-accent/5 shadow-[0_0_15px_rgba(206,240,2,0.1)]' : 'border-white/5'}`}>
 
-                            {/* Match Row: [Home] [Score] [Away] */}
-                            {/* Grid layout is more stable than flex for this alignment */}
-                            <div className="grid grid-cols-[1fr_auto_1fr] gap-2 md:gap-4 items-center">
+                            {/* Match Row layout */}
+                            <div className="flex items-center justify-between gap-2">
 
-                                {/* HOME */}
-                                <div className="flex items-center justify-end gap-3 text-right">
-                                    <span className={`font-bold text-sm md:text-base hidden sm:block ${isHighlighted && match.homeTeam === highlightTeams[0] ? 'text-accent' : 'text-white'}`}>
+                                {/* HOME (Left): Logo - Name */}
+                                <div className="flex-1 flex items-center justify-start gap-3 overflow-hidden">
+                                    <TeamLogo teamName={match.homeTeam} size="md" />
+                                    <span className={`font-bold text-sm md:text-base truncate ${isHighlighted && match.homeTeam === highlightTeams[0] ? 'text-accent' : 'text-white'}`}>
                                         {match.homeTeam}
                                     </span>
-                                    <span className="sm:hidden font-bold text-xs uppercase tracking-tighter text-white">
-                                        {match.homeTeam.substring(0, 3)}
-                                    </span>
-                                    <TeamLogo teamName={match.homeTeam} size="md" />
                                 </div>
 
                                 {/* CENTER SCORE */}
-                                <div className="flex flex-col items-center justify-center min-w-[80px]">
+                                <div className="flex flex-col items-center justify-center min-w-[80px] shrink-0">
                                     {match.status === 'FINISHED' ? (
                                         <span className="text-xl md:text-2xl font-black font-mono text-white tracking-widest bg-black/40 px-3 py-1 rounded-lg">
                                             {match.score.home}-{match.score.away}
@@ -88,15 +82,12 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                                     )}
                                 </div>
 
-                                {/* AWAY */}
-                                <div className="flex items-center justify-start gap-3 text-left">
-                                    <TeamLogo teamName={match.awayTeam} size="md" />
-                                    <span className={`font-bold text-sm md:text-base hidden sm:block ${isHighlighted && match.awayTeam === highlightTeams[1] ? 'text-accent' : 'text-white'}`}>
+                                {/* AWAY (Right): Name - Logo */}
+                                <div className="flex-1 flex items-center justify-end gap-3 text-right overflow-hidden">
+                                    <span className={`font-bold text-sm md:text-base truncate ${isHighlighted && match.awayTeam === highlightTeams[1] ? 'text-accent' : 'text-white'}`}>
                                         {match.awayTeam}
                                     </span>
-                                    <span className="sm:hidden font-bold text-xs uppercase tracking-tighter text-white">
-                                        {match.awayTeam.substring(0, 3)}
-                                    </span>
+                                    <TeamLogo teamName={match.awayTeam} size="md" />
                                 </div>
 
                             </div>
@@ -109,7 +100,7 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                                         <strong className="text-white">{match.prediction.winner}</strong>
                                         <span className={getConfColor(match.prediction.winner_conf)}>({match.prediction.winner_conf}%)</span>
                                     </div>
-                                    <div className="w-px h-3 bg-white/10"></div>
+                                    <div className="hidden md:block w-px h-3 bg-white/10"></div>
                                     <div className="flex items-center gap-1">
                                         <span className="opacity-50">Buts:</span>
                                         <strong className="text-white">{match.prediction.goals_pred}</strong>
