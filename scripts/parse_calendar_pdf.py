@@ -86,12 +86,19 @@ def parse_pdf():
     for line in lines:
         line_u = line.upper()
         
-        # Detect Matchday Header like "J1", "JOURNEE 1", "Week 1"
-        # Regex for J followed by number header
-        match_day = re.search(r'\b(J|JOURNEE|WEEK)\s*(\d{1,2})\b', line_u)
-        if match_day:
-            current_day = f"J{match_day.group(2)}"
-            # Some PDFs have headers on same line as matches, proceed with caution
+        # Detect Matchday Header
+        # Patterns: "J17", "JOURNEE 17", "WEEK 17"
+        match_day_std = re.search(r'\b(J|JOURNEE|WEEK)\s*(\d{1,2})\b', line_u)
+        
+        # Pattern: "17EME JOURNEE", "1ER JOURNEE" (Ordinal first)
+        match_day_ord = re.search(r'\b(\d{1,2})\s*(?:ER|ERE|EME|ÈME)?\s*JOURN', line_u)
+        
+        if match_day_std:
+            current_day = f"J{match_day_std.group(2)}"
+        elif match_day_ord:
+            current_day = f"J{match_day_ord.group(1)}"
+            
+        # Detect 2 Teams in the line
             
         # Detect 2 Teams in the line
         # We search for occurrences of our Team Names

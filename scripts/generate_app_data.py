@@ -380,26 +380,57 @@ def main():
     # Distribute them over remaining weeks
     # We have weeks from start_sim_week to 34
     
+    # 1. Build a map of Teams Active per Week based on current full_schedule (PDF data)
+    teams_active_per_week = {}
+    for w in range(1, 40): teams_active_per_week[w] = set()
+    
+    for m in full_schedule:
+        w = m['week']
+        if w not in teams_active_per_week: teams_active_per_week[w] = set()
+        teams_active_per_week[w].add(m['homeTeam'])
+        teams_active_per_week[w].add(m['awayTeam'])
+    
     current_w = start_sim_week
-    matches_in_current_week = len([x for x in full_schedule if x['week'] == current_w])
     
     for h, a in matches_to_schedule:
-        # If current week full (9 matches), move to next
-        if matches_in_current_week >= (n_teams // 2):
-            current_w += 1
-            matches_in_current_week = 0
-            
-        if current_w > 38: break # Safety cap
+        # Find the first week where BOTH teams are free
+        scheduled_week = -1
         
+        # Try finding a slot starting from current_w, wrapping/extending if needed
+        # We try strict sequential filling to keep calendar compact
+        
+        test_w = current_w
+        attempts = 0
+        while attempts < 20: # Do not look too far ahead to avoid fragmentation
+            if h not in teams_active_per_week[test_w] and a not in teams_active_per_week[test_w]:
+                # Found a slot!
+                scheduled_week = test_w
+                break
+            test_w += 1
+            if test_w not in teams_active_per_week: teams_active_per_week[test_w] = set()
+            attempts += 1
+            
+        if scheduled_week == -1:
+             # Could not find slot in near future? Force to current_w + random (should not happen often)
+             scheduled_week = current_w + 1
+             
+        # Apply Match
         pred = predict_one_match(h, a, final_stats)
-        est_date = (datetime.now() + timedelta(days=(current_w - last_played_week)*7)).strftime("%Y-%m-%d")
+        est_date = (datetime.now() + timedelta(days=(scheduled_week - last_played_week)*7)).strftime("%Y-%m-%d")
         
         full_schedule.append({
             "id": f"fix_sim_{h}_{a}", "homeTeam": h, "awayTeam": a,
-            "week": current_w, "date": est_date, "status": "SCHEDULED",
+            "week": scheduled_week, "date": est_date, "status": "SCHEDULED",
             "score": None, "prediction": pred
         })
-        matches_in_current_week += 1
+        
+        if scheduled_week not in teams_active_per_week: teams_active_per_week[scheduled_week] = set()
+        teams_active_per_week[scheduled_week].add(h)
+        teams_active_per_week[scheduled_week].add(a)
+        
+        # Advance current pivot if this week is getting full (18 teams -> 9 matches)
+        if len(teams_active_per_week[current_w]) >= 18:
+            current_w += 1
 
             
 
