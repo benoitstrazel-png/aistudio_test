@@ -55,9 +55,9 @@ function App() {
             {/* BRAND HEADER with L1 Logo */}
             <header className="flex justify-between items-end pt-8 pb-4 mb-4 border-b border-white/5">
                 <div className="flex items-center gap-4">
-                    <img src={getLeagueLogo()} alt="Ligue 1" className="h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(206,240,2,0.5)] bg-white/90 rounded-xl p-1" />
+                    <img src={getLeagueLogo()} alt="Ligue 1" className="h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(206,240,2,0.5)] bg-white/90 rounded-xl p-1" />
                     <div>
-                        <h1 className="text-4xl font-black text-white m-0 tracking-tighter uppercase italic">
+                        <h1 className="text-2xl font-black text-white m-0 tracking-tighter uppercase italic">
                             Ligue 1 <span className="text-accent not-italic">Sim</span>
                         </h1>
                         <p className="text-secondary text-sm font-bold tracking-widest uppercase">Saison 2025-2026</p>
