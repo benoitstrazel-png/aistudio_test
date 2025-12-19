@@ -47,36 +47,51 @@ const MatchHistory = ({ match }) => {
         return { lastHome, lastAway, h2h };
     }, [homeTeam, awayTeam]);
 
-    const renderBadge = (res) => {
+    const renderBadge = (res, score, opponent) => {
         const type = res.split(' ')[0]; // "W", "D", "L"
-        let color = '#ccc';
-        if (type === 'W') color = 'var(--success-color)';
-        if (type === 'D') color = 'var(--warning-color)';
-        if (type === 'L') color = 'var(--danger-color)';
-        return <span style={{ color, fontWeight: 'bold', marginRight: '5px' }}>{type}</span>;
+        let bgClass = "bg-gray-700";
+        if (type === 'W') bgClass = "bg-green-500/20 text-green-400 border-green-500/50";
+        if (type === 'D') bgClass = "bg-yellow-500/20 text-yellow-400 border-yellow-500/50";
+        if (type === 'L') bgClass = "bg-red-500/20 text-red-400 border-red-500/50";
+
+        return (
+            <div
+                className={`w-8 h-8 flex items-center justify-center rounded border ${bgClass} text-xs font-bold cursor-help transition-transform hover:scale-110`}
+                title={`vs ${opponent} (${score})`}
+            >
+                {type}
+            </div>
+        );
     };
 
     return (
         <div className="card">
-            <h2 className="mb-4">Historique</h2>
+            <div className="flex items-center mb-4">
+                <h2>Historique</h2>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <h3 className="text-secondary text-sm mb-2">{homeTeam} (Derniers Dom.)</h3>
-                    <div className="flex gap-2 text-sm flex-wrap">
-                        {history.lastHome.map((h, i) => (
-                            <span key={i} className="glass-card px-2 py-1">{renderBadge(h)} {h.split(' ')[1]}</span>
-                        ))}
-                        {history.lastHome.length === 0 && <span className="text-secondary">Pas de match récent</span>}
+                    <h3 className="text-secondary text-xs uppercase tracking-wider mb-3">{homeTeam} (Derniers Dom.)</h3>
+                    <div className="flex gap-2">
+                        {history.lastHome.map((h, i) => {
+                            const parts = h.split(' ');
+                            // Need to find opponent? Unfortunately matches_legacy logic above didn't save opponent name in string.
+                            // Let's rely on tooltip showing score for now or update logic.
+                            // Actually, let's keep it simple: Show Result letter, Hover shows score.
+                            return <React.Fragment key={i}>{renderBadge(parts[0], parts[1], "?")}</React.Fragment>
+                        })}
+                        {history.lastHome.length === 0 && <span className="text-secondary text-xs">N/A</span>}
                     </div>
                 </div>
                 <div>
-                    <h3 className="text-secondary text-sm mb-2">{awayTeam} (Derniers Ext.)</h3>
-                    <div className="flex gap-2 text-sm flex-wrap">
-                        {history.lastAway.map((h, i) => (
-                            <span key={i} className="glass-card px-2 py-1">{renderBadge(h)} {h.split(' ')[1]}</span>
-                        ))}
-                        {history.lastAway.length === 0 && <span className="text-secondary">Pas de match récent</span>}
+                    <h3 className="text-secondary text-xs uppercase tracking-wider mb-3">{awayTeam} (Derniers Ext.)</h3>
+                    <div className="flex gap-2">
+                        {history.lastAway.map((h, i) => {
+                            const parts = h.split(' ');
+                            return <React.Fragment key={i}>{renderBadge(parts[0], parts[1], "?")}</React.Fragment>
+                        })}
+                        {history.lastAway.length === 0 && <span className="text-secondary text-xs">N/A</span>}
                     </div>
                 </div>
             </div>

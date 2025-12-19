@@ -258,23 +258,153 @@ def main():
         "goalsPerDay": round(total_goals / max(1, n_games / 9), 1)
     }
 
-    # Add Matchday info roughly
-    # (Already Calculated above in export_matches)
+    # --- 3. BUILD FULL SCHEDULE (Past + Future) ---
+    full_schedule = []
+    
+    # A. Add Played Matches
+    for m in export_matches:
+        full_schedule.append({
+            "id": f"played_{m['home_team']}_{m['away_team']}",
+            "homeTeam": m['home_team'],
+            "awayTeam": m['away_team'],
+            "week": m['week'],
+            "date": m['date'],
+            "status": "FINISHED",
+            "score": { "home": m['full_time_home_goals'], "away": m['full_time_away_goals'] },
+            "prediction": None # No prediction needed for past
+        })
+
+    # B. Add Future Matches (PDF + Fallback Simulation)
+    
+    # Identify what has been played (Exact Home/Away pairs)
+    played_pairs = set()
+    for m in full_schedule:
+        played_pairs.add((m['homeTeam'], m['awayTeam']))
+    
+    # Find max week played
+    last_played_week = max([m['week'] for m in full_schedule]) if full_schedule else 0
+    start_sim_week = last_played_week + 1
+    
+    # 1. Integrate PDF matches first
+    pdf_matches_count = 0
+    if pdf_calendar:
+        print(f"Integrating PDF Calendar matches...")
+        for m in pdf_calendar:
+            h, a = m['home_team'], m['away_team']
+            week = m['week']
+            
+            # Use PDF week if explicitly > last_played_week
+            # Order matters: (h, a)
+            
+            if week > last_played_week and (h, a) not in played_pairs:
+                if h in final_stats and a in final_stats:
+                    pred = predict_one_match(h, a, final_stats)
+                    est_date = (datetime.now() + timedelta(days=(week - last_played_week)*7)).strftime("%Y-%m-%d")
+                    
+                    full_schedule.append({
+                        "id": f"fix_pdf_{h}_{a}", "homeTeam": h, "awayTeam": a,
+                        "week": week, "date": est_date, "status": "SCHEDULED",
+                        "score": None, "prediction": pred
+                    })
+                    played_pairs.add((h, a))
+                    pdf_matches_count += 1
+    
+    # 2. Fill REmaining Weeks (up to 34) with Synthetic Round Robin
+    
+    print(f"Added {pdf_matches_count} future matches from PDF. Filling rest of season...")
+    
+    if len(teams_list) % 2 != 0: teams_list.append("Bye")
+    n_teams = len(teams_list)
+    anchor = teams_list[0]
+    rotating = teams_list[1:]
+    
+    
+    # Standard RR algorithm generates (N-1) rounds
+    rr_schedule = []
+    # Phase 1: First Leg
+    for i in range(n_teams - 1):
+        round_matches = []
+        full_round = [anchor] + rotating
+        for j in range(n_teams // 2):
+            t1 = full_round[j]
+            t2 = full_round[n_teams - 1 - j]
+            if t1 != "Bye" and t2 != "Bye" and t1 != t2:
+                 round_matches.append((t1, t2))
+        rr_schedule.append(round_matches)
+        rotating = [rotating[-1]] + rotating[:-1]
+        
+    # Phase 2: Return Leg
+    phase1_rounds = list(rr_schedule)
+    for r in phase1_rounds:
+        inverted_round = [(a, h) for (h, a) in r]
+        rr_schedule.append(inverted_round)
+    
+    # Try to fit these rounds into weeks that need matches
+    # Force fill until we have (n_teams * (n_teams-1)) matches = 306 for 18 teams
+    
+    total_matches_target = n_teams * (n_teams - 1)
+    
+    # Flatten RR schedule into a list of matches
+    all_possible_matches = []
+    for r in rr_schedule:
+        for m in r:
+            all_possible_matches.append(m)
+            
+    # Filter out what's already played
+    matches_to_schedule = []
+    for h, a in all_possible_matches:
+        if (h, a) not in played_pairs and (h, a) not in matches_to_schedule: 
+             matches_to_schedule.append((h, a))
+
+             
+    print(f"Need to schedule {len(matches_to_schedule)} matches to reach season end.")
+    
+    # Distribute them over remaining weeks
+    # We have weeks from start_sim_week to 34
+    
+    current_w = start_sim_week
+    matches_in_current_week = len([x for x in full_schedule if x['week'] == current_w])
+    
+    for h, a in matches_to_schedule:
+        # If current week full (9 matches), move to next
+        if matches_in_current_week >= (n_teams // 2):
+            current_w += 1
+            matches_in_current_week = 0
+            
+        if current_w > 38: break # Safety cap
+        
+        pred = predict_one_match(h, a, final_stats)
+        est_date = (datetime.now() + timedelta(days=(current_w - last_played_week)*7)).strftime("%Y-%m-%d")
+        
+        full_schedule.append({
+            "id": f"fix_sim_{h}_{a}", "homeTeam": h, "awayTeam": a,
+            "week": current_w, "date": est_date, "status": "SCHEDULED",
+            "score": None, "prediction": pred
+        })
+        matches_in_current_week += 1
+
+            
+
+    # Sort full schedule
+    full_schedule.sort(key=lambda x: (x['week'], x['id']))
+
+    # 4. Standings are essentially just a view on this schedule
+    # ... (Keeping existing standings logic for initial view)
 
     # Save Everything
     full_data = {
         "seasonStats": season_stats,
-        "nextMatches": next_matches,
+        "nextMatches": next_matches, # Keep for backward compat for now
         "standings": standings_list,
         "teamStats": final_stats,
-        "matchesPlayed": export_matches, # NEW for Time Travel
-        "currentWeek": max(team_games.values()) if team_games else 1
+        "currentWeek": current_week,
+        "fullSchedule": full_schedule # THE SOURCE OF TRUTH
     }
     
     with open(os.path.join(DATA_DIR, 'app_data.json'), 'w') as f:
         json.dump(full_data, f, indent=2)
         
-    print(f"Generated 2025-2026 Season Data: {len(all_season_matches)} matches played, {len(next_matches)} upcoming.")
+    print(f"Generated Full Data: {len(full_schedule)} matches total.")
 
 
 if __name__ == "__main__":

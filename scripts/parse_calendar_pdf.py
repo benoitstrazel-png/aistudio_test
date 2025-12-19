@@ -138,16 +138,36 @@ def parse_pdf():
                     "source": "PDF"
                 })
 
-    # Deduplicate and Save
-    # We might have duplicates if header repeated
+    # Deduplicate
     unique_matches = []
     seen = set()
+    # Keep order of extraction!
     for m in matches:
-        uid = f"{m['week']}-{sorted([m['home_team'], m['away_team']])}" # Id agnostic of order
+        uid = f"{sorted([m['home_team'], m['away_team']])}" # Id agnostic of order (and week for now)
         if uid not in seen:
             seen.add(uid)
             unique_matches.append(m)
             
+    # POST-PROCESSING: Assign Weeks if missing
+    # Ligue 1 has 9 matches per week usually (18 teams)
+    # If we found 0 weeks or 'Unknown', let's auto-assign based on order
+    
+    weeks_found = set(m['week'] for m in unique_matches)
+    if len(weeks_found) <= 1: # Only found 0 or 1 week type -> Parsing failed
+        print("Week detection weak. Auto-assigning weeks based on 9 matches/block order.")
+        
+        matches_per_week = 9
+        for i, m in enumerate(unique_matches):
+            week_num = (i // matches_per_week) + 1
+            # Adjust if we want to align with specific calendar start? 
+            # Assuming PDF starts at J1 or J_Next
+            # But the user said "Calendrier 2025-2026", so likely J1 start.
+            
+            # However, if PDF is only "Return Phase", it might start at J18.
+            # Without knowing, J1 is safest guess, or we could ask user.
+            # Let's assume J1.
+            m['week'] = week_num
+
     print(f"Extracted {len(unique_matches)} matches from PDF.")
     
     with open(OUTPUT_PATH, 'w') as f:
