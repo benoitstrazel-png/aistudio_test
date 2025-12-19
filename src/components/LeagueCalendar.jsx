@@ -13,14 +13,17 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
         setMatches(schedule.filter(m => m.week === selectedWeek));
     }, [selectedWeek, schedule]);
 
-    const getConfColor = (conf) => {
-        if (conf >= 70) return 'text-green-400';
-        if (conf >= 55) return 'text-yellow-400';
-        return 'text-red-400';
+    // Helper for confidence color
+    const getConfClass = (conf) => {
+        if (!conf) return 'text-slate-400';
+        if (conf >= 60) return 'text-[#CEF002]'; // Lime
+        if (conf >= 45) return 'text-orange-400'; // Orange
+        return 'text-red-400'; // Red
     };
 
     return (
         <div className="card bg-[#0B1426] border border-white/5 shadow-xl">
+            {/* Header */}
             <div className="flex justify-between items-center mb-6 border-b border-white/5 pb-4">
                 <div className="flex items-center gap-2">
                     <h2 className="text-white m-0 text-lg uppercase tracking-widest font-bold flex items-center gap-2">
@@ -29,88 +32,136 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                 </div>
 
                 <select
-                    className="bg-slate-800 text-white p-2 rounded text-sm w-40 border border-white/10"
+                    className="bg-slate-800 text-white p-2 rounded text-sm w-32 border border-white/10"
                     value={selectedWeek}
                     onChange={(e) => setSelectedWeek(parseInt(e.target.value))}
                 >
                     {weeks.map(w => (
-                        <option key={w} value={w}>Journée {w}</option>
+                        <option key={w} value={w}>J{w}</option>
                     ))}
                 </select>
             </div>
 
-            <div className="grid gap-3">
+            {/* Matches Grid */}
+            <div className="flex flex-col gap-4">
                 {matches.length === 0 && <p className="text-secondary text-center py-8">Aucun match trouvé pour cette journée.</p>}
 
                 {matches.map(match => {
                     const isHighlighted = highlightTeams.includes(match.homeTeam) || highlightTeams.includes(match.awayTeam);
 
+                    // Logic for display text
+                    let winnerDisplay = match.prediction?.winner;
+                    const winnerConf = match.prediction?.winner_conf || 0;
+
+                    if (winnerDisplay === 'Draw' || winnerDisplay === 'Nul') {
+                        winnerDisplay = "Nul";
+                    } else if (winnerDisplay === match.homeTeam) {
+                        winnerDisplay = match.homeTeam;
+                    } else if (winnerDisplay === match.awayTeam) {
+                        winnerDisplay = match.awayTeam;
+                    }
+
+                    // --- ADVANCED CONSISTENCY FIX: Score matching Winner AND Goals Pred ---
+                    let displayScore = match.prediction?.score || '-';
+
+                    if (match.status === 'SCHEDULED' && match.prediction?.score) {
+                        let parts = match.prediction.score.split('-').map(x => parseInt(x));
+                        if (parts.length === 2) {
+                            let [h, a] = parts;
+                            const totalGoals = h + a;
+                            const isOver2_5 = match.prediction.goals_pred?.includes('+2.5');
+                            const isUnder2_5 = match.prediction.goals_pred?.includes('-2.5');
+
+                            // 1. Force Winner Consistency first
+                            if (winnerDisplay === match.homeTeam && h <= a) h = a + 1;
+                            else if (winnerDisplay === match.awayTeam && a <= h) a = h + 1;
+                            else if (winnerDisplay === "Nul" && h !== a) { const m = Math.max(h, a); h = m; a = m; }
+
+                            // 2. Force Goals Consistency (experimental)
+                            if (isUnder2_5 && (h + a) > 2) {
+                                // Must reduce score but keep winner
+                                if (winnerDisplay === match.homeTeam) { h = 1; a = 0; } // 1-0
+                                else if (winnerDisplay === match.awayTeam) { h = 0; a = 1; } // 0-1
+                                else { h = 1; a = 1; } // 1-1
+                            }
+                            else if (isOver2_5 && (h + a) < 3) {
+                                // Must increase score but keep winner
+                                // Usually means 1-0 or 1-1 needs boost
+                                if (winnerDisplay === match.homeTeam) { h = 2; a = 1; } // 2-1
+                                else if (winnerDisplay === match.awayTeam) { h = 1; a = 2; } // 1-2
+                                else { h = 2; a = 2; } // 2-2
+                            }
+
+                            displayScore = `${h}-${a}`;
+                        }
+                    }
+
+                    if (match.status === 'FINISHED') {
+                        displayScore = `${match.score.home}-${match.score.away}`;
+                    }
+                    // -----------------------------------------------------------------------
+
                     return (
-                        <div key={match.id} className={`glass-card p-2 md:p-3 transition-all hover:bg-white/5 
+                        <div key={match.id} className={`glass-card p-4 transition-all hover:bg-white/5 
                             ${isHighlighted ? 'border-accent bg-accent/5 shadow-[0_0_15px_rgba(206,240,2,0.1)]' : 'border-white/5'}`}>
 
-                            {/* 5-COLUMN GRID LAYOUT: Strict Alignment */}
-                            <div className="grid grid-cols-[40px_1fr_60px_1fr_40px] md:grid-cols-[50px_1fr_100px_1fr_50px] gap-2 items-center">
+                            {/* 3-COLUMN LAYOUT: Left (Home), Center (Info), Right (Away) */}
+                            <div className="grid grid-cols-3 gap-2 items-center min-h-[100px]">
 
-                                {/* 1. Logo Home */}
-                                <div className="flex justify-center">
+                                {/* HOME (Left): Logo Top, Name Bottom */}
+                                <div className="flex flex-col items-center justify-center gap-2">
                                     <TeamLogo teamName={match.homeTeam} size="md" />
-                                </div>
-
-                                {/* 2. Name Home (Right Aligned) */}
-                                <div className="text-right pr-2 overflow-hidden flex flex-col justify-center h-full">
-                                    <span className={`font-bold text-xs md:text-sm truncate ${isHighlighted && match.homeTeam === highlightTeams[0] ? 'text-accent' : 'text-white'}`}>
+                                    <span className={`font-bold text-sm text-center leading-tight ${isHighlighted && match.homeTeam === highlightTeams[0] ? 'text-accent' : 'text-white'}`}>
                                         {match.homeTeam}
                                     </span>
                                 </div>
 
-                                {/* 3. SCORE (Center, Fixed Width) */}
-                                <div className="flex flex-col items-center justify-center">
+                                {/* CENTER: Stacked Info */}
+                                <div className="flex flex-col items-center justify-center text-center">
+                                    {/* Score */}
                                     {match.status === 'FINISHED' ? (
-                                        <span className="text-lg md:text-xl font-black font-mono text-white tracking-widest bg-black/40 px-2 py-1 rounded w-full text-center">
-                                            {match.score.home}-{match.score.away}
+                                        <span className="text-2xl font-black font-mono text-accent tracking-widest mb-1">
+                                            {displayScore}
                                         </span>
                                     ) : (
-                                        <div className="flex flex-col items-center w-full">
-                                            <div className="bg-black/40 px-2 py-1 rounded mb-1 w-full text-center">
-                                                <span className="text-base md:text-lg font-black font-mono text-accent animate-pulse tracking-widest block">
-                                                    {match.prediction?.score || 'VS'}
-                                                </span>
+                                        <div className="mb-1">
+                                            <span className="text-xl font-black font-mono text-accent animate-pulse tracking-widest">
+                                                {displayScore}
+                                            </span>
+                                        </div>
+                                    )}
+
+                                    {/* PREDICTIONS STACKED */}
+                                    {match.status === 'SCHEDULED' && match.prediction && (
+                                        <div className="flex flex-col items-center gap-0.5 text-xs font-bold text-slate-300">
+
+                                            {/* Line 1: Winner */}
+                                            <div className="whitespace-nowrap">
+                                                <span className="opacity-50 mr-1">V:</span>
+                                                <span className="text-white mr-1">{winnerDisplay}</span>
+                                                <span className={getConfClass(winnerConf)}>({winnerConf}%)</span>
                                             </div>
+
+                                            {/* Line 2: Goals */}
+                                            <div className="whitespace-nowrap">
+                                                <span className="opacity-50 mr-1">Buts:</span>
+                                                <span className="text-white mr-1">{match.prediction.goals_pred}</span>
+                                                <span className={getConfClass(match.prediction.goals_conf)}>({match.prediction.goals_conf}%)</span>
+                                            </div>
+
                                         </div>
                                     )}
                                 </div>
 
-                                {/* 4. Name Away (Left Aligned) */}
-                                <div className="text-left pl-2 overflow-hidden flex flex-col justify-center h-full">
-                                    <span className={`font-bold text-xs md:text-sm truncate ${isHighlighted && match.awayTeam === highlightTeams[1] ? 'text-accent' : 'text-white'}`}>
+                                {/* AWAY (Right): Logo Top, Name Bottom (Symmetrical) */}
+                                <div className="flex flex-col items-center justify-center gap-2">
+                                    <TeamLogo teamName={match.awayTeam} size="md" />
+                                    <span className={`font-bold text-sm text-center leading-tight ${isHighlighted && match.awayTeam === highlightTeams[1] ? 'text-accent' : 'text-white'}`}>
                                         {match.awayTeam}
                                     </span>
                                 </div>
 
-                                {/* 5. Logo Away */}
-                                <div className="flex justify-center">
-                                    <TeamLogo teamName={match.awayTeam} size="md" />
-                                </div>
-
                             </div>
-
-                            {/* Confidence Footer (Optional, hidden on very small screens if needed) */}
-                            {match.status === 'SCHEDULED' && match.prediction && (
-                                <div className="flex justify-center items-center gap-4 mt-2 pt-2 border-t border-white/5 text-[10px] text-secondary">
-                                    <div className="flex items-center gap-1">
-                                        <span className="opacity-50">V:</span>
-                                        <strong className="text-white truncate max-w-[60px]">{match.prediction.winner}</strong>
-                                        <span className={getConfColor(match.prediction.winner_conf)}>({match.prediction.winner_conf}%)</span>
-                                    </div>
-                                    <div className="hidden md:block w-px h-2 bg-white/10"></div>
-                                    <div className="flex items-center gap-1">
-                                        <span className="opacity-50">Buts:</span>
-                                        <strong className="text-white">{match.prediction.goals_pred}</strong>
-                                        <span className={getConfColor(match.prediction.goals_conf)}>({match.prediction.goals_conf}%)</span>
-                                    </div>
-                                </div>
-                            )}
 
                         </div>
                     );

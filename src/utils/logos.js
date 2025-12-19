@@ -17,8 +17,8 @@ const MANUAL_URLS = {
     "Nice": "https://medias.lequipe.fr/logo-football/46/200?20210705",
     "OGC Nice": "https://medias.lequipe.fr/logo-football/46/200?20210705",
 
-    // PARIS FC
-    "Paris FC": "https://medias.lequipe.fr/logo-football/235/200?20210705"
+    // PARIS FC - Corrected URL
+    "Paris FC": "https://upload.wikimedia.org/wikipedia/fr/thumb/d/db/Logo_Paris_FC_2011.svg/200px-Logo_Paris_FC_2011.svg.png"
 };
 
 const FOOTBALL_DATA_IDS = {

@@ -22,20 +22,37 @@ import { predictMatchLive } from './utils/prediction';
 function App() {
     // Default to first match or mock
     const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0] || {});
-    const [teams, setTeams] = useState([]);
+    // List of strict 18 teams for 2025-2026 Season
+    const L1_TEAMS_2025 = [
+        "Angers", "Auxerre", "Brest", "Le Havre", "Lens", "Lille",
+        "Lorient", "Lyon", "Marseille", "Metz", "Monaco", "Montpellier",
+        "Nantes", "Nice", "PSG", "Reims", "Rennes", "Saint-Etienne", "Strasbourg", "Toulouse"
+    ].sort();
+
+    const [teams, setTeams] = useState(L1_TEAMS_2025);
 
     useEffect(() => {
-        // Fallback robust loading: Use teamStats which contains all initialized teams
-        if (APP_DATA.teamStats) {
-            const loadedTeams = Object.keys(APP_DATA.teamStats).filter(t => t && t.length > 2).sort();
-            setTeams(loadedTeams);
-        }
+        // Enforce strict L1 Team list
+        setTeams(L1_TEAMS_2025);
     }, []);
 
     const handleTeamChange = (type, teamName) => {
         const newMatch = { ...selectedMatch };
-        if (type === 'home') newMatch.homeTeam = teamName;
-        if (type === 'away') newMatch.awayTeam = teamName;
+
+        if (type === 'home') {
+            newMatch.homeTeam = teamName;
+            // If selecting the team currently set as Away, change Away
+            if (newMatch.awayTeam === teamName) {
+                newMatch.awayTeam = teams.find(t => t !== teamName) || 'Marseille';
+            }
+        }
+        if (type === 'away') {
+            newMatch.awayTeam = teamName;
+            // If selecting the team currently set as Home, change Home
+            if (newMatch.homeTeam === teamName) {
+                newMatch.homeTeam = teams.find(t => t !== teamName) || 'PSG';
+            }
+        }
 
         // Re-calculate prediction
         const pred = predictMatchLive(newMatch.homeTeam, newMatch.awayTeam, TEAM_STATS);
@@ -97,35 +114,35 @@ function App() {
 
                             <div className="card border-t-4 border-accent bg-[#0B1426]">
                                 {/* SELECTORS with Logos */}
-                                <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 bg-black/20 p-6 rounded-2xl border border-white/5">
-                                    <div className="w-full flex items-center gap-3">
-                                        <TeamLogo teamName={selectedMatch.homeTeam} size="md" />
-                                        <div className="w-full">
+                                <div className="flex flex-row items-center justify-between gap-4 md:gap-12 mb-8 bg-black/20 p-6 rounded-2xl border border-white/5 overflow-x-auto">
+                                    <div className="flex items-center gap-3 shrink-0">
+                                        <TeamLogo teamName={selectedMatch.homeTeam} size="lg" />
+                                        <div className="flex flex-col">
                                             <label className="text-[10px] text-accent font-bold uppercase tracking-widest mb-1 block">Domicile</label>
                                             <select
-                                                className="w-full text-lg"
+                                                className="bg-slate-800 text-white p-2 rounded w-32 md:w-48 text-sm md:text-base font-bold border border-white/10 focus:border-accent outline-none cursor-pointer"
                                                 value={selectedMatch.homeTeam}
                                                 onChange={(e) => handleTeamChange('home', e.target.value)}
                                             >
-                                                {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                                                {teams.filter(t => t !== selectedMatch.awayTeam).map(t => <option key={t} value={t}>{t}</option>)}
                                             </select>
                                         </div>
                                     </div>
 
-                                    <div className="font-black text-3xl italic text-white/20">VS</div>
+                                    <div className="font-black text-2xl md:text-3xl italic text-white/20 px-2 shrink-0">VS</div>
 
-                                    <div className="w-full flex items-center gap-3 flex-row-reverse md:flex-row">
-                                        <div className="w-full text-right md:text-left">
-                                            <label className="text-[10px] text-accent font-bold uppercase tracking-widest mb-1 block">Extérieur</label>
+                                    <div className="flex items-center gap-3 flex-row-reverse text-right shrink-0">
+                                        <TeamLogo teamName={selectedMatch.awayTeam} size="lg" />
+                                        <div className="flex flex-col items-end">
+                                            <label className="text-[10px] text-red-500 font-bold uppercase tracking-widest mb-1 block">Extérieur</label>
                                             <select
-                                                className="w-full text-lg"
+                                                className="bg-slate-800 text-white p-2 rounded w-32 md:w-48 text-sm md:text-base font-bold border border-white/10 focus:border-accent outline-none cursor-pointer"
                                                 value={selectedMatch.awayTeam}
                                                 onChange={(e) => handleTeamChange('away', e.target.value)}
                                             >
-                                                {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                                                {teams.filter(t => t !== selectedMatch.homeTeam).map(t => <option key={t} value={t}>{t}</option>)}
                                             </select>
                                         </div>
-                                        <TeamLogo teamName={selectedMatch.awayTeam} size="md" />
                                     </div>
                                 </div>
 
