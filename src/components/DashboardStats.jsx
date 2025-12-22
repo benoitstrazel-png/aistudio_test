@@ -34,9 +34,9 @@ const DashboardStats = ({ stats }) => {
             </div>
 
             {/* Charts Section */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
                 {/* Main Graph: Real vs Projected */}
-                <div className="card" style={{ gridColumn: 'span 2', backgroundColor: '#0F1C38', borderColor: 'rgba(255,255,255,0.05)' }}>
+                <div className="card" style={{ flex: '2 1 600px', backgroundColor: '#0F1C38', borderColor: 'rgba(255,255,255,0.05)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                         <div>
                             <h3 style={{ fontSize: '1.125rem', fontWeight: 'bold', color: 'white' }}>Évolution des Buts / Journée</h3>
@@ -57,7 +57,7 @@ const DashboardStats = ({ stats }) => {
                 </div>
 
                 {/* Side Metrics */}
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: '1 1 300px' }}>
                     <SeasonMetrics />
                 </div>
             </div>
