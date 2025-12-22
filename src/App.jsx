@@ -128,7 +128,12 @@ function App() {
                         <span>📊 Statistiques Saison</span>
                         <InfoTooltip text="Moyennes globales de la ligue." />
                     </div>
-                    <DashboardStats stats={APP_DATA.seasonStats} />
+                    <DashboardStats
+                        stats={APP_DATA.seasonStats}
+                        schedule={APP_DATA.fullSchedule}
+                        currentWeek={APP_DATA.currentWeek}
+                        teamStats={APP_DATA.teamStats}
+                    />
                 </section>
 
                 <div className="grid lg:grid-cols-12 gap-8">

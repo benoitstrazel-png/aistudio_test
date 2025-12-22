@@ -1,8 +1,7 @@
 import React from 'react';
 import SeasonGoalsChart from './SeasonGoalsChart';
-import SeasonMetrics from './SeasonMetrics';
 
-const DashboardStats = ({ stats }) => {
+const DashboardStats = ({ stats, schedule, currentWeek, teamStats }) => {
     return (
         <div className="flex flex-col gap-6">
             {/* Top Cards */}
@@ -34,31 +33,26 @@ const DashboardStats = ({ stats }) => {
             </div>
 
             {/* Charts Section */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
+            <div className="w-full">
                 {/* Main Graph: Real vs Projected */}
-                <div className="card" style={{ flex: '2 1 600px', backgroundColor: '#0F1C38', borderColor: 'rgba(255,255,255,0.05)' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                <div className="card w-full bg-[#0F1C38] border border-white/5">
+                    <div className="flex items-center justify-between mb-2">
                         <div>
-                            <h3 style={{ fontSize: '1.125rem', fontWeight: 'bold', color: 'white' }}>Évolution des Buts / Journée</h3>
-                            <p style={{ color: '#94a3b8', fontSize: '12px' }}>Comparatif Réel vs Simulation IA</p>
+                            <h3 className="text-lg font-bold text-white">Évolution des Buts / Journée</h3>
+                            <p className="text-secondary text-xs">Comparatif Réel vs Simulation IA</p>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '12px', fontWeight: 'bold' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <div style={{ width: '2rem', height: '4px', backgroundColor: 'white', borderRadius: '9999px' }}></div>
-                                <span style={{ color: 'white' }}>RÉEL</span>
+                        <div className="flex items-center gap-4 text-xs font-bold">
+                            <div className="flex items-center gap-2">
+                                <div className="w-8 h-1 bg-white rounded-full"></div>
+                                <span className="text-white">RÉEL</span>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <div style={{ width: '2rem', height: '0', borderTop: '2px dashed #CEF002' }}></div>
-                                <span style={{ color: '#CEF002' }}>PROJETÉ</span>
+                            <div className="flex items-center gap-2">
+                                <div className="w-8 h-1 border-t-2 border-dashed border-accent"></div>
+                                <span className="text-accent">PROJETÉ</span>
                             </div>
                         </div>
                     </div>
-                    <SeasonGoalsChart />
-                </div>
-
-                {/* Side Metrics */}
-                <div style={{ flex: '1 1 300px' }}>
-                    <SeasonMetrics />
+                    <SeasonGoalsChart schedule={schedule} currentWeek={currentWeek} teamStats={teamStats} />
                 </div>
             </div>
         </div>
