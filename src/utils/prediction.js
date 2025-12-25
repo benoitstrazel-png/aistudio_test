@@ -1,4 +1,5 @@
 // Helper to compute prediction live in frontend
+// Now includes Deterministic Randomness (Seeded) for consistency
 export const predictMatchLive = (home, away, stats) => {
     const sh = stats[home] || { att: 1, def: 1 };
     const sa = stats[away] || { att: 1, def: 1 };
@@ -10,14 +11,24 @@ export const predictMatchLive = (home, away, stats) => {
     const totalStrength = homeStrength + awayStrength;
     const homeProb = homeStrength / totalStrength;
 
-    // Simulate Poisson distribution for more variance (instead of just rounding mean)
+    // SEEDED RANDOM GENERATOR (LCG)
+    // Seed based on team names to ensure consistency for the same match-up
+    let seed = home.split('').reduce((a, b) => a + b.charCodeAt(0), 0) +
+        away.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
+
+    const seededRandom = () => {
+        seed = (seed * 9301 + 49297) % 233280;
+        return seed / 233280;
+    };
+
+    // Simulate Poisson distribution
     const getPoisson = (lambda) => {
         let L = Math.exp(-lambda);
         let p = 1.0;
         let k = 0;
         do {
             k++;
-            p *= Math.random();
+            p *= seededRandom(); // Use seeded random
         } while (p > L);
         return k - 1;
     };
@@ -26,35 +37,71 @@ export const predictMatchLive = (home, away, stats) => {
     const lambdaH = homeStrength * 1.35;
     const lambdaA = awayStrength * 1.05;
 
-    // Generate score based on Poisson (introduces 0-0, 3-0, 4-1 etc.)
-    let scoreH = getPoisson(lambdaH);
-    let scoreA = getPoisson(lambdaA);
+    // MONTE CARLO SIMULATION (500 rounds) to find the "Mode" (Most frequent outcome)
+    const ITERATIONS = 500;
+    const scoreCounts = {};
+    let winnerCounts = { home: 0, draw: 0, away: 0 };
+    let over25Count = 0;
 
-    let winner = "Match Nul";
-    let conf = 50;
+    for (let i = 0; i < ITERATIONS; i++) {
+        const sH = getPoisson(lambdaH);
+        const sA = getPoisson(lambdaA);
+        const key = `${sH}-${sA}`;
 
-    // Re-evaluate probabilities based on the SIMULATED score vs THEORETICAL strength
-    // This allows disjointed "upset" predictions if we wanted, but let's stick to strength for confidence to be safe
-    // However, if the simulated score is 3-0, we should probably predict Home Win even if prob was 51%.
+        scoreCounts[key] = (scoreCounts[key] || 0) + 1;
 
-    if (scoreH > scoreA) {
-        winner = home;
-        conf = Math.min(95, Math.round(50 + (scoreH - scoreA) * 10 + (homeProb - 0.5) * 40));
-    } else if (scoreA > scoreH) {
-        winner = away;
-        conf = Math.min(95, Math.round(50 + (scoreA - scoreH) * 10 + (0.5 - homeProb) * 40));
-    } else {
-        winner = "Match Nul";
-        conf = Math.round((1 - Math.abs(homeProb - 0.5) * 2) * 60);
+        if (sH > sA) winnerCounts.home++;
+        else if (sA > sH) winnerCounts.away++;
+        else winnerCounts.draw++;
+
+        if (sH + sA > 2.5) over25Count++;
     }
+
+    // Determine Mode Score
+    let bestScore = "0-0";
+    let maxCount = 0;
+    for (const [score, count] of Object.entries(scoreCounts)) {
+        if (count > maxCount) {
+            maxCount = count;
+            bestScore = score;
+        }
+    }
+    const [finalH, finalA] = bestScore.split('-').map(Number);
+    const scoreConf = Math.round((maxCount / ITERATIONS) * 100);
+
+    // Determine Winner based on frequencies
+    let winner = "Match Nul";
+    let winnerKey = "draw";
+    let maxWinCount = winnerCounts.draw;
+
+    if (winnerCounts.home > maxWinCount) {
+        winnerKey = 'home';
+        maxWinCount = winnerCounts.home;
+    }
+    if (winnerCounts.away > maxWinCount) {
+        winnerKey = 'away';
+        maxWinCount = winnerCounts.away;
+    }
+
+    if (winnerKey === 'home') winner = home;
+    if (winnerKey === 'away') winner = away;
+
+    const winnerConf = Math.round((maxWinCount / ITERATIONS) * 100);
+
+    // Determine Goals
+    const probOver25 = over25Count / ITERATIONS;
+    const goalsPred = probOver25 > 0.5 ? "+2.5 Buts" : "-2.5 Buts";
+    const goalsConf = Math.round((probOver25 > 0.5 ? probOver25 : 1 - probOver25) * 100);
+
+    const advice = winnerConf > 60 ? `Victoire ${winner}` : "Pari risqué (Nul ou BTTS)";
 
     return {
         winner,
-        score: `${scoreH}-${scoreA}`,
-        winner_conf: conf, // Add explicit winner_conf for consistency with JSON
-        confidence: conf,
-        goals_pred: (scoreH + scoreA) > 2 ? "+2.5 Buts" : "-2.5 Buts", // Dynamic goals pred
-        goals_conf: Math.min(90, 50 + Math.abs((scoreH + scoreA) - 2.5) * 20),
-        advice: conf > 70 ? `Victoire ${winner}` : "Pari risqué (Nul ou BTTS)"
+        score: bestScore,
+        winner_conf: winnerConf,
+        confidence: winnerConf,
+        goals_pred: goalsPred,
+        goals_conf: goalsConf,
+        advice
     };
 };

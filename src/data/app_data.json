@@ -6,245 +6,245 @@
   },
   "nextMatches": [
     {
-      "id": 93578,
+      "id": 20084,
       "homeTeam": "Toulouse",
       "awayTeam": "Lens",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 2.64,
-        "draw": 2.95,
-        "away": 2.71
+        "home": 3.15,
+        "draw": 3.11,
+        "away": 2.23
       },
       "prediction": {
-        "score": "1-1",
-        "score_conf": 15,
-        "winner": "Toulouse",
-        "winner_conf": 34,
+        "score": "0-1",
+        "score_conf": 13,
+        "winner": "Lens",
+        "winner_conf": 41,
         "goals_pred": "-2.5 Buts",
         "goals_conf": 57,
-        "confidence": 34,
+        "confidence": 41,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.348,
-          "N": 0.312,
-          "2": 0.34
+          "1": 0.292,
+          "N": 0.296,
+          "2": 0.412
         }
       }
     },
     {
-      "id": 82675,
+      "id": 48074,
       "homeTeam": "Monaco",
       "awayTeam": "Lyon",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 1.73,
-        "draw": 4.3,
-        "away": 3.62
+        "home": 1.7,
+        "draw": 5.35,
+        "away": 3.19
       },
       "prediction": {
         "score": "2-1",
-        "score_conf": 11,
+        "score_conf": 9,
         "winner": "Monaco",
-        "winner_conf": 53,
+        "winner_conf": 54,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 68,
-        "confidence": 53,
+        "goals_conf": 72,
+        "confidence": 54,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.532,
-          "N": 0.214,
-          "2": 0.254
+          "1": 0.54,
+          "N": 0.172,
+          "2": 0.288
         }
       }
     },
     {
-      "id": 33876,
+      "id": 69516,
       "homeTeam": "Nice",
       "awayTeam": "Strasbourg",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 1.92,
-        "draw": 3.71,
-        "away": 3.38
+        "home": 2.07,
+        "draw": 3.57,
+        "away": 3.09
       },
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 10,
         "winner": "Nice",
-        "winner_conf": 48,
+        "winner_conf": 44,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 51,
-        "confidence": 48,
+        "confidence": 44,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.48,
-          "N": 0.248,
-          "2": 0.272
+          "1": 0.444,
+          "N": 0.258,
+          "2": 0.298
         }
       }
     },
     {
-      "id": 67763,
+      "id": 72975,
       "homeTeam": "Lille",
       "awayTeam": "Rennes",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 1.65,
-        "draw": 4.0,
-        "away": 4.3
+        "home": 1.64,
+        "draw": 4.47,
+        "away": 3.93
       },
       "prediction": {
-        "score": "1-1",
-        "score_conf": 12,
+        "score": "2-1",
+        "score_conf": 10,
         "winner": "Lille",
-        "winner_conf": 55,
+        "winner_conf": 56,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 55,
+        "goals_conf": 56,
+        "confidence": 56,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.556,
-          "N": 0.23,
-          "2": 0.214
+          "1": 0.56,
+          "N": 0.206,
+          "2": 0.234
         }
       }
     },
     {
-      "id": 78030,
+      "id": 68062,
       "homeTeam": "Marseille",
       "awayTeam": "Nantes",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 1.27,
-        "draw": 5.54,
-        "away": 8.36
+        "home": 1.23,
+        "draw": 6.87,
+        "away": 7.8
       },
       "prediction": {
         "score": "2-0",
-        "score_conf": 11,
+        "score_conf": 13,
         "winner": "Marseille",
-        "winner_conf": 72,
+        "winner_conf": 74,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 63,
-        "confidence": 72,
+        "goals_conf": 66,
+        "confidence": 74,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.724,
-          "N": 0.166,
-          "2": 0.11
+          "1": 0.748,
+          "N": 0.134,
+          "2": 0.118
         }
       }
     },
     {
-      "id": 98308,
+      "id": 28672,
       "homeTeam": "Brest",
       "awayTeam": "Auxerre",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 1.81,
-        "draw": 4.34,
-        "away": 3.29
+        "home": 1.8,
+        "draw": 4.11,
+        "away": 3.48
       },
       "prediction": {
-        "score": "1-1",
-        "score_conf": 10,
+        "score": "2-1",
+        "score_conf": 11,
         "winner": "Brest",
-        "winner_conf": 50,
+        "winner_conf": 51,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 50,
+        "goals_conf": 55,
+        "confidence": 51,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.508,
-          "N": 0.212,
-          "2": 0.28
+          "1": 0.512,
+          "N": 0.224,
+          "2": 0.264
         }
       }
     },
     {
-      "id": 87415,
+      "id": 89691,
       "homeTeam": "Le Havre",
       "awayTeam": "Angers",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 2.88,
-        "draw": 2.91,
-        "away": 2.53
+        "home": 2.5,
+        "draw": 3.46,
+        "away": 2.51
       },
       "prediction": {
-        "score": "1-1",
-        "score_conf": 17,
-        "winner": "Angers",
+        "score": "0-1",
+        "score_conf": 12,
+        "winner": "Le Havre",
         "winner_conf": 36,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 62,
+        "goals_conf": 60,
         "confidence": 36,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.32,
-          "N": 0.316,
-          "2": 0.364
+          "1": 0.368,
+          "N": 0.266,
+          "2": 0.366
         }
       }
     },
     {
-      "id": 11057,
+      "id": 27688,
       "homeTeam": "Lorient",
       "awayTeam": "Metz",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 1.85,
-        "draw": 4.0,
-        "away": 3.36
+        "home": 1.9,
+        "draw": 4.3,
+        "away": 3.05
       },
       "prediction": {
-        "score": "2-1",
-        "score_conf": 11,
+        "score": "1-2",
+        "score_conf": 10,
         "winner": "Lorient",
-        "winner_conf": 49,
+        "winner_conf": 48,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 49,
+        "goals_conf": 63,
+        "confidence": 48,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.496,
-          "N": 0.23,
-          "2": 0.274
+          "1": 0.484,
+          "N": 0.214,
+          "2": 0.302
         }
       }
     },
     {
-      "id": 55217,
+      "id": 84244,
       "homeTeam": "PSG",
       "awayTeam": "Paris FC",
       "date": "2025-12-28",
       "week": 17,
       "odds": {
-        "home": 1.07,
-        "draw": 9.2,
-        "away": 18.4
+        "home": 1.09,
+        "draw": 10.0,
+        "away": 14.84
       },
       "prediction": {
-        "score": "3-0",
-        "score_conf": 10,
+        "score": "3-1",
+        "score_conf": 8,
         "winner": "PSG",
-        "winner_conf": 85,
+        "winner_conf": 84,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 82,
-        "confidence": 85,
+        "goals_conf": 81,
+        "confidence": 84,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.856,
-          "N": 0.1,
-          "2": 0.044
+          "1": 0.846,
+          "N": 0.092,
+          "2": 0.062
         }
       }
     }
@@ -265,14 +265,14 @@
       "status": "live"
     },
     {
-      "team": "Marseille",
+      "team": "Lille",
       "points": 32,
       "played": 16,
       "projectedPoints": 68,
       "status": "live"
     },
     {
-      "team": "Lille",
+      "team": "Marseille",
       "points": 32,
       "played": 16,
       "projectedPoints": 68,
@@ -293,7 +293,7 @@
       "status": "live"
     },
     {
-      "team": "Toulouse",
+      "team": "Monaco",
       "points": 23,
       "played": 16,
       "projectedPoints": 48,
@@ -307,7 +307,7 @@
       "status": "live"
     },
     {
-      "team": "Monaco",
+      "team": "Toulouse",
       "points": 23,
       "played": 16,
       "projectedPoints": 48,
@@ -2350,18 +2350,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 11,
+        "score": "2-1",
+        "score_conf": 10,
         "winner": "Brest",
-        "winner_conf": 48,
+        "winner_conf": 52,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 54,
-        "confidence": 48,
+        "goals_conf": 59,
+        "confidence": 52,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.484,
-          "N": 0.272,
-          "2": 0.244
+          "1": 0.528,
+          "N": 0.21,
+          "2": 0.262
         }
       }
     },
@@ -2376,16 +2376,16 @@
       "prediction": {
         "score": "1-0",
         "score_conf": 12,
-        "winner": "Le Havre",
+        "winner": "Angers",
         "winner_conf": 37,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 57,
+        "goals_conf": 55,
         "confidence": 37,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.37,
-          "N": 0.276,
-          "2": 0.354
+          "1": 0.362,
+          "N": 0.262,
+          "2": 0.376
         }
       }
     },
@@ -2398,18 +2398,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
+        "score": "2-0",
         "score_conf": 11,
         "winner": "Lille",
-        "winner_conf": 53,
+        "winner_conf": 62,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 53,
-        "advice": "Les deux marquent (BTTS)",
+        "goals_conf": 56,
+        "confidence": 62,
+        "advice": "Victoire Lille",
         "probs": {
-          "1": 0.532,
-          "N": 0.226,
-          "2": 0.242
+          "1": 0.622,
+          "N": 0.202,
+          "2": 0.176
         }
       }
     },
@@ -2423,17 +2423,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
+        "score_conf": 11,
         "winner": "Lorient",
         "winner_conf": 48,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 63,
+        "goals_conf": 59,
         "confidence": 48,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.486,
-          "N": 0.228,
-          "2": 0.286
+          "1": 0.482,
+          "N": 0.25,
+          "2": 0.268
         }
       }
     },
@@ -2446,18 +2446,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "3-0",
-        "score_conf": 10,
+        "score": "1-0",
+        "score_conf": 11,
         "winner": "Marseille",
         "winner_conf": 71,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 64,
+        "goals_conf": 60,
         "confidence": 71,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.718,
-          "N": 0.186,
-          "2": 0.096
+          "1": 0.716,
+          "N": 0.178,
+          "2": 0.106
         }
       }
     },
@@ -2470,18 +2470,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 10,
+        "score": "1-1",
+        "score_conf": 8,
         "winner": "Monaco",
-        "winner_conf": 53,
+        "winner_conf": 50,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 70,
-        "confidence": 53,
+        "goals_conf": 69,
+        "confidence": 50,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.536,
-          "N": 0.194,
-          "2": 0.27
+          "1": 0.508,
+          "N": 0.202,
+          "2": 0.29
         }
       }
     },
@@ -2495,17 +2495,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 14,
         "winner": "Nice",
-        "winner_conf": 47,
-        "goals_pred": "+2.5 Buts",
+        "winner_conf": 44,
+        "goals_pred": "-2.5 Buts",
         "goals_conf": 51,
-        "confidence": 47,
+        "confidence": 44,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.476,
-          "N": 0.262,
-          "2": 0.262
+          "1": 0.446,
+          "N": 0.286,
+          "2": 0.268
         }
       }
     },
@@ -2518,18 +2518,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
+        "score": "4-0",
         "score_conf": 9,
         "winner": "PSG",
-        "winner_conf": 87,
+        "winner_conf": 88,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 80,
-        "confidence": 87,
+        "confidence": 88,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.878,
-          "N": 0.07,
-          "2": 0.052
+          "1": 0.884,
+          "N": 0.078,
+          "2": 0.038
         }
       }
     },
@@ -2542,18 +2542,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 14,
+        "score": "0-1",
+        "score_conf": 13,
         "winner": "Lens",
-        "winner_conf": 38,
+        "winner_conf": 36,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 38,
+        "goals_conf": 62,
+        "confidence": 36,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.316,
-          "N": 0.304,
-          "2": 0.38
+          "1": 0.348,
+          "N": 0.286,
+          "2": 0.366
         }
       }
     },
@@ -2566,18 +2566,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 11,
+        "score": "0-2",
+        "score_conf": 13,
         "winner": "Marseille",
-        "winner_conf": 58,
+        "winner_conf": 59,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 53,
-        "confidence": 58,
+        "confidence": 59,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.198,
-          "N": 0.218,
-          "2": 0.584
+          "1": 0.188,
+          "N": 0.214,
+          "2": 0.598
         }
       }
     },
@@ -2593,15 +2593,15 @@
         "score": "1-1",
         "score_conf": 12,
         "winner": "Lens",
-        "winner_conf": 52,
+        "winner_conf": 51,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 51,
-        "confidence": 52,
+        "goals_conf": 54,
+        "confidence": 51,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.526,
-          "N": 0.274,
-          "2": 0.2
+          "1": 0.516,
+          "N": 0.24,
+          "2": 0.244
         }
       }
     },
@@ -2617,15 +2617,15 @@
         "score": "1-1",
         "score_conf": 9,
         "winner": "Lyon",
-        "winner_conf": 46,
+        "winner_conf": 44,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 67,
-        "confidence": 46,
+        "goals_conf": 62,
+        "confidence": 44,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.462,
-          "N": 0.222,
-          "2": 0.316
+          "1": 0.446,
+          "N": 0.218,
+          "2": 0.336
         }
       }
     },
@@ -2639,17 +2639,17 @@
       "score": null,
       "prediction": {
         "score": "3-0",
-        "score_conf": 11,
+        "score_conf": 8,
         "winner": "Monaco",
-        "winner_conf": 72,
+        "winner_conf": 73,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 76,
-        "confidence": 72,
+        "goals_conf": 77,
+        "confidence": 73,
         "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.72,
-          "N": 0.132,
-          "2": 0.148
+          "1": 0.734,
+          "N": 0.114,
+          "2": 0.152
         }
       }
     },
@@ -2663,17 +2663,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
-        "winner": "Paris FC",
-        "winner_conf": 40,
+        "score_conf": 11,
+        "winner": "Nantes",
+        "winner_conf": 39,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 40,
+        "goals_conf": 53,
+        "confidence": 39,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.398,
-          "N": 0.202,
-          "2": 0.4
+          "1": 0.39,
+          "N": 0.246,
+          "2": 0.364
         }
       }
     },
@@ -2687,17 +2687,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 10,
         "winner": "PSG",
-        "winner_conf": 61,
+        "winner_conf": 59,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 61,
-        "advice": "Victoire PSG",
+        "goals_conf": 61,
+        "confidence": 59,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.618,
-          "N": 0.216,
-          "2": 0.166
+          "1": 0.598,
+          "N": 0.228,
+          "2": 0.174
         }
       }
     },
@@ -2711,17 +2711,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 12,
+        "score_conf": 13,
         "winner": "Rennes",
-        "winner_conf": 59,
+        "winner_conf": 57,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 56,
-        "confidence": 59,
+        "confidence": 57,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.59,
-          "N": 0.244,
-          "2": 0.166
+          "1": 0.572,
+          "N": 0.26,
+          "2": 0.168
         }
       }
     },
@@ -2735,17 +2735,17 @@
       "score": null,
       "prediction": {
         "score": "2-0",
-        "score_conf": 11,
+        "score_conf": 10,
         "winner": "Strasbourg",
-        "winner_conf": 67,
+        "winner_conf": 62,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 60,
-        "confidence": 67,
+        "goals_conf": 63,
+        "confidence": 62,
         "advice": "Victoire Strasbourg",
         "probs": {
-          "1": 0.67,
-          "N": 0.182,
-          "2": 0.148
+          "1": 0.622,
+          "N": 0.212,
+          "2": 0.166
         }
       }
     },
@@ -2759,17 +2759,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
-        "winner": "Toulouse",
+        "score_conf": 15,
+        "winner": "Nice",
         "winner_conf": 37,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 52,
+        "goals_conf": 54,
         "confidence": 37,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.372,
-          "N": 0.256,
-          "2": 0.372
+          "1": 0.316,
+          "N": 0.31,
+          "2": 0.374
         }
       }
     },
@@ -2782,18 +2782,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-2",
-        "score_conf": 12,
+        "score": "0-3",
+        "score_conf": 8,
         "winner": "PSG",
-        "winner_conf": 74,
+        "winner_conf": 71,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 69,
-        "confidence": 74,
+        "confidence": 71,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.12,
-          "N": 0.134,
-          "2": 0.746
+          "1": 0.112,
+          "N": 0.174,
+          "2": 0.714
         }
       }
     },
@@ -2809,15 +2809,15 @@
         "score": "1-1",
         "score_conf": 10,
         "winner": "Brest",
-        "winner_conf": 38,
+        "winner_conf": 43,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 54,
-        "confidence": 38,
+        "goals_conf": 57,
+        "confidence": 43,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.388,
-          "N": 0.29,
-          "2": 0.322
+          "1": 0.434,
+          "N": 0.238,
+          "2": 0.328
         }
       }
     },
@@ -2830,18 +2830,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
-        "score_conf": 10,
+        "score": "1-1",
+        "score_conf": 11,
         "winner": "Monaco",
         "winner_conf": 61,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
+        "goals_conf": 61,
         "confidence": 61,
         "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.194,
-          "N": 0.194,
-          "2": 0.612
+          "1": 0.17,
+          "N": 0.216,
+          "2": 0.614
         }
       }
     },
@@ -2855,17 +2855,17 @@
       "score": null,
       "prediction": {
         "score": "2-0",
-        "score_conf": 12,
+        "score_conf": 14,
         "winner": "Lille",
-        "winner_conf": 58,
-        "goals_pred": "+2.5 Buts",
-        "goals_conf": 51,
-        "confidence": 58,
+        "winner_conf": 52,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 52,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.588,
-          "N": 0.224,
-          "2": 0.188
+          "1": 0.528,
+          "N": 0.256,
+          "2": 0.216
         }
       }
     },
@@ -2878,18 +2878,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 15,
+        "score": "1-0",
+        "score_conf": 11,
         "winner": "Marseille",
-        "winner_conf": 44,
+        "winner_conf": 51,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 54,
-        "confidence": 44,
+        "confidence": 51,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.446,
-          "N": 0.29,
-          "2": 0.264
+          "1": 0.518,
+          "N": 0.248,
+          "2": 0.234
         }
       }
     },
@@ -2902,18 +2902,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
+        "score": "0-2",
         "score_conf": 10,
         "winner": "Lyon",
-        "winner_conf": 61,
+        "winner_conf": 56,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 61,
-        "advice": "Victoire Lyon",
+        "goals_conf": 61,
+        "confidence": 56,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.182,
-          "N": 0.206,
-          "2": 0.612
+          "1": 0.216,
+          "N": 0.218,
+          "2": 0.566
         }
       }
     },
@@ -2926,18 +2926,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 12,
+        "score": "0-1",
+        "score_conf": 14,
         "winner": "Nice",
-        "winner_conf": 53,
+        "winner_conf": 56,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 51,
-        "confidence": 53,
+        "goals_conf": 54,
+        "confidence": 56,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.208,
-          "N": 0.254,
-          "2": 0.538
+          "1": 0.204,
+          "N": 0.232,
+          "2": 0.564
         }
       }
     },
@@ -2950,18 +2950,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
-        "score_conf": 10,
+        "score": "1-1",
+        "score_conf": 13,
         "winner": "Paris FC",
-        "winner_conf": 43,
+        "winner_conf": 40,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 50,
-        "confidence": 43,
+        "goals_conf": 54,
+        "confidence": 40,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.438,
-          "N": 0.234,
-          "2": 0.328
+          "1": 0.408,
+          "N": 0.286,
+          "2": 0.306
         }
       }
     },
@@ -2974,18 +2974,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 11,
+        "score": "1-0",
+        "score_conf": 8,
         "winner": "Rennes",
-        "winner_conf": 64,
+        "winner_conf": 63,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 70,
-        "confidence": 64,
+        "goals_conf": 69,
+        "confidence": 63,
         "advice": "Victoire Rennes",
         "probs": {
-          "1": 0.64,
-          "N": 0.16,
-          "2": 0.2
+          "1": 0.634,
+          "N": 0.184,
+          "2": 0.182
         }
       }
     },
@@ -2999,17 +2999,17 @@
       "score": null,
       "prediction": {
         "score": "1-0",
-        "score_conf": 14,
+        "score_conf": 10,
         "winner": "Angers",
-        "winner_conf": 49,
+        "winner_conf": 50,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 49,
+        "goals_conf": 52,
+        "confidence": 50,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.492,
-          "N": 0.272,
-          "2": 0.236
+          "1": 0.5,
+          "N": 0.252,
+          "2": 0.248
         }
       }
     },
@@ -3022,18 +3022,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
+        "score": "1-0",
         "score_conf": 14,
         "winner": "Lens",
-        "winner_conf": 65,
+        "winner_conf": 62,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 52,
-        "confidence": 65,
+        "goals_conf": 51,
+        "confidence": 62,
         "advice": "Victoire Lens",
         "probs": {
-          "1": 0.652,
-          "N": 0.214,
-          "2": 0.134
+          "1": 0.624,
+          "N": 0.192,
+          "2": 0.184
         }
       }
     },
@@ -3047,17 +3047,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
+        "score_conf": 13,
         "winner": "Lorient",
-        "winner_conf": 41,
+        "winner_conf": 44,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 58,
-        "confidence": 41,
+        "goals_conf": 55,
+        "confidence": 44,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.41,
-          "N": 0.238,
-          "2": 0.352
+          "1": 0.442,
+          "N": 0.24,
+          "2": 0.318
         }
       }
     },
@@ -3071,17 +3071,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 12,
         "winner": "Lille",
-        "winner_conf": 42,
+        "winner_conf": 41,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 42,
+        "goals_conf": 53,
+        "confidence": 41,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
           "1": 0.324,
-          "N": 0.248,
-          "2": 0.428
+          "N": 0.264,
+          "2": 0.412
         }
       }
     },
@@ -3094,17 +3094,17 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 10,
+        "score": "1-1",
+        "score_conf": 9,
         "winner": "Monaco",
-        "winner_conf": 50,
+        "winner_conf": 54,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 66,
-        "confidence": 50,
+        "goals_conf": 67,
+        "confidence": 54,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.508,
-          "N": 0.24,
+          "1": 0.548,
+          "N": 0.2,
           "2": 0.252
         }
       }
@@ -3118,18 +3118,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 12,
+        "score": "1-0",
+        "score_conf": 11,
         "winner": "Nice",
-        "winner_conf": 48,
+        "winner_conf": 50,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 55,
-        "confidence": 48,
+        "confidence": 50,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.488,
-          "N": 0.23,
-          "2": 0.282
+          "1": 0.502,
+          "N": 0.236,
+          "2": 0.262
         }
       }
     },
@@ -3142,18 +3142,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
+        "score": "1-3",
         "score_conf": 8,
         "winner": "Marseille",
-        "winner_conf": 61,
+        "winner_conf": 66,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 72,
-        "confidence": 61,
+        "goals_conf": 71,
+        "confidence": 66,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.214,
-          "N": 0.176,
-          "2": 0.61
+          "1": 0.178,
+          "N": 0.16,
+          "2": 0.662
         }
       }
     },
@@ -3166,18 +3166,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 9,
+        "score": "0-2",
+        "score_conf": 10,
         "winner": "PSG",
-        "winner_conf": 64,
+        "winner_conf": 67,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 65,
-        "confidence": 64,
+        "goals_conf": 66,
+        "confidence": 67,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.168,
-          "N": 0.186,
-          "2": 0.646
+          "1": 0.132,
+          "N": 0.194,
+          "2": 0.674
         }
       }
     },
@@ -3190,18 +3190,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "2-1",
         "score_conf": 11,
         "winner": "Toulouse",
-        "winner_conf": 47,
-        "goals_pred": "-2.5 Buts",
-        "goals_conf": 51,
-        "confidence": 47,
+        "winner_conf": 52,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 52,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.478,
-          "N": 0.232,
-          "2": 0.29
+          "1": 0.524,
+          "N": 0.218,
+          "2": 0.258
         }
       }
     },
@@ -3215,17 +3215,17 @@
       "score": null,
       "prediction": {
         "score": "0-1",
-        "score_conf": 12,
+        "score_conf": 15,
         "winner": "Toulouse",
-        "winner_conf": 44,
+        "winner_conf": 46,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 55,
-        "confidence": 44,
+        "goals_conf": 61,
+        "confidence": 46,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.298,
+          "1": 0.274,
           "N": 0.258,
-          "2": 0.444
+          "2": 0.468
         }
       }
     },
@@ -3238,18 +3238,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 8,
+        "score": "1-1",
+        "score_conf": 11,
         "winner": "Auxerre",
-        "winner_conf": 48,
+        "winner_conf": 49,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 65,
-        "confidence": 48,
+        "goals_conf": 61,
+        "confidence": 49,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.488,
-          "N": 0.218,
-          "2": 0.294
+          "1": 0.496,
+          "N": 0.216,
+          "2": 0.288
         }
       }
     },
@@ -3262,18 +3262,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 12,
+        "score": "1-1",
+        "score_conf": 8,
         "winner": "Brest",
-        "winner_conf": 62,
+        "winner_conf": 57,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 68,
-        "confidence": 62,
-        "advice": "Victoire Brest",
+        "goals_conf": 66,
+        "confidence": 57,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.628,
-          "N": 0.194,
-          "2": 0.178
+          "1": 0.576,
+          "N": 0.236,
+          "2": 0.188
         }
       }
     },
@@ -3286,18 +3286,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 12,
+        "score": "1-1",
+        "score_conf": 14,
         "winner": "Strasbourg",
-        "winner_conf": 49,
+        "winner_conf": 51,
         "goals_pred": "-2.5 Buts",
         "goals_conf": 50,
-        "confidence": 49,
+        "confidence": 51,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.254,
-          "N": 0.256,
-          "2": 0.49
+          "1": 0.228,
+          "N": 0.26,
+          "2": 0.512
         }
       }
     },
@@ -3311,17 +3311,17 @@
       "score": null,
       "prediction": {
         "score": "1-0",
-        "score_conf": 13,
+        "score_conf": 11,
         "winner": "Lens",
-        "winner_conf": 47,
-        "goals_pred": "-2.5 Buts",
-        "goals_conf": 52,
-        "confidence": 47,
+        "winner_conf": 45,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.472,
-          "N": 0.262,
-          "2": 0.266
+          "1": 0.45,
+          "N": 0.228,
+          "2": 0.322
         }
       }
     },
@@ -3334,18 +3334,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
-        "score_conf": 11,
+        "score": "0-2",
+        "score_conf": 12,
         "winner": "Lille",
-        "winner_conf": 65,
+        "winner_conf": 63,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 65,
+        "goals_conf": 58,
+        "confidence": 63,
         "advice": "Victoire Lille",
         "probs": {
-          "1": 0.172,
-          "N": 0.178,
-          "2": 0.65
+          "1": 0.15,
+          "N": 0.216,
+          "2": 0.634
         }
       }
     },
@@ -3358,18 +3358,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 9,
+        "score": "1-1",
+        "score_conf": 11,
         "winner": "Lyon",
-        "winner_conf": 50,
+        "winner_conf": 54,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 58,
-        "confidence": 50,
+        "goals_conf": 51,
+        "confidence": 54,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.266,
-          "N": 0.226,
-          "2": 0.508
+          "1": 0.228,
+          "N": 0.23,
+          "2": 0.542
         }
       }
     },
@@ -3383,17 +3383,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
-        "winner": "Monaco",
-        "winner_conf": 39,
+        "score_conf": 9,
+        "winner": "Nice",
+        "winner_conf": 38,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 60,
-        "confidence": 39,
+        "goals_conf": 58,
+        "confidence": 38,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.37,
-          "N": 0.238,
-          "2": 0.392
+          "1": 0.386,
+          "N": 0.234,
+          "2": 0.38
         }
       }
     },
@@ -3409,15 +3409,15 @@
         "score": "2-1",
         "score_conf": 9,
         "winner": "PSG",
-        "winner_conf": 59,
+        "winner_conf": 66,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 73,
-        "confidence": 59,
-        "advice": "+2.5 Buts",
+        "goals_conf": 72,
+        "confidence": 66,
+        "advice": "Victoire PSG",
         "probs": {
-          "1": 0.59,
-          "N": 0.184,
-          "2": 0.226
+          "1": 0.666,
+          "N": 0.172,
+          "2": 0.162
         }
       }
     },
@@ -3431,17 +3431,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 12,
+        "score_conf": 14,
         "winner": "Toulouse",
-        "winner_conf": 48,
-        "goals_pred": "+2.5 Buts",
+        "winner_conf": 47,
+        "goals_pred": "-2.5 Buts",
         "goals_conf": 50,
-        "confidence": 48,
+        "confidence": 47,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.238,
-          "N": 0.282,
-          "2": 0.48
+          "1": 0.248,
+          "N": 0.276,
+          "2": 0.476
         }
       }
     },
@@ -3454,18 +3454,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 10,
+        "score": "2-1",
+        "score_conf": 12,
         "winner": "Lille",
-        "winner_conf": 52,
+        "winner_conf": 53,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 54,
-        "confidence": 52,
+        "goals_conf": 59,
+        "confidence": 53,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.52,
-          "N": 0.234,
-          "2": 0.246
+          "1": 0.536,
+          "N": 0.238,
+          "2": 0.226
         }
       }
     },
@@ -3479,17 +3479,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 12,
         "winner": "Lorient",
-        "winner_conf": 37,
-        "goals_pred": "-2.5 Buts",
-        "goals_conf": 53,
-        "confidence": 37,
+        "winner_conf": 41,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 41,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.374,
-          "N": 0.268,
-          "2": 0.358
+          "1": 0.41,
+          "N": 0.28,
+          "2": 0.31
         }
       }
     },
@@ -3505,15 +3505,15 @@
         "score": "1-1",
         "score_conf": 12,
         "winner": "Lyon",
-        "winner_conf": 41,
+        "winner_conf": 42,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 41,
+        "goals_conf": 56,
+        "confidence": 42,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.41,
-          "N": 0.25,
-          "2": 0.34
+          "1": 0.426,
+          "N": 0.24,
+          "2": 0.334
         }
       }
     },
@@ -3527,17 +3527,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 9,
         "winner": "Marseille",
-        "winner_conf": 56,
+        "winner_conf": 59,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 61,
-        "confidence": 56,
+        "goals_conf": 63,
+        "confidence": 59,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.56,
-          "N": 0.216,
-          "2": 0.224
+          "1": 0.596,
+          "N": 0.208,
+          "2": 0.196
         }
       }
     },
@@ -3551,17 +3551,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 12,
+        "score_conf": 13,
         "winner": "Auxerre",
-        "winner_conf": 41,
+        "winner_conf": 46,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 41,
+        "goals_conf": 52,
+        "confidence": 46,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.31,
-          "N": 0.276,
-          "2": 0.414
+          "1": 0.268,
+          "N": 0.27,
+          "2": 0.462
         }
       }
     },
@@ -3575,17 +3575,17 @@
       "score": null,
       "prediction": {
         "score": "2-0",
-        "score_conf": 10,
+        "score_conf": 11,
         "winner": "Monaco",
-        "winner_conf": 66,
+        "winner_conf": 73,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 66,
+        "goals_conf": 63,
+        "confidence": 73,
         "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.66,
-          "N": 0.202,
-          "2": 0.138
+          "1": 0.732,
+          "N": 0.154,
+          "2": 0.114
         }
       }
     },
@@ -3598,18 +3598,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 11,
+        "score": "1-1",
+        "score_conf": 13,
         "winner": "Lens",
         "winner_conf": 52,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 50,
+        "goals_conf": 52,
         "confidence": 52,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.234,
-          "N": 0.242,
-          "2": 0.524
+          "1": 0.21,
+          "N": 0.268,
+          "2": 0.522
         }
       }
     },
@@ -3623,17 +3623,17 @@
       "score": null,
       "prediction": {
         "score": "1-2",
-        "score_conf": 9,
+        "score_conf": 10,
         "winner": "PSG",
-        "winner_conf": 65,
+        "winner_conf": 66,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 71,
-        "confidence": 65,
+        "goals_conf": 72,
+        "confidence": 66,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.148,
-          "N": 0.202,
-          "2": 0.65
+          "1": 0.16,
+          "N": 0.178,
+          "2": 0.662
         }
       }
     },
@@ -3647,17 +3647,17 @@
       "score": null,
       "prediction": {
         "score": "0-1",
-        "score_conf": 14,
+        "score_conf": 17,
         "winner": "Lille",
-        "winner_conf": 56,
+        "winner_conf": 58,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 55,
-        "confidence": 56,
+        "goals_conf": 53,
+        "confidence": 58,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.19,
-          "N": 0.244,
-          "2": 0.566
+          "1": 0.202,
+          "N": 0.21,
+          "2": 0.588
         }
       }
     },
@@ -3671,17 +3671,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 12,
         "winner": "Rennes",
-        "winner_conf": 43,
+        "winner_conf": 38,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 57,
-        "confidence": 43,
+        "confidence": 38,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.298,
-          "N": 0.268,
-          "2": 0.434
+          "1": 0.362,
+          "N": 0.258,
+          "2": 0.38
         }
       }
     },
@@ -3695,17 +3695,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
+        "score_conf": 8,
         "winner": "Marseille",
-        "winner_conf": 51,
+        "winner_conf": 49,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 65,
-        "confidence": 51,
+        "confidence": 49,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.276,
+          "1": 0.294,
           "N": 0.21,
-          "2": 0.514
+          "2": 0.496
         }
       }
     },
@@ -3719,17 +3719,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 12,
+        "score_conf": 13,
         "winner": "Monaco",
-        "winner_conf": 37,
-        "goals_pred": "-2.5 Buts",
-        "goals_conf": 50,
-        "confidence": 37,
+        "winner_conf": 41,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 41,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.37,
-          "N": 0.256,
-          "2": 0.374
+          "1": 0.334,
+          "N": 0.252,
+          "2": 0.414
         }
       }
     },
@@ -3743,17 +3743,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 14,
-        "winner": "Le Havre",
-        "winner_conf": 38,
+        "score_conf": 11,
+        "winner": "Nantes",
+        "winner_conf": 39,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 38,
+        "goals_conf": 53,
+        "confidence": 39,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.37,
-          "N": 0.246,
-          "2": 0.384
+          "1": 0.396,
+          "N": 0.292,
+          "2": 0.312
         }
       }
     },
@@ -3767,17 +3767,17 @@
       "score": null,
       "prediction": {
         "score": "1-0",
-        "score_conf": 9,
+        "score_conf": 10,
         "winner": "Nice",
-        "winner_conf": 67,
+        "winner_conf": 63,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 63,
-        "confidence": 67,
+        "goals_conf": 59,
+        "confidence": 63,
         "advice": "Victoire Nice",
         "probs": {
-          "1": 0.678,
-          "N": 0.162,
-          "2": 0.16
+          "1": 0.636,
+          "N": 0.19,
+          "2": 0.174
         }
       }
     },
@@ -3790,18 +3790,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "3-0",
-        "score_conf": 13,
+        "score": "5-0",
+        "score_conf": 8,
         "winner": "PSG",
-        "winner_conf": 91,
+        "winner_conf": 88,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 82,
-        "confidence": 91,
+        "confidence": 88,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.912,
-          "N": 0.056,
-          "2": 0.032
+          "1": 0.886,
+          "N": 0.088,
+          "2": 0.026
         }
       }
     },
@@ -3815,17 +3815,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
-        "winner": "Lyon",
-        "winner_conf": 39,
+        "score_conf": 11,
+        "winner": "Strasbourg",
+        "winner_conf": 41,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 61,
-        "confidence": 39,
+        "confidence": 41,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.356,
-          "N": 0.25,
-          "2": 0.394
+          "1": 0.41,
+          "N": 0.234,
+          "2": 0.356
         }
       }
     },
@@ -3838,18 +3838,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 11,
+        "score": "1-1",
+        "score_conf": 10,
         "winner": "Toulouse",
-        "winner_conf": 56,
+        "winner_conf": 53,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 56,
+        "goals_conf": 59,
+        "confidence": 53,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.56,
-          "N": 0.21,
-          "2": 0.23
+          "1": 0.534,
+          "N": 0.216,
+          "2": 0.25
         }
       }
     },
@@ -3863,17 +3863,17 @@
       "score": null,
       "prediction": {
         "score": "0-2",
-        "score_conf": 12,
+        "score_conf": 9,
         "winner": "PSG",
-        "winner_conf": 79,
+        "winner_conf": 80,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 68,
-        "confidence": 79,
+        "goals_conf": 72,
+        "confidence": 80,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.074,
-          "N": 0.128,
-          "2": 0.798
+          "1": 0.086,
+          "N": 0.11,
+          "2": 0.804
         }
       }
     },
@@ -3887,17 +3887,17 @@
       "score": null,
       "prediction": {
         "score": "1-0",
-        "score_conf": 13,
+        "score_conf": 14,
         "winner": "Lille",
-        "winner_conf": 67,
+        "winner_conf": 68,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 53,
-        "confidence": 67,
+        "goals_conf": 52,
+        "confidence": 68,
         "advice": "Victoire Lille",
         "probs": {
-          "1": 0.67,
-          "N": 0.23,
-          "2": 0.1
+          "1": 0.682,
+          "N": 0.2,
+          "2": 0.118
         }
       }
     },
@@ -3910,18 +3910,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
-        "score_conf": 11,
-        "winner": "Auxerre",
-        "winner_conf": 41,
+        "score": "1-1",
+        "score_conf": 10,
+        "winner": "Lorient",
+        "winner_conf": 39,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 41,
+        "goals_conf": 61,
+        "confidence": 39,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.352,
-          "N": 0.23,
-          "2": 0.418
+          "1": 0.39,
+          "N": 0.232,
+          "2": 0.378
         }
       }
     },
@@ -3934,18 +3934,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 9,
+        "score": "2-1",
+        "score_conf": 10,
         "winner": "Marseille",
-        "winner_conf": 55,
+        "winner_conf": 51,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 68,
-        "confidence": 55,
+        "goals_conf": 70,
+        "confidence": 51,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.558,
-          "N": 0.196,
-          "2": 0.246
+          "1": 0.51,
+          "N": 0.22,
+          "2": 0.27
         }
       }
     },
@@ -3961,15 +3961,15 @@
         "score": "1-2",
         "score_conf": 11,
         "winner": "Brest",
-        "winner_conf": 59,
+        "winner_conf": 55,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 64,
-        "confidence": 59,
+        "goals_conf": 59,
+        "confidence": 55,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.204,
-          "N": 0.202,
-          "2": 0.594
+          "1": 0.256,
+          "N": 0.188,
+          "2": 0.556
         }
       }
     },
@@ -3982,8 +3982,8 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 11,
+        "score": "2-0",
+        "score_conf": 12,
         "winner": "Monaco",
         "winner_conf": 67,
         "goals_pred": "+2.5 Buts",
@@ -3991,9 +3991,9 @@
         "confidence": 67,
         "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.674,
-          "N": 0.19,
-          "2": 0.136
+          "1": 0.67,
+          "N": 0.198,
+          "2": 0.132
         }
       }
     },
@@ -4007,17 +4007,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
+        "score_conf": 12,
         "winner": "Nice",
-        "winner_conf": 52,
+        "winner_conf": 54,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 52,
+        "goals_conf": 60,
+        "confidence": 54,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.262,
-          "N": 0.216,
-          "2": 0.522
+          "1": 0.236,
+          "N": 0.222,
+          "2": 0.542
         }
       }
     },
@@ -4031,17 +4031,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 12,
         "winner": "Rennes",
-        "winner_conf": 45,
+        "winner_conf": 44,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 52,
-        "confidence": 45,
+        "goals_conf": 50,
+        "confidence": 44,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.45,
-          "N": 0.244,
-          "2": 0.306
+          "1": 0.442,
+          "N": 0.254,
+          "2": 0.304
         }
       }
     },
@@ -4055,17 +4055,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 14,
-        "winner": "Lens",
-        "winner_conf": 38,
+        "score_conf": 17,
+        "winner": "Strasbourg",
+        "winner_conf": 36,
         "goals_pred": "-2.5 Buts",
         "goals_conf": 54,
-        "confidence": 38,
+        "confidence": 36,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.306,
-          "N": 0.31,
-          "2": 0.384
+          "1": 0.36,
+          "N": 0.292,
+          "2": 0.348
         }
       }
     },
@@ -4078,18 +4078,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 10,
+        "score": "1-1",
+        "score_conf": 14,
         "winner": "Strasbourg",
-        "winner_conf": 38,
-        "goals_pred": "+2.5 Buts",
-        "goals_conf": 55,
-        "confidence": 38,
+        "winner_conf": 40,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 40,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.37,
-          "N": 0.248,
-          "2": 0.382
+          "1": 0.31,
+          "N": 0.284,
+          "2": 0.406
         }
       }
     },
@@ -4102,18 +4102,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
+        "score": "1-1",
         "score_conf": 10,
         "winner": "Brest",
-        "winner_conf": 61,
+        "winner_conf": 59,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 60,
-        "confidence": 61,
-        "advice": "Victoire Brest",
+        "goals_conf": 55,
+        "confidence": 59,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.614,
-          "N": 0.204,
-          "2": 0.182
+          "1": 0.596,
+          "N": 0.202,
+          "2": 0.202
         }
       }
     },
@@ -4127,17 +4127,17 @@
       "score": null,
       "prediction": {
         "score": "2-0",
-        "score_conf": 11,
+        "score_conf": 13,
         "winner": "Lens",
-        "winner_conf": 67,
+        "winner_conf": 65,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 67,
+        "goals_conf": 52,
+        "confidence": 65,
         "advice": "Victoire Lens",
         "probs": {
-          "1": 0.672,
-          "N": 0.198,
-          "2": 0.13
+          "1": 0.658,
+          "N": 0.184,
+          "2": 0.158
         }
       }
     },
@@ -4151,17 +4151,17 @@
       "score": null,
       "prediction": {
         "score": "2-1",
-        "score_conf": 13,
+        "score_conf": 12,
         "winner": "Lille",
-        "winner_conf": 72,
+        "winner_conf": 71,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 68,
-        "confidence": 72,
+        "goals_conf": 69,
+        "confidence": 71,
         "advice": "Victoire Lille",
         "probs": {
-          "1": 0.722,
-          "N": 0.156,
-          "2": 0.122
+          "1": 0.718,
+          "N": 0.166,
+          "2": 0.116
         }
       }
     },
@@ -4174,18 +4174,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 10,
+        "score": "1-0",
+        "score_conf": 8,
         "winner": "Lyon",
-        "winner_conf": 62,
+        "winner_conf": 63,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 71,
-        "confidence": 62,
+        "goals_conf": 70,
+        "confidence": 63,
         "advice": "Victoire Lyon",
         "probs": {
-          "1": 0.628,
-          "N": 0.188,
-          "2": 0.184
+          "1": 0.634,
+          "N": 0.158,
+          "2": 0.208
         }
       }
     },
@@ -4198,18 +4198,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 12,
+        "score": "1-1",
+        "score_conf": 15,
         "winner": "Nantes",
-        "winner_conf": 37,
+        "winner_conf": 36,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 37,
+        "goals_conf": 66,
+        "confidence": 36,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.378,
-          "N": 0.248,
-          "2": 0.374
+          "1": 0.36,
+          "N": 0.316,
+          "2": 0.324
         }
       }
     },
@@ -4223,17 +4223,17 @@
       "score": null,
       "prediction": {
         "score": "2-1",
-        "score_conf": 10,
+        "score_conf": 11,
         "winner": "Nice",
-        "winner_conf": 48,
+        "winner_conf": 51,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 48,
+        "goals_conf": 58,
+        "confidence": 51,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.482,
-          "N": 0.242,
-          "2": 0.276
+          "1": 0.516,
+          "N": 0.2,
+          "2": 0.284
         }
       }
     },
@@ -4246,18 +4246,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 8,
+        "score": "2-0",
+        "score_conf": 9,
         "winner": "PSG",
-        "winner_conf": 63,
+        "winner_conf": 68,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 74,
-        "confidence": 63,
+        "goals_conf": 72,
+        "confidence": 68,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.638,
-          "N": 0.172,
-          "2": 0.19
+          "1": 0.684,
+          "N": 0.162,
+          "2": 0.154
         }
       }
     },
@@ -4270,18 +4270,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
-        "score_conf": 11,
+        "score": "1-1",
+        "score_conf": 12,
         "winner": "Marseille",
-        "winner_conf": 52,
+        "winner_conf": 46,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 52,
+        "goals_conf": 56,
+        "confidence": 46,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.252,
-          "N": 0.226,
-          "2": 0.522
+          "1": 0.258,
+          "N": 0.278,
+          "2": 0.464
         }
       }
     },
@@ -4295,17 +4295,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 14,
+        "score_conf": 12,
         "winner": "Nice",
-        "winner_conf": 45,
+        "winner_conf": 49,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 45,
+        "goals_conf": 56,
+        "confidence": 49,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.246,
-          "N": 0.3,
-          "2": 0.454
+          "1": 0.228,
+          "N": 0.28,
+          "2": 0.492
         }
       }
     },
@@ -4318,8 +4318,8 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 10,
+        "score": "1-1",
+        "score_conf": 11,
         "winner": "Lyon",
         "winner_conf": 54,
         "goals_pred": "+2.5 Buts",
@@ -4327,9 +4327,9 @@
         "confidence": 54,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.232,
-          "N": 0.22,
-          "2": 0.548
+          "1": 0.224,
+          "N": 0.232,
+          "2": 0.544
         }
       }
     },
@@ -4343,17 +4343,17 @@
       "score": null,
       "prediction": {
         "score": "0-1",
-        "score_conf": 9,
+        "score_conf": 12,
         "winner": "Lens",
-        "winner_conf": 55,
+        "winner_conf": 58,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 55,
+        "goals_conf": 54,
+        "confidence": 58,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.24,
-          "N": 0.206,
-          "2": 0.554
+          "1": 0.19,
+          "N": 0.224,
+          "2": 0.586
         }
       }
     },
@@ -4369,15 +4369,15 @@
         "score": "2-1",
         "score_conf": 11,
         "winner": "Marseille",
-        "winner_conf": 67,
+        "winner_conf": 68,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 63,
-        "confidence": 67,
+        "confidence": 68,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.678,
-          "N": 0.172,
-          "2": 0.15
+          "1": 0.682,
+          "N": 0.152,
+          "2": 0.166
         }
       }
     },
@@ -4391,17 +4391,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 12,
         "winner": "Toulouse",
-        "winner_conf": 53,
-        "goals_pred": "+2.5 Buts",
-        "goals_conf": 52,
-        "confidence": 53,
+        "winner_conf": 47,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 47,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.206,
-          "N": 0.26,
-          "2": 0.534
+          "1": 0.29,
+          "N": 0.236,
+          "2": 0.474
         }
       }
     },
@@ -4414,18 +4414,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 8,
+        "score": "1-1",
+        "score_conf": 9,
         "winner": "Monaco",
-        "winner_conf": 58,
+        "winner_conf": 52,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 70,
-        "confidence": 58,
+        "goals_conf": 69,
+        "confidence": 52,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.586,
-          "N": 0.162,
-          "2": 0.252
+          "1": 0.526,
+          "N": 0.242,
+          "2": 0.232
         }
       }
     },
@@ -4438,17 +4438,17 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
+        "score": "3-0",
         "score_conf": 12,
         "winner": "PSG",
-        "winner_conf": 83,
+        "winner_conf": 86,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 67,
-        "confidence": 83,
+        "goals_conf": 74,
+        "confidence": 86,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.83,
-          "N": 0.126,
+          "1": 0.862,
+          "N": 0.094,
           "2": 0.044
         }
       }
@@ -4463,17 +4463,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
+        "score_conf": 12,
         "winner": "Lille",
-        "winner_conf": 44,
+        "winner_conf": 45,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 44,
+        "goals_conf": 59,
+        "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.33,
-          "N": 0.222,
-          "2": 0.448
+          "1": 0.318,
+          "N": 0.232,
+          "2": 0.45
         }
       }
     },
@@ -4486,18 +4486,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 10,
+        "score": "2-0",
+        "score_conf": 9,
         "winner": "Strasbourg",
         "winner_conf": 58,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
+        "goals_conf": 64,
         "confidence": 58,
         "advice": "+2.5 Buts",
         "probs": {
           "1": 0.582,
-          "N": 0.216,
-          "2": 0.202
+          "N": 0.2,
+          "2": 0.218
         }
       }
     },
@@ -4511,17 +4511,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
-        "winner": "Auxerre",
-        "winner_conf": 38,
+        "score_conf": 11,
+        "winner": "Brest",
+        "winner_conf": 40,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 58,
-        "confidence": 38,
+        "goals_conf": 57,
+        "confidence": 40,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.38,
-          "N": 0.244,
-          "2": 0.376
+          "1": 0.334,
+          "N": 0.262,
+          "2": 0.404
         }
       }
     },
@@ -4537,15 +4537,15 @@
         "score": "1-0",
         "score_conf": 15,
         "winner": "Lens",
-        "winner_conf": 58,
+        "winner_conf": 57,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 63,
-        "confidence": 58,
+        "goals_conf": 58,
+        "confidence": 57,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.588,
-          "N": 0.256,
-          "2": 0.156
+          "1": 0.576,
+          "N": 0.246,
+          "2": 0.178
         }
       }
     },
@@ -4558,18 +4558,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
+        "score": "1-1",
         "score_conf": 10,
         "winner": "Monaco",
-        "winner_conf": 40,
+        "winner_conf": 42,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 69,
-        "confidence": 40,
+        "goals_conf": 68,
+        "confidence": 42,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.372,
+          "1": 0.356,
           "N": 0.222,
-          "2": 0.406
+          "2": 0.422
         }
       }
     },
@@ -4582,18 +4582,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 12,
+        "score": "1-0",
+        "score_conf": 11,
         "winner": "Marseille",
-        "winner_conf": 43,
+        "winner_conf": 44,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 56,
-        "confidence": 43,
+        "confidence": 44,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.432,
+          "1": 0.444,
           "N": 0.236,
-          "2": 0.332
+          "2": 0.32
         }
       }
     },
@@ -4607,17 +4607,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 10,
         "winner": "Strasbourg",
-        "winner_conf": 48,
-        "goals_pred": "-2.5 Buts",
-        "goals_conf": 52,
-        "confidence": 48,
+        "winner_conf": 50,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 51,
+        "confidence": 50,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.232,
-          "N": 0.282,
-          "2": 0.486
+          "1": 0.262,
+          "N": 0.236,
+          "2": 0.502
         }
       }
     },
@@ -4630,17 +4630,17 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "1-2",
         "score_conf": 11,
         "winner": "PSG",
         "winner_conf": 55,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
+        "goals_conf": 62,
         "confidence": 55,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.214,
-          "N": 0.232,
+          "1": 0.232,
+          "N": 0.214,
           "2": 0.554
         }
       }
@@ -4654,18 +4654,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 9,
+        "score": "1-1",
+        "score_conf": 11,
         "winner": "Paris FC",
-        "winner_conf": 43,
+        "winner_conf": 47,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 43,
+        "goals_conf": 59,
+        "confidence": 47,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.438,
-          "N": 0.202,
-          "2": 0.36
+          "1": 0.472,
+          "N": 0.248,
+          "2": 0.28
         }
       }
     },
@@ -4678,18 +4678,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "3-1",
+        "score": "2-1",
         "score_conf": 10,
         "winner": "Rennes",
         "winner_conf": 66,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 67,
+        "goals_conf": 66,
         "confidence": 66,
         "advice": "Victoire Rennes",
         "probs": {
-          "1": 0.662,
-          "N": 0.174,
-          "2": 0.164
+          "1": 0.66,
+          "N": 0.188,
+          "2": 0.152
         }
       }
     },
@@ -4702,18 +4702,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 10,
+        "score": "2-1",
+        "score_conf": 11,
         "winner": "Toulouse",
-        "winner_conf": 56,
+        "winner_conf": 54,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 62,
-        "confidence": 56,
+        "goals_conf": 59,
+        "confidence": 54,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.56,
-          "N": 0.218,
-          "2": 0.222
+          "1": 0.546,
+          "N": 0.236,
+          "2": 0.218
         }
       }
     },
@@ -4726,18 +4726,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 13,
+        "score": "1-1",
+        "score_conf": 11,
         "winner": "Lyon",
-        "winner_conf": 50,
+        "winner_conf": 48,
         "goals_pred": "-2.5 Buts",
         "goals_conf": 50,
-        "confidence": 50,
+        "confidence": 48,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.242,
-          "N": 0.258,
-          "2": 0.5
+          "1": 0.278,
+          "N": 0.242,
+          "2": 0.48
         }
       }
     },
@@ -4751,17 +4751,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 10,
+        "score_conf": 11,
         "winner": "Brest",
-        "winner_conf": 38,
+        "winner_conf": 42,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 63,
-        "confidence": 38,
+        "goals_conf": 64,
+        "confidence": 42,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.386,
-          "N": 0.238,
-          "2": 0.376
+          "1": 0.42,
+          "N": 0.226,
+          "2": 0.354
         }
       }
     },
@@ -4775,17 +4775,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 17,
         "winner": "Auxerre",
-        "winner_conf": 40,
+        "winner_conf": 36,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 55,
-        "confidence": 40,
+        "goals_conf": 52,
+        "confidence": 36,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.334,
-          "N": 0.258,
-          "2": 0.408
+          "1": 0.328,
+          "N": 0.31,
+          "2": 0.362
         }
       }
     },
@@ -4798,18 +4798,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
+        "score": "1-1",
         "score_conf": 12,
         "winner": "Lille",
-        "winner_conf": 42,
+        "winner_conf": 48,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 42,
+        "goals_conf": 56,
+        "confidence": 48,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.424,
-          "N": 0.264,
-          "2": 0.312
+          "1": 0.48,
+          "N": 0.262,
+          "2": 0.258
         }
       }
     },
@@ -4822,18 +4822,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "2-2",
         "score_conf": 10,
-        "winner": "Lorient",
-        "winner_conf": 40,
+        "winner": "Paris FC",
+        "winner_conf": 38,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 65,
-        "confidence": 40,
+        "goals_conf": 67,
+        "confidence": 38,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.406,
-          "N": 0.238,
-          "2": 0.356
+          "1": 0.382,
+          "N": 0.234,
+          "2": 0.384
         }
       }
     },
@@ -4849,15 +4849,15 @@
         "score": "1-1",
         "score_conf": 13,
         "winner": "Metz",
-        "winner_conf": 42,
-        "goals_pred": "+2.5 Buts",
-        "goals_conf": 50,
-        "confidence": 42,
+        "winner_conf": 41,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 53,
+        "confidence": 41,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.42,
-          "N": 0.262,
-          "2": 0.318
+          "1": 0.41,
+          "N": 0.248,
+          "2": 0.342
         }
       }
     },
@@ -4870,17 +4870,17 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
+        "score": "1-1",
         "score_conf": 9,
         "winner": "Monaco",
-        "winner_conf": 44,
+        "winner_conf": 40,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 69,
-        "confidence": 44,
+        "confidence": 40,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.444,
-          "N": 0.2,
+          "1": 0.404,
+          "N": 0.24,
           "2": 0.356
         }
       }
@@ -4895,17 +4895,17 @@
       "score": null,
       "prediction": {
         "score": "2-0",
-        "score_conf": 13,
+        "score_conf": 12,
         "winner": "PSG",
-        "winner_conf": 73,
+        "winner_conf": 75,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 65,
-        "confidence": 73,
+        "goals_conf": 66,
+        "confidence": 75,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.73,
-          "N": 0.156,
-          "2": 0.114
+          "1": 0.752,
+          "N": 0.138,
+          "2": 0.11
         }
       }
     },
@@ -4919,17 +4919,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 11,
         "winner": "Nice",
-        "winner_conf": 37,
-        "goals_pred": "+2.5 Buts",
+        "winner_conf": 42,
+        "goals_pred": "-2.5 Buts",
         "goals_conf": 50,
-        "confidence": 37,
+        "confidence": 42,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.342,
-          "N": 0.288,
-          "2": 0.37
+          "1": 0.368,
+          "N": 0.206,
+          "2": 0.426
         }
       }
     },
@@ -4943,17 +4943,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 14,
         "winner": "Auxerre",
         "winner_conf": 47,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 54,
+        "goals_conf": 55,
         "confidence": 47,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.47,
-          "N": 0.284,
-          "2": 0.246
+          "1": 0.478,
+          "N": 0.282,
+          "2": 0.24
         }
       }
     },
@@ -4967,17 +4967,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 10,
         "winner": "Brest",
         "winner_conf": 43,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 55,
+        "goals_conf": 56,
         "confidence": 43,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.436,
-          "N": 0.252,
-          "2": 0.312
+          "1": 0.434,
+          "N": 0.222,
+          "2": 0.344
         }
       }
     },
@@ -4990,8 +4990,8 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 10,
+        "score": "0-1",
+        "score_conf": 11,
         "winner": "PSG",
         "winner_conf": 53,
         "goals_pred": "+2.5 Buts",
@@ -4999,9 +4999,9 @@
         "confidence": 53,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.224,
-          "N": 0.246,
-          "2": 0.53
+          "1": 0.216,
+          "N": 0.248,
+          "2": 0.536
         }
       }
     },
@@ -5014,18 +5014,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "score_conf": 9,
+        "score": "2-1",
+        "score_conf": 12,
         "winner": "Lyon",
-        "winner_conf": 62,
+        "winner_conf": 68,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 68,
-        "confidence": 62,
+        "goals_conf": 69,
+        "confidence": 68,
         "advice": "Victoire Lyon",
         "probs": {
-          "1": 0.624,
-          "N": 0.204,
-          "2": 0.172
+          "1": 0.684,
+          "N": 0.178,
+          "2": 0.138
         }
       }
     },
@@ -5038,18 +5038,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "score_conf": 11,
+        "score": "3-0",
+        "score_conf": 9,
         "winner": "Marseille",
-        "winner_conf": 82,
+        "winner_conf": 78,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 74,
-        "confidence": 82,
+        "goals_conf": 71,
+        "confidence": 78,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.826,
-          "N": 0.098,
-          "2": 0.076
+          "1": 0.788,
+          "N": 0.132,
+          "2": 0.08
         }
       }
     },
@@ -5062,18 +5062,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 11,
+        "score": "1-0",
+        "score_conf": 13,
         "winner": "Nice",
-        "winner_conf": 61,
+        "winner_conf": 63,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 52,
-        "confidence": 61,
+        "goals_conf": 50,
+        "confidence": 63,
         "advice": "Victoire Nice",
         "probs": {
-          "1": 0.616,
-          "N": 0.23,
-          "2": 0.154
+          "1": 0.632,
+          "N": 0.206,
+          "2": 0.162
         }
       }
     },
@@ -5086,18 +5086,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 8,
+        "score": "1-2",
+        "score_conf": 10,
         "winner": "Monaco",
-        "winner_conf": 59,
+        "winner_conf": 57,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 73,
-        "confidence": 59,
+        "goals_conf": 70,
+        "confidence": 57,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.218,
-          "N": 0.192,
-          "2": 0.59
+          "1": 0.24,
+          "N": 0.182,
+          "2": 0.578
         }
       }
     },
@@ -5110,18 +5110,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "2-1",
         "score_conf": 12,
         "winner": "Rennes",
-        "winner_conf": 54,
-        "goals_pred": "+2.5 Buts",
-        "goals_conf": 52,
-        "confidence": 54,
+        "winner_conf": 57,
+        "goals_pred": "-2.5 Buts",
+        "goals_conf": 50,
+        "confidence": 57,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.548,
-          "N": 0.248,
-          "2": 0.204
+          "1": 0.58,
+          "N": 0.234,
+          "2": 0.186
         }
       }
     },
@@ -5134,18 +5134,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "0-1",
         "score_conf": 13,
         "winner": "Lille",
-        "winner_conf": 44,
+        "winner_conf": 45,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 53,
-        "confidence": 44,
+        "goals_conf": 55,
+        "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.306,
-          "N": 0.25,
-          "2": 0.444
+          "1": 0.32,
+          "N": 0.224,
+          "2": 0.456
         }
       }
     },
@@ -5158,18 +5158,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
-        "score_conf": 13,
+        "score": "1-1",
+        "score_conf": 12,
         "winner": "Angers",
         "winner_conf": 44,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 62,
+        "goals_conf": 58,
         "confidence": 44,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.442,
-          "N": 0.292,
-          "2": 0.266
+          "1": 0.448,
+          "N": 0.26,
+          "2": 0.292
         }
       }
     },
@@ -5183,16 +5183,16 @@
       "score": null,
       "prediction": {
         "score": "1-0",
-        "score_conf": 13,
+        "score_conf": 15,
         "winner": "Lens",
-        "winner_conf": 51,
+        "winner_conf": 50,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 58,
-        "confidence": 51,
+        "goals_conf": 59,
+        "confidence": 50,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.512,
-          "N": 0.264,
+          "1": 0.506,
+          "N": 0.27,
           "2": 0.224
         }
       }
@@ -5206,18 +5206,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 13,
+        "score": "1-0",
+        "score_conf": 11,
         "winner": "Lille",
-        "winner_conf": 48,
+        "winner_conf": 45,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 50,
-        "confidence": 48,
+        "goals_conf": 52,
+        "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.486,
-          "N": 0.282,
-          "2": 0.232
+          "1": 0.454,
+          "N": 0.234,
+          "2": 0.312
         }
       }
     },
@@ -5233,15 +5233,15 @@
         "score": "1-2",
         "score_conf": 10,
         "winner": "Marseille",
-        "winner_conf": 63,
+        "winner_conf": 61,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 70,
-        "confidence": 63,
+        "goals_conf": 73,
+        "confidence": 61,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.192,
-          "N": 0.176,
-          "2": 0.632
+          "1": 0.2,
+          "N": 0.182,
+          "2": 0.618
         }
       }
     },
@@ -5257,15 +5257,15 @@
         "score": "1-1",
         "score_conf": 11,
         "winner": "Paris FC",
-        "winner_conf": 39,
+        "winner_conf": 45,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 62,
-        "confidence": 39,
+        "confidence": 45,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.388,
-          "N": 0.222,
-          "2": 0.39
+          "1": 0.326,
+          "N": 0.22,
+          "2": 0.454
         }
       }
     },
@@ -5279,17 +5279,17 @@
       "score": null,
       "prediction": {
         "score": "2-0",
-        "score_conf": 8,
+        "score_conf": 9,
         "winner": "Monaco",
-        "winner_conf": 65,
+        "winner_conf": 63,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 66,
-        "confidence": 65,
+        "goals_conf": 63,
+        "confidence": 63,
         "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.652,
-          "N": 0.15,
-          "2": 0.198
+          "1": 0.632,
+          "N": 0.198,
+          "2": 0.17
         }
       }
     },
@@ -5303,17 +5303,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 15,
+        "score_conf": 13,
         "winner": "Brest",
-        "winner_conf": 44,
+        "winner_conf": 49,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 51,
-        "confidence": 44,
+        "goals_conf": 53,
+        "confidence": 49,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.266,
-          "N": 0.292,
-          "2": 0.442
+          "1": 0.236,
+          "N": 0.268,
+          "2": 0.496
         }
       }
     },
@@ -5329,15 +5329,15 @@
         "score": "3-1",
         "score_conf": 11,
         "winner": "PSG",
-        "winner_conf": 69,
+        "winner_conf": 72,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 74,
-        "confidence": 69,
+        "goals_conf": 73,
+        "confidence": 72,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.694,
-          "N": 0.174,
-          "2": 0.132
+          "1": 0.722,
+          "N": 0.166,
+          "2": 0.112
         }
       }
     },
@@ -5351,7 +5351,7 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 12,
         "winner": "Strasbourg",
         "winner_conf": 40,
         "goals_pred": "+2.5 Buts",
@@ -5359,9 +5359,9 @@
         "confidence": 40,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.402,
-          "N": 0.244,
-          "2": 0.354
+          "1": 0.406,
+          "N": 0.228,
+          "2": 0.366
         }
       }
     },
@@ -5375,17 +5375,17 @@
       "score": null,
       "prediction": {
         "score": "0-2",
-        "score_conf": 14,
+        "score_conf": 11,
         "winner": "PSG",
-        "winner_conf": 73,
+        "winner_conf": 74,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 63,
-        "confidence": 73,
+        "goals_conf": 64,
+        "confidence": 74,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.11,
-          "N": 0.158,
-          "2": 0.732
+          "1": 0.104,
+          "N": 0.154,
+          "2": 0.742
         }
       }
     },
@@ -5401,15 +5401,15 @@
         "score": "1-1",
         "score_conf": 13,
         "winner": "Lens",
-        "winner_conf": 39,
+        "winner_conf": 41,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 50,
-        "confidence": 39,
+        "goals_conf": 54,
+        "confidence": 41,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.324,
-          "N": 0.28,
-          "2": 0.396
+          "1": 0.32,
+          "N": 0.268,
+          "2": 0.412
         }
       }
     },
@@ -5422,18 +5422,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 11,
+        "score": "1-0",
+        "score_conf": 13,
         "winner": "Le Havre",
-        "winner_conf": 45,
+        "winner_conf": 47,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 51,
-        "confidence": 45,
+        "confidence": 47,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.454,
-          "N": 0.262,
-          "2": 0.284
+          "1": 0.474,
+          "N": 0.224,
+          "2": 0.302
         }
       }
     },
@@ -5446,18 +5446,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
+        "score": "1-1",
         "score_conf": 10,
         "winner": "Strasbourg",
-        "winner_conf": 50,
+        "winner_conf": 49,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 60,
-        "confidence": 50,
+        "goals_conf": 64,
+        "confidence": 49,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.29,
-          "N": 0.204,
-          "2": 0.506
+          "1": 0.28,
+          "N": 0.226,
+          "2": 0.494
         }
       }
     },
@@ -5470,18 +5470,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
-        "score_conf": 10,
+        "score": "2-1",
+        "score_conf": 11,
         "winner": "Lyon",
-        "winner_conf": 57,
+        "winner_conf": 54,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 57,
+        "goals_conf": 60,
+        "confidence": 54,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.58,
-          "N": 0.18,
-          "2": 0.24
+          "1": 0.548,
+          "N": 0.232,
+          "2": 0.22
         }
       }
     },
@@ -5494,18 +5494,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "2-1",
         "score_conf": 10,
         "winner": "Marseille",
-        "winner_conf": 53,
+        "winner_conf": 51,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 59,
-        "confidence": 53,
+        "confidence": 51,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.536,
-          "N": 0.2,
-          "2": 0.264
+          "1": 0.512,
+          "N": 0.21,
+          "2": 0.278
         }
       }
     },
@@ -5518,18 +5518,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-3",
+        "score": "1-1",
         "score_conf": 9,
         "winner": "Lille",
-        "winner_conf": 61,
+        "winner_conf": 56,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 61,
-        "confidence": 61,
-        "advice": "Victoire Lille",
+        "goals_conf": 59,
+        "confidence": 56,
+        "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.182,
-          "N": 0.208,
-          "2": 0.61
+          "1": 0.21,
+          "N": 0.23,
+          "2": 0.56
         }
       }
     },
@@ -5542,17 +5542,17 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 11,
+        "score": "1-0",
+        "score_conf": 10,
         "winner": "Rennes",
-        "winner_conf": 61,
+        "winner_conf": 57,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 58,
-        "confidence": 61,
-        "advice": "Victoire Rennes",
+        "confidence": 57,
+        "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.616,
-          "N": 0.198,
+          "1": 0.578,
+          "N": 0.236,
           "2": 0.186
         }
       }
@@ -5567,17 +5567,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 12,
+        "score_conf": 10,
         "winner": "Monaco",
-        "winner_conf": 44,
+        "winner_conf": 43,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 44,
+        "goals_conf": 59,
+        "confidence": 43,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.308,
-          "N": 0.25,
-          "2": 0.442
+          "1": 0.324,
+          "N": 0.24,
+          "2": 0.436
         }
       }
     },
@@ -5591,17 +5591,17 @@
       "score": null,
       "prediction": {
         "score": "1-0",
-        "score_conf": 12,
+        "score_conf": 13,
         "winner": "Auxerre",
-        "winner_conf": 45,
+        "winner_conf": 48,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 45,
+        "goals_conf": 59,
+        "confidence": 48,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.456,
-          "N": 0.272,
-          "2": 0.272
+          "1": 0.486,
+          "N": 0.244,
+          "2": 0.27
         }
       }
     },
@@ -5615,17 +5615,17 @@
       "score": null,
       "prediction": {
         "score": "2-0",
-        "score_conf": 14,
+        "score_conf": 13,
         "winner": "Lille",
-        "winner_conf": 68,
+        "winner_conf": 72,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 54,
-        "confidence": 68,
+        "goals_conf": 56,
+        "confidence": 72,
         "advice": "Victoire Lille",
         "probs": {
-          "1": 0.68,
-          "N": 0.196,
-          "2": 0.124
+          "1": 0.728,
+          "N": 0.142,
+          "2": 0.13
         }
       }
     },
@@ -5638,18 +5638,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 10,
+        "score": "2-2",
+        "score_conf": 8,
         "winner": "Lyon",
-        "winner_conf": 46,
+        "winner_conf": 45,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 64,
-        "confidence": 46,
+        "goals_conf": 66,
+        "confidence": 45,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.46,
-          "N": 0.21,
-          "2": 0.33
+          "1": 0.452,
+          "N": 0.216,
+          "2": 0.332
         }
       }
     },
@@ -5662,18 +5662,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-2",
-        "score_conf": 12,
+        "score": "0-2",
+        "score_conf": 8,
         "winner": "Monaco",
-        "winner_conf": 70,
+        "winner_conf": 68,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 70,
-        "confidence": 70,
+        "goals_conf": 72,
+        "confidence": 68,
         "advice": "Victoire Monaco",
         "probs": {
-          "1": 0.138,
-          "N": 0.162,
-          "2": 0.7
+          "1": 0.15,
+          "N": 0.168,
+          "2": 0.682
         }
       }
     },
@@ -5689,15 +5689,15 @@
         "score": "0-2",
         "score_conf": 11,
         "winner": "Marseille",
-        "winner_conf": 64,
+        "winner_conf": 62,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 64,
+        "goals_conf": 58,
+        "confidence": 62,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.142,
-          "N": 0.21,
-          "2": 0.648
+          "1": 0.172,
+          "N": 0.2,
+          "2": 0.628
         }
       }
     },
@@ -5710,18 +5710,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
-        "score_conf": 13,
+        "score": "1-1",
+        "score_conf": 14,
         "winner": "Nice",
-        "winner_conf": 40,
+        "winner_conf": 39,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 60,
-        "confidence": 40,
+        "goals_conf": 56,
+        "confidence": 39,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.402,
-          "N": 0.276,
-          "2": 0.322
+          "1": 0.39,
+          "N": 0.304,
+          "2": 0.306
         }
       }
     },
@@ -5734,18 +5734,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-0",
-        "score_conf": 9,
+        "score": "3-1",
+        "score_conf": 8,
         "winner": "PSG",
-        "winner_conf": 85,
+        "winner_conf": 88,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 78,
-        "confidence": 85,
+        "goals_conf": 83,
+        "confidence": 88,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.856,
-          "N": 0.076,
-          "2": 0.068
+          "1": 0.88,
+          "N": 0.068,
+          "2": 0.052
         }
       }
     },
@@ -5758,18 +5758,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 12,
+        "score": "2-1",
+        "score_conf": 9,
         "winner": "Brest",
-        "winner_conf": 43,
+        "winner_conf": 45,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 64,
-        "confidence": 43,
+        "goals_conf": 65,
+        "confidence": 45,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.328,
-          "N": 0.238,
-          "2": 0.434
+          "1": 0.342,
+          "N": 0.206,
+          "2": 0.452
         }
       }
     },
@@ -5782,17 +5782,17 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-0",
+        "score": "1-1",
         "score_conf": 11,
         "winner": "Strasbourg",
         "winner_conf": 43,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 54,
+        "goals_conf": 50,
         "confidence": 43,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.43,
-          "N": 0.276,
+          "1": 0.434,
+          "N": 0.272,
           "2": 0.294
         }
       }
@@ -5806,18 +5806,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
-        "score_conf": 13,
+        "score": "0-1",
+        "score_conf": 14,
         "winner": "Strasbourg",
-        "winner_conf": 40,
+        "winner_conf": 45,
         "goals_pred": "-2.5 Buts",
         "goals_conf": 57,
-        "confidence": 40,
+        "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.308,
-          "N": 0.284,
-          "2": 0.408
+          "1": 0.288,
+          "N": 0.258,
+          "2": 0.454
         }
       }
     },
@@ -5830,18 +5830,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
+        "score": "1-1",
         "score_conf": 10,
         "winner": "Nice",
-        "winner_conf": 41,
+        "winner_conf": 42,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 41,
+        "goals_conf": 53,
+        "confidence": 42,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.336,
-          "N": 0.248,
-          "2": 0.416
+          "1": 0.308,
+          "N": 0.266,
+          "2": 0.426
         }
       }
     },
@@ -5854,18 +5854,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-1",
-        "score_conf": 9,
+        "score": "1-2",
+        "score_conf": 10,
         "winner": "Marseille",
-        "winner_conf": 61,
+        "winner_conf": 63,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 61,
+        "goals_conf": 60,
+        "confidence": 63,
         "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.176,
-          "N": 0.206,
-          "2": 0.618
+          "1": 0.17,
+          "N": 0.192,
+          "2": 0.638
         }
       }
     },
@@ -5881,15 +5881,15 @@
         "score": "2-0",
         "score_conf": 14,
         "winner": "Lens",
-        "winner_conf": 60,
+        "winner_conf": 61,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 57,
-        "confidence": 60,
+        "goals_conf": 55,
+        "confidence": 61,
         "advice": "Victoire Lens",
         "probs": {
-          "1": 0.602,
-          "N": 0.242,
-          "2": 0.156
+          "1": 0.616,
+          "N": 0.22,
+          "2": 0.164
         }
       }
     },
@@ -5905,15 +5905,15 @@
         "score": "1-1",
         "score_conf": 11,
         "winner": "Lorient",
-        "winner_conf": 37,
+        "winner_conf": 41,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 59,
-        "confidence": 37,
+        "goals_conf": 57,
+        "confidence": 41,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.36,
-          "N": 0.266,
-          "2": 0.374
+          "1": 0.334,
+          "N": 0.254,
+          "2": 0.412
         }
       }
     },
@@ -5927,17 +5927,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 12,
+        "score_conf": 9,
         "winner": "Monaco",
-        "winner_conf": 41,
+        "winner_conf": 42,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 58,
-        "confidence": 41,
+        "confidence": 42,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.41,
-          "N": 0.25,
-          "2": 0.34
+          "1": 0.428,
+          "N": 0.224,
+          "2": 0.348
         }
       }
     },
@@ -5950,18 +5950,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 9,
+        "score": "2-0",
+        "score_conf": 10,
         "winner": "PSG",
-        "winner_conf": 73,
+        "winner_conf": 81,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 74,
-        "confidence": 73,
+        "goals_conf": 73,
+        "confidence": 81,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.734,
-          "N": 0.148,
-          "2": 0.118
+          "1": 0.81,
+          "N": 0.11,
+          "2": 0.08
         }
       }
     },
@@ -5974,17 +5974,17 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
+        "score": "3-1",
         "score_conf": 9,
         "winner": "Rennes",
-        "winner_conf": 57,
+        "winner_conf": 60,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 66,
-        "confidence": 57,
+        "goals_conf": 68,
+        "confidence": 60,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.574,
-          "N": 0.206,
+          "1": 0.6,
+          "N": 0.18,
           "2": 0.22
         }
       }
@@ -5999,17 +5999,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 11,
         "winner": "Toulouse",
-        "winner_conf": 42,
+        "winner_conf": 37,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 56,
-        "confidence": 42,
+        "goals_conf": 54,
+        "confidence": 37,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.426,
-          "N": 0.244,
-          "2": 0.33
+          "1": 0.374,
+          "N": 0.29,
+          "2": 0.336
         }
       }
     },
@@ -6022,18 +6022,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "1-0",
         "score_conf": 12,
         "winner": "Brest",
-        "winner_conf": 54,
-        "goals_pred": "-2.5 Buts",
+        "winner_conf": 55,
+        "goals_pred": "+2.5 Buts",
         "goals_conf": 50,
-        "confidence": 54,
+        "confidence": 55,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.542,
-          "N": 0.264,
-          "2": 0.194
+          "1": 0.55,
+          "N": 0.25,
+          "2": 0.2
         }
       }
     },
@@ -6046,18 +6046,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "1-1",
+        "score": "2-1",
         "score_conf": 12,
         "winner": "Lille",
-        "winner_conf": 61,
-        "goals_pred": "-2.5 Buts",
-        "goals_conf": 50,
-        "confidence": 61,
+        "winner_conf": 60,
+        "goals_pred": "+2.5 Buts",
+        "goals_conf": 55,
+        "confidence": 60,
         "advice": "Victoire Lille",
         "probs": {
-          "1": 0.61,
-          "N": 0.22,
-          "2": 0.17
+          "1": 0.604,
+          "N": 0.23,
+          "2": 0.166
         }
       }
     },
@@ -6071,17 +6071,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 11,
+        "score_conf": 10,
         "winner": "Lorient",
-        "winner_conf": 42,
+        "winner_conf": 45,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 55,
-        "confidence": 42,
+        "goals_conf": 59,
+        "confidence": 45,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.428,
-          "N": 0.252,
-          "2": 0.32
+          "1": 0.458,
+          "N": 0.206,
+          "2": 0.336
         }
       }
     },
@@ -6097,15 +6097,15 @@
         "score": "1-1",
         "score_conf": 13,
         "winner": "Lyon",
-        "winner_conf": 38,
+        "winner_conf": 39,
         "goals_pred": "-2.5 Buts",
         "goals_conf": 53,
-        "confidence": 38,
+        "confidence": 39,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.384,
-          "N": 0.284,
-          "2": 0.332
+          "1": 0.39,
+          "N": 0.264,
+          "2": 0.346
         }
       }
     },
@@ -6119,17 +6119,17 @@
       "score": null,
       "prediction": {
         "score": "2-1",
-        "score_conf": 9,
+        "score_conf": 10,
         "winner": "Marseille",
-        "winner_conf": 57,
+        "winner_conf": 61,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 67,
-        "confidence": 57,
-        "advice": "+2.5 Buts",
+        "goals_conf": 71,
+        "confidence": 61,
+        "advice": "Victoire Marseille",
         "probs": {
-          "1": 0.576,
-          "N": 0.218,
-          "2": 0.206
+          "1": 0.612,
+          "N": 0.158,
+          "2": 0.23
         }
       }
     },
@@ -6143,17 +6143,17 @@
       "score": null,
       "prediction": {
         "score": "1-1",
-        "score_conf": 13,
+        "score_conf": 12,
         "winner": "Toulouse",
-        "winner_conf": 48,
+        "winner_conf": 47,
         "goals_pred": "-2.5 Buts",
-        "goals_conf": 55,
-        "confidence": 48,
+        "goals_conf": 57,
+        "confidence": 47,
         "advice": "Les deux marquent (BTTS)",
         "probs": {
-          "1": 0.266,
-          "N": 0.252,
-          "2": 0.482
+          "1": 0.238,
+          "N": 0.286,
+          "2": 0.476
         }
       }
     },
@@ -6166,18 +6166,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
-        "score_conf": 10,
+        "score": "2-0",
+        "score_conf": 14,
         "winner": "Nice",
-        "winner_conf": 67,
+        "winner_conf": 74,
         "goals_pred": "+2.5 Buts",
         "goals_conf": 61,
-        "confidence": 67,
+        "confidence": 74,
         "advice": "Victoire Nice",
         "probs": {
-          "1": 0.678,
-          "N": 0.198,
-          "2": 0.124
+          "1": 0.742,
+          "N": 0.148,
+          "2": 0.11
         }
       }
     },
@@ -6190,8 +6190,8 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "0-2",
-        "score_conf": 9,
+        "score": "1-3",
+        "score_conf": 10,
         "winner": "PSG",
         "winner_conf": 77,
         "goals_pred": "+2.5 Buts",
@@ -6199,9 +6199,9 @@
         "confidence": 77,
         "advice": "Victoire PSG",
         "probs": {
-          "1": 0.092,
-          "N": 0.13,
-          "2": 0.778
+          "1": 0.086,
+          "N": 0.142,
+          "2": 0.772
         }
       }
     },
@@ -6214,18 +6214,18 @@
       "status": "SCHEDULED",
       "score": null,
       "prediction": {
-        "score": "2-1",
+        "score": "1-1",
         "score_conf": 10,
         "winner": "Monaco",
-        "winner_conf": 45,
+        "winner_conf": 42,
         "goals_pred": "+2.5 Buts",
-        "goals_conf": 65,
-        "confidence": 45,
+        "goals_conf": 59,
+        "confidence": 42,
         "advice": "+2.5 Buts",
         "probs": {
-          "1": 0.352,
-          "N": 0.196,
-          "2": 0.452
+          "1": 0.336,
+          "N": 0.238,
+          "2": 0.426
         }
       }
     }

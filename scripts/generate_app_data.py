@@ -105,6 +105,9 @@ def predict_one_match(home, away, stats):
     }
 
 def main():
+    # Fix the seed for deterministic predictions across builds
+    random.seed(42)
+
     if not os.path.exists(LEGACY_PATH):
         print("No legacy data.")
         return
