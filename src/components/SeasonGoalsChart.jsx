@@ -17,102 +17,105 @@ const SeasonGoalsChart = ({ schedule = [], currentWeek = 1, teamStats = {} }) =>
 
         const TOTAL_WEEKS = 34;
         const processedData = [];
-        let totalRealGoals = 0;
-        let weeksWithData = 0;
 
-        // 1. Calculate Real Data
-        for (let w = 1; w < currentWeek; w++) {
-            const matches = schedule.filter(m => m.week === w && m.status === 'FINISHED');
-            const weekGoals = matches.reduce((acc, m) => acc + (m.score?.home || 0) + (m.score?.away || 0), 0);
+        // Helper: Logic to get consistent score from prediction (mirrors LeagueCalendar)
+        const getProjectedGoalsForMatch = (match) => {
+            if (!match.prediction?.score) return 2.5; // Fallback average if no prediction
 
-            if (matches.length > 0) {
-                totalRealGoals += weekGoals;
-                weeksWithData++;
+            const scoreParts = match.prediction.score.split('-');
+            let h = parseInt(scoreParts[0]);
+            let a = parseInt(scoreParts[1]);
+
+            if (isNaN(h) || isNaN(a)) return 2.5;
+
+            // Apply consistency logic (force winner / goals)
+            const winnerDisplay = match.prediction.winner;
+            const winnerConf = match.prediction.winner_conf || 0;
+            const goalsPred = match.prediction.goals_pred || "";
+
+            // 1. Force Winner Consistency
+            // Allow Draws if confidence is low (< 45%) and original score was a draw
+            const originalIsDraw = h === a;
+            const isWeakPrediction = winnerConf < 45;
+
+            let forceWinner = true;
+            if (originalIsDraw && isWeakPrediction && (winnerDisplay === 'Draw' || winnerDisplay === 'Nul' || winnerDisplay === match.homeTeam || winnerDisplay === match.awayTeam)) {
+                // Logic mirrors Calendar: "We accept the draw" if weak pred
+                // Note: Calendar forces winner unless (originalIsDraw && isWeakPrediction)
+                // If winner is explicit e.g. "Lens", but weak, and score is 1-1, keep 1-1.
+                forceWinner = false;
             }
 
-            processedData.push({
-                name: `J${w}`,
-                real: matches.length > 0 ? weekGoals : null, // Handle missed weeks gracefully
-                projected: null,
-            });
-        }
+            if (forceWinner) {
+                if (winnerDisplay === match.homeTeam && h <= a) h = a + 1;
+                else if (winnerDisplay === match.awayTeam && a <= h) a = h + 1;
+                else if ((winnerDisplay === "Nul" || winnerDisplay === "Draw") && h !== a) { const m = Math.max(h, a); h = m; a = m; }
+            }
 
-        // 2. Generate Projection
-        // Instead of random walk, we predict based on matchups in schedule
+            // 2. Force Goals Consistency
+            const isOver2_5 = goalsPred.includes('+2.5');
+            const isUnder2_5 = goalsPred.includes('-2.5');
 
-        // Helper for Poisson distribution to simulate realistic score variance
-        const getPoisson = (lambda) => {
-            let L = Math.exp(-lambda);
-            let p = 1.0;
-            let k = 0;
-            do {
-                k++;
-                p *= Math.random();
-            } while (p > L);
-            return k - 1;
+            if (isUnder2_5 && (h + a) > 2) {
+                if (winnerDisplay === match.homeTeam) { h = 1; a = 0; }
+                else if (winnerDisplay === match.awayTeam) { h = 0; a = 1; }
+                else { h = 1; a = 1; }
+            } else if (isOver2_5 && (h + a) < 3) {
+                if (winnerDisplay === match.homeTeam) { h = 2; a = 1; }
+                else if (winnerDisplay === match.awayTeam) { h = 1; a = 2; }
+                else { h = 2; a = 2; }
+            }
+
+            return h + a;
         };
 
-        for (let w = currentWeek; w <= TOTAL_WEEKS; w++) {
-            const isTransition = w === currentWeek;
+        let lastRealParams = null; // To track where to start projection line
 
-            // Find matches for this week
+        for (let w = 1; w <= TOTAL_WEEKS; w++) {
             const matches = schedule.filter(m => m.week === w);
+            if (matches.length === 0) continue;
 
-            let projectedWeekGoals = 0;
+            // Determine status of the week
+            const finishedMatches = matches.filter(m => m.status === 'FINISHED').length;
+            const isFinishedWeek = finishedMatches > (matches.length / 2); // Mostly finished
 
-            if (matches.length > 0) {
-                matches.forEach(match => {
-                    const homeTerm = teamStats[match.homeTeam] || { att: 1, def: 1 };
-                    const awayTeam = teamStats[match.awayTeam] || { att: 1, def: 1 };
+            if (isFinishedWeek) {
+                // REAL DATA
+                const weekGoals = matches.reduce((acc, m) => {
+                    const h = m.score?.home ?? 0;
+                    const a = m.score?.away ?? 0;
+                    return acc + h + a;
+                }, 0);
 
-                    // Strength
-                    const homeStrength = (homeTerm.att * awayTeam.def) * 1.15;
-                    const awayStrength = (awayTeam.att * homeTerm.def);
-
-                    // Expected Goals (Lambda)
-                    const lambdaH = homeStrength * 1.35; // Adjusted slightly for L1 averages (~2.7 total)
-                    const lambdaA = awayStrength * 1.05;
-
-                    // SIMULATE Score (Integer) instead of Mean (Float)
-                    // This introduces the variance the user asked for (0-0s, blowout games, etc.)
-                    const goalsH = getPoisson(lambdaH);
-                    const goalsA = getPoisson(lambdaA);
-
-                    projectedWeekGoals += (goalsH + goalsA);
+                processedData.push({
+                    name: `J${w}`,
+                    real: weekGoals,
+                    projected: null,
                 });
+                lastRealParams = { week: w, val: weekGoals };
             } else {
-                // Fallback with noise if no schedule
-                const avgGoals = weeksWithData > 0 ? totalRealGoals / weeksWithData : 25;
-                // Add +/- 20% variance
-                const noise = (Math.random() - 0.5) * (avgGoals * 0.4);
-                projectedWeekGoals = avgGoals + noise;
-            }
+                // PROJECTED DATA
+                const weekGoals = matches.reduce((acc, m) => acc + getProjectedGoalsForMatch(m), 0);
 
-            // Round for display but keep float logic internally if we were doing accumulation? 
-            // Chart expects numbers. Let's round to 1 decimal for smoother curve, or integer.
-            // User asked for "realistic", integers are more realistic for discrete goals, but curve is nicer with decimals.
-            // Let's do Math.round for the final value to show "Whole Goals predicted"
-            const finalProjected = Math.round(projectedWeekGoals);
+                // Add dot if first projected week
+                const isTransition = lastRealParams && lastRealParams.week === (w - 1);
 
-            if (isTransition) {
-                // Dot at start
+                // If transition, we might want to connect the line? 
+                // Recharts connects nulls if connectNulls={true}, but we usually want visual continuity.
+                // If we want the projection line to start FROM the last real point, we'd need a shared point.
+                // But usually split lines are fine. 
+
                 processedData.push({
                     name: `J${w}`,
                     real: null,
-                    projected: finalProjected,
-                    isTransition: true
-                });
-            } else {
-                processedData.push({
-                    name: `J${w}`,
-                    real: null,
-                    projected: finalProjected
+                    projected: Math.round(weekGoals), // Integer goals
+                    isTransition: isTransition
                 });
             }
         }
 
         return processedData;
-    }, [schedule, currentWeek, teamStats]);
+    }, [schedule]);
 
 
     const CustomTooltip = ({ active, payload, label }) => {
