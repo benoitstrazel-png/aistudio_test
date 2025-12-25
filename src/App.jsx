@@ -28,6 +28,9 @@ function App() {
 
     // Default to first match or mock
     const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0] || {});
+    // Shared state for Calendar and Standings view
+    const [currentViewWeek, setCurrentViewWeek] = useState(APP_DATA.currentWeek + 1);
+
     // List of strict 18 teams for 2025-2026 Season
     const L1_TEAMS_2025 = [
         "Angers", "Auxerre", "Brest", "Le Havre", "Lens", "Lille",
@@ -222,7 +225,8 @@ function App() {
                             </div>
                             <LeagueCalendar
                                 schedule={APP_DATA.fullSchedule}
-                                currentWeek={APP_DATA.currentWeek}
+                                selectedWeek={currentViewWeek}
+                                onWeekChange={setCurrentViewWeek}
                                 highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
                             />
                         </section>
@@ -241,6 +245,8 @@ function App() {
                                 standings={APP_DATA.standings}
                                 schedule={APP_DATA.fullSchedule}
                                 currentWeek={APP_DATA.currentWeek}
+                                selectedWeek={currentViewWeek}
+                                onWeekChange={setCurrentViewWeek}
                                 highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
                             />
                         </section>

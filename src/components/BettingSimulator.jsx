@@ -9,10 +9,16 @@ const BettingSimulator = ({ matches }) => {
     // Filter matches that have predictions
     const activeMatches = matches.filter(m => m.prediction);
 
+    const getRowClass = (conf) => {
+        if (conf >= 65) return 'bg-green-100'; // Green background for high confidence
+        if (conf >= 50) return 'bg-orange-100'; // Orange for medium
+        return 'bg-red-100'; // Red for low
+    };
+
     const getConfColor = (conf) => {
-        if (conf >= 65) return 'text-green-600 bg-green-100';
-        if (conf >= 50) return 'text-orange-600 bg-orange-100';
-        return 'text-red-600 bg-red-100';
+        if (conf >= 65) return 'text-green-600 bg-green-200';
+        if (conf >= 50) return 'text-orange-600 bg-orange-200';
+        return 'text-red-600 bg-red-200';
     };
 
     return (
@@ -70,7 +76,7 @@ const BettingSimulator = ({ matches }) => {
                                     // But let's stick to JSON prediction.winner for now as it's the source of truth for "Advice".
 
                                     return (
-                                        <tr key={match.id} className="hover:bg-gray-50 transition-colors">
+                                        <tr key={match.id} className={`transition-colors border-b border-gray-100 ${getRowClass(match.prediction.confidence)}`}>
                                             <td className="p-3 font-medium">
                                                 <div className="flex flex-col">
                                                     <span>{match.homeTeam}</span>
@@ -125,7 +131,7 @@ const BettingSimulator = ({ matches }) => {
                                     const simulatedOdd = (1.50 + (match.id % 60) / 100).toFixed(2);
 
                                     return (
-                                        <tr key={match.id} className="hover:bg-gray-50 transition-colors">
+                                        <tr key={match.id} className={`transition-colors border-b border-black/5 ${getRowClass(match.prediction.goals_conf)}`}>
                                             <td className="p-3 font-medium">
                                                 <div className="flex flex-col">
                                                     <span>{match.homeTeam}</span>

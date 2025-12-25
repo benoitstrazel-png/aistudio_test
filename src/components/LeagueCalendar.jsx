@@ -3,8 +3,8 @@ import InfoTooltip from './ui/InfoTooltip';
 import TeamLogo from './ui/TeamLogo';
 import BettingSimulator from './BettingSimulator';
 
-const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
-    const [selectedWeek, setSelectedWeek] = useState(currentWeek + 1);
+const LeagueCalendar = ({ schedule, selectedWeek, onWeekChange, highlightTeams = [] }) => {
+    // Controlled component: selectedWeek comes from parent
     const [matches, setMatches] = useState([]);
 
     const maxWeek = schedule.length > 0 ? Math.max(...schedule.map(m => m.week || 0)) : 34;
@@ -35,7 +35,7 @@ const LeagueCalendar = ({ schedule, currentWeek, highlightTeams = [] }) => {
                 <select
                     className="bg-slate-800 text-white p-2 rounded text-sm w-32 border border-white/10"
                     value={selectedWeek}
-                    onChange={(e) => setSelectedWeek(parseInt(e.target.value))}
+                    onChange={(e) => onWeekChange(parseInt(e.target.value))}
                 >
                     {weeks.map(w => (
                         <option key={w} value={w}>J{w}</option>

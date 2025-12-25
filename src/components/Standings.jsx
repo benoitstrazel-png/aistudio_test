@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { calculateStandingsAtWeek } from '../utils/simulation';
 import TeamLogo from './ui/TeamLogo';
 
-const Standings = ({ standings, schedule, currentWeek, highlightTeams = [] }) => {
-    // State for selected week (Default to currentWeek)
-    const [viewWeek, setViewWeek] = useState(currentWeek);
+const Standings = ({ standings, schedule, currentWeek, selectedWeek, onWeekChange, highlightTeams = [] }) => {
+    // Controlled component via parent
     const [displayStandings, setDisplayStandings] = useState([]);
 
     // Generate week options (Assuming 34 matchdays for L1)
@@ -13,18 +12,18 @@ const Standings = ({ standings, schedule, currentWeek, highlightTeams = [] }) =>
     useEffect(() => {
         if (standings && standings.length > 0 && schedule) {
             // Calculate standings for the specific week requested
-            const calculated = calculateStandingsAtWeek(standings, schedule, viewWeek, currentWeek);
+            const calculated = calculateStandingsAtWeek(standings, schedule, selectedWeek, currentWeek);
             setDisplayStandings(calculated);
         }
-    }, [viewWeek, standings, schedule, currentWeek]);
+    }, [selectedWeek, standings, schedule, currentWeek]);
 
     // Determining Mode Label
     let modeLabel = "Live";
     let modeColor = "bg-yellow-400 text-black";
-    if (viewWeek < currentWeek) {
+    if (selectedWeek < currentWeek) {
         modeLabel = "Historique";
         modeColor = "bg-slate-500 text-white";
-    } else if (viewWeek > currentWeek) {
+    } else if (selectedWeek > currentWeek) {
         modeLabel = "Prédiction";
         modeColor = "bg-accent text-black"; // Cyber lime
     }
@@ -83,25 +82,25 @@ const Standings = ({ standings, schedule, currentWeek, highlightTeams = [] }) =>
 
                     <div className="flex items-center gap-2">
                         <button
-                            onClick={() => setViewWeek(Math.max(1, viewWeek - 1))}
+                            onClick={() => onWeekChange(Math.max(1, selectedWeek - 1))}
                             className="p-1 rounded bg-white/5 hover:bg-white/10 text-white"
-                            disabled={viewWeek <= 1}
+                            disabled={selectedWeek <= 1}
                         >
                             ←
                         </button>
                         <select
                             className="bg-slate-800 text-white text-sm p-1 rounded border border-white/10 font-bold"
-                            value={viewWeek}
-                            onChange={(e) => setViewWeek(parseInt(e.target.value))}
+                            value={selectedWeek}
+                            onChange={(e) => onWeekChange(parseInt(e.target.value))}
                         >
                             {weeks.map(w => (
                                 <option key={w} value={w}>J{w} {w === currentWeek ? '(Actuel)' : ''}</option>
                             ))}
                         </select>
                         <button
-                            onClick={() => setViewWeek(Math.min(34, viewWeek + 1))}
+                            onClick={() => onWeekChange(Math.min(34, selectedWeek + 1))}
                             className="p-1 rounded bg-white/5 hover:bg-white/10 text-white"
-                            disabled={viewWeek >= 34}
+                            disabled={selectedWeek >= 34}
                         >
                             →
                         </button>
