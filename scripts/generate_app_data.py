@@ -14,69 +14,94 @@ def poisson_probability(actual, mean):
         p /= (i + 1)
     return p
 
+def get_poisson_random(lam):
+    # Knuth's algorithm for Poisson generation
+    L = math.exp(-lam)
+    k = 0
+    p = 1.0
+    while p > L:
+        k += 1
+        p *= random.random()
+    return k - 1
+
 def predict_one_match(home, away, stats):
     h_att = stats.get(home, {}).get('att', 1.0)
     h_def = stats.get(home, {}).get('def', 1.0)
     a_att = stats.get(away, {}).get('att', 1.0)
     a_def = stats.get(away, {}).get('def', 1.0)
     
-    # Base goals
-    avg_h = 1.5
-    avg_a = 1.2
+    # Base goals (L1 average ~2.7 total)
+    avg_h = 1.45
+    avg_a = 1.25
     
+    # Expected Goals (Lambda)
     exp_h = h_att * a_def * avg_h
     exp_a = a_att * h_def * avg_a
     
-    # Monte Carlo or Max Prob
-    max_p = 0
-    score = "0-0"
-    w_probs = {'1': 0, 'N': 0, '2': 0}
+    # MONTE CARLO SIMULATION (500 runs)
+    ITERATIONS = 500
     
-    # Goal Stats
-    prob_over_2_5 = 0
+    score_counts = {}
+    winner_counts = {'1': 0, 'N': 0, '2': 0}
+    over_2_5_count = 0
     
-    for h in range(6):
-        for a in range(6):
-            prob = poisson_probability(h, exp_h) * poisson_probability(a, exp_a)
+    for _ in range(ITERATIONS):
+        # Simulate Score
+        s_h = get_poisson_random(exp_h)
+        s_a = get_poisson_random(exp_a)
+        
+        score_key = f"{s_h}-{s_a}"
+        score_counts[score_key] = score_counts.get(score_key, 0) + 1
+        
+        # Track Winner
+        if s_h > s_a: winner_counts['1'] += 1
+        elif s_a > s_h: winner_counts['2'] += 1
+        else: winner_counts['N'] += 1
+        
+        # Track Goals
+        if (s_h + s_a) > 2.5:
+            over_2_5_count += 1
             
-            # Max Score Prob (Exact Prediction Confidence)
-            if prob > max_p:
-                max_p = prob
-                score = f"{h}-{a}"
-            
-            # 1N2 Prob
-            if h > a: w_probs['1'] += prob
-            elif h == a: w_probs['N'] += prob
-            else: w_probs['2'] += prob
-            
-            # Over/Under 2.5
-            if (h + a) > 2.5:
-                prob_over_2_5 += prob
-            
-    conf = max(w_probs.values())
-    w_label = home if w_probs['1'] == conf else away if w_probs['2'] == conf else "Nul"
+    # Find Mode (Most frequent result) using the simulation data
+    best_score = max(score_counts, key=score_counts.get)
+    best_winner_key = max(winner_counts, key=winner_counts.get)
     
-    # Goals Prediction
-    goals_label = "+2.5 Buts" if prob_over_2_5 > 0.5 else "-2.5 Buts"
-    goals_conf = prob_over_2_5 if prob_over_2_5 > 0.5 else (1.0 - prob_over_2_5)
+    winner_label = "Nul"
+    if best_winner_key == '1': winner_label = home
+    elif best_winner_key == '2': winner_label = away
     
+    w_conf = int((winner_counts[best_winner_key] / ITERATIONS) * 100)
+    
+    # Goals Pred
+    prob_over = over_2_5_count / ITERATIONS
+    goals_label = "+2.5 Buts" if prob_over > 0.5 else "-2.5 Buts"
+    goals_conf = int((prob_over if prob_over > 0.5 else 1 - prob_over) * 100)
+
+    # Advice Logic
     advice = "Aucun"
-    if w_probs['1'] > 0.6: advice = f"Victoire {home}"
-    elif w_probs['2'] > 0.6: advice = f"Victoire {away}"
-    elif exp_h + exp_a > 2.8: advice = "+2.5 Buts"
-    elif w_probs['N'] > 0.30: advice = "Match Nul Risqué"
+    if winner_counts['1'] / ITERATIONS > 0.6: advice = f"Victoire {home}"
+    elif winner_counts['2'] / ITERATIONS > 0.6: advice = f"Victoire {away}"
+    elif (exp_h + exp_a) > 3.0: advice = "+2.5 Buts"
+    elif winner_counts['N'] / ITERATIONS > 0.35: advice = "Match Nul Risqué"
     else: advice = "Les deux marquent (BTTS)"
+
+    # Probabilities for UI
+    probs = {
+        '1': winner_counts['1'] / ITERATIONS,
+        'N': winner_counts['N'] / ITERATIONS,
+        '2': winner_counts['2'] / ITERATIONS
+    }
     
     return {
-        "score": score,
-        "score_conf": round(max_p * 100), # Exact score confidence usually low (10-20%)
-        "winner": w_label,
-        "winner_conf": int(conf * 100),
+        "score": best_score,
+        "score_conf": int((score_counts[best_score] / ITERATIONS) * 100),
+        "winner": winner_label,
+        "winner_conf": w_conf,
         "goals_pred": goals_label,
-        "goals_conf": int(goals_conf * 100),
-        "confidence": int(conf * 100), # Legacy
+        "goals_conf": goals_conf,
+        "confidence": w_conf,
         "advice": advice,
-        "probs": w_probs
+        "probs": probs
     }
 
 def main():

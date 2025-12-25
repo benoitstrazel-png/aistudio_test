@@ -36,27 +36,10 @@ function App() {
     ].sort();
 
     const [teams, setTeams] = useState(L1_TEAMS_2025);
-    const [liveSchedule, setLiveSchedule] = useState(APP_DATA.fullSchedule);
 
     useEffect(() => {
         // Enforce strict L1 Team list
         setTeams(L1_TEAMS_2025);
-
-        // HYDRATE SCHEDULE WITH DYNAMIC "EXTREME" PREDICTIONS
-        // This ensures the Season Chart and Calendar share the SAME "randomized" data
-        const enhancedSchedule = APP_DATA.fullSchedule.map(match => {
-            if (match.status === 'SCHEDULED') {
-                // Generate a new prediction on the fly to simulate variance
-                const dynamicPred = predictMatchLive(match.homeTeam, match.awayTeam, TEAM_STATS);
-                return {
-                    ...match,
-                    prediction: dynamicPred
-                };
-            }
-            return match;
-        });
-        setLiveSchedule(enhancedSchedule);
-
     }, []);
 
     // AUTH GATE
@@ -147,7 +130,7 @@ function App() {
                     </div>
                     <DashboardStats
                         stats={APP_DATA.seasonStats}
-                        schedule={liveSchedule}
+                        schedule={APP_DATA.fullSchedule}
                         currentWeek={APP_DATA.currentWeek}
                         teamStats={TEAM_STATS}
                     />
@@ -238,7 +221,7 @@ function App() {
                                 <p className="text-secondary text-sm font-medium uppercase tracking-widest">Résultats et matchs à venir</p>
                             </div>
                             <LeagueCalendar
-                                schedule={liveSchedule}
+                                schedule={APP_DATA.fullSchedule}
                                 currentWeek={APP_DATA.currentWeek}
                                 highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
                             />
@@ -256,7 +239,7 @@ function App() {
                             </div>
                             <Standings
                                 standings={APP_DATA.standings}
-                                schedule={liveSchedule}
+                                schedule={APP_DATA.fullSchedule}
                                 currentWeek={APP_DATA.currentWeek}
                                 highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
                             />
