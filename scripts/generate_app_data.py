@@ -7,12 +7,7 @@ from datetime import datetime, timedelta
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'src', 'data')
 LEGACY_PATH = os.path.join(DATA_DIR, 'matches_legacy.json')
 
-def poisson_probability(actual, mean):
-    p = math.exp(-mean)
-    for i in range(actual):
-        p *= mean
-        p /= (i + 1)
-    return p
+
 
 def get_poisson_random(lam):
     # Knuth's algorithm for Poisson generation
