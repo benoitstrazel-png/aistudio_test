@@ -290,7 +290,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
 
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* CHART */}
-                        <div className="lg:col-span-2 h-[350px] max-h-[600px] bg-white/5 rounded-2xl p-4 border border-white/5 relative">
+                        <div className="lg:col-span-2 bg-white/5 rounded-2xl p-4 border border-white/5 relative" style={{ height: '350px', maxHeight: '600px', overflow: 'hidden' }}>
                             {/* Axis Labels */}
                             <div className="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-accent uppercase tracking-widest bg-black/50 px-2 rounded">
                                 ▲ Puissance Offensive
