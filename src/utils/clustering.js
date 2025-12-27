@@ -106,6 +106,12 @@ export const calculateClusters = (teams, _unused, teamStats, playerData = [], sc
         const sortedByForm = [...teamPlayers].sort((a, b) => (b.form || 0) - (a.form || 0));
         const starPower = sortedByForm.slice(0, 3).reduce((acc, p) => acc + (p.form || 5), 0) / 3;
 
+        // Per Match Stats for Display
+        const matches = s.matches || 1; // Avoid div/0
+        const goalsForPm = s.goalsFor / matches;
+        const goalsAgainstPm = s.goalsAgainst / matches;
+        const goalDiffPm = (s.goalsFor - s.goalsAgainst) / matches;
+
         return {
             name: teamName,
             img: getTeamLogo(teamName),
@@ -117,6 +123,21 @@ export const calculateClusters = (teams, _unused, teamStats, playerData = [], sc
                 away: ppgAway,
                 res: metricResilience,
                 star: starPower
+            },
+            displayStats: {
+                goalsFor: goalsForPm,
+                goalsAgainst: goalsAgainstPm,
+                goalDiff: goalDiffPm,
+                ppgHome: ppgHome, // Already per match
+                ppgAway: ppgAway, // Already per match
+                resilience: metricResilience * 100, // Display as score 0-100? Or just ratio? User said "metrics used to calculate". Let's use the raw values but maybe scaled nicely if needed. 
+                // metricResilience is 0-1 (ratio * 0.6 + ratio * 0.4). Let's keep it 0-1 or 0-100.
+                // In clustering we normalize it. Here let's return the raw value 0-1 roughly.
+                // Actually let's multiply by 10 to be readable or just keep raw.
+                // Let's keep it as "Score (0-100)" for consistency with other "scores" if we want, OR just raw ratios.
+                // User asked for "Moyenne par match". Resilience is slightly abstract. Let's return the calculated metric.
+                resilience: metricResilience,
+                starPower: starPower
             }
         };
     });

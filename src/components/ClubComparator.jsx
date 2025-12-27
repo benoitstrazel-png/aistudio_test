@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceArea, ScatterChart, Scatter, ZAxis, Cell } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceArea, ScatterChart, Scatter, ZAxis, Cell, BarChart, Bar } from 'recharts';
 import NextMatchRadar from './NextMatchRadar';
 import TeamLogo from './ui/TeamLogo';
 import { predictMatchLive } from '../utils/prediction';
@@ -11,6 +11,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
     const [teamA, setTeamA] = useState(teams[0] || 'PSG');
     const [teamB, setTeamB] = useState(teams[1] || 'Marseille');
     const [filterContext, setFilterContext] = useState('all'); // 'all', 'home', 'away'
+    const [clusterMetric, setClusterMetric] = useState('goalsFor'); // For Histogram
 
     // ... (Keep existing Ranking History Logic)
 
@@ -162,6 +163,28 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
         // Pass PLAYERS_DATA and schedule to calculations
         return calculateClusters(teams, [], teamStats, PLAYERS_DATA, schedule);
     }, [teams, teamStats, schedule]);
+
+    // Cluster Histogram Data (Memoized)
+    const histogramData = useMemo(() => {
+        const agg = clusters.reduce((acc, team) => {
+            const cName = team.cluster;
+            if (!acc[cName]) {
+                acc[cName] = { name: cName, count: 0, total: 0, color: team.color };
+            }
+            acc[cName].count++;
+            const val = team.displayStats ? team.displayStats[clusterMetric] : 0;
+            acc[cName].total += val;
+            return acc;
+        }, {});
+
+        const result = Object.values(agg)
+            .map(g => ({ ...g, value: g.total / g.count }))
+            .sort((a, b) => b.value - a.value);
+
+        // console.log('CLUSTERS DEBUG [0]:', JSON.stringify(clusters[0]));
+        // console.log('HISTOGRAM DATA DEBUG:', JSON.stringify(result));
+        return result;
+    }, [clusters, clusterMetric]);
 
     // Format Data for Comparison Bar
     const comparisonData = [
@@ -431,7 +454,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
 
                                     {/* Team Icons List for this Cluster */}
                                     <div className="flex flex-wrap justify-center gap-0.5 mt-1 max-w-[100px]">
-                                        {clusters.filter(c => c.cluster.includes(cluster.name.split(' ')[1])).map(t => (
+                                        {clusters.filter(c => c.cluster.startsWith(cluster.name.split(' ')[0])).map(t => (
                                             <div
                                                 key={t.name}
                                                 className="rounded-full bg-white/10 p-[1px] border border-white/5 flex items-center justify-center opacity-80"
@@ -476,6 +499,53 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                     <li><span className="text-[#ef4444]">🚨 Zone Critique</span> : Bas de classement GPS.</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+
+                    {/* 5. CLUSTER HISTOGRAM By Metric */}
+                    <div className="bg-white/5 p-6 rounded-xl border border-white/5 mt-6">
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+                            <h4 className="text-lg font-black text-white uppercase italic tracking-tighter">
+                                Moyennes par <span className="text-accent">Cluster</span>
+                            </h4>
+                            {/* Metric Selector */}
+                            <select
+                                value={clusterMetric}
+                                onChange={(e) => setClusterMetric(e.target.value)}
+                                className="bg-slate-900 text-white p-2 rounded-lg border border-white/10 text-xs font-bold uppercase outline-none focus:border-accent"
+                            >
+                                <option value="goalsFor">Buts Marqués / Match</option>
+                                <option value="goalsAgainst">Buts Encaissés / Match</option>
+                                <option value="goalDiff">Différence / Match</option>
+                                <option value="ppgHome">Pts Domicile (PPG)</option>
+                                <option value="ppgAway">Pts Extérieur (PPG)</option>
+                                <option value="resilience">Score Résilience (0-1)</option>
+                                <option value="starPower">Star Power (0-10)</option>
+                            </select>
+                        </div>
+
+                        {/* Chart */}
+                        <div className="w-full" style={{ height: 300 }}>
+                            <ResponsiveContainer width="100%" height="100%">
+                                <BarChart
+                                    data={histogramData}
+                                    margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                                >
+                                    <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" vertical={false} />
+                                    <XAxis dataKey="name" stroke="#64748b" tick={{ fontSize: 10, fill: '#94a3b8' }} interval={0} height={40} />
+                                    <YAxis stroke="#64748b" tick={{ fontSize: 10, fill: '#94a3b8' }} />
+                                    <Tooltip
+                                        contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }}
+                                        itemStyle={{ color: '#fff' }}
+                                        cursor={{ fill: '#ffffff10' }}
+                                    />
+                                    <Bar dataKey="value" radius={[4, 4, 0, 0]}>
+                                        {histogramData.map((entry, index) => (
+                                            <Cell key={`cell-${index}`} fill={entry.color} />
+                                        ))}
+                                    </Bar>
+                                </BarChart>
+                            </ResponsiveContainer>
                         </div>
                     </div>
                 </div>
