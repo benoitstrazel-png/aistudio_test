@@ -1,53 +1,15 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ZAxis } from 'recharts';
+import playersData from '../data/players_optimized.json';
 
 const PlayerFocus = () => {
-    const [playersData, setPlayersData] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'Gls', direction: 'desc' });
     const [selectedMetric, setSelectedMetric] = useState('Gls');
 
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const url = '/data/players_2025.json';
-                console.log("Fetching player data from:", url);
-                const res = await fetch(url);
-
-                if (!res.ok) {
-                    throw new Error(`HTTP error! status: ${res.status}`);
-                }
-
-                const contentType = res.headers.get("content-type");
-                if (contentType && contentType.indexOf("application/json") === -1) {
-                    const text = await res.text();
-                    throw new Error(`Expected JSON, got ${contentType}. Preview: ${text.substring(0, 50)}...`);
-                }
-
-                const data = await res.json();
-                console.log("Players data loaded via fetch:", data.length);
-                if (!Array.isArray(data)) {
-                    throw new Error("Data format error: Expected an array of players.");
-                }
-
-                setPlayersData(data);
-                setLoading(false);
-            } catch (err) {
-                console.error("Failed to load player data:", err);
-                setError(err.message);
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-    }, []);
-
     // Filter and sort players
     const filteredPlayers = useMemo(() => {
-        if (!playersData.length) return [];
+        if (!playersData) return [];
         let players = [...playersData];
 
         // Filter by search term
@@ -73,7 +35,7 @@ const PlayerFocus = () => {
         });
 
         return players;
-    }, [playersData, searchTerm, sortConfig]);
+    }, [searchTerm, sortConfig]);
 
     const requestSort = (key) => {
         let direction = 'desc';
@@ -85,42 +47,23 @@ const PlayerFocus = () => {
 
     const topScorers = useMemo(() => {
         return [...playersData].sort((a, b) => (b.Gls || 0) - (a.Gls || 0)).slice(0, 10);
-    }, [playersData]);
+    }, []);
 
     const topAssisters = useMemo(() => {
         return [...playersData].sort((a, b) => (b.Ast || 0) - (a.Ast || 0)).slice(0, 10);
-    }, [playersData]);
+    }, []);
 
     const efficiencyData = useMemo(() => {
         return playersData
-            .filter(p => p.Gls > 2) // Only show relevant players
+            .filter(p => p.Gls > 2)
             .map(p => ({
                 name: p.Player,
                 x: p.xG || 0,
                 y: p.Gls || 0,
-                z: p.Min || 0, // Bubble size based on minutes played
+                z: p.Min || 0,
                 squad: p.Squad
             }));
-    }, [playersData]);
-
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center h-64">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
-                <span className="ml-4 text-white">Chargement des données...</span>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="flex flex-col items-center justify-center h-64 text-red-500">
-                <h3 className="text-xl font-bold mb-2">Erreur de chargement</h3>
-                <p>{error}</p>
-                <p className="text-sm text-gray-400 mt-2">Vérifiez la connexion ou rechargez la page.</p>
-            </div>
-        );
-    }
+    }, []);
 
     return (
         <div className="space-y-6 animate-fade-in">
@@ -159,105 +102,139 @@ const PlayerFocus = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Efficiency Chart */}
-                <div className="glass-card p-6 rounded-2xl border border-white/10">
-                    <h3 className="text-xl font-bold text-white mb-1">Efficacité Offensive</h3>
-                    <p className="text-xs text-slate-400 mb-4">Buts Réels vs Expected Goals (xG)</p>
-                    <div className="h-[300px] w-full">
+                <div className="glass-card p-6 rounded-xl border border-white/10">
+                    <h3 className="text-xl font-bold mb-4">Efficacité Offensive</h3>
+                    <p className="text-sm text-slate-400 mb-4">Buts Réels vs Expected Goals (xG)</p>
+                    <div className="h-80">
                         <ResponsiveContainer width="100%" height="100%">
                             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-                                <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
-                                <XAxis type="number" dataKey="x" name="xG" unit="" stroke="#94a3b8" label={{ value: 'Expected Goals (xG)', position: 'bottom', offset: 0, fill: '#94a3b8', fontSize: 12 }} />
-                                <YAxis type="number" dataKey="y" name="Buts" unit="" stroke="#94a3b8" label={{ value: 'Buts Réels', angle: -90, position: 'insideLeft', fill: '#94a3b8', fontSize: 12 }} />
+                                <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
+                                <XAxis type="number" dataKey="x" name="xG" unit="" stroke="#94a3b8" label={{ value: 'xG (Expected Goals)', position: 'bottom', fill: '#94a3b8' }} />
+                                <YAxis type="number" dataKey="y" name="Buts" unit="" stroke="#94a3b8" label={{ value: 'Buts', angle: -90, position: 'left', fill: '#94a3b8' }} />
                                 <ZAxis type="number" dataKey="z" range={[50, 400]} name="Minutes" />
-                                <Tooltip cursor={{ strokeDasharray: '3 3' }} contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }} itemStyle={{ color: '#fff' }} />
-                                <Scatter name="Joueurs" data={efficiencyData} fill="#f43f5e" fillOpacity={0.6} />
+                                <Tooltip cursor={{ strokeDasharray: '3 3' }}
+                                    contentStyle={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#f8fafc' }}
+                                    formatter={(value, name, props) => {
+                                        if (name === 'x') return [value, 'xG'];
+                                        if (name === 'y') return [value, 'Buts'];
+                                        return [value, name];
+                                    }}
+                                />
+                                <Scatter name="Joueurs" data={efficiencyData} fill="#facc15" />
                             </ScatterChart>
                         </ResponsiveContainer>
                     </div>
                 </div>
 
-                {/* Top Metrics Bar Chart */}
-                <div className="glass-card p-6 rounded-2xl border border-white/10">
+                {/* Top Performers Bar Chart */}
+                <div className="glass-card p-6 rounded-xl border border-white/10">
                     <div className="flex justify-between items-center mb-4">
-                        <div>
-                            <h3 className="text-xl font-bold text-white mb-1">Top 10 Performers</h3>
-                            <p className="text-xs text-slate-400">Classement par métrique</p>
-                        </div>
+                        <h3 className="text-xl font-bold">Top 10 Performers</h3>
                         <select
-                            className="bg-slate-800 border-none text-white text-sm rounded-lg p-2 focus:ring-2 focus:ring-accent"
+                            className="bg-slate-800 border border-slate-700 rounded px-2 py-1 text-sm outline-none focus:border-accent"
                             value={selectedMetric}
                             onChange={(e) => setSelectedMetric(e.target.value)}
                         >
                             <option value="Gls">Buts</option>
-                            <option value="Ast">Passes D.</option>
+                            <option value="Ast">Passes</option>
                             <option value="xG">xG</option>
-                            <option value="npxG">npxG</option>
                             <option value="xAG">xAG</option>
+                            <option value="SCA">SCA</option>
                         </select>
                     </div>
-                    <div className="h-[300px] w-full">
+                    <p className="text-sm text-slate-400 mb-4">Classement par métrique</p>
+                    <div className="h-80">
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={[...playersData].sort((a, b) => b[selectedMetric] - a[selectedMetric]).slice(0, 10)}
+                                data={[...playersData].sort((a, b) => (b[selectedMetric] || 0) - (a[selectedMetric] || 0)).slice(0, 10)}
                                 layout="vertical"
-                                margin={{ top: 5, right: 30, left: 40, bottom: 5 }}
+                                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                             >
-                                <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" horizontal={false} />
+                                <CartesianGrid strokeDasharray="3 3" stroke="#334155" horizontal={false} />
                                 <XAxis type="number" stroke="#94a3b8" />
-                                <YAxis type="category" dataKey="Player" stroke="#94a3b8" width={100} tick={{ fontSize: 11 }} />
-                                <Tooltip contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#fff' }} cursor={{ fill: '#ffffff10' }} />
-                                <Bar dataKey={selectedMetric} fill="#3b82f6" radius={[0, 4, 4, 0]} barSize={20} />
+                                <YAxis dataKey="Player" type="category" width={100} stroke="#94a3b8" tick={{ fontSize: 12 }} />
+                                <Tooltip
+                                    contentStyle={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#f8fafc' }}
+                                    cursor={{ fill: 'rgba(255,255,255,0.05)' }}
+                                />
+                                <Bar dataKey={selectedMetric} fill="#3b82f6" radius={[0, 4, 4, 0]} />
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
                 </div>
             </div>
 
-            {/* Detailed Table */}
-            <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
-                <div className="p-4 border-b border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <h3 className="text-lg font-bold text-white">Base de Données Joueurs</h3>
+            {/* Data Table */}
+            <div className="glass-card rounded-xl border border-white/10 overflow-hidden">
+                <div className="p-4 border-b border-white/10">
+                    <h3 className="text-lg font-bold mb-4">Base de Données Joueurs</h3>
                     <input
                         type="text"
                         placeholder="Rechercher un joueur ou une équipe..."
-                        className="bg-slate-900/50 border border-white/10 rounded-lg px-4 py-2 text-sm text-white w-full md:w-64 focus:outline-none focus:border-accent"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white outline-none focus:border-accent transition-colors"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
                 </div>
                 <div className="overflow-x-auto">
-                    <table className="w-full text-sm text-left text-slate-300">
-                        <thead className="text-xs text-slate-400 uppercase bg-slate-900/50">
+                    <table className="w-full text-sm text-left">
+                        <thead className="text-xs text-slate-400 uppercase bg-slate-800/50">
                             <tr>
-                                <th className="px-6 py-3 cursor-pointer hover:text-white" onClick={() => requestSort('Player')}>Joueur</th>
-                                <th className="px-6 py-3 cursor-pointer hover:text-white" onClick={() => requestSort('Squad')}>Club</th>
-                                <th className="px-6 py-3 cursor-pointer hover:text-white" onClick={() => requestSort('Pos')}>Pos</th>
-                                <th className="px-6 py-3 cursor-pointer hover:text-white" onClick={() => requestSort('Age')}>Age</th>
-                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white" onClick={() => requestSort('MP')}>Matchs</th>
-                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white" onClick={() => requestSort('Min')}>Min</th>
-                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white text-accent" onClick={() => requestSort('Gls')}>Buts</th>
-                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white text-cyan-400" onClick={() => requestSort('Ast')}>Passes</th>
-                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white" onClick={() => requestSort('xG')}>xG</th>
+                                <th className="px-6 py-3 cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('Player')}>
+                                    Joueur {sortConfig.key === 'Player' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('Squad')}>
+                                    Club {sortConfig.key === 'Squad' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('Pos')}>
+                                    Pos {sortConfig.key === 'Pos' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('Age')}>
+                                    Age {sortConfig.key === 'Age' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('MP')}>
+                                    Matchs {sortConfig.key === 'MP' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('Min')}>
+                                    Min {sortConfig.key === 'Min' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 text-right cursor-pointer hover:text-accent transition-colors text-accent font-bold" onClick={() => requestSort('Gls')}>
+                                    Buts {sortConfig.key === 'Gls' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('Ast')}>
+                                    Passes {sortConfig.key === 'Ast' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
+                                <th className="px-6 py-3 text-right cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('xG')}>
+                                    xG {sortConfig.key === 'xG' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            {filteredPlayers.map((player, index) => (
-                                <tr key={index} className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                    <td className="px-6 py-4 font-medium text-white">{player.Player}</td>
-                                    <td className="px-6 py-4">{player.Squad}</td>
-                                    <td className="px-6 py-4">{player.Pos}</td>
-                                    <td className="px-6 py-4">{player.Age}</td>
-                                    <td className="px-6 py-4 text-right">{player.MP}</td>
-                                    <td className="px-6 py-4 text-right">{player.Min}</td>
-                                    <td className="px-6 py-4 text-right font-bold text-accent">{player.Gls}</td>
-                                    <td className="px-6 py-4 text-right font-bold text-cyan-400">{player.Ast}</td>
-                                    <td className="px-6 py-4 text-right">{player.xG}</td>
+                        <tbody className="divide-y divide-slate-700">
+                            {filteredPlayers.length > 0 ? (
+                                filteredPlayers.map((player, index) => (
+                                    <tr key={index} className="hover:bg-slate-800/30 transition-colors">
+                                        <td className="px-6 py-4 font-medium text-white">{player.Player}</td>
+                                        <td className="px-6 py-4">{player.Squad}</td>
+                                        <td className="px-6 py-4">{player.Pos}</td>
+                                        <td className="px-6 py-4">{player.Age}</td>
+                                        <td className="px-6 py-4 text-right">{player.MP}</td>
+                                        <td className="px-6 py-4 text-right">{player.Min}</td>
+                                        <td className="px-6 py-4 text-right font-bold text-accent">{player.Gls}</td>
+                                        <td className="px-6 py-4 text-right">{player.Ast}</td>
+                                        <td className="px-6 py-4 text-right">{player.xG}</td>
+                                    </tr>
+                                ))
+                            ) : (
+                                <tr>
+                                    <td colSpan="9" className="px-6 py-8 text-center text-slate-400">
+                                        Aucun joueur trouvé.
+                                    </td>
                                 </tr>
-                            ))}
+                            )}
                         </tbody>
                     </table>
                 </div>
-                <div className="p-3 text-center text-xs text-slate-500 border-t border-white/10">
+                <div className="p-4 border-t border-white/10 text-xs text-slate-500 text-center">
                     Affichage de {filteredPlayers.length} joueurs
                 </div>
             </div>

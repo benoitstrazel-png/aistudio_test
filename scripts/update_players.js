@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const DATA_DIR = path.join(__dirname, '../src/data');
-const OUTPUT_FILE = path.join(__dirname, '../public/data/players_2025.json');
+const OUTPUT_FILE = path.join(DATA_DIR, 'players_optimized.json');
 const DATASET_ID = 'hubertsidorowicz/football-players-stats-2025-2026';
 
 // Map CSV columns to JSON keys for Frontend Compatibility
