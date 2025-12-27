@@ -65,8 +65,24 @@ const PlayerFocus = () => {
             }));
     }, []);
 
+    // DEBUG: Aider à diagnostiquer le problème sur Vercel
+    if (!playersData || playersData.length === 0) {
+        return (
+            <div className="p-8 text-center border-2 border-red-500 rounded-xl bg-red-900/20 text-white">
+                <h2 className="text-2xl font-bold mb-4">⚠️ DEBUG: Aucune donnée joueur trouvée</h2>
+                <p>Le fichier JSON semble vide ou non chargé.</p>
+                <p className="text-sm mt-2 font-mono">playersData: {JSON.stringify(playersData)}</p>
+            </div>
+        );
+    }
+
     return (
         <div className="space-y-6 animate-fade-in">
+            {/* DEBUG BANNER (Temporaire) */}
+            <div className="bg-blue-900/50 border border-blue-500 p-2 rounded text-xs text-blue-200 text-center">
+                DEBUG INFO: Chargé {playersData.length} joueurs. Premier joueur: {playersData[0]?.Player} ({playersData[0]?.Squad})
+            </div>
+
             {/* Header Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="glass-card p-4 rounded-xl border border-white/10">
