@@ -80,7 +80,7 @@ const PlayerFocus = () => {
         <div className="space-y-6 animate-fade-in">
             {/* DEBUG BANNER (Temporaire) */}
             <div className="bg-blue-900/50 border border-blue-500 p-2 rounded text-xs text-blue-200 text-center">
-                DEBUG INFO: Chargé {playersData.length} joueurs. Premier joueur: {playersData[0]?.Player} ({playersData[0]?.Squad})
+                DEBUG INFO: Chargé {playersData.length} joueurs. Build: {new Date().toISOString()}
             </div>
 
             {/* Header Stats */}
