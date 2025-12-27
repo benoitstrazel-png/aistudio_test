@@ -288,9 +288,9 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-8">
+                    <div className="flex flex-col gap-6">
                         {/* CHART */}
-                        <div className="lg:col-span-2 bg-white/5 rounded-2xl p-4 border border-white/5 relative" style={{ height: '350px', maxHeight: '600px', overflow: 'hidden' }}>
+                        <div className="h-[460px] bg-white/5 rounded-2xl p-4 border border-white/5 relative" style={{ height: '460px', overflow: 'hidden' }}>
                             {/* Axis Labels */}
                             <div className="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-accent uppercase tracking-widest bg-black/50 px-2 rounded">
                                 ▲ Puissance Offensive
@@ -311,6 +311,12 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                     <XAxis type="number" dataKey="x" name="Défense" domain={[0, 100]} hide />
                                     <YAxis type="number" dataKey="y" name="Attaque" domain={[0, 100]} hide />
                                     <ZAxis type="number" dataKey="size" range={[50, 400]} name="Efficacité" />
+                                    {/* Quadrant Backgrounds (Surrounding Clusters) */}
+                                    <ReferenceArea x1={60} x2={100} y1={60} y2={100} fill="#CEF002" fillOpacity={0.03} />
+                                    <ReferenceArea x1={0} x2={60} y1={60} y2={100} fill="#f472b6" fillOpacity={0.03} />
+                                    <ReferenceArea x1={60} x2={100} y1={0} y2={40} fill="#38bdf8" fillOpacity={0.03} />
+                                    <ReferenceArea x1={0} x2={30} y1={0} y2={30} fill="#ef4444" fillOpacity={0.03} />
+
                                     <Tooltip
                                         cursor={{ strokeDasharray: '3 3' }}
                                         content={({ active, payload }) => {
@@ -319,8 +325,13 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                                 return (
                                                     <div className="bg-slate-900 border border-white/10 p-3 rounded-xl shadow-xl z-50">
                                                         <div className="flex items-center gap-2 mb-2 border-b border-white/10 pb-2">
-                                                            <span className="font-black text-white uppercase italic">{data.name}</span>
-                                                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10" style={{ color: data.color }}>{data.cluster}</span>
+                                                            <div className="w-8 h-8 bg-white/10 rounded-full p-1 bg-white">
+                                                                <img src={data.img} alt={data.name} className="w-full h-full object-contain" />
+                                                            </div>
+                                                            <div className="flex flex-col">
+                                                                <span className="font-black text-white uppercase italic leading-none">{data.name}</span>
+                                                                <span className="text-[10px] text-accent uppercase leading-none mt-0.5">{data.cluster}</span>
+                                                            </div>
                                                         </div>
                                                         <div className="text-xs text-secondary space-y-1">
                                                             <div>Attaque: <span className="text-white font-mono">{Math.round(data.y)}/100</span></div>
@@ -333,41 +344,49 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                             return null;
                                         }}
                                     />
-                                    <Scatter name="Clubs" data={clusters} fill="#ffffff">
-                                        {clusters.map((entry, index) => (
-                                            <Cell key={`cell-${index}`} fill={entry.color} stroke="#fff" strokeWidth={1} />
-                                        ))}
-                                    </Scatter>
+                                    <Scatter name="Clubs" data={clusters} shape={(props) => {
+                                        const { cx, cy, payload } = props;
+                                        // Skip invalid coords
+                                        if (isNaN(cx) || isNaN(cy)) return null;
+
+                                        const size = 32;
+                                        return (
+                                            <foreignObject x={cx - (size / 2)} y={cy - (size / 2)} width={size} height={size}>
+                                                <div className="w-full h-full rounded-full bg-slate-900 shadow-xl flex items-center justify-center border border-white/20 overflow-hidden hover:scale-125 hover:z-50 hover:border-accent transition-all cursor-pointer">
+                                                    <img src={payload.img} alt={payload.name} className="w-[80%] h-[80%] object-contain" />
+                                                </div>
+                                            </foreignObject>
+                                        );
+                                    }} />
                                 </ScatterChart>
                             </ResponsiveContainer>
                         </div>
 
-                        {/* LEGEND / LIST */}
-                        <div className="flex flex-col gap-4 overflow-y-auto max-h-[350px] custom-scrollbar">
-                            <h4 className="text-lg font-bold text-white uppercase underline decoration-accent decoration-2 underline-offset-4">
-                                Légende des Clusters
+                        {/* HORIZONTAL LEGEND */}
+                        <div className="flex flex-row flex-wrap justify-center gap-4 bg-black/20 p-4 rounded-xl border border-white/5">
+                            <h4 className="w-full text-center text-sm font-bold text-white uppercase mb-2">
+                                Légende & Zones Clés
                             </h4>
 
                             {[
-                                { name: 'Candidats au Titre', color: '#CEF002', desc: 'Attaque élite & Défense solide' },
-                                { name: 'Attaque de Feu', color: '#f472b6', desc: 'Spectaculaires mais friables' },
-                                { name: 'Blocs Murs', color: '#38bdf8', desc: 'Défense de fer, attaque limitée' },
-                                { name: 'Ventre Mou / Équilibrés', color: '#94a3b8', desc: 'Stats moyennes partout' },
-                                { name: 'Zone Rouge', color: '#ef4444', desc: 'En difficulté des deux côtés' },
+                                { name: 'Candidats au Titre', color: '#CEF002', desc: 'Complet' },
+                                { name: 'Attaque de Feu', color: '#f472b6', desc: 'Spectaculaire' },
+                                { name: 'Blocs Murs', color: '#38bdf8', desc: 'Défensif' },
+                                { name: 'Ventre Mou / Équilibrés', color: '#94a3b8', desc: 'Moyen' },
+                                { name: 'Zone Rouge', color: '#ef4444', desc: 'Danger' },
                             ].map(cluster => (
-                                <div key={cluster.name} className="p-3 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                                <div key={cluster.name} className="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 min-w-[100px] hover:bg-white/10 transition-all">
                                     <div className="flex items-center gap-2 mb-1">
-                                        <div className="w-3 h-3 rounded-full shadow-[0_0_10px_currentColor]" style={{ backgroundColor: cluster.color, color: cluster.color }}></div>
-                                        <span className="font-bold text-xs text-white uppercase">{cluster.name}</span>
+                                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: cluster.color }}></div>
+                                        <span className="font-bold text-[9px] text-white uppercase">{cluster.name.split('/')[0]}</span>
                                     </div>
-                                    <p className="text-[10px] text-secondary mb-2">{cluster.desc}</p>
 
-                                    {/* Mini list of teams in this cluster */}
-                                    <div className="flex flex-wrap gap-1">
-                                        {clusters.filter(c => c.cluster === cluster.name).map(t => (
-                                            <span key={t.name} className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${t.name === teamA || t.name === teamB ? 'bg-white text-black' : 'bg-black/30 text-slate-400'}`}>
-                                                {t.name}
-                                            </span>
+                                    {/* Team Icons List for this Cluster */}
+                                    <div className="flex flex-wrap justify-center gap-1 mt-1 max-w-[120px]">
+                                        {clusters.filter(c => c.cluster.includes(cluster.name.split('/')[0]) || c.cluster === cluster.name).map(t => (
+                                            <div key={t.name} className="w-5 h-5 rounded-full bg-white/10 p-0.5 border border-white/5" title={t.name}>
+                                                <img src={t.img} alt={t.name} className="w-full h-full object-contain" />
+                                            </div>
                                         ))}
                                     </div>
                                 </div>
