@@ -290,7 +290,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
 
                     <div className="flex flex-col gap-6">
                         {/* CHART */}
-                        <div className="h-[460px] bg-white/5 rounded-2xl p-4 border border-white/5 relative" style={{ height: '460px', overflow: 'hidden' }}>
+                        <div className="h-[620px] bg-white/5 rounded-2xl p-4 pb-12 border border-white/5 relative" style={{ height: '620px', overflow: 'hidden' }}>
                             {/* Axis Labels */}
                             <div className="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-accent uppercase tracking-widest bg-black/50 px-2 rounded">
                                 ▲ Puissance Offensive
@@ -325,9 +325,6 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                                 return (
                                                     <div className="bg-slate-900 border border-white/10 p-3 rounded-xl shadow-xl z-50">
                                                         <div className="flex items-center gap-2 mb-2 border-b border-white/10 pb-2">
-                                                            <div className="w-8 h-8 bg-white/10 rounded-full p-1 bg-white">
-                                                                <img src={data.img} alt={data.name} className="w-full h-full object-contain" />
-                                                            </div>
                                                             <div className="flex flex-col">
                                                                 <span className="font-black text-white uppercase italic leading-none">{data.name}</span>
                                                                 <span className="text-[10px] text-accent uppercase leading-none mt-0.5">{data.cluster}</span>
@@ -402,6 +399,32 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+
+                    {/* METHODOLOGY BLOCK */}
+                    <div className="bg-white/5 p-4 rounded-xl border border-white/5 mt-4">
+                        <h4 className="text-sm font-bold text-white uppercase mb-2 flex items-center gap-2">
+                            <span className="text-accent text-lg">ℹ️</span> Méthodologie du Clustering
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[10px] text-secondary leading-relaxed">
+                            <div>
+                                <strong className="text-white block mb-1">Calcul des Scores (Pondération)</strong>
+                                <p>
+                                    Les positions sur le graphique sont déterminées par une moyenne pondérée :
+                                    <br />• <span className="text-white">85% : Performance de la saison actuelle</span> (xG pour l'attaque, Buts Encaissés pour la défense).
+                                    <br />• <span className="text-white">15% : Historique & Modèle</span> (Simulations prédictives basées sur les 2 dernières saisons).
+                                </p>
+                            </div>
+                            <div>
+                                <strong className="text-white block mb-1">Définitions des Groupes</strong>
+                                <ul className="list-disc pl-3 space-y-1">
+                                    <li><span className="text-[#CEF002]">Candidats au Titre</span>: Attaque élite & Défense solide. Les favoris statistiques.</li>
+                                    <li><span className="text-[#f472b6]">Attaque de Feu</span>: Création d'occasions massive, mais défense perméable.</li>
+                                    <li><span className="text-[#38bdf8]">Blocs Murs</span>: Défense hermétique, mais difficultés à marquer.</li>
+                                    <li><span className="text-[#ef4444]">Zone Rouge</span>: Faiblesse structurelle en attaque et en défense.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

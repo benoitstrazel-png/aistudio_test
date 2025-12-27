@@ -12,9 +12,8 @@ export const calculateClusters = (teams, standings, teamStats) => {
     const teamData = teams.map(teamName => {
         // Standings Data
         const teamStanding = standings.find(s => s.team === teamName) || {};
-        const goalsFor = teamStanding.points !== undefined ? teamStanding.goalsFor || 0 : 0; // standings might not have goalsFor explicit if I derived it in component, wait. 
-        // In ClubComparator, standings are derived from schedule. 
-        // We should pass the *derived* current standings to this function, or re-derive them.
+        const goalsFor = teamStanding.goalsFor || 0;
+        const goalsAgainst = teamStanding.goalsAgainst || 0;
 
         // Let's rely on teamStats (parameters) + Aggregated Player Stats for a "Signature"
         const stats = teamStats[teamName] || { att: 1, def: 1 };
@@ -23,11 +22,6 @@ export const calculateClusters = (teams, standings, teamStats) => {
         // Normalize team name for lookup
         const normalizeName = (str) => str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
         const target = normalizeName(teamName);
-
-        // Match player squad name
-        // Mapping fix
-        const mapping = { 'psg': 'parissg', 'saintetienne': 'saintetienne' };
-        // (Simplified, better to use the one from FocusPlayers but I'll replicate fuzzy logic)
 
         const teamPlayers = PLAYERS_DB.filter(p => {
             const squad = normalizeName(p.Squad);
@@ -49,6 +43,8 @@ export const calculateClusters = (teams, standings, teamStats) => {
             defParam: stats.def,
             totalxG,
             totalGoals,
+            goalsFor,
+            goalsAgainst,
             efficiency
         };
     });
@@ -58,26 +54,42 @@ export const calculateClusters = (teams, standings, teamStats) => {
     const minAtt = Math.min(...teamData.map(t => t.attParam));
     const maxDef = Math.max(...teamData.map(t => t.defParam)); // Higher is worse usually
     const minDef = Math.min(...teamData.map(t => t.defParam));
+
+    // Use Total xG as primary offensive metric (more predictive than pure goals over short term)
     const maxXG = Math.max(...teamData.map(t => t.totalxG));
     const minXG = Math.min(...teamData.map(t => t.totalxG));
 
+    // Use Goals Against for defense
+    const maxGA = Math.max(...teamData.map(t => t.goalsAgainst));
+    const minGA = Math.min(...teamData.map(t => t.goalsAgainst));
+
     // 3. Scoring & Clustering
     const scoredTeams = teamData.map(team => {
-        // Offensive Score: Combination of theoretical Attack strength + Real xG generation
-        const offScore = (normalize(team.attParam, minAtt, maxAtt) * 0.6) + (normalize(team.totalxG, minXG, maxXG) * 0.4);
+        // Offensive Score: 85% Current (xG) + 15% Model (Att Param)
+        const normXG = normalize(team.totalxG, minXG, maxXG);
+        const normAtt = normalize(team.attParam, minAtt, maxAtt);
 
-        // Defensive Score: Inverse of Def Param (assuming High Def param = Weak defense in Poisson usually, but let's check)
-        // In most Poisson implementations for football:
-        // att > 1 means scores more than average.
-        // def > 1 means concedes more than average.
-        // So "Strong Defense" means LOW def parameter.
-        const defScore = 100 - normalize(team.defParam, minDef, maxDef);
+        const offScore = (normXG * 0.85) + (normAtt * 0.15);
+
+        // Defensive Score: 85% Current (Goals Against) + 15% Model (Def Param)
+        // High GA = Bad Defense = Low Score
+        let normGA = 50;
+        if (maxGA !== minGA) {
+            normGA = 100 - ((team.goalsAgainst - minGA) / (maxGA - minGA)) * 100;
+        } else {
+            normGA = 50; // No range
+        }
+
+        // High Def Param = Bad Defense (usually) = Low Score
+        const normDefParam = 100 - normalize(team.defParam, minDef, maxDef);
+
+        const defScore = (normGA * 0.85) + (normDefParam * 0.15);
 
         return {
             ...team,
             x: defScore, // X-Axis: Defense
             y: offScore, // Y-Axis: Offense
-            size: team.efficiency * 10 // Bubble size = Efficiency
+            size: team.efficiency * 10
         };
     });
 
