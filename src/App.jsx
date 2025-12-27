@@ -12,6 +12,8 @@ import AuthPage from './components/AuthPage';
 import ExpertAnalysis from './components/ExpertAnalysis';
 import FocusPlayers from './components/FocusPlayers';
 import { getLeagueLogo } from './utils/logos';
+import ClubComparator from './components/ClubComparator';
+import BettingSimulator from './components/BettingSimulator';
 
 // Load JSON directly (Vite supports this)
 import APP_DATA from './data/app_data.json';
@@ -25,24 +27,25 @@ import { predictMatchLive } from './utils/prediction';
 function App() {
     // Auth State
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [activeTab, setActiveTab] = useState('dashboard');
 
     // Default to first match or mock
     const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0] || {});
     // Shared state for Calendar and Standings view
     const [currentViewWeek, setCurrentViewWeek] = useState(APP_DATA.currentWeek + 1);
 
-    // List of strict 18 teams for 2025-2026 Season
-    const L1_TEAMS_2025 = [
-        "Angers", "Auxerre", "Brest", "Le Havre", "Lens", "Lille",
-        "Lorient", "Lyon", "Marseille", "Metz", "Monaco", "Montpellier",
-        "Nantes", "Nice", "PSG", "Reims", "Rennes", "Saint-Etienne", "Strasbourg", "Toulouse"
-    ].sort();
-
-    const [teams, setTeams] = useState(L1_TEAMS_2025);
+    // Dynamically derive teams from the schedule to ensure 100% consistency with data
+    const [teams, setTeams] = useState([]);
 
     useEffect(() => {
-        // Enforce strict L1 Team list
-        setTeams(L1_TEAMS_2025);
+        if (APP_DATA.fullSchedule && APP_DATA.fullSchedule.length > 0) {
+            const uniqueTeams = new Set();
+            APP_DATA.fullSchedule.forEach(match => {
+                if (match.homeTeam) uniqueTeams.add(match.homeTeam);
+                if (match.awayTeam) uniqueTeams.add(match.awayTeam);
+            });
+            setTeams(Array.from(uniqueTeams).sort());
+        }
     }, []);
 
     // AUTH GATE
@@ -123,37 +126,49 @@ function App() {
                 </div>
             </header>
 
+            {/* TABS */}
+            <div className="flex justify-center gap-4 mb-10">
+                <button
+                    onClick={() => setActiveTab('dashboard')}
+                    className={`px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all ${activeTab === 'dashboard' ? 'bg-accent text-slate-900' : 'bg-white/5 text-secondary hover:text-white'}`}
+                >
+                    Tableau de Bord
+                </button>
+                <button
+                    onClick={() => setActiveTab('comparator')}
+                    className={`px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all ${activeTab === 'comparator' ? 'bg-accent text-slate-900' : 'bg-white/5 text-secondary hover:text-white'}`}
+                >
+                    Comparateur Clubs
+                </button>
+            </div>
+
             <main className="grid grid-cols-1 gap-16">
+                {activeTab === 'dashboard' ? (
+                    <>
+                        {/* 1. SECTION STATS */}
+                        <section className="mb-12">
+                            <div className="flex flex-col items-center mb-8 text-center">
+                                <h2 className="text-3xl font-black text-accent tracking-tight mb-2">📊 STATISTIQUES SAISON</h2>
+                                <p className="text-secondary text-sm font-medium uppercase tracking-widest">Moyennes globales de la ligue</p>
+                            </div>
+                            <DashboardStats
+                                stats={APP_DATA.seasonStats}
+                                schedule={APP_DATA.fullSchedule}
+                                currentWeek={APP_DATA.currentWeek}
+                                teamStats={TEAM_STATS}
+                            />
+                        </section>
 
-                {/* 1. SECTION STATS */}
-                <section>
-                    <div className="flex flex-col items-center mb-10 text-center">
-                        <h2 className="text-3xl font-black text-accent tracking-tight mb-2">📊 STATISTIQUES SAISON</h2>
-                        <p className="text-secondary text-sm font-medium uppercase tracking-widest">Moyennes globales de la ligue</p>
-                    </div>
-                    <DashboardStats
-                        stats={APP_DATA.seasonStats}
-                        schedule={APP_DATA.fullSchedule}
-                        currentWeek={APP_DATA.currentWeek}
-                        teamStats={TEAM_STATS}
-                    />
-                </section>
-
-                <div className="grid lg:grid-cols-12 gap-8">
-
-                    {/* LEFT COLUMN */}
-                    <div className="lg:col-span-8 flex flex-col gap-16">
-
-                        {/* 2. SECTION ANALYSE */}
-                        <section>
+                        {/* 2. SECTION ANALYSE (FULL WIDTH) */}
+                        <section className="mb-16">
                             <div className="flex flex-col items-center mb-10 text-center">
                                 <h2 className="text-3xl font-black text-accent tracking-tight mb-2">🧠 CENTRE D'ANALYSE</h2>
                                 <p className="text-secondary text-sm font-medium uppercase tracking-widest">Simulateur de match et analyse détaillée</p>
                             </div>
 
                             <div className="card border-t-4 border-accent bg-[#0B1426]">
-                                {/* SELECTORS with Logos */}
-                                <div className="flex flex-row items-center justify-between gap-4 md:gap-12 mb-12 bg-black/20 p-6 rounded-2xl border border-white/5 overflow-x-auto">
+                                {/* SELECTOR ROW (Centered) */}
+                                <div className="flex flex-row items-center justify-center gap-4 md:gap-12 mb-12 bg-black/20 p-6 rounded-2xl border border-white/5 overflow-x-auto">
                                     <div className="flex items-center gap-3 shrink-0">
                                         <TeamLogo teamName={selectedMatch.homeTeam} size="lg" />
                                         <div className="flex flex-col">
@@ -201,62 +216,80 @@ function App() {
                                     </div>
                                 </div>
 
-                                <div className="grid md:grid-cols-2 gap-8 mb-12 bg-black/10 rounded-3xl p-6 border border-white/5">
-                                    <MatchPrediction match={selectedMatch} />
-                                    <div className="bg-white/5 rounded-2xl p-4 border border-white/5">
-                                        <NextMatchRadar homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} teamStats={TEAM_STATS} />
+                                {/* MAIN ANALYIS GRID: LEFT (PRED+RADAR) VS RIGHT (HISTORY) */}
+                                <div className="grid xl:grid-cols-12 gap-8">
+
+                                    {/* LEFT: Prediction & Radar */}
+                                    <div className="xl:col-span-7 flex flex-col gap-6">
+                                        <div className="grid md:grid-cols-2 gap-6 h-full">
+                                            <MatchPrediction match={selectedMatch} />
+                                            <div className="bg-white/5 rounded-2xl p-4 border border-white/5 flex items-center justify-center">
+                                                <NextMatchRadar homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} teamStats={TEAM_STATS} />
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    {/* RIGHT: History */}
+                                    <div className="xl:col-span-5 border-l border-white/5 pl-0 xl:pl-8 pt-8 xl:pt-0">
+                                        <MatchHistory match={selectedMatch} />
+                                    </div>
+
                                 </div>
+                            </div>
+                        </section>
 
-                                <div className="border-t border-white/10 pt-10">
-                                    <MatchHistory match={selectedMatch} />
+                        {/* FOCUS PLAYERS (Full Width) */}
+                        <div className="mb-16">
+                            <FocusPlayers homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} />
+                        </div>
+
+                        {/* 3. THREE COLUMNS: CALENDAR, BETTING, STANDINGS */}
+                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-16 items-start">
+
+                            {/* COL 1: CALENDAR */}
+                            <section>
+                                <div className="flex flex-col items-center mb-8 text-center">
+                                    <h2 className="text-2xl font-black text-accent tracking-tight mb-2">📅 CALENDRIER</h2>
                                 </div>
-                            </div>
-                        </section>
+                                <LeagueCalendar
+                                    schedule={APP_DATA.fullSchedule}
+                                    selectedWeek={currentViewWeek}
+                                    onWeekChange={setCurrentViewWeek}
+                                    highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
+                                />
+                            </section>
 
-                        {/* NEW: FOCUS PLAYERS Section */}
-                        <FocusPlayers homeTeam={selectedMatch.homeTeam} awayTeam={selectedMatch.awayTeam} />
 
-                        {/* 3. SECTION CALENDRIER */}
-                        <section>
-                            <div className="flex flex-col items-center mb-10 text-center">
-                                <h2 className="text-3xl font-black text-accent tracking-tight mb-2">📅 CALENDRIER</h2>
-                                <p className="text-secondary text-sm font-medium uppercase tracking-widest">Résultats et matchs à venir</p>
-                            </div>
-                            <LeagueCalendar
-                                schedule={APP_DATA.fullSchedule}
-                                selectedWeek={currentViewWeek}
-                                onWeekChange={setCurrentViewWeek}
-                                highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
-                            />
-                        </section>
-                    </div>
 
-                    {/* RIGHT COLUMN */}
-                    <div className="lg:col-span-4 flex flex-col gap-12">
+                            {/* COL 3: STANDINGS */}
+                            <section>
+                                <div className="flex flex-col items-center mb-8 text-center">
+                                    <h2 className="text-2xl font-black text-accent tracking-tight mb-2">🏆 CLASSEMENT</h2>
+                                </div>
+                                <Standings
+                                    standings={APP_DATA.standings}
+                                    schedule={APP_DATA.fullSchedule}
+                                    currentWeek={APP_DATA.currentWeek}
+                                    selectedWeek={currentViewWeek}
+                                    onWeekChange={setCurrentViewWeek}
+                                    highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
+                                />
+                            </section>
+                        </div>
 
-                        {/* 4. SECTION CLASSEMENT */}
-                        <section>
-                            <div className="flex flex-col items-center mb-10 text-center">
-                                <h2 className="text-3xl font-black text-accent tracking-tight mb-2">🏆 CLASSEMENT</h2>
-                                <p className="text-secondary text-sm font-medium uppercase tracking-widest">Tableau en temps réel</p>
-                            </div>
-                            <Standings
-                                standings={APP_DATA.standings}
-                                schedule={APP_DATA.fullSchedule}
-                                currentWeek={APP_DATA.currentWeek}
-                                selectedWeek={currentViewWeek}
-                                onWeekChange={setCurrentViewWeek}
-                                highlightTeams={[selectedMatch.homeTeam, selectedMatch.awayTeam]}
-                            />
-                        </section>
-                    </div>
-
-                </div>
-
-                <div className="mt-12">
-                    <ExpertAnalysis nextMatches={APP_DATA.nextMatches} />
-                </div>
+                        {/* 4. EXPERT / ACTU */}
+                        <div className="mt-12">
+                            <ExpertAnalysis nextMatches={APP_DATA.nextMatches} />
+                        </div>
+                    </>
+                ) : (
+                    <ClubComparator
+                        teams={teams}
+                        schedule={APP_DATA.fullSchedule}
+                        teamStats={TEAM_STATS}
+                        currentWeek={APP_DATA.currentWeek}
+                    />
+                )}
             </main>
         </div>
     );

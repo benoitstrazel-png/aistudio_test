@@ -1,6 +1,6 @@
 import React from 'react';
 import SeasonGoalsChart from './SeasonGoalsChart';
-import InfoTooltip from './ui/InfoTooltip';
+import { Info } from 'lucide-react';
 
 const DashboardStats = ({ stats, schedule, currentWeek, teamStats }) => {
     return (
@@ -9,9 +9,12 @@ const DashboardStats = ({ stats, schedule, currentWeek, teamStats }) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Card 1 */}
                 <div className="flex flex-col items-center gap-4 h-full">
-                    <div className="flex flex-col items-center gap-1 z-10 h-12 justify-end">
-                        <h3 className="text-secondary text-xs font-bold uppercase tracking-widest text-center shadow-black drop-shadow-md">Buts Total Saison</h3>
-                        <InfoTooltip text="Somme des buts marqués par toutes les équipes depuis le début de la saison." className="ml-0" />
+                    <div className="flex flex-col items-center gap-2 z-10 min-h-[80px] justify-end">
+                        <h3 className="text-white text-lg font-bold uppercase tracking-wider text-center">Buts Total Saison</h3>
+                        <div className="flex items-start gap-2 text-secondary px-4 text-center">
+                            <Info size={14} className="shrink-0 mt-0.5" />
+                            <p className="text-xs leading-tight">Somme des buts marqués par toutes les équipes depuis le début de la saison.</p>
+                        </div>
                     </div>
                     <div className="glass-card relative overflow-hidden group w-full h-full flex flex-col items-center justify-center py-8">
                         <div className="absolute -right-4 -top-4 bg-accent/10 w-24 h-24 rounded-full blur-2xl group-hover:bg-accent/20 transition-all"></div>
@@ -24,9 +27,12 @@ const DashboardStats = ({ stats, schedule, currentWeek, teamStats }) => {
 
                 {/* Card 2 */}
                 <div className="flex flex-col items-center gap-4 h-full">
-                    <div className="flex flex-col items-center gap-1 z-10 h-12 justify-end">
-                        <h3 className="text-secondary text-xs font-bold uppercase tracking-widest text-center shadow-black drop-shadow-md">Moyenne Buts/Journée</h3>
-                        <InfoTooltip text="Moyenne des buts marqués par journée de championnat." className="ml-0" />
+                    <div className="flex flex-col items-center gap-2 z-10 min-h-[80px] justify-end">
+                        <h3 className="text-white text-lg font-bold uppercase tracking-wider text-center">Moyenne Buts/Journée</h3>
+                        <div className="flex items-start gap-2 text-secondary px-4 text-center">
+                            <Info size={14} className="shrink-0 mt-0.5" />
+                            <p className="text-xs leading-tight">Moyenne des buts marqués par journée de championnat.</p>
+                        </div>
                     </div>
                     <div className="glass-card relative overflow-hidden group w-full h-full flex flex-col items-center justify-center py-8">
                         <div className="absolute -right-4 -top-4 bg-blue-500/10 w-24 h-24 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
@@ -39,9 +45,12 @@ const DashboardStats = ({ stats, schedule, currentWeek, teamStats }) => {
 
                 {/* Card 3 */}
                 <div className="flex flex-col items-center gap-4 h-full">
-                    <div className="flex flex-col items-center gap-1 z-10 h-12 justify-end">
-                        <h3 className="text-secondary text-xs font-bold uppercase tracking-widest text-center shadow-black drop-shadow-md">Moyenne Buts/Match</h3>
-                        <InfoTooltip text="Ratio moyen de buts par match joué." className="ml-0" />
+                    <div className="flex flex-col items-center gap-2 z-10 min-h-[80px] justify-end">
+                        <h3 className="text-white text-lg font-bold uppercase tracking-wider text-center">Moyenne Buts/Match</h3>
+                        <div className="flex items-start gap-2 text-secondary px-4 text-center">
+                            <Info size={14} className="shrink-0 mt-0.5" />
+                            <p className="text-xs leading-tight">Ratio moyen de buts par match joué.</p>
+                        </div>
                     </div>
                     <div className="glass-card relative overflow-hidden group w-full h-full flex flex-col items-center justify-center py-8">
                         <div className="absolute -right-4 -top-4 bg-pink-500/10 w-24 h-24 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all"></div>
