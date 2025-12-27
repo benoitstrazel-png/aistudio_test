@@ -349,11 +349,16 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                         // Skip invalid coords
                                         if (isNaN(cx) || isNaN(cy)) return null;
 
-                                        const size = 32;
+                                        const size = 40;
                                         return (
                                             <foreignObject x={cx - (size / 2)} y={cy - (size / 2)} width={size} height={size}>
                                                 <div className="w-full h-full rounded-full bg-slate-900 shadow-xl flex items-center justify-center border border-white/20 overflow-hidden hover:scale-125 hover:z-50 hover:border-accent transition-all cursor-pointer">
-                                                    <img src={payload.img} alt={payload.name} className="w-[80%] h-[80%] object-contain" />
+                                                    <img
+                                                        src={payload.img}
+                                                        alt={payload.name}
+                                                        className="object-contain"
+                                                        style={{ width: '65%', height: '65%' }}
+                                                    />
                                                 </div>
                                             </foreignObject>
                                         );
@@ -382,9 +387,15 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                     </div>
 
                                     {/* Team Icons List for this Cluster */}
-                                    <div className="flex flex-wrap justify-center gap-1 mt-1 max-w-[120px]">
-                                        {clusters.filter(c => c.cluster.includes(cluster.name.split('/')[0]) || c.cluster === cluster.name).map(t => (
-                                            <div key={t.name} className="w-5 h-5 rounded-full bg-white/10 p-0.5 border border-white/5" title={t.name}>
+                                    <div className="flex flex-wrap justify-center gap-1 mt-1 max-w-[140px]">
+                                        {/* Match by color is safer than string parsing */}
+                                        {clusters.filter(c => c.color === cluster.color).map(t => (
+                                            <div
+                                                key={t.name}
+                                                className="rounded-full bg-white/10 p-0.5 border border-white/5 flex items-center justify-center"
+                                                title={t.name}
+                                                style={{ width: '24px', height: '24px', minWidth: '24px', minHeight: '24px' }}
+                                            >
                                                 <img src={t.img} alt={t.name} className="w-full h-full object-contain" />
                                             </div>
                                         ))}
