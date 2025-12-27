@@ -159,9 +159,9 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
 
     // 3. CALCULATE CLUSTERS
     const clusters = useMemo(() => {
-        // Pass PLAYERS_DATA to calculations
-        return calculateClusters(teams, [], teamStats, PLAYERS_DATA);
-    }, [teams, teamStats]);
+        // Pass PLAYERS_DATA and schedule to calculations
+        return calculateClusters(teams, [], teamStats, PLAYERS_DATA, schedule);
+    }, [teams, teamStats, schedule]);
 
     // Format Data for Comparison Bar
     const comparisonData = [
@@ -334,6 +334,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                                             <div className="flex justify-between"><span>Attaque:</span> <span className="text-white font-mono">{Math.round(data.y)}</span></div>
                                                             <div className="flex justify-between"><span>Défense:</span> <span className="text-white font-mono">{Math.round(data.x)}</span></div>
                                                             <div className="flex justify-between"><span className="text-accent">Star Power:</span> <span className="text-white font-mono">{(data.starPower).toFixed(1)}/10</span></div>
+                                                            <div className="flex justify-between"><span className="text-blue-400">Mental:</span> <span className="text-white font-mono">{Math.round(data.giantKillerScore)}%</span></div>
                                                             <div className="mt-1 pt-1 border-t border-white/5 text-[9px] italic text-slate-500">
                                                                 *Taille du point liée à la forme des Top Players
                                                             </div>
@@ -426,7 +427,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                 </p>
                                 <strong className="text-white block mb-1">Algorithme de Score (0-100)</strong>
                                 <ul className="list-disc pl-3 space-y-0.5">
-                                    <li><span className="text-white">Score Offensif (Y)</span>: 50% Simulation (Puissance Team) + <span className="text-accent">50% Star Power</span> (Forme Moyenne Top 3 Joueurs & xG).</li>
+                                    <li><span className="text-white">Score Offensif (Y)</span>: 40% Simulation + 40% Star Power + <span className="text-accent">20% Mental (Giant Killer)</span>.</li>
                                     <li><span className="text-white">Score Défensif (X)</span>: Basé sur les Buts Encaissés (GA) et la solidité défensive simulée.</li>
                                     <li><span className="text-white">Taille du Point</span>: Représente le niveau de dépendance aux Stars (Star Power).</li>
                                 </ul>
