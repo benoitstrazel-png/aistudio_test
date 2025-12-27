@@ -20,119 +20,147 @@ const AuthPage = ({ onLogin }) => {
 
     const handleRequestAccess = (e) => {
         e.preventDefault();
-
-        // Prepare mailto link
         const subject = `Demande d'accès Ligue 1 Predictor - ${username}`;
         const body = `Bonjour Admin,\n\nJe souhaite accéder à la plateforme.\n\nIdentifiant souhaité: ${username}\nEmail: ${email}\n\nMerci de valider mon accès.`;
-
         const mailtoLink = `mailto:ligue1predictor@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        // Open mail client
         window.location.href = mailtoLink;
-
         alert("Votre client mail va s'ouvrir pour envoyer la demande. Une fois envoyée, l'administrateur vous contactera.");
-        // Switch back to login
         setIsRegistering(false);
     };
 
     return (
-        <div className="min-h-screen bg-[#0B1426] flex flex-col items-center justify-center p-4 relative overflow-hidden">
-            {/* Background elements */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-accent/5 rounded-full blur-[100px]"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#CEF002]/5 rounded-full blur-[100px]"></div>
-            </div>
+        <div className="min-h-screen flex flex-col md:flex-row font-sans">
+            {/* LEFT SIDE - FORM */}
+            <div className="w-full md:w-[45%] bg-white flex flex-col items-center justify-center p-8 relative">
+                <div className="w-full max-w-sm flex flex-col items-center">
 
-            <div className="z-10 w-full max-w-md bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl">
+                    {/* Logo */}
+                    <div className="mb-12">
+                        <img
+                            src={getLeagueLogo()}
+                            alt="Ligue 1 Uber Eats"
+                            className="h-32 w-auto object-contain"
+                        />
+                    </div>
 
-                {/* Logo & Header */}
-                <div className="text-center mb-8">
-                    <img
-                        src={getLeagueLogo()}
-                        alt="Ligue 1"
-                        className="h-10 w-auto mx-auto mb-4 drop-shadow-[0_0_15px_rgba(206,240,2,0.3)]"
-                    />
-                    <h1 className="text-2xl font-black text-white uppercase italic tracking-tighter">
-                        Ligue 1 <span className="text-accent not-italic">Predictor Access</span>
-                    </h1>
-                    <p className="text-secondary text-sm mt-2">Plateforme d'analyse prédictive sécurisée</p>
-                </div>
+                    {/* Titles */}
+                    <div className="text-center mb-10">
+                        <p className="text-gray-500 text-sm mb-2 font-medium tracking-wide">Start your journey</p>
+                        <h1 className="text-3xl font-black text-slate-900 mb-2">
+                            Connect to Predictor Access
+                        </h1>
+                        <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">
+                            CONNECT TO PREDICTOR ACCESS
+                        </p>
+                    </div>
 
-                {/* Form */}
-                {isRegistering ? (
-                    <form onSubmit={handleRequestAccess} className="flex flex-col gap-4">
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs font-bold text-accent uppercase">Identifiant Souhaité</label>
+                    {/* Form */}
+                    {isRegistering ? (
+                        <form onSubmit={handleRequestAccess} className="w-full flex flex-col gap-4">
                             <input
                                 type="text"
                                 required
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                className="bg-black/40 border border-white/10 rounded p-3 text-white focus:border-accent outline-none transition-colors"
-                                placeholder="Votre pseudo"
+                                className="w-full bg-[#FAFAFA] border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 font-bold focus:border-[#CEF002] focus:ring-1 focus:ring-[#CEF002] outline-none transition-all placeholder-gray-300"
+                                placeholder="USERNAME"
                             />
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs font-bold text-accent uppercase">Email de contact</label>
                             <input
                                 type="email"
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="bg-black/40 border border-white/10 rounded p-3 text-white focus:border-accent outline-none transition-colors"
-                                placeholder="votre@email.com"
+                                className="w-full bg-[#FAFAFA] border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 font-bold focus:border-[#CEF002] focus:ring-1 focus:ring-[#CEF002] outline-none transition-all placeholder-gray-300"
+                                placeholder="EMAIL ADDRESS"
                             />
-                        </div>
 
-                        <button type="submit" className="mt-4 bg-accent hover:bg-white text-black font-black py-3 rounded uppercase tracking-widest transition-all hover:scale-105 shadow-[0_0_20px_rgba(206,240,2,0.3)]">
-                            Demander l'accès
-                        </button>
+                            <button type="submit" className="w-full mt-4 bg-[#CEF002] hover:bg-[#dfff00] text-black font-black py-3 rounded-lg uppercase tracking-wider text-sm transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                Request Access
+                            </button>
 
-                        <p className="text-center text-secondary text-xs mt-4">
-                            Déjà un compte ? <button type="button" onClick={() => setIsRegistering(false)} className="text-white hover:underline font-bold">Se connecter</button>
-                        </p>
-                    </form>
-                ) : (
-                    <form onSubmit={handleLogin} className="flex flex-col gap-4">
-                        {error && <div className="bg-red-500/20 border border-red-500/50 text-red-200 text-sm p-3 rounded text-center">{error}</div>}
+                            <div className="flex justify-between items-center mt-6 text-[11px] font-bold text-gray-400">
+                                <button type="button" onClick={() => setIsRegistering(false)} className="hover:text-black transition-colors">
+                                    Return to login
+                                </button>
+                            </div>
+                        </form>
+                    ) : (
+                        <form onSubmit={handleLogin} className="w-full flex flex-col gap-4">
+                            {error && <div className="text-red-500 text-xs font-bold text-center mb-2">{error}</div>}
 
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs font-bold text-accent uppercase">Identifiant</label>
                             <input
                                 type="text"
                                 required
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                className="bg-black/40 border border-white/10 rounded p-3 text-white focus:border-accent outline-none transition-colors"
-                                placeholder="admin"
+                                className="w-full bg-[#FAFAFA] border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 font-bold focus:border-[#CEF002] focus:ring-1 focus:ring-[#CEF002] outline-none transition-all placeholder-gray-300 uppercase placeholder:text-[10px] placeholder:tracking-widest"
+                                placeholder="USERNAME"
                             />
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs font-bold text-accent uppercase">Mot de Passe</label>
                             <input
                                 type="password"
                                 required
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="bg-black/40 border border-white/10 rounded p-3 text-white focus:border-accent outline-none transition-colors"
-                                placeholder="••••••••"
+                                className="w-full bg-[#FAFAFA] border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 font-bold focus:border-[#CEF002] focus:ring-1 focus:ring-[#CEF002] outline-none transition-all placeholder-gray-300 uppercase placeholder:text-[10px] placeholder:tracking-widest"
+                                placeholder="PASSWORD"
                             />
-                        </div>
 
-                        <button type="submit" className="mt-4 bg-white hover:bg-accent text-black font-black py-3 rounded uppercase tracking-widest transition-all hover:scale-105">
-                            Entrer
-                        </button>
+                            <button type="submit" className="w-full mt-4 bg-[#CEF002] hover:bg-[#dfff00] text-black font-black py-3 rounded-lg uppercase tracking-wider text-sm transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                Log In
+                            </button>
 
-                        <p className="text-center text-secondary text-xs mt-4">
-                            Pas encore d'accès ? <button type="button" onClick={() => setIsRegistering(true)} className="text-accent hover:underline font-bold">Faire une demande</button>
+                            <div className="flex justify-between items-center mt-6 text-[11px] font-bold text-gray-400">
+                                <button type="button" className="hover:text-black transition-colors">
+                                    Forget username/password?
+                                </button>
+                                <button type="button" onClick={() => setIsRegistering(true)} className="hover:text-black transition-colors">
+                                    Create account
+                                </button>
+                            </div>
+                        </form>
+                    )}
+
+                    {/* Bottom Link */}
+                    <div className="mt-20">
+                        <p className="text-gray-400 text-xs">
+                            Have an account? <span className="text-[#0055A4] font-bold cursor-pointer hover:underline" onClick={() => setIsRegistering(false)}>Sign in</span>
                         </p>
-                    </form>
-                )}
+                    </div>
+                </div>
             </div>
 
-            <footer className="absolute bottom-4 text-center text-[10px] text-white/20 uppercase tracking-[0.2em]">
-                Secure System v1.0 • 2025-2026
-            </footer>
+            {/* RIGHT SIDE - IMAGE */}
+            <div className="hidden md:block w-[55%] relative overflow-hidden bg-slate-900">
+                <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none"></div>
+
+                {/* Image found by subagent */}
+                <img
+                    src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=2070&auto=format&fit=crop"
+                    alt="Stadium Atmosphere"
+                    className="w-full h-full object-cover object-center scale-105 hover:scale-110 transition-transform duration-[20s] ease-in-out"
+                />
+
+                {/* Decorative Overlay Elements */}
+                <div className="absolute top-8 right-8 z-20">
+                    <div className="text-white font-black text-4xl tracking-tighter opacity-20">FA</div>
+                </div>
+
+                <div className="absolute bottom-8 right-8 z-20">
+                    <div className="w-12 h-12 text-[#CEF002] opacity-80">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 w-full p-8 z-20 bg-gradient-to-t from-black/80 to-transparent">
+                    <div className="flex items-center gap-4">
+                        <div className="bg-white/10 backdrop-blur px-3 py-1 rounded text-white text-[10px] uppercase font-bold tracking-widest border border-white/20">
+                            Matchday Experience
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
