@@ -10,8 +10,16 @@ const FocusPlayers = ({ homeTeam, awayTeam }) => {
         return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
     };
 
+    const TEAM_NAME_MAPPING = {
+        'PSG': 'Paris S-G',
+        'Saint-Etienne': 'Saint-Étienne'
+    };
+
     const getTeamPlayers = (teamName) => {
-        const target = normalize(teamName);
+        // Check explicit mapping first
+        const mappedName = TEAM_NAME_MAPPING[teamName] || teamName;
+        const target = normalize(mappedName);
+
         // Special mapping for common mismatches if needed, but fuzzy match first
         return ALL_PLAYERS.filter(p => {
             const squad = normalize(p.Squad);
