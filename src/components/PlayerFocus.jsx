@@ -8,18 +8,41 @@ const PlayerFocus = () => {
     const [sortConfig, setSortConfig] = useState({ key: 'Gls', direction: 'desc' });
     const [selectedMetric, setSelectedMetric] = useState('Gls');
 
+    const [error, setError] = useState(null);
+
     useEffect(() => {
-        fetch('/data/players_db.json')
-            .then(res => res.json())
-            .then(data => {
+        const fetchData = async () => {
+            try {
+                const url = '/data/players_db.json';
+                console.log("Fetching player data from:", url);
+                const res = await fetch(url);
+
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+
+                const contentType = res.headers.get("content-type");
+                if (contentType && contentType.indexOf("application/json") === -1) {
+                    const text = await res.text();
+                    throw new Error(`Expected JSON, got ${contentType}. Preview: ${text.substring(0, 50)}...`);
+                }
+
+                const data = await res.json();
                 console.log("Players data loaded via fetch:", data.length);
+                if (!Array.isArray(data)) {
+                    throw new Error("Data format error: Expected an array of players.");
+                }
+
                 setPlayersData(data);
                 setLoading(false);
-            })
-            .catch(err => {
+            } catch (err) {
                 console.error("Failed to load player data:", err);
+                setError(err.message);
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchData();
     }, []);
 
     // Filter and sort players
@@ -85,6 +108,16 @@ const PlayerFocus = () => {
             <div className="flex items-center justify-center h-64">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
                 <span className="ml-4 text-white">Chargement des données...</span>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="flex flex-col items-center justify-center h-64 text-red-500">
+                <h3 className="text-xl font-bold mb-2">Erreur de chargement</h3>
+                <p>{error}</p>
+                <p className="text-sm text-gray-400 mt-2">Vérifiez la connexion ou rechargez la page.</p>
             </div>
         );
     }
