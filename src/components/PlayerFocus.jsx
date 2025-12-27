@@ -13,7 +13,7 @@ const PlayerFocus = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const url = '/data/players_db.json';
+                const url = '/data/players_2025.json';
                 console.log("Fetching player data from:", url);
                 const res = await fetch(url);
 
