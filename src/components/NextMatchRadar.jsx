@@ -26,7 +26,7 @@ const NextMatchRadar = ({ homeTeam, awayTeam, teamStats }) => {
     ];
 
     return (
-        <div className="card flex flex-col items-center">
+        <div className="card flex flex-col items-center w-full">
             {/* Title removed for layout optimization */}
             <div style={{ width: '100%', height: 300 }}>
                 <ResponsiveContainer>
