@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install
+          npm ci
           pip install kaggle
 
       - name: Fetch and Process Data
@@ -44,6 +44,6 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add src/data/players_ligue1.json
-          # Only commit if there are changes
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update player stats from Kaggle"
+          # Check STAGED changes only. If exit code 1 (changes), run commit.
+          git diff --staged --quiet || git commit -m "chore: update player stats from Kaggle"
           git push
