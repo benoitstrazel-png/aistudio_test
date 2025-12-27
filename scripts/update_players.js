@@ -54,7 +54,9 @@ const parseCSV = (content) => {
         const idx = headers.indexOf(search);
         if (idx !== -1) indices[key] = idx;
     }
-    const leagueIdx = headers.findIndex(h => h.includes('Comp') || h.includes('League')); // Usually 'Comp' in fbref/kaggle dumps
+
+    // Explicitly find the 'Comp' column as requested
+    const leagueIdx = headers.findIndex(h => h === 'Comp');
 
     const results = [];
 
@@ -67,9 +69,9 @@ const parseCSV = (content) => {
         // Clean quotes
         const cleanRow = row.map(val => val ? val.replace(/^"|"$/g, '').trim() : '');
 
-        // Check League (Comp column usually looks like "fr Ligue 1")
+        // Check League strictly for 'fr Ligue 1' in 'Comp' column
         const league = leagueIdx !== -1 ? cleanRow[leagueIdx] : '';
-        if (!league || !league.includes('Ligue 1')) continue;
+        if (league !== 'fr Ligue 1') continue;
 
         const playerObj = {};
         for (const [key, idx] of Object.entries(indices)) {
