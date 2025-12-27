@@ -1,4 +1,5 @@
 import { PLAYERS_DB } from '../data/players_static';
+import { getTeamLogo } from '../utils/logos';
 
 // Helper to normalize values between 0 and 100
 const normalize = (val, min, max) => {
@@ -43,6 +44,7 @@ export const calculateClusters = (teams, standings, teamStats) => {
 
         return {
             name: teamName,
+            img: getTeamLogo(teamName),
             attParam: stats.att,
             defParam: stats.def,
             totalxG,
