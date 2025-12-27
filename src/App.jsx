@@ -120,7 +120,7 @@ function App() {
                     />
                     <div className="text-center">
                         <h1 className="text-4xl font-black text-white m-0 tracking-tighter uppercase italic mb-2">
-                            Ligue 1 <span className="text-accent not-italic">Sim</span>
+                            Ligue 1 <span className="text-accent not-italic">Sim</span> <span className="text-sm not-italic text-slate-500">v1.1</span>
                         </h1>
                         <p className="text-secondary text-lg font-bold tracking-[0.2em] uppercase">Saison 2025-2026</p>
                     </div>
