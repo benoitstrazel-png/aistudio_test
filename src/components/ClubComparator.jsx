@@ -290,7 +290,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
 
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* CHART */}
-                        <div className="lg:col-span-2 h-[400px] bg-white/5 rounded-2xl p-4 border border-white/5 relative">
+                        <div className="lg:col-span-2 h-[350px] max-h-[600px] bg-white/5 rounded-2xl p-4 border border-white/5 relative">
                             {/* Axis Labels */}
                             <div className="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-accent uppercase tracking-widest bg-black/50 px-2 rounded">
                                 ▲ Puissance Offensive
@@ -343,7 +343,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                         </div>
 
                         {/* LEGEND / LIST */}
-                        <div className="flex flex-col gap-4 overflow-y-auto max-h-[400px] custom-scrollbar">
+                        <div className="flex flex-col gap-4 overflow-y-auto max-h-[350px] custom-scrollbar">
                             <h4 className="text-lg font-bold text-white uppercase underline decoration-accent decoration-2 underline-offset-4">
                                 Légende des Clusters
                             </h4>
