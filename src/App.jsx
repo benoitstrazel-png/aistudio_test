@@ -52,7 +52,8 @@ function App() {
 
     // AUTH GATE
     if (!isAuthenticated) {
-        return <AuthPage onLogin={() => setIsAuthenticated(true)} />;
+        // Home page hidden for now as per user request
+        return <AuthPage onLogin={() => console.log("Login validé, mais l'accès à la page d'accueil est temporairement désactivé.")} />;
     }
 
     const handleTeamChange = (type, teamName) => {
