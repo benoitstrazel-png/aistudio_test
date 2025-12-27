@@ -24,6 +24,7 @@ import PLAYERS_DATA from './data/players.json';
 const TEAM_STATS = APP_DATA.teamStats || {};
 
 import { predictMatchLive } from './utils/prediction';
+import ForecastReview from './components/ForecastReview';
 
 function App() {
     // Auth State - Removed
@@ -142,6 +143,12 @@ function App() {
                     className={`px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all ${activeTab === 'players' ? 'bg-accent text-slate-900' : 'bg-white/5 text-secondary hover:text-white'}`}
                 >
                     Focus Joueurs
+                </button>
+                <button
+                    onClick={() => setActiveTab('forecasts')}
+                    className={`px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all ${activeTab === 'forecasts' ? 'bg-accent text-slate-900' : 'bg-white/5 text-secondary hover:text-white'}`}
+                >
+                    Prévisions vs Réel
                 </button>
             </div>
 
@@ -298,6 +305,13 @@ function App() {
 
                 {activeTab === 'players' && (
                     <PlayerFocus />
+                )}
+
+                {activeTab === 'forecasts' && (
+                    <ForecastReview
+                        schedule={APP_DATA.fullSchedule}
+                        currentWeek={APP_DATA.currentWeek}
+                    />
                 )}
             </main>
         </div>
