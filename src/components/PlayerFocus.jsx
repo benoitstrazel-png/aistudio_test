@@ -1,38 +1,56 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ZAxis } from 'recharts';
-import playersData from '../data/players_db.json';
 
 const PlayerFocus = () => {
-    console.log("PlayerFocus loaded. Data length:", playersData?.length, "Sample:", playersData?.[0]);
+    const [playersData, setPlayersData] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'Gls', direction: 'desc' });
     const [selectedMetric, setSelectedMetric] = useState('Gls');
 
+    useEffect(() => {
+        fetch('/data/players_db.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log("Players data loaded via fetch:", data.length);
+                setPlayersData(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error("Failed to load player data:", err);
+                setLoading(false);
+            });
+    }, []);
+
     // Filter and sort players
     const filteredPlayers = useMemo(() => {
+        if (!playersData.length) return [];
         let players = [...playersData];
 
         // Filter by search term
         if (searchTerm) {
             players = players.filter(p =>
-                p.Player.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                p.Squad.toLowerCase().includes(searchTerm.toLowerCase())
+                (p.Player && p.Player.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                (p.Squad && p.Squad.toLowerCase().includes(searchTerm.toLowerCase()))
             );
         }
 
         // Sort
         players.sort((a, b) => {
-            if (a[sortConfig.key] < b[sortConfig.key]) {
+            const aVal = a[sortConfig.key] || 0;
+            const bVal = b[sortConfig.key] || 0;
+
+            if (aVal < bVal) {
                 return sortConfig.direction === 'asc' ? -1 : 1;
             }
-            if (a[sortConfig.key] > b[sortConfig.key]) {
+            if (aVal > bVal) {
                 return sortConfig.direction === 'asc' ? 1 : -1;
             }
             return 0;
         });
 
         return players;
-    }, [searchTerm, sortConfig]);
+    }, [playersData, searchTerm, sortConfig]);
 
     const requestSort = (key) => {
         let direction = 'desc';
@@ -43,24 +61,33 @@ const PlayerFocus = () => {
     };
 
     const topScorers = useMemo(() => {
-        return [...playersData].sort((a, b) => b.Gls - a.Gls).slice(0, 10);
-    }, []);
+        return [...playersData].sort((a, b) => (b.Gls || 0) - (a.Gls || 0)).slice(0, 10);
+    }, [playersData]);
 
     const topAssisters = useMemo(() => {
-        return [...playersData].sort((a, b) => b.Ast - a.Ast).slice(0, 10);
-    }, []);
+        return [...playersData].sort((a, b) => (b.Ast || 0) - (a.Ast || 0)).slice(0, 10);
+    }, [playersData]);
 
     const efficiencyData = useMemo(() => {
         return playersData
             .filter(p => p.Gls > 2) // Only show relevant players
             .map(p => ({
                 name: p.Player,
-                x: p.xG,
-                y: p.Gls,
-                z: p.Min, // Bubble size based on minutes played
+                x: p.xG || 0,
+                y: p.Gls || 0,
+                z: p.Min || 0, // Bubble size based on minutes played
                 squad: p.Squad
             }));
-    }, []);
+    }, [playersData]);
+
+    if (loading) {
+        return (
+            <div className="flex items-center justify-center h-64">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
+                <span className="ml-4 text-white">Chargement des données...</span>
+            </div>
+        );
+    }
 
     return (
         <div className="space-y-6 animate-fade-in">
