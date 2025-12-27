@@ -127,7 +127,14 @@ const processFiles = async () => {
         console.log(`Found ${extracted.length} records.`);
 
         fs.writeFileSync(OUTPUT_FILE, JSON.stringify(extracted, null, 2));
+
+        // Write JS file (Forcing it as code to avoid Vercel JSON loader issues)
+        const jsContent = `export const PLAYERS_DB = ${JSON.stringify(extracted)};`;
+        const jsPath = path.join(DATA_DIR, 'players_static.js');
+        fs.writeFileSync(jsPath, jsContent);
+
         console.log(`Saved to ${OUTPUT_FILE}`);
+        console.log(`Also saved to JS module: ${jsPath}`);
 
     } catch (err) {
         console.error('Failed to update player data:', err);

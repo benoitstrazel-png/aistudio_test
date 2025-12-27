@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import ALL_PLAYERS from '../data/players_optimized.json';
+import { PLAYERS_DB as ALL_PLAYERS } from '../data/players_static';
 import TeamLogo from './ui/TeamLogo';
 
 const FocusPlayers = ({ homeTeam, awayTeam }) => {
@@ -66,8 +66,8 @@ const FocusPlayers = ({ homeTeam, awayTeam }) => {
                             <div className="flex items-center gap-3">
                                 {/* Position Badge */}
                                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black border border-white/10 ${p.Pos?.includes('FW') ? 'bg-red-500/20 text-red-500 border-red-500/30' :
-                                        p.Pos?.includes('MF') ? 'bg-yellow-500/20 text-yellow-500 border-yellow-500/30' :
-                                            'bg-blue-500/20 text-blue-500 border-blue-500/30'
+                                    p.Pos?.includes('MF') ? 'bg-yellow-500/20 text-yellow-500 border-yellow-500/30' :
+                                        'bg-blue-500/20 text-blue-500 border-blue-500/30'
                                     }`}>
                                     {p.Pos?.split(',')[0]}
                                 </div>

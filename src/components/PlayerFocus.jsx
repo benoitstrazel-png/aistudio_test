@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ZAxis } from 'recharts';
-import playersData from '../data/players_optimized.json';
+import { PLAYERS_DB as playersData } from '../data/players_static';
 
 const PlayerFocus = () => {
     const [searchTerm, setSearchTerm] = useState('');
