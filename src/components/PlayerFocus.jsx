@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ZAxis } from 'recharts';
-import playersData from '../data/players_ligue1.json';
+import playersData from '../data/players_db.json';
 
 const PlayerFocus = () => {
+    console.log("PlayerFocus loaded. Data length:", playersData?.length, "Sample:", playersData?.[0]);
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'Gls', direction: 'desc' });
     const [selectedMetric, setSelectedMetric] = useState('Gls');
