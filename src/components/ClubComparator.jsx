@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceArea } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceArea, ScatterChart, Scatter, ZAxis, Cell } from 'recharts';
 import NextMatchRadar from './NextMatchRadar';
 import TeamLogo from './ui/TeamLogo';
 import { predictMatchLive } from '../utils/prediction';
+import { calculateClusters } from '../utils/clustering';
+import { PLAYERS_DB } from '../data/players_static';
 
 const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
     const [teamA, setTeamA] = useState(teams[0] || 'PSG');
@@ -152,6 +154,12 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
         };
     }, [schedule, teamA, teamB, filterContext]);
 
+    // 3. CALCULATE CLUSTERS
+    const clusters = useMemo(() => {
+        // Mock a standings object if not fully available or pass minimal
+        return calculateClusters(teams, [], teamStats);
+    }, [teams, teamStats]);
+
     // Format Data for Comparison Bar
     const comparisonData = [
         { label: 'Matchs Joués', key: 'matchesPlayed' },
@@ -269,7 +277,106 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                     </div>
                 </div>
 
-                {/* 3. DETAILED METRICS */}
+                {/* 3. CLUSTERING ANALYSIS */}
+                <div className="card col-span-1 lg:col-span-2 p-8 bg-[#0f172a] border border-white/5">
+                    <div className="text-center mb-8">
+                        <h3 className="text-2xl font-black text-white uppercase italic tracking-tighter">
+                            <span className="text-accent">Cluster</span> Analysis
+                        </h3>
+                        <p className="text-secondary text-sm font-bold uppercase tracking-widest">
+                            Groupement des clubs par profil de performance (Basé sur stats réelles + IA)
+                        </p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-3 gap-8">
+                        {/* CHART */}
+                        <div className="lg:col-span-2 h-[400px] bg-white/5 rounded-2xl p-4 border border-white/5 relative">
+                            {/* Axis Labels */}
+                            <div className="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-accent uppercase tracking-widest bg-black/50 px-2 rounded">
+                                ▲ Puissance Offensive
+                            </div>
+                            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-red-500 uppercase tracking-widest bg-black/50 px-2 rounded">
+                                ▼ Faiblesse Offensive
+                            </div>
+                            <div className="absolute left-2 top-1/2 -translate-y-1/2 -rotate-90 text-[10px] font-bold text-secondary uppercase tracking-widest whitespace-nowrap">
+                                ◀ Fragilité Défensive
+                            </div>
+                            <div className="absolute right-2 top-1/2 -translate-y-1/2 rotate-90 text-[10px] font-bold text-blue-400 uppercase tracking-widest whitespace-nowrap">
+                                Solidité Défensive ▶
+                            </div>
+
+                            <ResponsiveContainer width="100%" height="100%">
+                                <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+                                    <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
+                                    <XAxis type="number" dataKey="x" name="Défense" domain={[0, 100]} hide />
+                                    <YAxis type="number" dataKey="y" name="Attaque" domain={[0, 100]} hide />
+                                    <ZAxis type="number" dataKey="size" range={[50, 400]} name="Efficacité" />
+                                    <Tooltip
+                                        cursor={{ strokeDasharray: '3 3' }}
+                                        content={({ active, payload }) => {
+                                            if (active && payload && payload.length) {
+                                                const data = payload[0].payload;
+                                                return (
+                                                    <div className="bg-slate-900 border border-white/10 p-3 rounded-xl shadow-xl z-50">
+                                                        <div className="flex items-center gap-2 mb-2 border-b border-white/10 pb-2">
+                                                            <span className="font-black text-white uppercase italic">{data.name}</span>
+                                                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10" style={{ color: data.color }}>{data.cluster}</span>
+                                                        </div>
+                                                        <div className="text-xs text-secondary space-y-1">
+                                                            <div>Attaque: <span className="text-white font-mono">{Math.round(data.y)}/100</span></div>
+                                                            <div>Défense: <span className="text-white font-mono">{Math.round(data.x)}/100</span></div>
+                                                            <div>xG Total: <span className="text-white font-mono">{data.totalxG.toFixed(1)}</span></div>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            }
+                                            return null;
+                                        }}
+                                    />
+                                    <Scatter name="Clubs" data={clusters} fill="#ffffff">
+                                        {clusters.map((entry, index) => (
+                                            <Cell key={`cell-${index}`} fill={entry.color} stroke="#fff" strokeWidth={1} />
+                                        ))}
+                                    </Scatter>
+                                </ScatterChart>
+                            </ResponsiveContainer>
+                        </div>
+
+                        {/* LEGEND / LIST */}
+                        <div className="flex flex-col gap-4 overflow-y-auto max-h-[400px] custom-scrollbar">
+                            <h4 className="text-lg font-bold text-white uppercase underline decoration-accent decoration-2 underline-offset-4">
+                                Légende des Clusters
+                            </h4>
+
+                            {[
+                                { name: 'Candidats au Titre', color: '#CEF002', desc: 'Attaque élite & Défense solide' },
+                                { name: 'Attaque de Feu', color: '#f472b6', desc: 'Spectaculaires mais friables' },
+                                { name: 'Blocs Murs', color: '#38bdf8', desc: 'Défense de fer, attaque limitée' },
+                                { name: 'Ventre Mou / Équilibrés', color: '#94a3b8', desc: 'Stats moyennes partout' },
+                                { name: 'Zone Rouge', color: '#ef4444', desc: 'En difficulté des deux côtés' },
+                            ].map(cluster => (
+                                <div key={cluster.name} className="p-3 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <div className="w-3 h-3 rounded-full shadow-[0_0_10px_currentColor]" style={{ backgroundColor: cluster.color, color: cluster.color }}></div>
+                                        <span className="font-bold text-xs text-white uppercase">{cluster.name}</span>
+                                    </div>
+                                    <p className="text-[10px] text-secondary mb-2">{cluster.desc}</p>
+
+                                    {/* Mini list of teams in this cluster */}
+                                    <div className="flex flex-wrap gap-1">
+                                        {clusters.filter(c => c.cluster === cluster.name).map(t => (
+                                            <span key={t.name} className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${t.name === teamA || t.name === teamB ? 'bg-white text-black' : 'bg-black/30 text-slate-400'}`}>
+                                                {t.name}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* 4. DETAILED METRICS (Existing) */}
                 <div className="card p-6">
                     <div className="flex flex-col items-center mb-6">
                         <h3 className="text-xl font-black text-white uppercase italic tracking-tighter mb-4">Statistiques Comparées</h3>
