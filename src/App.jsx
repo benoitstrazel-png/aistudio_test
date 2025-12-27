@@ -9,7 +9,6 @@ import MatchHistory from './components/MatchHistory';
 import LeagueCalendar from './components/LeagueCalendar';
 import InfoTooltip from './components/ui/InfoTooltip';
 import TeamLogo from './components/ui/TeamLogo'; // New Component
-import AuthPage from './components/AuthPage';
 import ExpertAnalysis from './components/ExpertAnalysis';
 import FocusPlayers from './components/FocusPlayers';
 import { getLeagueLogo } from './utils/logos';
@@ -27,8 +26,7 @@ const TEAM_STATS = APP_DATA.teamStats || {};
 import { predictMatchLive } from './utils/prediction';
 
 function App() {
-    // Auth State
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    // Auth State - Removed
     const [activeTab, setActiveTab] = useState('dashboard');
 
     // Default to first match or mock
@@ -50,11 +48,7 @@ function App() {
         }
     }, []);
 
-    // AUTH GATE
-    if (!isAuthenticated) {
-        // Home page hidden for now as per user request
-        return <AuthPage onLogin={() => console.log("Login validé, mais l'accès à la page d'accueil est temporairement désactivé.")} />;
-    }
+    // AUTH GATE - Removed
 
     const handleTeamChange = (type, teamName) => {
         const newMatch = { ...selectedMatch };
