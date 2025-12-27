@@ -48,6 +48,8 @@ const parseCSV = (content) => {
     const lines = content.split('\n').filter(l => l.trim());
     const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
 
+    console.log('CSV Headers detected:', headers);
+
     // Find indices
     const indices = {};
     for (const [key, search] of Object.entries(COL_MAPPING)) {
@@ -55,22 +57,30 @@ const parseCSV = (content) => {
         if (idx !== -1) indices[key] = idx;
     }
 
-    // Explicitly find the 'Comp' column as requested
+    // Explicitly find the 'Comp' column
     const leagueIdx = headers.findIndex(h => h === 'Comp');
+    console.log(`'Comp' column index: ${leagueIdx}`);
 
     const results = [];
+    const uniqueLeagues = new Set();
 
     for (let i = 1; i < lines.length; i++) {
-        // Simple split handling quotes roughly if needed, but these datasets are usually standard
-        // A robust regex for CSV split: 
+        // Robust regex for CSV split
         const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
         if (!row) continue;
 
         // Clean quotes
         const cleanRow = row.map(val => val ? val.replace(/^"|"$/g, '').trim() : '');
 
-        // Check League strictly for 'fr Ligue 1' in 'Comp' column
+        // Check League
         const league = leagueIdx !== -1 ? cleanRow[leagueIdx] : '';
+        if (league) uniqueLeagues.add(league); // Track unique leagues for debug
+
+        // Debug first 5 rows to see what is happening
+        if (i < 5) {
+            console.log(`Row ${i} Comp value: "${league}"`);
+        }
+
         if (league !== 'fr Ligue 1') continue;
 
         const playerObj = {};
@@ -84,6 +94,8 @@ const parseCSV = (content) => {
 
         results.push(playerObj);
     }
+
+    console.log('Unique "Comp" values found in CSV:', Array.from(uniqueLeagues).slice(0, 20)); // Log first 20 unique leagues
     return results;
 };
 
