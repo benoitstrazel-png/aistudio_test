@@ -5,11 +5,14 @@ import TeamLogo from './ui/TeamLogo';
 import { predictMatchLive } from '../utils/prediction';
 import { calculateClusters } from '../utils/clustering';
 import { PLAYERS_DB } from '../data/players_static';
+import PLAYERS_DATA from '../data/players.json'; // Import Player Data source
 
 const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
     const [teamA, setTeamA] = useState(teams[0] || 'PSG');
     const [teamB, setTeamB] = useState(teams[1] || 'Marseille');
     const [filterContext, setFilterContext] = useState('all'); // 'all', 'home', 'away'
+
+    // ... (Keep existing Ranking History Logic)
 
     // 1. CALCULATE RANKING EVOLUTION (Historical + Projected)
     const rankingHistory = useMemo(() => {
@@ -156,8 +159,8 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
 
     // 3. CALCULATE CLUSTERS
     const clusters = useMemo(() => {
-        // Mock a standings object if not fully available or pass minimal
-        return calculateClusters(teams, [], teamStats);
+        // Pass PLAYERS_DATA to calculations
+        return calculateClusters(teams, [], teamStats, PLAYERS_DATA);
     }, [teams, teamStats]);
 
     // Format Data for Comparison Bar
@@ -284,7 +287,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                             <span className="text-accent">Cluster</span> Analysis
                         </h3>
                         <p className="text-secondary text-sm font-bold uppercase tracking-widest">
-                            Groupement des clubs par profil de performance (Basé sur stats réelles + IA)
+                            Groupement des clubs par profil de performance (Basé sur stats réelles + Player Stats Model)
                         </p>
                     </div>
 
@@ -308,14 +311,11 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                             <ResponsiveContainer width="100%" height="100%">
                                 <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                                     <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
-                                    <XAxis type="number" dataKey="x" name="Défense" domain={[0, 100]} hide />
-                                    <YAxis type="number" dataKey="y" name="Attaque" domain={[0, 100]} hide />
-                                    <ZAxis type="number" dataKey="size" range={[50, 400]} name="Efficacité" />
-                                    {/* Quadrant Backgrounds (Surrounding Clusters) */}
-                                    <ReferenceArea x1={60} x2={100} y1={60} y2={100} fill="#CEF002" fillOpacity={0.03} />
-                                    <ReferenceArea x1={0} x2={60} y1={60} y2={100} fill="#f472b6" fillOpacity={0.03} />
-                                    <ReferenceArea x1={60} x2={100} y1={0} y2={40} fill="#38bdf8" fillOpacity={0.03} />
-                                    <ReferenceArea x1={0} x2={30} y1={0} y2={30} fill="#ef4444" fillOpacity={0.03} />
+                                    {/* Focus on data points by setting dynamic domain */}
+                                    <XAxis type="number" dataKey="x" name="Défense" domain={['dataMin - 5', 'dataMax + 5']} hide />
+                                    <YAxis type="number" dataKey="y" name="Attaque" domain={['dataMin - 5', 'dataMax + 5']} hide />
+                                    <ZAxis type="number" dataKey="size" range={[60, 450]} name="Star Power" />
+                                    {/* Semantic Zones Background removed for clarity with dynamic zoom, reliance on colors now */}
 
                                     <Tooltip
                                         cursor={{ strokeDasharray: '3 3' }}
@@ -323,17 +323,20 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                             if (active && payload && payload.length) {
                                                 const data = payload[0].payload;
                                                 return (
-                                                    <div className="bg-slate-900 border border-white/10 p-3 rounded-xl shadow-xl z-50">
+                                                    <div className="bg-slate-900 border border-white/10 p-3 rounded-xl shadow-xl z-50 min-w-[180px]">
                                                         <div className="flex items-center gap-2 mb-2 border-b border-white/10 pb-2">
                                                             <div className="flex flex-col">
-                                                                <span className="font-black text-white uppercase italic leading-none">{data.name}</span>
-                                                                <span className="text-[10px] text-accent uppercase leading-none mt-0.5">{data.cluster}</span>
+                                                                <span className="font-black text-white uppercase italic leading-none text-sm">{data.name}</span>
+                                                                <span className="text-[10px] font-bold uppercase leading-none mt-1" style={{ color: data.color }}>{data.cluster}</span>
                                                             </div>
                                                         </div>
-                                                        <div className="text-xs text-secondary space-y-1">
-                                                            <div>Attaque: <span className="text-white font-mono">{Math.round(data.y)}/100</span></div>
-                                                            <div>Défense: <span className="text-white font-mono">{Math.round(data.x)}/100</span></div>
-                                                            <div>xG Total: <span className="text-white font-mono">{data.totalxG.toFixed(1)}</span></div>
+                                                        <div className="text-xs text-secondary space-y-1.5">
+                                                            <div className="flex justify-between"><span>Attaque:</span> <span className="text-white font-mono">{Math.round(data.y)}</span></div>
+                                                            <div className="flex justify-between"><span>Défense:</span> <span className="text-white font-mono">{Math.round(data.x)}</span></div>
+                                                            <div className="flex justify-between"><span className="text-accent">Star Power:</span> <span className="text-white font-mono">{(data.starPower).toFixed(1)}/10</span></div>
+                                                            <div className="mt-1 pt-1 border-t border-white/5 text-[9px] italic text-slate-500">
+                                                                *Taille du point liée à la forme des Top Players
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 );
@@ -346,15 +349,20 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                         // Skip invalid coords
                                         if (isNaN(cx) || isNaN(cy)) return null;
 
-                                        const size = 40;
+                                        // Dynamic size for visibility
+                                        const size = Math.max(30, Math.min(60, payload.size / 3));
+
                                         return (
                                             <foreignObject x={cx - (size / 2)} y={cy - (size / 2)} width={size} height={size}>
-                                                <div className="w-full h-full rounded-full bg-slate-900 shadow-xl flex items-center justify-center border border-white/20 overflow-hidden hover:scale-125 hover:z-50 hover:border-accent transition-all cursor-pointer">
+                                                <div
+                                                    className="w-full h-full rounded-full shadow-[0_0_15px_rgba(0,0,0,0.5)] flex items-center justify-center border-2 overflow-hidden hover:scale-125 hover:z-50 transition-all cursor-pointer relative group"
+                                                    style={{ borderColor: payload.color, backgroundColor: '#0f172a' }}
+                                                >
                                                     <img
                                                         src={payload.img}
                                                         alt={payload.name}
                                                         className="object-contain"
-                                                        style={{ width: '65%', height: '65%' }}
+                                                        style={{ width: '70%', height: '70%' }}
                                                     />
                                                 </div>
                                             </foreignObject>
@@ -364,34 +372,36 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                             </ResponsiveContainer>
                         </div>
 
-                        {/* HORIZONTAL LEGEND */}
-                        <div className="flex flex-row flex-wrap justify-center gap-4 bg-black/20 p-4 rounded-xl border border-white/5">
-                            <h4 className="w-full text-center text-sm font-bold text-white uppercase mb-2">
-                                Légende & Zones Clés
+                        {/* HORIZONTAL LEGEND - 7 GROUPS */}
+                        <div className="flex flex-row flex-wrap justify-center gap-3 bg-black/20 p-4 rounded-xl border border-white/5">
+                            <h4 className="w-full text-center text-sm font-bold text-white uppercase mb-3">
+                                📊 Groupes de Performance (x7)
                             </h4>
 
                             {[
-                                { name: 'Candidats au Titre', color: '#CEF002', desc: 'Complet' },
-                                { name: 'Attaque de Feu', color: '#f472b6', desc: 'Spectaculaire' },
-                                { name: 'Blocs Murs', color: '#38bdf8', desc: 'Défensif' },
-                                { name: 'Ventre Mou / Équilibrés', color: '#94a3b8', desc: 'Moyen' },
-                                { name: 'Zone Rouge', color: '#ef4444', desc: 'Danger' },
+                                { name: '👑 Élites', color: '#CEF002' },
+                                { name: '🇪🇺 Europe', color: '#a855f7' },
+                                { name: '🔥 Attaque Feu', color: '#f472b6' },
+                                { name: '🛡️ Blocs Murs', color: '#38bdf8' },
+                                { name: '⚖️ Équilibrés', color: '#94a3b8' },
+                                { name: '📉 Panne Off.', color: '#fb923c' },
+                                { name: '🚨 Zone Critique', color: '#ef4444' },
                             ].map(cluster => (
-                                <div key={cluster.name} className="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 min-w-[100px] hover:bg-white/10 transition-all">
+                                <div key={cluster.name} className="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 min-w-[80px] hover:bg-white/10 transition-all flex-grow md:flex-grow-0">
                                     <div className="flex items-center gap-2 mb-1">
-                                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: cluster.color }}></div>
-                                        <span className="font-bold text-[9px] text-white uppercase">{cluster.name.split('/')[0]}</span>
+                                        <div className="w-2 h-2 rounded-full shadow-[0_0_5px_currentColor]" style={{ backgroundColor: cluster.color, color: cluster.color }}></div>
+                                        <span className="font-bold text-[10px] text-white uppercase">{cluster.name}</span>
                                     </div>
 
                                     {/* Team Icons List for this Cluster */}
-                                    <div className="flex flex-wrap justify-center gap-1 mt-1 max-w-[140px]">
-                                        {/* Match by color is safer than string parsing */}
+                                    {/* Simple Count only to save space? Or tiny icons? Tiny icons. */}
+                                    <div className="flex flex-wrap justify-center gap-0.5 mt-1 max-w-[100px]">
                                         {clusters.filter(c => c.color === cluster.color).map(t => (
                                             <div
                                                 key={t.name}
-                                                className="rounded-full bg-white/10 p-0.5 border border-white/5 flex items-center justify-center"
+                                                className="rounded-full bg-white/10 p-[1px] border border-white/5 flex items-center justify-center opacity-80"
                                                 title={t.name}
-                                                style={{ width: '24px', height: '24px', minWidth: '24px', minHeight: '24px' }}
+                                                style={{ width: '16px', height: '16px' }}
                                             >
                                                 <img src={t.img} alt={t.name} className="w-full h-full object-contain" />
                                             </div>
@@ -405,24 +415,32 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                     {/* METHODOLOGY BLOCK */}
                     <div className="bg-white/5 p-4 rounded-xl border border-white/5 mt-4">
                         <h4 className="text-sm font-bold text-white uppercase mb-2 flex items-center gap-2">
-                            <span className="text-accent text-lg">ℹ️</span> Méthodologie du Clustering
+                            <span className="text-accent text-lg">ℹ️</span> Méthodologie du Clustering 2.0
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[10px] text-secondary leading-relaxed">
                             <div>
-                                <strong className="text-white block mb-1">Calcul des Scores (Pondération)</strong>
-                                <p>
-                                    Les positions sur le graphique sont déterminées par une moyenne pondérée :
-                                    <br />• <span className="text-white">85% : Performance de la saison actuelle</span> (xG pour l'attaque, Buts Encaissés pour la défense).
-                                    <br />• <span className="text-white">15% : Historique & Modèle</span> (Simulations prédictives basées sur les 2 dernières saisons).
+                                <strong className="text-white block mb-1">Source des Données</strong>
+                                <p className="mb-2">
+                                    Données combinées de <span className="text-white">Opta (Stats Réelles)</span> et du <span className="text-white">Modèle Prédictif Interne</span>.
+                                    Mise à jour J{currentWeek}.
                                 </p>
+                                <strong className="text-white block mb-1">Algorithme de Score (0-100)</strong>
+                                <ul className="list-disc pl-3 space-y-0.5">
+                                    <li><span className="text-white">Score Offensif (Y)</span>: 50% Simulation (Puissance Team) + <span className="text-accent">50% Star Power</span> (Forme Moyenne Top 3 Joueurs & xG).</li>
+                                    <li><span className="text-white">Score Défensif (X)</span>: Basé sur les Buts Encaissés (GA) et la solidité défensive simulée.</li>
+                                    <li><span className="text-white">Taille du Point</span>: Représente le niveau de dépendance aux Stars (Star Power).</li>
+                                </ul>
                             </div>
                             <div>
-                                <strong className="text-white block mb-1">Définitions des Groupes</strong>
-                                <ul className="list-disc pl-3 space-y-1">
-                                    <li><span className="text-[#CEF002]">Candidats au Titre</span>: Attaque élite & Défense solide. Les favoris statistiques.</li>
-                                    <li><span className="text-[#f472b6]">Attaque de Feu</span>: Création d'occasions massive, mais défense perméable.</li>
-                                    <li><span className="text-[#38bdf8]">Blocs Murs</span>: Défense hermétique, mais difficultés à marquer.</li>
-                                    <li><span className="text-[#ef4444]">Zone Rouge</span>: Faiblesse structurelle en attaque et en défense.</li>
+                                <strong className="text-white block mb-1">Interprétation des 7 Groupes</strong>
+                                <ul className="list-disc pl-3 space-y-0.5">
+                                    <li><span className="text-[#CEF002]">👑 Élites</span>: Domination totale (Att+ / Def+).</li>
+                                    <li><span className="text-[#a855f7]">🇪🇺 Europe</span>: Très solide avec potentiel offensif.</li>
+                                    <li><span className="text-[#f472b6]">🔥 Attaque Feu</span>: Spectaculaire mais friable derrière.</li>
+                                    <li><span className="text-[#38bdf8]">🛡️ Blocs Murs</span>: Verrous défensifs, peu de buts.</li>
+                                    <li><span className="text-[#94a3b8]">⚖️ Ventre Mou</span>: Équipes moyennes sans point fort/faible marqué.</li>
+                                    <li><span className="text-[#fb923c]">📉 Panne Off.</span>: Tient bon derrière mais inoffensif devant.</li>
+                                    <li><span className="text-[#ef4444]">🚨 Zone Rouge</span>: Danger de relégation imminent.</li>
                                 </ul>
                             </div>
                         </div>
