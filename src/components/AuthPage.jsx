@@ -50,7 +50,7 @@ const AuthPage = ({ onLogin }) => {
                     <img
                         src={getLeagueLogo()}
                         alt="Ligue 1"
-                        className="h-16 w-auto mx-auto mb-4 drop-shadow-[0_0_15px_rgba(206,240,2,0.3)]"
+                        className="h-10 w-auto mx-auto mb-4 drop-shadow-[0_0_15px_rgba(206,240,2,0.3)]"
                     />
                     <h1 className="text-2xl font-black text-white uppercase italic tracking-tighter">
                         Ligue 1 <span className="text-accent not-italic">Predictor Access</span>
