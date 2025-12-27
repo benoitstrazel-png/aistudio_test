@@ -82,6 +82,10 @@ const parseCSV = (content) => {
         const playerObj = {};
 
         headerConfigs.forEach(({ index, finalName }) => {
+            // Only keep columns that are in our mapping whitelist
+            const isMapped = Object.values(COL_MAPPING).includes(finalName);
+            if (!isMapped) return;
+
             let val = cleanRow[index];
             // Auto-detect numbers
             if (val && !isNaN(val) && val.trim() !== '') {
