@@ -33,7 +33,6 @@ const downloadData = () => {
         exec(`kaggle datasets download -d ${DATASET_ID} -p "${DATA_DIR}" --unzip --force`, (error, stdout, stderr) => {
             if (error) {
                 console.error(`Error downloading dataset: ${error.message}`);
-                // For now, if local and no kaggle, we might skip, but for this task we assume env is set up
                 reject(error);
                 return;
             }
@@ -46,56 +45,82 @@ const downloadData = () => {
 
 const parseCSV = (content) => {
     const lines = content.split('\n').filter(l => l.trim());
-    const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+    if (lines.length === 0) return [];
 
-    console.log('CSV Headers detected:', headers);
+    // Parse Headers
+    // Handle potential surrounding quotes in headers
+    const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+    console.log('Detected Headers:', headers);
 
-    // Find indices
+    // Dynamic Column Mapping
     const indices = {};
     for (const [key, search] of Object.entries(COL_MAPPING)) {
-        const idx = headers.indexOf(search);
+        // loose matching for headers
+        const idx = headers.findIndex(h => h === search || h.toLowerCase() === search.toLowerCase());
         if (idx !== -1) indices[key] = idx;
     }
+    console.log('Column Indices mapped:', indices);
 
-    // Explicitly find the 'Comp' column
-    const leagueIdx = headers.findIndex(h => h === 'Comp');
-    console.log(`'Comp' column index: ${leagueIdx}`);
+    // SMART DETECTION for League Column
+    // Instead of trusting "Comp", let's find which column actually contains "Ligue 1"
+    let leagueIdx = headers.findIndex(h => h === 'Comp' || h === 'Competition');
+
+    // Scan first 100 rows to find "Ligue 1" and confirm/find the column
+    let detectedLeagueIdx = -1;
+    let foundLigue1 = false;
+
+    for (let i = 1; i < Math.min(lines.length, 100); i++) {
+        const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+        if (!row) continue;
+        const cleanRow = row.map(val => val ? val.replace(/^"|"$/g, '').trim() : '');
+
+        // Search all columns for "Ligue 1"
+        cleanRow.forEach((val, idx) => {
+            if (val && val.includes('Ligue 1')) {
+                if (detectedLeagueIdx === -1) detectedLeagueIdx = idx;
+                foundLigue1 = true;
+            }
+        });
+        if (foundLigue1 && detectedLeagueIdx !== -1) break;
+    }
+
+    if (detectedLeagueIdx !== -1) {
+        console.log(`Auto-detected 'Ligue 1' data in column index: ${detectedLeagueIdx} (Header: "${headers[detectedLeagueIdx] || 'Unknown'}")`);
+        leagueIdx = detectedLeagueIdx;
+    } else {
+        console.warn("Could not auto-detect 'Ligue 1' in the first 100 rows. Falling back to 'Comp' header or index 0.");
+        if (leagueIdx === -1) leagueIdx = 0; // Fallback
+    }
 
     const results = [];
     const uniqueLeagues = new Set();
 
     for (let i = 1; i < lines.length; i++) {
-        // Robust regex for CSV split
+        // Robust split
         const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
         if (!row) continue;
 
-        // Clean quotes
         const cleanRow = row.map(val => val ? val.replace(/^"|"$/g, '').trim() : '');
 
-        // Check League
-        const league = leagueIdx !== -1 ? cleanRow[leagueIdx] : '';
-        if (league) uniqueLeagues.add(league); // Track unique leagues for debug
+        // Check League using the detected index
+        const league = cleanRow[leagueIdx] || '';
+        uniqueLeagues.add(league);
 
-        // Debug first 5 rows to see what is happening
-        if (i < 5) {
-            console.log(`Row ${i} Comp value: "${league}"`);
-        }
-
-        if (league !== 'fr Ligue 1') continue;
+        // Relaxed filtering: includes "Ligue 1" (handles "fr Ligue 1", "Ligue 1 Uber Eats", etc.)
+        if (!league.includes('Ligue 1')) continue;
 
         const playerObj = {};
         for (const [key, idx] of Object.entries(indices)) {
             let val = cleanRow[idx];
-            // Convert numbers
+            // Number conversion
             if (['Age', 'MP', 'Starts', 'Min', 'Gls', 'Ast'].includes(key)) val = parseInt(val) || 0;
             if (['xG', 'npxG', 'xAG'].includes(key)) val = parseFloat(val) || 0;
             playerObj[key] = val;
         }
-
         results.push(playerObj);
     }
 
-    console.log('Unique "Comp" values found in CSV:', Array.from(uniqueLeagues).slice(0, 20)); // Log first 20 unique leagues
+    console.log(`First 10 distinct values in League Column (${leagueIdx}):`, Array.from(uniqueLeagues).slice(0, 10));
     return results;
 };
 
@@ -103,9 +128,8 @@ const processFiles = async () => {
     try {
         await downloadData();
 
-        // Find the CSV file (it might have a variable name)
         const files = fs.readdirSync(DATA_DIR);
-        const csvFile = files.find(f => f.endsWith('.csv') && !f.includes('ligue1_calendar')); // Exclude existing calendar if any
+        const csvFile = files.find(f => f.endsWith('.csv') && !f.includes('ligue1_calendar'));
 
         if (!csvFile) {
             throw new Error('No new CSV file found after download.');
@@ -120,7 +144,6 @@ const processFiles = async () => {
         fs.writeFileSync(OUTPUT_FILE, JSON.stringify(extracted, null, 2));
         console.log(`Saved to ${OUTPUT_FILE}`);
 
-        // Cleanup: delete the csv to keep repo clean? Or keep it. Let's delete to save space
         fs.unlinkSync(path.join(DATA_DIR, csvFile));
 
     } catch (err) {
