@@ -12,6 +12,7 @@ const AuthPage = ({ onLogin }) => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        // Simulation of secure credentials
         if (username.toLowerCase() === 'admin' && password === 'admin') {
             onLogin();
         } else {
@@ -30,18 +31,16 @@ const AuthPage = ({ onLogin }) => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col md:flex-row font-sans overflow-hidden bg-white">
-            {/* LEFT SIDE - FORM */}
-            <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="w-full md:w-[50%] bg-white flex flex-col items-center justify-center p-8 relative z-10"
-            >
-                <div className="w-full max-w-[420px] flex flex-col items-center">
+        <div className="min-h-screen flex flex-col lg:flex-row font-sans bg-white overflow-hidden">
+            {/* 1. Layout: 50% left, 50% right */}
+            {/* Switch to lg:flex-row and lg:w-[50%] for Tablet Optimization */}
 
-                    {/* Logo Area */}
-                    <div className="mb-16">
+            {/* 2. Left Panel (Login Interface) */}
+            <div className="w-full lg:w-[50%] bg-white flex flex-col items-center justify-center p-10 relative">
+                <div className="w-full max-w-[420px] flex flex-col items-center relative z-10">
+
+                    {/* Header: Center 'Ligue 1 Uber Eats' logo */}
+                    <div className="mb-12">
                         <img
                             src={getLeagueLogo()}
                             alt="Ligue 1 Uber Eats"
@@ -49,15 +48,14 @@ const AuthPage = ({ onLogin }) => {
                         />
                     </div>
 
-                    {/* Titles */}
+                    {/* Typography */}
                     <div className="w-full text-center mb-10">
-                        <p className="text-gray-500 text-sm mb-2 font-medium font-['Barlow']">Start your journey</p>
-                        <h1 className="text-3xl font-bold text-[#0B1426] mb-3 font-['Barlow']">
+                        {/* Subtitle */}
+                        <p className="text-gray-500 text-sm mb-2 font-normal font-['Barlow']">Start your journey</p>
+                        {/* Large, bold H1 */}
+                        <h1 className="text-3xl font-bold text-[#0B1426] font-['Barlow']">
                             Connect to Predictor Access
                         </h1>
-                        <p className="text-[10px] text-gray-400 uppercase tracking-[0.1em] font-medium font-['Barlow']">
-                            CONNECT TO PREDICTOR ACCESS
-                        </p>
                     </div>
 
                     {/* Form */}
@@ -68,16 +66,15 @@ const AuthPage = ({ onLogin }) => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                transition={{ duration: 0.3 }}
                                 onSubmit={handleRequestAccess}
-                                className="w-full flex flex-col gap-4"
+                                className="w-full flex flex-col gap-5"
                             >
                                 <input
                                     type="text"
                                     required
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    className="w-full h-12 border border-[#FFE500] rounded-[2px] px-4 text-sm text-gray-700 placeholder-gray-300 font-medium uppercase focus:outline-none focus:border-[#FFE500] focus:ring-1 focus:ring-[#FFE500]"
+                                    className="w-full h-12 bg-white border border-[#FFE500] rounded-none px-4 text-sm text-gray-900 placeholder-gray-300 font-medium uppercase focus:outline-none focus:ring-1 focus:ring-[#FFE500]"
                                     placeholder="USERNAME"
                                 />
                                 <input
@@ -85,21 +82,20 @@ const AuthPage = ({ onLogin }) => {
                                     required
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full h-12 border border-[#FFE500] rounded-[2px] px-4 text-sm text-gray-700 placeholder-gray-300 font-medium uppercase focus:outline-none focus:border-[#FFE500] focus:ring-1 focus:ring-[#FFE500]"
+                                    className="w-full h-12 bg-white border border-[#FFE500] rounded-none px-4 text-sm text-gray-900 placeholder-gray-300 font-medium uppercase focus:outline-none focus:ring-1 focus:ring-[#FFE500]"
                                     placeholder="EMAIL ADDRESS"
                                 />
 
-                                <div className="flex justify-center mt-4">
+                                <div className="flex justify-center mt-2">
                                     <button
                                         type="submit"
-                                        className="bg-[#FFE500] text-[#0B1426] font-bold py-3 px-12 rounded-[2px] text-sm uppercase tracking-wide hover:brightness-105 transition-all"
+                                        className="bg-[#FFE500] text-black font-bold py-3 px-10 rounded-sm text-sm uppercase tracking-wide hover:brightness-105 transition-all"
                                     >
                                         REQUEST ACCESS
                                     </button>
                                 </div>
-
                                 <div className="w-full flex justify-center mt-6">
-                                    <button type="button" onClick={() => setIsRegistering(false)} className="text-xs text-gray-500 hover:text-[#0B1426] transition-colors">
+                                    <button type="button" onClick={() => setIsRegistering(false)} className="text-xs text-gray-500 hover:text-black">
                                         Return to login
                                     </button>
                                 </div>
@@ -110,46 +106,47 @@ const AuthPage = ({ onLogin }) => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                transition={{ duration: 0.3 }}
                                 onSubmit={handleLogin}
-                                className="w-full flex flex-col gap-4"
+                                className="w-full flex flex-col gap-5"
                             >
-                                {error && (
-                                    <div className="text-red-500 text-xs text-center mb-2">{error}</div>
-                                )}
+                                {error && <div className="text-red-500 text-xs text-center">{error}</div>}
 
+                                {/* Input: Username */}
                                 <input
                                     type="text"
                                     required
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    className="w-full h-12 border border-[#FFE500] rounded-[2px] px-4 text-sm text-gray-700 placeholder-gray-300 font-medium uppercase focus:outline-none focus:border-[#FFE500] focus:ring-1 focus:ring-[#FFE500]"
-                                    placeholder="UEEFINAME"
+                                    className="w-full h-12 bg-white border border-[#FFE500] rounded-none px-4 text-sm text-gray-900 placeholder-gray-300 font-medium uppercase focus:outline-none focus:ring-1 focus:ring-[#FFE500]"
+                                    placeholder="USERNAME"
                                 />
 
+                                {/* Input: Password */}
                                 <input
                                     type="password"
                                     required
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className="w-full h-12 border border-[#FFE500] rounded-[2px] px-4 text-sm text-gray-700 placeholder-gray-300 font-medium uppercase focus:outline-none focus:border-[#FFE500] focus:ring-1 focus:ring-[#FFE500]"
+                                    className="w-full h-12 bg-white border border-[#FFE500] rounded-none px-4 text-sm text-gray-900 placeholder-gray-300 font-medium uppercase focus:outline-none focus:ring-1 focus:ring-[#FFE500]"
                                     placeholder="PASSWORD"
                                 />
 
-                                <div className="flex justify-center mt-4">
+                                {/* Button: LOG IN */}
+                                <div className="flex justify-center mt-2">
                                     <button
                                         type="submit"
-                                        className="bg-[#FFE500] text-[#0B1426] font-bold py-3 px-16 rounded-[4px] text-sm uppercase tracking-wide hover:brightness-105 transition-all"
+                                        className="bg-[#FFE500] text-black font-bold py-3 px-16 rounded-sm text-sm uppercase tracking-wide hover:brightness-105 transition-all"
                                     >
                                         LOG IN
                                     </button>
                                 </div>
 
-                                <div className="w-full flex justify-between items-center mt-6 px-1">
-                                    <button type="button" className="text-xs text-gray-500 hover:text-[#0B1426] transition-colors">
-                                        Forget username/password?
+                                {/* Footer Links */}
+                                <div className="w-full flex justify-between items-center mt-8 px-1">
+                                    <button type="button" className="text-xs text-gray-500 hover:text-black transition-colors">
+                                        Forgot username/password?
                                     </button>
-                                    <button type="button" onClick={() => setIsRegistering(true)} className="text-xs text-gray-500 hover:text-[#0B1426] transition-colors">
+                                    <button type="button" onClick={() => setIsRegistering(true)} className="text-xs text-gray-500 hover:text-black transition-colors">
                                         Create account
                                     </button>
                                 </div>
@@ -158,20 +155,21 @@ const AuthPage = ({ onLogin }) => {
                     </AnimatePresence>
                 </div>
 
-                {/* Bottom Left Link */}
-                <div className="absolute bottom-6 left-8">
+                {/* Footer: 'Have an account? Sign in' at the very bottom left */}
+                <div className="absolute bottom-8 left-10">
                     <p className="text-gray-500 text-xs">
                         Have an account? <span className="text-[#0055A4] font-medium cursor-pointer hover:underline" onClick={() => setIsRegistering(false)}>Sign in</span>
                     </p>
                 </div>
-            </motion.div>
+            </div>
 
-            {/* RIGHT SIDE - IMAGE */}
-            <div className="hidden md:block w-[50%] h-screen relative bg-[#0B1426]">
+            {/* 3. Right Panel (Image) */}
+            {/* Hidden on Mobile and Tablet (< 1024px), Visible on Desktop */}
+            <div className="hidden lg:block w-[50%] h-screen relative bg-gray-100">
                 <img
                     src={loginBg}
                     alt="Ligue 1 Stadium"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover"
                 />
             </div>
         </div>
