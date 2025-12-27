@@ -31,12 +31,12 @@ const AuthPage = ({ onLogin }) => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col lg:flex-row font-sans bg-white overflow-hidden">
+        <div className="min-h-screen flex flex-col md:flex-row font-sans bg-white overflow-hidden">
             {/* 1. Layout: 50% left, 50% right */}
-            {/* Switch to lg:flex-row and lg:w-[50%] for Tablet Optimization */}
+            {/* Reverted to md:flex-row to ensure PC/Laptops see the split view */}
 
             {/* 2. Left Panel (Login Interface) */}
-            <div className="w-full lg:w-[50%] bg-white flex flex-col items-center justify-center p-10 relative">
+            <div className="w-full md:w-[50%] bg-white flex flex-col items-center justify-center p-10 relative">
                 <div className="w-full max-w-[420px] flex flex-col items-center relative z-10">
 
                     {/* Header: Center 'Ligue 1 Uber Eats' logo */}
@@ -164,8 +164,7 @@ const AuthPage = ({ onLogin }) => {
             </div>
 
             {/* 3. Right Panel (Image) */}
-            {/* Hidden on Mobile and Tablet (< 1024px), Visible on Desktop */}
-            <div className="hidden lg:block w-[50%] h-screen relative bg-gray-100">
+            <div className="hidden md:block w-[50%] h-screen relative bg-gray-100">
                 <img
                     src={loginBg}
                     alt="Ligue 1 Stadium"
