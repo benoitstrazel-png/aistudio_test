@@ -331,12 +331,12 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                                             </div>
                                                         </div>
                                                         <div className="text-xs text-secondary space-y-1.5">
+                                                            <div className="flex justify-between"><span className="text-accent underline">Score Global:</span> <span className="text-white font-mono font-bold">{Math.round(data.gps)}/100</span></div>
                                                             <div className="flex justify-between"><span>Attaque:</span> <span className="text-white font-mono">{Math.round(data.y)}</span></div>
                                                             <div className="flex justify-between"><span>Défense:</span> <span className="text-white font-mono">{Math.round(data.x)}</span></div>
-                                                            <div className="flex justify-between"><span className="text-accent">Star Power:</span> <span className="text-white font-mono">{(data.starPower).toFixed(1)}/10</span></div>
-                                                            <div className="flex justify-between"><span className="text-blue-400">Mental:</span> <span className="text-white font-mono">{Math.round(data.giantKillerScore)}%</span></div>
+                                                            <div className="flex justify-between"><span className="text-blue-400">Résilience:</span> <span className="text-white font-mono">{Math.round(data.scores?.res || 0)}%</span></div>
                                                             <div className="mt-1 pt-1 border-t border-white/5 text-[9px] italic text-slate-500">
-                                                                *Taille du point liée à la forme des Top Players
+                                                                *Taille du point = Star Power
                                                             </div>
                                                         </div>
                                                     </div>
@@ -376,15 +376,15 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                         {/* HORIZONTAL LEGEND - 7 GROUPS */}
                         <div className="flex flex-row flex-wrap justify-center gap-3 bg-black/20 p-4 rounded-xl border border-white/5">
                             <h4 className="w-full text-center text-sm font-bold text-white uppercase mb-3">
-                                📊 Groupes de Performance (x7)
+                                📊 Groupes de Performance (Ranking GPS)
                             </h4>
 
                             {[
                                 { name: '👑 Élites', color: '#CEF002' },
                                 { name: '🇪🇺 Europe', color: '#a855f7' },
+                                { name: '⚖️ Ventre Mou', color: '#94a3b8' },
                                 { name: '🔥 Attaque Feu', color: '#f472b6' },
-                                { name: '🛡️ Blocs Murs', color: '#38bdf8' },
-                                { name: '⚖️ Équilibrés', color: '#94a3b8' },
+                                { name: '🛡️ Blocs Compacts', color: '#38bdf8' },
                                 { name: '📉 Panne Off.', color: '#fb923c' },
                                 { name: '🚨 Zone Critique', color: '#ef4444' },
                             ].map(cluster => (
@@ -395,9 +395,8 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                     </div>
 
                                     {/* Team Icons List for this Cluster */}
-                                    {/* Simple Count only to save space? Or tiny icons? Tiny icons. */}
                                     <div className="flex flex-wrap justify-center gap-0.5 mt-1 max-w-[100px]">
-                                        {clusters.filter(c => c.color === cluster.color).map(t => (
+                                        {clusters.filter(c => c.cluster.includes(cluster.name.split(' ')[1])).map(t => (
                                             <div
                                                 key={t.name}
                                                 className="rounded-full bg-white/10 p-[1px] border border-white/5 flex items-center justify-center opacity-80"
@@ -416,32 +415,30 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                     {/* METHODOLOGY BLOCK */}
                     <div className="bg-white/5 p-4 rounded-xl border border-white/5 mt-4">
                         <h4 className="text-sm font-bold text-white uppercase mb-2 flex items-center gap-2">
-                            <span className="text-accent text-lg">ℹ️</span> Méthodologie du Clustering 2.0
+                            <span className="text-accent text-lg">ℹ️</span> Méthodologie du Clustering 3.0 (GPS)
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[10px] text-secondary leading-relaxed">
                             <div>
-                                <strong className="text-white block mb-1">Source des Données</strong>
+                                <strong className="text-white block mb-1">7 Piliers de Performance</strong>
                                 <p className="mb-2">
-                                    Données combinées de <span className="text-white">Opta (Stats Réelles)</span> et du <span className="text-white">Modèle Prédictif Interne</span>.
-                                    Mise à jour J{currentWeek}.
+                                    Chaque club est évalué sur 7 critères normalisés (0-100) pour former un <span className="text-white">Global Performance Score (GPS)</span>.
                                 </p>
-                                <strong className="text-white block mb-1">Algorithme de Score (0-100)</strong>
                                 <ul className="list-disc pl-3 space-y-0.5">
-                                    <li><span className="text-white">Score Offensif (Y)</span>: 40% Simulation + 40% Star Power + <span className="text-accent">20% Mental (Giant Killer)</span>.</li>
-                                    <li><span className="text-white">Score Défensif (X)</span>: Basé sur les Buts Encaissés (GA) et la solidité défensive simulée.</li>
-                                    <li><span className="text-white">Taille du Point</span>: Représente le niveau de dépendance aux Stars (Star Power).</li>
+                                    <li><span className="text-white">Attaque / Défense / Différence</span> : Efficacité brute.</li>
+                                    <li><span className="text-white">Domicile / Extérieur</span> : Constance des résultats (PPG).</li>
+                                    <li><span className="text-blue-400">Résilience</span> : Capacité à marquer à l'extérieur & faire des nuls.</li>
+                                    <li><span className="text-accent">Star Power</span> : Impact individuel des tops joueurs.</li>
                                 </ul>
                             </div>
                             <div>
-                                <strong className="text-white block mb-1">Interprétation des 7 Groupes</strong>
+                                <strong className="text-white block mb-1">Classification par Classement (Ranking)</strong>
+                                <p className="mb-1">Pour éviter les groupes vides, les équipes sont classées par GPS et réparties :</p>
                                 <ul className="list-disc pl-3 space-y-0.5">
-                                    <li><span className="text-[#CEF002]">👑 Élites</span>: Domination totale (Att+ / Def+).</li>
-                                    <li><span className="text-[#a855f7]">🇪🇺 Europe</span>: Très solide avec potentiel offensif.</li>
-                                    <li><span className="text-[#f472b6]">🔥 Attaque Feu</span>: Spectaculaire mais friable derrière.</li>
-                                    <li><span className="text-[#38bdf8]">🛡️ Blocs Murs</span>: Verrous défensifs, peu de buts.</li>
-                                    <li><span className="text-[#94a3b8]">⚖️ Ventre Mou</span>: Équipes moyennes sans point fort/faible marqué.</li>
-                                    <li><span className="text-[#fb923c]">📉 Panne Off.</span>: Tient bon derrière mais inoffensif devant.</li>
-                                    <li><span className="text-[#ef4444]">🚨 Zone Rouge</span>: Danger de relégation imminent.</li>
+                                    <li><span className="text-[#CEF002]">👑 Élites</span> : Top 3 Global.</li>
+                                    <li><span className="text-[#a855f7]">🇪🇺 Europe</span> : Rangs 4 à 6.</li>
+                                    <li><span className="text-[#94a3b8]">⚖️ Ventre Mou</span> : Rangs 7 à 10.</li>
+                                    <li><span className="text-[#f472b6]">🔥 / 🛡️ Style</span> : Rangs 11-14 (Offensif ou Défensif).</li>
+                                    <li><span className="text-[#ef4444]">🚨 Zone Critique</span> : Bas de classement GPS.</li>
                                 </ul>
                             </div>
                         </div>
