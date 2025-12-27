@@ -69,8 +69,8 @@ const parseCSV = (content) => {
     });
 
     for (let i = 1; i < lines.length; i++) {
-        // Robust split
-        const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+        // Robust split: Match quoted strings OR non-comma sequences (allowing spaces)
+        const row = lines[i].match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
         if (!row) continue;
 
         const cleanRow = row.map(val => val ? val.replace(/^"|"$/g, '').trim() : '');
