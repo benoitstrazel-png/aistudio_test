@@ -27,10 +27,10 @@ const NextMatchRadar = ({ homeTeam, awayTeam, teamStats }) => {
 
     return (
         <div className="card flex flex-col items-center">
-            <h2 className="text-secondary w-full text-left">Comparatif Performance</h2>
+            {/* Title removed for layout optimization */}
             <div style={{ width: '100%', height: 300 }}>
                 <ResponsiveContainer>
-                    <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
+                    <RadarChart cx="50%" cy="50%" outerRadius="85%" data={data}>
                         <PolarGrid stroke="#475569" />
                         <PolarAngleAxis dataKey="subject" tick={{ fill: '#94a3b8', fontSize: 12 }} />
                         <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />

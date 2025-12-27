@@ -280,6 +280,41 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                     </div>
                 </div>
 
+                {/* 3. DETAILED METRICS (Moved Up) */}
+                <div className="card p-6">
+                    <div className="flex flex-col items-center mb-6">
+                        <h3 className="text-xl font-black text-white uppercase italic tracking-tighter mb-4">Statistiques Comparées</h3>
+
+                        {/* Filter Switcher */}
+                        <div className="flex p-1 bg-black/40 rounded-xl border border-white/5">
+                            {['all', 'home', 'away'].map((mode) => (
+                                <button
+                                    key={mode}
+                                    onClick={() => setFilterContext(mode)}
+                                    className={`px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${filterContext === mode
+                                        ? 'bg-accent text-slate-900 shadow-lg'
+                                        : 'text-secondary hover:text-white'
+                                        }`}
+                                >
+                                    {mode === 'all' ? 'Total' : mode === 'home' ? 'Domicile' : 'Extérieur'}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="space-y-2">
+                        {comparisonData.map((item) => (
+                            <StatRow key={item.key} label={item.label} keyName={item.key} />
+                        ))}
+                    </div>
+
+                    <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/5 text-center">
+                        <p className="text-[10px] text-secondary uppercase tracking-widest leading-relaxed">
+                            * Les statistiques de cartons sont estimées sur la base de l'agressivité des équipes et des simulations de matchs historiques.
+                        </p>
+                    </div>
+                </div>
+
                 {/* 3. CLUSTERING ANALYSIS */}
                 <div className="card col-span-1 lg:col-span-2 p-8 bg-[#0f172a] border border-white/5">
                     <div className="text-center mb-8">
@@ -445,40 +480,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                     </div>
                 </div>
 
-                {/* 4. DETAILED METRICS (Existing) */}
-                <div className="card p-6">
-                    <div className="flex flex-col items-center mb-6">
-                        <h3 className="text-xl font-black text-white uppercase italic tracking-tighter mb-4">Statistiques Comparées</h3>
 
-                        {/* Filter Switcher */}
-                        <div className="flex p-1 bg-black/40 rounded-xl border border-white/5">
-                            {['all', 'home', 'away'].map((mode) => (
-                                <button
-                                    key={mode}
-                                    onClick={() => setFilterContext(mode)}
-                                    className={`px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${filterContext === mode
-                                        ? 'bg-accent text-slate-900 shadow-lg'
-                                        : 'text-secondary hover:text-white'
-                                        }`}
-                                >
-                                    {mode === 'all' ? 'Total' : mode === 'home' ? 'Domicile' : 'Extérieur'}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="space-y-2">
-                        {comparisonData.map((item) => (
-                            <StatRow key={item.key} label={item.label} keyName={item.key} />
-                        ))}
-                    </div>
-
-                    <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/5 text-center">
-                        <p className="text-[10px] text-secondary uppercase tracking-widest leading-relaxed">
-                            * Les statistiques de cartons sont estimées sur la base de l'agressivité des équipes et des simulations de matchs historiques.
-                        </p>
-                    </div>
-                </div>
 
             </div>
         </div>
