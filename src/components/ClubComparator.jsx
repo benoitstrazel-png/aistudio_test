@@ -234,7 +234,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                         <p className="text-secondary text-xs font-bold uppercase tracking-widest">Classement par journée (Historique + Projection)</p>
                     </div>
 
-                    <div className="flex-1 w-full" style={{ height: '300px' }}>
+                    <div className="w-full h-[350px]">
                         <ResponsiveContainer width="100%" height="100%">
                             <LineChart data={rankingHistory} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" vertical={false} />
