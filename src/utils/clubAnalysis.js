@@ -33,7 +33,11 @@ export const analyzeClubEvents = (clubName, allMatches) => {
         discipline: {
             yellow: 0,
             red: 0,
-            total: 0
+            total: 0,
+            distribution: {
+                '0-15': 0, '16-30': 0, '31-45': 0,
+                '46-60': 0, '61-75': 0, '76-90+': 0
+            }
         },
         penalties: {
             awarded: 0,
@@ -111,12 +115,18 @@ export const analyzeClubEvents = (clubName, allMatches) => {
                         stats.penalties.conceded_scored++;
                     }
                 }
-            } else if (e.type === 'Yellow Card' && e.team === clubName) {
-                stats.discipline.yellow++;
-                stats.discipline.total++;
-            } else if (e.type === 'Red Card' && e.team === clubName) {
-                stats.discipline.red++;
-                stats.discipline.total++;
+            } else if (e.type === 'Yellow Card') {
+                if (e.team === clubName) {
+                    stats.discipline.yellow++;
+                    stats.discipline.total++;
+                    stats.discipline.distribution[bucket]++;
+                }
+            } else if (e.type === 'Red Card') {
+                if (e.team === clubName) {
+                    stats.discipline.red++;
+                    stats.discipline.total++;
+                    stats.discipline.distribution[bucket]++;
+                }
             } else if (e.type === 'Other' && e.detail.includes('Pénalty manqué')) {
                 // Determine who missed
                 if (e.team === clubName) stats.penalties.awarded++;
@@ -145,7 +155,8 @@ export const analyzeClubEvents = (clubName, allMatches) => {
 export const getChartData = (stats) => {
     return Object.keys(stats.goalsFor.distribution).map(bucket => ({
         name: bucket,
-        Marqués: stats.goalsFor.distribution[bucket],
-        Encaissés: stats.goalsAgainst.distribution[bucket]
+        scored: stats.goalsFor.distribution[bucket],
+        conceded: stats.goalsAgainst.distribution[bucket],
+        cards: stats.discipline.distribution[bucket]
     }));
 };
