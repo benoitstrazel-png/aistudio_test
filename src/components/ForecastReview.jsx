@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { getSnapshots, comparePredictions, savePredictionSnapshot, seedMockHistory } from '../utils/predictionHistory';
+import { getSnapshots, comparePredictions, savePredictionSnapshot, seedMockHistory, regenerateHistory } from '../utils/predictionHistory';
 import TeamLogo from './ui/TeamLogo';
 
 const ForecastReview = ({ schedule, currentWeek }) => {
@@ -95,8 +95,21 @@ const ForecastReview = ({ schedule, currentWeek }) => {
 
                 </div>
 
-                {/* DEBUG SAVE BUTTON (Hidden in production ideally, but useful for demo) */}
-                <div className="mt-4 pt-4 border-t border-white/5 flex justify-end">
+                {/* DEBUG CONTROLS */}
+                <div className="mt-4 pt-4 border-t border-white/5 flex gap-4 justify-end">
+                    <button
+                        onClick={() => {
+                            const newHistory = regenerateHistory(schedule);
+                            setSnapshots(newHistory);
+                            if (newHistory.length > 0) {
+                                setSelectedSnapshotId(newHistory[newHistory.length - 1].id);
+                                alert("Historique régénéré avec succès (Backfill J1-J15) !");
+                            }
+                        }}
+                        className="text-xs text-red-400 hover:text-red-300 underline"
+                    >
+                        🔄 Réinitialiser Historique (Backfill)
+                    </button>
                     <button
                         onClick={handleSaveSnapshot}
                         className="text-xs text-slate-500 hover:text-white underline"

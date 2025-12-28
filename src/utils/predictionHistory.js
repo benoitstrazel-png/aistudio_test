@@ -66,46 +66,29 @@ export const getSnapshots = () => {
     }
 };
 
-// Seed mock history for demonstration (J16 predictions for J20)
+import { generateBackfillHistory } from './historyGenerator';
+
+// Seed mock history for demonstration (Backfill J1-J15)
 export const seedMockHistory = (schedule) => {
     const snapshots = getSnapshots();
-    // Only seed if empty or check specific ID
-    if (snapshots.some(s => s.id === 'mock_j16')) return;
+    // Only seed if empty
+    if (snapshots.length > 0) return;
 
-    const mockPredictions = {};
-    schedule.forEach(m => {
-        // Create a "fake" prediction different from actual result sometimes
-        const isCorrect = Math.random() > 0.4; // 60% accuracy simulation
-        let mockScore = m.score ? `${m.score.home}-${m.score.away}` : "1-1";
+    console.log("Seeding backfilled history...");
+    const backfilledSnapshots = generateBackfillHistory(schedule);
 
-        if (!isCorrect && m.status === 'FINISHED') {
-            // Generate wrong score
-            const [h, a] = (m.score?.home !== undefined ? [m.score.home, m.score.away] : [1, 1]);
-            mockScore = `${a}-${h}`; // Flip result just for noise
-        }
+    // Save to localStorage
+    // We append to existing just in case, but usually it's empty here
+    const finalHistory = [...snapshots, ...backfilledSnapshots];
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(finalHistory));
+    console.log(`Seeded ${backfilledSnapshots.length} historical snapshots.`);
+};
 
-        // Ensure we have a prediction object structure
-        mockPredictions[m.id] = {
-            score: mockScore,
-            winner: mockScore.split('-')[0] > mockScore.split('-')[1] ? m.homeTeam :
-                (mockScore.split('-')[1] > mockScore.split('-')[0] ? m.awayTeam : 'Draw'),
-            goals_pred: "+2.5 Buts",
-            confidence: Math.floor(Math.random() * 40) + 40,
-            week: m.week
-        };
-    });
-
-    const mockSnapshot = {
-        id: 'mock_j16',
-        label: 'Simulation J16 (Mock)',
-        week: 16,
-        date: new Date(Date.now() - 86400000 * 30).toISOString(), // 30 days ago
-        predictions: mockPredictions
-    };
-
-    snapshots.push(mockSnapshot);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshots));
-    console.log("Mock history seeded");
+// Force regenerate history (useful for dev/debug)
+export const regenerateHistory = (schedule) => {
+    localStorage.removeItem(STORAGE_KEY);
+    seedMockHistory(schedule);
+    return getSnapshots();
 };
 
 export const comparePredictions = (snapshotId, targetWeek, currentSchedule) => {
