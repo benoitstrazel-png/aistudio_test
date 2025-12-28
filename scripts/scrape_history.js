@@ -14,21 +14,40 @@ const OUTPUT_FILE = path.join(__dirname, '../src/data/matches_history_detailed.j
 async function scrapeMatch(browser, url, roundInfo) {
     const page = await browser.newPage();
     try {
-        // Optimization: Block images and fonts
-        await page.setRequestInterception(true);
-        page.on('request', (req) => {
-            if (['image', 'stylesheet', 'font'].includes(req.resourceType())) {
-                req.abort();
-            } else {
-                req.continue();
-            }
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
+        console.log(`Navigating to ${url}...`);
+
+        // Use a slightly looser wait condition to prevent timeouts if network is busy
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+
+        // AUTO-SCROLL to trigger lazy load of events
+        await page.evaluate(async () => {
+            await new Promise((resolve) => {
+                let totalHeight = 0;
+                const distance = 150;
+                // Scroll down a fixed amount enough to trigger the lower section
+                const timer = setInterval(() => {
+                    window.scrollBy(0, distance);
+                    totalHeight += distance;
+                    // Stop after scrolling reasonable amount (e.g. 2000px) or bottom
+                    if (totalHeight >= 2000 || totalHeight >= document.body.scrollHeight) {
+                        clearInterval(timer);
+                        resolve();
+                    }
+                }, 100);
+            });
         });
 
-        console.log(`Navigating to ${url}...`);
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        // Wait for potential network requests for events
+        await new Promise(r => setTimeout(r, 1500));
 
-        // Wait for key elements (home/away team names, score)
-        await page.waitForSelector('.duelParticipant__home', { timeout: 10000 });
+        // Wait for key elements
+        try {
+            // Check if we have the rows
+            await page.waitForSelector('.smv__participantRow', { timeout: 5000 });
+        } catch (e) {
+            console.log("Warning: No event rows found immediately.");
+        }
 
         // Extract Basic Info
         const matchData = await page.evaluate(() => {
@@ -44,53 +63,46 @@ async function scrapeMatch(browser, url, roundInfo) {
             };
         });
 
-        // Click "Résumé" tab if not active? Usually default.
-        // We look for events .smv__incident
-
         // Extract Events
         const events = await page.evaluate(() => {
-            const incidents = Array.from(document.querySelectorAll('.smv__incident'));
-            return incidents.map(el => {
-                const timeBox = el.querySelector('.smv__timeBox')?.innerText.trim() || '';
-                const time = timeBox.replace("'", "");
+            const rows = Array.from(document.querySelectorAll('.smv__participantRow'));
+            return rows.map(el => {
+                const time = el.querySelector('.smv__timeBox')?.innerText.trim().replace("'", "") || '';
+                const player = el.querySelector('.smv__playerName')?.innerText.trim() || '';
+
+                const text = el.innerText || '';
+                const svg = el.querySelector('.smv__incidentIcon svg');
+                const svgClass = (svg && svg.getAttribute('class')) || '';
 
                 let type = 'Unknown';
                 let detail = '';
-                let team = 'Unknown'; // tougher to determine purely from class sometimes, need to check parent or relative position
 
-                // Determine team by checking if it's in the home or away column
-                // .smv__homeParticipant or .smv__awayParticipant wrapper usually
-                const isHome = el.classList.contains('smv__homeParticipant') || el.closest('.smv__homeParticipant');
+                // Text-based detection for Goals (e.g., "1 - 0")
+                if (/\d+\s*-\s*\d+/.test(text)) {
+                    type = 'Goal';
+                    if (text.toLowerCase().includes('(csc)') || text.toLowerCase().includes('own goal')) {
+                        detail = 'Own Goal';
+                    }
+                }
+                else if (svgClass.includes('yellowCard')) type = 'Yellow Card';
+                else if (svgClass.includes('redCard')) type = 'Red Card';
+                else if (svgClass.includes('substitution')) type = 'Substitution';
+                else if (svgClass.includes('penalty-missed')) { type = 'Other'; detail = 'Pénalty manqué'; }
 
-                // Simple heuristic if structure is different: check icon location
-                // But let's assume standard Flashscore structure
-
-                // Icon types
-                if (el.querySelector('svg[data-testid="wcl-icon-soccer"]')) type = 'Goal';
-                else if (el.querySelector('svg[data-testid="wcl-icon-yellowCard"]')) type = 'Yellow Card';
-                else if (el.querySelector('svg[data-testid="wcl-icon-redCard"]')) type = 'Red Card';
-                else if (el.querySelector('svg[data-testid="wcl-icon-substitution"]')) type = 'Substitution';
-                else if (el.querySelector('svg[data-testid="wcl-icon-var"]')) type = 'VAR';
-                else if (el.querySelector('.smv__subIcon--penalty')) { type = 'Goal'; detail = 'Penalty'; } // Sometimes specific
-
-                // Player name
-                const player = el.querySelector('.smv__playerName')?.innerText.trim() || '';
-                const assist = el.querySelector('.smv__assist')?.innerText.trim() || '';
-
-                if (type === 'Goal' && assist) detail = `Assist: ${assist}`;
+                // Specific checks
+                if (el.querySelector('.smv__subIcon--penalty')) {
+                    type = 'Goal';
+                    detail = 'Penalty';
+                }
                 if (el.querySelector('.smv__subIcon--ownGoal')) detail = 'Own Goal';
 
-                return {
-                    time,
-                    type,
-                    player,
-                    detail,
-                    isHome // We'll map to team name later
-                };
-            }).filter(e => e.type !== 'Unknown'); // Filter out section headers like "1st Half"
+                const isHome = el.classList.contains('smv__homeParticipant');
+
+                return { time, player, type, detail, isHome };
+            }).filter(e => e.type !== 'Unknown');
         });
 
-        // Post-process events to add Team Name
+        // Post-process
         const processedEvents = events.map(e => ({
             ...e,
             team: e.isHome ? matchData.homeTeam : matchData.awayTeam,
@@ -108,30 +120,29 @@ async function scrapeMatch(browser, url, roundInfo) {
     } catch (error) {
         console.error(`Error scraping ${url}:`, error.message);
         await page.close();
-        return { url, error: error.message };
+        // Return structured error but keep url/round so we know what failed
+        return { url, round: roundInfo, error: error.message, events: [] };
     }
 }
 
 async function run() {
-    // Read URLs
     const rawData = fs.readFileSync(URLS_FILE, 'utf-8');
     const rounds = JSON.parse(rawData);
 
     const browser = await puppeteer.launch({ headless: "new" });
     const allMatches = [];
 
-    // Flatten logic handling
     let totalMatches = 0;
     for (const round of rounds) totalMatches += round.matches.length;
-    console.log(`Starting scrape for ${totalMatches} matches...`);
+    console.log(`Starting FULL scrape for ${totalMatches} matches...`);
 
     let processedCount = 0;
 
     for (const round of rounds) {
         console.log(`--- Processing ${round.round} ---`);
 
-        // Parallelize matches in batches of 3 to be nice to the server and CPU
-        const BATCH_SIZE = 3;
+        // Batch Processing
+        const BATCH_SIZE = 5;
         for (let i = 0; i < round.matches.length; i += BATCH_SIZE) {
             const batch = round.matches.slice(i, i + BATCH_SIZE);
             const promises = batch.map(m => scrapeMatch(browser, m.url, round.round));
@@ -139,16 +150,23 @@ async function run() {
             const results = await Promise.all(promises);
             results.forEach(r => {
                 if (!r.error) allMatches.push(r);
+                else {
+                    // Even if error, maybe save it with empty events to avoid holes? 
+                    // Best to push it so we have a record
+                    console.log(`Failed: ${r.url}`);
+                    allMatches.push(r);
+                }
             });
 
             processedCount += results.length;
             console.log(`Progress: ${processedCount}/${totalMatches}`);
+
+            // Intermediate Save
+            fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allMatches, null, 2));
         }
     }
 
     await browser.close();
-
-    // Save Results
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allMatches, null, 2));
     console.log(`\nScraping complete! Data saved to ${OUTPUT_FILE}`);
 }

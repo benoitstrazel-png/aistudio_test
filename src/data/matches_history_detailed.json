@@ -4,7 +4,50 @@
     "awayTeam": "Lyon",
     "score": "1-0",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "37",
+        "player": "Maitland-Niles A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "39",
+        "player": "Pagis P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "40",
+        "player": "Tagliafico N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "43",
+        "player": "Tolisso C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "58",
+        "player": "Soumano S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "66",
+        "player": "Abergel L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/?mid=Qc01MMcM"
   },
   {
@@ -12,7 +55,57 @@
     "awayTeam": "Metz",
     "score": "3-1",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "36",
+        "player": "Sinayoko L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "39",
+        "player": "El Azzouzi O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "45",
+        "player": "Matondo R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "45+1",
+        "player": "Hein G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "75",
+        "player": "Deminguet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "84",
+        "player": "Mensah G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "89",
+        "player": "Danois K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/metz-4v0yqlWc/?mid=Cj4QK9MH"
   },
   {
@@ -20,7 +113,22 @@
     "awayTeam": "Paris FC",
     "score": "0-0",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "78",
+        "player": "Lopez M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "88",
+        "player": "Camara A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/paris-fc-0OEHEprs/?mid=4Q0IMVi5"
   },
   {
@@ -28,7 +136,36 @@
     "awayTeam": "Angers",
     "score": "0-1",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "33",
+        "player": "Belkhdim Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "53",
+        "player": "Louchet T.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "77",
+        "player": "Mendy A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "78",
+        "player": "Belkebla H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/nice-YagoQJpq/?mid=bo9pQ4bc"
   },
   {
@@ -36,7 +173,57 @@
     "awayTeam": "Rennes",
     "score": "5-0",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "28",
+        "player": "Kvaratskhelia K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "39",
+        "player": "Mayulu S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "53",
+        "player": "Jacquet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "67",
+        "player": "Kvaratskhelia K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "69",
+        "player": "Ait Boudlal A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "88",
+        "player": "Mbaye I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "90+1",
+        "player": "Ramos G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/psg-CjhkPw0k/rennes-d2nnj1IE/?mid=h8ptFvjd"
   },
   {
@@ -44,7 +231,57 @@
     "awayTeam": "Strasbourg",
     "score": "1-0",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "18",
+        "player": "Emersonn",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "28",
+        "player": "Casseres C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "44",
+        "player": "Magri F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "82",
+        "player": "Moreira D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "85",
+        "player": "El Mourabet S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "89",
+        "player": "Chilwell B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+3",
+        "player": "Messali R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/strasbourg-nP6UzIU1/toulouse-MLmY2yB1/?mid=prsYG0Lq"
   },
   {
@@ -52,7 +289,43 @@
     "awayTeam": "Lens",
     "score": "1-2",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "34",
+        "player": "Thauvin F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "38",
+        "player": "El Arabi Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "81",
+        "player": "Said W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "83",
+        "player": "Tabibou D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "90+6",
+        "player": "Awaziem C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/nantes-veuetnGG/?mid=WvHb216j"
   },
   {
@@ -60,7 +333,29 @@
     "awayTeam": "Marseille",
     "score": "1-0",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "10",
+        "player": "Mbappé E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "26",
+        "player": "Vermeeren A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+1",
+        "player": "Ozer B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/marseille-SblU3Hee/?mid=bDVHOiNh"
   },
   {
@@ -68,7 +363,64 @@
     "awayTeam": "Monaco",
     "score": "1-0",
     "round": "Journée 15",
-    "events": [],
+    "events": [
+      {
+        "time": "10",
+        "player": "Minamino T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "27",
+        "player": "Caio Henrique",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "28",
+        "player": "Doumbia K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "44",
+        "player": "Doumbia K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "52",
+        "player": "Vanderson",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "60",
+        "player": "Ajorque L.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "78",
+        "player": "Mboup P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "90+4",
+        "player": "Teze J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/monaco-2PIvr8o4/?mid=hp2gOrT9"
   },
   {
@@ -76,7 +428,57 @@
     "awayTeam": "Nantes",
     "score": "3-0",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "22",
+        "player": "Tati T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "43",
+        "player": "Mwanga J.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "51",
+        "player": "Abner Vinicius",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "57",
+        "player": "Morton T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "70",
+        "player": "Satriano M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "77",
+        "player": "Satriano M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "88",
+        "player": "Lepenant J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/nantes-veuetnGG/?mid=G6a3D6cf"
   },
   {
@@ -84,7 +486,43 @@
     "awayTeam": "Lens",
     "score": "1-2",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "45",
+        "player": "Thauvin F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "48",
+        "player": "Aguilar R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "74",
+        "player": "Thauvin F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "76",
+        "player": "Djibirin H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "89",
+        "player": "Belkebla H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/lens-IBmris38/?mid=bkiK9OdJ"
   },
   {
@@ -92,7 +530,50 @@
     "awayTeam": "Lille",
     "score": "0-1",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "45+1",
+        "player": "Ngoy N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "45+3",
+        "player": "Meunier T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "51",
+        "player": "Bouaddi A.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "82",
+        "player": "Samatta A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "88",
+        "player": "Igamane H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+1",
+        "player": "Haraldsson H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/lille-pfDZL71o/?mid=jqv6XRlQ"
   },
   {
@@ -100,7 +581,57 @@
     "awayTeam": "Nice",
     "score": "3-1",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "12",
+        "player": "Avom A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "27",
+        "player": "Yongwa D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "31",
+        "player": "Abergel L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "45+2",
+        "player": "Soumano S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "53",
+        "player": "Soumano S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "56",
+        "player": "Diop S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "90",
+        "player": "Jansson I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/nice-YagoQJpq/?mid=xtCgONBC"
   },
   {
@@ -108,7 +639,50 @@
     "awayTeam": "Brest",
     "score": "1-2",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "11",
+        "player": "Amo-Ameyaw S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "44",
+        "player": "Chardonnet B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "55",
+        "player": "Del Castillo R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "82",
+        "player": "Magnetti H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "90",
+        "player": "Ajorque L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "90+2",
+        "player": "Lala K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/strasbourg-nP6UzIU1/?mid=GQNpQqs0"
   },
   {
@@ -116,7 +690,57 @@
     "awayTeam": "Toulouse",
     "score": "2-2",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "14",
+        "player": "Emersonn",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "42",
+        "player": "Gomes A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "66",
+        "player": "Paixao I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "74",
+        "player": "Hojbjerg P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "75",
+        "player": "Hojbjerg P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "81",
+        "player": "McKenzie M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+2",
+        "player": "Hidalgo S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/marseille-SblU3Hee/toulouse-MLmY2yB1/?mid=QaX9QDht"
   },
   {
@@ -124,7 +748,43 @@
     "awayTeam": "Auxerre",
     "score": "1-1",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "32",
+        "player": "Kebbal I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "39",
+        "player": "Otavio",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "40",
+        "player": "Diomande S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "59",
+        "player": "Namaso D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "81",
+        "player": "Ikone J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/paris-fc-0OEHEprs/?mid=2NcBBpS6"
   },
   {
@@ -132,7 +792,57 @@
     "awayTeam": "PSG",
     "score": "1-0",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "12",
+        "player": "Camara L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "33",
+        "player": "Vitinha",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "68",
+        "player": "Minamino T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "80",
+        "player": "Kehrer T.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "87",
+        "player": "Pocognoli S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "88",
+        "player": "Diatta K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "90+5",
+        "player": "Teze J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/monaco-2PIvr8o4/psg-CjhkPw0k/?mid=p6F1M1tP"
   },
   {
@@ -140,7 +850,15 @@
     "awayTeam": "Rennes",
     "score": "0-1",
     "round": "Journée 14",
-    "events": [],
+    "events": [
+      {
+        "time": "22",
+        "player": "Rongier V.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/metz-4v0yqlWc/rennes-d2nnj1IE/?mid=ATKxS5Cm"
   },
   {
@@ -148,7 +866,71 @@
     "awayTeam": "Paris FC",
     "score": "4-2",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "11",
+        "player": "Geubbels W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "29",
+        "player": "Igamane H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "40",
+        "player": "Giroud O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "66",
+        "player": "Traore H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "77",
+        "player": "Giroud O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "80",
+        "player": "Mandi A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "84",
+        "player": "Doucet L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "90+4",
+        "player": "Doucet L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "90+6",
+        "player": "Broholm M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/paris-fc-0OEHEprs/?mid=zmvUb7r1"
   },
   {
@@ -156,7 +938,78 @@
     "awayTeam": "Metz",
     "score": "3-2",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "2",
+        "player": "Mboup P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "6",
+        "player": "Tsitaishvili G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "48",
+        "player": "Doumbia K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "56",
+        "player": "Doumbia K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "79",
+        "player": "Coulibaly S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "82",
+        "player": "Ballo-Toure F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "84",
+        "player": "Sabaly C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "87",
+        "player": "Coulibaly S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "90+8",
+        "player": "Toure A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "90+10",
+        "player": "Del Castillo R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/metz-4v0yqlWc/?mid=fwWL0TDl"
   },
   {
@@ -164,7 +1017,36 @@
     "awayTeam": "Lorient",
     "score": "1-1",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "45+1",
+        "player": "Awaziem C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "45+6",
+        "player": "Lopes A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "76",
+        "player": "Yongwa D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "90+1",
+        "player": "Awaziem C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/nantes-veuetnGG/?mid=2uis8BLE"
   },
   {
@@ -172,7 +1054,43 @@
     "awayTeam": "Angers",
     "score": "0-1",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "16",
+        "player": "Belkhdim Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "29",
+        "player": "Belkebla H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "75",
+        "player": "Ekomie J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "85",
+        "player": "Djibirin H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "90+4",
+        "player": "Emersonn",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/toulouse-MLmY2yB1/?mid=Ofuj6kjR"
   },
   {
@@ -180,7 +1098,36 @@
     "awayTeam": "Lyon",
     "score": "0-0",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "20",
+        "player": "Merah K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "28",
+        "player": "Mensah G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "67",
+        "player": "Tolisso C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "87",
+        "player": "Maitland-Niles A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/lyon-2akflumR/?mid=80xxcoDD"
   },
   {
@@ -188,7 +1135,50 @@
     "awayTeam": "Le Havre",
     "score": "3-0",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "29",
+        "player": "Lee Kang-In",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "32",
+        "player": "Toure A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "61",
+        "player": "Mendes N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "65",
+        "player": "Neves J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "69",
+        "player": "Ndjantou Q.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "87",
+        "player": "Barcola B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/psg-CjhkPw0k/?mid=fiBfFSSs"
   },
   {
@@ -196,7 +1186,57 @@
     "awayTeam": "Monaco",
     "score": "4-1",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "19",
+        "player": "Akliouche M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "20",
+        "player": "Ait Boudlal A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "48",
+        "player": "Camara M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "65",
+        "player": "Zakaria D.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "73",
+        "player": "Embolo B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "83",
+        "player": "Blas L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+5",
+        "player": "Biereth M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/monaco-2PIvr8o4/rennes-d2nnj1IE/?mid=zZbep8T7"
   },
   {
@@ -204,7 +1244,64 @@
     "awayTeam": "Strasbourg",
     "score": "1-0",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "3",
+        "player": "El Mourabet S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "68",
+        "player": "Doué G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "69",
+        "player": "Ganiou I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "77",
+        "player": "Barco V.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "77",
+        "player": "Thomasson A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+5",
+        "player": "Guilavogui M.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+5",
+        "player": "Sotoca F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+6",
+        "player": "Emegha E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/strasbourg-nP6UzIU1/?mid=GWrfnUbe"
   },
   {
@@ -212,7 +1309,78 @@
     "awayTeam": "Marseille",
     "score": "1-5",
     "round": "Journée 13",
-    "events": [],
+    "events": [
+      {
+        "time": "11",
+        "player": "Aubameyang P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "14",
+        "player": "Mendy A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "33",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "38",
+        "player": "Abdi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "38",
+        "player": "Rulli G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "45+1",
+        "player": "Kondogbia G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "53",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "58",
+        "player": "Weah T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "63",
+        "player": "Cho M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "74",
+        "player": "Paixao I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/marseille-SblU3Hee/nice-YagoQJpq/?mid=O8KOKl5K"
   },
   {
@@ -220,7 +1388,92 @@
     "awayTeam": "PSG",
     "score": "2-3",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "26",
+        "player": "Zaïre-Emery W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "30",
+        "player": "Moreira A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "33",
+        "player": "Kvaratskhelia K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "44",
+        "player": "Mata C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "45+1",
+        "player": "Mayulu S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "50",
+        "player": "Maitland-Niles A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "57",
+        "player": "Morton T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "58",
+        "player": "Tagliafico N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "90+5",
+        "player": "Tolisso C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "90+5",
+        "player": "Neves J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "90+6",
+        "player": "Ramos G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "90+6",
+        "player": "Satriano M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/psg-CjhkPw0k/?mid=6ZANesWi"
   },
   {
@@ -228,7 +1481,50 @@
     "awayTeam": "Auxerre",
     "score": "2-0",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "7",
+        "player": "Owusu E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "61",
+        "player": "Cherif S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "68",
+        "player": "Sbai A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "70",
+        "player": "Sierralta F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "71",
+        "player": "Akpa C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "87",
+        "player": "Peter P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/auxerre-MTLr36WA/?mid=zF2vhaVG"
   },
   {
@@ -236,7 +1532,71 @@
     "awayTeam": "Nice",
     "score": "2-1",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "21",
+        "player": "Mendy A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "33",
+        "player": "Boudaoui H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "35",
+        "player": "Cho M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "52",
+        "player": "Bah J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "53",
+        "player": "Hein G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "74",
+        "player": "Sabaly C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "84",
+        "player": "Diallo H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "87",
+        "player": "Hein G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "90+2",
+        "player": "Bard M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/metz-4v0yqlWc/nice-YagoQJpq/?mid=214WgL04"
   },
   {
@@ -244,7 +1604,85 @@
     "awayTeam": "Lille",
     "score": "2-0",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "33",
+        "player": "Emegha E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "35",
+        "player": "Panichelli J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "37",
+        "player": "Enciso J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "37",
+        "player": "Perraud R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "62",
+        "player": "Emegha E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "65",
+        "player": "Chilwell B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "65",
+        "player": "Rosenior L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "80",
+        "player": "Penders M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+5",
+        "player": "Andre B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+5",
+        "player": "Verdonk C.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+7",
+        "player": "Mukau N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/strasbourg-nP6UzIU1/?mid=rJpnljUr"
   },
   {
@@ -252,7 +1690,50 @@
     "awayTeam": "Toulouse",
     "score": "1-1",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "32",
+        "player": "Cresswell C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "40",
+        "player": "Casseres C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "44",
+        "player": "Pagis P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "65",
+        "player": "Sidibe D.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "79",
+        "player": "Vossah A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "87",
+        "player": "Messali R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/toulouse-MLmY2yB1/?mid=thP58KFc"
   },
   {
@@ -260,7 +1741,71 @@
     "awayTeam": "Lens",
     "score": "1-4",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "21",
+        "player": "Edouard O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "37",
+        "player": "Balogun F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "40",
+        "player": "Said W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "45",
+        "player": "Balogun F.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "45+3",
+        "player": "Sangare M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "57",
+        "player": "Gradit J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "60",
+        "player": "Said W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "74",
+        "player": "Aguilar R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+8",
+        "player": "Zakaria D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/monaco-2PIvr8o4/?mid=lISD6bpA"
   },
   {
@@ -268,7 +1813,64 @@
     "awayTeam": "Nantes",
     "score": "1-1",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "4",
+        "player": "Abline M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "22",
+        "player": "Abline M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "27",
+        "player": "Nego L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "40",
+        "player": "Kechta Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "60",
+        "player": "Kwon Hyeok-Kyu",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "78",
+        "player": "Tati T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "90+2",
+        "player": "Namli Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+5",
+        "player": "Lloris G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/nantes-veuetnGG/?mid=Wtdmjw0T"
   },
   {
@@ -276,7 +1878,36 @@
     "awayTeam": "Brest",
     "score": "3-0",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "25",
+        "player": "Gomes A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "33",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "38",
+        "player": "Mboup P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "81",
+        "player": "Aubameyang P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/marseille-SblU3Hee/?mid=ER8xYwvo"
   },
   {
@@ -284,7 +1915,57 @@
     "awayTeam": "Rennes",
     "score": "0-1",
     "round": "Journée 12",
-    "events": [],
+    "events": [
+      {
+        "time": "57",
+        "player": "De Smet T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "74",
+        "player": "Camara M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "79",
+        "player": "Lopez M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "81",
+        "player": "Embolo B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+2",
+        "player": "Rouault A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+4",
+        "player": "Otavio",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "90+6",
+        "player": "Kebbal I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/paris-fc-0OEHEprs/rennes-d2nnj1IE/?mid=0dnJpHNj"
   },
   {
@@ -292,7 +1973,22 @@
     "awayTeam": "Lyon",
     "score": "0-0",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "8",
+        "player": "Hateboer H.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "63",
+        "player": "Mboup P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/lyon-2akflumR/?mid=hlxsq4nn"
   },
   {
@@ -300,7 +1996,57 @@
     "awayTeam": "Lorient",
     "score": "3-0",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Edouard O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "26",
+        "player": "Avom A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "39",
+        "player": "Sangare M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "62",
+        "player": "Gradit J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "77",
+        "player": "Said W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "85",
+        "player": "Abergel L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "89",
+        "player": "Baidoo S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/lorient-jgNAYRGi/?mid=Gj7WO01U"
   },
   {
@@ -308,7 +2054,22 @@
     "awayTeam": "Angers",
     "score": "1-0",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "45+2",
+        "player": "Correia F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "88",
+        "player": "Verdonk C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/lille-pfDZL71o/?mid=nBFFSr25"
   },
   {
@@ -316,7 +2077,50 @@
     "awayTeam": "Metz",
     "score": "0-2",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "26",
+        "player": "Sane I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "45",
+        "player": "Toure A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "65",
+        "player": "Tabibou D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "82",
+        "player": "Abuashvili G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "89",
+        "player": "Diallo H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "90+5",
+        "player": "Kouao K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/metz-4v0yqlWc/nantes-veuetnGG/?mid=Q1zksrHb"
   },
   {
@@ -324,7 +2128,36 @@
     "awayTeam": "Le Havre",
     "score": "0-0",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "58",
+        "player": "Nicolaisen R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "84",
+        "player": "Toure A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+1",
+        "player": "Ebonog S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+2",
+        "player": "Digard D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/toulouse-MLmY2yB1/?mid=voC7U4Xh"
   },
   {
@@ -332,7 +2165,57 @@
     "awayTeam": "Strasbourg",
     "score": "4-1",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "9",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "35",
+        "player": "Meite M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "48",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "60",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "77",
+        "player": "Nanasi S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "83",
+        "player": "Chilwell B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+5",
+        "player": "Frankowski P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/rennes-d2nnj1IE/strasbourg-nP6UzIU1/?mid=8Q3OQMWH"
   },
   {
@@ -340,7 +2223,64 @@
     "awayTeam": "Marseille",
     "score": "0-1",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "26",
+        "player": "Gomes A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "30",
+        "player": "Gomes A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "36",
+        "player": "Emerson",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "39",
+        "player": "O'Riley M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "45+3",
+        "player": "Vaz R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "65",
+        "player": "Garcia U.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "80",
+        "player": "Diomande S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "87",
+        "player": "Namaso D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/marseille-SblU3Hee/?mid=UgX5w0GN"
   },
   {
@@ -348,7 +2288,50 @@
     "awayTeam": "Paris FC",
     "score": "0-1",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "36",
+        "player": "Otavio",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "47",
+        "player": "Camara A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "53",
+        "player": "Simon M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "81",
+        "player": "Coulibaly M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "85",
+        "player": "Minamino T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "90+7",
+        "player": "Fati A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/monaco-2PIvr8o4/paris-fc-0OEHEprs/?mid=MTTcuMoB"
   },
   {
@@ -356,7 +2339,43 @@
     "awayTeam": "Nice",
     "score": "1-0",
     "round": "Journée 11",
-    "events": [],
+    "events": [
+      {
+        "time": "28",
+        "player": "Bah J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "63",
+        "player": "Zabarnyi I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "78",
+        "player": "Kvaratskhelia K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "87",
+        "player": "Lee Kang-In",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "90+4",
+        "player": "Ramos G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nice-YagoQJpq/psg-CjhkPw0k/?mid=Krd6WQ2t"
   },
   {
@@ -364,7 +2383,57 @@
     "awayTeam": "Angers",
     "score": "2-2",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "3",
+        "player": "Raolisoa L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "25",
+        "player": "Cherif S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "52",
+        "player": "Vaz R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "70",
+        "player": "Vaz R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+6",
+        "player": "Hojbjerg P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+6",
+        "player": "Camara O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "90+8",
+        "player": "Aguerd N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/marseille-SblU3Hee/?mid=fLYQLzkL"
   },
   {
@@ -372,7 +2441,141 @@
     "awayTeam": "Monaco",
     "score": "3-5",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Coulibaly M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "16",
+        "player": "Tati T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "16",
+        "player": "Castro L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "19",
+        "player": "Guirassy B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "25",
+        "player": "Coulibaly M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "34",
+        "player": "Minamino T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "41",
+        "player": "Balogun F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "45+6",
+        "player": "Guirassy B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "55",
+        "player": "Akliouche M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "57",
+        "player": "Salisu M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "61",
+        "player": "Kehrer T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "62",
+        "player": "Teze J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "75",
+        "player": "Golovin A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "76",
+        "player": "Abline M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "80",
+        "player": "Mostafa Mohamed",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "82",
+        "player": "Ouattara K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "84",
+        "player": "Kohn P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "89",
+        "player": "Centonze F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "90+4",
+        "player": "Golovin A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/monaco-2PIvr8o4/nantes-veuetnGG/?mid=0MD5Ehse"
   },
   {
@@ -380,7 +2583,106 @@
     "awayTeam": "Lyon",
     "score": "3-3",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "5",
+        "player": "Tolisso C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "25",
+        "player": "Chergui S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "32",
+        "player": "Camara A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "35",
+        "player": "De Smet T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "45+1",
+        "player": "Karabec A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "51",
+        "player": "Sulc P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "55",
+        "player": "de Carvalho M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "58",
+        "player": "Sulc P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "61",
+        "player": "Abner Vinicius",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "65",
+        "player": "Camara A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "73",
+        "player": "Lees-Melou P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "77",
+        "player": "Kebbal I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "84",
+        "player": "Marchetti V.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "90+7",
+        "player": "Mbow M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/paris-fc-0OEHEprs/?mid=lrf0zz4E"
   },
   {
@@ -388,7 +2690,43 @@
     "awayTeam": "Auxerre",
     "score": "3-0",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "46",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "55",
+        "player": "Nanasi S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "60",
+        "player": "Barco V.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+2",
+        "player": "Matondo R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "90+4",
+        "player": "Godo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/strasbourg-nP6UzIU1/?mid=YZBDCWB7"
   },
   {
@@ -396,7 +2734,71 @@
     "awayTeam": "Rennes",
     "score": "2-2",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "45+1",
+        "player": "Ait Boudlal A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "50",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "54",
+        "player": "Tamari M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "58",
+        "player": "Cresswell C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "63",
+        "player": "Tamari M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "75",
+        "player": "Samba B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "78",
+        "player": "Nicolaisen R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "85",
+        "player": "Donnum A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+3",
+        "player": "Donnum A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/rennes-d2nnj1IE/toulouse-MLmY2yB1/?mid=0vPuG5Ia"
   },
   {
@@ -404,7 +2806,43 @@
     "awayTeam": "Brest",
     "score": "1-0",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "43",
+        "player": "Guindo D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "61",
+        "player": "Chotard J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "73",
+        "player": "Sangante A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "77",
+        "player": "Seko A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+5",
+        "player": "Lala K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/le-havre-CIEe04GT/?mid=vPzXHRmm"
   },
   {
@@ -412,7 +2850,36 @@
     "awayTeam": "PSG",
     "score": "1-1",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "49",
+        "player": "Mendes N.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "51",
+        "player": "Igor Silva",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "68",
+        "player": "Zabarnyi I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "90+5",
+        "player": "Barcola B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/psg-CjhkPw0k/?mid=4fKdGECr"
   },
   {
@@ -420,7 +2887,50 @@
     "awayTeam": "Lens",
     "score": "2-0",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "13",
+        "player": "Toure A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "45+3",
+        "player": "Sima A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "45+6",
+        "player": "Machado D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "68",
+        "player": "Hein G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "87",
+        "player": "Hein G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "90+1",
+        "player": "Hein G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/metz-4v0yqlWc/?mid=84SmEqmC"
   },
   {
@@ -428,7 +2938,64 @@
     "awayTeam": "Lille",
     "score": "2-0",
     "round": "Journée 10",
-    "events": [],
+    "events": [
+      {
+        "time": "29",
+        "player": "Diop S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "35",
+        "player": "Vanhoutte C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "35",
+        "player": "Mendy A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "40",
+        "player": "Bouaddi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "75",
+        "player": "Andre B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "78",
+        "player": "Gouveia T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "82",
+        "player": "Haraldsson H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "87",
+        "player": "Jansson I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/nice-YagoQJpq/?mid=4WLdCNHO"
   },
   {
@@ -436,7 +3003,64 @@
     "awayTeam": "Strasbourg",
     "score": "2-1",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "25",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "31",
+        "player": "Doukoure I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "61",
+        "player": "Moreira D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "67",
+        "player": "Doukoure I.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "68",
+        "player": "Sarr M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "80",
+        "player": "Doué G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+1",
+        "player": "Moreira A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "90+6",
+        "player": "Lemaréchal F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/strasbourg-nP6UzIU1/?mid=hIVJAkPM"
   },
   {
@@ -444,7 +3068,29 @@
     "awayTeam": "Lorient",
     "score": "2-0",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "16",
+        "player": "Peter P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "59",
+        "player": "Cherif S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "75",
+        "player": "Lefort J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/lorient-jgNAYRGi/?mid=Mmlr5Tnp"
   },
   {
@@ -452,7 +3098,50 @@
     "awayTeam": "Le Havre",
     "score": "0-1",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "2",
+        "player": "Sangante A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "28",
+        "player": "Youte Kinkoue E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "41",
+        "player": "Sinayoko L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "47",
+        "player": "Toure A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "89",
+        "player": "Namaso D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "90+6",
+        "player": "Delaine T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/le-havre-CIEe04GT/?mid=K2Kr9c5F"
   },
   {
@@ -460,7 +3149,85 @@
     "awayTeam": "Nice",
     "score": "1-2",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "29",
+        "player": "Camara M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "31",
+        "player": "Vanhoutte C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "38",
+        "player": "Diop S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "45+1",
+        "player": "Clauss J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "67",
+        "player": "Ait Boudlal A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "67",
+        "player": "Louchet T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "69",
+        "player": "Frankowski P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "78",
+        "player": "Cisse D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "78",
+        "player": "Embolo B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "80",
+        "player": "Beye H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "84",
+        "player": "Samba B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nice-YagoQJpq/rennes-d2nnj1IE/?mid=CxHzBJz3"
   },
   {
@@ -468,7 +3235,99 @@
     "awayTeam": "Metz",
     "score": "6-1",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "22",
+        "player": "Mandi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "24",
+        "player": "Igamane H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "26",
+        "player": "Le Mignan S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "34",
+        "player": "Correia F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "36",
+        "player": "Bouaddi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "53",
+        "player": "Correia F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "63",
+        "player": "Melieres C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "64",
+        "player": "Perraud R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "82",
+        "player": "Andre B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "89",
+        "player": "Deminguet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "90+3",
+        "player": "Haraldsson H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+5",
+        "player": "Sane I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "90+10",
+        "player": "Haraldsson H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/metz-4v0yqlWc/?mid=E1Di7yzS"
   },
   {
@@ -476,7 +3335,71 @@
     "awayTeam": "Marseille",
     "score": "2-1",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "17",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "22",
+        "player": "Pavard B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "23",
+        "player": "Edouard O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "34",
+        "player": "Thomasson A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "53",
+        "player": "Pavard B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "84",
+        "player": "Guilavogui M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "86",
+        "player": "Greenwood M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "87",
+        "player": "Balerdi L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "88",
+        "player": "Sangare M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/marseille-SblU3Hee/?mid=6ahWagS1"
   },
   {
@@ -484,7 +3407,64 @@
     "awayTeam": "Toulouse",
     "score": "1-0",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "3",
+        "player": "Salisu M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "18",
+        "player": "Golovin A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "34",
+        "player": "Francis A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "45",
+        "player": "Coulibaly M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "54",
+        "player": "Emersonn",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "66",
+        "player": "Kehrer T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "67",
+        "player": "Methalie D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+5",
+        "player": "Cresswell C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/monaco-2PIvr8o4/toulouse-MLmY2yB1/?mid=UDij37Hd"
   },
   {
@@ -492,7 +3472,43 @@
     "awayTeam": "PSG",
     "score": "0-3",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "8",
+        "player": "Hakimi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "25",
+        "player": "Mboup P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "29",
+        "player": "Hakimi A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "39",
+        "player": "Hakimi A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "90+6",
+        "player": "Doué D.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/psg-CjhkPw0k/?mid=Y5pINdK8"
   },
   {
@@ -500,7 +3516,71 @@
     "awayTeam": "Nantes",
     "score": "1-2",
     "round": "Journée 9",
-    "events": [],
+    "events": [
+      {
+        "time": "2",
+        "player": "El Arabi Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "15",
+        "player": "Chergui S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "24",
+        "player": "Mwanga J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "38",
+        "player": "Abline M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "45+1",
+        "player": "Traore H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "64",
+        "player": "Lopez M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "64",
+        "player": "Kwon Hyeok-Kyu",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "69",
+        "player": "De Smet T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "90+1",
+        "player": "Castro L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nantes-veuetnGG/paris-fc-0OEHEprs/?mid=AXbN1Fck"
   },
   {
@@ -508,7 +3588,71 @@
     "awayTeam": "Lille",
     "score": "0-2",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "8",
+        "player": "Haraldsson H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "21",
+        "player": "Meunier T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "43",
+        "player": "Castro L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "67",
+        "player": "Andre B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "72",
+        "player": "Genesio B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "74",
+        "player": "Bouaddi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "81",
+        "player": "Perraud R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "87",
+        "player": "Awaziem C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "89",
+        "player": "Igamane H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/nantes-veuetnGG/?mid=Oxv3EXPc"
   },
   {
@@ -516,7 +3660,85 @@
     "awayTeam": "Brest",
     "score": "3-3",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "2",
+        "player": "Le Bris T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "34",
+        "player": "Dina Ebimbe J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "44",
+        "player": "Makengo J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "51",
+        "player": "Faye A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "51",
+        "player": "Ajorque L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "55",
+        "player": "Kouassi A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "84",
+        "player": "Meite B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "86",
+        "player": "Del Castillo R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "89",
+        "player": "Soumano S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "89",
+        "player": "Le Cardinal J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "90+4",
+        "player": "Tosin A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/lorient-jgNAYRGi/?mid=CbApdjAT"
   },
   {
@@ -524,7 +3746,64 @@
     "awayTeam": "Auxerre",
     "score": "2-2",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "8",
+        "player": "Namaso D.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "18",
+        "player": "Embolo B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "45",
+        "player": "Akpa C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "45",
+        "player": "Casimir J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "56",
+        "player": "Fofana S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "70",
+        "player": "Rouault A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "72",
+        "player": "Sinayoko L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "90",
+        "player": "Diousse A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/rennes-d2nnj1IE/?mid=K4XBCBfA"
   },
   {
@@ -532,7 +3811,64 @@
     "awayTeam": "Metz",
     "score": "4-0",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "2",
+        "player": "Magri F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "8",
+        "player": "Donnum A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "34",
+        "player": "Abuashvili G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "37",
+        "player": "Magri F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "45+2",
+        "player": "Sane S.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "74",
+        "player": "Emersonn",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "79",
+        "player": "Gboho Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "84",
+        "player": "Cresswell C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/metz-4v0yqlWc/toulouse-MLmY2yB1/?mid=AZDTaYA4"
   },
   {
@@ -540,7 +3876,57 @@
     "awayTeam": "Paris FC",
     "score": "2-1",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "8",
+        "player": "Kebbal I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "17",
+        "player": "Edouard O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "27",
+        "player": "Lees-Melou P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "45+1",
+        "player": "Thauvin F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "55",
+        "player": "Traore H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "64",
+        "player": "Baidoo S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90",
+        "player": "Sima A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/paris-fc-0OEHEprs/?mid=617xbCuH"
   },
   {
@@ -548,7 +3934,99 @@
     "awayTeam": "Le Havre",
     "score": "6-2",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "24",
+        "player": "Kechta Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "34",
+        "player": "Lloris G.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "35",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "45+4",
+        "player": "Zouaoui Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "45+4",
+        "player": "Kechta Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "67",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "72",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "76",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "78",
+        "player": "Nadir B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "88",
+        "player": "Vaz R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90",
+        "player": "Murillo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+2",
+        "player": "Toure A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+3",
+        "player": "Murillo M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/marseille-SblU3Hee/?mid=xOA1da4C"
   },
   {
@@ -556,7 +4034,50 @@
     "awayTeam": "Monaco",
     "score": "1-1",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "1",
+        "player": "Salisu M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "48",
+        "player": "Arcus C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "64",
+        "player": "Teze J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "72",
+        "player": "Balogun F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "85",
+        "player": "Cherif S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "90+4",
+        "player": "Cherif S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/monaco-2PIvr8o4/?mid=dWoHjUXj"
   },
   {
@@ -564,7 +4085,64 @@
     "awayTeam": "Lyon",
     "score": "3-2",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "5",
+        "player": "Bard M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "26",
+        "player": "Mata C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "29",
+        "player": "Sulc P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "35",
+        "player": "Diop S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "55",
+        "player": "Boudaoui H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "65",
+        "player": "Vanhoutte C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "90+5",
+        "player": "Sulc P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "90+6",
+        "player": "Niakhate M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/nice-YagoQJpq/?mid=MDXYwilo"
   },
   {
@@ -572,7 +4150,78 @@
     "awayTeam": "Strasbourg",
     "score": "3-3",
     "round": "Journée 8",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Barcola B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "26",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "41",
+        "player": "Moreira D.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "49",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "56",
+        "player": "Penders M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "58",
+        "player": "Ramos G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "60",
+        "player": "Hernandez L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "74",
+        "player": "Lee Kang-In",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "74",
+        "player": "Luis Enrique",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "79",
+        "player": "Mayulu S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/psg-CjhkPw0k/strasbourg-nP6UzIU1/?mid=xMFL1fth"
   },
   {
@@ -580,7 +4229,36 @@
     "awayTeam": "PSG",
     "score": "1-1",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "45+1",
+        "player": "Hernandez L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "66",
+        "player": "Mendes N.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "85",
+        "player": "Mbappé E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "88",
+        "player": "Andre B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/psg-CjhkPw0k/?mid=G8MhbLZa"
   },
   {
@@ -588,7 +4266,57 @@
     "awayTeam": "Rennes",
     "score": "2-2",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "10",
+        "player": "Embolo B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "29",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "34",
+        "player": "Ebonog S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "45",
+        "player": "Jacquet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "45+1",
+        "player": "Soumare I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "64",
+        "player": "Rongier V.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "79",
+        "player": "Ndiaye R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/rennes-d2nnj1IE/?mid=8UwCorjf"
   },
   {
@@ -596,7 +4324,57 @@
     "awayTeam": "Nice",
     "score": "2-2",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "24",
+        "player": "Abdi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "29",
+        "player": "Diop S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "42",
+        "player": "Diop S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "45+5",
+        "player": "Fati A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "51",
+        "player": "Bombito M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "56",
+        "player": "Fati A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "71",
+        "player": "Salisu M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/monaco-2PIvr8o4/nice-YagoQJpq/?mid=xlfhVM5D"
   },
   {
@@ -604,7 +4382,71 @@
     "awayTeam": "Angers",
     "score": "5-0",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Belkebla H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "26",
+        "player": "Barco V.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "36",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "51",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "59",
+        "player": "Moreira D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "61",
+        "player": "Ouattara A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "66",
+        "player": "Godo M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "70",
+        "player": "Godo M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "79",
+        "player": "Camara O.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/strasbourg-nP6UzIU1/?mid=d4kSs0kJ"
   },
   {
@@ -612,7 +4454,57 @@
     "awayTeam": "Toulouse",
     "score": "1-2",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "24",
+        "player": "Fofana M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "51",
+        "player": "Francis A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "59",
+        "player": "Donnum A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "80",
+        "player": "McKenzie M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "87",
+        "player": "Mata C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+4",
+        "player": "Moreira A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "90+6",
+        "player": "Emersonn",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/toulouse-MLmY2yB1/?mid=nFk3m4Ls"
   },
   {
@@ -620,7 +4512,99 @@
     "awayTeam": "Lens",
     "score": "1-2",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "14",
+        "player": "Edouard O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "15",
+        "player": "Baidoo S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "46",
+        "player": "Ganiou I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "61",
+        "player": "Sierralta F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "62",
+        "player": "Namaso D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "62",
+        "player": "Risser R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "65",
+        "player": "Mensah G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "66",
+        "player": "Thauvin F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "68",
+        "player": "Owusu E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "87",
+        "player": "Thomasson A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+2",
+        "player": "Sarr M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+3",
+        "player": "Pelissier C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "90+6",
+        "player": "Sima A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/lens-IBmris38/?mid=8rJp0s5m"
   },
   {
@@ -628,7 +4612,36 @@
     "awayTeam": "Nantes",
     "score": "0-0",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "10",
+        "player": "Awaziem C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "17",
+        "player": "Mboup P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "53",
+        "player": "Castro L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "67",
+        "player": "Ajorque L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/nantes-veuetnGG/?mid=lbxE53sQ"
   },
   {
@@ -636,7 +4649,29 @@
     "awayTeam": "Marseille",
     "score": "0-3",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "51",
+        "player": "Paixao I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "69",
+        "player": "O'Riley M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "76",
+        "player": "Gouiri A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/marseille-SblU3Hee/metz-4v0yqlWc/?mid=GWbXhQcK"
   },
   {
@@ -644,7 +4679,43 @@
     "awayTeam": "Lorient",
     "score": "2-0",
     "round": "Journée 7",
-    "events": [],
+    "events": [
+      {
+        "time": "25",
+        "player": "Kebbal I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "30",
+        "player": "Krasso J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "45+2",
+        "player": "Kouassi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "52",
+        "player": "Faye A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "90+3",
+        "player": "Dieng B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/paris-fc-0OEHEprs/?mid=GfsKqMK6"
   },
   {
@@ -652,7 +4723,50 @@
     "awayTeam": "Lens",
     "score": "0-0",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "1",
+        "player": "Gradit J.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "40",
+        "player": "Thomasson A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "63",
+        "player": "Camara M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "85",
+        "player": "Nagida M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+2",
+        "player": "Jacquet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+3",
+        "player": "Guilavogui M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/rennes-d2nnj1IE/?mid=MivfMRMr"
   },
   {
@@ -660,7 +4774,36 @@
     "awayTeam": "Brest",
     "score": "0-2",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "26",
+        "player": "Labeau Lascary R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "32",
+        "player": "Del Castillo R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "41",
+        "player": "Ekomie J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "45",
+        "player": "Magnetti H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/brest-Cr4VGaUl/?mid=27cNRmaL"
   },
   {
@@ -668,7 +4811,78 @@
     "awayTeam": "Lyon",
     "score": "0-1",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "13",
+        "player": "Morton T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "43",
+        "player": "Bouaddi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "46",
+        "player": "Tagliafico N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "69",
+        "player": "Mandi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "72",
+        "player": "Genesio B.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "73",
+        "player": "Fofana M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "76",
+        "player": "Moreira A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "83",
+        "player": "Sulc P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "86",
+        "player": "Fernandez-Pardo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "87",
+        "player": "Igamane H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/lyon-2akflumR/?mid=882yZ46l"
   },
   {
@@ -676,7 +4890,36 @@
     "awayTeam": "Le Havre",
     "score": "0-0",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "30",
+        "player": "Zouaoui Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "51",
+        "player": "Deminguet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "74",
+        "player": "Traore B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "88",
+        "player": "Youte Kinkoue E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/metz-4v0yqlWc/?mid=jXVAIqM7"
   },
   {
@@ -684,7 +4927,36 @@
     "awayTeam": "Paris FC",
     "score": "1-1",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "13",
+        "player": "Mbow M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "23",
+        "player": "Abdul Samed S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "40",
+        "player": "Diop S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "88",
+        "player": "Krasso J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nice-YagoQJpq/paris-fc-0OEHEprs/?mid=GANdtmEE"
   },
   {
@@ -692,7 +4964,43 @@
     "awayTeam": "Auxerre",
     "score": "2-0",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "24",
+        "player": "Senaya M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "32",
+        "player": "Zabarnyi I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "54",
+        "player": "Beraldo L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "77",
+        "player": "Matondo R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "88",
+        "player": "Barcola B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/psg-CjhkPw0k/?mid=4zdpXry1"
   },
   {
@@ -700,7 +5008,71 @@
     "awayTeam": "Nantes",
     "score": "2-2",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "45+4",
+        "player": "Lahdo M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "47",
+        "player": "Gboho Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "58",
+        "player": "Donnum A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "58",
+        "player": "Lopes A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "61",
+        "player": "Leroux L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "66",
+        "player": "Amian K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "68",
+        "player": "Donnum A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "72",
+        "player": "Cresswell C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "80",
+        "player": "Leroux L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nantes-veuetnGG/toulouse-MLmY2yB1/?mid=f5x2K5ie"
   },
   {
@@ -708,7 +5080,64 @@
     "awayTeam": "Monaco",
     "score": "3-1",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "9",
+        "player": "Kehrer T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "21",
+        "player": "Vanderson",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "40",
+        "player": "Bamba M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "46",
+        "player": "Karim D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "48",
+        "player": "Bamba M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "76",
+        "player": "Pagis P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "82",
+        "player": "Pagis P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "90+8",
+        "player": "Fati A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/monaco-2PIvr8o4/?mid=xQB5vRrR"
   },
   {
@@ -716,7 +5145,71 @@
     "awayTeam": "Marseille",
     "score": "1-2",
     "round": "Journée 6",
-    "events": [],
+    "events": [
+      {
+        "time": "24",
+        "player": "Aguerd N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "27",
+        "player": "Murillo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "38",
+        "player": "O'Riley M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "45",
+        "player": "Balerdi L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "45+1",
+        "player": "Emegha E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "49",
+        "player": "Ouattara A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "66",
+        "player": "Amo-Ameyaw S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "78",
+        "player": "Aubameyang P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+1",
+        "player": "Murillo M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/marseille-SblU3Hee/strasbourg-nP6UzIU1/?mid=UupGT9U8"
   },
   {
@@ -724,7 +5217,50 @@
     "awayTeam": "PSG",
     "score": "1-0",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "5",
+        "player": "Marquinhos",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "18",
+        "player": "Pavard B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "50",
+        "player": "Weah T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+1",
+        "player": "De Zerbi R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+1",
+        "player": "De Zerbi R.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+5",
+        "player": "Murillo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/marseille-SblU3Hee/psg-CjhkPw0k/?mid=lp7T56x2"
   },
   {
@@ -732,7 +5268,71 @@
     "awayTeam": "Toulouse",
     "score": "1-0",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "35",
+        "player": "Mensah G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "45+2",
+        "player": "Namaso D.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "50",
+        "player": "Methalie D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "62",
+        "player": "Restes G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "64",
+        "player": "Oppegard F.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "82",
+        "player": "McKenzie M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "83",
+        "player": "Sidibe D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+4",
+        "player": "Casseres C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+4",
+        "player": "Hidalgo S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/toulouse-MLmY2yB1/?mid=K6fWTIOi"
   },
   {
@@ -740,7 +5340,85 @@
     "awayTeam": "Lorient",
     "score": "1-1",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "3",
+        "player": "Meite B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "15",
+        "player": "Sangante A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "21",
+        "player": "Tosin A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "25",
+        "player": "Seko A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "41",
+        "player": "Abergel L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "45+2",
+        "player": "Samatta A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "47",
+        "player": "Soumare I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "50",
+        "player": "Talbi M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "52",
+        "player": "Avom A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "55",
+        "player": "Bamba M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "90+2",
+        "player": "Faye A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/lorient-jgNAYRGi/?mid=E5muSdg4"
   },
   {
@@ -748,7 +5426,64 @@
     "awayTeam": "Metz",
     "score": "5-2",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "13",
+        "player": "Diallo H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "28",
+        "player": "Biereth M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "43",
+        "player": "Teze J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "46",
+        "player": "Fati A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "67",
+        "player": "Hein G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "83",
+        "player": "Fati A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "86",
+        "player": "Kouao K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "90+3",
+        "player": "Ilenikhena G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/metz-4v0yqlWc/monaco-2PIvr8o4/?mid=nJomQzOG"
   },
   {
@@ -756,7 +5491,85 @@
     "awayTeam": "Strasbourg",
     "score": "2-3",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "21",
+        "player": "Godo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "27",
+        "player": "Paez K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "73",
+        "player": "Lopez M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "74",
+        "player": "Sarr M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "78",
+        "player": "Doué G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "81",
+        "player": "Dicko N.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "87",
+        "player": "Emegha E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90",
+        "player": "Emegha E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+2",
+        "player": "Barco V.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+4",
+        "player": "Gory A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "90+10",
+        "player": "Penders M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/paris-fc-0OEHEprs/strasbourg-nP6UzIU1/?mid=8SQDBy9N"
   },
   {
@@ -764,7 +5577,57 @@
     "awayTeam": "Lille",
     "score": "3-0",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "28",
+        "player": "Said W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "36",
+        "player": "Verdonk C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "43",
+        "player": "Thauvin F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "45+1",
+        "player": "Mandi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "52",
+        "player": "Fofana R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "82",
+        "player": "Udol M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+5",
+        "player": "Mbemba Ch.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/lille-pfDZL71o/?mid=t074FJ9b"
   },
   {
@@ -772,7 +5635,71 @@
     "awayTeam": "Nice",
     "score": "4-1",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Ajorque L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "9",
+        "player": "Del Castillo R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "18",
+        "player": "Vanhoutte C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "25",
+        "player": "Bard M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "30",
+        "player": "Moffi T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "56",
+        "player": "Diop S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "67",
+        "player": "Labeau Lascary R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "70",
+        "player": "Chotard J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "76",
+        "player": "Labeau Lascary R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/nice-YagoQJpq/?mid=h02p6FWp"
   },
   {
@@ -780,7 +5707,64 @@
     "awayTeam": "Rennes",
     "score": "2-2",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Tati T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "29",
+        "player": "Blas L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "35",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "38",
+        "player": "Mostafa Mohamed",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "63",
+        "player": "Cisse D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "64",
+        "player": "Mwanga J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "67",
+        "player": "Rouault A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+6",
+        "player": "El Arabi Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nantes-veuetnGG/rennes-d2nnj1IE/?mid=02N5DcvB"
   },
   {
@@ -788,7 +5772,43 @@
     "awayTeam": "Angers",
     "score": "1-0",
     "round": "Journée 5",
-    "events": [],
+    "events": [
+      {
+        "time": "20",
+        "player": "Lefort J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "21",
+        "player": "Niakhate M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "37",
+        "player": "Arcus C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "53",
+        "player": "Merah K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "65",
+        "player": "Tessmann T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/lyon-2akflumR/?mid=tK3L7S7k"
   },
   {
@@ -796,7 +5816,71 @@
     "awayTeam": "Lyon",
     "score": "3-1",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "14",
+        "player": "Tolisso C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "26",
+        "player": "Frankowski P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "44",
+        "player": "Tolisso C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "47",
+        "player": "Seidu A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "53",
+        "player": "Mata C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "75",
+        "player": "Morton T.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "79",
+        "player": "Rouault A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+3",
+        "player": "Descamps R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+5",
+        "player": "Meite M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/rennes-d2nnj1IE/?mid=8n9dHuun"
   },
   {
@@ -804,7 +5888,57 @@
     "awayTeam": "Paris FC",
     "score": "1-2",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "14",
+        "player": "Geubbels W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "23",
+        "player": "Marchetti V.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "34",
+        "player": "Marchetti V.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "51",
+        "player": "Lees-Melou P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "52",
+        "player": "Del Castillo R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "84",
+        "player": "Otavio",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "85",
+        "player": "Lopez M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/paris-fc-0OEHEprs/?mid=0tnV0Kf5"
   },
   {
@@ -812,7 +5946,29 @@
     "awayTeam": "Angers",
     "score": "1-1",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "14",
+        "player": "Gbamin J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "45+2",
+        "player": "Belkebla H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "90",
+        "player": "Abdelli H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/metz-4v0yqlWc/?mid=8YTN2tQh"
   },
   {
@@ -820,7 +5976,43 @@
     "awayTeam": "Lens",
     "score": "2-0",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "5",
+        "player": "Edouard O.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "15",
+        "player": "Barcola B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "18",
+        "player": "Thauvin F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "39",
+        "player": "Ramos G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "51",
+        "player": "Barcola B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/psg-CjhkPw0k/?mid=0S6dnLuC"
   },
   {
@@ -828,7 +6020,36 @@
     "awayTeam": "Le Havre",
     "score": "1-0",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "39",
+        "player": "Hogsberg L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "74",
+        "player": "Zouaoui Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+1",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+1",
+        "player": "Kechta Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/strasbourg-nP6UzIU1/?mid=MezvabPH"
   },
   {
@@ -836,7 +6057,78 @@
     "awayTeam": "Toulouse",
     "score": "2-1",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "23",
+        "player": "Donnum A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "50",
+        "player": "Magri F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "56",
+        "player": "Restes G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "80",
+        "player": "Vossah A.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "83",
+        "player": "Giroud O.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "86",
+        "player": "Martinez C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "88",
+        "player": "Magri F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90",
+        "player": "Bentaleb N.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+6",
+        "player": "Mbemba Ch.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+8",
+        "player": "Mbappé E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/toulouse-MLmY2yB1/?mid=ULwncxfU"
   },
   {
@@ -844,7 +6136,85 @@
     "awayTeam": "Monaco",
     "score": "1-2",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "38",
+        "player": "Zakaria D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "42",
+        "player": "Ouattara K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "45+2",
+        "player": "Minamino T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "55",
+        "player": "Casimir J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "55",
+        "player": "Minamino T.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "64",
+        "player": "Owusu E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "72",
+        "player": "Bamba A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "73",
+        "player": "Salisu M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "75",
+        "player": "Brunner P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "89",
+        "player": "Ilenikhena G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "90+3",
+        "player": "Caio Henrique",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/monaco-2PIvr8o4/?mid=df05paAO"
   },
   {
@@ -852,7 +6222,29 @@
     "awayTeam": "Nantes",
     "score": "1-0",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "44",
+        "player": "Bah J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "56",
+        "player": "Boga J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "57",
+        "player": "Diop S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nantes-veuetnGG/nice-YagoQJpq/?mid=C6zF42et"
   },
   {
@@ -860,7 +6252,78 @@
     "awayTeam": "Lorient",
     "score": "4-0",
     "round": "Journée 4",
-    "events": [],
+    "events": [
+      {
+        "time": "10",
+        "player": "Yongwa D.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "13",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "20",
+        "player": "Pavard B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "26",
+        "player": "Pavard B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "33",
+        "player": "Gomes A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "53",
+        "player": "Gomes A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "55",
+        "player": "Karim D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "71",
+        "player": "Faye A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "86",
+        "player": "Paixao I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+3",
+        "player": "Aguerd N.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/marseille-SblU3Hee/?mid=EB8llsBa"
   },
   {
@@ -868,7 +6331,50 @@
     "awayTeam": "Marseille",
     "score": "1-0",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "22",
+        "player": "Abner Vinicius",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "29",
+        "player": "Egan-Riley C.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "41",
+        "player": "Gomes A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "80",
+        "player": "Sulc P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "87",
+        "player": "Sulc P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "90+4",
+        "player": "Murillo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/marseille-SblU3Hee/?mid=hdKuj3tm"
   },
   {
@@ -876,7 +6382,71 @@
     "awayTeam": "Nice",
     "score": "3-1",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "1",
+        "player": "Mendy A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "13",
+        "player": "Doucoure F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "41",
+        "player": "Boudaoui H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "52",
+        "player": "Peprah K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "55",
+        "player": "Bah J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "55",
+        "player": "Soumare I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "61",
+        "player": "Ndiaye R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+5",
+        "player": "Soumare I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "90+7",
+        "player": "Kevin",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/nice-YagoQJpq/?mid=4xaPmDaJ"
   },
   {
@@ -884,7 +6454,71 @@
     "awayTeam": "Strasbourg",
     "score": "3-2",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Akliouche M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "8",
+        "player": "Doukoure I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "48",
+        "player": "Balogun F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "73",
+        "player": "Bakwa D.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "76",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+6",
+        "player": "Minamino T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "90+9",
+        "player": "Nzingoula R.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+11",
+        "player": "Coulibaly M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "90+11",
+        "player": "Akliouche M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/monaco-2PIvr8o4/strasbourg-nP6UzIU1/?mid=r5atlMg2"
   },
   {
@@ -892,7 +6526,64 @@
     "awayTeam": "Metz",
     "score": "3-2",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "22",
+        "player": "Sane S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "45+1",
+        "player": "Sane S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "45+3",
+        "player": "Kebbal I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "52",
+        "player": "Kebbal I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "54",
+        "player": "Traore B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "67",
+        "player": "Simon M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "69",
+        "player": "Otavio",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "80",
+        "player": "Sane S.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Metz"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/metz-4v0yqlWc/paris-fc-0OEHEprs/?mid=WO0HkZU6"
   },
   {
@@ -900,7 +6591,57 @@
     "awayTeam": "Rennes",
     "score": "1-1",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "21",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "24",
+        "player": "Belkhdim Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "25",
+        "player": "Dujeux A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "32",
+        "player": "Jacquet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "42",
+        "player": "Frankowski P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "49",
+        "player": "Cherif S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "51",
+        "player": "Peter P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/rennes-d2nnj1IE/?mid=xQ78ie0f"
   },
   {
@@ -908,7 +6649,78 @@
     "awayTeam": "PSG",
     "score": "3-6",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "7",
+        "player": "Neves J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "9",
+        "player": "Barcola B.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "14",
+        "player": "Neves J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "31",
+        "player": "Dembélé O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "37",
+        "player": "Cresswell C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "51",
+        "player": "Dembélé O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "78",
+        "player": "Neves J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "82",
+        "player": "Donnum A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "89",
+        "player": "Gboho Y.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+1",
+        "player": "Vossah A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/psg-CjhkPw0k/toulouse-MLmY2yB1/?mid=xhUujrPk"
   },
   {
@@ -916,7 +6728,43 @@
     "awayTeam": "Auxerre",
     "score": "1-0",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "8",
+        "player": "Mostafa Mohamed",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "43",
+        "player": "Awaziem C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "43",
+        "player": "Sinayoko L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "51",
+        "player": "Danois K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "88",
+        "player": "El Azzouzi O.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/nantes-veuetnGG/?mid=Ua40gHVs"
   },
   {
@@ -924,7 +6772,106 @@
     "awayTeam": "Lille",
     "score": "1-7",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "28",
+        "player": "Avom A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "37",
+        "player": "Faye A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "40",
+        "player": "Fernandez-Pardo M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "46",
+        "player": "Perraud R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "53",
+        "player": "Fernandez-Pardo M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "59",
+        "player": "Andre B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "64",
+        "player": "Tosin A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "69",
+        "player": "Perraud R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "73",
+        "player": "Abergel L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "77",
+        "player": "Fernandez-Pardo M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "80",
+        "player": "Igamane H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "87",
+        "player": "Haraldsson H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+3",
+        "player": "Igamane H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+5",
+        "player": "Sahraoui O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/lorient-jgNAYRGi/?mid=MDT9ePIP"
   },
   {
@@ -932,7 +6879,71 @@
     "awayTeam": "Brest",
     "score": "3-1",
     "round": "Journée 3",
-    "events": [],
+    "events": [
+      {
+        "time": "24",
+        "player": "Baldé M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "45",
+        "player": "Ajorque L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "48",
+        "player": "Magnetti H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "55",
+        "player": "Majecki R.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "57",
+        "player": "Lala K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "60",
+        "player": "Thauvin F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "69",
+        "player": "Aguilar R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "78",
+        "player": "Guilavogui M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "90+2",
+        "player": "Thomasson A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/lens-IBmris38/?mid=ABiSBPo9"
   },
   {
@@ -940,7 +6951,43 @@
     "awayTeam": "Monaco",
     "score": "1-0",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "83",
+        "player": "Genesio B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "86",
+        "player": "Bentaleb N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "87",
+        "player": "Camara L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "90+1",
+        "player": "Giroud O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "90+7",
+        "player": "Mawissa C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Monaco"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lille-pfDZL71o/monaco-2PIvr8o4/?mid=2BXAn9Ic"
   },
   {
@@ -948,7 +6995,57 @@
     "awayTeam": "Lens",
     "score": "1-2",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "7",
+        "player": "Zouaoui Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "9",
+        "player": "Said W.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "25",
+        "player": "Samatta A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "40",
+        "player": "Fofana R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "45+3",
+        "player": "Doucoure F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "47",
+        "player": "Sangante A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "60",
+        "player": "Thomasson A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/lens-IBmris38/?mid=bwRJpmmA"
   },
   {
@@ -956,7 +7053,43 @@
     "awayTeam": "Nantes",
     "score": "1-0",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "22",
+        "player": "Awaziem C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "54",
+        "player": "Coquelin F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "66",
+        "player": "Doukoure I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "81",
+        "player": "Emegha E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "90+5",
+        "player": "Panichelli J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nantes-veuetnGG/strasbourg-nP6UzIU1/?mid=pfk1cQWF"
   },
   {
@@ -964,7 +7097,29 @@
     "awayTeam": "Brest",
     "score": "2-0",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "52",
+        "player": "Magri F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "63",
+        "player": "Chardonnet B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "65",
+        "player": "Magri F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/toulouse-MLmY2yB1/?mid=dY86yqAd"
   },
   {
@@ -972,7 +7127,92 @@
     "awayTeam": "Rennes",
     "score": "4-0",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "6",
+        "player": "Camara M.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "11",
+        "player": "Wooh C.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "35",
+        "player": "Karim D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "41",
+        "player": "Mendy F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "45",
+        "player": "Soumano S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "45+4",
+        "player": "Soumano S.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "47",
+        "player": "Tosin A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "65",
+        "player": "Pagis P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "69",
+        "player": "Le Bris T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "71",
+        "player": "Kouassi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "84",
+        "player": "Katseris P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "86",
+        "player": "Abergel L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/rennes-d2nnj1IE/?mid=WjPRrRHM"
   },
   {
@@ -980,7 +7220,43 @@
     "awayTeam": "Metz",
     "score": "3-0",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "25",
+        "player": "Fofana M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "30",
+        "player": "Tolisso C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "54",
+        "player": "Traore B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "82",
+        "player": "Kouao K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "83",
+        "player": "Karabec A.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lyon-2akflumR/metz-4v0yqlWc/?mid=xUogan23"
   },
   {
@@ -988,7 +7264,71 @@
     "awayTeam": "Auxerre",
     "score": "3-1",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "3",
+        "player": "Boga J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "21",
+        "player": "Sinayoko L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "24",
+        "player": "Akpa C.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "34",
+        "player": "Jansson I.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "41",
+        "player": "Sierralta F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "45+1",
+        "player": "Leon D.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "48",
+        "player": "Senaya M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "60",
+        "player": "Peprah K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "76",
+        "player": "Moffi T.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Nice"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/nice-YagoQJpq/?mid=jy6bw5up"
   },
   {
@@ -996,7 +7336,64 @@
     "awayTeam": "Paris FC",
     "score": "5-2",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "18",
+        "player": "Greenwood M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "24",
+        "player": "Aubameyang P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "28",
+        "player": "Kebbal I.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "58",
+        "player": "Simon M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "73",
+        "player": "Aubameyang P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "81",
+        "player": "Hojbjerg P.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "88",
+        "player": "Vaz R.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "90+6",
+        "player": "Vaz R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/marseille-SblU3Hee/paris-fc-0OEHEprs/?mid=dEpPO5Qj"
   },
   {
@@ -1004,7 +7401,15 @@
     "awayTeam": "Angers",
     "score": "1-0",
     "round": "Journée 2",
-    "events": [],
+    "events": [
+      {
+        "time": "50",
+        "player": "Ruiz F.",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/psg-CjhkPw0k/?mid=tMrAe41S"
   },
   {
@@ -1012,7 +7417,36 @@
     "awayTeam": "PSG",
     "score": "0-1",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "45+1",
+        "player": "Amian K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "45+2",
+        "player": "Castro L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nantes"
+      },
+      {
+        "time": "67",
+        "player": "Vitinha",
+        "type": "Goal",
+        "detail": "",
+        "team": "PSG"
+      },
+      {
+        "time": "79",
+        "player": "Hakimi A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "PSG"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nantes-veuetnGG/psg-CjhkPw0k/?mid=OGGqWk5S"
   },
   {
@@ -1020,7 +7454,43 @@
     "awayTeam": "Paris FC",
     "score": "1-0",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "9",
+        "player": "Lepaul E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "10",
+        "player": "Doucet L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Paris FC"
+      },
+      {
+        "time": "40",
+        "player": "Belkhdim Y.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "57",
+        "player": "Mouton L.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Angers"
+      },
+      {
+        "time": "90+3",
+        "player": "Arcus C.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Angers"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/angers-SAlF91iL/paris-fc-0OEHEprs/?mid=SOmYDjqp"
   },
   {
@@ -1028,7 +7498,50 @@
     "awayTeam": "Lorient",
     "score": "1-0",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "19",
+        "player": "Pagis P.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "45",
+        "player": "Igor Silva",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lorient"
+      },
+      {
+        "time": "53",
+        "player": "Sinayoko L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "61",
+        "player": "Senaya M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "87",
+        "player": "Owusu E.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      },
+      {
+        "time": "90+2",
+        "player": "Oppegard F.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Auxerre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/lorient-jgNAYRGi/?mid=fyPSZX53"
   },
   {
@@ -1036,7 +7549,43 @@
     "awayTeam": "Strasbourg",
     "score": "0-1",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "31",
+        "player": "Sarr M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "49",
+        "player": "Ouattara A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Strasbourg"
+      },
+      {
+        "time": "61",
+        "player": "Deminguet J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "67",
+        "player": "Kouao K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Metz"
+      },
+      {
+        "time": "86",
+        "player": "Panichelli J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Strasbourg"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/metz-4v0yqlWc/strasbourg-nP6UzIU1/?mid=lvxsCUDd"
   },
   {
@@ -1044,7 +7593,71 @@
     "awayTeam": "Lille",
     "score": "3-3",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "11",
+        "player": "Giroud O.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "15",
+        "player": "Ngoy N.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "18",
+        "player": "Doumbia K.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "26",
+        "player": "Haraldsson H.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "34",
+        "player": "Doumbia K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "35",
+        "player": "Chardonnet B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "51",
+        "player": "Doumbia K.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      },
+      {
+        "time": "66",
+        "player": "Mukau N.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lille"
+      },
+      {
+        "time": "75",
+        "player": "Le Cardinal J.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Brest"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/brest-Cr4VGaUl/lille-pfDZL71o/?mid=0E3gLYjA"
   },
   {
@@ -1052,7 +7665,50 @@
     "awayTeam": "Toulouse",
     "score": "0-1",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "46",
+        "player": "Canvot J.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "51",
+        "player": "Methalie D.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "65",
+        "player": "Sauer M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "78",
+        "player": "Nguene B.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      },
+      {
+        "time": "89",
+        "player": "Sidibe D.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Toulouse"
+      },
+      {
+        "time": "90+4",
+        "player": "Boudaoui H.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Nice"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/nice-YagoQJpq/toulouse-MLmY2yB1/?mid=dtc2JCLM"
   },
   {
@@ -1060,7 +7716,43 @@
     "awayTeam": "Le Havre",
     "score": "3-1",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "32",
+        "player": "Lloris G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "61",
+        "player": "Dier E.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "67",
+        "player": "Ndiaye R.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Le Havre"
+      },
+      {
+        "time": "74",
+        "player": "Akliouche M.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Monaco"
+      },
+      {
+        "time": "89",
+        "player": "Lloris G.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Le Havre"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/monaco-2PIvr8o4/?mid=j3IyYBzG"
   },
   {
@@ -1068,7 +7760,50 @@
     "awayTeam": "Lyon",
     "score": "0-1",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "34",
+        "player": "Baidoo S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "42",
+        "player": "Sarr M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lens"
+      },
+      {
+        "time": "45+1",
+        "player": "Mikautadze G.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "56",
+        "player": "Kumbedi S.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "61",
+        "player": "Abner Vinicius",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      },
+      {
+        "time": "90+4",
+        "player": "Karabec A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Lyon"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/lens-IBmris38/lyon-2akflumR/?mid=S05oNfMc"
   },
   {
@@ -1076,7 +7811,57 @@
     "awayTeam": "Marseille",
     "score": "1-0",
     "round": "Journée 1",
-    "events": [],
+    "events": [
+      {
+        "time": "26",
+        "player": "Rabiot A.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "31",
+        "player": "Ait Boudlal A.",
+        "type": "Red Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "37",
+        "player": "Tamari M.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "84",
+        "player": "Garcia U.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      },
+      {
+        "time": "89",
+        "player": "Rongier V.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+1",
+        "player": "Blas L.",
+        "type": "Goal",
+        "detail": "",
+        "team": "Rennes"
+      },
+      {
+        "time": "90+4",
+        "player": "Balerdi L.",
+        "type": "Yellow Card",
+        "detail": "",
+        "team": "Marseille"
+      }
+    ],
     "url": "https://www.flashscore.fr/match/football/marseille-SblU3Hee/rennes-d2nnj1IE/?mid=ELNbaiUj"
   }
 ]
