@@ -2,25 +2,55 @@ import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ZAxis } from 'recharts';
 import { PLAYERS_DB as playersData } from '../data/players_static';
 
+import PlayerDetailsModal from './PlayerDetailsModal';
+
 const PlayerFocus = () => {
+    const [selectedLeague, setSelectedLeague] = useState('fr Ligue 1');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({ key: 'Gls', direction: 'desc' });
     const [selectedMetric, setSelectedMetric] = useState('Gls');
+    const [selectedPlayer, setSelectedPlayer] = useState(null);
+
+    // Constants
+    const TEAM_MAPPING = {
+        'Paris S-G': 'PSG',
+        'Saint-Étienne': 'Saint-Etienne' // Just in case
+    };
+
+    const LEAGUES = [
+        { id: 'fr Ligue 1', name: 'Ligue 1 (France)' },
+        { id: 'eng Premier League', name: 'Premier League (Angleterre)' },
+        { id: 'es La Liga', name: 'La Liga (Espagne)' },
+        { id: 'it Serie A', name: 'Serie A (Italie)' },
+        { id: 'de Bundesliga', name: 'Bundesliga (Allemagne)' }
+    ];
 
     // Filter and sort players
     const filteredPlayers = useMemo(() => {
         if (!playersData) return [];
         let players = [...playersData];
 
-        // Filter by search term
-        if (searchTerm) {
-            players = players.filter(p =>
-                (p.Player && p.Player.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                (p.Squad && p.Squad.toLowerCase().includes(searchTerm.toLowerCase()))
-            );
+        // 1. Filter by League
+        if (selectedLeague !== 'all') {
+            players = players.filter(p => p.League === selectedLeague);
         }
 
-        // Sort
+        // 2. Normalize Data & Filter by search term
+        const normalizeString = (str) => {
+            return str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
+        };
+
+        players = players.map(p => ({
+            ...p,
+            Squad: TEAM_MAPPING[p.Squad] || p.Squad // Normalize Squad Name
+        })).filter(p => {
+            if (!searchTerm) return true;
+            const searchNormalized = normalizeString(searchTerm);
+            return normalizeString(p.Player).includes(searchNormalized) ||
+                normalizeString(p.Squad).includes(searchNormalized);
+        });
+
+        // 3. Sort
         players.sort((a, b) => {
             const aVal = a[sortConfig.key] || 0;
             const bVal = b[sortConfig.key] || 0;
@@ -35,7 +65,7 @@ const PlayerFocus = () => {
         });
 
         return players;
-    }, [searchTerm, sortConfig]);
+    }, [searchTerm, sortConfig, selectedLeague]);
 
     const requestSort = (key) => {
         let direction = 'desc';
@@ -46,24 +76,26 @@ const PlayerFocus = () => {
     };
 
     const topScorers = useMemo(() => {
-        return [...playersData].sort((a, b) => (b.Gls || 0) - (a.Gls || 0)).slice(0, 10);
-    }, []);
+        // Use filteredPlayers to respect league selection OR compute from raw data if we want global stats? 
+        // Better to show top scorers of the SELECTED league.
+        return [...filteredPlayers].sort((a, b) => (b.Gls || 0) - (a.Gls || 0)).slice(0, 10);
+    }, [filteredPlayers]); // Depend on filteredPlayers
 
     const topAssisters = useMemo(() => {
-        return [...playersData].sort((a, b) => (b.Ast || 0) - (a.Ast || 0)).slice(0, 10);
-    }, []);
+        return [...filteredPlayers].sort((a, b) => (b.Ast || 0) - (a.Ast || 0)).slice(0, 10);
+    }, [filteredPlayers]);
 
     const efficiencyData = useMemo(() => {
-        return playersData
+        return filteredPlayers
             .filter(p => p.Gls > 2)
             .map(p => ({
                 name: p.Player,
                 x: p.xG || 0,
                 y: p.Gls || 0,
                 z: p.Min || 0,
-                squad: p.Squad
+                squad: p.Squad // Already normalized in filteredPlayers
             }));
-    }, []);
+    }, [filteredPlayers]);
 
     // DEBUG: Aider à diagnostiquer le problème sur Vercel
     if (!playersData || playersData.length === 0) {
@@ -77,7 +109,15 @@ const PlayerFocus = () => {
     }
 
     return (
-        <div className="space-y-6 animate-fade-in">
+        <div className="space-y-6 animate-fade-in relative">
+            {/* Modal Overlay */}
+            {selectedPlayer && (
+                <PlayerDetailsModal
+                    player={selectedPlayer}
+                    onClose={() => setSelectedPlayer(null)}
+                />
+            )}
+
             {/* DEBUG BANNER (Temporaire) */}
             <div className="bg-blue-900/50 border border-blue-500 p-2 rounded text-xs text-blue-200 text-center">
                 DEBUG INFO: Chargé {playersData.length} joueurs. Build: {new Date().toISOString()}
@@ -108,9 +148,9 @@ const PlayerFocus = () => {
                 <div className="glass-card p-4 rounded-xl border border-white/10">
                     <h3 className="text-secondary text-sm font-bold uppercase tracking-wider mb-2">Joueurs Analysés</h3>
                     <div className="flex items-center space-x-3">
-                        <div className="text-4xl text-emerald-400 font-black">{playersData.length}</div>
+                        <div className="text-4xl text-emerald-400 font-black">{filteredPlayers.length}</div>
                         <div className="text-xs text-slate-400 max-w-[150px]">
-                            Données extraites de Kaggle (Mise à jour : Mardi 20h)
+                            {selectedLeague === 'all' ? 'Tous championnats confondus' : LEAGUES.find(l => l.id === selectedLeague)?.name || selectedLeague}
                         </div>
                     </div>
                 </div>
@@ -182,15 +222,30 @@ const PlayerFocus = () => {
 
             {/* Data Table */}
             <div className="glass-card rounded-xl border border-white/10 overflow-hidden">
-                <div className="p-4 border-b border-white/10">
-                    <h3 className="text-lg font-bold mb-4">Base de Données Joueurs</h3>
-                    <input
-                        type="text"
-                        placeholder="Rechercher un joueur ou une équipe..."
-                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white outline-none focus:border-accent transition-colors"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                    />
+                <div className="p-4 border-b border-white/10 flex flex-col md:flex-row gap-4">
+                    <div className="flex-1">
+                        <h3 className="text-lg font-bold mb-2">Base de Données Joueurs</h3>
+                        <input
+                            type="text"
+                            placeholder="Rechercher un joueur ou une équipe..."
+                            className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white outline-none focus:border-accent transition-colors"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
+                    <div className="w-full md:w-64">
+                        <h3 className="text-sm font-bold mb-2 text-slate-400">Filtrer par Championnat</h3>
+                        <select
+                            className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white outline-none focus:border-accent"
+                            value={selectedLeague}
+                            onChange={(e) => setSelectedLeague(e.target.value)}
+                        >
+                            {LEAGUES.map(l => (
+                                <option key={l.id} value={l.id}>{l.name}</option>
+                            ))}
+                            <option value="all">Tous les championnats</option>
+                        </select>
+                    </div>
                 </div>
                 <div className="overflow-x-auto">
                     <table className="w-full text-sm text-left">
@@ -228,7 +283,11 @@ const PlayerFocus = () => {
                         <tbody className="divide-y divide-slate-700">
                             {filteredPlayers.length > 0 ? (
                                 filteredPlayers.map((player, index) => (
-                                    <tr key={index} className="hover:bg-slate-800/30 transition-colors">
+                                    <tr
+                                        key={index}
+                                        className="hover:bg-slate-800/30 transition-colors cursor-pointer"
+                                        onClick={() => setSelectedPlayer(player)}
+                                    >
                                         <td className="px-6 py-4 font-medium text-white">{player.Player}</td>
                                         <td className="px-6 py-4">{player.Squad}</td>
                                         <td className="px-6 py-4">{player.Pos}</td>

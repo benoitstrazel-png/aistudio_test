@@ -13,6 +13,25 @@
   --danger-color: #f87171;
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.05);
+
+  /* --- ANTIGRAVITY CYBERPUNK TOKENS --- */
+  --neon-cyan: #00eaff;
+  --neon-blue-dark: #005F9E;
+  --neon-magenta: #ff00ff;
+  --neon-green: #00ff88;
+  --neon-red: #ff0088;
+
+  --bg-dark-main: #030711;
+  --bg-panel: rgba(0, 20, 40, 0.7);
+
+  /* Glows */
+  --glow-cyan: 0 0 20px rgba(0, 234, 255, 0.6), 0 0 40px rgba(0, 234, 255, 0.3);
+  --glow-cyan-intense: 0 0 10px rgba(0, 234, 255, 1), 0 0 20px rgba(0, 234, 255, 0.8), 0 0 30px rgba(0, 234, 255, 0.6);
+  --glow-magenta: 0 0 20px rgba(255, 0, 255, 0.6), 0 0 40px rgba(255, 0, 255, 0.3);
+  --text-glow-cyan: 0 0 8px rgba(0, 234, 255, 0.9), 0 0 16px rgba(0, 234, 255, 0.5);
+  --text-glow-magenta: 0 0 8px rgba(255, 0, 255, 0.9), 0 0 16px rgba(255, 0, 255, 0.5);
+
+  --font-tech: 'Barlow Condensed', 'Rajdhani', sans-serif;
 }
 
 body {
@@ -752,4 +771,51 @@ select:focus {
 
 .zoom-in {
   animation: zoomIn 0.4s ease-out forwards;
+}
+
+/* --- ANTIGRAVITY CYBERPUNK ANIMATIONS --- */
+@keyframes neonPulse {
+
+  0%,
+  100% {
+    filter: drop-shadow(var(--glow-cyan));
+  }
+
+  50% {
+    filter: drop-shadow(var(--glow-cyan-intense));
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Cyberpunk Grid Overlay */
+.cyber-grid-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 234, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 234, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
 }

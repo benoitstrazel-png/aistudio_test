@@ -60,14 +60,14 @@
         "time": "36",
         "player": "Sinayoko L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Auxerre"
       },
       {
         "time": "39",
         "player": "El Azzouzi O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Mara S.",
         "team": "Auxerre"
       },
       {
@@ -102,7 +102,7 @@
         "time": "89",
         "player": "Danois K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Namaso D.",
         "team": "Auxerre"
       }
     ],
@@ -141,7 +141,7 @@
         "time": "33",
         "player": "Belkhdim Y.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Arcus C.",
         "team": "Angers"
       },
       {
@@ -178,14 +178,14 @@
         "time": "28",
         "player": "Kvaratskhelia K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Hernandez L.",
         "team": "PSG"
       },
       {
         "time": "39",
         "player": "Mayulu S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Neves J.",
         "team": "PSG"
       },
       {
@@ -199,7 +199,7 @@
         "time": "67",
         "player": "Kvaratskhelia K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Mayulu S.",
         "team": "PSG"
       },
       {
@@ -213,14 +213,14 @@
         "time": "88",
         "player": "Mbaye I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ndjantou Q.",
         "team": "PSG"
       },
       {
         "time": "90+1",
         "player": "Ramos G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Dembélé O.",
         "team": "PSG"
       }
     ],
@@ -294,7 +294,7 @@
         "time": "34",
         "player": "Thauvin F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Aguilar R.",
         "team": "Lens"
       },
       {
@@ -308,7 +308,7 @@
         "time": "81",
         "player": "Said W.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Udol M.",
         "team": "Lens"
       },
       {
@@ -338,7 +338,7 @@
         "time": "10",
         "player": "Mbappé E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Bentaleb N.",
         "team": "Lille"
       },
       {
@@ -461,14 +461,14 @@
         "time": "70",
         "player": "Satriano M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sulc P.",
         "team": "Lyon"
       },
       {
         "time": "77",
         "player": "Satriano M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Moreira A.",
         "team": "Lyon"
       },
       {
@@ -491,7 +491,7 @@
         "time": "45",
         "player": "Thauvin F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Edouard O.",
         "team": "Lens"
       },
       {
@@ -505,7 +505,7 @@
         "time": "74",
         "player": "Thauvin F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Baidoo S.",
         "team": "Lens"
       },
       {
@@ -563,7 +563,7 @@
         "time": "88",
         "player": "Igamane H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Mbappé E.",
         "team": "Lille"
       },
       {
@@ -586,7 +586,7 @@
         "time": "12",
         "player": "Avom A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Nice"
       },
       {
@@ -607,14 +607,14 @@
         "time": "45+2",
         "player": "Soumano S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kouassi A.",
         "team": "Lorient"
       },
       {
         "time": "53",
         "player": "Soumano S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Meite B.",
         "team": "Lorient"
       },
       {
@@ -644,7 +644,7 @@
         "time": "11",
         "player": "Amo-Ameyaw S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Chilwell B.",
         "team": "Strasbourg"
       },
       {
@@ -658,14 +658,14 @@
         "time": "55",
         "player": "Del Castillo R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Brest"
       },
       {
         "time": "82",
         "player": "Magnetti H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Baldé M.",
         "team": "Brest"
       },
       {
@@ -695,7 +695,7 @@
         "time": "14",
         "player": "Emersonn",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sidibe D.",
         "team": "Toulouse"
       },
       {
@@ -709,14 +709,14 @@
         "time": "66",
         "player": "Paixao I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Nadir B.",
         "team": "Marseille"
       },
       {
         "time": "74",
         "player": "Hojbjerg P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Aubameyang P.",
         "team": "Marseille"
       },
       {
@@ -737,7 +737,7 @@
         "time": "90+2",
         "player": "Hidalgo S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: McKenzie M.",
         "team": "Toulouse"
       }
     ],
@@ -753,7 +753,7 @@
         "time": "32",
         "player": "Kebbal I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Paris FC"
       },
       {
@@ -767,7 +767,7 @@
         "time": "40",
         "player": "Diomande S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sinayoko L.",
         "team": "Auxerre"
       },
       {
@@ -811,7 +811,7 @@
         "time": "68",
         "player": "Minamino T.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Golovin A.",
         "team": "Monaco"
       },
       {
@@ -855,7 +855,7 @@
         "time": "22",
         "player": "Rongier V.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Embolo B.",
         "team": "Rennes"
       }
     ],
@@ -885,7 +885,7 @@
         "time": "40",
         "player": "Giroud O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Perraud R.",
         "team": "Lille"
       },
       {
@@ -899,7 +899,7 @@
         "time": "77",
         "player": "Giroud O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Lille"
       },
       {
@@ -913,7 +913,7 @@
         "time": "84",
         "player": "Doucet L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Krasso J.",
         "team": "Paris FC"
       },
       {
@@ -927,7 +927,7 @@
         "time": "90+6",
         "player": "Broholm M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Lille"
       }
     ],
@@ -943,21 +943,21 @@
         "time": "2",
         "player": "Mboup P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Chardonnet B.",
         "team": "Brest"
       },
       {
         "time": "6",
         "player": "Tsitaishvili G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Yegbe T.",
         "team": "Metz"
       },
       {
         "time": "48",
         "player": "Doumbia K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ajorque L.",
         "team": "Brest"
       },
       {
@@ -971,7 +971,7 @@
         "time": "79",
         "player": "Coulibaly S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Metz"
       },
       {
@@ -1006,7 +1006,7 @@
         "time": "90+10",
         "player": "Del Castillo R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Brest"
       }
     ],
@@ -1022,7 +1022,7 @@
         "time": "45+1",
         "player": "Awaziem C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Lorient"
       },
       {
@@ -1140,7 +1140,7 @@
         "time": "29",
         "player": "Lee Kang-In",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Mendes N.",
         "team": "PSG"
       },
       {
@@ -1175,7 +1175,7 @@
         "time": "87",
         "player": "Barcola B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kvaratskhelia K.",
         "team": "PSG"
       }
     ],
@@ -1198,7 +1198,7 @@
         "time": "20",
         "player": "Ait Boudlal A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Camara M.",
         "team": "Rennes"
       },
       {
@@ -1219,21 +1219,21 @@
         "time": "73",
         "player": "Embolo B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Frankowski P.",
         "team": "Rennes"
       },
       {
         "time": "83",
         "player": "Blas L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Rennes"
       },
       {
         "time": "90+5",
         "player": "Biereth M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vanderson",
         "team": "Monaco"
       }
     ],
@@ -1263,7 +1263,7 @@
         "time": "69",
         "player": "Ganiou I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Udol M.",
         "team": "Lens"
       },
       {
@@ -1314,7 +1314,7 @@
         "time": "11",
         "player": "Aubameyang P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pavard B.",
         "team": "Marseille"
       },
       {
@@ -1356,28 +1356,28 @@
         "time": "53",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Balerdi L.",
         "team": "Marseille"
       },
       {
         "time": "58",
         "player": "Weah T.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Aubameyang P.",
         "team": "Marseille"
       },
       {
         "time": "63",
         "player": "Cho M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Diop S.",
         "team": "Nice"
       },
       {
         "time": "74",
         "player": "Paixao I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Aubameyang P.",
         "team": "Marseille"
       }
     ],
@@ -1393,21 +1393,21 @@
         "time": "26",
         "player": "Zaïre-Emery W.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vitinha",
         "team": "PSG"
       },
       {
         "time": "30",
         "player": "Moreira A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Niakhate M.",
         "team": "Lyon"
       },
       {
         "time": "33",
         "player": "Kvaratskhelia K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vitinha",
         "team": "PSG"
       },
       {
@@ -1428,7 +1428,7 @@
         "time": "50",
         "player": "Maitland-Niles A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Morton T.",
         "team": "Lyon"
       },
       {
@@ -1456,7 +1456,7 @@
         "time": "90+5",
         "player": "Neves J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lee Kang-In",
         "team": "PSG"
       },
       {
@@ -1514,7 +1514,7 @@
         "time": "71",
         "player": "Akpa C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Angers"
       },
       {
@@ -1551,7 +1551,7 @@
         "time": "35",
         "player": "Cho M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vanhoutte C.",
         "team": "Nice"
       },
       {
@@ -1565,7 +1565,7 @@
         "time": "53",
         "player": "Hein G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Metz"
       },
       {
@@ -1579,7 +1579,7 @@
         "time": "84",
         "player": "Diallo H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Gbamin J.",
         "team": "Metz"
       },
       {
@@ -1609,7 +1609,7 @@
         "time": "33",
         "player": "Emegha E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Moreira D.",
         "team": "Strasbourg"
       },
       {
@@ -1709,14 +1709,14 @@
         "time": "44",
         "player": "Pagis P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Lorient"
       },
       {
         "time": "65",
         "player": "Sidibe D.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Toulouse"
       },
       {
@@ -1753,14 +1753,14 @@
         "time": "37",
         "player": "Balogun F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Monaco"
       },
       {
         "time": "40",
         "player": "Said W.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Edouard O.",
         "team": "Lens"
       },
       {
@@ -1774,7 +1774,7 @@
         "time": "45+3",
         "player": "Sangare M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Thauvin F.",
         "team": "Lens"
       },
       {
@@ -1788,7 +1788,7 @@
         "time": "60",
         "player": "Said W.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Thauvin F.",
         "team": "Lens"
       },
       {
@@ -1818,7 +1818,7 @@
         "time": "4",
         "player": "Abline M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Amian K.",
         "team": "Nantes"
       },
       {
@@ -1867,7 +1867,7 @@
         "time": "90+5",
         "player": "Lloris G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Doucoure F.",
         "team": "Le Havre"
       }
     ],
@@ -1890,7 +1890,7 @@
         "time": "33",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Marseille"
       },
       {
@@ -1904,7 +1904,7 @@
         "time": "81",
         "player": "Aubameyang P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: O'Riley M.",
         "team": "Marseille"
       }
     ],
@@ -1941,7 +1941,7 @@
         "time": "81",
         "player": "Embolo B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Rongier V.",
         "team": "Rennes"
       },
       {
@@ -2001,7 +2001,7 @@
         "time": "6",
         "player": "Edouard O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sangare M.",
         "team": "Lens"
       },
       {
@@ -2029,7 +2029,7 @@
         "time": "77",
         "player": "Said W.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Udol M.",
         "team": "Lens"
       },
       {
@@ -2043,7 +2043,7 @@
         "time": "89",
         "player": "Baidoo S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Bulatovic A.",
         "team": "Lens"
       }
     ],
@@ -2059,7 +2059,7 @@
         "time": "45+2",
         "player": "Correia F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Bouaddi A.",
         "team": "Lille"
       },
       {
@@ -2110,7 +2110,7 @@
         "time": "89",
         "player": "Diallo H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sabaly C.",
         "team": "Metz"
       },
       {
@@ -2170,35 +2170,35 @@
         "time": "9",
         "player": "Lepaul E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Tamari M.",
         "team": "Rennes"
       },
       {
         "time": "35",
         "player": "Meite M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ait Boudlal A.",
         "team": "Rennes"
       },
       {
         "time": "48",
         "player": "Lepaul E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Meite M.",
         "team": "Rennes"
       },
       {
         "time": "60",
         "player": "Lepaul E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Rongier V.",
         "team": "Rennes"
       },
       {
         "time": "77",
         "player": "Nanasi S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Barco V.",
         "team": "Strasbourg"
       },
       {
@@ -2307,7 +2307,7 @@
         "time": "53",
         "player": "Simon M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lopez M.",
         "team": "Paris FC"
       },
       {
@@ -2372,7 +2372,7 @@
         "time": "90+4",
         "player": "Ramos G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kvaratskhelia K.",
         "team": "PSG"
       }
     ],
@@ -2402,14 +2402,14 @@
         "time": "52",
         "player": "Vaz R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Aubameyang P.",
         "team": "Marseille"
       },
       {
         "time": "70",
         "player": "Vaz R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Emerson",
         "team": "Marseille"
       },
       {
@@ -2446,7 +2446,7 @@
         "time": "6",
         "player": "Coulibaly M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Akliouche M.",
         "team": "Monaco"
       },
       {
@@ -2467,7 +2467,7 @@
         "time": "19",
         "player": "Guirassy B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Abline M.",
         "team": "Nantes"
       },
       {
@@ -2488,7 +2488,7 @@
         "time": "41",
         "player": "Balogun F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Coulibaly M.",
         "team": "Monaco"
       },
       {
@@ -2502,7 +2502,7 @@
         "time": "55",
         "player": "Akliouche M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ouattara K.",
         "team": "Monaco"
       },
       {
@@ -2530,7 +2530,7 @@
         "time": "75",
         "player": "Golovin A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ouattara K.",
         "team": "Monaco"
       },
       {
@@ -2588,7 +2588,7 @@
         "time": "5",
         "player": "Tolisso C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Greif D.",
         "team": "Lyon"
       },
       {
@@ -2623,7 +2623,7 @@
         "time": "51",
         "player": "Sulc P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Moreira A.",
         "team": "Lyon"
       },
       {
@@ -2637,7 +2637,7 @@
         "time": "58",
         "player": "Sulc P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Moreira A.",
         "team": "Lyon"
       },
       {
@@ -2651,7 +2651,7 @@
         "time": "65",
         "player": "Camara A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: De Smet T.",
         "team": "Paris FC"
       },
       {
@@ -2672,7 +2672,7 @@
         "time": "84",
         "player": "Marchetti V.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kebbal I.",
         "team": "Paris FC"
       },
       {
@@ -2695,14 +2695,14 @@
         "time": "46",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Nanasi S.",
         "team": "Strasbourg"
       },
       {
         "time": "55",
         "player": "Nanasi S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Barco V.",
         "team": "Strasbourg"
       },
       {
@@ -2753,14 +2753,14 @@
         "time": "54",
         "player": "Tamari M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lepaul E.",
         "team": "Rennes"
       },
       {
         "time": "58",
         "player": "Cresswell C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Gboho Y.",
         "team": "Toulouse"
       },
       {
@@ -2788,7 +2788,7 @@
         "time": "85",
         "player": "Donnum A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Toulouse"
       },
       {
@@ -2825,7 +2825,7 @@
         "time": "73",
         "player": "Sangante A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Zouaoui Y.",
         "team": "Le Havre"
       },
       {
@@ -2920,14 +2920,14 @@
         "time": "87",
         "player": "Hein G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Metz"
       },
       {
         "time": "90+1",
         "player": "Hein G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sane I.",
         "team": "Metz"
       }
     ],
@@ -2943,7 +2943,7 @@
         "time": "29",
         "player": "Diop S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Nice"
       },
       {
@@ -2992,7 +2992,7 @@
         "time": "87",
         "player": "Jansson I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sanson M.",
         "team": "Nice"
       }
     ],
@@ -3008,14 +3008,14 @@
         "time": "25",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Doué G.",
         "team": "Strasbourg"
       },
       {
         "time": "31",
         "player": "Doukoure I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Lyon"
       },
       {
@@ -3050,7 +3050,7 @@
         "time": "90+1",
         "player": "Moreira A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Niakhate M.",
         "team": "Lyon"
       },
       {
@@ -3168,7 +3168,7 @@
         "time": "38",
         "player": "Diop S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Clauss J.",
         "team": "Nice"
       },
       {
@@ -3182,7 +3182,7 @@
         "time": "67",
         "player": "Ait Boudlal A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Frankowski P.",
         "team": "Rennes"
       },
       {
@@ -3247,7 +3247,7 @@
         "time": "24",
         "player": "Igamane H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Fernandez-Pardo M.",
         "team": "Lille"
       },
       {
@@ -3275,7 +3275,7 @@
         "time": "53",
         "player": "Correia F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Fernandez-Pardo M.",
         "team": "Lille"
       },
       {
@@ -3289,14 +3289,14 @@
         "time": "64",
         "player": "Perraud R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Haraldsson H.",
         "team": "Lille"
       },
       {
         "time": "82",
         "player": "Andre B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Correia F.",
         "team": "Lille"
       },
       {
@@ -3310,7 +3310,7 @@
         "time": "90+3",
         "player": "Haraldsson H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Diaoune S.",
         "team": "Lille"
       },
       {
@@ -3340,7 +3340,7 @@
         "time": "17",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Weah T.",
         "team": "Marseille"
       },
       {
@@ -3354,7 +3354,7 @@
         "time": "23",
         "player": "Edouard O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Lens"
       },
       {
@@ -3368,7 +3368,7 @@
         "time": "53",
         "player": "Pavard B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Lens"
       },
       {
@@ -3412,7 +3412,7 @@
         "time": "3",
         "player": "Salisu M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ouattara K.",
         "team": "Monaco"
       },
       {
@@ -3491,21 +3491,21 @@
         "time": "29",
         "player": "Hakimi A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vitinha",
         "team": "PSG"
       },
       {
         "time": "39",
         "player": "Hakimi A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kvaratskhelia K.",
         "team": "PSG"
       },
       {
         "time": "90+6",
         "player": "Doué D.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Zaïre-Emery W.",
         "team": "PSG"
       }
     ],
@@ -3521,14 +3521,14 @@
         "time": "2",
         "player": "El Arabi Y.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Leroux L.",
         "team": "Nantes"
       },
       {
         "time": "15",
         "player": "Chergui S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lees-Melou P.",
         "team": "Paris FC"
       },
       {
@@ -3593,7 +3593,7 @@
         "time": "8",
         "player": "Haraldsson H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Giroud O.",
         "team": "Lille"
       },
       {
@@ -3649,7 +3649,7 @@
         "time": "89",
         "player": "Igamane H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sahraoui O.",
         "team": "Lille"
       }
     ],
@@ -3665,21 +3665,21 @@
         "time": "2",
         "player": "Le Bris T.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kouassi A.",
         "team": "Lorient"
       },
       {
         "time": "34",
         "player": "Dina Ebimbe J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Locko B.",
         "team": "Brest"
       },
       {
         "time": "44",
         "player": "Makengo J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Brest"
       },
       {
@@ -3700,7 +3700,7 @@
         "time": "55",
         "player": "Kouassi A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Le Bris T.",
         "team": "Lorient"
       },
       {
@@ -3714,14 +3714,14 @@
         "time": "86",
         "player": "Del Castillo R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Brest"
       },
       {
         "time": "89",
         "player": "Soumano S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Dieng B.",
         "team": "Lorient"
       },
       {
@@ -3758,7 +3758,7 @@
         "time": "18",
         "player": "Embolo B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Blas L.",
         "team": "Rennes"
       },
       {
@@ -3779,7 +3779,7 @@
         "time": "56",
         "player": "Fofana S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lepaul E.",
         "team": "Rennes"
       },
       {
@@ -3793,7 +3793,7 @@
         "time": "72",
         "player": "Sinayoko L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Auxerre"
       },
       {
@@ -3816,14 +3816,14 @@
         "time": "2",
         "player": "Magri F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Emersonn",
         "team": "Toulouse"
       },
       {
         "time": "8",
         "player": "Donnum A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Toulouse"
       },
       {
@@ -3858,14 +3858,14 @@
         "time": "79",
         "player": "Gboho Y.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Cresswell C.",
         "team": "Toulouse"
       },
       {
         "time": "84",
         "player": "Cresswell C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Donnum A.",
         "team": "Toulouse"
       }
     ],
@@ -3888,14 +3888,14 @@
         "time": "17",
         "player": "Edouard O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Thomasson A.",
         "team": "Lens"
       },
       {
         "time": "27",
         "player": "Lees-Melou P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kebbal I.",
         "team": "Paris FC"
       },
       {
@@ -3916,7 +3916,7 @@
         "time": "64",
         "player": "Baidoo S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Thomasson A.",
         "team": "Lens"
       },
       {
@@ -3939,7 +3939,7 @@
         "time": "24",
         "player": "Kechta Y.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Soumare I.",
         "team": "Le Havre"
       },
       {
@@ -3953,7 +3953,7 @@
         "time": "35",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Marseille"
       },
       {
@@ -3974,21 +3974,21 @@
         "time": "67",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Paixao I.",
         "team": "Marseille"
       },
       {
         "time": "72",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vaz R.",
         "team": "Marseille"
       },
       {
         "time": "76",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pavard B.",
         "team": "Marseille"
       },
       {
@@ -4002,7 +4002,7 @@
         "time": "88",
         "player": "Vaz R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Aubameyang P.",
         "team": "Marseille"
       },
       {
@@ -4016,14 +4016,14 @@
         "time": "90+2",
         "player": "Toure A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Namli Y.",
         "team": "Le Havre"
       },
       {
         "time": "90+3",
         "player": "Murillo M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Nadir B.",
         "team": "Marseille"
       }
     ],
@@ -4060,14 +4060,14 @@
         "time": "72",
         "player": "Balogun F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Minamino T.",
         "team": "Monaco"
       },
       {
         "time": "85",
         "player": "Cherif S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Raolisoa L.",
         "team": "Angers"
       },
       {
@@ -4090,7 +4090,7 @@
         "time": "5",
         "player": "Bard M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Diop S.",
         "team": "Nice"
       },
       {
@@ -4104,21 +4104,21 @@
         "time": "29",
         "player": "Sulc P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kluivert R.",
         "team": "Lyon"
       },
       {
         "time": "35",
         "player": "Diop S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Boga J.",
         "team": "Nice"
       },
       {
         "time": "55",
         "player": "Boudaoui H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Clauss J.",
         "team": "Nice"
       },
       {
@@ -4155,28 +4155,28 @@
         "time": "6",
         "player": "Barcola B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Doué D.",
         "team": "PSG"
       },
       {
         "time": "26",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Doué G.",
         "team": "Strasbourg"
       },
       {
         "time": "41",
         "player": "Moreira D.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Barco V.",
         "team": "Strasbourg"
       },
       {
         "time": "49",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Moreira D.",
         "team": "Strasbourg"
       },
       {
@@ -4190,7 +4190,7 @@
         "time": "58",
         "player": "Ramos G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "PSG"
       },
       {
@@ -4248,7 +4248,7 @@
         "time": "85",
         "player": "Mbappé E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Igamane H.",
         "team": "Lille"
       },
       {
@@ -4271,7 +4271,7 @@
         "time": "10",
         "player": "Embolo B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lepaul E.",
         "team": "Rennes"
       },
       {
@@ -4299,7 +4299,7 @@
         "time": "45+1",
         "player": "Soumare I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Le Havre"
       },
       {
@@ -4313,7 +4313,7 @@
         "time": "79",
         "player": "Ndiaye R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kyeremeh G.",
         "team": "Le Havre"
       }
     ],
@@ -4336,21 +4336,21 @@
         "time": "29",
         "player": "Diop S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Cho M.",
         "team": "Nice"
       },
       {
         "time": "42",
         "player": "Diop S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Nice"
       },
       {
         "time": "45+5",
         "player": "Fati A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Monaco"
       },
       {
@@ -4364,7 +4364,7 @@
         "time": "56",
         "player": "Fati A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Monaco"
       },
       {
@@ -4401,14 +4401,14 @@
         "time": "36",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Barco V.",
         "team": "Strasbourg"
       },
       {
         "time": "51",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lemaréchal F.",
         "team": "Strasbourg"
       },
       {
@@ -4422,14 +4422,14 @@
         "time": "61",
         "player": "Ouattara A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Doué G.",
         "team": "Strasbourg"
       },
       {
         "time": "66",
         "player": "Godo M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lemaréchal F.",
         "team": "Strasbourg"
       },
       {
@@ -4459,7 +4459,7 @@
         "time": "24",
         "player": "Fofana M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Satriano M.",
         "team": "Lyon"
       },
       {
@@ -4487,7 +4487,7 @@
         "time": "87",
         "player": "Mata C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Toulouse"
       },
       {
@@ -4501,7 +4501,7 @@
         "time": "90+6",
         "player": "Emersonn",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vossah A.",
         "team": "Toulouse"
       }
     ],
@@ -4517,7 +4517,7 @@
         "time": "14",
         "player": "Edouard O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Thomasson A.",
         "team": "Lens"
       },
       {
@@ -4601,7 +4601,7 @@
         "time": "90+6",
         "player": "Sima A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Thomasson A.",
         "team": "Lens"
       }
     ],
@@ -4654,21 +4654,21 @@
         "time": "51",
         "player": "Paixao I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vaz R.",
         "team": "Marseille"
       },
       {
         "time": "69",
         "player": "O'Riley M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Gouiri A.",
         "team": "Marseille"
       },
       {
         "time": "76",
         "player": "Gouiri A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: O'Riley M.",
         "team": "Marseille"
       }
     ],
@@ -4684,14 +4684,14 @@
         "time": "25",
         "player": "Kebbal I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Krasso J.",
         "team": "Paris FC"
       },
       {
         "time": "30",
         "player": "Krasso J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Simon M.",
         "team": "Paris FC"
       },
       {
@@ -4779,14 +4779,14 @@
         "time": "26",
         "player": "Labeau Lascary R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Del Castillo R.",
         "team": "Brest"
       },
       {
         "time": "32",
         "player": "Del Castillo R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Brest"
       },
       {
@@ -4816,7 +4816,7 @@
         "time": "13",
         "player": "Morton T.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Tagliafico N.",
         "team": "Lyon"
       },
       {
@@ -4946,14 +4946,14 @@
         "time": "40",
         "player": "Diop S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Cho M.",
         "team": "Nice"
       },
       {
         "time": "88",
         "player": "Krasso J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Paris FC"
       }
     ],
@@ -4976,14 +4976,14 @@
         "time": "32",
         "player": "Zabarnyi I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vitinha",
         "team": "PSG"
       },
       {
         "time": "54",
         "player": "Beraldo L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Mayulu S.",
         "team": "PSG"
       },
       {
@@ -5020,7 +5020,7 @@
         "time": "47",
         "player": "Gboho Y.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Donnum A.",
         "team": "Toulouse"
       },
       {
@@ -5041,7 +5041,7 @@
         "time": "61",
         "player": "Leroux L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lepenant J.",
         "team": "Nantes"
       },
       {
@@ -5055,7 +5055,7 @@
         "time": "68",
         "player": "Donnum A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Toulouse"
       },
       {
@@ -5099,7 +5099,7 @@
         "time": "40",
         "player": "Bamba M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kouassi A.",
         "team": "Lorient"
       },
       {
@@ -5120,21 +5120,21 @@
         "time": "76",
         "player": "Pagis P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Soumano S.",
         "team": "Lorient"
       },
       {
         "time": "82",
         "player": "Pagis P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Makengo J.",
         "team": "Lorient"
       },
       {
         "time": "90+8",
         "player": "Fati A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Monaco"
       }
     ],
@@ -5185,7 +5185,7 @@
         "time": "49",
         "player": "Ouattara A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Emegha E.",
         "team": "Strasbourg"
       },
       {
@@ -5222,7 +5222,7 @@
         "time": "5",
         "player": "Marquinhos",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Marseille"
       },
       {
@@ -5280,7 +5280,7 @@
         "time": "45+2",
         "player": "Namaso D.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sinayoko L.",
         "team": "Auxerre"
       },
       {
@@ -5359,7 +5359,7 @@
         "time": "21",
         "player": "Tosin A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Karim D.",
         "team": "Lorient"
       },
       {
@@ -5387,7 +5387,7 @@
         "time": "47",
         "player": "Soumare I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lloris G.",
         "team": "Le Havre"
       },
       {
@@ -5431,14 +5431,14 @@
         "time": "13",
         "player": "Diallo H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sabaly C.",
         "team": "Metz"
       },
       {
         "time": "28",
         "player": "Biereth M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Minamino T.",
         "team": "Monaco"
       },
       {
@@ -5452,35 +5452,35 @@
         "time": "46",
         "player": "Fati A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Camara L.",
         "team": "Monaco"
       },
       {
         "time": "67",
         "player": "Hein G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Metz"
       },
       {
         "time": "83",
         "player": "Fati A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Diatta K.",
         "team": "Monaco"
       },
       {
         "time": "86",
         "player": "Kouao K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Monaco"
       },
       {
         "time": "90+3",
         "player": "Ilenikhena G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Idumbo S.",
         "team": "Monaco"
       }
     ],
@@ -5503,7 +5503,7 @@
         "time": "27",
         "player": "Paez K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Moreira D.",
         "team": "Strasbourg"
       },
       {
@@ -5524,21 +5524,21 @@
         "time": "78",
         "player": "Doué G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Emegha E.",
         "team": "Strasbourg"
       },
       {
         "time": "81",
         "player": "Dicko N.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kebbal I.",
         "team": "Paris FC"
       },
       {
         "time": "87",
         "player": "Emegha E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Doukoure I.",
         "team": "Strasbourg"
       },
       {
@@ -5559,7 +5559,7 @@
         "time": "90+4",
         "player": "Gory A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Dicko N.",
         "team": "Paris FC"
       },
       {
@@ -5596,7 +5596,7 @@
         "time": "43",
         "player": "Thauvin F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Said W.",
         "team": "Lens"
       },
       {
@@ -5640,14 +5640,14 @@
         "time": "6",
         "player": "Ajorque L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Del Castillo R.",
         "team": "Brest"
       },
       {
         "time": "9",
         "player": "Del Castillo R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ajorque L.",
         "team": "Brest"
       },
       {
@@ -5668,7 +5668,7 @@
         "time": "30",
         "player": "Moffi T.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Boudaoui H.",
         "team": "Nice"
       },
       {
@@ -5689,14 +5689,14 @@
         "time": "70",
         "player": "Chotard J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ajorque L.",
         "team": "Brest"
       },
       {
         "time": "76",
         "player": "Labeau Lascary R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ajorque L.",
         "team": "Brest"
       }
     ],
@@ -5719,14 +5719,14 @@
         "time": "29",
         "player": "Blas L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Rennes"
       },
       {
         "time": "35",
         "player": "Lepaul E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Seidu A.",
         "team": "Rennes"
       },
       {
@@ -5761,7 +5761,7 @@
         "time": "90+6",
         "player": "El Arabi Y.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Abline M.",
         "team": "Nantes"
       }
     ],
@@ -5821,7 +5821,7 @@
         "time": "14",
         "player": "Tolisso C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Maitland-Niles A.",
         "team": "Lyon"
       },
       {
@@ -5863,21 +5863,21 @@
         "time": "79",
         "player": "Rouault A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Meite M.",
         "team": "Rennes"
       },
       {
         "time": "90+3",
         "player": "Descamps R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Rennes"
       },
       {
         "time": "90+5",
         "player": "Meite M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Tamari M.",
         "team": "Rennes"
       }
     ],
@@ -5893,7 +5893,7 @@
         "time": "14",
         "player": "Geubbels W.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lopez M.",
         "team": "Paris FC"
       },
       {
@@ -5907,7 +5907,7 @@
         "time": "34",
         "player": "Marchetti V.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Geubbels W.",
         "team": "Paris FC"
       },
       {
@@ -5921,7 +5921,7 @@
         "time": "52",
         "player": "Del Castillo R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Brest"
       },
       {
@@ -5951,7 +5951,7 @@
         "time": "14",
         "player": "Gbamin J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Hein G.",
         "team": "Metz"
       },
       {
@@ -5965,7 +5965,7 @@
         "time": "90",
         "player": "Abdelli H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Angers"
       }
     ],
@@ -5988,7 +5988,7 @@
         "time": "15",
         "player": "Barcola B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vitinha",
         "team": "PSG"
       },
       {
@@ -6009,7 +6009,7 @@
         "time": "51",
         "player": "Barcola B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vitinha",
         "team": "PSG"
       }
     ],
@@ -6039,7 +6039,7 @@
         "time": "90+1",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Strasbourg"
       },
       {
@@ -6111,7 +6111,7 @@
         "time": "90",
         "player": "Bentaleb N.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Lille"
       },
       {
@@ -6125,7 +6125,7 @@
         "time": "90+8",
         "player": "Mbappé E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sahraoui O.",
         "team": "Lille"
       }
     ],
@@ -6190,7 +6190,7 @@
         "time": "73",
         "player": "Salisu M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Auxerre"
       },
       {
@@ -6204,7 +6204,7 @@
         "time": "89",
         "player": "Ilenikhena G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vanderson",
         "team": "Monaco"
       },
       {
@@ -6234,7 +6234,7 @@
         "time": "56",
         "player": "Boga J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vanhoutte C.",
         "team": "Nice"
       },
       {
@@ -6264,14 +6264,14 @@
         "time": "13",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Marseille"
       },
       {
         "time": "20",
         "player": "Pavard B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Greenwood M.",
         "team": "Marseille"
       },
       {
@@ -6320,7 +6320,7 @@
         "time": "90+3",
         "player": "Aguerd N.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Vermeeren A.",
         "team": "Marseille"
       }
     ],
@@ -6394,7 +6394,7 @@
         "time": "13",
         "player": "Doucoure F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Soumare I.",
         "team": "Le Havre"
       },
       {
@@ -6408,7 +6408,7 @@
         "time": "52",
         "player": "Peprah K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Boudaoui H.",
         "team": "Nice"
       },
       {
@@ -6436,7 +6436,7 @@
         "time": "90+5",
         "player": "Soumare I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Diaw M.",
         "team": "Le Havre"
       },
       {
@@ -6473,28 +6473,28 @@
         "time": "48",
         "player": "Balogun F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Camara L.",
         "team": "Monaco"
       },
       {
         "time": "73",
         "player": "Bakwa D.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Amo-Ameyaw S.",
         "team": "Strasbourg"
       },
       {
         "time": "76",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Strasbourg"
       },
       {
         "time": "90+6",
         "player": "Minamino T.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Akliouche M.",
         "team": "Monaco"
       },
       {
@@ -6531,7 +6531,7 @@
         "time": "22",
         "player": "Sane S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Hein G.",
         "team": "Metz"
       },
       {
@@ -6545,28 +6545,28 @@
         "time": "45+3",
         "player": "Kebbal I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Paris FC"
       },
       {
         "time": "52",
         "player": "Kebbal I.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Simon M.",
         "team": "Paris FC"
       },
       {
         "time": "54",
         "player": "Traore B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Tsitaishvili G.",
         "team": "Metz"
       },
       {
         "time": "67",
         "player": "Simon M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lopez M.",
         "team": "Paris FC"
       },
       {
@@ -6596,7 +6596,7 @@
         "time": "21",
         "player": "Lepaul E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Merlin Q.",
         "team": "Rennes"
       },
       {
@@ -6638,7 +6638,7 @@
         "time": "51",
         "player": "Peter P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Belkhdim Y.",
         "team": "Angers"
       }
     ],
@@ -6654,14 +6654,14 @@
         "time": "7",
         "player": "Neves J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Dembélé O.",
         "team": "PSG"
       },
       {
         "time": "9",
         "player": "Barcola B.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ruiz F.",
         "team": "PSG"
       },
       {
@@ -6675,7 +6675,7 @@
         "time": "31",
         "player": "Dembélé O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "PSG"
       },
       {
@@ -6689,7 +6689,7 @@
         "time": "51",
         "player": "Dembélé O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "PSG"
       },
       {
@@ -6717,7 +6717,7 @@
         "time": "90+1",
         "player": "Vossah A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Hidalgo S.",
         "team": "Toulouse"
       }
     ],
@@ -6733,7 +6733,7 @@
         "time": "8",
         "player": "Mostafa Mohamed",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Guirassy B.",
         "team": "Nantes"
       },
       {
@@ -6798,14 +6798,14 @@
         "time": "46",
         "player": "Perraud R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Correia F.",
         "team": "Lille"
       },
       {
         "time": "53",
         "player": "Fernandez-Pardo M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Correia F.",
         "team": "Lille"
       },
       {
@@ -6819,7 +6819,7 @@
         "time": "64",
         "player": "Tosin A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Soumano S.",
         "team": "Lorient"
       },
       {
@@ -6854,21 +6854,21 @@
         "time": "87",
         "player": "Haraldsson H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Perraud R.",
         "team": "Lille"
       },
       {
         "time": "90+3",
         "player": "Igamane H.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Andre B.",
         "team": "Lille"
       },
       {
         "time": "90+5",
         "player": "Sahraoui O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ozer B.",
         "team": "Lille"
       }
     ],
@@ -6884,7 +6884,7 @@
         "time": "24",
         "player": "Baldé M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Doumbia K.",
         "team": "Brest"
       },
       {
@@ -6919,7 +6919,7 @@
         "time": "60",
         "player": "Thauvin F.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Lens"
       },
       {
@@ -6940,7 +6940,7 @@
         "time": "90+2",
         "player": "Thomasson A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Abdulhamid S.",
         "team": "Lens"
       }
     ],
@@ -6977,7 +6977,7 @@
         "time": "90+1",
         "player": "Giroud O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Fernandez-Pardo M.",
         "team": "Lille"
       },
       {
@@ -7007,7 +7007,7 @@
         "time": "9",
         "player": "Said W.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Lens"
       },
       {
@@ -7021,7 +7021,7 @@
         "time": "40",
         "player": "Fofana R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Said W.",
         "team": "Lens"
       },
       {
@@ -7079,7 +7079,7 @@
         "time": "81",
         "player": "Emegha E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Bakwa D.",
         "team": "Strasbourg"
       },
       {
@@ -7167,21 +7167,21 @@
         "time": "45+4",
         "player": "Soumano S.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Avom A.",
         "team": "Lorient"
       },
       {
         "time": "47",
         "player": "Tosin A.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kouassi A.",
         "team": "Lorient"
       },
       {
         "time": "65",
         "player": "Pagis P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Bamba M.",
         "team": "Lorient"
       },
       {
@@ -7225,14 +7225,14 @@
         "time": "25",
         "player": "Fofana M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Sulc P.",
         "team": "Lyon"
       },
       {
         "time": "30",
         "player": "Tolisso C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Maitland-Niles A.",
         "team": "Lyon"
       },
       {
@@ -7269,21 +7269,21 @@
         "time": "3",
         "player": "Boga J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Louchet T.",
         "team": "Nice"
       },
       {
         "time": "21",
         "player": "Sinayoko L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Osman I.",
         "team": "Auxerre"
       },
       {
         "time": "24",
         "player": "Akpa C.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Nice"
       },
       {
@@ -7325,7 +7325,7 @@
         "time": "76",
         "player": "Moffi T.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Louchet T.",
         "team": "Nice"
       }
     ],
@@ -7341,14 +7341,14 @@
         "time": "18",
         "player": "Greenwood M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Pénalty",
         "team": "Marseille"
       },
       {
         "time": "24",
         "player": "Aubameyang P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Greenwood M.",
         "team": "Marseille"
       },
       {
@@ -7362,21 +7362,21 @@
         "time": "58",
         "player": "Simon M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kebbal I.",
         "team": "Paris FC"
       },
       {
         "time": "73",
         "player": "Aubameyang P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Nadir B.",
         "team": "Marseille"
       },
       {
         "time": "81",
         "player": "Hojbjerg P.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Nadir B.",
         "team": "Marseille"
       },
       {
@@ -7390,7 +7390,7 @@
         "time": "90+6",
         "player": "Vaz R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Greenwood M.",
         "team": "Marseille"
       }
     ],
@@ -7436,7 +7436,7 @@
         "time": "67",
         "player": "Vitinha",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Mendes N.",
         "team": "PSG"
       },
       {
@@ -7459,7 +7459,7 @@
         "time": "9",
         "player": "Lepaul E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lefort J.",
         "team": "Angers"
       },
       {
@@ -7517,7 +7517,7 @@
         "time": "53",
         "player": "Sinayoko L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Osman I.",
         "team": "Auxerre"
       },
       {
@@ -7582,7 +7582,7 @@
         "time": "86",
         "player": "Panichelli J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Bakwa D.",
         "team": "Strasbourg"
       }
     ],
@@ -7598,7 +7598,7 @@
         "time": "11",
         "player": "Giroud O.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Correia F.",
         "team": "Lille"
       },
       {
@@ -7640,21 +7640,21 @@
         "time": "51",
         "player": "Doumbia K.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Baldé M.",
         "team": "Brest"
       },
       {
         "time": "66",
         "player": "Mukau N.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Ngoy N.",
         "team": "Lille"
       },
       {
         "time": "75",
         "player": "Le Cardinal J.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Lala K.",
         "team": "Brest"
       }
     ],
@@ -7698,7 +7698,7 @@
         "time": "89",
         "player": "Sidibe D.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Hidalgo S.",
         "team": "Toulouse"
       },
       {
@@ -7721,28 +7721,28 @@
         "time": "32",
         "player": "Lloris G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Contre son camp",
         "team": "Monaco"
       },
       {
         "time": "61",
         "player": "Dier E.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Camara L.",
         "team": "Monaco"
       },
       {
         "time": "67",
         "player": "Ndiaye R.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Kechta Y.",
         "team": "Le Havre"
       },
       {
         "time": "74",
         "player": "Akliouche M.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Zakaria D.",
         "team": "Monaco"
       },
       {
@@ -7779,7 +7779,7 @@
         "time": "45+1",
         "player": "Mikautadze G.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Fofana M.",
         "team": "Lyon"
       },
       {
@@ -7851,7 +7851,7 @@
         "time": "90+1",
         "player": "Blas L.",
         "type": "Goal",
-        "detail": "",
+        "detail": "Assist: Merlin Q.",
         "team": "Rennes"
       },
       {

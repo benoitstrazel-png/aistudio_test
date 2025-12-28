@@ -80,8 +80,23 @@ async function scrapeMatch(browser, url, roundInfo) {
                 // Text-based detection for Goals (e.g., "1 - 0")
                 if (/\d+\s*-\s*\d+/.test(text)) {
                     type = 'Goal';
-                    if (text.toLowerCase().includes('(csc)') || text.toLowerCase().includes('own goal')) {
+                    const lowerText = text.toLowerCase();
+
+                    if (lowerText.includes('(csc)') || lowerText.includes('own goal') || lowerText.includes('(own goal)')) {
                         detail = 'Own Goal';
+                    } else if (lowerText.includes('penalty')) {
+                        detail = 'Penalty';
+                    } else {
+                        // Check for Assist (content in parentheses that is not penalty/csc)
+                        const parenthesized = text.match(/\(([^)]+)\)/);
+                        if (parenthesized) {
+                            const content = parenthesized[1];
+                            const lowerContent = content.toLowerCase();
+                            // Double check to ensure we don't capture 'Penalty' or 'CSC' here if missed above
+                            if (!lowerContent.includes('penalty') && !lowerContent.includes('csc') && !lowerContent.includes('own goal')) {
+                                detail = `Assist: ${content}`;
+                            }
+                        }
                     }
                 }
                 else if (svgClass.includes('yellowCard')) type = 'Yellow Card';
