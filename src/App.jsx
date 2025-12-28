@@ -15,6 +15,7 @@ import { getLeagueLogo } from './utils/logos';
 import ClubComparator from './components/ClubComparator';
 import BettingSimulator from './components/BettingSimulator';
 import PlayerFocus from './components/PlayerFocus';
+import ClubAnalysis from './components/ClubAnalysis';
 
 // Load JSON directly (Vite supports this)
 import APP_DATA from './data/app_data.json';
@@ -143,6 +144,12 @@ function App() {
                     className={`px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all ${activeTab === 'players' ? 'bg-accent text-slate-900' : 'bg-white/5 text-secondary hover:text-white'}`}
                 >
                     Focus Joueurs
+                </button>
+                <button
+                    onClick={() => setActiveTab('club_focus')}
+                    className={`px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all ${activeTab === 'club_focus' ? 'bg-accent text-slate-900' : 'bg-white/5 text-secondary hover:text-white'}`}
+                >
+                    Focus Club
                 </button>
                 <button
                     onClick={() => setActiveTab('forecasts')}
@@ -305,6 +312,10 @@ function App() {
 
                 {activeTab === 'players' && (
                     <PlayerFocus />
+                )}
+
+                {activeTab === 'club_focus' && (
+                    <ClubAnalysis teams={teams} />
                 )}
 
                 {activeTab === 'forecasts' && (
