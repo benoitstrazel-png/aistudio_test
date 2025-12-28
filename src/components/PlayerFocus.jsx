@@ -109,7 +109,7 @@ const PlayerFocus = () => {
     }
 
     return (
-        <div className="space-y-6 animate-fade-in relative">
+        <div className="space-y-12 animate-fade-in relative">
             {/* Modal Overlay */}
             {selectedPlayer && (
                 <PlayerDetailsModal
@@ -124,7 +124,7 @@ const PlayerFocus = () => {
             </div>
 
             {/* Header Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="glass-card p-4 rounded-xl border border-white/10">
                     <h3 className="text-secondary text-sm font-bold uppercase tracking-wider mb-2">Meilleur Buteur</h3>
                     <div className="flex items-center space-x-3">
@@ -156,7 +156,7 @@ const PlayerFocus = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Efficiency Chart */}
                 <div className="glass-card p-6 rounded-xl border border-white/10">
                     <h3 className="text-xl font-bold mb-4">Efficacité Offensive</h3>
@@ -202,7 +202,7 @@ const PlayerFocus = () => {
                     <div className="h-80">
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={[...playersData].sort((a, b) => (b[selectedMetric] || 0) - (a[selectedMetric] || 0)).slice(0, 10)}
+                                data={[...filteredPlayers].sort((a, b) => (b[selectedMetric] || 0) - (a[selectedMetric] || 0)).slice(0, 10)}
                                 layout="vertical"
                                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                             >

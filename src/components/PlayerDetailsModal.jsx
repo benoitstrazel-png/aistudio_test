@@ -18,8 +18,8 @@ const CircularGauge = ({ value, maxValue, label, color = 'cyan' }) => {
     const theme = colors[color];
 
     return (
-        <div className="relative flex items-center justify-center" style={{ width: 160, height: 160 }}>
-            <svg className="transform -rotate-90" width="160" height="160">
+        <div className="relative flex items-center justify-center" style={{ width: 200, height: 200 }}>
+            <svg className="transform -rotate-90" width="200" height="200">
                 <defs>
                     <filter id={`glow-${color}-${label}`}>
                         <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -31,8 +31,8 @@ const CircularGauge = ({ value, maxValue, label, color = 'cyan' }) => {
                 </defs>
                 {/* Background circle */}
                 <circle
-                    cx="80"
-                    cy="80"
+                    cx="100"
+                    cy="100"
                     r={radius}
                     fill="none"
                     stroke={theme.bg}
@@ -41,8 +41,8 @@ const CircularGauge = ({ value, maxValue, label, color = 'cyan' }) => {
                 />
                 {/* Progress circle */}
                 <circle
-                    cx="80"
-                    cy="80"
+                    cx="100"
+                    cy="100"
                     r={radius}
                     fill="none"
                     stroke={theme.stroke}
@@ -116,7 +116,7 @@ const StatRow = ({ label, value, highlight = false }) => {
 };
 
 // HUD Card Component
-const HUDCard = ({ children, title, className = '', borderColor = 'cyan' }) => {
+const HUDCard = ({ children, title, className = '', borderColor = 'cyan', disableClip = false }) => {
     const borderStyles = borderColor === 'cyan'
         ? {
             borderColor: '#00eaff',
@@ -132,7 +132,7 @@ const HUDCard = ({ children, title, className = '', borderColor = 'cyan' }) => {
     return (
         <div className={`bg-slate-900/60 backdrop-blur-md border-2 rounded-lg p-4 ${className}`}
             style={{
-                clipPath: 'polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px))',
+                ...(disableClip ? { overflow: 'visible' } : { clipPath: 'polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px))' }),
                 ...borderStyles
             }}>
             {title && (
@@ -271,7 +271,7 @@ const PlayerDetailsModal = ({ player, onClose }) => {
 
                         {/* LEFT - OFFENSIVE */}
                         <div className="col-span-3">
-                            <HUDCard title="OFFENSIVE" borderColor="cyan" className="h-full flex flex-col items-center justify-center">
+                            <HUDCard title="OFFENSIVE" borderColor="cyan" disableClip={true} className="h-full flex flex-col items-center justify-center py-8">
                                 <CircularGauge
                                     value={player.Gls}
                                     maxValue={25}
@@ -333,7 +333,7 @@ const PlayerDetailsModal = ({ player, onClose }) => {
 
                         {/* RIGHT - AGE */}
                         <div className="col-span-3">
-                            <HUDCard title="AGE" borderColor="magenta" className="h-full flex flex-col items-center justify-center">
+                            <HUDCard title="AGE" borderColor="magenta" disableClip={true} className="h-full flex flex-col items-center justify-center py-8">
                                 <CircularGauge
                                     value={player.Age}
                                     maxValue={40}

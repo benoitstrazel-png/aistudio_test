@@ -64,7 +64,7 @@ const ClubAnalysis = ({ teams }) => {
                                         : 'text-slate-400 hover:text-white'
                                         }`}
                                 >
-                                    {v === 'all' ? 'Tout' : v === 'home' ? 'Domigu' : 'Ext.'}
+                                    {v === 'all' ? 'Tout' : v === 'home' ? 'Domicile' : 'Ext.'}
                                 </button>
                             ))}
                         </div>
