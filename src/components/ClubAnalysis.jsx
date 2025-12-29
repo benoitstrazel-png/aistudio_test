@@ -7,29 +7,55 @@ import TeamLogo from './ui/TeamLogo';
 // Import Data (Ideally this comes from a merged source)
 import scrapedJ16 from '../data/matches_j16_scraped.json';
 import historical from '../data/matches_history_detailed.json';
+import rosterData from '../data/real_players.json';
+import ClubDistributionCharts from './ClubDistributionCharts';
+import PitchMap from './PitchMap';
+
+const CLUSTERS = {
+    'Top Tier': ['PSG', 'Monaco', 'Lille', 'Marseille', 'Lens', 'Nice'],
+    'Mid Tier': ['Rennes', 'Lyon', 'Toulouse', 'Strasbourg', 'Reims', 'Montpellier', 'Brest'],
+    'Low Tier': ['Lorient', 'Nantes', 'Le Havre', 'Metz', 'Auxerre', 'Angers', 'Paris FC', 'St Etienne', 'Clermont']
+};
 
 const ClubAnalysis = ({ teams }) => {
-    const [selectedTeam, setSelectedTeam] = useState('Lorient'); // Set to Lorient as default while scraping
-    const [venueFilter, setVenueFilter] = useState('all'); // all, home, away
-    const [metricFilter, setMetricFilter] = useState('all'); // all, goals, cards
+    const [selectedTeam, setSelectedTeam] = useState('Lorient');
+    const [venueFilter, setVenueFilter] = useState('all');
+    const [metricFilter, setMetricFilter] = useState('all');
+    const [clusterFilter, setClusterFilter] = useState('all'); // all, Top Tier, Mid Tier, Low Tier
     const [allMatches, setAllMatches] = useState([]);
 
     useEffect(() => {
         // MERGE LOGIC (Placeholder)
-        // For now, just use J16. When scraping finishes, we will fetch/import the detailed history.
-
-        // Combine
         const combined = [...historical, ...scrapedJ16];
         setAllMatches(combined);
     }, []);
 
     const filteredMatches = useMemo(() => {
-        if (venueFilter === 'all') return allMatches;
-        return allMatches.filter(m => {
-            const isHome = m.homeTeam === selectedTeam;
-            return venueFilter === 'home' ? isHome : !isHome;
-        });
-    }, [allMatches, venueFilter, selectedTeam]);
+        let matches = allMatches;
+
+        // Venue Filter
+        if (venueFilter !== 'all') {
+            matches = matches.filter(m => {
+                const isHome = m.homeTeam === selectedTeam;
+                return venueFilter === 'home' ? isHome : !isHome;
+            });
+        }
+
+        // Cluster Filter
+        if (clusterFilter !== 'all') {
+            matches = matches.filter(m => {
+                const isHome = m.homeTeam === selectedTeam;
+                const opponent = isHome ? m.awayTeam : m.homeTeam;
+                // Find cluster of opponent
+                // We check if opponent is in the selected cluster list
+                const targets = CLUSTERS[clusterFilter] || [];
+                return targets.includes(opponent);
+            });
+        }
+
+        // Ensure we filter for the selected team involved match
+        return matches.filter(m => m.homeTeam === selectedTeam || m.awayTeam === selectedTeam);
+    }, [allMatches, venueFilter, clusterFilter, selectedTeam]);
 
     const stats = useMemo(() => {
         return analyzeClubEvents(selectedTeam, filteredMatches);
@@ -52,21 +78,42 @@ const ClubAnalysis = ({ teams }) => {
 
                 <div className="flex flex-col items-end gap-3 w-full md:w-auto">
                     {/* Venue Filter */}
-                    <div className="flex items-center gap-2">
-                        <span className="text-[10px] uppercase font-bold text-secondary tracking-widest mr-2">Filtres:</span>
-                        <div className="flex bg-slate-800 rounded-lg p-1 gap-1">
-                            {['all', 'home', 'away'].map(v => (
-                                <button
-                                    key={v}
-                                    onClick={() => setVenueFilter(v)}
-                                    className={`px-3 py-1 text-[10px] uppercase font-bold rounded transition-colors ${venueFilter === v
-                                        ? 'bg-accent text-[#0B1426]'
-                                        : 'text-slate-400 hover:text-white'
-                                        }`}
-                                >
-                                    {v === 'all' ? 'Tout' : v === 'home' ? 'Domicile' : 'Ext.'}
-                                </button>
-                            ))}
+                    <div className="flex flex-col items-end gap-2">
+                        <div className="flex items-center gap-2">
+                            <span className="text-[10px] uppercase font-bold text-secondary tracking-widest mr-2">Terrain:</span>
+                            <div className="flex bg-slate-800 rounded-lg p-1 gap-1">
+                                {['all', 'home', 'away'].map(v => (
+                                    <button
+                                        key={v}
+                                        onClick={() => setVenueFilter(v)}
+                                        className={`px-3 py-1 text-[10px] uppercase font-bold rounded transition-colors ${venueFilter === v
+                                            ? 'bg-accent text-[#0B1426]'
+                                            : 'text-slate-400 hover:text-white'
+                                            }`}
+                                    >
+                                        {v === 'all' ? 'Tout' : v === 'home' ? 'Dom.' : 'Ext.'}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Cluster Filter */}
+                        <div className="flex items-center gap-2">
+                            <span className="text-[10px] uppercase font-bold text-secondary tracking-widest mr-2">Adversaire:</span>
+                            <div className="flex bg-slate-800 rounded-lg p-1 gap-1">
+                                {['all', 'Top Tier', 'Mid Tier', 'Low Tier'].map(c => (
+                                    <button
+                                        key={c}
+                                        onClick={() => setClusterFilter(c)}
+                                        className={`px-3 py-1 text-[10px] uppercase font-bold rounded transition-colors ${clusterFilter === c
+                                            ? 'bg-purple-500 text-white'
+                                            : 'text-slate-400 hover:text-white'
+                                            }`}
+                                    >
+                                        {c === 'all' ? 'Tout' : c.replace(' Tier', '')}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -94,106 +141,114 @@ const ClubAnalysis = ({ teams }) => {
                     <p className="text-slate-400">Le scraping est peut-être en cours ou ce club n'a pas joué de match correspondant aux filtres.</p>
                 </div>
             ) : (
-                /* GRIDS */
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-                    {/* 1. GOAL TIMING */}
-                    <div className="card col-span-1 lg:col-span-2 min-h-[400px]">
-                        <div className="flex justify-between items-center mb-6">
-                            <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                                ⏱️ Distribution (15 min)
-                            </h3>
-                            <div className="flex bg-slate-800 rounded-lg p-1 gap-1">
-                                {[{ id: 'all', l: 'Tout' }, { id: 'goals', l: 'Buts' }, { id: 'cards', l: 'Sanctions' }].map(m => (
-                                    <button key={m.id} onClick={() => setMetricFilter(m.id)} className={`px-3 py-1 text-[10px] uppercase font-bold rounded transition-colors ${metricFilter === m.id ? 'bg-blue-500 text-white' : 'text-slate-400 hover:text-white'}`}>{m.l}</button>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="w-full" style={{ height: 300 }}>
-                            <ResponsiveContainer width="100%" height="100%">
-                                <BarChart data={chartData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
-                                    <XAxis dataKey="name" stroke="#94a3b8" fontSize={12} tickLine={false} axisLine={false} />
-                                    <YAxis stroke="#94a3b8" fontSize={12} tickLine={false} axisLine={false} />
-                                    <Tooltip
-                                        contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#fff' }}
-                                        itemStyle={{ color: '#fff' }}
-                                    />
-                                    <Legend />
-                                    {(metricFilter === 'all' || metricFilter === 'goals') ? <Bar dataKey="scored" fill="#CEF002" radius={[4, 4, 0, 0]} name="Buts Marqués" /> : null}
-                                    {(metricFilter === 'all' || metricFilter === 'goals') ? <Bar dataKey="conceded" fill="#ef4444" radius={[4, 4, 0, 0]} name="Buts Encaissés" /> : null}
-                                    {(metricFilter === 'all' || metricFilter === 'cards') ? <Bar dataKey="cards" fill="#facc15" radius={[4, 4, 0, 0]} name="Cartons (J/R)" /> : null}
-                                </BarChart>
-                            </ResponsiveContainer>
-                        </div>
+                <>
+                    {/* NEW FEATURES */}
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                        <PitchMap clubName={selectedTeam} roster={rosterData[selectedTeam]} stats={stats.players} />
+                        <ClubDistributionCharts players={stats.players} />
                     </div>
 
-                    {/* 2. KEY STATS */}
-                    <div className="flex flex-col gap-6">
-                        {/* Discipline */}
-                        <div className="card bg-white/5 border-l-4 border-yellow-400">
-                            <h4 className="text-secondary text-xs uppercase font-bold mb-2">Discipline</h4>
-                            <div className="flex justify-between items-end">
-                                <div className="flex gap-4">
-                                    <div className="text-center">
-                                        <span className="block text-2xl font-black text-yellow-400">{stats.discipline.yellow}</span>
-                                        <span className="text-[10px] text-white/50 uppercase">Jaunes</span>
+                    {/* GRIDS */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                        {/* 1. GOAL TIMING */}
+                        <div className="card col-span-1 lg:col-span-2 min-h-[400px]">
+                            <div className="flex justify-between items-center mb-6">
+                                <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                                    ⏱️ Distribution (15 min)
+                                </h3>
+                                <div className="flex bg-slate-800 rounded-lg p-1 gap-1">
+                                    {[{ id: 'all', l: 'Tout' }, { id: 'goals', l: 'Buts' }, { id: 'cards', l: 'Sanctions' }].map(m => (
+                                        <button key={m.id} onClick={() => setMetricFilter(m.id)} className={`px-3 py-1 text-[10px] uppercase font-bold rounded transition-colors ${metricFilter === m.id ? 'bg-blue-500 text-white' : 'text-slate-400 hover:text-white'}`}>{m.l}</button>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="w-full" style={{ height: 300 }}>
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <BarChart data={chartData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                                        <XAxis dataKey="name" stroke="#94a3b8" fontSize={12} tickLine={false} axisLine={false} />
+                                        <YAxis stroke="#94a3b8" fontSize={12} tickLine={false} axisLine={false} />
+                                        <Tooltip
+                                            contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#fff' }}
+                                            itemStyle={{ color: '#fff' }}
+                                        />
+                                        <Legend />
+                                        {(metricFilter === 'all' || metricFilter === 'goals') ? <Bar dataKey="scored" fill="#CEF002" radius={[4, 4, 0, 0]} name="Buts Marqués" /> : null}
+                                        {(metricFilter === 'all' || metricFilter === 'goals') ? <Bar dataKey="conceded" fill="#ef4444" radius={[4, 4, 0, 0]} name="Buts Encaissés" /> : null}
+                                        {(metricFilter === 'all' || metricFilter === 'cards') ? <Bar dataKey="cards" fill="#facc15" radius={[4, 4, 0, 0]} name="Cartons (J/R)" /> : null}
+                                    </BarChart>
+                                </ResponsiveContainer>
+                            </div>
+                        </div>
+
+                        {/* 2. KEY STATS */}
+                        <div className="flex flex-col gap-6">
+                            {/* Discipline */}
+                            <div className="card bg-white/5 border-l-4 border-yellow-400">
+                                <h4 className="text-secondary text-xs uppercase font-bold mb-2">Discipline</h4>
+                                <div className="flex justify-between items-end">
+                                    <div className="flex gap-4">
+                                        <div className="text-center">
+                                            <span className="block text-2xl font-black text-yellow-400">{stats.discipline.yellow}</span>
+                                            <span className="text-[10px] text-white/50 uppercase">Jaunes</span>
+                                        </div>
+                                        <div className="text-center">
+                                            <span className="block text-2xl font-black text-red-500">{stats.discipline.red}</span>
+                                            <span className="text-[10px] text-white/50 uppercase">Rouges</span>
+                                        </div>
                                     </div>
-                                    <div className="text-center">
-                                        <span className="block text-2xl font-black text-red-500">{stats.discipline.red}</span>
-                                        <span className="text-[10px] text-white/50 uppercase">Rouges</span>
+                                    <div className="text-right">
+                                        <span className="text-xs text-slate-400">Total Fautes (est.)</span>
+                                        <span className="block text-lg font-bold text-white">{stats.discipline.total * 3 + Math.floor(Math.random() * 10)}</span> {/* Mocking total fouls as raw data usually doesn't have it unless detailed */}
                                     </div>
                                 </div>
-                                <div className="text-right">
-                                    <span className="text-xs text-slate-400">Total Fautes (est.)</span>
-                                    <span className="block text-lg font-bold text-white">{stats.discipline.total * 3 + Math.floor(Math.random() * 10)}</span> {/* Mocking total fouls as raw data usually doesn't have it unless detailed */}
+                            </div>
+
+                            {/* Penalties */}
+                            <div className="card bg-white/5 border-l-4 border-purple-500">
+                                <h4 className="text-secondary text-xs uppercase font-bold mb-2">Pénaltys</h4>
+                                <div className="grid grid-cols-2 gap-4 text-sm text-slate-300">
+                                    <div className="flex justify-between">
+                                        <span>Obtenus:</span>
+                                        <span className="font-bold text-white">{stats.penalties.awarded}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span>Marqués:</span>
+                                        <span className="font-bold text-green-400">{stats.penalties.scored}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span>Concédés:</span>
+                                        <span className="font-bold text-white">{stats.penalties.conceded}</span>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <span>Encaissés:</span>
+                                        <span className="font-bold text-red-400">{stats.penalties.conceded_scored}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Resilience KPI */}
+                            <div className="card bg-white/5 border-l-4 border-blue-400">
+                                <h4 className="text-secondary text-xs uppercase font-bold mb-2">Mental & Scénario</h4>
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm text-slate-300">Clean Sheets</span>
+                                        <span className="badge bg-green-500/20 text-green-400 border border-green-500/50 px-2 py-0.5 rounded text-xs font-bold">{stats.scenarios.cleanSheets}</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm text-slate-300">Remontadas (Gagné après mené)</span>
+                                        <span className="font-mono font-bold text-white">{stats.scenarios.comebacks}</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-sm text-slate-300">Points perdus (Menait au score)</span>
+                                        <span className="font-mono font-bold text-red-400">{stats.scenarios.droppedPoints}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Penalties */}
-                        <div className="card bg-white/5 border-l-4 border-purple-500">
-                            <h4 className="text-secondary text-xs uppercase font-bold mb-2">Pénaltys</h4>
-                            <div className="grid grid-cols-2 gap-4 text-sm text-slate-300">
-                                <div className="flex justify-between">
-                                    <span>Obtenus:</span>
-                                    <span className="font-bold text-white">{stats.penalties.awarded}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span>Marqués:</span>
-                                    <span className="font-bold text-green-400">{stats.penalties.scored}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span>Concédés:</span>
-                                    <span className="font-bold text-white">{stats.penalties.conceded}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span>Encaissés:</span>
-                                    <span className="font-bold text-red-400">{stats.penalties.conceded_scored}</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Resilience KPI */}
-                        <div className="card bg-white/5 border-l-4 border-blue-400">
-                            <h4 className="text-secondary text-xs uppercase font-bold mb-2">Mental & Scénario</h4>
-                            <div className="flex flex-col gap-2">
-                                <div className="flex justify-between items-center">
-                                    <span className="text-sm text-slate-300">Clean Sheets</span>
-                                    <span className="badge bg-green-500/20 text-green-400 border border-green-500/50 px-2 py-0.5 rounded text-xs font-bold">{stats.scenarios.cleanSheets}</span>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                    <span className="text-sm text-slate-300">Remontadas (Gagné après mené)</span>
-                                    <span className="font-mono font-bold text-white">{stats.scenarios.comebacks}</span>
-                                </div>
-                                <div className="flex justify-between items-center">
-                                    <span className="text-sm text-slate-300">Points perdus (Menait au score)</span>
-                                    <span className="font-mono font-bold text-red-400">{stats.scenarios.droppedPoints}</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
-                </div>
+                </>
             )
             }
 

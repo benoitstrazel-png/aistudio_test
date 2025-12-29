@@ -50,6 +50,10 @@ export const analyzeClubEvents = (clubName, allMatches) => {
             failedToScore: 0,
             comebacks: 0, // Won after trailing
             droppedPoints: 0 // Lost/Draw after leading
+        },
+        players: {
+            scorers: {},
+            assisters: {}
         }
     };
 
@@ -98,6 +102,18 @@ export const analyzeClubEvents = (clubName, allMatches) => {
                     stats.goalsFor.distribution[bucket]++;
                     clubScore++;
                     hasScored = true;
+
+                    // Track Scorer
+                    if (e.player) {
+                        const scorer = e.player.replace(/\(.*\)/, '').trim();
+                        if (scorer) stats.players.scorers[scorer] = (stats.players.scorers[scorer] || 0) + 1;
+                    }
+
+                    // Track Assister
+                    if (e.detail && e.detail.includes('Assist:')) {
+                        const assister = e.detail.split('Assist:')[1].trim().replace(/\)$/, '');
+                        if (assister) stats.players.assisters[assister] = (stats.players.assisters[assister] || 0) + 1;
+                    }
 
                     if (e.detail && e.detail.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes('penalty')) {
                         stats.penalties.awarded++;
