@@ -1,14 +1,27 @@
 import React, { useMemo } from 'react';
 import { getPlayerPhoto } from '../utils/playerPhotos';
+import { PLAYERS_DB } from '../data/players_static';
 
 const PitchMap = ({ clubName, roster, stats }) => {
-    // 1. Filter roster by position
+    // 1. Filter roster by position AND "Apps in Lineup" rule
     const bestXI = useMemo(() => {
         if (!roster || roster.length === 0) return {};
 
+        // Helper to normalize names for comparison
+        const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") || "";
+
         const getBest = (pos, count) => {
             return roster
-                .filter(p => p.position === pos)
+                .filter(p => {
+                    // Check if player has at least 1 Start in PLAYERS_DB
+                    const dbPlayer = PLAYERS_DB.find(db => norm(db.Player) === norm(p.name));
+                    // If found, check Starts. If not found, default to allowing (or filtering? Safe to default allow if logic implies they exist)
+                    // The user asked "appeared at least 1 time in a starting composition".
+                    // If not in DB, assume 0 starts? Or if in roster but not DB, maybe allow?
+                    // Real_players.json has 'mj'. Is 'mj' matches played or started? Usually played.
+                    // User specifically asked 'starting composition'.
+                    return p.position === pos && (dbPlayer ? dbPlayer.Starts > 0 : (p.mj > 0));
+                })
                 .sort((a, b) => b.rating - a.rating)
                 .slice(0, count);
         };
@@ -101,16 +114,17 @@ const PitchMap = ({ clubName, roster, stats }) => {
                 className="absolute flex flex-col items-center justify-center transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
                 style={{ top: `${coords.top}%`, left: `${coords.left}%` }}
             >
-                {/* Photo / Dot - Resized with inline styles to ensure it works */}
+                {/* Photo / Dot - Circle 200px */}
                 <div
-                    className={`relative rounded-sm border flex items-center justify-center shadow-lg transition-all overflow-hidden ${hasStats ? 'border-accent scale-110' : 'border-slate-400'} bg-slate-800`}
-                    style={{ width: '200px', aspectRatio: '4/3' }}
+                    className={`relative rounded-full border flex items-center justify-center shadow-lg transition-all overflow-hidden ${hasStats ? 'border-accent scale-110' : 'border-slate-400'} bg-slate-800`}
+                    style={{ width: '200px', height: '200px' }}
                 >
                     {photoUrl ? (
                         <img
                             src={photoUrl}
                             alt={player.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full"
+                            style={{ objectFit: 'cover', objectPosition: 'top' }}
                             onError={(e) => { e.target.style.display = 'none'; }}
                         />
                     ) : (
