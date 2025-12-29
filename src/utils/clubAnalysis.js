@@ -99,7 +99,7 @@ export const analyzeClubEvents = (clubName, allMatches) => {
                     clubScore++;
                     hasScored = true;
 
-                    if (e.detail && e.detail.toLowerCase().includes('penalty')) {
+                    if (e.detail && e.detail.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes('penalty')) {
                         stats.penalties.awarded++;
                         stats.penalties.scored++;
                     }
@@ -110,7 +110,7 @@ export const analyzeClubEvents = (clubName, allMatches) => {
                     oppScore++;
                     hasConceded = true;
 
-                    if (e.detail && e.detail.toLowerCase().includes('penalty')) {
+                    if (e.detail && e.detail.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes('penalty')) {
                         stats.penalties.conceded++;
                         stats.penalties.conceded_scored++;
                     }
