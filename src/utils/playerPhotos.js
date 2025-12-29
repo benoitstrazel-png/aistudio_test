@@ -3,7 +3,7 @@ import playerPhotosData from '../data/player_photos.json';
 
 const CLUB_MAP = {
     'PSG': 'Paris Saint-Germain',
-    'Marseille': 'Olympique de Marseille',
+    'Marseille': 'Olympique De Marseille',
     'Lyon': 'Olympique Lyonnais',
     'Monaco': 'As Monaco',
     'Lille': 'LOSC Lille',

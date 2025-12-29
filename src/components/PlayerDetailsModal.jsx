@@ -289,8 +289,8 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                     <HUDCard title="LEAGUE STATISTICS" borderColor="cyan">
                         <div className="flex justify-between items-center mb-2">
                             <div className="flex items-center gap-4">
-                                {/* Photo Container */}
-                                <div className="w-16 h-16 rounded-full border-2 border-cyan-500/50 bg-slate-800 overflow-hidden shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                                {/* Photo Container - Resized to w-12 (48px) aspect 4/3 */}
+                                <div className="w-12 aspect-[4/3] rounded-md border border-cyan-500/50 bg-slate-800 overflow-hidden shadow-[0_0_15px_rgba(6,182,212,0.3)]">
                                     {getPlayerPhoto(player.Squad, player.Player) ? (
                                         <img
                                             src={getPlayerPhoto(player.Squad, player.Player)}
@@ -300,7 +300,7 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                                         />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center text-cyan-500/30">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                         </div>
                                     )}
                                 </div>

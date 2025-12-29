@@ -101,8 +101,8 @@ const PitchMap = ({ clubName, roster, stats }) => {
                 className="absolute flex flex-col items-center justify-center transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
                 style={{ top: `${coords.top}%`, left: `${coords.left}%` }}
             >
-                {/* Photo / Dot */}
-                <div className={`relative w-10 h-10 rounded-full border-2 flex items-center justify-center shadow-lg transition-all overflow-hidden ${hasStats ? 'border-accent scale-110' : 'border-slate-400'
+                {/* Photo / Dot - Resized to w-6 (24px) aspect 4/3 */}
+                <div className={`relative w-6 aspect-[4/3] rounded-sm border flex items-center justify-center shadow-lg transition-all overflow-hidden ${hasStats ? 'border-accent scale-110' : 'border-slate-400'
                     } bg-slate-800`}>
                     {photoUrl ? (
                         <img
@@ -112,34 +112,34 @@ const PitchMap = ({ clubName, roster, stats }) => {
                             onError={(e) => { e.target.style.display = 'none'; }}
                         />
                     ) : (
-                        <span className={`text-[10px] font-bold ${hasStats ? 'text-accent' : 'text-slate-400'}`}>
+                        <span className={`text-[8px] font-bold ${hasStats ? 'text-accent' : 'text-slate-400'}`}>
                             {player.rating}
                         </span>
                     )}
 
-                    {/* Badge for Rating */}
+                    {/* Badge for Rating - Scaled down */}
                     {photoUrl && (
-                        <div className="absolute bottom-0 right-0 bg-accent text-[#0B1426] text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center border border-[#0B1426]">
+                        <div className="absolute bottom-0 right-0 bg-accent text-[#0B1426] text-[6px] font-black w-3 h-3 rounded-full flex items-center justify-center border border-[#0B1426] translate-x-1/3 translate-y-1/3 z-10">
                             {Math.floor(player.rating)}
                         </div>
                     )}
                 </div>
 
-                {/* Name Label */}
-                <div className="mt-1 bg-black/70 px-1.5 py-0.5 rounded text-[8px] text-white font-bold whitespace-nowrap backdrop-blur-sm border border-white/20">
+                {/* Name Label - Smaller text */}
+                <div className="mt-0.5 bg-black/70 px-1 py-px rounded text-[6px] text-white font-bold whitespace-nowrap backdrop-blur-sm border border-white/20">
                     {player.name.split(' ').pop()}
                 </div>
 
-                {/* Stats Badge */}
+                {/* Stats Badge - Scaled down */}
                 {hasStats && (
-                    <div className="flex gap-0.5 mt-0.5">
+                    <div className="flex gap-0.5 mt-0.5 pointer-events-none z-20 absolute top-full pt-3">
                         {goals > 0 && (
-                            <div className="bg-accent/90 text-[#0B1426] px-1 py-0.5 rounded text-[7px] font-black">
+                            <div className="bg-accent/90 text-[#0B1426] px-1 py-px rounded text-[6px] font-black shadow-sm">
                                 ⚽{goals}
                             </div>
                         )}
                         {assists > 0 && (
-                            <div className="bg-blue-400/90 text-white px-1 py-0.5 rounded text-[7px] font-black">
+                            <div className="bg-blue-400/90 text-white px-1 py-px rounded text-[6px] font-black shadow-sm">
                                 🎯{assists}
                             </div>
                         )}
