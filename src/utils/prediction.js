@@ -1,12 +1,34 @@
 // Helper to compute prediction live in frontend
 // Now includes Deterministic Randomness (Seeded) for consistency
-export const predictMatchLive = (home, away, stats) => {
+export const predictMatchLive = (home, away, stats, calibration = {}) => {
     const sh = stats[home] || { att: 1, def: 1 };
     const sa = stats[away] || { att: 1, def: 1 };
 
-    // Simple strength comparison
-    const homeStrength = sh.att * sa.def * 1.15; // Home advantage
-    const awayStrength = sa.att * sh.def;
+    // Apply Calibration if available
+    const calH = calibration[home] || { attack: 1, defense: 1 };
+    const calA = calibration[away] || { attack: 1, defense: 1 };
+
+    // Simple strength comparison with Calibration
+    // Home Att * (Away Def * Away Def Factor)
+    // We adjust the EFFECTIVE strength
+    const effHomeAtt = sh.att * calH.attack;
+    const effHomeDef = sh.def * calH.defense; // Lower is better for def usually? 
+    // Wait, in this model: att * def. If def is "strength" (higher = better), then we multiply.
+    // Let's assume stats.def is "Defensive Strength" (higher = allow fewer goals).
+    // NO, usually in simple models: Att * (1/Def) or Att * Def_Weakness.
+    // Let's check how 'stats' are built. Usually 1.2 att, 0.8 def (where 0.8 means allows 80% of avg).
+    // IF stats.def < 1 means GOOD defense:
+    // Then effHomeDef = sh.def * calH.defense. If Factor < 1 (was too pessimistic), we lower it further?
+    // Let's stick to the multiplier logic found: homeStrength = sh.att * sa.def.
+    // If sa.def is "Defense Weakness" (higher = worse), then:
+    // If we predicted 2 goals but they took 1, our predGA was too high. Factor = 0.5.
+    // We multiply sa.def * 0.5. Matches reality.
+
+    const effAwayAtt = sa.att * calA.attack;
+    const effAwayDef = sa.def * calA.defense;
+
+    const homeStrength = effHomeAtt * effAwayDef * 1.15; // Home advantage
+    const awayStrength = effAwayAtt * effHomeDef;
 
     const totalStrength = homeStrength + awayStrength;
     const homeProb = homeStrength / totalStrength;

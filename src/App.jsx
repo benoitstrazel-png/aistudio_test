@@ -25,6 +25,7 @@ import PLAYERS_DATA from './data/players.json';
 const TEAM_STATS = APP_DATA.teamStats || {};
 
 import { predictMatchLive } from './utils/prediction';
+import { calculateCalibration } from './utils/calibration';
 import ForecastReview from './components/ForecastReview';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 
     // Dynamically derive teams from the schedule to ensure 100% consistency with data
     const [teams, setTeams] = useState([]);
+    const [calibration, setCalibration] = useState({});
 
     useEffect(() => {
         if (APP_DATA.fullSchedule && APP_DATA.fullSchedule.length > 0) {
@@ -47,6 +49,11 @@ function App() {
                 if (match.awayTeam) uniqueTeams.add(match.awayTeam);
             });
             setTeams(Array.from(uniqueTeams).sort());
+
+            // Compute Calibration from History
+            const factors = calculateCalibration(APP_DATA.fullSchedule, TEAM_STATS);
+            setCalibration(factors);
+            console.log("Calibration Factors:", factors);
         }
     }, []);
 
@@ -71,7 +78,7 @@ function App() {
         }
 
         // Re-calculate prediction
-        const pred = predictMatchLive(newMatch.homeTeam, newMatch.awayTeam, TEAM_STATS);
+        const pred = predictMatchLive(newMatch.homeTeam, newMatch.awayTeam, TEAM_STATS, calibration);
         newMatch.prediction = pred;
 
         // Update odds roughly based on conf (optional logic)
@@ -91,7 +98,7 @@ function App() {
         newMatch.awayTeam = temp;
 
         // Re-calculate prediction
-        const pred = predictMatchLive(newMatch.homeTeam, newMatch.awayTeam, TEAM_STATS);
+        const pred = predictMatchLive(newMatch.homeTeam, newMatch.awayTeam, TEAM_STATS, calibration);
         newMatch.prediction = pred;
 
         // Update odds

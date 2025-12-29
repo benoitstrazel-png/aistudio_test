@@ -329,7 +329,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                                 <Legend wrapperStyle={{ paddingTop: '20px' }} />
 
                                 {/* Reference Area for Future (Projected) */}
-                                <ReferenceArea x1={currentWeek} x2={34} strokeOpacity={0.3} fill="#ffffff" fillOpacity={0.03} />
+                                <ReferenceArea x1={currentWeek + 0.5} x2={34} strokeOpacity={0.3} fill="#ffffff" fillOpacity={0.03} />
 
                                 <Line type="monotone" dataKey={teamA} stroke="#38bdf8" strokeWidth={3} dot={false} activeDot={{ r: 6 }} name={teamA} />
                                 <Line type="monotone" dataKey={teamB} stroke="#ef4444" strokeWidth={3} dot={false} activeDot={{ r: 6 }} name={teamB} />
@@ -337,7 +337,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                         </ResponsiveContainer>
                     </div>
                     <div className="flex justify-center gap-4 mt-2 text-[10px] text-secondary uppercase font-bold">
-                        <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-slate-700"></div> Zone Projetée (J{currentWeek}-J34)</span>
+                        <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-slate-700"></div> Zone Projetée (J{currentWeek + 1}-J34)</span>
                     </div>
                 </div>
 
