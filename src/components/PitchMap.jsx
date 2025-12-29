@@ -101,9 +101,11 @@ const PitchMap = ({ clubName, roster, stats }) => {
                 className="absolute flex flex-col items-center justify-center transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
                 style={{ top: `${coords.top}%`, left: `${coords.left}%` }}
             >
-                {/* Photo / Dot - Resized to w-6 (24px) aspect 4/3 */}
-                <div className={`relative w-6 aspect-[4/3] rounded-sm border flex items-center justify-center shadow-lg transition-all overflow-hidden ${hasStats ? 'border-accent scale-110' : 'border-slate-400'
-                    } bg-slate-800`}>
+                {/* Photo / Dot - Resized with inline styles to ensure it works */}
+                <div
+                    className={`relative rounded-sm border flex items-center justify-center shadow-lg transition-all overflow-hidden ${hasStats ? 'border-accent scale-110' : 'border-slate-400'} bg-slate-800`}
+                    style={{ width: '200px', aspectRatio: '4/3' }}
+                >
                     {photoUrl ? (
                         <img
                             src={photoUrl}

@@ -289,13 +289,17 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                     <HUDCard title="LEAGUE STATISTICS" borderColor="cyan">
                         <div className="flex justify-between items-center mb-2">
                             <div className="flex items-center gap-4">
-                                {/* Photo Container - Resized to w-12 (48px) aspect 4/3 */}
-                                <div className="w-12 aspect-[4/3] rounded-md border border-cyan-500/50 bg-slate-800 overflow-hidden shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                                {/* Photo Container - Resized with inline styles */}
+                                <div
+                                    className="rounded-full border border-cyan-500/50 bg-slate-800 overflow-hidden shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                                    style={{ width: '300px', height: '300px' }}
+                                >
                                     {getPlayerPhoto(player.Squad, player.Player) ? (
                                         <img
                                             src={getPlayerPhoto(player.Squad, player.Player)}
                                             alt={player.Player}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full"
+                                            style={{ objectFit: 'cover', objectPosition: 'top' }}
                                             onError={(e) => { e.target.style.display = 'none'; }}
                                         />
                                     ) : (
