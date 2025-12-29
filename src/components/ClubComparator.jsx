@@ -41,17 +41,65 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                 if (match.status === 'FINISHED' && match.score) {
                     homeScore = match.score.home;
                     awayScore = match.score.away;
+                } else if (match.prediction && match.prediction.score) {
+                    // USE EXISTING PREDICTION TO MATCH DASHBOARD
+                    const parts = match.prediction.score.split('-');
+                    if (parts.length === 2) {
+                        let h = parseInt(parts[0]);
+                        let a = parseInt(parts[1]);
+
+                        // --- LOGIC SYNC WITH SIMULATION.JS (Smart Score) ---
+                        const winner = match.prediction.winner;
+                        const isOver2_5 = match.prediction.goals_pred?.includes('+2.5');
+                        const isUnder2_5 = match.prediction.goals_pred?.includes('-2.5');
+
+                        // 1. Force Winner Consistency
+                        const originalIsDraw = h === a;
+                        const winnerConf = match.prediction.winner_conf || 0;
+                        const isWeakPrediction = winnerConf < 45;
+
+                        let forceWinner = true;
+                        if (originalIsDraw && isWeakPrediction) {
+                            forceWinner = false; // Keep the draw
+                        }
+
+                        if (forceWinner) {
+                            if (winner === match.homeTeam && h <= a) {
+                                h = a + 1;
+                            } else if (winner === match.awayTeam && a <= h) {
+                                a = h + 1;
+                            } else if ((winner === 'Draw' || winner === 'Nul') && h !== a) {
+                                const m = Math.max(h, a);
+                                h = m; a = m;
+                            }
+                        }
+
+                        // 2. Force Goals Consistency (+/- 2.5)
+                        if (isUnder2_5 && (h + a) > 2) {
+                            if (winner === match.homeTeam) { h = 1; a = 0; }
+                            else if (winner === match.awayTeam) { h = 0; a = 1; }
+                            else { h = 1; a = 1; }
+                        }
+                        else if (isOver2_5 && (h + a) < 3) {
+                            if (winner === match.homeTeam) { h = 2; a = 1; }
+                            else if (winner === match.awayTeam) { h = 1; a = 2; }
+                            else { h = 2; a = 2; }
+                        }
+
+                        homeScore = h;
+                        awayScore = a;
+                    } else {
+                        homeScore = 0; awayScore = 0;
+                    }
                 } else {
-                    // Start prediction for future matches
-                    // We need a determinstic prediction for the graph to be stable
-                    // predictMatchLive is deterministic (seeded)
+                    // Fallback to live prediction only if no prediction exists in schedule (should be rare)
                     const pred = predictMatchLive(match.homeTeam, match.awayTeam, teamStats);
                     if (pred && pred.score) {
                         const parts = pred.score.split('-');
                         homeScore = parseInt(parts[0]);
                         awayScore = parseInt(parts[1]);
                     } else {
-                        homeScore = 0; awayScore = 0; // Fallback
+                        homeScore = 0; awayScore = 0;
                     }
                 }
 
