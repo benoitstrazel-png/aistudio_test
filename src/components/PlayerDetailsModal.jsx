@@ -1,14 +1,16 @@
 import React, { useMemo } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { PLAYERS_DB } from '../data/players_static';
 
 // ========== SUB-COMPONENTS ==========
 
 // Circular Gauge Component (SVG-based)
-const CircularGauge = ({ value, maxValue, label, color = 'cyan' }) => {
+const CircularGauge = ({ value, maxValue, label, color = 'cyan', subLabel, size = 160 }) => {
     const percentage = Math.min(100, (value / maxValue) * 100);
-    const radius = 60;
+    const radius = size * 0.35; // Dynamically calculate radius based on size
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (percentage / 100) * circumference;
+    const strokeWidth = size * 0.08;
 
     const colors = {
         cyan: { stroke: '#00eaff', bg: '#005F9E', glow: 'rgba(0, 234, 255, 0.5)' },
@@ -18,8 +20,8 @@ const CircularGauge = ({ value, maxValue, label, color = 'cyan' }) => {
     const theme = colors[color];
 
     return (
-        <div className="relative flex items-center justify-center" style={{ width: 200, height: 200 }}>
-            <svg className="transform -rotate-90" width="200" height="200">
+        <div className="relative flex items-center justify-center dashed-border" style={{ width: size, height: size }}>
+            <svg className="transform -rotate-90" width={size} height={size}>
                 <defs>
                     <filter id={`glow-${color}-${label}`}>
                         <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -31,22 +33,22 @@ const CircularGauge = ({ value, maxValue, label, color = 'cyan' }) => {
                 </defs>
                 {/* Background circle */}
                 <circle
-                    cx="100"
-                    cy="100"
+                    cx={size / 2}
+                    cy={size / 2}
                     r={radius}
                     fill="none"
                     stroke={theme.bg}
-                    strokeWidth="10"
+                    strokeWidth={strokeWidth}
                     opacity="0.3"
                 />
                 {/* Progress circle */}
                 <circle
-                    cx="100"
-                    cy="100"
+                    cx={size / 2}
+                    cy={size / 2}
                     r={radius}
                     fill="none"
                     stroke={theme.stroke}
-                    strokeWidth="12"
+                    strokeWidth={strokeWidth + 2}
                     strokeDasharray={circumference}
                     strokeDashoffset={strokeDashoffset}
                     strokeLinecap="round"
@@ -54,36 +56,73 @@ const CircularGauge = ({ value, maxValue, label, color = 'cyan' }) => {
                     style={{ transition: 'stroke-dashoffset 1s ease-out' }}
                 />
             </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                 <div
-                    className="text-5xl font-black tabular-nums"
+                    className="font-black tabular-nums"
                     style={{
                         color: theme.stroke,
+                        // Responsive font size based on component size
+                        fontSize: `${size * 0.25}px`,
                         textShadow: `0 0 20px ${theme.glow}`,
-                        fontFamily: 'Barlow Condensed, monospace'
+                        fontFamily: 'Barlow Condensed, monospace',
+                        marginTop: `${size * 0.05}px`
                     }}
                 >
                     {value}
                 </div>
-                <div className="text-xs mt-1 opacity-70" style={{ color: theme.stroke }}>
+                <div
+                    className="font-bold uppercase tracking-wide opacity-70"
+                    style={{
+                        color: theme.stroke,
+                        fontSize: `${size * 0.07}px`
+                    }}
+                >
                     {label}
                 </div>
+                {subLabel && (
+                    <div
+                        className="font-bold bg-black/40 px-2 py-0.5 rounded-full mt-1"
+                        style={{
+                            color: subLabel.includes('+') ? '#4ade80' : (subLabel.includes('-') ? '#f87171' : theme.stroke),
+                            fontSize: `${size * 0.06}px`
+                        }}
+                    >
+                        {subLabel}
+                    </div>
+                )}
             </div>
         </div>
     );
 };
 
 // Horizontal Progress Bar
-const ProgressBar = ({ label, value, maxValue }) => {
+const ProgressBar = ({ label, value, maxValue, avgValue }) => {
     const percentage = Math.min(100, (value / maxValue) * 100);
+    const diff = avgValue !== undefined ? (value - avgValue).toFixed(1) : null;
+    const diffColor = diff > 0 ? 'text-emerald-400' : (diff < 0 ? 'text-rose-400' : 'text-slate-400');
+    const diffText = diff > 0 ? `+${diff}` : diff;
 
     return (
         <div className="space-y-1">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-end">
                 <span className="text-xs text-cyan-400/70 font-medium">{label}</span>
-                <span className="text-sm font-bold text-white tabular-nums">{value}</span>
+                <div className="text-right">
+                    <span className="text-sm font-bold text-white tabular-nums mr-2">{value}</span>
+                    {avgValue !== undefined && (
+                        <span className={`text-[10px] ${diffColor}`}>
+                            ({diffText} vs avg)
+                        </span>
+                    )}
+                </div>
             </div>
-            <div className="h-2 bg-slate-800/50 rounded-full overflow-hidden">
+            <div className="h-2 bg-slate-800/50 rounded-full overflow-hidden relative">
+                {/* Avg Marker */}
+                {avgValue && (
+                    <div
+                        className="absolute top-0 bottom-0 w-0.5 bg-white/50 z-10"
+                        style={{ left: `${Math.min(100, (avgValue / maxValue) * 100)}%` }}
+                    />
+                )}
                 <div
                     className="h-full bg-gradient-to-r from-cyan-400 to-cyan-500 rounded-full transition-all duration-700 ease-out"
                     style={{
@@ -96,8 +135,8 @@ const ProgressBar = ({ label, value, maxValue }) => {
     );
 };
 
-// Stat Row Component (for bottom sections)
-const StatRow = ({ label, value, highlight = false }) => {
+// Stat Row Component
+const StatRow = ({ label, value, avgValue, highlight = false }) => {
     const getValueColor = () => {
         if (typeof value === 'number' && highlight) {
             return value > 0 ? 'text-emerald-400' : 'text-rose-400';
@@ -105,12 +144,22 @@ const StatRow = ({ label, value, highlight = false }) => {
         return 'text-white';
     };
 
+    let diffEl = null;
+    if (avgValue !== undefined && typeof value === 'number') {
+        const diff = (value - avgValue).toFixed(1);
+        const color = diff > 0 ? 'text-emerald-400' : (diff < 0 ? 'text-rose-400' : 'text-slate-500');
+        diffEl = <span className={`text-[10px] ml-2 ${color}`}>({diff > 0 ? '+' : ''}{diff})</span>;
+    }
+
     return (
         <div className="flex justify-between items-center py-2 border-b border-fuchsia-500/10 last:border-0">
             <span className="text-xs text-fuchsia-400/60">{label}</span>
-            <span className={`text-lg font-bold tabular-nums ${getValueColor()}`}>
-                {typeof value === 'number' ? value.toFixed(1) : value}
-            </span>
+            <div className="flex items-center">
+                <span className={`text-lg font-bold tabular-nums ${getValueColor()}`}>
+                    {typeof value === 'number' ? value.toFixed(1) : value}
+                </span>
+                {diffEl}
+            </div>
         </div>
     );
 };
@@ -168,46 +217,92 @@ const PlayerDetailsModal = ({ player, onClose }) => {
 
     const posCategory = getPosCategory(player.Pos);
 
+    // Calculate Averages for Comparison
+    const averages = useMemo(() => {
+        if (!PLAYERS_DB) return {};
+
+        // Filter by Same Position (Broadly) & League
+        const peers = PLAYERS_DB.filter(p =>
+            p.League === 'fr Ligue 1' &&
+            getPosCategory(p.Pos) === posCategory &&
+            p.MP > 5 // Minimum minutes to be relevant
+        );
+
+        if (peers.length === 0) return {};
+
+        const sum = (key) => peers.reduce((acc, curr) => acc + (curr[key] || 0), 0);
+        const count = peers.length;
+
+        return {
+            Gls: sum('Gls') / count,
+            Age: sum('Age') / count,
+            MP: sum('MP') / count,
+            Min: sum('Min') / count,
+            Ast: sum('Ast') / count,
+            xG: sum('xG') / count,
+            npxG: sum('npxG') / count,
+            xAG: sum('xAG') / count,
+            Starts: sum('Starts') / count,
+            Rating: peers.reduce((acc, curr) => acc + ((curr.xG || 0) + (curr.xAG || 0)), 0) / count,
+            Diff: peers.reduce((acc, curr) => acc + ((curr.Gls || 0) - (curr.xG || 0)), 0) / count,
+            Contribution: peers.reduce((acc, curr) => acc + ((curr.Gls || 0) + (curr.Ast || 0)), 0) / count,
+            MinsPerMatch: peers.reduce((acc, curr) => acc + (curr.MP > 0 ? curr.Min / curr.MP : 0), 0) / count,
+        };
+    }, [posCategory]);
+
+    // Simple diff formatter
+    const getDiff = (key, val) => {
+        if (!averages[key]) return null;
+        const diff = val - averages[key];
+        return `${diff > 0 ? '+' : ''}${diff.toFixed(1)} vs Avg`;
+    };
+
     // Radar Chart Data
     const radarData = useMemo(() => {
         const normalize = (val, max) => Math.min(100, Math.max(0, ((val || 0) / max) * 100));
 
+        let data = [];
         switch (posCategory) {
             case 'FW':
-                return [
+                data = [
                     { axis: 'Attacking', value: normalize(player.Gls, 20) },
                     { axis: 'Vision', value: normalize(player.xAG, 10) },
                     { axis: 'Passing', value: normalize(player.Ast, 15) },
                     { axis: 'Efficiency', value: normalize((player.Gls || 0) / (player.xG || 1) * 10, 15) },
                     { axis: 'Activity', value: normalize(player.MP, 34) },
                 ];
+                break;
             case 'MF':
-                return [
+                data = [
                     { axis: 'Passing', value: normalize(player.Ast, 15) },
                     { axis: 'Vision', value: normalize(player.xAG, 10) },
                     { axis: 'Attacking', value: normalize(player.Gls, 10) },
                     { axis: 'Activity', value: normalize(player.MP, 34) },
                     { axis: 'Engagement', value: normalize(player.Starts, 34) },
                 ];
+                break;
             case 'DF':
-                return [
+                data = [
                     { axis: 'Stamina', value: normalize(player.Min, 3060) },
                     { axis: 'Engagement', value: normalize(player.Starts, 34) },
                     { axis: 'Activity', value: normalize(player.MP, 34) },
                     { axis: 'Passing', value: normalize(player.Ast, 5) },
                     { axis: 'Attacking', value: normalize(player.Gls, 5) },
                 ];
+                break;
             case 'GK':
-                return [
+                data = [
                     { axis: 'Stamina', value: normalize(player.Min, 3060) },
                     { axis: 'Engagement', value: normalize(player.Starts, 34) },
                     { axis: 'Clean Sheets', value: normalize(player.CleanSheets, 15) },
                     { axis: 'Passing', value: normalize(player.Ast, 1) },
                     { axis: 'Defense', value: player.GoalsConceded !== undefined ? normalize(50 - (player.ConcededPer90 * 10), 50) : 50 },
                 ];
+                break;
             default:
-                return [];
+                data = [];
         }
+        return data;
     }, [player, posCategory]);
 
     return (
@@ -224,15 +319,15 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                 }}
             />
 
-            <div className="relative w-full max-w-6xl" onClick={e => e.stopPropagation()}>
+            <div className="relative w-full max-w-6xl overflow-y-auto max-h-[90vh] pb-10" onClick={e => e.stopPropagation()}>
 
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute -top-12 left-0 w-10 h-10 rounded-full flex items-center justify-center 
+                    className="absolute -top-4 right-0 md:-top-12 md:right-0 w-10 h-10 rounded-full flex items-center justify-center 
                                bg-cyan-500/20 border-2 border-cyan-500 text-cyan-400 
                                hover:bg-cyan-500/30 transition-all duration-200
-                               shadow-[0_0_20px_rgba(0,234,255,0.4)]"
+                               shadow-[0_0_20px_rgba(0,234,255,0.4)] z-50"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <line x1="18" y1="6" x2="6" y2="18" />
@@ -245,7 +340,7 @@ const PlayerDetailsModal = ({ player, onClose }) => {
 
                     {/* ========== ZONE 1: HEADER & GENERAL ========== */}
                     <HUDCard title="LEAGUE" borderColor="cyan">
-                        <div className="mb-4">
+                        <div className="mb-4 text-center md:text-left">
                             <h2 className="text-4xl font-black text-cyan-400 mb-1"
                                 style={{
                                     fontFamily: 'Barlow Condensed, sans-serif',
@@ -258,40 +353,59 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                            <ProgressBar label="Appearances" value={player.MP} maxValue={34} />
-                            <ProgressBar label="Minutes played" value={player.Min} maxValue={3060} />
-                            <ProgressBar label="Rating" value={parseFloat(((player.xG || 0) + (player.xAG || 0)).toFixed(1))} maxValue={20} />
-                            <ProgressBar label="Assists" value={player.Ast} maxValue={15} />
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <ProgressBar label="Appearances" value={player.MP} maxValue={34} avgValue={averages.MP} />
+                            <ProgressBar label="Minutes played" value={player.Min} maxValue={3060} avgValue={averages.Min} />
+                            <ProgressBar label="Rating" value={parseFloat(((player.xG || 0) + (player.xAG || 0)).toFixed(1))} maxValue={20} avgValue={averages.Rating} />
+                            <ProgressBar label="Assists" value={player.Ast} maxValue={15} avgValue={averages.Ast} />
                         </div>
                     </HUDCard>
 
-                    {/* ========== ZONE 2: MIDDLE (Grid 3 colonnes) ========== */}
-                    <div className="grid grid-cols-12 gap-3">
+                    {/* ========== ZONE 2: VISUALS (Gauges Up + Radar Down) ========== */}
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
 
-                        {/* LEFT - OFFENSIVE */}
-                        <div className="col-span-3">
-                            <HUDCard title="OFFENSIVE" borderColor="cyan" disableClip={true} className="h-full flex flex-col items-center justify-center py-8">
+                        {/* LEFT COLUMN: GAUGES stacked or side-by-side depending on need
+                            Here: "Cote à cote au dessus du radar" suggests dividing the space.
+                            Let's maximize space by putting gauges in a row above radar.
+                        */}
+
+                        <div className="col-span-1 md:col-span-12 grid grid-cols-2 gap-3">
+                            {/* OFFENSIVE GAUGE */}
+                            <HUDCard title="OFFENSIVE" borderColor="cyan" disableClip={true} className="flex flex-col items-center justify-center p-4">
                                 <CircularGauge
                                     value={player.Gls}
                                     maxValue={25}
-                                    label={`Goals (${player.MP > 0 ? Math.round((player.Gls / player.MP) * 100) : 0}%)`}
+                                    label={`Goals`}
+                                    subLabel={getDiff('Gls', player.Gls)}
                                     color="cyan"
+                                    size={160} // Compact Size
+                                />
+                            </HUDCard>
+
+                            {/* AGE GAUGE */}
+                            <HUDCard title="AGE" borderColor="magenta" disableClip={true} className="flex flex-col items-center justify-center p-4">
+                                <CircularGauge
+                                    value={player.Age}
+                                    maxValue={40}
+                                    label="Years"
+                                    subLabel={getDiff('Age', player.Age)}
+                                    color="magenta"
+                                    size={160} // Compact Size
                                 />
                             </HUDCard>
                         </div>
 
-                        {/* CENTER - RADAR */}
-                        <div className="col-span-6">
-                            <div className="relative h-full flex flex-col items-center justify-center">
+                        {/* RADAR CHART - Full Width Below Gauges */}
+                        <div className="col-span-1 md:col-span-12">
+                            <HUDCard className="h-full bg-slate-900/40 relative" disableClip={true} borderColor="cyan">
                                 {/* Glow effect */}
-                                <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                     <div className="w-64 h-64 rounded-full blur-3xl bg-cyan-500/20" />
                                 </div>
 
-                                <div className="relative w-full" style={{ height: 400 }}>
-                                    <ResponsiveContainer>
-                                        <RadarChart data={radarData}>
+                                <div className="w-full h-[350px]">
+                                    <ResponsiveContainer width="100%" height="100%" minHeight={300}>
+                                        <RadarChart cx="50%" cy="50%" outerRadius="75%" data={radarData}>
                                             <defs>
                                                 <linearGradient id="radarFill" x1="0" y1="0" x2="0" y2="1">
                                                     <stop offset="0%" stopColor="#00eaff" stopOpacity={0.8} />
@@ -328,41 +442,29 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                                         </RadarChart>
                                     </ResponsiveContainer>
                                 </div>
-                            </div>
-                        </div>
-
-                        {/* RIGHT - AGE */}
-                        <div className="col-span-3">
-                            <HUDCard title="AGE" borderColor="magenta" disableClip={true} className="h-full flex flex-col items-center justify-center py-8">
-                                <CircularGauge
-                                    value={player.Age}
-                                    maxValue={40}
-                                    label="Years"
-                                    color="magenta"
-                                />
                             </HUDCard>
                         </div>
                     </div>
 
                     {/* ========== ZONE 3: BOTTOM (Grid 2 colonnes) ========== */}
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
 
                         {/* LEFT - ADVANCED */}
-                        <HUDCard title="ADVANCED" borderColor="magenta">
-                            <div className="space-y-1">
-                                <StatRow label="Expected Goals (xG)" value={player.xG || 0} />
-                                <StatRow label="Non-Penalty xG" value={player.npxG || 0} />
-                                <StatRow label="Expected Assists (xAG)" value={player.xAG || 0} />
-                                <StatRow label="Starts" value={player.Starts} />
+                        <HUDCard title="ADVANCED METRICS" borderColor="magenta">
+                            <div className="space-y-2">
+                                <StatRow label="Expected Goals (xG)" value={player.xG || 0} avgValue={averages.xG} />
+                                <StatRow label="Non-Penalty xG" value={player.npxG || 0} avgValue={averages.npxG} />
+                                <StatRow label="Expected Assists (xAG)" value={player.xAG || 0} avgValue={averages.xAG} />
+                                <StatRow label="Starts" value={player.Starts} avgValue={averages.Starts} />
                             </div>
                         </HUDCard>
 
                         {/* RIGHT - PERFORMANCE */}
-                        <HUDCard title="PERFORMANCE" borderColor="magenta">
-                            <div className="space-y-1">
-                                <StatRow label="Goals - xG" value={(player.Gls || 0) - (player.xG || 0)} highlight />
-                                <StatRow label="Goals + Assists" value={(player.Gls || 0) + (player.Ast || 0)} />
-                                <StatRow label="Avg Minutes/Match" value={player.MP > 0 ? Math.round(player.Min / player.MP) : 0} />
+                        <HUDCard title="PERFORMANCE EFFICIENCY" borderColor="magenta">
+                            <div className="space-y-2">
+                                <StatRow label="Efficiency (Goals - xG)" value={(player.Gls || 0) - (player.xG || 0)} avgValue={averages.Diff} highlight />
+                                <StatRow label="Direct Contribution (G+A)" value={(player.Gls || 0) + (player.Ast || 0)} avgValue={averages.Contribution} />
+                                <StatRow label="Mins per Match" value={player.MP > 0 ? Math.round(player.Min / player.MP) : 0} avgValue={averages.MinsPerMatch} />
                             </div>
                         </HUDCard>
                     </div>
