@@ -426,17 +426,45 @@ const PitchMap = ({ clubName, roster, stats }) => {
         const safeTotal = total || 1;
         const coords = getCoords(formation, position, index, safeTotal);
 
-        // Get additional player info from DB using simplified matching
-        const normalizeName = (name) => name?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
-        const dbPlayer = PLAYERS_DB.find(db => {
+        // Get additional player info from DB using enhanced matching
+        const normalizeName = (name) => {
+            if (!name) return "";
+            return name.toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[^a-z ]/g, "")
+                .trim();
+        };
+
+        const dbPlayer = PLAYERS_DB?.find(db => {
+            if (!db?.Player || !player?.name) return false;
+
             const dbName = normalizeName(db.Player);
             const playerName = normalizeName(player.name);
+
             // Try exact match first
             if (dbName === playerName) return true;
-            // Try partial match (last name)
-            const dbLastName = db.Player.split(' ').pop().toLowerCase();
-            const playerLastName = player.name.split(' ').pop().toLowerCase();
-            return dbLastName === playerLastName && dbName.includes(playerLastName);
+
+            // Try matching by last name
+            const dbParts = db.Player.split(' ').filter(p => p.length > 1);
+            const playerParts = player.name.split(' ').filter(p => p.length > 1);
+
+            if (dbParts.length > 0 && playerParts.length > 0) {
+                const dbLastName = normalizeName(dbParts[dbParts.length - 1]);
+                const playerLastName = normalizeName(playerParts[playerParts.length - 1]);
+
+                // Match if last names are same and first name initial matches
+                if (dbLastName === playerLastName && dbParts.length > 1 && playerParts.length > 1) {
+                    const dbFirst = normalizeName(dbParts[0]);
+                    const playerFirst = normalizeName(playerParts[0]);
+                    if (dbFirst[0] === playerFirst[0]) return true;
+                }
+
+                // Fallback: just last name match for single-word names
+                if (dbLastName === playerLastName) return true;
+            }
+
+            return false;
         });
 
         // Smart Label Logic
