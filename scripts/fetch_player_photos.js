@@ -13,6 +13,9 @@ const __dirname = path.dirname(__filename);
 const OUTPUT_FILE = path.join(__dirname, '../src/data/player_photos.json');
 const STANDINGS_URL = 'https://ligue1.com/fr/competitions/ligue1mcdonalds/standings';
 
+// Clubs to EXCLUDE (not in Ligue 1 2025-2026)
+const EXCLUDED_CLUBS = ['saint-etienne', 'reims'];
+
 async function fetchPlayerPhotos() {
     const browser = await puppeteer.launch({
         headless: 'new',
@@ -24,23 +27,22 @@ async function fetchPlayerPhotos() {
         console.log(`[1/3] Fetching Club URLs from ${STANDINGS_URL}...`);
         await page.goto(STANDINGS_URL, { waitUntil: 'networkidle2', timeout: 60000 });
 
-        // Accept Cookies if present
+        // Accept Cookies
         try {
             const acceptBtn = await page.waitForSelector('#didomi-notice-agree-button', { timeout: 5000 });
             if (acceptBtn) await acceptBtn.click();
             console.log('   -> Cookies accepted.');
         } catch (e) {
-            console.log('   -> No cookie banner found (or already accepted).');
+            console.log('   -> No cookie banner.');
         }
 
-        // Extract Club Squad URLs
+        // Extract Squad URLs
         const squadUrls = await page.evaluate(() => {
             const anchors = Array.from(document.querySelectorAll('a[href*="/club-sheet/"]'));
             const links = anchors
-                .map(a => a.href.split(/[?#]/)[0]) // Strip query/hash
-                .filter(href => !href.includes('/squad') && !href.includes('/stats')); // Get base links
+                .map(a => a.href.split(/[?#]/)[0])
+                .filter(href => !href.includes('/squad') && !href.includes('/stats'));
 
-            // Convert base links to squad links and dedupe
             const uniqueSquadUrls = [...new Set(links)].map(url => {
                 let base = url;
                 if (base.endsWith('/')) base = base.slice(0, -1);
@@ -55,16 +57,23 @@ async function fetchPlayerPhotos() {
 
         const clubsData = {};
 
-        // Process each club
         for (let i = 0; i < squadUrls.length; i++) {
             const squadUrl = squadUrls[i];
-            console.log(`[2/3] Processing Club ${i + 1}/${squadUrls.length}: ${squadUrl}`);
+
+            // Check if club should be excluded
+            const clubSlug = squadUrl.split('/').slice(-2)[0];
+            if (EXCLUDED_CLUBS.some(excluded => clubSlug.includes(excluded))) {
+                console.log(`[2/3] Skipping ${i + 1}/${squadUrls.length}: ${squadUrl} (not in Ligue 1 2025-2026)`);
+                continue;
+            }
+
+            console.log(`[2/3] Processing ${i + 1}/${squadUrls.length}: ${squadUrl}`);
 
             try {
-                // Navigate to squad page
-                await page.goto(squadUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+                await page.goto(squadUrl, { waitUntil: 'networkidle2', timeout: 60000 });
+                await new Promise(resolve => setTimeout(resolve, 2000));
 
-                // Extract Official Club Name from H1 or NEXT_DATA
+                // Extract club name from H1
                 const officialName = await page.evaluate(() => {
                     const h1 = document.querySelector('h1');
                     if (h1 && h1.innerText.trim().length > 3) return h1.innerText.trim();
@@ -77,13 +86,12 @@ async function fetchPlayerPhotos() {
                     }
                 });
 
-                const clubKey = officialName || squadUrl.split('/').slice(-2)[0].replace(/_/g, ' ');
+                const clubKey = officialName || clubSlug.replace(/_/g, ' ');
                 console.log(`   -> Identified as: ${clubKey}`);
 
-                // Scroll to load images
                 await autoScroll(page);
 
-                // Extract Players
+                // Extract players (ORIGINAL DOM METHOD)
                 const players = await page.evaluate(() => {
                     const cards = Array.from(document.querySelectorAll('a[href*="/player-sheet/"]'));
                     return cards.map(c => {
@@ -101,14 +109,13 @@ async function fetchPlayerPhotos() {
                 clubsData[clubKey] = players;
 
             } catch (err) {
-                console.error(`   -> Failed to scrape ${squadUrl}: ${err.message}`);
+                console.error(`   -> Failed: ${err.message}`);
             }
         }
 
-        // Save
-        console.log(`[3/3] Saving data to ${OUTPUT_FILE}...`);
+        console.log(`[3/3] Saving to ${OUTPUT_FILE}...`);
         fs.writeFileSync(OUTPUT_FILE, JSON.stringify(clubsData, null, 2));
-        console.log('Done.');
+        console.log('✅ Done.');
 
     } catch (error) {
         console.error('Fatal Error:', error);
@@ -117,7 +124,6 @@ async function fetchPlayerPhotos() {
     }
 }
 
-// Helper: Auto Scroll
 async function autoScroll(page) {
     await page.evaluate(async () => {
         await new Promise((resolve) => {
@@ -128,7 +134,6 @@ async function autoScroll(page) {
                 window.scrollBy(0, distance);
                 totalHeight += distance;
 
-                // Stop scrolling if we've reached the bottom OR if we've scrolled enough
                 if (totalHeight >= scrollHeight || totalHeight > 8000) {
                     clearInterval(timer);
                     resolve();

@@ -145,7 +145,9 @@ const ClubAnalysis = ({ teams }) => {
                     {/* NEW FEATURES */}
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
                         <PitchMap clubName={selectedTeam} roster={rosterData[selectedTeam]} stats={stats.players} />
-                        <ClubDistributionCharts players={stats.players} />
+                        <div className="min-h-[300px]">
+                            <ClubDistributionCharts players={stats.players} />
+                        </div>
                     </div>
 
                     {/* GRIDS */}

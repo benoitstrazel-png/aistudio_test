@@ -15,6 +15,8 @@ const CustomTooltip = ({ active, payload }) => {
     return null;
 };
 
+const renderCustomLabel = ({ name, value }) => `${name} (${value})`;
+
 const ClubDistributionCharts = ({ players }) => {
     const processData = (dataObj, unit) => {
         if (!dataObj) return [];
@@ -37,41 +39,31 @@ const ClubDistributionCharts = ({ players }) => {
     const assistersData = processData(players?.assisters, 'Passes');
 
     const ChartSection = ({ title, data, emptyMsg }) => (
-        <div className="card bg-white/5 p-4 flex flex-col items-center">
+        <div className="card bg-white/5 p-4 flex flex-col items-center h-64">
             <h4 className="text-secondary text-xs uppercase font-bold mb-4 w-full text-left">{title}</h4>
-            <div className="w-full h-[250px]">
-                {data.length > 0 ? (
-                    <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
-                            <Pie
-                                data={data}
-                                cx="50%"
-                                cy="50%"
-                                innerRadius={60}
-                                outerRadius={80}
-                                paddingAngle={5}
-                                dataKey="value"
-                            >
-                                {data.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} stroke="rgba(0,0,0,0.5)" />
-                                ))}
-                            </Pie>
-                            <Tooltip content={<CustomTooltip />} />
-                            <Legend
-                                layout="vertical"
-                                verticalAlign="middle"
-                                align="right"
-                                iconType="circle"
-                                wrapperStyle={{ fontSize: '10px', color: '#94a3b8' }}
-                            />
-                        </PieChart>
-                    </ResponsiveContainer>
-                ) : (
-                    <div className="flex items-center justify-center h-full text-slate-500 text-xs italic">
-                        {emptyMsg}
-                    </div>
-                )}
-            </div>
+            {data.length > 0 ? (
+                <ResponsiveContainer width="100%" height={200}>
+                    <PieChart>
+                        <Pie
+                            data={data}
+                            cx="50%"
+                            cy="50%"
+                            labelLine={false}
+                            label={renderCustomLabel}
+                            outerRadius={80}
+                            fill="#8884d8"
+                            dataKey="value"
+                        >
+                            {data.map((_, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            ))}
+                        </Pie>
+                        <Tooltip content={<CustomTooltip />} />
+                    </PieChart>
+                </ResponsiveContainer>
+            ) : (
+                <p className="text-slate-500 text-sm italic">{emptyMsg}</p>
+            )}
         </div>
     );
 
@@ -84,3 +76,4 @@ const ClubDistributionCharts = ({ players }) => {
 };
 
 export default ClubDistributionCharts;
+
