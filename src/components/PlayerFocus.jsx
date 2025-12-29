@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ZAxis } from 'recharts';
 import { PLAYERS_DB as playersData } from '../data/players_static';
+import { getPlayerPhoto } from '../utils/playerPhotos';
 
 import PlayerDetailsModal from './PlayerDetailsModal';
 
@@ -10,6 +11,8 @@ const PlayerFocus = () => {
     const [sortConfig, setSortConfig] = useState({ key: 'Gls', direction: 'desc' });
     const [selectedMetric, setSelectedMetric] = useState('Gls');
     const [selectedPlayer, setSelectedPlayer] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const ITEMS_PER_PAGE = 30;
 
     // Constants
     const TEAM_MAPPING = {
@@ -251,6 +254,7 @@ const PlayerFocus = () => {
                     <table className="w-full text-sm text-left">
                         <thead className="text-xs text-slate-400 uppercase bg-slate-800/50">
                             <tr>
+                                <th className="px-4 py-3 w-16">{/* Photo column */}</th>
                                 <th className="px-6 py-3 cursor-pointer hover:text-white transition-colors" onClick={() => requestSort('Player')}>
                                     Joueur {sortConfig.key === 'Player' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                                 </th>
@@ -282,26 +286,38 @@ const PlayerFocus = () => {
                         </thead>
                         <tbody className="divide-y divide-slate-700">
                             {filteredPlayers.length > 0 ? (
-                                filteredPlayers.map((player, index) => (
-                                    <tr
-                                        key={index}
-                                        className="hover:bg-slate-800/30 transition-colors cursor-pointer"
-                                        onClick={() => setSelectedPlayer(player)}
-                                    >
-                                        <td className="px-6 py-4 font-medium text-white">{player.Player}</td>
-                                        <td className="px-6 py-4">{player.Squad}</td>
-                                        <td className="px-6 py-4">{player.Pos}</td>
-                                        <td className="px-6 py-4">{player.Age}</td>
-                                        <td className="px-6 py-4 text-right">{player.MP}</td>
-                                        <td className="px-6 py-4 text-right">{player.Min}</td>
-                                        <td className="px-6 py-4 text-right font-bold text-accent">{player.Gls}</td>
-                                        <td className="px-6 py-4 text-right">{player.Ast}</td>
-                                        <td className="px-6 py-4 text-right">{player.xG}</td>
-                                    </tr>
-                                ))
+                                filteredPlayers
+                                    .slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+                                    .map((player, index) => (
+                                        <tr
+                                            key={index}
+                                            className="hover:bg-slate-800/30 transition-colors cursor-pointer"
+                                            onClick={() => setSelectedPlayer(player)}
+                                        >
+                                            <td className="px-2 py-1">
+                                                {player.League === 'fr Ligue 1' && getPlayerPhoto(player.Squad, player.Player) ? (
+                                                    <img
+                                                        src={getPlayerPhoto(player.Squad, player.Player)}
+                                                        alt={player.Player}
+                                                        style={{ height: '20px', width: 'auto', maxHeight: '20px' }}
+                                                        className="rounded-full object-contain border border-slate-600"
+                                                    />
+                                                ) : null}
+                                            </td>
+                                            <td className="px-6 py-4 font-medium text-white">{player.Player}</td>
+                                            <td className="px-6 py-4">{player.Squad}</td>
+                                            <td className="px-6 py-4">{player.Pos}</td>
+                                            <td className="px-6 py-4">{player.Age}</td>
+                                            <td className="px-6 py-4 text-right">{player.MP}</td>
+                                            <td className="px-6 py-4 text-right">{player.Min}</td>
+                                            <td className="px-6 py-4 text-right font-bold text-accent">{player.Gls}</td>
+                                            <td className="px-6 py-4 text-right">{player.Ast}</td>
+                                            <td className="px-6 py-4 text-right">{player.xG}</td>
+                                        </tr>
+                                    ))
                             ) : (
                                 <tr>
-                                    <td colSpan="9" className="px-6 py-8 text-center text-slate-400">
+                                    <td colSpan="10" className="px-6 py-8 text-center text-slate-400">
                                         Aucun joueur trouvé.
                                     </td>
                                 </tr>
@@ -309,8 +325,29 @@ const PlayerFocus = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className="p-4 border-t border-white/10 text-xs text-slate-500 text-center">
-                    Affichage de {filteredPlayers.length} joueurs
+                <div className="p-4 border-t border-white/10 flex justify-between items-center">
+                    <div className="text-xs text-slate-500">
+                        Affichage de {Math.min((currentPage - 1) * ITEMS_PER_PAGE + 1, filteredPlayers.length)} à {Math.min(currentPage * ITEMS_PER_PAGE, filteredPlayers.length)} sur {filteredPlayers.length} joueurs
+                    </div>
+                    <div className="flex gap-2 items-center">
+                        <button
+                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                            disabled={currentPage === 1}
+                            className="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-sm hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        >
+                            ← Précédent
+                        </button>
+                        <span className="text-sm text-slate-400">
+                            Page {currentPage} / {Math.ceil(filteredPlayers.length / ITEMS_PER_PAGE)}
+                        </span>
+                        <button
+                            onClick={() => setCurrentPage(p => Math.min(Math.ceil(filteredPlayers.length / ITEMS_PER_PAGE), p + 1))}
+                            disabled={currentPage >= Math.ceil(filteredPlayers.length / ITEMS_PER_PAGE)}
+                            className="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-sm hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        >
+                            Suivant →
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

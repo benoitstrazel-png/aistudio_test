@@ -535,10 +535,6 @@
       "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_150_167455-400x300.png"
     },
     {
-      "name": "Brice Samba",
-      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_150_102836-400x300.png"
-    },
-    {
       "name": "Lilian Brassier",
       "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_150_447547-400x300.png"
     },
@@ -1771,6 +1767,104 @@
     {
       "name": "Joel Asoro",
       "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_145_219727-400x300.png"
+    }
+  ],
+  "Toulouse Fc": [
+    {
+      "name": "Guillaume Restes",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_546172-400x300.png"
+    },
+    {
+      "name": "Kjetil Haug",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_198242-400x300.png"
+    },
+    {
+      "name": "Alex Dominguez",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_439750-400x300.png"
+    },
+    {
+      "name": "Naime Said Mchindra",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_638407-400x300.png"
+    },
+    {
+      "name": "Rasmus Nicolaisen",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_228955-400x300.png"
+    },
+    {
+      "name": "Mark Mckenzie",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_201401-400x300.png"
+    },
+    {
+      "name": "Charlie Cresswell",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_492373-400x300.png"
+    },
+    {
+      "name": "Warren Kamanzi",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_490971-400x300.png"
+    },
+    {
+      "name": "Djibril Sidibe",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_102747-400x300.png"
+    },
+    {
+      "name": "Dayann Methalie",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_638411-400x300.png"
+    },
+    {
+      "name": "Niklas Schmidt",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_204584-400x300.png"
+    },
+    {
+      "name": "Yann Gboho",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_242893-400x300.png"
+    },
+    {
+      "name": "Aron Donnum",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_247417-400x300.png"
+    },
+    {
+      "name": "Abu Francis",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_487441-400x300.png"
+    },
+    {
+      "name": "Rafik Messali",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_656314-400x300.png"
+    },
+    {
+      "name": "Cristian Casseres Jr",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_446090-400x300.png"
+    },
+    {
+      "name": "Alexis Vossah",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_616227-400x300.png"
+    },
+    {
+      "name": "Mario Sauer",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_539135-400x300.png"
+    },
+    {
+      "name": "Julian Vignolo",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_648413-400x300.png"
+    },
+    {
+      "name": "Frank Magri",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_564579-400x300.png"
+    },
+    {
+      "name": "Santiago Hidalgo",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_575453-400x300.png"
+    },
+    {
+      "name": "Emersonn Correia Da Silva",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_543968-400x300.png"
+    },
+    {
+      "name": "Noah Edjouma",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_628698-400x300.png"
+    },
+    {
+      "name": "Ilyas Azizi",
+      "photo": "https://s3.eu-west-3.amazonaws.com/ligue1.image/players/2025/all/player_official_2025_427_616245-400x300.png"
     }
   ]
 }

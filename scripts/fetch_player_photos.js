@@ -55,15 +55,21 @@ async function fetchPlayerPhotos() {
 
         console.log(`   -> Found ${squadUrls.length} clubs.`);
 
-        const clubsData = {};
+        console.log(`   -> Found ${squadUrls.length} clubs.`);
+
+        // LOAD EXISTING DATA to avoid wiping
+        let clubsData = {};
+        if (fs.existsSync(OUTPUT_FILE)) {
+            clubsData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
+            console.log(`   -> Loaded existing data for ${Object.keys(clubsData).length} clubs.`);
+        }
 
         for (let i = 0; i < squadUrls.length; i++) {
             const squadUrl = squadUrls[i];
-
-            // Check if club should be excluded
             const clubSlug = squadUrl.split('/').slice(-2)[0];
-            if (EXCLUDED_CLUBS.some(excluded => clubSlug.includes(excluded))) {
-                console.log(`[2/3] Skipping ${i + 1}/${squadUrls.length}: ${squadUrl} (not in Ligue 1 2025-2026)`);
+
+            // TARGET ONLY TOULOUSE (User Request)
+            if (!clubSlug.toLowerCase().includes('toulouse')) {
                 continue;
             }
 
@@ -86,6 +92,7 @@ async function fetchPlayerPhotos() {
                     }
                 });
 
+                // Force distinct key if needed, or stick to official
                 const clubKey = officialName || clubSlug.replace(/_/g, ' ');
                 console.log(`   -> Identified as: ${clubKey}`);
 
@@ -106,7 +113,7 @@ async function fetchPlayerPhotos() {
                 });
 
                 console.log(`   -> Scraped ${players.length} players for ${clubKey}.`);
-                clubsData[clubKey] = players;
+                clubsData[clubKey] = players; // Update or Add Toulouse
 
             } catch (err) {
                 console.error(`   -> Failed: ${err.message}`);
