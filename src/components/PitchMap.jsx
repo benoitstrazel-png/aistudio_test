@@ -586,6 +586,19 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
 
                 // Fallback: just last name match for single-word names
                 if (dbLastName === playerLastName) return true;
+
+                // HANDLE "Lastname F." format (e.g. "Morton T." vs "Tyler Morton")
+                // If player name has parts and the last part is short (likely initial), try matching the first part as Last Name
+                if (playerParts.length > 1 && playerParts[playerParts.length - 1].length <= 2) {
+                    const playerPotentialLastName = normalizeName(playerParts[0]);
+                    if (dbLastName === playerPotentialLastName) {
+                        // Optional: Verify initial if possible
+                        const dbFirst = normalizeName(dbParts[0]);
+                        const playerInitial = normalizeName(playerParts[playerParts.length - 1]);
+                        // "T." -> "t" vs "Tyler" -> "t"
+                        if (dbFirst.startsWith(playerInitial.replace('.', ''))) return true;
+                    }
+                }
             }
 
             return false;

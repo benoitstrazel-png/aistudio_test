@@ -223,7 +223,7 @@ const PlayerDetailsModal = ({ player, onClose }) => {
 
     const averages = useMemo(() => {
         if (!PLAYERS_DB) return {};
-        const peers = PLAYERS_DB.filter(p => p.League === 'fr Ligue 1' && getPosCategory(p.Pos) === posCategory && p.MP > 5);
+        const peers = PLAYERS_DB.filter(p => p.League === 'fr Ligue 1' && getPosCategory(p.Pos) === posCategory && p.Min > 0);
         if (peers.length === 0) return {};
         const sum = (key) => peers.reduce((acc, curr) => acc + (curr[key] || 0), 0);
         const count = peers.length;
