@@ -17,6 +17,8 @@ const CLUSTERS = {
     'Low Tier': ['Lorient', 'Nantes', 'Le Havre', 'Metz', 'Auxerre', 'Angers', 'Paris FC', 'St Etienne', 'Clermont']
 };
 
+import APP_DATA from '../data/app_data.json';
+
 const ClubAnalysis = ({ teams }) => {
     const [selectedTeam, setSelectedTeam] = useState('Lorient');
     const [venueFilter, setVenueFilter] = useState('all');
@@ -26,9 +28,12 @@ const ClubAnalysis = ({ teams }) => {
 
     useEffect(() => {
         // MERGE LOGIC (Placeholder)
-        const combined = [...historical, ...scrapedJ16];
+        // MERGE LOGIC (Placeholder)
+        const j16WithRound = scrapedJ16.map(m => ({ ...m, round: "Journée 16" }));
+        const combined = [...historical, ...j16WithRound];
         setAllMatches(combined);
     }, []);
+
 
     const filteredMatches = useMemo(() => {
         let matches = allMatches;
@@ -144,7 +149,14 @@ const ClubAnalysis = ({ teams }) => {
                 <>
                     {/* NEW FEATURES */}
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-                        <PitchMap clubName={selectedTeam} roster={rosterData[selectedTeam]} stats={stats.players} />
+                        <PitchMap
+                            clubName={selectedTeam}
+                            roster={rosterData[selectedTeam]}
+                            stats={stats.players}
+                            schedule={APP_DATA.fullSchedule}
+                            currentWeek={APP_DATA.currentWeek}
+                            matchHistory={allMatches}
+                        />
                         <div className="min-h-[300px]">
                             <ClubDistributionCharts players={stats.players} />
                         </div>

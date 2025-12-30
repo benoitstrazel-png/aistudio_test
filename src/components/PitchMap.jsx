@@ -3,8 +3,7 @@ import { getPlayerPhoto } from '../utils/playerPhotos';
 import { PLAYERS_DB } from '../data/players_static';
 import ALL_LINEUPS from '../data/lineups_2025_2026.json';
 
-const PitchMap = ({ clubName, roster, stats }) => {
-
+const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory }) => {
 
     // --- FORMATION COORDINATES DEFINITIONS ---
     const FORMATION_COORDS = {
@@ -104,8 +103,90 @@ const PitchMap = ({ clubName, roster, stats }) => {
         return posGroup[index];
     };
 
-    // --- HELPER FUNCTIONS ---
-    // Defined before useMemo to avoid ReferenceError
+    // Defined before useMemo key logic
+
+    // Next Opponent Finder
+    const getNextMatch = (cName) => {
+        if (!schedule || !currentWeek) return null;
+        const upcoming = schedule.find(m =>
+            m.week > currentWeek &&
+            m.status !== 'FINISHED' &&
+            (m.homeTeam === cName || m.awayTeam === cName)
+        );
+        if (!upcoming) return "Saison terminée";
+        return upcoming.homeTeam === cName ? upcoming.awayTeam : upcoming.homeTeam;
+    };
+
+    // Last Match Stats Parser
+    const getLastMatchStats = (playerName, cName) => {
+        if (!matchHistory || matchHistory.length === 0) return null;
+
+        // 1. Find last played match for club
+        const playedMatches = matchHistory
+            .filter(m => (m.homeTeam === cName || m.awayTeam === cName) && (m.score && m.score !== '-'))
+            // Sort by Round Number Descending (Fix for missing dates)
+            .sort((a, b) => {
+                const getR = r => r ? parseInt((r.match(/\d+/) || [0])[0], 10) : 0;
+                return getR(b.round) - getR(a.round);
+            });
+
+        const lastMatch = playedMatches[0];
+        if (!lastMatch) return null;
+
+        const opponent = lastMatch.homeTeam === cName ? lastMatch.awayTeam : lastMatch.homeTeam;
+        const score = lastMatch.score; // e.g. "2-1" or object {home: 2, away: 1} - handle format
+
+        let scoreStr = score;
+        if (typeof score === 'object') {
+            scoreStr = `${score.home}-${score.away}`;
+        }
+
+        // 2. Parse Events for Player
+        let goals = 0;
+        let assists = 0;
+        let rating = null; // Not typically in events, maybe in future
+        let yellow = false;
+        let red = false;
+
+        if (lastMatch.events) {
+            const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
+            const safeMatch = (n1, n2) => {
+                if (!n1 || !n2) return false;
+                // Matches like "Gouiri A." vs "Amine Gouiri"
+                const t1 = n1.split(' ').filter(x => x.length > 1);
+                const t2 = n2.split(' ').filter(x => x.length > 1);
+                return t1.some(a => t2.some(b => b === a || (b.includes(a) && a.length > 3)));
+            };
+            const pNorm = norm(playerName);
+
+            lastMatch.events.forEach(e => {
+                // Check if player involved
+                let involved = false;
+                if (e.players) {
+                    involved = e.players.some(p => safeMatch(norm(p), pNorm));
+                }
+
+                if (involved) {
+                    if (e.type === 'Goal') goals++;
+                    if (e.type === 'Yellow Card') yellow = true;
+                    if (e.type === 'Red Card') red = true;
+                }
+
+                // Assist check in detail
+                if (e.detail && e.detail.includes(playerName.split(' ').pop())) {
+                    // Very rough heuristic for assist if name in detail
+                    // Ideally parse e.detail properly
+                }
+                // Better assist check: e.detail is typically the assister name
+                if (e.type === 'Goal' && e.detail && safeMatch(norm(e.detail), pNorm)) {
+                    assists++;
+                }
+            });
+        }
+
+        return { opponent, score: scoreStr, goals, assists, yellow, red };
+    };
+
     const getPlayerStats = (name) => {
         let goals = 0;
         let assists = 0;
@@ -462,6 +543,10 @@ const PitchMap = ({ clubName, roster, stats }) => {
         const hasStats = goals > 0 || assists > 0;
         const photoUrl = getPlayerPhoto(clubName, player.name);
 
+        // NEW STATS: Last Match & Next Opponent
+        const nextOpponent = getNextMatch(clubName);
+        const lastMatchStats = getLastMatchStats(player.name, clubName);
+
         const safeTotal = total || 1;
         const coords = getCoords(formation, position, index, safeTotal);
 
@@ -613,28 +698,51 @@ const PitchMap = ({ clubName, roster, stats }) => {
                             </div>
                         </div>
 
-                        {/* Season Stats */}
-                        {(goals > 0 || assists > 0) && (
-                            <div className="border-t border-white/10 pt-2 mb-2">
-                                <div className="text-[10px] text-slate-400 mb-1 uppercase font-semibold">Stats Saison</div>
-                                <div className="grid grid-cols-2 gap-2">
-                                    <div className="flex justify-between text-slate-300">
-                                        <span>⚽ Buts:</span>
-                                        <span className="text-accent font-bold">{goals}</span>
-                                    </div>
-                                    <div className="flex justify-between text-slate-300">
-                                        <span>🎯 Passes:</span>
-                                        <span className="text-blue-400 font-bold">{assists}</span>
-                                    </div>
+                        {/* Season Stats - Clean List */}
+                        <div className="space-y-1 mb-3 pt-2 border-t border-white/10">
+                            <div className="flex justify-between items-center text-slate-400">
+                                <span>Note moy.</span>
+                                <span className="text-accent font-bold text-[10px] bg-accent/10 px-1.5 rounded">{player.rating}</span>
+                            </div>
+                            <div className="flex justify-between items-center text-slate-400">
+                                <span>Titularisations</span>
+                                <span className="text-white font-bold">{starts}</span>
+                            </div>
+                            <div className="flex justify-between items-center text-slate-400">
+                                <span>Buts / Passes</span>
+                                <span className="text-white font-bold">{goals} / {assists}</span>
+                            </div>
+                        </div>
+
+                        {/* NEXT MATCH INFO */}
+                        {nextOpponent && (
+                            <div className="mt-2 pt-2 border-t border-white/10">
+                                <span className="text-[10px] uppercase text-emerald-400 font-bold tracking-wider mb-1 block">Prochain Match</span>
+                                <div className="flex items-center gap-2 text-white font-bold">
+                                    <span className="text-slate-400">vs</span> {nextOpponent}
                                 </div>
                             </div>
                         )}
 
-                        {/* Next Opponent - Placeholder for now */}
-                        <div className="border-t border-white/10 pt-2 text-[10px]">
-                            <div className="text-slate-400 mb-1 uppercase font-semibold">Prochain Match</div>
-                            <div className="text-white">À déterminer</div>
-                        </div>
+                        {/* LAST MATCH INFO */}
+                        {lastMatchStats && (
+                            <div className="mt-2 pt-2 border-t border-white/10">
+                                <span className="text-[10px] uppercase text-sky-400 font-bold tracking-wider mb-1 block">Dernier Match</span>
+                                <div className="text-white font-bold text-xs mb-1">
+                                    vs {lastMatchStats.opponent} <span className="text-slate-400">({lastMatchStats.score})</span>
+                                </div>
+                                {(lastMatchStats.goals > 0 || lastMatchStats.assists > 0 || lastMatchStats.yellow || lastMatchStats.red) ? (
+                                    <div className="flex gap-2 text-[10px]">
+                                        {lastMatchStats.goals > 0 && <span className="bg-accent/20 text-accent px-1 rounded">⚽ {lastMatchStats.goals}</span>}
+                                        {lastMatchStats.assists > 0 && <span className="bg-blue-400/20 text-blue-400 px-1 rounded">🎯 {lastMatchStats.assists}</span>}
+                                        {lastMatchStats.yellow && <span className="bg-yellow-400/20 text-yellow-400 px-1 rounded">🟨</span>}
+                                        {lastMatchStats.red && <span className="bg-red-500/20 text-red-500 px-1 rounded">🟥</span>}
+                                    </div>
+                                ) : (
+                                    <span className="text-[10px] text-slate-500 italic">Aucune action notable</span>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
