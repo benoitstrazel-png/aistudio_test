@@ -259,11 +259,58 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(206, 240, 2, 0.2);
 }
 
-.text-accent {
-  text-shadow: 0 0 10px rgba(206, 240, 2, 0.4);
+/* ANTIGRAVITY UTILITIES (Added for new visual features) */
+
+.h-20 {
+  height: 5rem;
 }
 
-/* ANTIGRAVITY UTILITIES (Added for new visual features) */
+.p-3 {
+  padding: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.tooltip-content {
+  display: none;
+  position: absolute;
+  background-color: #0F1C38;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  width: 14rem;
+  pointer-events: none;
+}
+
+.tooltip-left {
+  right: 1.5rem;
+  top: -0.5rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.group:hover .tooltip-content {
+  display: block;
+}
 
 /* General Utilities */
 .w-full {

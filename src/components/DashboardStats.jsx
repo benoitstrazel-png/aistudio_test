@@ -2,64 +2,68 @@ import React from 'react';
 import SeasonGoalsChart from './SeasonGoalsChart';
 import { Info } from 'lucide-react';
 
+const StatCard = ({ title, value, trend, trendLabel, description, colorClass, shadowColor }) => (
+    <div className="glass-card relative overflow-hidden w-full h-full flex flex-col p-2 px-3">
+        {/* Background Blur Effect */}
+        <div className={`absolute -right-4 -top-4 w-24 h-24 rounded-full blur-2xl transition-all opacity-10 ${colorClass}`}></div>
+
+        {/* Header: Title & Info */}
+        <div className="flex justify-between items-center z-10 mb-1">
+            <h3 className="text-white text-[10px] font-bold uppercase tracking-wider">{title}</h3>
+            <div className="relative group">
+                <Info size={12} className="text-secondary cursor-help" />
+                <div className="tooltip-content tooltip-left">
+                    <p className="text-[10px] text-secondary leading-tight font-normal lowercase">{description}</p>
+                </div>
+            </div>
+        </div>
+
+        {/* Content: Value & Trend */}
+        <div className="flex-1 flex flex-row items-baseline justify-between gap-1 z-10">
+            <p className={`text-2xl font-black tracking-tighter text-white filter drop-shadow-[0_0_10px_${shadowColor}]`}>
+                {value}
+            </p>
+            {trend && (
+                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border shrink-0 ${trend}`}>
+                    {trendLabel}
+                </span>
+            )}
+        </div>
+    </div>
+);
+
 const DashboardStats = ({ stats, schedule, currentWeek, teamStats }) => {
     return (
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-8">
             {/* Top Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Card 1 */}
-                <div className="flex flex-col items-center gap-4 h-full">
-                    <div className="flex flex-col items-center gap-2 z-10 min-h-[80px] justify-end">
-                        <h3 className="text-white text-lg font-bold uppercase tracking-wider text-center">Buts Total Saison</h3>
-                        <div className="flex items-start gap-2 text-secondary px-4 text-center">
-                            <Info size={14} className="shrink-0 mt-0.5" />
-                            <p className="text-xs leading-tight">Somme des buts marqués par toutes les équipes depuis le début de la saison.</p>
-                        </div>
-                    </div>
-                    <div className="glass-card relative overflow-hidden group w-full h-full flex flex-col items-center justify-center py-8">
-                        <div className="absolute -right-4 -top-4 bg-accent/10 w-24 h-24 rounded-full blur-2xl group-hover:bg-accent/20 transition-all"></div>
-                        <div className="flex flex-col items-center gap-1 z-0">
-                            <p className="text-white text-5xl font-black tracking-tighter filter drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">{stats.totalGoals}</p>
-                            <span className="text-accent text-sm font-bold bg-accent/10 px-2 py-0.5 rounded-full border border-accent/20">+12%</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Card 2 */}
-                <div className="flex flex-col items-center gap-4 h-full">
-                    <div className="flex flex-col items-center gap-2 z-10 min-h-[80px] justify-end">
-                        <h3 className="text-white text-lg font-bold uppercase tracking-wider text-center">Moyenne Buts/Journée</h3>
-                        <div className="flex items-start gap-2 text-secondary px-4 text-center">
-                            <Info size={14} className="shrink-0 mt-0.5" />
-                            <p className="text-xs leading-tight">Moyenne des buts marqués par journée de championnat.</p>
-                        </div>
-                    </div>
-                    <div className="glass-card relative overflow-hidden group w-full h-full flex flex-col items-center justify-center py-8">
-                        <div className="absolute -right-4 -top-4 bg-blue-500/10 w-24 h-24 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
-                        <div className="flex flex-col items-center gap-1 z-0">
-                            <p className="text-white text-5xl font-black tracking-tighter filter drop-shadow-[0_0_10px_rgba(59,130,246,0.3)]">{stats.goalsPerDay}</p>
-                            <span className="text-blue-400 text-sm font-bold bg-blue-400/10 px-2 py-0.5 rounded-full border border-blue-400/20">Stable</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Card 3 */}
-                <div className="flex flex-col items-center gap-4 h-full">
-                    <div className="flex flex-col items-center gap-2 z-10 min-h-[80px] justify-end">
-                        <h3 className="text-white text-lg font-bold uppercase tracking-wider text-center">Moyenne Buts/Match</h3>
-                        <div className="flex items-start gap-2 text-secondary px-4 text-center">
-                            <Info size={14} className="shrink-0 mt-0.5" />
-                            <p className="text-xs leading-tight">Ratio moyen de buts par match joué.</p>
-                        </div>
-                    </div>
-                    <div className="glass-card relative overflow-hidden group w-full h-full flex flex-col items-center justify-center py-8">
-                        <div className="absolute -right-4 -top-4 bg-pink-500/10 w-24 h-24 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all"></div>
-                        <div className="flex flex-col items-center gap-1 z-0">
-                            <p className="text-white text-5xl font-black tracking-tighter filter drop-shadow-[0_0_10px_rgba(236,72,153,0.3)]">{stats.goalsPerMatch}</p>
-                            <span className="text-pink-400 text-sm font-bold bg-pink-400/10 px-2 py-0.5 rounded-full border border-pink-400/20">Top 5 EU</span>
-                        </div>
-                    </div>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-20 h-20 max-w-4xl mx-auto mb-12">
+                <StatCard
+                    title="Buts Total Saison"
+                    value={stats.totalGoals}
+                    trend="text-accent bg-accent/10 border-accent/20"
+                    trendLabel="+12%"
+                    description="Somme des buts marqués par toutes les équipes depuis le début de la saison."
+                    colorClass="bg-accent"
+                    shadowColor="rgba(255,255,255,0.2)"
+                />
+                <StatCard
+                    title="Moyenne Buts/Jr"
+                    value={stats.goalsPerDay}
+                    trend="text-blue-400 bg-blue-400/10 border-blue-400/20"
+                    trendLabel="Stable"
+                    description="Moyenne des buts marqués par journée de championnat."
+                    colorClass="bg-blue-500"
+                    shadowColor="rgba(59,130,246,0.3)"
+                />
+                <StatCard
+                    title="Moyenne Buts/Match"
+                    value={stats.goalsPerMatch}
+                    trend="text-pink-400 bg-pink-400/10 border-pink-400/20"
+                    trendLabel="Top 5 EU"
+                    description="Ratio moyen de buts par match joué."
+                    colorClass="bg-pink-500"
+                    shadowColor="rgba(236,72,153,0.3)"
+                />
             </div>
 
             {/* Charts Section */}
