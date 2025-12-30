@@ -643,6 +643,14 @@
     ],
     "Rennes": [
         {
+            "name": "Brice Samba",
+            "position": "G",
+            "rating": 7.8,
+            "mj": 16,
+            "goals": 0,
+            "assists": 0
+        },
+        {
             "name": "Steve Mandanda",
             "position": "G",
             "rating": 7.2
