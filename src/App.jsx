@@ -6,6 +6,7 @@ import ClubComparator from './components/ClubComparator';
 import PlayerFocus from './components/PlayerFocus';
 import ClubAnalysis from './components/ClubAnalysis';
 import ForecastReview from './components/ForecastReview';
+import Tipsters from './components/Tipsters';
 import { getLeagueLogo } from './utils/logos';
 import { Analytics } from "@vercel/analytics/react";
 
@@ -137,6 +138,9 @@ function App() {
                 <NavLink to="/forecasts" className={navLinkClass}>
                     Prévisions vs Réel
                 </NavLink>
+                <NavLink to="/tipsters" className={navLinkClass}>
+                    Tipsters
+                </NavLink>
             </nav>
 
             <main className="grid grid-cols-1 gap-16">
@@ -182,6 +186,12 @@ function App() {
                         <ForecastReview
                             schedule={APP_DATA.fullSchedule}
                             currentWeek={APP_DATA.currentWeek}
+                        />
+                    } />
+
+                    <Route path="/tipsters" element={
+                        <Tipsters
+                            schedule={APP_DATA.fullSchedule}
                         />
                     } />
                 </Routes>
