@@ -709,6 +709,11 @@
             "name": "Jota",
             "position": "A",
             "rating": 7.1
+        },
+        {
+            "name": "Abdelhamid Ait Boudlal",
+            "position": "D",
+            "rating": 6.5
         }
     ],
     "Nice": [
@@ -804,11 +809,6 @@
             "rating": 6.7
         },
         {
-            "name": "Pierre Lees-Melou",
-            "position": "M",
-            "rating": 7.6
-        },
-        {
             "name": "Mahdi Camara",
             "position": "M",
             "rating": 7.2
@@ -864,6 +864,11 @@
             "name": "Tuomas Ollila",
             "position": "D",
             "rating": 6.4
+        },
+        {
+            "name": "Pierre Lees-Melou",
+            "position": "M",
+            "rating": 7.6
         },
         {
             "name": "Maxime Lopez",
@@ -1267,6 +1272,11 @@
     ],
     "Angers": [
         {
+            "name": "Hervé Koffi",
+            "position": "G",
+            "rating": 6.9
+        },
+        {
             "name": "Yahia Fofana",
             "position": "G",
             "rating": 7.1
@@ -1309,6 +1319,11 @@
         {
             "name": "Farid El Melali",
             "position": "A",
+            "rating": 6.9
+        },
+        {
+            "name": "Mohamed Amine Sbai",
+            "position": "M",
             "rating": 6.9
         }
     ],

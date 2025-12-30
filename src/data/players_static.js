@@ -19592,7 +19592,7 @@ export const PLAYERS_DB = [
         "Player": "Pierre Lees-Melou",
         "Nation": "fr FRA",
         "Pos": "MF",
-        "Squad": "Brest",
+        "Squad": "Paris FC",
         "League": "fr Ligue 1",
         "Age": 32,
         "MP": 2,
