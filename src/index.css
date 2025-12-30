@@ -804,6 +804,11 @@ select:focus {
   animation: fadeIn 0.3s ease-out;
 }
 
+/* Tooltip hover display - global rule for PitchMap */
+.group:hover .tooltip-content {
+  display: block !important;
+}
+
 /* Cyberpunk Grid Overlay */
 .cyber-grid-overlay::before {
   content: '';

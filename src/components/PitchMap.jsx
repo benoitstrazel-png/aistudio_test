@@ -5,6 +5,7 @@ import ALL_LINEUPS from '../data/lineups_2025_2026.json';
 
 const PitchMap = ({ clubName, roster, stats }) => {
 
+
     // --- FORMATION COORDINATES DEFINITIONS ---
     const FORMATION_COORDS = {
         "4-3-3": {
@@ -103,6 +104,33 @@ const PitchMap = ({ clubName, roster, stats }) => {
         return posGroup[index];
     };
 
+    // --- HELPER FUNCTIONS ---
+    // Defined before useMemo to avoid ReferenceError
+    const getPlayerStats = (name) => {
+        let goals = 0;
+        let assists = 0;
+        const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
+        const safeMatch = (n1, n2) => {
+            if (!n1 || !n2) return false;
+            if (n1 === n2) return true;
+            const t1 = n1.split(' ').filter(x => x.length > 1);
+            const t2 = n2.split(' ').filter(x => x.length > 1);
+            return t1.some(a => t2.some(b => b === a || (b.includes(a) && a.length > 3)));
+        };
+
+        if (stats && stats.scorers) {
+            Object.entries(stats.scorers).forEach(([sName, sCount]) => {
+                if (safeMatch(norm(sName), norm(name))) goals = sCount;
+            });
+        }
+        if (stats && stats.assisters) {
+            Object.entries(stats.assisters).forEach(([aName, aCount]) => {
+                if (safeMatch(norm(aName), norm(name))) assists = aCount;
+            });
+        }
+        return { goals, assists };
+    };
+
     // 1. Filter roster by position AND "Apps in Lineup" rule
     const { team, dominantFormation, startsMap } = useMemo(() => {
         const safeRoster = roster || [];
@@ -133,8 +161,24 @@ const PitchMap = ({ clubName, roster, stats }) => {
             const awayNorm = norm(match.teams.away);
             const clubNorm = norm(clubName);
 
-            let isHome = homeNorm.includes(clubNorm);
-            let isAway = awayNorm.includes(clubNorm);
+            let isHome = homeNorm.includes(clubNorm) || clubNorm.includes(homeNorm);
+            let isAway = awayNorm.includes(clubNorm) || clubNorm.includes(awayNorm);
+
+            // Special explicit aliases if normalization isn't enough
+            if (clubName === 'Rennes' && (match.teams.home.includes('Rennes') || match.teams.away.includes('Rennes'))) {
+                isHome = match.teams.home.includes('Rennes');
+                isAway = match.teams.away.includes('Rennes');
+            }
+            if (clubName === 'Auxerre' && (match.teams.home.includes('Auxerre') || match.teams.away.includes('Auxerre'))) {
+                isHome = match.teams.home.includes('Auxerre');
+                isAway = match.teams.away.includes('Auxerre');
+            }
+            if (clubName === 'Le Havre' && (match.teams.home.includes('Le Havre') || match.teams.away.includes('Le Havre'))) {
+                isHome = match.teams.home.includes('Le Havre');
+                isAway = match.teams.away.includes('Le Havre');
+            }
+
+
 
             if (isHome || isAway) {
                 if (!targetMatch) {
@@ -362,64 +406,59 @@ const PitchMap = ({ clubName, roster, stats }) => {
 
     }, [roster, clubName]);
 
-    // 2. Helper to get dynamic stats
-    const getPlayerStats = (name) => {
-        let goals = 0;
-        let assists = 0;
-        // Reuse robust namesMatch from useMemo scope? No, it's inside.
-        // We need to define or hoist it.
-        // Let's define a local safe matcher.
-        const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
 
-        const safeMatch = (n1, n2) => {
-            if (!n1 || !n2) return false;
-            // Exact match preferred
-            if (n1 === n2) return true;
-            // Token match
-            const t1 = n1.split(' ').filter(x => x.length > 1);
-            const t2 = n2.split(' ').filter(x => x.length > 1);
-            // Ensure meaningful overlap
-            return t1.some(a => t2.some(b => b === a));
+
+    const PlayerNode = ({ player, position, index, total, formation, stats, startsMap }) => {
+        // Local version of getPlayerStats using stats prop
+        const getPlayerStatsLocal = (name) => {
+            let goals = 0, assists = 0;
+            const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
+            const safeMatch = (n1, n2) => {
+                if (!n1 || !n2) return false;
+                if (n1 === n2) return true;
+                const t1 = n1.split(' ').filter(x => x.length > 1);
+                const t2 = n2.split(' ').filter(x => x.length > 1);
+                return t1.some(a => t2.some(b => b === a || (b.includes(a) && a.length > 3)));
+            };
+
+            if (stats?.scorers) {
+                Object.entries(stats.scorers).forEach(([sName, sCount]) => {
+                    if (safeMatch(norm(sName), norm(name))) goals = sCount;
+                });
+            }
+            if (stats?.assisters) {
+                Object.entries(stats.assisters).forEach(([aName, aCount]) => {
+                    if (safeMatch(norm(aName), norm(name))) assists = aCount;
+                });
+            }
+            return { goals, assists };
         };
 
-        if (stats && stats.scorers) {
-            Object.entries(stats.scorers).forEach(([sName, sCount]) => {
-                if (safeMatch(norm(sName), norm(name))) goals = sCount;
-            });
-        }
-        if (stats && stats.assisters) {
-            Object.entries(stats.assisters).forEach(([aName, aCount]) => {
-                if (safeMatch(norm(aName), norm(name))) assists = aCount;
-            });
-        }
-        return { goals, assists };
-    };
+        // Local version of getStarts using startsMap prop
+        const getStartsLocal = (name) => {
+            const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
+            const n = norm(name);
+            const val = startsMap?.get(n);
+            if (val !== undefined) return val;
 
-    // Check if name is in startsMap
-    const getStarts = (name) => {
-        const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
-        const n = norm(name);
-        const val = startsMap.get(n);
-        if (val !== undefined) return val;
+            const namesMatch = (n1, n2) => {
+                if (!n1 || !n2) return false;
+                if (n1 === n2) return true;
+                const t1 = n1.split(' ').filter(x => x.length > 1);
+                const t2 = n2.split(' ').filter(x => x.length > 1);
+                return t1.some(a => t2.some(b => b === a || (b.includes(a) && a.length > 3)));
+            };
 
-        // Robust match
-        const namesMatch = (n1, n2) => {
-            if (!n1 || !n2) return false;
-            if (n1 === n2) return true;
-            const t1 = n1.split(' ').filter(x => x.length > 1);
-            const t2 = n2.split(' ').filter(x => x.length > 1);
-            return t1.some(a => t2.some(b => b === a || (b.includes(a) && a.length > 3)));
+            if (startsMap) {
+                for (let [k, v] of startsMap) {
+                    if (namesMatch(n, k)) return v;
+                }
+            }
+            return 0;
         };
 
-        for (let [k, v] of startsMap) {
-            if (namesMatch(n, k)) return v;
-        }
-        return 0;
-    };
-
-    const PlayerNode = ({ player, position, index, total, formation }) => {
-        const { goals, assists } = getPlayerStats(player.name);
-        const starts = getStarts(player.name);
+        const { goals, assists } = getPlayerStatsLocal(player.name);
+        const starts = getStartsLocal(player.name);
         const hasStats = goals > 0 || assists > 0;
         const photoUrl = getPlayerPhoto(clubName, player.name);
 
@@ -598,13 +637,6 @@ const PitchMap = ({ clubName, roster, stats }) => {
                         </div>
                     </div>
                 </div>
-
-                {/* CSS to show tooltip on hover */}
-                <style jsx>{`
-                    .group:hover .tooltip-content {
-                        display: block !important;
-                    }
-                `}</style>
             </div>
         );
     };
@@ -662,10 +694,10 @@ const PitchMap = ({ clubName, roster, stats }) => {
 
                 {/* PLAYERS LAYER */}
                 <div className="absolute inset-0 z-10" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
-                    {team.G?.map((p, i) => <PlayerNode key={`g-${i}`} player={p} position="G" index={i} total={team.G.length} formation={dominantFormation} />)}
-                    {team.D?.map((p, i) => <PlayerNode key={`d-${i}`} player={p} position="D" index={i} total={team.D.length} formation={dominantFormation} />)}
-                    {team.M?.map((p, i) => <PlayerNode key={`m-${i}`} player={p} position="M" index={i} total={team.M.length} formation={dominantFormation} />)}
-                    {team.A?.map((p, i) => <PlayerNode key={`a-${i}`} player={p} position="A" index={i} total={team.A.length} formation={dominantFormation} />)}
+                    {team.G?.map((p, i) => <PlayerNode key={`g-${i}`} player={p} position="G" index={i} total={team.G.length} formation={dominantFormation} stats={stats} startsMap={startsMap} />)}
+                    {team.D?.map((p, i) => <PlayerNode key={`d-${i}`} player={p} position="D" index={i} total={team.D.length} formation={dominantFormation} stats={stats} startsMap={startsMap} />)}
+                    {team.M?.map((p, i) => <PlayerNode key={`m-${i}`} player={p} position="M" index={i} total={team.M.length} formation={dominantFormation} stats={stats} startsMap={startsMap} />)}
+                    {team.A?.map((p, i) => <PlayerNode key={`a-${i}`} player={p} position="A" index={i} total={team.A.length} formation={dominantFormation} stats={stats} startsMap={startsMap} />)}
                 </div>
             </div >
         </div >
