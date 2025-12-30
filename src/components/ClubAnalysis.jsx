@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 import { analyzeClubEvents, getChartData } from '../utils/clubAnalysis';
+import { calculateClusters } from '../utils/clustering';
 import TeamLogo from './ui/TeamLogo';
 
 // Import Data (Ideally this comes from a merged source)
@@ -11,29 +12,44 @@ import rosterData from '../data/real_players.json';
 import ClubDistributionCharts from './ClubDistributionCharts';
 import PitchMap from './PitchMap';
 
-const CLUSTERS = {
-    'Top Tier': ['PSG', 'Monaco', 'Lille', 'Marseille', 'Lens', 'Nice'],
-    'Mid Tier': ['Rennes', 'Lyon', 'Toulouse', 'Strasbourg', 'Reims', 'Montpellier', 'Brest'],
-    'Low Tier': ['Lorient', 'Nantes', 'Le Havre', 'Metz', 'Auxerre', 'Angers', 'Paris FC', 'St Etienne', 'Clermont']
-};
-
 import APP_DATA from '../data/app_data.json';
 
-const ClubAnalysis = ({ teams }) => {
+const ClubAnalysis = ({ teams, teamStats = {}, schedule = [], playerData = [] }) => {
     const [selectedTeam, setSelectedTeam] = useState('Lorient');
     const [venueFilter, setVenueFilter] = useState('all');
     const [metricFilter, setMetricFilter] = useState('all');
-    const [clusterFilter, setClusterFilter] = useState('all'); // all, Top Tier, Mid Tier, Low Tier
+    const [clusterFilter, setClusterFilter] = useState('all');
     const [allMatches, setAllMatches] = useState([]);
 
     useEffect(() => {
-        // MERGE LOGIC (Placeholder)
-        // MERGE LOGIC (Placeholder)
         const j16WithRound = scrapedJ16.map(m => ({ ...m, round: "Journée 16" }));
         const combined = [...historical, ...j16WithRound];
         setAllMatches(combined);
     }, []);
 
+    // 1. Calculate Clusters Dynamically
+    const clusters = useMemo(() => {
+        return calculateClusters(teams, [], teamStats, playerData, schedule);
+    }, [teams, teamStats, playerData, schedule]);
+
+    // 2. Derive Filters & Cluster Map
+    const { clusterMap, availableClusters } = useMemo(() => {
+        const map = {};
+        const set = new Set();
+        clusters.forEach(c => {
+            map[c.name] = c.cluster;
+            set.add(c.cluster); // e.g. "👑 Élites"
+        });
+
+        // Custom order for clusters based on GPS/Logic if needed, or just alphabetical/pre-defined order
+        // Let's try to order them logically if we can, searching for known emojis
+        const ordered = Array.from(set).sort((a, b) => {
+            // Very basic sort or just keep as is
+            return a.localeCompare(b);
+        });
+
+        return { clusterMap: map, availableClusters: ordered };
+    }, [clusters]);
 
     const filteredMatches = useMemo(() => {
         let matches = allMatches;
@@ -51,16 +67,18 @@ const ClubAnalysis = ({ teams }) => {
             matches = matches.filter(m => {
                 const isHome = m.homeTeam === selectedTeam;
                 const opponent = isHome ? m.awayTeam : m.homeTeam;
-                // Find cluster of opponent
-                // We check if opponent is in the selected cluster list
-                const targets = CLUSTERS[clusterFilter] || [];
-                return targets.includes(opponent);
+
+                // Check opponent's cluster
+                const oppCluster = clusterMap[opponent];
+                // Match if opponent's cluster starts with the filter (handle simplified names if needed)
+                // The filter value will be the full cluster name from the button
+                return oppCluster === clusterFilter;
             });
         }
 
         // Ensure we filter for the selected team involved match
         return matches.filter(m => m.homeTeam === selectedTeam || m.awayTeam === selectedTeam);
-    }, [allMatches, venueFilter, clusterFilter, selectedTeam]);
+    }, [allMatches, venueFilter, clusterFilter, selectedTeam, clusterMap]);
 
     const stats = useMemo(() => {
         return analyzeClubEvents(selectedTeam, filteredMatches);
@@ -105,8 +123,17 @@ const ClubAnalysis = ({ teams }) => {
                         {/* Cluster Filter */}
                         <div className="flex items-center gap-2">
                             <span className="text-[10px] uppercase font-bold text-secondary tracking-widest mr-2">Adversaire:</span>
-                            <div className="flex bg-slate-800 rounded-lg p-1 gap-1">
-                                {['all', 'Top Tier', 'Mid Tier', 'Low Tier'].map(c => (
+                            <div className="flex bg-slate-800 rounded-lg p-1 gap-1 flex-wrap justify-end max-w-[400px]">
+                                <button
+                                    onClick={() => setClusterFilter('all')}
+                                    className={`px-3 py-1 text-[10px] uppercase font-bold rounded transition-colors ${clusterFilter === 'all'
+                                        ? 'bg-purple-500 text-white'
+                                        : 'text-slate-400 hover:text-white'
+                                        }`}
+                                >
+                                    Tout
+                                </button>
+                                {availableClusters.map(c => (
                                     <button
                                         key={c}
                                         onClick={() => setClusterFilter(c)}
@@ -114,8 +141,10 @@ const ClubAnalysis = ({ teams }) => {
                                             ? 'bg-purple-500 text-white'
                                             : 'text-slate-400 hover:text-white'
                                             }`}
+                                        title={c}
                                     >
-                                        {c === 'all' ? 'Tout' : c.replace(' Tier', '')}
+                                        {/* Shorten name for UI if needed, e.g. remove emoji or take first word */}
+                                        {c.split(' ').slice(1).join(' ')}
                                     </button>
                                 ))}
                             </div>

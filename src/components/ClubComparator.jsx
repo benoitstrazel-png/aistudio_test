@@ -7,11 +7,21 @@ import { calculateClusters } from '../utils/clustering';
 import { PLAYERS_DB } from '../data/players_static';
 import PLAYERS_DATA from '../data/players.json'; // Import Player Data source
 
+// Import Real Match Events for accurate stats
+import historyMatches from '../data/matches_history_detailed.json';
+import scrapedJ16 from '../data/matches_j16_scraped.json';
+
 const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
     const [teamA, setTeamA] = useState(teams[0] || 'PSG');
     const [teamB, setTeamB] = useState(teams[1] || 'Marseille');
     const [filterContext, setFilterContext] = useState('all'); // 'all', 'home', 'away'
     const [clusterMetric, setClusterMetric] = useState('goalsFor'); // For Histogram
+
+    // Combine detailed match history
+    const detailedMatches = useMemo(() => {
+        const j16 = scrapedJ16.map(m => ({ ...m, round: "Journée 16" }));
+        return [...historyMatches, ...j16];
+    }, []);
 
     // ... (Keep existing Ranking History Logic)
 
@@ -143,9 +153,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
     // 2. CALCULATE PERFORMANCE METRICS
     const metrics = useMemo(() => {
         const calculateMetrics = (team) => {
-            const matches = schedule.filter(m => (m.homeTeam === team || m.awayTeam === team) && m.status === 'FINISHED'); // Only Past Matches for granular stats? Or all? User likely wants historical performance.
-            // Let's use ONLY finished matches for "Performance" stats (yellow cards etc).
-            // NOTE: We don't have card data in JSON. We will mock it deterministically based on match ID.
+            const matches = schedule.filter(m => (m.homeTeam === team || m.awayTeam === team) && m.status === 'FINISHED');
 
             let stats = {
                 goalsFor: 0,
@@ -158,13 +166,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                 matchesPlayed: 0
             };
 
-            const SEED_OFFSET = 12345;
-            // Simple LCG for deterministic pseudo-randoms
-            const pseudoRandom = (seed) => {
-                const x = Math.sin(seed + SEED_OFFSET) * 10000;
-                return x - Math.floor(x);
-            }
-
+            // 1. Calculate Score-based metrics
             matches.forEach(m => {
                 const isHome = m.homeTeam === team;
 
@@ -185,16 +187,34 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                 if (gf > ga) stats.wins++;
                 else if (gf < ga) stats.losses++;
                 else stats.draws++;
+            });
 
-                // Mock Cards
-                // Generate deterministic random based on match ID + team name char code sum
-                const teamCode = team.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
-                const seed = (typeof m.id === 'string' ? m.id.length : m.id) + teamCode;
-                const rand = pseudoRandom(seed);
+            // 2. Calculate Real Card Metrics from Detailed Events
+            // Filter detailed matches for this team
+            const teamDetailedMatches = detailedMatches.filter(m =>
+                (m.homeTeam === team || m.awayTeam === team)
+            );
 
-                // ~ 2 yellows per game avg, ~0.1 reds
-                stats.yellowCards += Math.floor(rand * 4); // 0 to 3
-                stats.redCards += (rand > 0.95 ? 1 : 0);
+            teamDetailedMatches.forEach(m => {
+                const isHome = m.homeTeam === team;
+
+                // Filter Logic (Must match the same filter as above)
+                if (filterContext === 'home' && !isHome) return;
+                if (filterContext === 'away' && isHome) return;
+
+                // Sum up cards for THIS team only
+                if (m.events && Array.isArray(m.events)) {
+                    m.events.forEach(evt => {
+                        // Check if event belongs to this team
+                        // Scraped data has 'team' field. Historical data has 'team' field.
+                        const evtTeam = evt.team;
+                        // Normalize check (sometimes casing differs)
+                        if (evtTeam === team) { // Exact match usually safe with current data quality
+                            if (evt.type === 'Yellow Card') stats.yellowCards++;
+                            if (evt.type === 'Red Card') stats.redCards++;
+                        }
+                    });
+                }
             });
 
             return stats;
@@ -204,7 +224,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
             [teamA]: calculateMetrics(teamA),
             [teamB]: calculateMetrics(teamB)
         };
-    }, [schedule, teamA, teamB, filterContext]);
+    }, [schedule, teamA, teamB, filterContext, detailedMatches]);
 
     // 3. CALCULATE CLUSTERS
     const clusters = useMemo(() => {
@@ -379,11 +399,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                         ))}
                     </div>
 
-                    <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/5 text-center">
-                        <p className="text-[10px] text-secondary uppercase tracking-widest leading-relaxed">
-                            * Les statistiques de cartons sont estimées sur la base de l'agressivité des équipes et des simulations de matchs historiques.
-                        </p>
-                    </div>
+
                 </div>
 
                 {/* 3. CLUSTERING ANALYSIS */}

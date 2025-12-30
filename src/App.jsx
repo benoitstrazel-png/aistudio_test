@@ -169,7 +169,14 @@ function App() {
 
                     <Route path="/players" element={<PlayerFocus />} />
 
-                    <Route path="/club" element={<ClubAnalysis teams={teams} />} />
+                    <Route path="/club" element={
+                        <ClubAnalysis
+                            teams={teams}
+                            teamStats={TEAM_STATS}
+                            schedule={APP_DATA.fullSchedule}
+                            playerData={PLAYERS_DATA}
+                        />
+                    } />
 
                     <Route path="/forecasts" element={
                         <ForecastReview
