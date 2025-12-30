@@ -45,6 +45,15 @@
       "homeGoalkeeper": "Mvogo Y.",
       "awayCaptain": "Tolisso C.",
       "awayGoalkeeper": "Greif D."
+    },
+    "matchInfo": {
+      "referee": "Vernice M.",
+      "stadium": "Stade du Moustoir",
+      "dateTime": "07.12.2025 20:45",
+      "coaches": {
+        "home": "Pantaloni O.",
+        "away": "Fonseca P."
+      }
     }
   },
   {
@@ -93,6 +102,15 @@
       "homeGoalkeeper": "Leon D.(C)",
       "awayCaptain": "Hein G.",
       "awayGoalkeeper": "Fischer J."
+    },
+    "matchInfo": {
+      "referee": "Wattellier E.",
+      "stadium": "Stade de l'Abbé-Deschamps",
+      "dateTime": "07.12.2025 17:15",
+      "coaches": {
+        "home": "Pelissier C.",
+        "away": "Le Mignan S."
+      }
     }
   },
   {
@@ -141,6 +159,15 @@
       "homeGoalkeeper": "Diaw M.",
       "awayCaptain": "Lopez M.",
       "awayGoalkeeper": "Trapp K."
+    },
+    "matchInfo": {
+      "referee": "Buquet R.",
+      "stadium": "Stade Océane",
+      "dateTime": "07.12.2025 17:15",
+      "coaches": {
+        "home": "Digard D.",
+        "away": "Gilli S."
+      }
     }
   },
   {

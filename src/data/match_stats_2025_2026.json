@@ -1,0 +1,1218 @@
+{
+  "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/?mid=Qc01MMcM": {
+    "fullTime": {
+      "Expected Goals (xG)": [
+        "2.57",
+        "0.44"
+      ],
+      "Possession de balle": [
+        "40%",
+        "60%"
+      ],
+      "Tirs totaux": [
+        "14",
+        "7"
+      ],
+      "Tirs cadrés": [
+        "6",
+        "4"
+      ],
+      "Grosses occasions": [
+        "5",
+        "1"
+      ],
+      "Corners": [
+        "1",
+        "7"
+      ],
+      "Passes": [
+        "79% (236/300)",
+        "85% (373/438)"
+      ],
+      "Cartons jaunes": [
+        "2",
+        "4"
+      ],
+      "Cartons rouges": [
+        "0",
+        "1"
+      ],
+      "xG cadrés (xGOT)": [
+        "1.23",
+        "1.29"
+      ],
+      "Tirs non cadrés": [
+        "6",
+        "2"
+      ],
+      "Tirs contrés": [
+        "2",
+        "1"
+      ],
+      "Tirs dans la surface": [
+        "8",
+        "6"
+      ],
+      "Tirs en dehors de la surface": [
+        "6",
+        "1"
+      ],
+      "Montant touché": [
+        "2",
+        "0"
+      ],
+      "Touches dans la surface adverse": [
+        "15",
+        "16"
+      ],
+      "Passes entre les lignes réussies": [
+        "1",
+        "1"
+      ],
+      "Hors-jeux": [
+        "2",
+        "0"
+      ],
+      "Coup francs": [
+        "21",
+        "12"
+      ],
+      "Passes longues": [
+        "46% (25/54)",
+        "54% (25/46)"
+      ],
+      "Passes dans le dernier tiers": [
+        "63% (52/82)",
+        "61% (60/99)"
+      ],
+      "Centres": [
+        "44% (4/9)",
+        "16% (4/25)"
+      ],
+      "Expected Assists (xA)": [
+        "0.72",
+        "0.51"
+      ],
+      "Touche": [
+        "14",
+        "25"
+      ],
+      "Fautes": [
+        "12",
+        "21"
+      ],
+      "Tacles": [
+        "75% (9/12)",
+        "50% (3/6)"
+      ],
+      "Duels remportés": [
+        "51",
+        "33"
+      ],
+      "Dégagements": [
+        "24",
+        "12"
+      ],
+      "Interceptions": [
+        "10",
+        "7"
+      ],
+      "Erreurs menant à un tir": [
+        "0",
+        "1"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "1"
+      ],
+      "Arrêts du gardien": [
+        "4",
+        "5"
+      ],
+      "xGot subis": [
+        "1.29",
+        "1.23"
+      ],
+      "Buts évités": [
+        "1.29",
+        "0.23"
+      ]
+    },
+    "firstHalf": {
+      "Expected Goals (xG)": [
+        "1.91",
+        "0.09"
+      ],
+      "Possession de balle": [
+        "41%",
+        "59%"
+      ],
+      "Tirs totaux": [
+        "7",
+        "2"
+      ],
+      "Tirs cadrés": [
+        "3",
+        "2"
+      ],
+      "Grosses occasions": [
+        "3",
+        "1"
+      ],
+      "Corners": [
+        "1",
+        "3"
+      ],
+      "Passes": [
+        "78% (115/148)",
+        "86% (183/212)"
+      ],
+      "Cartons jaunes": [
+        "0",
+        "4"
+      ],
+      "Cartons rouges": [
+        "0",
+        "1"
+      ],
+      "xG cadrés (xGOT)": [
+        "1.01",
+        "0.46"
+      ],
+      "Tirs non cadrés": [
+        "4",
+        "0"
+      ],
+      "Tirs contrés": [
+        "0",
+        "0"
+      ],
+      "Tirs dans la surface": [
+        "6",
+        "2"
+      ],
+      "Tirs en dehors de la surface": [
+        "1",
+        "0"
+      ],
+      "Montant touché": [
+        "1",
+        "0"
+      ],
+      "Touches dans la surface adverse": [
+        "9",
+        "6"
+      ],
+      "Passes entre les lignes réussies": [
+        "0",
+        "0"
+      ],
+      "Hors-jeux": [
+        "0",
+        "0"
+      ],
+      "Coup francs": [
+        "11",
+        "3"
+      ],
+      "Passes longues": [
+        "36% (10/28)",
+        "53% (8/15)"
+      ],
+      "Passes dans le dernier tiers": [
+        "56% (23/41)",
+        "65% (22/34)"
+      ],
+      "Centres": [
+        "75% (3/4)",
+        "22% (2/9)"
+      ],
+      "Expected Assists (xA)": [
+        "0.52",
+        "0.11"
+      ],
+      "Touche": [
+        "9",
+        "11"
+      ],
+      "Fautes": [
+        "3",
+        "11"
+      ],
+      "Tacles": [
+        "71% (5/7)",
+        "33% (1/3)"
+      ],
+      "Duels remportés": [
+        "22",
+        "12"
+      ],
+      "Dégagements": [
+        "7",
+        "4"
+      ],
+      "Interceptions": [
+        "5",
+        "3"
+      ],
+      "Erreurs menant à un tir": [
+        "0",
+        "1"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "1"
+      ],
+      "Arrêts du gardien": [
+        "2",
+        "2"
+      ],
+      "xGot subis": [
+        "0.46",
+        "1.01"
+      ],
+      "Buts évités": [
+        "0.46",
+        "0.01"
+      ]
+    },
+    "secondHalf": {
+      "Expected Goals (xG)": [
+        "0.66",
+        "0.35"
+      ],
+      "Possession de balle": [
+        "39%",
+        "61%"
+      ],
+      "Tirs totaux": [
+        "7",
+        "5"
+      ],
+      "Tirs cadrés": [
+        "3",
+        "2"
+      ],
+      "Grosses occasions": [
+        "2",
+        "0"
+      ],
+      "Corners": [
+        "0",
+        "4"
+      ],
+      "Passes": [
+        "80% (121/152)",
+        "84% (190/226)"
+      ],
+      "Cartons jaunes": [
+        "2",
+        "0"
+      ],
+      "xG cadrés (xGOT)": [
+        "0.22",
+        "0.83"
+      ],
+      "Tirs non cadrés": [
+        "2",
+        "2"
+      ],
+      "Tirs contrés": [
+        "2",
+        "1"
+      ],
+      "Tirs dans la surface": [
+        "2",
+        "4"
+      ],
+      "Tirs en dehors de la surface": [
+        "5",
+        "1"
+      ],
+      "Montant touché": [
+        "1",
+        "0"
+      ],
+      "Touches dans la surface adverse": [
+        "6",
+        "10"
+      ],
+      "Passes entre les lignes réussies": [
+        "1",
+        "1"
+      ],
+      "Hors-jeux": [
+        "2",
+        "0"
+      ],
+      "Coup francs": [
+        "10",
+        "9"
+      ],
+      "Passes longues": [
+        "58% (15/26)",
+        "55% (17/31)"
+      ],
+      "Passes dans le dernier tiers": [
+        "71% (29/41)",
+        "58% (38/65)"
+      ],
+      "Centres": [
+        "20% (1/5)",
+        "13% (2/16)"
+      ],
+      "Expected Assists (xA)": [
+        "0.20",
+        "0.40"
+      ],
+      "Touche": [
+        "5",
+        "14"
+      ],
+      "Fautes": [
+        "9",
+        "10"
+      ],
+      "Tacles": [
+        "80% (4/5)",
+        "67% (2/3)"
+      ],
+      "Duels remportés": [
+        "29",
+        "21"
+      ],
+      "Dégagements": [
+        "17",
+        "8"
+      ],
+      "Interceptions": [
+        "5",
+        "4"
+      ],
+      "Erreurs menant à un tir": [
+        "0",
+        "0"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "0"
+      ],
+      "Arrêts du gardien": [
+        "2",
+        "3"
+      ],
+      "xGot subis": [
+        "0.83",
+        "0.22"
+      ],
+      "Buts évités": [
+        "0.83",
+        "0.22"
+      ]
+    }
+  },
+  "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/metz-4v0yqlWc/?mid=Cj4QK9MH": {
+    "fullTime": {
+      "Expected Goals (xG)": [
+        "1.94",
+        "0.55"
+      ],
+      "Possession de balle": [
+        "39%",
+        "61%"
+      ],
+      "Tirs totaux": [
+        "14",
+        "5"
+      ],
+      "Tirs cadrés": [
+        "7",
+        "3"
+      ],
+      "Grosses occasions": [
+        "4",
+        "0"
+      ],
+      "Corners": [
+        "5",
+        "3"
+      ],
+      "Passes": [
+        "84% (285/340)",
+        "89% (486/545)"
+      ],
+      "Cartons jaunes": [
+        "2",
+        "1"
+      ],
+      "xG cadrés (xGOT)": [
+        "2.26",
+        "0.78"
+      ],
+      "Tirs non cadrés": [
+        "4",
+        "2"
+      ],
+      "Tirs contrés": [
+        "3",
+        "0"
+      ],
+      "Tirs dans la surface": [
+        "8",
+        "4"
+      ],
+      "Tirs en dehors de la surface": [
+        "6",
+        "1"
+      ],
+      "Montant touché": [
+        "0",
+        "1"
+      ],
+      "Touches dans la surface adverse": [
+        "21",
+        "9"
+      ],
+      "Passes entre les lignes réussies": [
+        "1",
+        "0"
+      ],
+      "Hors-jeux": [
+        "2",
+        "1"
+      ],
+      "Coup francs": [
+        "12",
+        "10"
+      ],
+      "Passes longues": [
+        "49% (24/49)",
+        "57% (25/44)"
+      ],
+      "Passes dans le dernier tiers": [
+        "71% (70/98)",
+        "66% (64/97)"
+      ],
+      "Centres": [
+        "45% (5/11)",
+        "22% (4/18)"
+      ],
+      "Expected Assists (xA)": [
+        "0.84",
+        "0.54"
+      ],
+      "Touche": [
+        "12",
+        "21"
+      ],
+      "Fautes": [
+        "10",
+        "12"
+      ],
+      "Tacles": [
+        "72% (13/18)",
+        "64% (9/14)"
+      ],
+      "Duels remportés": [
+        "46",
+        "36"
+      ],
+      "Dégagements": [
+        "24",
+        "22"
+      ],
+      "Interceptions": [
+        "10",
+        "4"
+      ],
+      "Erreurs menant à un tir": [
+        "0",
+        "0"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "0"
+      ],
+      "Arrêts du gardien": [
+        "2",
+        "4"
+      ],
+      "xGot subis": [
+        "0.78",
+        "2.26"
+      ],
+      "Buts évités": [
+        "-0.22",
+        "-0.74"
+      ]
+    },
+    "firstHalf": {
+      "Expected Goals (xG)": [
+        "1.56",
+        "0.15"
+      ],
+      "Possession de balle": [
+        "46%",
+        "54%"
+      ],
+      "Tirs totaux": [
+        "5",
+        "3"
+      ],
+      "Tirs cadrés": [
+        "4",
+        "3"
+      ],
+      "Grosses occasions": [
+        "3",
+        "0"
+      ],
+      "Corners": [
+        "1",
+        "2"
+      ],
+      "Passes": [
+        "87% (186/215)",
+        "89% (225/253)"
+      ],
+      "Cartons jaunes": [
+        "1",
+        "0"
+      ],
+      "xG cadrés (xGOT)": [
+        "1.58",
+        "0.78"
+      ],
+      "Tirs non cadrés": [
+        "1",
+        "0"
+      ],
+      "Tirs contrés": [
+        "0",
+        "0"
+      ],
+      "Tirs dans la surface": [
+        "4",
+        "2"
+      ],
+      "Tirs en dehors de la surface": [
+        "1",
+        "1"
+      ],
+      "Montant touché": [
+        "0",
+        "1"
+      ],
+      "Touches dans la surface adverse": [
+        "10",
+        "4"
+      ],
+      "Passes entre les lignes réussies": [
+        "1",
+        "0"
+      ],
+      "Hors-jeux": [
+        "0",
+        "0"
+      ],
+      "Coup francs": [
+        "7",
+        "4"
+      ],
+      "Passes longues": [
+        "48% (10/21)",
+        "56% (15/27)"
+      ],
+      "Passes dans le dernier tiers": [
+        "77% (36/47)",
+        "63% (25/40)"
+      ],
+      "Centres": [
+        "20% (1/5)",
+        "18% (2/11)"
+      ],
+      "Expected Assists (xA)": [
+        "0.54",
+        "0.19"
+      ],
+      "Touche": [
+        "6",
+        "9"
+      ],
+      "Fautes": [
+        "4",
+        "7"
+      ],
+      "Tacles": [
+        "67% (4/6)",
+        "50% (2/4)"
+      ],
+      "Duels remportés": [
+        "20",
+        "12"
+      ],
+      "Dégagements": [
+        "15",
+        "11"
+      ],
+      "Interceptions": [
+        "4",
+        "2"
+      ],
+      "Erreurs menant à un tir": [
+        "0",
+        "0"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "0"
+      ],
+      "Arrêts du gardien": [
+        "2",
+        "2"
+      ],
+      "xGot subis": [
+        "0.78",
+        "1.58"
+      ],
+      "Buts évités": [
+        "-0.22",
+        "-0.42"
+      ]
+    },
+    "secondHalf": {
+      "Expected Goals (xG)": [
+        "0.38",
+        "0.40"
+      ],
+      "Possession de balle": [
+        "30%",
+        "70%"
+      ],
+      "Tirs totaux": [
+        "9",
+        "2"
+      ],
+      "Tirs cadrés": [
+        "3",
+        "0"
+      ],
+      "Grosses occasions": [
+        "1",
+        "0"
+      ],
+      "Corners": [
+        "4",
+        "1"
+      ],
+      "Passes": [
+        "79% (99/125)",
+        "89% (261/292)"
+      ],
+      "Cartons jaunes": [
+        "1",
+        "1"
+      ],
+      "xG cadrés (xGOT)": [
+        "0.68",
+        "0.00"
+      ],
+      "Tirs non cadrés": [
+        "3",
+        "2"
+      ],
+      "Tirs contrés": [
+        "3",
+        "0"
+      ],
+      "Tirs dans la surface": [
+        "4",
+        "2"
+      ],
+      "Tirs en dehors de la surface": [
+        "5",
+        "0"
+      ],
+      "Montant touché": [
+        "0",
+        "0"
+      ],
+      "Touches dans la surface adverse": [
+        "11",
+        "5"
+      ],
+      "Passes entre les lignes réussies": [
+        "0",
+        "0"
+      ],
+      "Hors-jeux": [
+        "2",
+        "1"
+      ],
+      "Coup francs": [
+        "5",
+        "6"
+      ],
+      "Passes longues": [
+        "50% (14/28)",
+        "59% (10/17)"
+      ],
+      "Passes dans le dernier tiers": [
+        "67% (34/51)",
+        "68% (39/57)"
+      ],
+      "Centres": [
+        "67% (4/6)",
+        "29% (2/7)"
+      ],
+      "Expected Assists (xA)": [
+        "0.30",
+        "0.35"
+      ],
+      "Touche": [
+        "6",
+        "12"
+      ],
+      "Fautes": [
+        "6",
+        "5"
+      ],
+      "Tacles": [
+        "75% (9/12)",
+        "70% (7/10)"
+      ],
+      "Duels remportés": [
+        "26",
+        "24"
+      ],
+      "Dégagements": [
+        "9",
+        "11"
+      ],
+      "Interceptions": [
+        "6",
+        "2"
+      ],
+      "Erreurs menant à un tir": [
+        "0",
+        "0"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "0"
+      ],
+      "Arrêts du gardien": [
+        "0",
+        "2"
+      ],
+      "xGot subis": [
+        "0.00",
+        "0.68"
+      ],
+      "Buts évités": [
+        "0.00",
+        "-0.32"
+      ]
+    }
+  },
+  "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/paris-fc-0OEHEprs/?mid=4Q0IMVi5": {
+    "fullTime": {
+      "Expected Goals (xG)": [
+        "1.84",
+        "1.23"
+      ],
+      "Possession de balle": [
+        "44%",
+        "56%"
+      ],
+      "Tirs totaux": [
+        "13",
+        "13"
+      ],
+      "Tirs cadrés": [
+        "2",
+        "2"
+      ],
+      "Grosses occasions": [
+        "4",
+        "2"
+      ],
+      "Corners": [
+        "7",
+        "2"
+      ],
+      "Passes": [
+        "84% (328/389)",
+        "88% (454/515)"
+      ],
+      "Cartons jaunes": [
+        "0",
+        "2"
+      ],
+      "xG cadrés (xGOT)": [
+        "0.35",
+        "0.08"
+      ],
+      "Tirs non cadrés": [
+        "7",
+        "8"
+      ],
+      "Tirs contrés": [
+        "4",
+        "3"
+      ],
+      "Tirs dans la surface": [
+        "9",
+        "9"
+      ],
+      "Tirs en dehors de la surface": [
+        "4",
+        "4"
+      ],
+      "Montant touché": [
+        "2",
+        "2"
+      ],
+      "Touches dans la surface adverse": [
+        "15",
+        "15"
+      ],
+      "Passes entre les lignes réussies": [
+        "0",
+        "0"
+      ],
+      "Hors-jeux": [
+        "0",
+        "0"
+      ],
+      "Coup francs": [
+        "13",
+        "10"
+      ],
+      "Passes longues": [
+        "38% (17/45)",
+        "50% (22/44)"
+      ],
+      "Passes dans le dernier tiers": [
+        "69% (59/86)",
+        "75% (59/79)"
+      ],
+      "Centres": [
+        "23% (7/30)",
+        "25% (3/12)"
+      ],
+      "Expected Assists (xA)": [
+        "0.78",
+        "0.65"
+      ],
+      "Touche": [
+        "22",
+        "17"
+      ],
+      "Fautes": [
+        "10",
+        "13"
+      ],
+      "Tacles": [
+        "88% (7/8)",
+        "67% (8/12)"
+      ],
+      "Duels remportés": [
+        "36",
+        "39"
+      ],
+      "Dégagements": [
+        "12",
+        "22"
+      ],
+      "Interceptions": [
+        "8",
+        "5"
+      ],
+      "Erreurs menant à un tir": [
+        "1",
+        "1"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "0"
+      ],
+      "Arrêts du gardien": [
+        "2",
+        "2"
+      ],
+      "xGot subis": [
+        "0.08",
+        "0.35"
+      ],
+      "Buts évités": [
+        "0.08",
+        "0.35"
+      ]
+    },
+    "firstHalf": {
+      "Expected Goals (xG)": [
+        "0.12",
+        "0.26"
+      ],
+      "Possession de balle": [
+        "40%",
+        "60%"
+      ],
+      "Tirs totaux": [
+        "4",
+        "7"
+      ],
+      "Tirs cadrés": [
+        "0",
+        "0"
+      ],
+      "Grosses occasions": [
+        "0",
+        "0"
+      ],
+      "Corners": [
+        "4",
+        "1"
+      ],
+      "Passes": [
+        "83% (156/189)",
+        "89% (272/306)"
+      ],
+      "xG cadrés (xGOT)": [
+        "0.00",
+        "0.00"
+      ],
+      "Tirs non cadrés": [
+        "2",
+        "5"
+      ],
+      "Tirs contrés": [
+        "2",
+        "2"
+      ],
+      "Tirs dans la surface": [
+        "2",
+        "4"
+      ],
+      "Tirs en dehors de la surface": [
+        "2",
+        "3"
+      ],
+      "Montant touché": [
+        "1",
+        "2"
+      ],
+      "Touches dans la surface adverse": [
+        "4",
+        "7"
+      ],
+      "Passes entre les lignes réussies": [
+        "0",
+        "0"
+      ],
+      "Hors-jeux": [
+        "0",
+        "0"
+      ],
+      "Coup francs": [
+        "5",
+        "5"
+      ],
+      "Passes longues": [
+        "35% (7/20)",
+        "35% (7/20)"
+      ],
+      "Passes dans le dernier tiers": [
+        "61% (20/33)",
+        "79% (33/42)"
+      ],
+      "Centres": [
+        "13% (2/15)",
+        "0% (0/5)"
+      ],
+      "Expected Assists (xA)": [
+        "0.14",
+        "0.16"
+      ],
+      "Touche": [
+        "10",
+        "12"
+      ],
+      "Fautes": [
+        "5",
+        "5"
+      ],
+      "Tacles": [
+        "100% (4/4)",
+        "75% (3/4)"
+      ],
+      "Duels remportés": [
+        "17",
+        "20"
+      ],
+      "Dégagements": [
+        "7",
+        "12"
+      ],
+      "Interceptions": [
+        "4",
+        "2"
+      ],
+      "Erreurs menant à un tir": [
+        "0",
+        "0"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "0"
+      ],
+      "Arrêts du gardien": [
+        "0",
+        "0"
+      ],
+      "xGot subis": [
+        "0.00",
+        "0.00"
+      ],
+      "Buts évités": [
+        "0.00",
+        "0.00"
+      ]
+    },
+    "secondHalf": {
+      "Expected Goals (xG)": [
+        "1.72",
+        "0.97"
+      ],
+      "Possession de balle": [
+        "50%",
+        "50%"
+      ],
+      "Tirs totaux": [
+        "9",
+        "6"
+      ],
+      "Tirs cadrés": [
+        "2",
+        "2"
+      ],
+      "Grosses occasions": [
+        "4",
+        "2"
+      ],
+      "Corners": [
+        "3",
+        "1"
+      ],
+      "Passes": [
+        "86% (172/200)",
+        "87% (182/209)"
+      ],
+      "Cartons jaunes": [
+        "0",
+        "2"
+      ],
+      "xG cadrés (xGOT)": [
+        "0.35",
+        "0.08"
+      ],
+      "Tirs non cadrés": [
+        "5",
+        "3"
+      ],
+      "Tirs contrés": [
+        "2",
+        "1"
+      ],
+      "Tirs dans la surface": [
+        "7",
+        "5"
+      ],
+      "Tirs en dehors de la surface": [
+        "2",
+        "1"
+      ],
+      "Montant touché": [
+        "1",
+        "0"
+      ],
+      "Touches dans la surface adverse": [
+        "11",
+        "8"
+      ],
+      "Passes entre les lignes réussies": [
+        "0",
+        "0"
+      ],
+      "Hors-jeux": [
+        "0",
+        "0"
+      ],
+      "Coup francs": [
+        "8",
+        "5"
+      ],
+      "Passes longues": [
+        "40% (10/25)",
+        "63% (15/24)"
+      ],
+      "Passes dans le dernier tiers": [
+        "74% (39/53)",
+        "70% (26/37)"
+      ],
+      "Centres": [
+        "33% (5/15)",
+        "43% (3/7)"
+      ],
+      "Expected Assists (xA)": [
+        "0.64",
+        "0.49"
+      ],
+      "Touche": [
+        "12",
+        "5"
+      ],
+      "Fautes": [
+        "5",
+        "8"
+      ],
+      "Tacles": [
+        "75% (3/4)",
+        "63% (5/8)"
+      ],
+      "Duels remportés": [
+        "19",
+        "19"
+      ],
+      "Dégagements": [
+        "5",
+        "10"
+      ],
+      "Interceptions": [
+        "4",
+        "3"
+      ],
+      "Erreurs menant à un tir": [
+        "1",
+        "1"
+      ],
+      "Erreurs menant à un but": [
+        "0",
+        "0"
+      ],
+      "Arrêts du gardien": [
+        "2",
+        "2"
+      ],
+      "xGot subis": [
+        "0.08",
+        "0.35"
+      ],
+      "Buts évités": [
+        "0.08",
+        "0.35"
+      ]
+    }
+  }
+}
