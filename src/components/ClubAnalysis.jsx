@@ -8,9 +8,11 @@ import TeamLogo from './ui/TeamLogo';
 // Import Data (Ideally this comes from a merged source)
 import scrapedJ16 from '../data/matches_j16_scraped.json';
 import historical from '../data/matches_history_detailed.json';
+import matchStats from '../data/match_stats_2025_2026.json';
 import rosterData from '../data/real_players.json';
 import ClubDistributionCharts from './ClubDistributionCharts';
 import PitchMap from './PitchMap';
+import TeamMatchStats from './TeamMatchStats';
 
 import APP_DATA from '../data/app_data.json';
 
@@ -289,8 +291,15 @@ const ClubAnalysis = ({ teams, teamStats = {}, schedule = [], playerData = [] })
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
+                    {/* TEAM MATCH ANALYSIS (New Section) */}
+                    <TeamMatchStats
+                        selectedTeam={selectedTeam}
+                        filteredMatches={filteredMatches}
+                        matchStats={matchStats}
+                    />
+
                 </>
             )
             }

@@ -5,14 +5,24 @@ const path = require('path');
 
 puppeteer.use(StealthPlugin());
 
-const LINEUPS_FILE = path.join(__dirname, '../src/data/lineups_2025_2026.json');
+const LINEUPS_FILE = path.join(__dirname, '../src/data/lineups_2025_2025.json'); // Wait, previous was 2025_2026. Let's check the real path.
 const STATS_FILE = path.join(__dirname, '../src/data/match_stats_2025_2026.json');
+
+// Helper to find lineups file
+const lineupsPaths = [
+    path.join(__dirname, '../src/data/lineups_2025_2026.json'),
+    path.join(__dirname, '../src/data/matches_history_detailed.json')
+];
 
 async function scrapeMatch(baseUrl) {
     const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 1200 });
-    const results = { matchInfo: {}, stats: { fullTime: {}, firstHalf: {}, secondHalf: {} } };
+    const results = {
+        matchInfo: {},
+        metadata: { homeTeam: '', awayTeam: '', round: '' },
+        stats: { fullTime: {}, firstHalf: {}, secondHalf: {} }
+    };
 
     try {
         const root = baseUrl.split('?')[0];
@@ -33,7 +43,7 @@ async function scrapeMatch(baseUrl) {
             if (tooltipBtn) tooltipBtn.click();
         });
 
-        results.matchInfo = await page.evaluate(() => {
+        const info = await page.evaluate(() => {
             const t = document.body.innerText;
             const res = {};
             const ref = t.match(/Arbitre\s*:\s*([^\n]+)/i);
@@ -42,8 +52,27 @@ async function scrapeMatch(baseUrl) {
             if (std) res.stadium = std[1].split('(')[0].trim();
             const time = t.match(/(\d{2}\.\d{2}\.\d{4}\s\d{2}:\d{2})/);
             if (time) res.dateTime = time[1];
-            return res;
+
+            // Teams and Round
+            const home = document.querySelector('.duelParticipant__home .participant__participantName')?.innerText.trim();
+            const away = document.querySelector('.duelParticipant__away .participant__participantName')?.innerText.trim();
+            const roundRaw = document.querySelector('.tournamentHeader__country')?.innerText || '';
+            const roundMatch = roundRaw.match(/JOURNÉE\s+\d+/i);
+            const round = roundMatch ? roundMatch[0] : '';
+
+            return { ...res, homeTeam: home, awayTeam: away, round: round };
         });
+
+        results.matchInfo = {
+            referee: info.referee,
+            stadium: info.stadium,
+            dateTime: info.dateTime
+        };
+        results.metadata = {
+            homeTeam: info.homeTeam,
+            awayTeam: info.awayTeam,
+            round: info.round
+        };
 
         // 2. Coaches (Compositions)
         await page.goto(root + 'resume/compositions/' + query, { waitUntil: 'domcontentloaded' });
@@ -79,7 +108,6 @@ async function scrapeMatch(baseUrl) {
                 rows.forEach(r => {
                     const lines = r.innerText.split('\n').map(x => x.trim()).filter(x => x);
                     if (lines.length >= 3) {
-                        // Category name is typically the middle element or the non-numeric one
                         const catIdx = lines.findIndex((l, i) => i > 0 && i < lines.length - 1 && !/^[\d%.,\(\)\/]+$/.test(l));
                         if (catIdx !== -1) {
                             const label = lines[catIdx];
@@ -106,10 +134,16 @@ async function scrapeMatch(baseUrl) {
 
 async function run() {
     console.log("Starting Optimized Enrichment...");
-    const lineups = JSON.parse(fs.readFileSync(LINEUPS_FILE, 'utf8'));
+
+    // Determine which file to update for lineups
+    let lineupsFile = lineupsPaths.find(p => fs.existsSync(p));
+    if (!lineupsFile) {
+        console.error("No lineups file found.");
+        return;
+    }
+    const lineups = JSON.parse(fs.readFileSync(lineupsFile, 'utf8'));
     let stats = fs.existsSync(STATS_FILE) ? JSON.parse(fs.readFileSync(STATS_FILE, 'utf8')) : {};
 
-    // Process target matches
     const targetUrls = [
         "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/?mid=Qc01MMcM",
         "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/metz-4v0yqlWc/?mid=Cj4QK9MH",
@@ -118,14 +152,22 @@ async function run() {
 
     for (const url of targetUrls) {
         const d = await scrapeMatch(url);
+
+        // Find in either lineups source
         const match = lineups.find(l => l.url === url);
         if (match) {
             match.matchInfo = d.matchInfo;
-            stats[url] = d.stats;
-            fs.writeFileSync(LINEUPS_FILE, JSON.stringify(lineups, null, 2));
-            fs.writeFileSync(STATS_FILE, JSON.stringify(stats, null, 2));
-            console.log(`- Saved results for ${match.teams.home} vs ${match.teams.away}`);
         }
+
+        // Add metadata and stats
+        stats[url] = {
+            metadata: d.metadata,
+            ...d.stats
+        };
+
+        fs.writeFileSync(lineupsFile, JSON.stringify(lineups, null, 2));
+        fs.writeFileSync(STATS_FILE, JSON.stringify(stats, null, 2));
+        console.log(`- Saved results for ${d.metadata.homeTeam} vs ${d.metadata.awayTeam} (${d.metadata.round})`);
     }
     console.log("\nEnrichment task completed.");
 }

@@ -1,5 +1,10 @@
 {
   "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/?mid=Qc01MMcM": {
+    "metadata": {
+      "homeTeam": "Lorient",
+      "awayTeam": "Lyon",
+      "round": ""
+    },
     "fullTime": {
       "Expected Goals (xG)": [
         "2.57",
@@ -412,6 +417,11 @@
     }
   },
   "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/metz-4v0yqlWc/?mid=Cj4QK9MH": {
+    "metadata": {
+      "homeTeam": "Auxerre",
+      "awayTeam": "Metz",
+      "round": ""
+    },
     "fullTime": {
       "Expected Goals (xG)": [
         "1.94",
@@ -816,6 +826,11 @@
     }
   },
   "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/paris-fc-0OEHEprs/?mid=4Q0IMVi5": {
+    "metadata": {
+      "homeTeam": "Le Havre",
+      "awayTeam": "Paris FC",
+      "round": ""
+    },
     "fullTime": {
       "Expected Goals (xG)": [
         "1.84",
