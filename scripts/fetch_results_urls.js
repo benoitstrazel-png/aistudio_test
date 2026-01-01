@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Target file (we'll update the existing one or create a new generic one)
-const URLS_FILE = path.join(__dirname, '../src/data/j1_j15_urls.json');
+const URLS_FILE = path.join(__dirname, '../src/data/matches_urls_2025_2026.json');
 const RESULTS_URL = 'https://www.flashscore.fr/football/france/ligue-1/resultats/';
 
 async function fetchUrls() {

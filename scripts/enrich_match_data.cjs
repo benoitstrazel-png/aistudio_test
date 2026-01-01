@@ -5,22 +5,15 @@ const path = require('path');
 
 puppeteer.use(StealthPlugin());
 
-const LINEUPS_FILE = path.join(__dirname, '../src/data/lineups_2025_2025.json'); // Wait, previous was 2025_2026. Let's check the real path.
+const LINEUPS_FILE = path.join(__dirname, '../src/data/lineups_2025_2026.json');
 const STATS_FILE = path.join(__dirname, '../src/data/match_stats_2025_2026.json');
 
-// Helper to find lineups file
-const lineupsPaths = [
-    path.join(__dirname, '../src/data/lineups_2025_2026.json'),
-    path.join(__dirname, '../src/data/matches_history_detailed.json')
-];
-
-async function scrapeMatch(baseUrl) {
+async function scrapeMatch(baseUrl, metadata) {
     const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 1200 });
     const results = {
-        matchInfo: {},
-        metadata: { homeTeam: '', awayTeam: '', round: '' },
+        metadata: metadata, // Use passed metadata
         stats: { fullTime: {}, firstHalf: {}, secondHalf: {} }
     };
 
@@ -28,60 +21,17 @@ async function scrapeMatch(baseUrl) {
         const root = baseUrl.split('?')[0];
         const query = baseUrl.split('?')[1] ? '?' + baseUrl.split('?')[1] : '';
 
-        console.log(`\nProcessing ${root}...`);
+        console.log(`\nProcessing ${metadata.homeTeam} vs ${metadata.awayTeam} (${metadata.round})...`);
 
-        // 1. Metadata (Résumé)
+        // 1. Just navigate once to ensure overlays are handled if needed (optional but good for consistency)
         await page.goto(root + 'resume/' + query, { waitUntil: 'domcontentloaded' });
-        await new Promise(r => setTimeout(r, 4000));
+        await new Promise(r => setTimeout(r, 2000));
 
         // Handle Overlays (Cookie/Tooltip)
         await page.evaluate(() => {
             const btns = Array.from(document.querySelectorAll('button'));
             const closeBtn = btns.find(b => b.innerText.toLowerCase().includes('refuser') || b.id.includes('reject'));
             if (closeBtn) closeBtn.click();
-            const tooltipBtn = btns.find(b => b.innerText.toUpperCase().includes('COMPRENDS') || b.innerText.toUpperCase().includes('GOT IT'));
-            if (tooltipBtn) tooltipBtn.click();
-        });
-
-        const info = await page.evaluate(() => {
-            const t = document.body.innerText;
-            const res = {};
-            const ref = t.match(/Arbitre\s*:\s*([^\n]+)/i);
-            const std = t.match(/Stade\s*:\s*([^\n]+)/i);
-            if (ref) res.referee = ref[1].trim();
-            if (std) res.stadium = std[1].split('(')[0].trim();
-            const time = t.match(/(\d{2}\.\d{2}\.\d{4}\s\d{2}:\d{2})/);
-            if (time) res.dateTime = time[1];
-
-            // Teams and Round
-            const home = document.querySelector('.duelParticipant__home .participant__participantName')?.innerText.trim();
-            const away = document.querySelector('.duelParticipant__away .participant__participantName')?.innerText.trim();
-            const roundRaw = document.querySelector('.tournamentHeader__country')?.innerText || '';
-            const roundMatch = roundRaw.match(/JOURNÉE\s+\d+/i);
-            const round = roundMatch ? roundMatch[0] : '';
-
-            return { ...res, homeTeam: home, awayTeam: away, round: round };
-        });
-
-        results.matchInfo = {
-            referee: info.referee,
-            stadium: info.stadium,
-            dateTime: info.dateTime
-        };
-        results.metadata = {
-            homeTeam: info.homeTeam,
-            awayTeam: info.awayTeam,
-            round: info.round
-        };
-
-        // 2. Coaches (Compositions)
-        await page.goto(root + 'resume/compositions/' + query, { waitUntil: 'domcontentloaded' });
-        await new Promise(r => setTimeout(r, 3000));
-        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-        await new Promise(r => setTimeout(r, 1000));
-        results.matchInfo.coaches = await page.evaluate(() => {
-            const spans = Array.from(document.querySelectorAll('span, strong')).filter(s => s.className.includes('wcl-name'));
-            return spans.length >= 2 ? { home: spans[spans.length - 2].innerText.trim(), away: spans[spans.length - 1].innerText.trim() } : { home: null, away: null };
         });
 
         // 3. Stats (Direct URLs for Match, 1st Half, 2nd Half)
@@ -94,13 +44,7 @@ async function scrapeMatch(baseUrl) {
         for (const p of periods) {
             console.log(`  - Navigating to stats/${p.suffix}...`);
             await page.goto(root + 'resume/stats/' + p.suffix + query, { waitUntil: 'domcontentloaded' });
-            await new Promise(r => setTimeout(r, 3000));
-
-            // Scroll to load all stats
-            await page.evaluate(() => {
-                window.scrollTo(0, 1000);
-            });
-            await new Promise(r => setTimeout(r, 500));
+            await new Promise(r => setTimeout(r, 2000));
 
             const periodStats = await page.evaluate(() => {
                 const s = {};
@@ -135,41 +79,58 @@ async function scrapeMatch(baseUrl) {
 async function run() {
     console.log("Starting Optimized Enrichment...");
 
-    // Determine which file to update for lineups
-    let lineupsFile = lineupsPaths.find(p => fs.existsSync(p));
-    if (!lineupsFile) {
-        console.error("No lineups file found.");
+    if (!fs.existsSync(LINEUPS_FILE)) {
+        console.error("No lineups file found at:", LINEUPS_FILE);
         return;
     }
-    const lineups = JSON.parse(fs.readFileSync(lineupsFile, 'utf8'));
+
+    const lineups = JSON.parse(fs.readFileSync(LINEUPS_FILE, 'utf8'));
     let stats = fs.existsSync(STATS_FILE) ? JSON.parse(fs.readFileSync(STATS_FILE, 'utf8')) : {};
 
-    const targetUrls = [
-        "https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/?mid=Qc01MMcM",
-        "https://www.flashscore.fr/match/football/auxerre-MTLr36WA/metz-4v0yqlWc/?mid=Cj4QK9MH",
-        "https://www.flashscore.fr/match/football/le-havre-CIEe04GT/paris-fc-0OEHEprs/?mid=4Q0IMVi5"
-    ];
+    // Get URL of matches that don't have stats yet or have empty round
+    const matchesToScrape = lineups.filter(m => {
+        const existing = stats[m.url];
+        return !existing || !existing.metadata || !existing.metadata.round;
+    });
 
-    for (const url of targetUrls) {
-        const d = await scrapeMatch(url);
+    console.log(`Found ${matchesToScrape.length} matches to process (missing or incomplete).`);
 
-        // Find in either lineups source
-        const match = lineups.find(l => l.url === url);
-        if (match) {
-            match.matchInfo = d.matchInfo;
-        }
+    // Only process a small batch to avoid being blocked if needed, 
+    // but here we'll try to process what's missing if it's reasonable.
+    // Let's limit to 18 (2 matchdays) per run to be safe.
+    const BATCH_SIZE = 18;
+    const batch = matchesToScrape.slice(0, BATCH_SIZE);
 
-        // Add metadata and stats
-        stats[url] = {
-            metadata: d.metadata,
-            ...d.stats
+    if (batch.length === 0) {
+        console.log("All matches are already enriched.");
+        return;
+    }
+
+    for (const match of batch) {
+        const metadata = {
+            homeTeam: match.teams?.home || "Unknown",
+            awayTeam: match.teams?.away || "Unknown",
+            round: match.round || ""
         };
 
-        fs.writeFileSync(lineupsFile, JSON.stringify(lineups, null, 2));
-        fs.writeFileSync(STATS_FILE, JSON.stringify(stats, null, 2));
-        console.log(`- Saved results for ${d.metadata.homeTeam} vs ${d.metadata.awayTeam} (${d.metadata.round})`);
+        const d = await scrapeMatch(match.url, metadata);
+
+        if (Object.keys(d.stats.fullTime).length > 0) {
+            stats[match.url] = {
+                metadata: d.metadata,
+                ...d.stats
+            };
+            fs.writeFileSync(STATS_FILE, JSON.stringify(stats, null, 2));
+            console.log(`- Saved results for ${metadata.homeTeam} vs ${metadata.awayTeam} (${metadata.round})`);
+        } else {
+            console.log(`- Failed to retrieve stats for ${metadata.homeTeam} vs ${metadata.awayTeam}`);
+        }
     }
-    console.log("\nEnrichment task completed.");
+
+    console.log(`\nEnrichment task completed for ${batch.length} matches.`);
+    if (matchesToScrape.length > BATCH_SIZE) {
+        console.log(`Remaining matches to process: ${matchesToScrape.length - BATCH_SIZE}. Run again to continue.`);
+    }
 }
 
 run();

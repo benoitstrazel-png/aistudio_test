@@ -15,7 +15,7 @@ async function scrapeLineups() {
     console.log('Starting stealth lineup scraping...');
 
     // Load matches from URL source
-    const URLS_FILE = path.join(__dirname, 'src/data/j1_j15_urls.json');
+    const URLS_FILE = path.join(__dirname, 'src/data/matches_urls_2025_2026.json');
     const rawUrlData = fs.readFileSync(URLS_FILE, 'utf-8');
     const rounds = JSON.parse(rawUrlData);
 
