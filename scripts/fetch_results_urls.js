@@ -91,52 +91,45 @@ async function fetchUrls() {
 
         console.log(`Found ${roundsData.length} rounds of data.`);
 
-        // Find Journée 16
-        const targetRound = roundsData.find(r => r.round.includes('Journée 16'));
-
-        if (targetRound) {
-            console.log(`Found ${targetRound.round} with ${targetRound.matches.length} matches.`);
-
-            // Format for compatibility with existing JSON
-            // Existing format: { "round": "Journée 15", "matches": [ { "url": "..." } ] }
-
-            const newEntry = {
-                round: targetRound.round,
-                matches: targetRound.matches.map(m => ({
-                    // We need to resolve the full URL if possible, or use the short one if scrape_lineups supports it.
-                    // Scrape lineups uses: const mid = urlObj.searchParams.get('mid') OR parsing ID.
-                    // My previous edits to scrape_lineups used `mid` extraction.
-                    // Short URL: https://www.flashscore.fr/match/{id}/#/resume
-                    // This often redirects correctly. Let's try to ensure we get a usable URL.
-                    url: m.url
-                }))
-            };
-
+        if (roundsData.length > 0) {
             // Read existing file
             let existingData = [];
             if (fs.existsSync(URLS_FILE)) {
                 existingData = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
             }
 
-            // Check if J16 already exists
-            const existingRoundIndex = existingData.findIndex(r => r.round === newEntry.round);
-            if (existingRoundIndex !== -1) {
-                console.log('Updating existing round data...');
-                existingData[existingRoundIndex] = newEntry;
-            } else {
-                console.log('Adding new round data...');
-                // Prepend or append? Usually newest first in this file based on user scrolling?
-                // The file viewed earlier had J15 first. So prepend.
-                existingData.unshift(newEntry);
-            }
+            roundsData.forEach(newEntry => {
+                // Check if this round already exists
+                const existingRoundIndex = existingData.findIndex(r => r.round === newEntry.round);
+
+                const formattedEntry = {
+                    round: newEntry.round,
+                    matches: newEntry.matches.map(m => ({ url: m.url }))
+                };
+
+                if (existingRoundIndex !== -1) {
+                    // Update if the number of matches changed (new matches added to round)
+                    if (existingData[existingRoundIndex].matches.length !== formattedEntry.matches.length) {
+                        console.log(`Updating existing round: ${newEntry.round}`);
+                        existingData[existingRoundIndex] = formattedEntry;
+                    }
+                } else {
+                    console.log(`Adding new round: ${newEntry.round}`);
+                    // We typically want newest first or logical order
+                    // Rounds are usually in descending order on Flashscore
+                    existingData.unshift(formattedEntry);
+                }
+            });
+
+            // Re-sort to ensure consistent order (optional but good)
+            // Journée 1, Journée 2... 
+            // Often newest first is better for the UI processing
 
             // Save
             fs.writeFileSync(URLS_FILE, JSON.stringify(existingData, null, 4));
-            console.log(`Updated ${URLS_FILE}`);
+            console.log(`Updated ${URLS_FILE} with current rounds.`);
         } else {
-            console.log('Journée 16 not found in the loaded results. Might need to scroll or click "Show more".');
-            // Log what WAS found
-            console.log('Available rounds:', roundsData.map(r => r.round).join(', '));
+            console.log('No round data found.');
         }
 
     } catch (e) {

@@ -18,8 +18,18 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
       - name: Install dependencies
         run: npm install
+
+      - name: Fetch Latest Match URLs
+        run: node scripts/fetch_results_urls.js
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
 
       - name: Update Match History
         run: node scripts/scrape_history.js
@@ -28,18 +38,24 @@ jobs:
 
       - name: Scrape Lineups
         run: node scrape_lineups.js
-
-      - name: Enrich Referees
-        run: node scripts/enrich_referees.js
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
 
       - name: Enrich Match Stats
         run: node scripts/enrich_match_data.cjs
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+
+      - name: Generate Final App Data
+        run: python scripts/generate_app_data.py
 
       - name: Extract L'Équipe News
         run: node scripts/fetch_lequipe_news.js
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: weekly update of match data and news [skip ci]"
+          commit_message: "chore: automated weekly data update and synchronization [skip ci]"
           file_pattern: 'src/data/*.json src/data/*.csv'
