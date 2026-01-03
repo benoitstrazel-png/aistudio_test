@@ -191,44 +191,37 @@ export const calculateClusters = (teams, _unused, teamStats, playerData = [], sc
         };
     });
 
-    // 3. Ranking-Based Classification (Prevent Empty Clusters)
-    // Sort by GPS Descending
-    scoredTeams.sort((a, b) => b.gps - a.gps);
+    // 3. Match with Global Clusters or KPI-based Classification
+    const result = scoredTeams.map((team) => {
+        const params = teamStats[team.name] || {};
+        let cluster = params.cluster;
+        let color = '#94a3b8'; // Default Slate
 
-    // Assign Clusters based on Rank
-    const result = scoredTeams.map((team, index) => {
-        const rank = index + 1;
-        let cluster = '';
-        let color = '';
+        // Mapping colors to new clusters
+        const colorMap = {
+            'Les Dominateurs': '#CEF002', // Neon Yellow
+            'Les Murs': '#38bdf8',       // Sky Blue
+            'Les Outsiders Dangereux': '#a855f7', // Purple
+            'Combattants du Maintien': '#fb923c', // Orange
+            'Le Ventre Mou Cosmopolite': '#94a3b8' // Slate
+        };
 
-        if (rank <= 3) {
-            cluster = '👑 Élites du Championnat'; // Top 3
-            color = '#CEF002'; // Yellow
-        } else if (rank <= 6) {
-            cluster = '🇪🇺 Prétendants Europe'; // 4-6
-            color = '#a855f7'; // Purple
-        } else if (rank <= 10) {
-            cluster = '⚖️ Ventre Mou / Équilibrés'; // 7-10 (Mid Table)
-            color = '#94a3b8'; // Slate
-        } else if (rank <= 14) {
-            // Contextual: 11-14
-            // Check Style to decide
-            if (team.style > 0) {
-                cluster = '🔥 Attaque de Feu'; // High Offense, Low Def relative
-                color = '#f472b6'; // Pink
-            } else {
-                cluster = '🛡️ Blocs Compacts'; // High Def, Low Offense relative
-                color = '#38bdf8'; // Blue
-            }
+        if (cluster && colorMap[cluster]) {
+            color = colorMap[cluster];
         } else {
-            // Bottom 4
-            // Check if they have very low offense
-            if (team.scores.att < 30) {
-                cluster = '📉 Attaque en Panne';
-                color = '#fb923c'; // Orange
+            // Fallback to KPI logic if cluster not provided in teamStats
+            if (team.scores.att > 75 && team.scores.def > 75) {
+                cluster = 'Les Dominateurs';
+                color = colorMap[cluster];
+            } else if (team.scores.def > 80) {
+                cluster = 'Les Murs';
+                color = colorMap[cluster];
+            } else if (team.scores.att < 30 || team.scores.def < 30) {
+                cluster = 'Combattants du Maintien';
+                color = colorMap[cluster];
             } else {
-                cluster = '🚨 Zone Critique';
-                color = '#ef4444'; // Red
+                cluster = 'Le Ventre Mou Cosmopolite';
+                color = colorMap[cluster];
             }
         }
 

@@ -498,13 +498,11 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                             </h4>
 
                             {[
-                                { name: '👑 Élites', color: '#CEF002' },
-                                { name: '🇪🇺 Europe', color: '#a855f7' },
-                                { name: '⚖️ Ventre Mou', color: '#94a3b8' },
-                                { name: '🔥 Attaque Feu', color: '#f472b6' },
-                                { name: '🛡️ Blocs Compacts', color: '#38bdf8' },
-                                { name: '📉 Panne Off.', color: '#fb923c' },
-                                { name: '🚨 Zone Critique', color: '#ef4444' },
+                                { name: 'Les Dominateurs', color: '#CEF002' },
+                                { name: 'Les Murs', color: '#38bdf8' },
+                                { name: 'Les Outsiders Dangereux', color: '#a855f7' },
+                                { name: 'Combattants du Maintien', color: '#fb923c' },
+                                { name: 'Le Ventre Mou Cosmopolite', color: '#94a3b8' },
                             ].map(cluster => (
                                 <div key={cluster.name} className="flex flex-col items-center p-2 rounded-lg bg-white/5 border border-white/5 min-w-[80px] hover:bg-white/10 transition-all flex-grow md:flex-grow-0">
                                     <div className="flex items-center gap-2 mb-1">
@@ -514,7 +512,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
 
                                     {/* Team Icons List for this Cluster */}
                                     <div className="flex flex-wrap justify-center gap-0.5 mt-1 max-w-[100px]">
-                                        {clusters.filter(c => c.cluster.startsWith(cluster.name.split(' ')[0])).map(t => (
+                                        {clusters.filter(c => c.cluster === cluster.name).map(t => (
                                             <div
                                                 key={t.name}
                                                 className="rounded-full bg-white/10 p-[1px] border border-white/5 flex items-center justify-center opacity-80"
@@ -533,31 +531,27 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
                     {/* METHODOLOGY BLOCK */}
                     <div className="bg-white/5 p-4 rounded-xl border border-white/5 mt-4">
                         <h4 className="text-sm font-bold text-white uppercase mb-2 flex items-center gap-2">
-                            <span className="text-accent text-lg">ℹ️</span> Méthodologie du Clustering 3.0 (GPS)
+                            <span className="text-accent text-lg">ℹ️</span> Méthodologie du Clustering Sportif (KPI)
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[10px] text-secondary leading-relaxed">
                             <div>
-                                <strong className="text-white block mb-1">7 Piliers de Performance</strong>
+                                <strong className="text-white block mb-1">Indicateurs de Performance (KPIs)</strong>
                                 <p className="mb-2">
-                                    Chaque club est évalué sur 7 critères normalisés (0-100) pour former un <span className="text-white">Global Performance Score (GPS)</span>.
+                                    La classification repose sur l'analyse croisée de la puissance de feu, de la solidité défensive et du <span className="text-white">Crush Rate</span> (victoires par 2+ buts).
                                 </p>
                                 <ul className="list-disc pl-3 space-y-0.5">
-                                    <li><span className="text-white">Attaque / Défense / Différence</span> : Efficacité brute.</li>
-                                    <li><span className="text-white">Domicile / Extérieur</span> : Constance des résultats (PPG).</li>
-                                    <li><span className="text-blue-400">Résilience</span> : Capacité à marquer à l'extérieur & faire des nuls.</li>
-                                    <li><span className="text-accent">Star Power</span> : Impact individuel des tops joueurs.</li>
+                                    <li><span className="text-white">Les Dominateurs</span> : Attaque &gt; 1.7 g/m + Crush Rate élevé.</li>
+                                    <li><span className="text-white">Les Murs</span> : Défense de fer (&lt; 1.05 g/m) + Points constants.</li>
+                                    <li><span className="text-blue-400">Outsiders Dangereux</span> : Squad Dependency &gt; 35% ou attaque poreuse.</li>
+                                    <li><span className="text-accent">Maintien</span> : Points &lt; 1.15/m ou défense en difficulté.</li>
                                 </ul>
                             </div>
                             <div>
-                                <strong className="text-white block mb-1">Classification par Classement (Ranking)</strong>
-                                <p className="mb-1">Pour éviter les groupes vides, les équipes sont classées par GPS et réparties :</p>
-                                <ul className="list-disc pl-3 space-y-0.5">
-                                    <li><span className="text-[#CEF002]">👑 Élites</span> : Top 3 Global.</li>
-                                    <li><span className="text-[#a855f7]">🇪🇺 Europe</span> : Rangs 4 à 6.</li>
-                                    <li><span className="text-[#94a3b8]">⚖️ Ventre Mou</span> : Rangs 7 à 10.</li>
-                                    <li><span className="text-[#f472b6]">🔥 / 🛡️ Style</span> : Rangs 11-14 (Offensif ou Défensif).</li>
-                                    <li><span className="text-[#ef4444]">🚨 Zone Critique</span> : Bas de classement GPS.</li>
-                                </ul>
+                                <strong className="text-white block mb-1">Précision et Mise à jour</strong>
+                                <p className="mb-1">Les données intègrent l'historique 24-25 et les performances réelles de la saison 25-26.</p>
+                                <p className="italic text-slate-500">
+                                    *Note : Pour les promus, seule la saison en cours est utilisée pour assurer la pertinence du cluster.
+                                </p>
                             </div>
                         </div>
                     </div>

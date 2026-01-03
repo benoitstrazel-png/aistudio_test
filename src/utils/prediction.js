@@ -56,8 +56,16 @@ export const predictMatchLive = (home, away, stats, calibration = {}) => {
     };
 
     // Calculate Lambda (Expected Goals)
-    const lambdaH = homeStrength * 1.35;
-    const lambdaA = awayStrength * 1.05;
+    // Adjusted multipliers to reduce goal inflation and allow 0-0 modes
+    let lambdaH = homeStrength * 1.15;
+    let lambdaA = awayStrength * 0.85;
+
+    // Special "Tactical Lock" adjustment: 
+    // If both teams are highly defensive (def strength < 0.95), lock the game
+    if (effHomeDef < 0.95 && effAwayDef < 0.95) {
+        lambdaH *= 0.75;
+        lambdaA *= 0.75;
+    }
 
     // MONTE CARLO SIMULATION (500 rounds) to find the "Mode" (Most frequent outcome)
     const ITERATIONS = 500;
@@ -88,7 +96,6 @@ export const predictMatchLive = (home, away, stats, calibration = {}) => {
             bestScore = score;
         }
     }
-    const [finalH, finalA] = bestScore.split('-').map(Number);
     const scoreConf = Math.round((maxCount / ITERATIONS) * 100);
 
     // Determine Winner based on frequencies

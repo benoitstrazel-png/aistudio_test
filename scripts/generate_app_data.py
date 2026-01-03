@@ -19,21 +19,49 @@ def get_poisson_random(lam):
         p *= random.random()
     return k - 1
 
-def predict_one_match(home, away, stats):
+def predict_one_match(home, away, stats, week=1):
     h_att = stats.get(home, {}).get('att', 1.0)
     h_def = stats.get(home, {}).get('def', 1.0)
     a_att = stats.get(away, {}).get('att', 1.0)
     a_def = stats.get(away, {}).get('def', 1.0)
     
-    # Base goals (L1 average ~2.7 total)
-    avg_h = 1.45
-    avg_a = 1.25
+    # Base goals (Standard L1 parameters)
+    avg_h = 1.30
+    avg_a = 1.10
     
     # Expected Goals (Lambda)
     exp_h = h_att * a_def * avg_h
     exp_a = a_att * h_def * avg_a
+
+    # --- VOLATILITY & FATIGUE INJECTION ---
+    
+    # 1. Round "Mood" (Stochastic Volatility)
+    # This creates rounds that are naturally more offensive or defensive
+    # Seeded by week to ensure persistence
+    mood_seed = week * 777
+    mood_rng = random.Random(mood_seed)
+    round_mood = mood_rng.uniform(0.85, 1.15) 
+    exp_h *= round_mood
+    exp_a *= round_mood
+
+    # 2. Fatigue Logic (Busy Calendar weeks)
+    # Based on historical analysis of post-European/Cup weeks
+    busy_weeks = [4, 5, 7, 8, 10, 11, 13, 14, 16, 19, 21, 23, 25, 28, 31]
+    if week in busy_weeks:
+        fatigue_multiplier = 0.85
+        exp_h *= fatigue_multiplier
+        exp_a *= fatigue_multiplier
+
+    # 3. Tactical Lock Adjustment (Synced with JS)
+    if h_def < 0.95 and a_def < 0.95:
+        exp_h *= 0.75
+        exp_a *= 0.75
     
     # MONTE CARLO SIMULATION (500 runs)
+    # Seeded by match unique key to ensure persistence
+    match_seed = hash(f"{home}_{away}_{week}")
+    random.seed(match_seed)
+    
     ITERATIONS = 500
     
     score_counts = {}
@@ -110,20 +138,45 @@ def main():
     with open(LEGACY_PATH, 'r') as f:
         matches = json.load(f)
         
+    # 2. MATCHES 2025-2026 (REAL) - Move up for variable access
+    all_season_matches = [m for m in matches if '2025-2026' in str(m.get('season','')) or ('2025' in str(m.get('date','')) and int(str(m.get('date','')).split('-')[1]) > 7) ]
+
     # 1. Calc Stats (Base Strength from 2024-2025)
     matches_24_25 = [m for m in matches if '2024' in str(m.get('season', '')) or '2025' in str(m.get('date', ''))]
     
-    # Calculate base strength from last season
+    # Calculate base strength and KPIs from both last season and current season
+    # This ensures promoted teams are handled correctly
     team_stats_base = {}
+    
+    # Process 24-25 (Legacy)
     for m in matches_24_25:
         h, a = m['home_team'], m['away_team']
         hg, ag = m['full_time_home_goals'], m['full_time_away_goals']
-        
-        if h not in team_stats_base: team_stats_base[h] = {'gf': 0, 'ga': 0, 'pl': 0}
-        if a not in team_stats_base: team_stats_base[a] = {'gf': 0, 'ga': 0, 'pl': 0}
-        
+        if h not in team_stats_base: team_stats_base[h] = {'gf': 0, 'ga': 0, 'pl': 0, 'wins': 0, 'crush': 0}
+        if a not in team_stats_base: team_stats_base[a] = {'gf': 0, 'ga': 0, 'pl': 0, 'wins': 0, 'crush': 0}
         team_stats_base[h]['gf'] += hg; team_stats_base[h]['ga'] += ag; team_stats_base[h]['pl'] += 1
         team_stats_base[a]['gf'] += ag; team_stats_base[a]['ga'] += hg; team_stats_base[a]['pl'] += 1
+        if hg > ag:
+            team_stats_base[h]['wins'] += 1
+            if hg - ag >= 2: team_stats_base[h]['crush'] += 1
+        elif ag > hg:
+            team_stats_base[a]['wins'] += 1
+            if ag - hg >= 2: team_stats_base[a]['crush'] += 1
+
+    # Process 25-26 (Current)
+    for m in all_season_matches:
+        h, a = m['home_team'], m['away_team']
+        hg, ag = m['full_time_home_goals'], m['full_time_away_goals']
+        if h not in team_stats_base: team_stats_base[h] = {'gf': 0, 'ga': 0, 'pl': 0, 'wins': 0, 'crush': 0}
+        if a not in team_stats_base: team_stats_base[a] = {'gf': 0, 'ga': 0, 'pl': 0, 'wins': 0, 'crush': 0}
+        team_stats_base[h]['gf'] += hg; team_stats_base[h]['ga'] += ag; team_stats_base[h]['pl'] += 1
+        team_stats_base[a]['gf'] += ag; team_stats_base[a]['ga'] += hg; team_stats_base[a]['pl'] += 1
+        if hg > ag:
+            team_stats_base[h]['wins'] += 1
+            if hg - ag >= 2: team_stats_base[h]['crush'] += 1
+        elif ag > hg:
+            team_stats_base[a]['wins'] += 1
+            if ag - hg >= 2: team_stats_base[a]['crush'] += 1
         
     final_stats = {}
     teams_list = list(team_stats_base.keys())
@@ -133,13 +186,53 @@ def main():
         
     avg_g_league = 1.35 # Approx goals per team per match
     
+    # Load player dependency data
+    player_data_path = os.path.join(DATA_DIR, 'players.json')
+    team_dependency = {}
+    if os.path.exists(player_data_path):
+        with open(player_data_path, 'r') as f:
+            players = json.load(f)
+            players_by_team = {}
+            for p in players:
+                t = p.get('team')
+                if t not in players_by_team: players_by_team[t] = []
+                players_by_team[t].append(p)
+            
+            for t, p_list in players_by_team.items():
+                top_scorer_goals = max([p.get('goals', 0) for p in p_list]) if p_list else 0
+                total_team_goals = sum([p.get('goals', 0) for p in p_list])
+                team_dependency[t] = top_scorer_goals / max(1, total_team_goals)
+
+    clusters = {}
     for t in teams_list:
-        s = team_stats_base.get(t, {'gf': 45, 'ga': 45, 'pl': 34}) # Default stats
-        g_avg = s['gf'] / max(1, s['pl'])
-        ga_avg = s['ga'] / max(1, s['pl'])
+        s = team_stats_base.get(t, {'gf': 40, 'ga': 45, 'pl': 34, 'wins': 10, 'crush': 2}) # Default stats
+        off = s['gf'] / max(1, s['pl'])
+        df = s['ga'] / max(1, s['pl'])
+        crush_rate = s['crush'] / max(1, s['pl'])
+        points_per_match = (s['wins'] * 3 + (s['pl'] - s['wins'] - 0) * 0.5) / max(1, s['pl']) # Rough est
+        dep = team_dependency.get(t, 0.2)
+
+        # 1. Les Dominateurs (Attack > 1.8, CrushRate > 0.25)
+        if off > 1.7 and crush_rate > 0.22:
+            tag = "Les Dominateurs"
+        # 2. Les Murs (Def < 1.0, Points > 1.5)
+        elif df < 1.05 and points_per_match > 1.4:
+            tag = "Les Murs"
+        # 3. Les Outsiders Dangereux (Dependency > 0.3 or good off but porous def)
+        elif dep > 0.35 or (off > 1.4 and df > 1.4):
+            tag = "Les Outsiders Dangereux"
+        # 4. Combattants du Maintien (Points < 1.1 or Def > 1.6)
+        elif points_per_match < 1.15 or df > 1.6:
+            tag = "Combattants du Maintien"
+        # 5. Le Ventre Mou Cosmopolite
+        else:
+            tag = "Le Ventre Mou Cosmopolite"
+            
+        clusters[t] = tag
         final_stats[t] = {
-            'att': g_avg / avg_g_league,
-            'def': ga_avg / avg_g_league
+            'att': off / avg_g_league,
+            'def': df / avg_g_league,
+            'cluster': tag
         }
 
     # 2. MATCHES 2025-2026 (REAL)
@@ -209,7 +302,7 @@ def main():
         for m in calendar_next_week:
             h, a = m['home_team'], m['away_team']
             if h in final_stats and a in final_stats: # Verify teams exist
-                pred = predict_one_match(h, a, final_stats)
+                pred = predict_one_match(h, a, final_stats, next_week)
                 m_obj = {
                     "id": random.randint(10000, 99999),
                     "homeTeam": h,
@@ -235,7 +328,7 @@ def main():
         while len(teams_playing) >= 2:
             h = teams_playing.pop()
             a = teams_playing.pop()
-            pred = predict_one_match(h, a, final_stats)
+            pred = predict_one_match(h, a, final_stats, next_week)
             next_matches.append({
                 "id": random.randint(10000, 99999),
                 "homeTeam": h,
@@ -342,7 +435,7 @@ def main():
             
             if week > last_played_week and (h, a) not in played_pairs:
                 if h in final_stats and a in final_stats:
-                    pred = predict_one_match(h, a, final_stats)
+                    pred = predict_one_match(h, a, final_stats, week)
                     est_date = (datetime.now() + timedelta(days=(week - last_played_week)*7)).strftime("%Y-%m-%d")
                     
                     full_schedule.append({
