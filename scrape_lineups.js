@@ -189,10 +189,21 @@ async function scrapeLineups() {
                     homeGoalkeeper: 'N/A',
                     awayCaptain: 'N/A',
                     awayGoalkeeper: 'N/A',
-                    teams: { home: '', away: '' }
+                    teams: { home: '', away: '' },
+                    referee: 'N/A'
                 };
 
-                // A. Extract Team Names
+                // A. Extract Referee
+                try {
+                    const refereeItem = Array.from(document.querySelectorAll('.mi__item'))
+                        .find(item => item.textContent.toUpperCase().includes('ARBITRE'));
+                    if (refereeItem) {
+                        const content = refereeItem.querySelector('.mi__content');
+                        if (content) result.referee = content.textContent.trim();
+                    }
+                } catch (e) { }
+
+                // B. Extract Team Names
                 try {
                     const homeTeamEl = document.querySelector('.duelParticipant__home .participant__participantName');
                     const awayTeamEl = document.querySelector('.duelParticipant__away .participant__participantName');
@@ -309,12 +320,14 @@ async function scrapeLineups() {
                 console.log(`   -> Teams: ${scrapedData.teams.home} vs ${scrapedData.teams.away}`);
                 console.log(`   -> Captains: ${scrapedData.homeCaptain} (H) / ${scrapedData.awayCaptain} (A)`);
                 console.log(`   -> GK: ${scrapedData.homeGoalkeeper} (H) / ${scrapedData.awayGoalkeeper} (A)`);
+                console.log(`   -> Referee: ${scrapedData.referee}`);
 
                 matches[matchIndex].lineups = {
                     ...matches[matchIndex].lineups,
                     ...scrapedData,
                 };
                 matches[matchIndex].teams = scrapedData.teams;
+                matches[matchIndex].referee = scrapedData.referee;
             } else {
                 console.log('   -> No starters found.');
             }

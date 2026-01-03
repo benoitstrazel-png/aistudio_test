@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import InfoTooltip from './ui/InfoTooltip';
 import TeamLogo from './ui/TeamLogo';
-import BettingSimulator from './BettingSimulator';
 
 const LeagueCalendar = ({ schedule, selectedWeek, onWeekChange, highlightTeams = [] }) => {
     // Controlled component: selectedWeek comes from parent
@@ -184,8 +183,7 @@ const LeagueCalendar = ({ schedule, selectedWeek, onWeekChange, highlightTeams =
                 })}
             </div>
 
-            {/* Betting Simulator Module - Integrated at bottom */}
-            <BettingSimulator matches={matches} />
+            {/* Betting Simulator removed from here, now in Dashboard */}
         </div>
     );
 };

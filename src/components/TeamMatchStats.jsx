@@ -85,7 +85,17 @@ const TeamMatchStats = ({ selectedTeam, filteredMatches, matchStats }) => {
         return val;
     };
 
-    const matchesWithStats = filteredMatches.filter(m => matchStats[m.url]);
+    const matchesWithStats = useMemo(() => {
+        return filteredMatches
+            .filter(m => matchStats[m.url])
+            .sort((a, b) => {
+                const getRoundNum = (roundStr) => {
+                    const match = roundStr?.match(/\d+/);
+                    return match ? parseInt(match[0]) : 0;
+                };
+                return getRoundNum(a.round) - getRoundNum(b.round);
+            });
+    }, [filteredMatches, matchStats]);
 
     return (
         <div className="flex flex-col gap-8">
@@ -103,7 +113,7 @@ const TeamMatchStats = ({ selectedTeam, filteredMatches, matchStats }) => {
                     </button>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                     {matchesWithStats.map(m => {
                         const isSelected = selectedUrls.includes(m.url);
                         const meta = matchStats[m.url]?.metadata || {};
@@ -111,7 +121,7 @@ const TeamMatchStats = ({ selectedTeam, filteredMatches, matchStats }) => {
                             <button
                                 key={m.url}
                                 onClick={() => toggleMatch(m.url)}
-                                className={`flex items-center gap-3 p-3 rounded-xl border transition-all text-left group ${isSelected ? 'bg-accent/10 border-accent/30' : 'bg-white/5 border-transparent hover:border-white/10'}`}
+                                className={`flex items-center gap-2 p-2 rounded-xl border transition-all text-left group ${isSelected ? 'bg-accent/10 border-accent/30' : 'bg-white/5 border-transparent hover:border-white/10'}`}
                             >
                                 <div className={isSelected ? 'text-accent' : 'text-slate-600 group-hover:text-slate-400'}>
                                     {isSelected ? <CheckSquare size={18} /> : <Square size={18} />}

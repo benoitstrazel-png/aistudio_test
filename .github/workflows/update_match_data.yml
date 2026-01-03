@@ -1,0 +1,45 @@
+name: Weekly Match Data Update
+
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Every Monday at 8:00 AM
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update Match History
+        run: node scripts/scrape_history.js
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+
+      - name: Scrape Lineups
+        run: node scrape_lineups.js
+
+      - name: Enrich Referees
+        run: node scripts/enrich_referees.js
+
+      - name: Enrich Match Stats
+        run: node scripts/enrich_match_data.cjs
+
+      - name: Extract L'Équipe News
+        run: node scripts/fetch_lequipe_news.js
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: weekly update of match data and news [skip ci]"
+          file_pattern: 'src/data/*.json src/data/*.csv'

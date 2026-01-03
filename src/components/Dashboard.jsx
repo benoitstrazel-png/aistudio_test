@@ -9,6 +9,7 @@ import LeagueCalendar from './LeagueCalendar';
 import TeamLogo from './ui/TeamLogo';
 import ExpertAnalysis from './ExpertAnalysis';
 import FocusPlayers from './FocusPlayers';
+import BettingSimulator from './BettingSimulator';
 import { predictMatchLive } from '../utils/prediction';
 
 const Dashboard = ({
@@ -156,6 +157,11 @@ const Dashboard = ({
                     />
                 </section>
             </div>
+
+            {/* 4. BETTING SIMULATOR (FULL WIDTH) */}
+            <section className="mb-16">
+                <BettingSimulator matches={APP_DATA.fullSchedule.filter(m => m.week === currentViewWeek)} />
+            </section>
 
             {/* 4. EXPERT / ACTU */}
             <div className="mt-12">

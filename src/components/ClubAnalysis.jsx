@@ -6,7 +6,6 @@ import { calculateClusters } from '../utils/clustering';
 import TeamLogo from './ui/TeamLogo';
 
 // Import Data (Ideally this comes from a merged source)
-import scrapedJ16 from '../data/matches_j16_scraped.json';
 import historical from '../data/matches_history_detailed.json';
 import matchStats from '../data/match_stats_2025_2026.json';
 import rosterData from '../data/real_players.json';
@@ -21,13 +20,7 @@ const ClubAnalysis = ({ teams, teamStats = {}, schedule = [], playerData = [] })
     const [venueFilter, setVenueFilter] = useState('all');
     const [metricFilter, setMetricFilter] = useState('all');
     const [clusterFilter, setClusterFilter] = useState('all');
-    const [allMatches, setAllMatches] = useState([]);
-
-    useEffect(() => {
-        const j16WithRound = scrapedJ16.map(m => ({ ...m, round: "Journée 16" }));
-        const combined = [...historical, ...j16WithRound];
-        setAllMatches(combined);
-    }, []);
+    const [allMatches, setAllMatches] = useState(historical);
 
     // 1. Calculate Clusters Dynamically
     const clusters = useMemo(() => {

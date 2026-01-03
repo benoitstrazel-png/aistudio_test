@@ -56,10 +56,16 @@ async function scrapeMatch(browser, url, roundInfo) {
             const scoreHome = document.querySelector('.detailScore__wrapper span:nth-child(1)')?.innerText.trim();
             const scoreAway = document.querySelector('.detailScore__wrapper span:nth-child(3)')?.innerText.trim();
 
+
+            const referee = Array.from(document.querySelectorAll('.mi__item'))
+                .find(item => item.textContent.toUpperCase().includes('ARBITRE'))
+                ?.querySelector('.mi__content')?.innerText.trim() || 'N/A';
+
             return {
                 homeTeam,
                 awayTeam,
-                score: `${scoreHome}-${scoreAway}`
+                score: `${scoreHome}-${scoreAway}`,
+                referee
             };
         });
 

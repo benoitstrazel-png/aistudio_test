@@ -9,7 +9,6 @@ import PLAYERS_DATA from '../data/players.json'; // Import Player Data source
 
 // Import Real Match Events for accurate stats
 import historyMatches from '../data/matches_history_detailed.json';
-import scrapedJ16 from '../data/matches_j16_scraped.json';
 
 const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
     const [teamA, setTeamA] = useState(teams[0] || 'PSG');
@@ -18,10 +17,7 @@ const ClubComparator = ({ teams, schedule = [], teamStats, currentWeek }) => {
     const [clusterMetric, setClusterMetric] = useState('goalsFor'); // For Histogram
 
     // Combine detailed match history
-    const detailedMatches = useMemo(() => {
-        const j16 = scrapedJ16.map(m => ({ ...m, round: "Journée 16" }));
-        return [...historyMatches, ...j16];
-    }, []);
+    const detailedMatches = historyMatches;
 
     // ... (Keep existing Ranking History Logic)
 
