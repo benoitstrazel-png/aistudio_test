@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Cell } from 'recharts';
 import { PLAYERS_DB } from '../data/players_static';
 import { getPlayerPhoto } from '../utils/playerPhotos';
+import { getPlayerGoalStats } from '../utils/playerAnalysis';
+import matchesHistory from '../data/matches_history_detailed.json';
 
 // ========== CONSTANTS & DEFINITIONS ==========
 
@@ -260,6 +262,11 @@ const PlayerDetailsModal = ({ player, onClose }) => {
         return data;
     }, [player, posCategory]);
 
+    const goalStats = useMemo(() => {
+        if (!player || !matchesHistory) return { totalGoals: 0, chartData: [] };
+        return getPlayerGoalStats(player.Player, player.Squad, matchesHistory);
+    }, [player]);
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300" onClick={onClose}>
             <style jsx>{`
@@ -325,6 +332,50 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                         </div>
                     </HUDCard>
 
+                    {/* ZONE 2.5: GOAL TIMELINE - MOVED HIGHER */}
+                    <div className="w-full">
+                        <HUDCard title="TIMELINE DES BUTS (RÉPARTITION PAR 15 MIN)" borderColor="cyan" disableClip={true} className="relative overflow-hidden">
+                            <div className="h-[220px] w-full mt-2 relative z-10">
+                                <ResponsiveContainer width="100%" height={200}>
+                                    <BarChart data={goalStats.chartData} margin={{ top: 20, right: 30, left: 0, bottom: 5 }}>
+                                        <XAxis
+                                            dataKey="name"
+                                            axisLine={{ stroke: '#334155' }}
+                                            tickLine={false}
+                                            tick={{ fill: '#94a3b8', fontSize: 11, fontWeight: 700 }}
+                                        />
+                                        <YAxis
+                                            axisLine={{ stroke: '#334155' }}
+                                            tickLine={false}
+                                            tick={{ fill: '#94a3b8', fontSize: 11 }}
+                                            allowDecimals={false}
+                                        />
+                                        <RechartsTooltip
+                                            cursor={{ fill: 'rgba(0, 234, 255, 0.1)' }}
+                                            contentStyle={{
+                                                backgroundColor: '#0f172a',
+                                                borderColor: '#00eaff',
+                                                borderRadius: '12px',
+                                                fontSize: '13px'
+                                            }}
+                                            itemStyle={{ color: '#00eaff' }}
+                                        />
+                                        <Bar dataKey="goals" fill="#00eaff" radius={[6, 6, 0, 0]} />
+                                    </BarChart>
+                                </ResponsiveContainer>
+                            </div>
+
+                            {goalStats.totalGoals === 0 && (
+                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900/40 backdrop-blur-[2px] z-20">
+                                    <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-xl shadow-2xl animate-pulse">
+                                        <span className="text-xs text-cyan-400 uppercase tracking-[0.2em] font-black">Scanning match history...</span>
+                                        <p className="text-[10px] text-slate-400 mt-1">Aucun but détecté pour ce profil dans la base de données actuelle</p>
+                                    </div>
+                                </div>
+                            )}
+                        </HUDCard>
+                    </div>
+
                     {/* ZONE 2: KEY INDICATORS ROW (4 cols) */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                         {/* 1. OFFENSIVE GAUGE */}
@@ -356,6 +407,7 @@ const PlayerDetailsModal = ({ player, onClose }) => {
                             </div>
                         </HUDCard>
                     </div>
+
 
                     {/* ZONE 3: RADAR CHART (Full Width) */}
                     <div className="w-full">
