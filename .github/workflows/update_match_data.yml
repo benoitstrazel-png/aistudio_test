@@ -18,6 +18,12 @@ jobs:
       - name: Disable AppArmor restriction
         run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
+      - name: Setup Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          echo "PUPPETEER_EXECUTABLE_PATH=$(which google-chrome)" >> $GITHUB_ENV
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -35,8 +41,8 @@ jobs:
       - name: Debug Environment
         run: |
           echo "PUPPETEER_EXECUTABLE_PATH: $PUPPETEER_EXECUTABLE_PATH"
-          ls -l /usr/bin/google-chrome || echo "Chrome not found at /usr/bin/google-chrome"
-          which google-chrome || echo "google-chrome not in PATH"
+          ls -l "$PUPPETEER_EXECUTABLE_PATH" || echo "Chrome not found at $PUPPETEER_EXECUTABLE_PATH"
+          google-chrome --version
 
       - name: Fetch Latest Match URLs
         run: node scripts/fetch_results_urls.js
