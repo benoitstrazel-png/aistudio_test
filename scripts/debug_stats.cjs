@@ -4,6 +4,7 @@ puppeteer.use(StealthPlugin());
 
 async function run() {
     const browser = await puppeteer.launch({
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
         headless: "new",
         args: [
             '--no-sandbox',

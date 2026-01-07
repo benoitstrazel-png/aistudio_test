@@ -14,6 +14,7 @@ const RESULTS_URL = 'https://www.flashscore.fr/football/france/ligue-1/resultats
 async function fetchUrls() {
     console.log('Launching browser to fetch latest results...');
     const browser = await puppeteer.launch({
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
         headless: "new",
         args: [
             '--no-sandbox',

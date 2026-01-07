@@ -35,6 +35,7 @@ async function autoScroll(page) {
 
 async function scrapeMissing() {
     const browser = await puppeteer.launch({
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
         headless: true,
         args: [
             '--no-sandbox',
