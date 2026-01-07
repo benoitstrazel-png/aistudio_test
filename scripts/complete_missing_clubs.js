@@ -34,8 +34,10 @@ async function autoScroll(page) {
 }
 
 async function scrapeMissing() {
+    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
+    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
-        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
+        executablePath: executablePath || undefined,
         headless: true,
         args: [
             '--no-sandbox',

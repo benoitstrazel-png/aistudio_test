@@ -5,9 +5,11 @@ async function run() {
     const url = "https://www.flashscore.fr/match/football/psg-CjhkPw0k/rennes-d2nnj1IE/?mid=h8ptFvjd";
     console.log(`Inspecting URL: ${url}`);
 
+    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
+    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
-        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
-        headless: "new",
+        executablePath: executablePath || undefined,
+        headless: true,
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',

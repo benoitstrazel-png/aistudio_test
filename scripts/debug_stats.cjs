@@ -3,9 +3,11 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 
 async function run() {
+    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
+    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
-        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
-        headless: "new",
+        executablePath: executablePath || undefined,
+        headless: true,
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',

@@ -9,9 +9,11 @@ const LINEUPS_FILE = path.join(__dirname, '../src/data/lineups_2025_2026.json');
 const STATS_FILE = path.join(__dirname, '../src/data/match_stats_2025_2026.json');
 
 async function scrapeMatch(baseUrl, metadata) {
+    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
+    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
-        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
-        headless: "new",
+        executablePath: executablePath || undefined,
+        headless: true,
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',

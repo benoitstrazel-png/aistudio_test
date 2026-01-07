@@ -17,9 +17,11 @@ const STANDINGS_URL = 'https://ligue1.com/fr/competitions/ligue1mcdonalds/standi
 const EXCLUDED_CLUBS = ['saint-etienne', 'reims'];
 
 async function fetchPlayerPhotos() {
+    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
+    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
-        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
-        headless: 'new',
+        executablePath: executablePath || undefined,
+        headless: true,
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',

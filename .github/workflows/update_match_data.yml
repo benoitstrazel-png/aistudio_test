@@ -28,25 +28,35 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug Environment
+        run: |
+          echo "PUPPETEER_EXECUTABLE_PATH: $PUPPETEER_EXECUTABLE_PATH"
+          ls -l /usr/bin/google-chrome || echo "Chrome not found at /usr/bin/google-chrome"
+          which google-chrome || echo "google-chrome not in PATH"
+
       - name: Fetch Latest Match URLs
         run: node scripts/fetch_results_urls.js
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Update Match History
         run: node scripts/scrape_history.js
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Scrape Lineups
         run: node scripts/scrape_lineups.js
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Enrich Match Stats
         run: node scripts/enrich_match_data.cjs
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Generate Final App Data
         run: python scripts/generate_app_data.py
@@ -55,6 +65,7 @@ jobs:
         run: node scripts/fetch_lequipe_news.js
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
