@@ -21,13 +21,25 @@ async function run() {
         ]
     });
     const page = await browser.newPage();
-    await page.goto('https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/resume/stats/?mid=Qc01MMcM', { waitUntil: 'domcontentloaded' });
-    await new Promise(r => setTimeout(r, 6000));
-    const text = await page.evaluate(() => {
-        const row = document.querySelector('[data-testid="wcl-statistics"]');
-        return row ? JSON.stringify(row.innerText) : "NOT FOUND";
-    });
-    console.log("ROW INNER TEXT:", text);
-    await browser.close();
+    try {
+        // Optimizing resources
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            if (['image', 'media', 'font', 'stylesheet'].includes(req.resourceType())) req.abort();
+            else req.continue();
+        });
+        await page.goto('https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/resume/stats/?mid=Qc01MMcM', { waitUntil: 'domcontentloaded' });
+        await new Promise(r => setTimeout(r, 6000));
+        const text = await page.evaluate(() => {
+            const row = document.querySelector('[data-testid="wcl-statistics"]');
+            return row ? JSON.stringify(row.innerText) : "NOT FOUND";
+        });
+        console.log("ROW INNER TEXT:", text);
+    } catch (err) {
+        console.error("Error in debug_stats:", err);
+    } finally {
+        await browser.close();
+    }
 }
+
 run();

@@ -14,6 +14,17 @@ const OUTPUT_FILE = path.join(__dirname, '../src/data/lineups_j1_j15.json');
 async function scrapeLineups(browser, url, roundInfo) {
     const page = await browser.newPage();
     try {
+        // Optimizing resources: block images, CSS (selective), and fonts
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            const resourceType = req.resourceType();
+            if (['image', 'media', 'font', 'stylesheet'].includes(resourceType)) {
+                req.abort();
+            } else {
+                req.continue();
+            }
+        });
+
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
 
         // Construct Lineups URL (usually match URL + /resume/compositions/ or simply append /compositions)
@@ -185,20 +196,21 @@ async function run() {
 
     for (const round of rounds) {
         console.log(`--- Processing ${round.round} ---`);
-        const BATCH_SIZE = 5;
 
-        for (let i = 0; i < round.matches.length; i += BATCH_SIZE) {
-            const batch = round.matches.slice(i, i + BATCH_SIZE);
-            const promises = batch.map(m => scrapeLineups(browser, m.url, round.round));
+        // Sequential Processing for stability
+        for (const match of round.matches) {
+            // Stability Delay
+            await new Promise(r => setTimeout(r, 400 + Math.random() * 800));
 
-            const results = await Promise.all(promises);
-            results.forEach(r => allLineups.push(r));
+            const result = await scrapeLineups(browser, match.url, round.round);
+            allLineups.push(result);
 
-            processedCount += results.length;
-            console.log(`Progress: ${processedCount}/${totalMatches}`);
-
-            // Save partially
-            fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allLineups, null, 2));
+            processedCount++;
+            if (processedCount % 5 === 0) {
+                console.log(`Progress: ${processedCount}/${totalMatches}`);
+                // Save partially
+                fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allLineups, null, 2));
+            }
         }
     }
 

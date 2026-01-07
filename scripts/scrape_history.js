@@ -14,6 +14,19 @@ const OUTPUT_FILE = path.join(__dirname, '../src/data/matches_history_detailed.j
 async function scrapeMatch(browser, url, roundInfo) {
     const page = await browser.newPage();
     try {
+        // Optimizing resources: block images, CSS (selective), and fonts
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            const resourceType = req.resourceType();
+            if (['image', 'media', 'font', 'stylesheet'].includes(resourceType)) {
+                // Keep CSS if needed, but for scraping matches, often not. 
+                // Let's block them to be super lightweight.
+                req.abort();
+            } else {
+                req.continue();
+            }
+        });
+
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
         console.log(`Navigating to ${url}...`);
 
@@ -180,27 +193,26 @@ async function run() {
         console.log(`--- Processing ${round.round} ---`);
 
         // Batch Processing
-        const BATCH_SIZE = 5;
-        for (let i = 0; i < round.matches.length; i += BATCH_SIZE) {
-            const batch = round.matches.slice(i, i + BATCH_SIZE);
-            const promises = batch.map(m => scrapeMatch(browser, m.url, round.round));
+        for (const m of round.matches) {
+            const result = await scrapeMatch(browser, m.url, round.round);
 
-            const results = await Promise.all(promises);
-            results.forEach(r => {
-                if (!r.error) allMatches.push(r);
-                else {
-                    // Even if error, maybe save it with empty events to avoid holes? 
-                    // Best to push it so we have a record
-                    console.log(`Failed: ${r.url}`);
-                    allMatches.push(r);
-                }
-            });
+            if (!result.error) allMatches.push(result);
+            else {
+                console.log(`Failed: ${result.url}`);
+                allMatches.push(result);
+            }
 
-            processedCount += results.length;
+            processedCount++;
             console.log(`Progress: ${processedCount}/${totalMatches}`);
 
-            // Intermediate Save
-            fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allMatches, null, 2));
+            // Stability delay: 500ms - 1500ms
+            const delay = Math.floor(Math.random() * 1000) + 500;
+            await new Promise(r => setTimeout(r, delay));
+
+            // Intermediate Save every 10 matches
+            if (processedCount % 10 === 0) {
+                fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allMatches, null, 2));
+            }
         }
     }
 

@@ -35,8 +35,14 @@ async function fetchPlayerPhotos() {
         ]
     });
     const page = await browser.newPage();
-
     try {
+        // Optimizing resources
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            if (['image', 'media', 'font', 'stylesheet'].includes(req.resourceType())) req.abort();
+            else req.continue();
+        });
+
         console.log(`[1/3] Fetching Club URLs from ${STANDINGS_URL}...`);
         await page.goto(STANDINGS_URL, { waitUntil: 'networkidle2', timeout: 60000 });
 
@@ -52,25 +58,16 @@ async function fetchPlayerPhotos() {
         // Extract Squad URLs
         const squadUrls = await page.evaluate(() => {
             const anchors = Array.from(document.querySelectorAll('a[href*="/club-sheet/"]'));
-            const links = anchors
-                .map(a => a.href.split(/[?#]/)[0])
-                .filter(href => !href.includes('/squad') && !href.includes('/stats'));
-
-            const uniqueSquadUrls = [...new Set(links)].map(url => {
-                let base = url;
-                if (base.endsWith('/')) base = base.slice(0, -1);
-                if (base.endsWith('/info')) base = base.replace('/info', '');
-                return `${base}/squad`;
-            });
-
-            return uniqueSquadUrls;
+            return [...new Set(anchors.map(a => a.href.split(/[?#]/)[0]))]
+                .filter(href => !href.includes('/squad') && !href.includes('/stats'))
+                .map(url => {
+                    let base = url.endsWith('/') ? url.slice(0, -1) : url;
+                    return `${base.replace('/info', '')}/squad`;
+                });
         });
 
         console.log(`   -> Found ${squadUrls.length} clubs.`);
 
-        console.log(`   -> Found ${squadUrls.length} clubs.`);
-
-        // LOAD EXISTING DATA to avoid wiping
         let clubsData = {};
         if (fs.existsSync(OUTPUT_FILE)) {
             clubsData = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
@@ -81,10 +78,7 @@ async function fetchPlayerPhotos() {
             const squadUrl = squadUrls[i];
             const clubSlug = squadUrl.split('/').slice(-2)[0];
 
-            // TARGET ONLY TOULOUSE (User Request)
-            if (!clubSlug.toLowerCase().includes('toulouse')) {
-                continue;
-            }
+            if (!clubSlug.toLowerCase().includes('toulouse')) continue;
 
             console.log(`[2/3] Processing ${i + 1}/${squadUrls.length}: ${squadUrl}`);
 
@@ -92,42 +86,31 @@ async function fetchPlayerPhotos() {
                 await page.goto(squadUrl, { waitUntil: 'networkidle2', timeout: 60000 });
                 await new Promise(resolve => setTimeout(resolve, 2000));
 
-                // Extract club name from H1
                 const officialName = await page.evaluate(() => {
                     const h1 = document.querySelector('h1');
                     if (h1 && h1.innerText.trim().length > 3) return h1.innerText.trim();
-
                     try {
-                        const nextData = JSON.parse(document.getElementById('__NEXT_DATA__').textContent);
-                        return nextData.props.pageProps.club.clubName;
-                    } catch (e) {
-                        return null;
-                    }
+                        return JSON.parse(document.getElementById('__NEXT_DATA__').textContent).props.pageProps.club.clubName;
+                    } catch (e) { return null; }
                 });
 
-                // Force distinct key if needed, or stick to official
                 const clubKey = officialName || clubSlug.replace(/_/g, ' ');
                 console.log(`   -> Identified as: ${clubKey}`);
 
                 await autoScroll(page);
 
-                // Extract players (ORIGINAL DOM METHOD)
                 const players = await page.evaluate(() => {
                     const cards = Array.from(document.querySelectorAll('a[href*="/player-sheet/"]'));
                     return cards.map(c => {
                         const nameEls = Array.from(c.querySelectorAll('h5'));
                         const fullName = nameEls.map(el => el.innerText.trim()).join(' ');
-
                         const img = c.querySelector('img[src*="player_official"]');
-                        const photoUrl = img ? img.src : null;
-
-                        return { name: fullName, photo: photoUrl };
+                        return { name: fullName, photo: img ? img.src : null };
                     }).filter(p => p.name && p.photo);
                 });
 
                 console.log(`   -> Scraped ${players.length} players for ${clubKey}.`);
-                clubsData[clubKey] = players; // Update or Add Toulouse
-
+                clubsData[clubKey] = players;
             } catch (err) {
                 console.error(`   -> Failed: ${err.message}`);
             }
@@ -138,7 +121,7 @@ async function fetchPlayerPhotos() {
         console.log('✅ Done.');
 
     } catch (error) {
-        console.error('Fatal Error:', error);
+        console.error('Fatal Error In fetchPlayerPhotos:', error);
     } finally {
         await browser.close();
     }
@@ -153,7 +136,6 @@ async function autoScroll(page) {
                 const scrollHeight = document.body.scrollHeight;
                 window.scrollBy(0, distance);
                 totalHeight += distance;
-
                 if (totalHeight >= scrollHeight || totalHeight > 8000) {
                     clearInterval(timer);
                     resolve();

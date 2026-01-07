@@ -100,47 +100,57 @@ async function run() {
         ]
     });
     const page = await browser.newPage();
-    await page.setViewport({ width: 1280, height: 800 });
+    try {
+        // Optimizing resources
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            if (['image', 'media', 'font', 'stylesheet'].includes(req.resourceType())) req.abort();
+            else req.continue();
+        });
+        await page.setViewport({ width: 1280, height: 800 });
 
-    // 1. Process J16
-    if (fs.existsSync(J16_FILE)) {
-        console.log('\n--- Processing J16 matches ---');
-        const j16Matches = JSON.parse(fs.readFileSync(J16_FILE, 'utf8'));
-        for (const match of j16Matches) {
-            if (!match.referee || match.referee === 'N/A') {
-                match.referee = await scrapeReferee(page, match.url);
+        // 1. Process J16
+        if (fs.existsSync(J16_FILE)) {
+            console.log('\n--- Processing J16 matches ---');
+            const j16Matches = JSON.parse(fs.readFileSync(J16_FILE, 'utf8'));
+            for (const match of j16Matches) {
+                if (!match.referee || match.referee === 'N/A') {
+                    match.referee = await scrapeReferee(page, match.url);
+                }
             }
+            fs.writeFileSync(J16_FILE, JSON.stringify(j16Matches, null, 4));
         }
-        fs.writeFileSync(J16_FILE, JSON.stringify(j16Matches, null, 4));
-    }
 
-    // 2. Process History detailed
-    if (fs.existsSync(HISTORY_FILE)) {
-        console.log('\n--- Processing Detailed History matches ---');
-        const historyMatches = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
-        // Limit to prevent giant runs if not needed, but here we do all missing
-        for (const match of historyMatches) {
-            if (!match.referee || match.referee === 'N/A') {
-                match.referee = await scrapeReferee(page, match.url);
+        // 2. Process History detailed
+        if (fs.existsSync(HISTORY_FILE)) {
+            console.log('\n--- Processing Detailed History matches ---');
+            const historyMatches = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
+            // Limit to prevent giant runs if not needed, but here we do all missing
+            for (const match of historyMatches) {
+                if (!match.referee || match.referee === 'N/A') {
+                    match.referee = await scrapeReferee(page, match.url);
+                }
             }
+            fs.writeFileSync(HISTORY_FILE, JSON.stringify(historyMatches, null, 2));
         }
-        fs.writeFileSync(HISTORY_FILE, JSON.stringify(historyMatches, null, 2));
-    }
 
-    // 3. Process Lineups (often redundant with history but good to have)
-    if (fs.existsSync(LINEUPS_FILE)) {
-        console.log('\n--- Processing Lineups matches ---');
-        const lineupsMatches = JSON.parse(fs.readFileSync(LINEUPS_FILE, 'utf8'));
-        for (const match of lineupsMatches) {
-            if (!match.referee || match.referee === 'N/A') {
-                match.referee = await scrapeReferee(page, match.url);
+        // 3. Process Lineups (often redundant with history but good to have)
+        if (fs.existsSync(LINEUPS_FILE)) {
+            console.log('\n--- Processing Lineups matches ---');
+            const lineupsMatches = JSON.parse(fs.readFileSync(LINEUPS_FILE, 'utf8'));
+            for (const match of lineupsMatches) {
+                if (!match.referee || match.referee === 'N/A') {
+                    match.referee = await scrapeReferee(page, match.url);
+                }
             }
+            fs.writeFileSync(LINEUPS_FILE, JSON.stringify(lineupsMatches, null, 2));
         }
-        fs.writeFileSync(LINEUPS_FILE, JSON.stringify(lineupsMatches, null, 2));
-    }
 
-    await browser.close();
-    console.log('\nEnrichment complete!');
+        await browser.close();
+        console.log('\nEnrichment complete!');
+    } catch (err) {
+        console.error("Error in enrich_referees:", err);
+    }
 }
 
 run();

@@ -14,6 +14,13 @@ const OUTPUT_FILE = path.join(__dirname, '../src/data/matches_history_detailed.j
 async function scrapeMatch(browser, url, roundInfo) {
     const page = await browser.newPage();
     try {
+        // Optimizing resources
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            if (['image', 'media', 'font', 'stylesheet'].includes(req.resourceType())) req.abort();
+            else req.continue();
+        });
+
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
         console.log(`Navigating to ${url}...`);
 
@@ -106,56 +113,60 @@ async function scrapeMatch(browser, url, roundInfo) {
 }
 
 async function run() {
-    const rawUrls = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
-    const j16Round = rawUrls.find(r => r.round === "Journée 16");
+    try {
+        const rawUrls = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
+        const j16Round = rawUrls.find(r => r.round === "Journée 16");
 
-    if (!j16Round) {
-        console.error("Journée 16 not found in URLs file.");
-        return;
-    }
-
-    console.log('--- Environment Check ---');
-    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
-
-    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
-    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
-    const browser = await puppeteer.launch({
-        executablePath: executablePath || undefined,
-        headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--no-zygote',
-            '--single-process'
-        ]
-    });
-    const j16Matches = [];
-
-    console.log(`Scraping ${j16Round.matches.length} matches for Journée 16...`);
-
-    for (const m of j16Round.matches) {
-        const result = await scrapeMatch(browser, m.url, "Journée 16");
-        j16Matches.push(result);
-    }
-
-    await browser.close();
-
-    // Merge into history
-    let history = [];
-    if (fs.existsSync(OUTPUT_FILE)) {
-        history = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
-    }
-
-    j16Matches.forEach(m => {
-        if (!history.some(h => h.url === m.url)) {
-            history.push(m);
+        if (!j16Round) {
+            console.error("Journée 16 not found in URLs file.");
+            return;
         }
-    });
 
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(history, null, 2));
-    console.log(`\nJournée 16 merge complete! ${j16Matches.length} matches added.`);
+        console.log('--- Environment Check ---');
+        console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
+
+        const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
+        console.log(`Using executablePath: ${executablePath || 'bundled'}`);
+        const browser = await puppeteer.launch({
+            executablePath: executablePath || undefined,
+            headless: true,
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-gpu',
+                '--no-zygote',
+                '--single-process'
+            ]
+        });
+        const j16Matches = [];
+
+        console.log(`Scraping ${j16Round.matches.length} matches for Journée 16...`);
+
+        for (const m of j16Round.matches) {
+            const result = await scrapeMatch(browser, m.url, "Journée 16");
+            j16Matches.push(result);
+        }
+
+        await browser.close();
+
+        // Merge into history
+        let history = [];
+        if (fs.existsSync(OUTPUT_FILE)) {
+            history = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
+        }
+
+        j16Matches.forEach(m => {
+            if (!history.some(h => h.url === m.url)) {
+                history.push(m);
+            }
+        });
+
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(history, null, 2));
+        console.log(`\nJournée 16 merge complete! ${j16Matches.length} matches added.`);
+    } catch (err) {
+        console.error("Error in scrape_j16:", err);
+    }
 }
 
 run();

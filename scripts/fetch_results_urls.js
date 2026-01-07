@@ -31,9 +31,19 @@ async function fetchUrls() {
         ]
     });
     const page = await browser.newPage();
-    await page.setViewport({ width: 1920, height: 1080 });
-
     try {
+        // Optimizing resources
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            const resourceType = req.resourceType();
+            if (['image', 'media', 'font', 'stylesheet'].includes(resourceType)) {
+                req.abort();
+            } else {
+                req.continue();
+            }
+        });
+        await page.setViewport({ width: 1920, height: 1080 });
+
         console.log(`Navigating to ${RESULTS_URL}...`);
         await page.goto(RESULTS_URL, { waitUntil: 'networkidle2', timeout: 60000 });
 
@@ -56,46 +66,26 @@ async function fetchUrls() {
             let currentRound = null;
             let currentMatches = [];
 
-            // The structure is usually flat: header (round) -> match -> match -> header...
-            // Need to iterate rows.
             const rows = document.querySelectorAll('.sportName.soccer > div');
 
             rows.forEach(row => {
                 if (row.classList.contains('event__round')) {
-                    // New round header
                     if (currentRound) {
                         rounds.push({ round: currentRound, matches: currentMatches });
                     }
                     currentRound = row.textContent.trim();
                     currentMatches = [];
                 } else if (row.classList.contains('event__match')) {
-                    // Match row
-                    const id = row.id.split('_').pop(); // id="g_1_Ofuj6kjR" -> "Ofuj6kjR"
+                    const id = row.id.split('_').pop();
                     if (id && currentRound) {
                         const home = row.querySelector('.event__participant--home')?.textContent.trim();
                         const away = row.querySelector('.event__participant--away')?.textContent.trim();
-                        // Construct URL
-                        // Usually: https://www.flashscore.fr/match/{home}-{away}-{id}/?mid={id}
-                        // But verifying the id part is crucial. Flashscore IDs are sufficient.
-                        // Format user uses: https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/?mid=Qc01MMcM
-                        // We might need to construct a generic one or extract the specific href if it exists (it's often an onclick or hidden link)
-
                         const anchor = row.querySelector('a.event__match--oneLine');
-                        let url = null;
-                        if (anchor) {
-                            url = anchor.href;
-                        } else {
-                            // Fallback construction
-                            // The exact slug names are hard to guess (e.g. "lorient-jgNAYRGi"). 
-                            // However, Flashscore often redirects /match/{id}/ to the full url.
-                            url = `https://www.flashscore.fr/match/${id}/#/resume`;
-                        }
-
+                        let url = anchor ? anchor.href : `https://www.flashscore.fr/match/${id}/#/resume`;
                         currentMatches.push({ url, id, home, away });
                     }
                 }
             });
-            // Push last one
             if (currentRound) {
                 rounds.push({ round: currentRound, matches: currentMatches });
             }
@@ -105,40 +95,29 @@ async function fetchUrls() {
         console.log(`Found ${roundsData.length} rounds of data.`);
 
         if (roundsData.length > 0) {
-            // Read existing file
             let existingData = [];
             if (fs.existsSync(URLS_FILE)) {
                 existingData = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
             }
 
             roundsData.forEach(newEntry => {
-                // Check if this round already exists
                 const existingRoundIndex = existingData.findIndex(r => r.round === newEntry.round);
-
                 const formattedEntry = {
                     round: newEntry.round,
                     matches: newEntry.matches.map(m => ({ url: m.url }))
                 };
 
                 if (existingRoundIndex !== -1) {
-                    // Update if the number of matches changed (new matches added to round)
                     if (existingData[existingRoundIndex].matches.length !== formattedEntry.matches.length) {
                         console.log(`Updating existing round: ${newEntry.round}`);
                         existingData[existingRoundIndex] = formattedEntry;
                     }
                 } else {
                     console.log(`Adding new round: ${newEntry.round}`);
-                    // We typically want newest first or logical order
-                    // Rounds are usually in descending order on Flashscore
                     existingData.unshift(formattedEntry);
                 }
             });
 
-            // Re-sort to ensure consistent order (optional but good)
-            // Journée 1, Journée 2... 
-            // Often newest first is better for the UI processing
-
-            // Save
             fs.writeFileSync(URLS_FILE, JSON.stringify(existingData, null, 4));
             console.log(`Updated ${URLS_FILE} with current rounds.`);
         } else {
@@ -146,7 +125,7 @@ async function fetchUrls() {
         }
 
     } catch (e) {
-        console.error('Error:', e);
+        console.error('Error in fetchUrls:', e);
     } finally {
         await browser.close();
     }

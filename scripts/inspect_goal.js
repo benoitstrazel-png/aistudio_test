@@ -23,52 +23,62 @@ async function run() {
         ]
     });
     const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
-
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-
-    // Auto-scroll
-    await page.evaluate(async () => {
-        await new Promise((resolve) => {
-            let totalHeight = 0;
-            const distance = 150;
-            const timer = setInterval(() => {
-                window.scrollBy(0, distance);
-                totalHeight += distance;
-                if (totalHeight >= 2000) {
-                    clearInterval(timer);
-                    resolve();
-                }
-            }, 100);
+    try {
+        // Optimizing resources
+        await page.setRequestInterception(true);
+        page.on('request', (req) => {
+            if (['image', 'media', 'font', 'stylesheet'].includes(req.resourceType())) req.abort();
+            else req.continue();
         });
-    });
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
 
-    // Wait a bit
-    await new Promise(r => setTimeout(r, 2000));
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
 
-    // Inspect
-    const info = await page.evaluate(() => {
-        // Find row with Jacquet
-        const rows = Array.from(document.querySelectorAll('.smv__participantRow'));
-        const targetRow = rows.find(r => r.innerText.includes('Jacquet'));
+        // Auto-scroll
+        await page.evaluate(async () => {
+            await new Promise((resolve) => {
+                let totalHeight = 0;
+                const distance = 150;
+                const timer = setInterval(() => {
+                    window.scrollBy(0, distance);
+                    totalHeight += distance;
+                    if (totalHeight >= 2000) {
+                        clearInterval(timer);
+                        resolve();
+                    }
+                }, 100);
+            });
+        });
 
-        if (!targetRow) return { error: "Jacquet row not found" };
+        // Wait a bit
+        await new Promise(r => setTimeout(r, 2000));
 
-        const iconContainer = targetRow.querySelector('.smv__incidentIcon');
-        const svg = iconContainer ? iconContainer.querySelector('svg') : null;
+        // Inspect
+        const info = await page.evaluate(() => {
+            // Find row with Jacquet
+            const rows = Array.from(document.querySelectorAll('.smv__participantRow'));
+            const targetRow = rows.find(r => r.innerText.includes('Jacquet'));
 
-        return {
-            rowHtml: targetRow.outerHTML.slice(0, 500),
-            iconContainerHtml: iconContainer ? iconContainer.outerHTML : "No icon container",
-            svgClass: svg ? svg.getAttribute('class') : "No SVG or no class",
-            allClassesInRow: Array.from(targetRow.classList).join(' '),
-            allText: targetRow.innerText
-        };
-    });
+            if (!targetRow) return { error: "Jacquet row not found" };
 
-    console.log("Inspection Results:", JSON.stringify(info, null, 2));
+            const iconContainer = targetRow.querySelector('.smv__incidentIcon');
+            const svg = iconContainer ? iconContainer.querySelector('svg') : null;
 
-    await browser.close();
+            return {
+                rowHtml: targetRow.outerHTML.slice(0, 500),
+                iconContainerHtml: iconContainer ? iconContainer.outerHTML : "No icon container",
+                svgClass: svg ? svg.getAttribute('class') : "No SVG or no class",
+                allClassesInRow: Array.from(targetRow.classList).join(' '),
+                allText: targetRow.innerText
+            };
+        });
+
+        console.log("Inspection Results:", JSON.stringify(info, null, 2));
+
+        await browser.close();
+    } catch (err) {
+        console.error("Error in inspect_goal:", err);
+    }
 }
 
 run();
