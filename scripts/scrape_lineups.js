@@ -157,7 +157,10 @@ async function run() {
     const rawData = fs.readFileSync(URLS_FILE, 'utf-8');
     const rounds = JSON.parse(rawData);
 
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await puppeteer.launch({
+        headless: "new",
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const allLineups = [];
 
     // Count total

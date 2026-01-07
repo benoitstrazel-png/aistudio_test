@@ -9,7 +9,7 @@ const LINEUPS_FILE = path.join(__dirname, '../src/data/lineups_2025_2026.json');
 const STATS_FILE = path.join(__dirname, '../src/data/match_stats_2025_2026.json');
 
 async function scrapeMatch(baseUrl, metadata) {
-    const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox'] });
+    const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 1200 });
     const results = {

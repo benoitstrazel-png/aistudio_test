@@ -114,7 +114,10 @@ async function run() {
         return;
     }
 
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await puppeteer.launch({
+        headless: "new",
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const j16Matches = [];
 
     console.log(`Scraping ${j16Round.matches.length} matches for Journée 16...`);

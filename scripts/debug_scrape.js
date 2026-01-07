@@ -11,7 +11,10 @@ async function run() {
     const url = "https://www.flashscore.fr/match/football/psg-CjhkPw0k/rennes-d2nnj1IE/?mid=h8ptFvjd"; // PSG 5-0 Rennes
     console.log(`Debugging URL: ${url}`);
 
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await puppeteer.launch({
+        headless: "new",
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
 
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');

@@ -82,7 +82,7 @@ async function scrapeReferee(page, url) {
 }
 
 async function run() {
-    const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox'] });
+    const browser = await puppeteer.launch({ headless: "new", args: ['--no-sandbox', '--disable-setuid-sandbox'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 800 });
 
