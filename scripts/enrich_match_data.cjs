@@ -9,6 +9,9 @@ const LINEUPS_FILE = path.join(__dirname, '../src/data/lineups_2025_2026.json');
 const STATS_FILE = path.join(__dirname, '../src/data/match_stats_2025_2026.json');
 
 async function scrapeMatch(baseUrl, metadata) {
+    console.log('--- Environment Check ---');
+    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
+
     const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
     console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
@@ -18,7 +21,9 @@ async function scrapeMatch(baseUrl, metadata) {
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-gpu'
+            '--disable-gpu',
+            '--no-zygote',
+            '--single-process'
         ]
     });
     const page = await browser.newPage();

@@ -34,6 +34,9 @@ async function autoScroll(page) {
 }
 
 async function scrapeMissing() {
+    console.log('--- Environment Check ---');
+    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
+
     const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
     console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
@@ -43,7 +46,9 @@ async function scrapeMissing() {
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-gpu'
+            '--disable-gpu',
+            '--no-zygote',
+            '--single-process'
         ]
     });
     const dataPath = path.join(__dirname, '../src/data/player_photos.json');

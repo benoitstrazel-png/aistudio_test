@@ -5,6 +5,9 @@ async function run() {
     const url = "https://www.flashscore.fr/match/football/psg-CjhkPw0k/rennes-d2nnj1IE/?mid=h8ptFvjd";
     console.log(`Inspecting URL: ${url}`);
 
+    console.log('--- Environment Check ---');
+    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
+
     const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
     console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
@@ -14,7 +17,9 @@ async function run() {
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-gpu'
+            '--disable-gpu',
+            '--no-zygote',
+            '--single-process'
         ]
     });
     const page = await browser.newPage();

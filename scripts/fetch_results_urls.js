@@ -13,6 +13,9 @@ const RESULTS_URL = 'https://www.flashscore.fr/football/france/ligue-1/resultats
 
 async function fetchUrls() {
     console.log('Launching browser to fetch latest results...');
+    console.log('--- Environment Check ---');
+    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
+
     const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
     console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
@@ -22,7 +25,9 @@ async function fetchUrls() {
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-gpu'
+            '--disable-gpu',
+            '--no-zygote',
+            '--single-process'
         ]
     });
     const page = await browser.newPage();

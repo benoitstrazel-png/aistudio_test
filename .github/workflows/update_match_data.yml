@@ -10,9 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+      PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Disable AppArmor restriction
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -36,36 +40,21 @@ jobs:
 
       - name: Fetch Latest Match URLs
         run: node scripts/fetch_results_urls.js
-        env:
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Update Match History
         run: node scripts/scrape_history.js
-        env:
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Scrape Lineups
         run: node scripts/scrape_lineups.js
-        env:
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Enrich Match Stats
         run: node scripts/enrich_match_data.cjs
-        env:
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Generate Final App Data
         run: python scripts/generate_app_data.py
 
       - name: Extract L'Équipe News
         run: node scripts/fetch_lequipe_news.js
-        env:
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
