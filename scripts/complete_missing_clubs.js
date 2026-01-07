@@ -36,7 +36,12 @@ async function autoScroll(page) {
 async function scrapeMissing() {
     const browser = await puppeteer.launch({
         headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu'
+        ]
     });
     const dataPath = path.join(__dirname, '../src/data/player_photos.json');
     let data = {};

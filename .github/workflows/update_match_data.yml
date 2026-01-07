@@ -37,7 +37,7 @@ jobs:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
 
       - name: Scrape Lineups
-        run: node scrape_lineups.js
+        run: node scripts/scrape_lineups.js
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'false'
 
