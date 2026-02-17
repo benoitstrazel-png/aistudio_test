@@ -7,32 +7,25 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Target file (we'll update the existing one or create a new generic one)
+// Target file
 const URLS_FILE = path.join(__dirname, '../src/data/matches_urls_2025_2026.json');
 const RESULTS_URL = 'https://www.flashscore.fr/football/france/ligue-1/resultats/';
 
 async function fetchUrls() {
     console.log('Launching browser to fetch latest results...');
-    console.log('--- Environment Check ---');
-    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
 
-    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
-    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
     const browser = await puppeteer.launch({
-        executablePath: executablePath || undefined,
-        headless: true,
+        headless: true, // "new" is deprecated, usually true or "new" works
         args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
             '--disable-gpu',
-            '--no-zygote',
-            '--single-process'
+            '--window-size=1920,1080'
         ]
     });
     const page = await browser.newPage();
     try {
-        // Optimizing resources
         await page.setRequestInterception(true);
         page.on('request', (req) => {
             const resourceType = req.resourceType();
@@ -47,7 +40,7 @@ async function fetchUrls() {
         console.log(`Navigating to ${RESULTS_URL}...`);
         await page.goto(RESULTS_URL, { waitUntil: 'networkidle2', timeout: 60000 });
 
-        // Accept Cookies if present
+        // Accept Cookies
         try {
             const acceptBtn = await page.$('#onetrust-accept-btn-handler');
             if (acceptBtn) {
@@ -59,6 +52,30 @@ async function fetchUrls() {
 
         console.log('Waiting for match list...');
         await page.waitForSelector('.sportName.soccer');
+
+        // Click "Show more matches" until all are loaded
+        try {
+            let clicks = 0;
+            while (clicks < 15) {
+                // Try finding by text "Montrer plus de matchs"
+                const moreBtn = await page.evaluateHandle(() => {
+                    const links = Array.from(document.querySelectorAll('a'));
+                    return links.find(el => el.textContent.includes('Montrer plus de matchs'));
+                });
+
+                if (moreBtn && await moreBtn.asElement()) {
+                    console.log(`Clicking "Show more matches" (${clicks + 1})...`);
+                    await moreBtn.asElement().click();
+                    await new Promise(r => setTimeout(r, 2000));
+                    clicks++;
+                } else {
+                    console.log("No more 'Show more matches' button found.");
+                    break;
+                }
+            }
+        } catch (e) {
+            console.log("Error clicking show more:", e.message);
+        }
 
         // Extract Data
         const roundsData = await page.evaluate(() => {
@@ -80,9 +97,33 @@ async function fetchUrls() {
                     if (id && currentRound) {
                         const home = row.querySelector('.event__participant--home')?.textContent.trim();
                         const away = row.querySelector('.event__participant--away')?.textContent.trim();
+                        const timeText = row.querySelector('.event__time')?.textContent.trim();
                         const anchor = row.querySelector('a.event__match--oneLine');
                         let url = anchor ? anchor.href : `https://www.flashscore.fr/match/${id}/#/resume`;
-                        currentMatches.push({ url, id, home, away });
+
+                        let date = null;
+                        let timestamp = null;
+
+                        if (timeText) {
+                            // Format usually "25.01. 17:00" or "Hier" or "Aujourd'hui"
+                            // We need to be careful. Since we are in results, it's likely "dd.MM. HH:mm"
+                            // Assuming current year 2026 for now or deducing?
+                            // Actually, let's just store the text as "date" and try to parse TS.
+                            date = timeText;
+
+                            // Simple parsing for "dd.MM. HH:mm"
+                            const dateMatch = timeText.match(/(\d+)\.(\d+)\.\s*(\d+):(\d+)/);
+                            if (dateMatch) {
+                                const [_, day, month, hour, minute] = dateMatch;
+                                // Heuristic for year: Season is 2025-2026.
+                                // If Month > 7 -> 2025. If Month <= 7 -> 2026.
+                                const m = parseInt(month, 10);
+                                const year = m > 7 ? 2025 : 2026;
+                                timestamp = new Date(year, m - 1, parseInt(day, 10), parseInt(hour, 10), parseInt(minute, 10)).getTime();
+                            }
+                        }
+
+                        currentMatches.push({ url, id, home, away, date, timestamp });
                     }
                 }
             });
@@ -104,13 +145,36 @@ async function fetchUrls() {
                 const existingRoundIndex = existingData.findIndex(r => r.round === newEntry.round);
                 const formattedEntry = {
                     round: newEntry.round,
-                    matches: newEntry.matches.map(m => ({ url: m.url }))
+                    matches: newEntry.matches.map(m => ({
+                        url: m.url,
+                        id: m.id,
+                        date: m.date,
+                        timestamp: m.timestamp
+                    }))
                 };
 
                 if (existingRoundIndex !== -1) {
-                    if (existingData[existingRoundIndex].matches.length !== formattedEntry.matches.length) {
-                        console.log(`Updating existing round: ${newEntry.round}`);
-                        existingData[existingRoundIndex] = formattedEntry;
+                    // Normalize for comparison
+                    const newCount = formattedEntry.matches.length;
+                    const oldCount = existingData[existingRoundIndex].matches.length;
+
+                    // Update if count is >= (we want to update metadata even if count is same)
+                    // BUT WE MUST PRESERVE EXISTING FIELDS (like statsUrl)
+                    if (newCount >= oldCount) {
+                        console.log(`Updating existing round: ${newEntry.round} (Count: ${newCount})`);
+
+                        // Merge logic: match new entries with old ones by URL
+                        const mergedMatches = formattedEntry.matches.map(newMatch => {
+                            const oldMatch = existingData[existingRoundIndex].matches.find(om => om.url === newMatch.url);
+                            return oldMatch ? { ...oldMatch, ...newMatch } : newMatch; // New overrides old, but keeps unique old fields? No, we want New to bring metadata, Old to keep statsUrl
+                            // Actually: { ...oldMatch, ...newMatch } will overwrite old fields with new ones.
+                            // oldMatch has statsUrl. newMatch has date/timestamp/id.
+                            // So { ...oldMatch, ...newMatch } works perfectly.
+                        });
+
+                        existingData[existingRoundIndex].matches = mergedMatches;
+                    } else {
+                        console.warn(`Skipping update for ${newEntry.round}: New data has fewer matches (${newCount}) than existing (${oldCount}).`);
                     }
                 } else {
                     console.log(`Adding new round: ${newEntry.round}`);

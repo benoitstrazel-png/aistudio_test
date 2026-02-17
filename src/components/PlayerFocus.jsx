@@ -1,7 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, ZAxis } from 'recharts';
-import { PLAYERS_DB as playersData } from '../data/players_static';
+import { getAggregatedPlayerStats } from '../utils/playerStatsCalculator';
 import { getPlayerPhoto } from '../utils/playerPhotos';
+import tmPositions from '../data/player_positions_tm.json';
 
 import PlayerDetailsModal from './PlayerDetailsModal';
 
@@ -14,10 +15,15 @@ const PlayerFocus = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const ITEMS_PER_PAGE = 30;
 
+    // Load data dynamically
+    const playersData = useMemo(() => getAggregatedPlayerStats(), []);
+
+    // Constants
+
     // Constants
     const TEAM_MAPPING = {
         'Paris S-G': 'PSG',
-        'Saint-Étienne': 'Saint-Etienne' // Just in case
+        'Saint-Étienne': 'Saint-Etienne'
     };
 
     const LEAGUES = [
@@ -38,15 +44,42 @@ const PlayerFocus = () => {
             players = players.filter(p => p.League === selectedLeague);
         }
 
+        // Helper: Match Names
+        const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim() || "";
+        const findPos = (name) => {
+            const n = norm(name);
+            // 1. Direct Match
+            for (const [key, val] of Object.entries(tmPositions)) {
+                if (norm(key) === n) return val.main;
+            }
+            // 2. Fuzzy Match (Last Name + Initial or Contained)
+            const parts = n.split(' ').filter(x => x.length > 1);
+            if (parts.length === 0) return null;
+
+            for (const [key, val] of Object.entries(tmPositions)) {
+                const kNorm = norm(key);
+                // Check if "G. Donnarumma" matches "Gianluigi Donnarumma"
+                // Check if "Donnarumma" matches "Gianluigi Donnarumma"
+                if (kNorm.includes(parts[parts.length - 1]) && (parts.length === 1 || kNorm.includes(parts[0]))) {
+                    return val.main;
+                }
+            }
+            return null;
+        };
+
         // 2. Normalize Data & Filter by search term
         const normalizeString = (str) => {
             return str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
         };
 
-        players = players.map(p => ({
-            ...p,
-            Squad: TEAM_MAPPING[p.Squad] || p.Squad // Normalize Squad Name
-        })).filter(p => {
+        players = players.map(p => {
+            const detailedPos = findPos(p.Player);
+            return {
+                ...p,
+                Squad: TEAM_MAPPING[p.Squad] || p.Squad, // Normalize Squad Name
+                Pos: detailedPos || p.Pos // Use detailed position if found, else fallback
+            };
+        }).filter(p => {
             if (!searchTerm) return true;
             const searchNormalized = normalizeString(searchTerm);
             return normalizeString(p.Player).includes(searchNormalized) ||

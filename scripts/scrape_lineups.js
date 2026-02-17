@@ -1,4 +1,3 @@
-
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
@@ -7,215 +6,282 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Paths
 const URLS_FILE = path.join(__dirname, '../src/data/matches_urls_2025_2026.json');
-const OUTPUT_FILE = path.join(__dirname, '../src/data/lineups_j1_j15.json');
+const OUTPUT_FILE = path.join(__dirname, '../src/data/lineups_2025_2026.json');
+
+const extractId = (url) => {
+    if (!url) return null;
+    // Prioritize mid parameter if present
+    const midMatch = url.match(/[?&]mid=([A-Za-z0-9\-_]+)/);
+    if (midMatch && midMatch[1]) return midMatch[1];
+
+    // Check for standard /match/ID/ format, excluding common words like 'football'
+    const shortMatch = url.match(/\/match\/([A-Za-z0-9\-_]+)/);
+    if (shortMatch && shortMatch[1]) {
+        const id = shortMatch[1];
+        if (id.length === 8 && id !== 'football' && id !== 'soccer') return id;
+    }
+
+    return url;
+};
 
 async function scrapeLineups(browser, url, roundInfo) {
     const page = await browser.newPage();
+    await page.setViewport({ width: 1366, height: 768 });
     try {
-        // Optimizing resources: block images, CSS (selective), and fonts
-        await page.setRequestInterception(true);
-        page.on('request', (req) => {
-            const resourceType = req.resourceType();
-            if (['image', 'media', 'font', 'stylesheet'].includes(resourceType)) {
-                req.abort();
-            } else {
-                req.continue();
+        // Interception disabled to ensure full SPA loading stability
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+
+        // Use ID to construct canonical URL (avoids redirection to future matches)
+        const id = (url && !url.includes('http')) ? url : extractId(url);
+        const cleanUrl = `https://www.flashscore.fr/match/${id}`;
+        console.log(`  Navigating to ${cleanUrl} (ID: ${id})`);
+
+        // 1. Visit Main Match Page (Resume)
+        await page.goto(cleanUrl + '/#/resume', { waitUntil: 'networkidle2', timeout: 60000 });
+
+        // Handle Cookies Immediately
+        try {
+            const acceptBtn = await page.waitForSelector('#onetrust-accept-btn-handler', { timeout: 3000 });
+            if (acceptBtn) {
+                await acceptBtn.click();
+                await new Promise(r => setTimeout(r, 1000));
             }
+        } catch (e) { }
+
+        await page.waitForSelector('.duelParticipant__startTime', { timeout: 10000 }).catch(() => null);
+
+        // 2. Date Check Logic
+        const matchStatus = await page.evaluate(() => {
+            const startTimeEl = document.querySelector('.duelParticipant__startTime');
+            if (!startTimeEl) return { canScrape: true };
+
+            const dateText = startTimeEl.innerText.trim(); // "17.01.2026 14:00"
+            const [datePart, timePart] = dateText.split(' ');
+            if (datePart && timePart) {
+                const [day, month, year] = datePart.split('.').map(Number);
+                const [hour, minute] = timePart.split(':').map(Number);
+                const matchDate = new Date(year, month - 1, day, hour, minute);
+                const now = new Date();
+                if (matchDate > now) {
+                    return { canScrape: false, reason: `Future match: ${dateText}` };
+                }
+            }
+            return { canScrape: true };
         });
 
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
-
-        // Construct Lineups URL (usually match URL + /resume/compositions/ or simply append /compositions)
-        // Flashscore URLs often look like .../match-id/ -> .../match-id/compositions
-        // Let's try appending /compositions if it's not already there? 
-        // Actually, clicking the tab is safer, OR navigating directly if we know the pattern.
-        // Let's deduce the pattern: match_url usually ends with query params like ?mid=...
-        // e.g. https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/?mid=Qc01MMcM
-        // We want: https://www.flashscore.fr/match/football/lorient-jgNAYRGi/lyon-2akflumR/compositions
-
-        // Use Hash URL for Composition
-        // URL is like .../match/... match params usually ignored if we have hash?
-        // Actually, flashscore usually redirects to /match/id/#/resume/compositions
-        // Let's try appending /#/resume/compositions
-        const baseUrl = url.split('?')[0];
-        const lineupsUrl = `${baseUrl}/#/resume/compositions`;
-
-        console.log(`Navigating to ${lineupsUrl}...`);
-        await page.goto(lineupsUrl, { waitUntil: 'networkidle2', timeout: 45000 });
-
-        // Wait for key elements
-        try {
-            await page.waitForSelector('.wcl-lineupSection_s8cM-', { timeout: 10000 });
-        } catch (e) {
-            console.log(`Warning: Lineups section not found for ${url}`);
+        if (!matchStatus.canScrape) {
+            console.log(`  -> Skipped: ${matchStatus.reason}`);
+            await page.close();
+            return { url, round: roundInfo, error: "Future match", skipped: true };
         }
 
-        const data = await page.evaluate(() => {
-            const clean = (txt) => txt ? txt.trim() : '';
-            const containsClass = (el, str) => el.className && typeof el.className === 'string' && el.className.includes(str);
-
-            // 1. Formations
-            // Look for generic pattern in header
-            const bodyText = document.body.innerText;
-            const formationRegex = /(\d\s*-\s*\d(\s*-\s*\d)?(\s*-\s*\d)?)/g;
-            // This is too broad, might catch score. 
-            // Stick to header selectors or specific layout
-
-            let homeFormation = 'N/A';
-            let awayFormation = 'N/A';
-
-            // Try to find elements that look like formation
-            // Select all spans/divs with short text matching pattern
-            const potentialFormations = Array.from(document.querySelectorAll('span, div'))
-                .filter(el => {
-                    const txt = el.innerText?.trim();
-                    return txt && /^\d\s*-\s*\d\s*-\s*\d/.test(txt) && txt.length < 15;
-                });
-
-            if (potentialFormations.length >= 2) {
-                homeFormation = potentialFormations[0].innerText.trim();
-                awayFormation = potentialFormations[1].innerText.trim();
+        // 3. Interactive Tab Click (The Fix)
+        await new Promise(r => setTimeout(r, 2000)); // Extra wait for stability
+        console.log("  Searching for COMPOS tab...");
+        const tabClicked = await page.evaluate(async () => {
+            // Target specific elements likely to be tabs to avoid traversing entire DOM
+            const all = Array.from(document.querySelectorAll('a, button, div, span'));
+            // Look for COMPOS or COMPOSITIONS
+            const target = all.find(el => {
+                const text = el.innerText ? el.innerText.trim().toUpperCase() : '';
+                return (text === 'COMPOS' || text === 'COMPOSITIONS') && el.offsetParent !== null; // check visibility
+            });
+            if (target) {
+                target.click();
+                return true;
             }
+            return false;
+        });
 
-            // 2. Players
-            // Robust generic selector
-            let homeStarters = [];
-            let awayStarters = [];
+        if (!tabClicked) {
+            console.log("  -> Tab COMPOS not found. Trying direct URL as fallback.");
+            await page.goto(cleanUrl + '/#/resume/compositions', { waitUntil: 'networkidle2', timeout: 30000 });
+        } else {
+            console.log("  -> Clicked tab. Waiting for content...");
+            await new Promise(r => setTimeout(r, 3000)); // Wait for SPA render
+        }
 
-            // Find all elements that look like player names
-            // wcl-nameWrapper... or wcl-participantName...
-            // Let's select all elements with class containing 'nameWrapper' OR 'participantName'
-            const wrappers = Array.from(document.querySelectorAll('[class*="nameWrapper"], [class*="participantName"]'));
+        // 4. Extract Data
+        await page.waitForSelector('.wcl-participantName_HhMjB, .wcl-nameWrapper_CgKPn, [class*="participantName"], .lf__lineUp', { timeout: 10000 }).catch(e => console.log("  -> Timeout waiting for player selectors"));
 
-            // Filter out empty or irrelevant
-            // We want those inside the "Starting" section if possible.
-            // But if we can't find sections, let's grab all and rely on count.
+        const data = await page.evaluate(() => {
+            const h = document.querySelector('.duelParticipant__home .participant__participantName')?.innerText.trim() || 'Home';
+            const a = document.querySelector('.duelParticipant__away .participant__participantName')?.innerText.trim() || 'Away';
 
-            // Let's try to find text "(G)" to see where GKs are.
-            // wcl-roles...
-            const roleEls = Array.from(document.querySelectorAll('[class*="roles"]'));
+            const homePlayers = [];
+            const awayPlayers = [];
 
-            // Construct player object from wrapper
-            const validPlayers = [];
-            wrappers.forEach(wrapper => {
-                const name = clean(wrapper.innerText);
-                if (!name || name.length < 2) return;
+            // Helper to parse a player element
+            const parsePlayer = (el) => {
+                const nameEl = el.querySelector('.wcl-name_ZggyJ, .wcl-participantName_HhMjB, [class*="participantName"]');
+                if (!nameEl) return null;
+                const name = nameEl.innerText.trim();
 
-                // Do not duplicate
-                // if (validPlayers.find(p => p.name === name)) return; 
-                // Wait, subs might have same name? No.
+                // Check if Goalkeeper
+                const roleEl = el.querySelector('.wcl-roles_GB-m2, title[title="Gardien"], span[title="Gardien"]');
+                const isGK = roleEl && (roleEl.innerText.includes('(G)') || roleEl.title === 'Gardien');
+                // Note: Flashscore doesn't reliably show DEF/MID/ATT on this view, mostly just (G) and (C)
 
-                // Check if GK
-                // Check siblings/children/parents for (G)
-                // Closest row?
-                const row = wrapper.closest('div[class*="row"]') || wrapper.closest('div[style*="display: flex"]');
-                // Or just distance in DOM?
+                // Clean name (remove (C) if just appended as text, though usually it's a separate element)
+                const cleanName = name.replace(/\(C\)/g, '').trim();
 
-                let isGK = false;
-                if (row) {
-                    if (row.innerText.includes('(G)') || row.innerHTML.includes('(G)')) isGK = true;
-                } else {
-                    // Check parent
-                    if (wrapper.parentNode.innerText.includes('(G)')) isGK = true;
-                }
+                return { name: cleanName, pos: isGK ? 'G' : '' };
+            };
 
-                validPlayers.push({ name, isGK });
+            // Find all sections
+            const sections = Array.from(document.querySelectorAll('.section'));
+
+            sections.forEach(section => {
+                const header = section.querySelector('[data-testid="wcl-headerSection-text"], .wcl-headerSection_SGpOR');
+                if (!header) return;
+
+                const headerText = header.innerText.toUpperCase();
+
+                // We ONLY want Starting XI and Substitutes
+                // "COMPOSITIONS DE DÉPART" or "REMPLAÇANTS"
+                // We must IGNORE "JOUEURS REMPLACÉS", "ABSENTS", "ENTRAINEURS"
+
+                const isStarting = headerText.includes('COMPOSITIONS DE DÉPART') || headerText.includes('STARTING LINEUPS');
+                const isSubs = headerText.includes('REMPLAÇANTS') || headerText.includes('SUBSTITUTES');
+
+                if (!isStarting && !isSubs) return;
+                if (headerText.includes('JOUEURS REMPLACÉS')) return; // Explicit ignore just in case
+
+                const sidesBox = section.querySelector('.lf__sidesBox, .lf__sides');
+                if (!sidesBox) return;
+
+                const sides = sidesBox.querySelectorAll('.lf__side');
+                if (sides.length < 2) return;
+
+                // Home is usually first (0), Away is second (1)
+                const homeSide = sides[0];
+                const awaySide = sides[1];
+
+                const extractFromSide = (sideContainer, targetArray) => {
+                    const playerRows = Array.from(sideContainer.querySelectorAll('.lf__participantNew, .wcl-participant_v7u5b'));
+                    playerRows.forEach(row => {
+                        // Filter out rows that might be sub-headers or empty
+                        if (!row.innerText.trim()) return;
+
+                        const p = parsePlayer(row);
+                        if (p && !targetArray.find(EXIST => EXIST.name === p.name)) {
+                            targetArray.push(p);
+                        }
+                    });
+                };
+
+                extractFromSide(homeSide, homePlayers);
+                extractFromSide(awaySide, awayPlayers);
             });
 
-            // Assumption: Starting XI are the first 22 valid players found?
-            // Usually yes, if we exclude "Suspended" or "Out" lists which come later.
-            // Subs come after Starters.
-
-            if (validPlayers.length >= 22) {
-                homeStarters = validPlayers.slice(0, 11);
-                awayStarters = validPlayers.slice(11, 22);
+            // If completely empty, fallback for safety (though unlikely with new logic if page loaded)
+            if (homePlayers.length === 0 && awayPlayers.length === 0) {
+                // Try generic fallback but strictly exclude known bad sections
+                // (omitted for now to rely on strict parsing safety)
             }
 
+            return { h, a, homePlayers, awayPlayers };
+        });
+
+        await page.close();
+
+        // Check availability
+        if (data.homePlayers.length >= 10 && data.awayPlayers.length >= 10) {
+            console.log(`  -> Found lineups: Home=${data.homePlayers.length}, Away=${data.awayPlayers.length}`);
             return {
-                homeFormation,
-                awayFormation,
-                homeStarters,
-                awayStarters
+                url,
+                round: roundInfo,
+                teams: { home: data.h, away: data.a },
+                lineups: {
+                    homeStarters: data.homePlayers.slice(0, 11),
+                    awayStarters: data.awayPlayers.slice(0, 11),
+                    homeSubstitutes: data.homePlayers.slice(11),
+                    awaySubstitutes: data.awayPlayers.slice(11)
+                }
             };
-        });
-
-        // Basic Info (Teams) to verify
-        const matchInfo = await page.evaluate(() => {
-            const home = document.querySelector('.duelParticipant__home .participant__participantName')?.innerText.trim();
-            const away = document.querySelector('.duelParticipant__away .participant__participantName')?.innerText.trim();
-            return { home, away };
-        });
-
+        } else {
+            console.log(`  -> Too few players: Home=${data.homePlayers.length}, Away=${data.awayPlayers.length}`);
+            return { url, round: roundInfo, error: `Too few players found: Home=${data.homePlayers.length}, Away=${data.awayPlayers.length}`, playersFound: data };
+        }
+    } catch (e) {
         await page.close();
-        return {
-            url,
-            round: roundInfo,
-            teams: matchInfo,
-            lineups: data
-        };
-
-    } catch (error) {
-        console.error(`Error scraping ${url}:`, error.message);
-        await page.close();
-        return { url, round: roundInfo, error: error.message };
+        return { url, round: roundInfo, error: e.message };
     }
 }
 
 async function run() {
-    // Read URLs
-    const rawData = fs.readFileSync(URLS_FILE, 'utf-8');
-    const rounds = JSON.parse(rawData);
+    try {
+        let rounds = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
 
-    console.log('--- Environment Check ---');
-    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
+        // Filter for Journée 1 to 18 as requested
+        rounds = rounds.filter(r => {
+            const match = r.round.match(/Journée (\d+)/);
+            if (match) {
+                const num = parseInt(match[1], 10);
+                return num >= 21 && num <= 22;
+            }
+            return false;
+        });
+        console.log(`Filtered to ${rounds.length} rounds (1-34).`);
 
-    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
-    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
-    const browser = await puppeteer.launch({
-        executablePath: executablePath || undefined,
-        headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--no-zygote',
-            '--single-process'
-        ]
-    });
-    const allLineups = [];
+        let allLineups = fs.existsSync(OUTPUT_FILE) ? JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8')) : [];
+        console.log(`Starting Lineups Scrape. Existing: ${allLineups.length}`);
 
-    // Count total
-    let totalMatches = 0;
-    rounds.forEach(r => totalMatches += r.matches.length);
-    console.log(`Starting Lineup Scrape for ${totalMatches} matches...`);
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
 
-    let processedCount = 0;
+        const save = (data) => {
+            const tmp = `${OUTPUT_FILE}.tmp`;
+            fs.writeFileSync(tmp, JSON.stringify(data, null, 2));
+            fs.renameSync(tmp, OUTPUT_FILE);
+        };
 
-    for (const round of rounds) {
-        console.log(`--- Processing ${round.round} ---`);
+        let processed = 0;
+        let total = 0;
+        rounds.forEach(r => total += r.matches.length);
 
-        // Sequential Processing for stability
-        for (const match of round.matches) {
-            // Stability Delay
-            await new Promise(r => setTimeout(r, 400 + Math.random() * 800));
+        for (const round of rounds) {
+            for (const match of round.matches) {
+                processed++;
+                const id = match.id || extractId(match.url);
+                const existing = allLineups.find(l => extractId(l.url) === id);
 
-            const result = await scrapeLineups(browser, match.url, round.round);
-            allLineups.push(result);
+                if (existing && !existing.error && existing.lineups?.homeStarters?.length >= 10) continue;
 
-            processedCount++;
-            if (processedCount % 5 === 0) {
-                console.log(`Progress: ${processedCount}/${totalMatches}`);
-                // Save partially
-                fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allLineups, null, 2));
+                // Pass ID if URL is missing, otherwise URL
+                const target = match.url || id;
+                console.log(`[${processed}/${total}] ${target}`);
+                const res = await scrapeLineups(browser, target, round.round);
+
+                if (res.lineups?.homeStarters?.length >= 10) {
+                    if (existing) allLineups[allLineups.indexOf(existing)] = res;
+                    else allLineups.push(res);
+                    console.log(`  -> Success: ${res.lineups.homeStarters.length}+${res.lineups.awayStarters.length} found.`);
+                } else if (res.skipped) {
+                    console.log(`  -> Skipped: ${res.error}`);
+                    // Continue, do not exit for skips
+                } else {
+                    console.log(`  -> Failed: ${res.error || 'Incomplete'}`);
+
+                    // STOP EXECUTION AS REQUESTED
+                    console.error("CRITICAL ERROR: Failed to retrieve lineups for match. Halting script.");
+                    await browser.close();
+                    process.exit(1);
+                }
+
+                if (processed % 3 === 0) save(allLineups);
+                await new Promise(r => setTimeout(r, 1000));
             }
         }
+        await browser.close();
+        save(allLineups);
+        console.log("Done.");
+    } catch (e) {
+        console.error(e);
+        process.exit(1);
     }
-
-    await browser.close();
-    console.log(`Done. Saved to ${OUTPUT_FILE}`);
 }
-
 run();

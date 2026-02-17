@@ -118,6 +118,12 @@ const SeasonGoalsChart = ({ schedule = [], currentWeek = 1, teamStats = {} }) =>
     }, [schedule]);
 
 
+    // Calculate the last week with real data for the "Today" bar
+    const referenceWeek = useMemo(() => {
+        const lastReal = [...data].reverse().find(d => d.real !== null);
+        return lastReal ? lastReal.name : `J${currentWeek}`;
+    }, [data, currentWeek]);
+
     const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
             const val = payload[0].value || payload[1]?.value;
@@ -190,7 +196,7 @@ const SeasonGoalsChart = ({ schedule = [], currentWeek = 1, teamStats = {} }) =>
                         />
                         <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'white', strokeWidth: 1, strokeDasharray: '4 4' }} />
 
-                        <ReferenceLine x={`J${currentWeek}`} stroke="#ffffff10" label={{ value: "Aujourd'hui", position: 'top', fill: '#94A3B8', fontSize: 10 }} />
+                        <ReferenceLine x={referenceWeek} stroke="#ffffff10" label={{ value: "Aujourd'hui", position: 'top', fill: '#94A3B8', fontSize: 10 }} />
 
                         <Line
                             type="monotone"

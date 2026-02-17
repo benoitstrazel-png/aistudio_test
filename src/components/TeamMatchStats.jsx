@@ -32,33 +32,42 @@ const TeamMatchStats = ({ selectedTeam, filteredMatches, matchStats }) => {
         let matchCount = 0;
 
         selectedUrls.forEach(url => {
-            const matchData = matchStats[url];
-            if (!matchData || !matchData[period]) return;
+            const entry = matchStats[url];
+            if (!entry || !entry.stats || !entry.stats[period]) return;
+
+            const matchMeta = filteredMatches.find(m => m.url === url);
+            if (!matchMeta) return;
 
             matchCount++;
-            const pStats = matchData[period];
-            const meta = matchData.metadata || {};
-            const isHome = meta.homeTeam === selectedTeam;
+            const pStats = entry.stats[period];
+            const isHome = matchMeta.homeTeam === selectedTeam;
             const sideIdx = isHome ? 0 : 1;
 
             Object.entries(pStats).forEach(([label, values]) => {
                 if (!stats[label]) stats[label] = 0;
 
-                const rawVal = values[sideIdx];
-                let num = 0;
-                if (typeof rawVal === 'string') {
-                    if (rawVal.includes('%')) {
-                        num = parseFloat(rawVal.split('%')[0]);
-                    } else if (rawVal.includes('/')) {
-                        const matchNum = rawVal.match(/(\d+)/);
-                        num = matchNum ? parseInt(matchNum[1]) : 0;
-                    } else {
-                        num = parseFloat(rawVal);
+                const sideKey = sideIdx === 0 ? 'home' : 'away';
+                try {
+                    const rawVal = values[sideKey];
+                    let num = 0;
+                    if (typeof rawVal === 'string') {
+                        if (rawVal.includes('%')) {
+                            num = parseFloat(rawVal.split('%')[0]);
+                        } else if (rawVal.includes('/')) {
+                            const matchNum = rawVal.match(/(\d+)/);
+                            num = matchNum ? parseInt(matchNum[1]) : 0;
+                        } else {
+                            num = parseFloat(rawVal);
+                        }
+                    } else if (typeof rawVal === 'number') {
+                        num = rawVal;
                     }
-                }
 
-                if (!isNaN(num)) {
-                    stats[label] += num;
+                    if (!isNaN(num)) {
+                        stats[label] += num;
+                    }
+                } catch (err) {
+                    console.warn(`Error aggreg stats for ${label} in ${url}`, err);
                 }
             });
         });
@@ -116,7 +125,7 @@ const TeamMatchStats = ({ selectedTeam, filteredMatches, matchStats }) => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                     {matchesWithStats.map(m => {
                         const isSelected = selectedUrls.includes(m.url);
-                        const meta = matchStats[m.url]?.metadata || {};
+                        const meta = matchStats[m.url] || {};
                         return (
                             <button
                                 key={m.url}

@@ -16,11 +16,12 @@ import TeamMatchStats from './TeamMatchStats';
 import APP_DATA from '../data/app_data.json';
 
 const ClubAnalysis = ({ teams, teamStats = {}, schedule = [], playerData = [] }) => {
-    const [selectedTeam, setSelectedTeam] = useState('Lorient');
+    const [selectedTeam, setSelectedTeam] = useState('PSG');
     const [venueFilter, setVenueFilter] = useState('all');
     const [metricFilter, setMetricFilter] = useState('all');
     const [clusterFilter, setClusterFilter] = useState('all');
     const [allMatches, setAllMatches] = useState(historical);
+    const [showSquad, setShowSquad] = useState(false);
 
     // 1. Calculate Clusters Dynamically
     const clusters = useMemo(() => {
@@ -173,14 +174,24 @@ const ClubAnalysis = ({ teams, teamStats = {}, schedule = [], playerData = [] })
                 <>
                     {/* NEW FEATURES */}
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                        {console.log("Rendering PitchMap for:", selectedTeam, "Roster:", rosterData[selectedTeam])}
                         <PitchMap
                             clubName={selectedTeam}
-                            roster={rosterData[selectedTeam]}
+                            roster={rosterData[selectedTeam] || []}
                             stats={stats.players}
                             schedule={APP_DATA.fullSchedule}
                             currentWeek={APP_DATA.currentWeek}
                             matchHistory={allMatches}
+                            showFullSquad={showSquad}
                         />
+                        <div className="flex justify-end p-2">
+                            <button
+                                onClick={() => setShowSquad(!showSquad)}
+                                className="text-xs font-bold text-accent uppercase hover:text-white transition-colors border border-accent/30 px-3 py-1 rounded bg-accent/5 backdrop-blur-sm"
+                            >
+                                {showSquad ? 'Masquer l\'effectif' : 'Voir l\'effectif complet'}
+                            </button>
+                        </div>
                         <div className="min-h-[300px]">
                             <ClubDistributionCharts players={stats.players} />
                         </div>
@@ -237,7 +248,7 @@ const ClubAnalysis = ({ teams, teamStats = {}, schedule = [], playerData = [] })
                                     </div>
                                     <div className="text-right">
                                         <span className="text-xs text-slate-400">Total Fautes (est.)</span>
-                                        <span className="block text-lg font-bold text-white">{stats.discipline.total * 3 + Math.floor(Math.random() * 10)}</span> {/* Mocking total fouls as raw data usually doesn't have it unless detailed */}
+                                        <span className="block text-lg font-bold text-white">{stats.discipline.total * 4}</span> {/* Est. 4 fouls per card-worthy foul approximately */}
                                     </div>
                                 </div>
                             </div>
@@ -298,10 +309,39 @@ const ClubAnalysis = ({ teams, teamStats = {}, schedule = [], playerData = [] })
             }
 
             <div className="text-center text-[10px] text-slate-600 italic mt-4">
-                *Basé sur les données d'événements disponibles (J1-J16).
+                *Données mises à jour en temps réel (Historique complet inclus).
             </div>
         </div >
     );
 };
 
-export default ClubAnalysis;
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false, error: null };
+    }
+
+    static getDerivedStateFromError(error) {
+        return { hasError: true, error };
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return (
+                <div className="p-8 text-center">
+                    <h2 className="text-xl font-bold text-red-500">Something went wrong.</h2>
+                    <pre className="text-left bg-slate-900 p-4 rounded text-xs text-secondary mt-4 overflow-auto">
+                        {this.state.error && this.state.error.toString()}
+                    </pre>
+                </div>
+            );
+        }
+        return this.props.children;
+    }
+}
+
+export default (props) => (
+    <ErrorBoundary>
+        <ClubAnalysis {...props} />
+    </ErrorBoundary>
+);

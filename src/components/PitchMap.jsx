@@ -2,8 +2,47 @@ import React, { useMemo } from 'react';
 import { getPlayerPhoto } from '../utils/playerPhotos';
 import { PLAYERS_DB } from '../data/players_static';
 import ALL_LINEUPS from '../data/lineups_2025_2026.json';
+import TM_POSITIONS from '../data/player_positions_tm.json';
+import CALCULATED_STATS from '../data/player_stats_calculated.json';
 
-const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory }) => {
+// Helper: Map TM Position to G/D/M/A
+const getTmRole = (name) => {
+    const norm = (str) => {
+        if (typeof str !== 'string') return "";
+        return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim();
+    };
+    const n = norm(name);
+
+    let found = null;
+    // 1. Exact Match
+    for (const [key, val] of Object.entries(TM_POSITIONS || {})) {
+        if (norm(key) === n) { found = val; break; }
+    }
+
+    // 2. Fuzzy
+    if (!found) {
+        const parts = n.split(' ').filter(x => x.length > 1);
+        if (parts.length > 0) {
+            for (const [key, val] of Object.entries(TM_POSITIONS || {})) {
+                const kNorm = norm(key);
+                if (kNorm.includes(parts[parts.length - 1]) && (parts.length === 1 || kNorm.includes(parts[0]))) {
+                    found = val;
+                    break;
+                }
+            }
+        }
+    }
+
+    if (found && found.main) {
+        if (found.main.includes('Gardien')) return 'G';
+        if (found.main.includes('Défense')) return 'D';
+        if (found.main.includes('Milieu')) return 'M';
+        if (found.main.includes('Attaquant')) return 'A';
+    }
+    return null; // Fallback
+};
+
+const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory, showFullSquad }) => {
 
     // --- FORMATION COORDINATES DEFINITIONS ---
     const FORMATION_COORDS = {
@@ -159,7 +198,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
             };
             const pNorm = norm(playerName);
 
-            lastMatch.events.forEach(e => {
+            (lastMatch.events || []).forEach(e => {
                 // Check if player involved
                 let involved = false;
                 if (e.players) {
@@ -212,10 +251,80 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
         return { goals, assists };
     };
 
+    // Helper: Extract ID from URL
+    const extractId = (url) => {
+        if (!url) return "";
+        if (!url.includes("http")) return url; // Already an ID
+        const match = url.match(/match\/([^/]+)/);
+        return match ? match[1] : "";
+    };
+
+
+    // Helper: Map TM Position to Side/Role
+    const getDetailedRole = (name) => {
+        const norm = (str) => {
+            if (typeof str !== 'string') return "";
+            return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\./g, "").trim();
+        };
+        const n = norm(name);
+
+        // 1. Exact/Fuzzy Match from JSON
+        let found = null;
+        for (const [key, val] of Object.entries(TM_POSITIONS || {})) {
+            if (norm(key) === n) { found = val; break; }
+        }
+        if (!found) {
+            const parts = n.split(' ').filter(x => x.length > 1);
+            if (parts.length > 0) {
+                for (const [key, val] of Object.entries(TM_POSITIONS || {})) {
+                    const kNorm = norm(key);
+                    if (kNorm.includes(parts[parts.length - 1]) && (parts.length === 1 || kNorm.includes(parts[0]))) {
+                        found = val;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // 2. Map to Role+Side
+        if (found && found.main) {
+            const m = found.main.toLowerCase();
+            // Goalkeepers
+            if (m.includes('gardien')) return { role: 'G', side: 'center', sort: 0 };
+
+            // Defenders
+            if (m.includes('défense')) {
+                if (m.includes('gauche')) return { role: 'D', side: 'left', sort: 0 };
+                if (m.includes('droit')) return { role: 'D', side: 'right', sort: 2 };
+                return { role: 'D', side: 'center', sort: 1 };
+            }
+
+            // Midfielders
+            if (m.includes('milieu')) {
+                if (m.includes('gauche') || m.includes('offensif')) return { role: 'M', side: 'left', sort: 0 }; // often AM are central/free but 'offensif' treated generic here
+                if (m.includes('droit')) return { role: 'M', side: 'right', sort: 2 };
+                if (m.includes('défensif') || m.includes('central')) return { role: 'M', side: 'center', sort: 1 };
+                return { role: 'M', side: 'center', sort: 1 };
+            }
+
+            // Attackers
+            if (m.includes('attaquant')) {
+                if (m.includes('ailier gauche')) return { role: 'A', side: 'left', sort: 0 };
+                if (m.includes('ailier droit')) return { role: 'A', side: 'right', sort: 2 };
+                if (m.includes('avant-centre')) return { role: 'A', side: 'center', sort: 1 };
+                return { role: 'A', side: 'center', sort: 1 };
+            }
+        }
+        return null;
+    };
+
     // 1. Filter roster by position AND "Apps in Lineup" rule
     const { team, dominantFormation, startsMap } = useMemo(() => {
         const safeRoster = roster || [];
-        const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
+        const norm = (str) => {
+            if (typeof str !== 'string') return "";
+            return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+        };
 
         // Helper: Strict token matching
         const namesMatch = (n1, n2) => {
@@ -227,7 +336,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
 
             // If one name is short (e.g. "Castillo"), check if it's contained in the other tokens
             // Ensure we match at least one significant part (e.g. "Castillo" in "Del Castillo")
-            return t1.some(a => t2.some(b => b === a || (b.includes(a) && a.length > 3) || (a.includes(b) && b.length > 3)));
+            return t1.some(a => t2.some(b => b === a || (b.includes(a) && a.length >= 3) || (a.includes(b) && b.length >= 3)));
         };
 
         // A. ANALYZE LINEUPS (Starts Count & Formation)
@@ -278,6 +387,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
 
                 // Track Starts
                 starters.forEach(name => {
+                    if (typeof name !== 'string') return;
                     const n = norm(name.replace(/\(.*\)/g, '')).trim();
                     activePlayerNames.add(n);
                     startsCount.set(n, (startsCount.get(n) || 0) + 1);
@@ -286,6 +396,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
                 // Track Subs (Active Names only)
                 const subs = side === 'home' ? match.lineups.homeSubstitutes : match.lineups.awaySubstitutes;
                 subs.forEach(name => {
+                    if (typeof name !== 'string') return;
                     const n = norm(name.replace(/\(.*\)/g, '')).trim();
                     activePlayerNames.add(n);
                 });
@@ -328,7 +439,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
             }
 
             startersRaw.forEach((rawName, index) => {
-                let cleanName = rawName.replace(/\(.*\)/g, '').trim();
+                let cleanName = typeof rawName === 'string' ? rawName.replace(/\(.*\)/g, '').trim() : "";
 
                 // 1. Check Aliases
                 if (ALIASES[cleanName]) cleanName = ALIASES[cleanName];
@@ -353,7 +464,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
                     else if (index <= counts.D) position = 'D';
                     else if (index <= counts.D + counts.M) position = 'M';
                     else position = 'A';
-                    if (rawName.includes('(G)')) position = 'G';
+                    if (typeof rawName === 'string' && rawName.includes('(G)')) position = 'G';
 
                     transientPlayers.push({
                         name: cleanName,
@@ -401,13 +512,30 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
         const selectedNames = new Set();
 
         const getBest = (pos, count) => {
+            // FIX: If activePlayerNames is empty (no lineup data found), ALLOW ALL players to be candidates.
+            const allowAll = activePlayerNames.size === 0;
+
             const isActive = (pName) => {
                 const normName = norm(pName);
+                if (allowAll) return true; // Fallback
                 if (activePlayerNames.has(normName)) return true;
                 for (let activeName of activePlayerNames) {
                     if (namesMatch(normName, activeName)) return true;
                 }
                 return false;
+            };
+
+            const getMinutes = (pName) => {
+                const n = norm(pName);
+                if (!CALCULATED_STATS) return 0;
+                // Search in CALCULATED_STATS for this club
+                const teamStats = CALCULATED_STATS[clubName] || [];
+                // If team stats empty, try finding player in global values just in case? No, inaccurate.
+                // Just use the roster candidates logic if no stats.
+                if (!teamStats.length) return 0;
+
+                const found = teamStats.find(ps => namesMatch(norm(ps.name), n));
+                return found ? found.minutesPlayed : 0;
             };
 
             // 1. Get Strict matches (Starters or played games)
@@ -416,61 +544,67 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
                 if (selectedNames.has(n)) return false;
                 if (!isActive(p.name)) return false;
 
+                // Determine Position: TM > Roster > Guess
+                const tmDetails = getDetailedRole(p.name);
+                const effectivePos = tmDetails ? tmDetails.role : p.position;
+
                 let dbPlayer = PLAYERS_DB.find(db => namesMatch(norm(db.Player), n));
-                if (dbPlayer && dbPlayer.Starts > 0 && p.position === pos) return true;
-                return p.position === pos && (p.mj !== undefined && p.mj > 0);
+                // Bonus for Starts in DB
+                // Strict pos checking
+                if (effectivePos === pos) return true;
+                return false;
             });
 
-            // Sort by: 1. Starts (Lineups) → 2. Rating → 3. Goals+Assists
+            // Fallback: If not enough strict matches, allow loosely matched positions
+            // e.g. A defender listed as M
+            if (candidates.length < count) {
+                const looseCandidates = fullRoster.filter(p => {
+                    const n = norm(p.name);
+                    if (selectedNames.has(n)) return false;
+                    if (!isActive(p.name)) return false;
+                    if (candidates.includes(p)) return false;
+                    return true;
+                });
+                // Sort loose candidates by rating/starts to pick best available regardless of pos
+                looseCandidates.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+
+                // Try to fill with best available
+                // But we prefer same position if possible
+                const samePosLoose = looseCandidates.filter(p => p.position === pos);
+                const otherPosLoose = looseCandidates.filter(p => p.position !== pos);
+
+                candidates = [...candidates, ...samePosLoose, ...otherPosLoose];
+            }
+
+            // Sort by: 1. Minutes (Calculated) -> 2. Starts (Lineups) → 3. Rating
             candidates.sort((a, b) => {
+                const minA = getMinutes(a.name);
+                const minB = getMinutes(b.name);
+                if (minA !== minB) return minB - minA;
+
                 const sA = getStartsInternal(a.name, startsCount);
                 const sB = getStartsInternal(b.name, startsCount);
                 if (sA !== sB) return sB - sA;
 
-                // If starts are equal, compare rating
                 const ratingA = a.rating || 0;
                 const ratingB = b.rating || 0;
-                if (ratingA !== ratingB) return ratingB - ratingA;
-
-                // If rating also equal, compare decisiveness (goals + assists)
-                const { goals: gA, assists: aA } = getPlayerStats(a.name);
-                const { goals: gB, assists: aB } = getPlayerStats(b.name);
-                const decisiveA = (gA || 0) + (aA || 0);
-                const decisiveB = (gB || 0) + (aB || 0);
-                return decisiveB - decisiveA;
+                return ratingB - ratingA;
             });
-
-            // 2. BACKFILL: Same position, any active player not yet picked
-            if (candidates.length < count) {
-                const extras = fullRoster
-                    .filter(p => {
-                        const n = norm(p.name);
-                        return !selectedNames.has(n) &&
-                            !candidates.includes(p) &&
-                            p.position === pos &&
-                            isActive(p.name);
-                    })
-                    .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
-                candidates = [...candidates, ...extras];
-            }
-
-            // 3. ULTIMATE BACKFILL: Any active player (Out of position allowed)
-            if (candidates.length < count) {
-                const desperationPick = fullRoster
-                    .filter(p => {
-                        const n = norm(p.name);
-                        return !selectedNames.has(n) &&
-                            !candidates.includes(p) &&
-                            isActive(p.name);
-                    })
-                    .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
-                candidates = [...candidates, ...desperationPick];
-            }
 
             // Limit and Register
             const finalSelection = candidates.slice(0, count);
+
+            // POST-SELECTION SORT: Optimize Left->Right placement based on detailed roles
+            // e.g. Left Wing should be index 0, Right Wing index last
+            finalSelection.sort((a, b) => {
+                const roleA = getDetailedRole(a.name);
+                const roleB = getDetailedRole(b.name);
+                const sortA = roleA ? roleA.sort : 1; // Default to Center (1)
+                const sortB = roleB ? roleB.sort : 1;
+                return sortA - sortB;
+            });
+
+
             finalSelection.forEach(p => selectedNames.add(norm(p.name)));
             return finalSelection;
         };
@@ -483,7 +617,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
             A: getBest('A', targetCounts.A),
         };
 
-        return { team, dominantFormation: topFormation, startsMap: startsCount };
+        return { team, dominantFormation: topFormation, startsMap: startsCount, fullRoster };
 
     }, [roster, clubName]);
 
@@ -552,7 +686,7 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
 
         // Get additional player info from DB using enhanced matching
         const normalizeName = (name) => {
-            if (!name) return "";
+            if (!name || typeof name !== 'string') return "";
             return name.toLowerCase()
                 .normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "")
@@ -761,6 +895,95 @@ const PitchMap = ({ clubName, roster, stats, schedule, currentWeek, matchHistory
             </div>
         );
     };
+
+    // Conditional Render: Full Squad View
+    if (showFullSquad) {
+        // Sort full roster by Starts then Rating
+        const sortedRoster = [...(fullRoster || [])].sort((a, b) => {
+            const getStartsLocal = (name) => {
+                const norm = (str) => str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
+                const n = norm(name);
+
+                const val = startsMap?.get(n);
+                if (val !== undefined) return val;
+                // Fuzzy
+                if (startsMap) {
+                    for (let [k, v] of startsMap) {
+                        if (k.includes(n) || n.includes(k)) return v;
+                    }
+                }
+                return 0;
+            };
+
+            const sA = getStartsLocal(a.name);
+            const sB = getStartsLocal(b.name);
+            if (sA !== sB) return sB - sA;
+            return (b.rating || 0) - (a.rating || 0);
+        });
+
+        return (
+            <div className="card bg-[#0B1426] p-4 flex flex-col items-center h-full min-h-[500px]">
+                <div className="flex justify-between w-full mb-4 items-center">
+                    <h4 className="text-secondary text-xs uppercase font-bold">📋 Effectif Complet ({clubName})</h4>
+                    <span className="text-[10px] text-slate-400 font-mono border border-slate-700 px-2 py-0.5 rounded bg-black/20">
+                        {sortedRoster.length} Joueurs
+                    </span>
+                </div>
+
+                <div className="w-full overflow-y-auto max-h-[750px] custom-scrollbar pr-2">
+                    <table className="w-full text-left text-xs text-slate-300">
+                        <thead className="sticky top-0 bg-[#0B1426] z-10">
+                            <tr className="text-slate-500 border-b border-white/10 uppercase font-bold text-[10px]">
+                                <th className="p-2">Joueur</th>
+                                <th className="p-2">Pos</th>
+                                <th className="p-2 text-right">J.</th>
+                                <th className="p-2 text-right">Note</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-white/5">
+                            {sortedRoster.map((p, i) => {
+                                const tmRole = getTmRole(p.name);
+                                // Find starts
+                                const norm = (str) => {
+                                    if (typeof str !== 'string') return "";
+                                    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+                                };
+                                const n = norm(p.name);
+                                let starts = startsMap?.get(n) || 0;
+                                if (starts === 0 && startsMap) {
+                                    for (let [k, v] of startsMap) {
+                                        if (k === n || (k.includes(n) && n.length > 3) || (n.includes(k) && k.length > 3)) starts = v;
+                                    }
+                                }
+
+                                return (
+                                    <tr key={i} className="hover:bg-white/5 transition-colors">
+                                        <td className="p-2 font-bold text-white flex items-center gap-2">
+                                            {getPlayerPhoto(clubName, p.name) && (
+                                                <img src={getPlayerPhoto(clubName, p.name)} alt="" className="w-6 h-6 rounded-full border border-slate-600 object-cover" />
+                                            )}
+                                            {p.name}
+                                        </td>
+                                        <td className="p-2">
+                                            <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${(tmRole === 'G' || p.position === 'G') ? 'bg-yellow-500/20 text-yellow-400' :
+                                                (tmRole === 'D' || p.position === 'D') ? 'bg-blue-500/20 text-blue-400' :
+                                                    (tmRole === 'M' || p.position === 'M') ? 'bg-emerald-500/20 text-emerald-400' :
+                                                        'bg-red-500/20 text-red-400'
+                                                }`}>
+                                                {tmRole || p.position || '?'}
+                                            </span>
+                                        </td>
+                                        <td className="p-2 text-right text-emerald-400 font-mono">{starts > 0 ? starts : '-'}</td>
+                                        <td className="p-2 text-right font-bold text-accent">{p.rating || '-'}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="card bg-[#0B1426] p-4 flex flex-col items-center h-full min-h-[500px]" >

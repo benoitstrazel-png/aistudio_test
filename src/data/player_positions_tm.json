@@ -1,0 +1,4184 @@
+{
+  "Gianluigi Donnarumma": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Lucas Chevalier": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "6 nov. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/463600-1708342501.jpg?lm=1"
+  },
+  "Matvey Safonov": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Achraf Hakimi": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "4 nov. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/398073-1672304327.jpg?lm=1"
+  },
+  "Nuno Mendes": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "19 juin 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/616341-1749417164.jpg?lm=1"
+  },
+  "marquinhos": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "14 mai 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/181767-1672303747.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:47:16.072Z"
+  },
+  "Willian Pacho": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "16 oct. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/661171-1696508666.jpg?lm=1"
+  },
+  "Lucas Hernandez": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "14 févr. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/281963-1667830435.jpg?lm=1"
+  },
+  "Lucas Beraldo": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "24 nov. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/872171-1715107660.jpg?lm=1"
+  },
+  "Ilya Zabarnyi": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "1 sept. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/659089-1760065378.jpg?lm=1"
+  },
+  "vitinha": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "13 févr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/487469-1749415169.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T18:25:30.353Z"
+  },
+  "Joao Neves": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "27 sept. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/670681-1701295511.jpg?lm=1"
+  },
+  "Warren Zaïre-Emery": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "8 mars 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/810092-1672303575.jpg?lm=1"
+  },
+  "Fabian Ruiz": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "3 avr. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/350219-1718958379.jpg?lm=1"
+  },
+  "lee kang-in": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "19 févr. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/557149-1703978046.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:44:54.657Z"
+  },
+  "Senny Mayulu": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "17 mai 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/903693-1716562599.jpg?lm=1"
+  },
+  "Bradley Barcola": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "2 sept. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/708265-1653406915.jpg?lm=1"
+  },
+  "Ousmane Dembélé": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "15 mai 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/288230-1684148641.jpg?lm=1"
+  },
+  "Gonçalo Ramos": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "30 mars 1986",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/25557-1694502812.jpg?lm=1"
+  },
+  "Khvicha Kvaratskhelia": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "12 févr. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/502670-1708553120.jpg?lm=1"
+  },
+  "Désiré Doué": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "3 juin 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/914562-1667317075.jpg?lm=1"
+  },
+  "Marco Asensio": {
+    "main": "Milieu - Milieu offensif",
+    "other": []
+  },
+  "Ibrahim Mbaye": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "24 janv. 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1185888-1759430450.jpg?lm=1"
+  },
+  "Geronimo Rulli": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "20 mai 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/229604-1698670758.jpg?lm=1"
+  },
+  "Jeffrey de Lange": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Leonardo Balerdi": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "26 janv. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/603079-1707125368.jpg?lm=1"
+  },
+  "Chancel Mbemba": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Derek Cornelius": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Michael Murillo": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "11 févr. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/354482-1719228286.jpg?lm=1"
+  },
+  "Benjamin Pavard": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "28 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/353366-1713819215.jpg?lm=1"
+  },
+  "Nayef Aguerd": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "30 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/361914-1659355782.jpg?lm=1"
+  },
+  "Lilian Brassier": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "2 nov. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/485960-1736237346.jpg?lm=1"
+  },
+  "Pierre-Emile Højbjerg": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Angel Gomes": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "31 août 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/392770-1666690396.jpg?lm=1"
+  },
+  "Timothy Weah": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "22 févr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/370846-1692277669.jpg?lm=1"
+  },
+  "Matt O'Riley": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "21 nov. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/406634-1661800636.jpg?lm=1"
+  },
+  "Bilal Nadir": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Mason Greenwood": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "1 oct. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/532826-1693987766.jpg?lm=1"
+  },
+  "Pierre-Emerick Aubameyang": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "18 juin 1989",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/58864-1762262625.jpg?lm=1"
+  },
+  "Igor Paixao": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "28 juin 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/653610-1723200804.jpg?lm=1"
+  },
+  "Robinio Vaz": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "17 févr. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1131161-1761232363.jpg?lm=1"
+  },
+  "Amine Gouiri": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "16 févr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/418659-1762353913.jpg?lm=1"
+  },
+  "Elye Wahi": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "2 janv. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/659542-1753984614.jpg?lm=1"
+  },
+  "Jonathan Rowe": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Lucas Perri": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Anthony Lopes": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "1 oct. 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/60561-1640775949.jpg?lm=1"
+  },
+  "Moussa Niakhaté": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "8 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/291200-1700737208.jpg?lm=1"
+  },
+  "Duje Caleta-Car": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Nicolas Tagliafico": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "31 août 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/131225-1668181437.jpg?lm=1"
+  },
+  "Clinton Mata": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "7 nov. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/187718-1616529648.jpg?lm=1"
+  },
+  "Abner": {
+    "main": "Défense - Arrière gauche",
+    "other": []
+  },
+  "Nemanja Matic": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Corentin Tolisso": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "3 août 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/190393-1672830594.jpg?lm=1"
+  },
+  "Maxence Caqueret": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Jordan Veretout": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Rayan Cherki": {
+    "main": "Milieu - Milieu offensif",
+    "other": []
+  },
+  "Alexandre Lacazette": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Malick Fofana": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "22 déc. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/787232-1691614259.jpg?lm=1"
+  },
+  "Georges Mikautadze": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Said Benrahma": {
+    "main": "Attaquant - Ailier gauche",
+    "other": []
+  },
+  "Ernest Nuamah": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Philipp Köhn": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Radoslaw Majecki": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "16 nov. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/346546-1672484869.jpg?lm=1"
+  },
+  "Thilo Kehrer": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "21 sept. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/228948-1737490227.jpg?lm=1"
+  },
+  "Mohammed Salisu": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "17 avr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/563963-1668428508.jpg?lm=1"
+  },
+  "Wilfried Singo": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "vanderson": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "21 juin 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/789082-1655282894.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:12:12.312Z"
+  },
+  "caio henrique": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "31 juil. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/420064-1614091193.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:10:18.787Z"
+  },
+  "Denis Zakaria": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Lamine Camara": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "30 juin 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/324795-1710182811.jpg?lm=1"
+  },
+  "Aleksandr Golovin": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "30 mai 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/263918-1614091807.jpg?lm=1"
+  },
+  "Maghnes Akliouche": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "25 févr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/745200-1717406573.jpg?lm=1"
+  },
+  "Takumi Minamino": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "16 janv. 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/165793-1737490576.jpg?lm=1"
+  },
+  "Eliesse Ben Seghir": {
+    "main": "Attaquant - Ailier gauche",
+    "other": []
+  },
+  "Folarin Balogun": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "3 juil. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/503770-1672838317.jpg?lm=1"
+  },
+  "Breel Embolo": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "14 févr. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/237662-1737490753.jpg?lm=1"
+  },
+  "George Ilenikhena": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "16 août 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1004834-1702545922.jpg?lm=1"
+  },
+  "Bafodé Diakité": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "alexsandro": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "9 août 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/648020-1666689768.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:52.318Z"
+  },
+  "Thomas Meunier": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "12 sept. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/100986-1741073106.jpg?lm=1"
+  },
+  "Tiago Santos": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Gabriel Gudmundsson": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Benjamin André": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Ayyoub Bouaddi": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "2 oct. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1097139-1741119960.jpg?lm=1"
+  },
+  "Edon Zhegrova": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Jonathan David": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Osame Sahraoui": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "11 juin 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/580657-1723713882.jpg?lm=1"
+  },
+  "Matias Fernandez-Pardo": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "3 févr. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/724129-1762353726.jpg?lm=1"
+  },
+  "Wesley Saïd": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Adrien Thomasson": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "10 déc. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/215977-1673538425.jpg?lm=1"
+  },
+  "Ruben Aguilar": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "26 avr. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/203746-1614090581.jpg?lm=1"
+  },
+  "Florian Sotoca": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Malang Sarr": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "29 août 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/910905-1732575264.png?lm=1"
+  },
+  "Jonathan Gradit": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Brice Samba": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "25 avr. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/191056-1602242038.jpg?lm=1"
+  },
+  "Steve Mandanda": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Alidu Seidu": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "4 juin 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/798404-1679507806.jpg?lm=1"
+  },
+  "Christopher Wooh": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Adrien Truffert": {
+    "main": "Défense - Arrière gauche",
+    "other": []
+  },
+  "Hans Hateboer": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Azor Matusiwa": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Glen Kamara": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Ludovic Blas": {
+    "main": "Milieu - Milieu droit",
+    "other": [],
+    "birthDate": "31 déc. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/288225-1762353535.jpg?lm=1"
+  },
+  "Albert Gronbaek": {
+    "main": "Milieu - Milieu offensif",
+    "other": []
+  },
+  "Arnaud Kalimuendo": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Jota": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Abdelhamid Ait Boudlal": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Jonathan Clauss": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "25 sept. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/175639-1756827010.jpg?lm=1"
+  },
+  "Jeremie Boga": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "3 janv. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/216569-1756824408.jpg?lm=1"
+  },
+  "Melvin Bard": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "6 nov. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/532775-1756826939.jpg?lm=1"
+  },
+  "Terem Moffi": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "25 mai 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/538874-1756824426.jpg?lm=1"
+  },
+  "Morgan Sanson": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "18 août 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/173988-1581498118.jpg?lm=1"
+  },
+  "dante": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "18 oct. 1983",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/16136-1756826930.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:22:10.939Z"
+  },
+  "Ali Abdi": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "20 déc. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/211474-1756827001.jpg?lm=1"
+  },
+  "Tanguy Ndombele": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Marco Bizot": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Brendan Chardonnet": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "22 déc. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/250779-1582538208.jpg?lm=1"
+  },
+  "Julien Le Cardinal": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Kenny Lala": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "3 oct. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/174196-1677254936.jpg?lm=1"
+  },
+  "Jordan Amavi": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Mahdi Camara": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Hugo Magnetti": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "30 mai 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/474662-1582538510.jpg?lm=1"
+  },
+  "Romain Del Castillo": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Ludovic Ajorque": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "25 févr. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/283994-1692000251.jpg?lm=1"
+  },
+  "Mama Baldé": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "18 oct. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/636688-1662836200.jpg?lm=1"
+  },
+  "Abdallah Sima": {
+    "error": "Extraction failed (Selector mismatch)",
+    "birthDate": "17 juin 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/776798-1672669896.jpg?lm=1",
+    "main": "Attaquant - Ailier gauche",
+    "other": []
+  },
+  "Obed Nkambadio": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "7 févr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/750878-1750172738.jpg?lm=1"
+  },
+  "Timothée Kolodziejczak": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "1 oct. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/84085-1501486541.jpg?lm=1"
+  },
+  "Moustapha Mbow": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "8 mars 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/649026-1639678186.png?lm=1"
+  },
+  "Mathys Tourraine": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Tuomas Ollila": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "25 avr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/433887-1726155378.png?lm=1"
+  },
+  "Pierre Lees-Melou": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "25 mai 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/377393-1710182831.jpg?lm=1"
+  },
+  "Maxime Lopez": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "4 déc. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/290862-1692883050.jpg?lm=1"
+  },
+  "Ilan Kebbal": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "10 juil. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/739769-1762353660.jpg?lm=1"
+  },
+  "Vincent Marchetti": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "4 juil. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/374040-1629979268.jpg?lm=1"
+  },
+  "Jean-Philippe Krasso": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "17 juil. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/358515-1694785707.jpg?lm=1"
+  },
+  "Alimami Gory": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "30 août 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/435492-1566223909.png?lm=1"
+  },
+  "Nouha Dicko": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Djordje Petrovic": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Saidou Sow": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Abakar Sylla": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Guela Doué": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Andrey Santos": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "16 juil. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/800176-1699348390.jpg?lm=1"
+  },
+  "Habib Diarra": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Sebastian Nanasi": {
+    "main": "Milieu - Milieu gauche",
+    "other": [],
+    "birthDate": "16 mai 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/579928-1732576164.png?lm=1"
+  },
+  "Dilane Bakwa": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Emanuel Emegha": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "3 févr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/559328-1732575392.png?lm=1"
+  },
+  "Diego Moreira": {
+    "main": "Milieu - Milieu gauche",
+    "other": [],
+    "birthDate": "6 août 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/655006-1732575837.png?lm=1"
+  },
+  "Guillaume Restes": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Rasmus Nicolaisen": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "16 mars 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/283227-1626438001.jpg?lm=1"
+  },
+  "Charlie Cresswell": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "17 août 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/597659-1641461698.jpg?lm=1"
+  },
+  "Djibril Sidibé": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Gabriel Suazo": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Vincent Sierro": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Cristian Casseres": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "20 janv. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/467632-1646141354.JPG?lm=1"
+  },
+  "Yann Gboho": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "14 janv. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/463613-1672485001.jpg?lm=1"
+  },
+  "Zakaria Aboukhlal": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Joshua King": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Frank Magri": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "4 sept. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/807689-1653399470.jpg?lm=1"
+  },
+  "Benjamin Lecomte": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Becir Omeragic": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Modibo Sagnan": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Issiaga Sylla": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Falaye Sacko": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Teji Savanier": {
+    "main": "Milieu - Milieu offensif",
+    "other": []
+  },
+  "Joris Chotard": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "24 sept. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/624037-1702663463.JPG?lm=1"
+  },
+  "Jordan Ferri": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Arnaud Nordin": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Akor Adams": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Moussa Tamari": {
+    "error": "Extraction failed (Selector mismatch)",
+    "birthDate": "10 juin 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/551505-1702663087.JPG?lm=1",
+    "main": "Milieu - Milieu gauche",
+    "other": []
+  },
+  "Yehvann Diouf": {
+    "error": "Extraction failed (Selector mismatch)",
+    "birthDate": "17 mai 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/448632-1756822717.jpg?lm=1",
+    "main": "Gardien",
+    "other": []
+  },
+  "Emmanuel Agbadou": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Joseph Okumu": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Aurelio Buta": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Sergio Akieme": {
+    "main": "Défense - Arrière gauche",
+    "other": []
+  },
+  "Marshall Munetsi": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Teddy Teuma": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Valentin Atangana": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Junya Ito": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Keito Nakamura": {
+    "main": "Attaquant - Ailier gauche",
+    "other": []
+  },
+  "Oumar Diakité": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Alban Lafont": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Nicolas Pallois": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Jean-Charles Castelletto": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Nathan Zézé": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Pedro Chirivella": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Douglas Augusto": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Johann Lepenant": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Moses Simon": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "21 avr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/566931-1729778226.jpg?lm=1"
+  },
+  "mostafa mohamed": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "28 nov. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/462348-1703065403.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:50:30.953Z"
+  },
+  "Tino Kadewere": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Arthur Desmas": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Arouna Sangante": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "12 avr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/768380-1738244271.jpg?lm=1"
+  },
+  "Gautier Lloris": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "26 déc. 1986",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/17965-1741202772.jpg?lm=1"
+  },
+  "Christopher Operi": {
+    "main": "Défense - Arrière gauche",
+    "other": []
+  },
+  "Abdoulaye Touré": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Daler Kuzyaev": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Yassine Kechta": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "25 févr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/667967-1675949617.jpg?lm=1"
+  },
+  "Josué Casimir": {
+    "error": "Extraction failed (Selector mismatch)",
+    "birthDate": "24 sept. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/763182-1661006947.jpg?lm=1",
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Emmanuel Sabbi": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Donovan Leon": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "20 août 1944",
+    "image": "https://tmssl.akamaized.net//images/wappen/head/4941.png?lm=1720087488"
+  },
+  "Jubal": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Gabriel Osho": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Paul Joly": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Raveloson": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Elisha Owusu": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "7 janv. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/207593-1740597428.jpg?lm=1"
+  },
+  "Gaetan Perrin": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Lassine Sinayoko": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "8 déc. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/569140-1635851830.jpg?lm=1"
+  },
+  "Hamed Junior Traoré": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Hervé Koffi": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "16 oct. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/415383-1672499883.jpg?lm=1"
+  },
+  "Yahia Fofana": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Cedric Hountondji": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Jordan Lefort": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "9 août 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/192492-1750956054.png?lm=1"
+  },
+  "Himad Abdelli": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "17 nov. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/592979-1750956367.png?lm=1"
+  },
+  "Jean-Eudes Aholou": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Harris Belkebla": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "28 janv. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/138055-1750956421.png?lm=1"
+  },
+  "Jim Allevinah": {
+    "main": "Attaquant - Ailier droit",
+    "other": []
+  },
+  "Lois Diony": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Farid El Melali": {
+    "main": "Attaquant - Ailier gauche",
+    "other": []
+  },
+  "Mohamed Amine Sbai": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "5 nov. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/851220-1759940291.jpg?lm=1"
+  },
+  "Gautier Larsonneur": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Yunis Abdelhamid": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Dylan Batubinsika": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Dennis Appiah": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Mathieu Cafaro": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "25 mars 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/399383-1727721832.jpg?lm=1"
+  },
+  "Aimen Moueffek": {
+    "main": "Milieu - Milieu central",
+    "other": []
+  },
+  "Zuriko Davitashvili": {
+    "main": "Attaquant - Ailier gauche",
+    "other": []
+  },
+  "Ibrahim Sissoko": {
+    "error": "Extraction failed (Selector mismatch)"
+  },
+  "Lucas Stassin": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Yvon Mvogo": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "6 juin 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/147051-1719215379.jpg?lm=1"
+  },
+  "Montassar Talbi": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "9 mai 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/496706-1628493934.png?lm=1"
+  },
+  "Julien Laporte": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Laurent Abergel": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "1 févr. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/238626-1704576934.jpg?lm=1"
+  },
+  "Julien Ponceau": {
+    "main": "Milieu - Milieu offensif",
+    "other": []
+  },
+  "Mohamed Bamba": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "26 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/292818-1740681705.jpg?lm=1"
+  },
+  "Eli Junior Kroupi": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Alexsandro Oukidja": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Matthieu Udol": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "20 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/344886-1697463909.png?lm=1"
+  },
+  "Ismael Traoré": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Kevin Van Den Kerkhof": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Gauthier Hein": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "7 août 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/344892-1648068537.jpg?lm=1"
+  },
+  "Ablie Jallow": {
+    "main": "Milieu - Milieu droit",
+    "other": []
+  },
+  "Cheikh Sabaly": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "4 mars 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/568696-1697465257.png?lm=1"
+  },
+  "Pagis P.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "29 déc. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/810411-1678723431.jpg?lm=1"
+  },
+  "Lepaul E.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "18 avr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/461607-1750956916.png?lm=1"
+  },
+  "Panichelli J.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "7 oct. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1064871-1727113388.jpg?lm=1"
+  },
+  "Fati A.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "31 oct. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/466810-1721828228.jpg?lm=1"
+  },
+  "Ndjantou Q.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "23 juil. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1053208-1759747972.jpg?lm=1"
+  },
+  "Jangeal M.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "24 juin 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1185887-1759353509.jpg?lm=1"
+  },
+  "Luis Enrique": {
+    "error": "Extraction failed"
+  },
+  "Trapp K.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "8 juil. 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/45672-1724772525.jpg?lm=1"
+  },
+  "Sangui N.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "27 févr. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/955281-1723838815.png?lm=1"
+  },
+  "otavio": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "21 avr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/818495-1708599170.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T18:28:21.388Z"
+  },
+  "De Smet T.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "5 juin 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/340177-1723835956.png?lm=1"
+  },
+  "Ikone J.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "2 mai 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/324690-1697179025.jpg?lm=1"
+  },
+  "Geubbels W.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "16 août 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/463620-1755009181.png?lm=1"
+  },
+  "Pénalty": {
+    "error": "Extraction failed"
+  },
+  "Dao M.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "20 nov. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1047103-1738587119.jpg?lm=1"
+  },
+  "Gilli S.": {
+    "error": "Extraction failed"
+  },
+  "Koleosho L.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "15 sept. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/745461-1759159569.jpg?lm=1"
+  },
+  "Chergui S.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "6 févr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/668167-1661872850.jpg?lm=1"
+  },
+  "Doucet L.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "14 sept. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/830265-1741881062.jpg?lm=1"
+  },
+  "Hamel P.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "3 févr. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/203504-1583142506.jpg?lm=1"
+  },
+  "Coudert G.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "3 avr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/525155-1632761084.jpg?lm=1"
+  },
+  "Zogbé L.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "24 mars 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1144999-1725882803.jpg?lm=1"
+  },
+  "Coulibaly S.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "30 juil. 1989",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/315040-1523617285.jpg?lm=1"
+  },
+  "Guindo D.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "1 août 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/617698-1709896279.jpg?lm=1"
+  },
+  "Labeau Lascary R.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "3 mars 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/917778-1676913774.jpg?lm=1"
+  },
+  "Mboup P.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "19 oct. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/979551-1709884981.png?lm=1"
+  },
+  "Tousart L.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "29 avr. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/353948-1691614305.jpg?lm=1"
+  },
+  "Locko B.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "6 mai 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/805908-1639674661.png?lm=1"
+  },
+  "Diaz Jr. M.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "23 juil. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1009596-1693565221.png?lm=1"
+  },
+  "Doumbia K.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "24 sept. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/296356-1672670377.jpg?lm=1"
+  },
+  "Dina Ebimbe J.": {
+    "main": "Milieu - Milieu droit",
+    "other": [],
+    "birthDate": "21 nov. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/536482-1663065378.jpg?lm=1"
+  },
+  "Makalou H.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "15 juil. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1200289-1701678439.jpg?lm=1"
+  },
+  "Bourgault J.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "14 sept. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1030153-1727207548.png?lm=1"
+  },
+  "Senaya M.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "28 janv. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/830890-1732575526.png?lm=1"
+  },
+  "Mensah G.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "18 juil. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/397171-1565700436.jpg?lm=1"
+  },
+  "Matondo R.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "13 mars 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1241211-1750676329.jpg?lm=1"
+  },
+  "Danois K.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "28 juin 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/743496-1672330479.jpg?lm=1"
+  },
+  "Osman I.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "29 nov. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1110406-1697036818.jpg?lm=1"
+  },
+  "Coulibaly L.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "30 juil. 1989",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/315040-1523617285.jpg?lm=1"
+  },
+  "Diousse A.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "20 sept. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/287635-1657714916.jpg?lm=1"
+  },
+  "Oppegard F.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "7 août 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/539665-1621853412.jpg?lm=1"
+  },
+  "Rodin R.": {
+    "error": "Not a player page",
+    "birthDate": "2 mars 2006",
+    "main": "Avant-centre",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Devernois T.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "18 oct. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Sulc P.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "29 déc. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/500053-1718742395.jpg?lm=1"
+  },
+  "Said W.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "19 avr. 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/182916-1593971458.jpg?lm=1"
+  },
+  "Diop S.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "9 juin 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/569389-1756824417.jpg?lm=1"
+  },
+  "Del Castillo R.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "29 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/353399-1593964996.jpg?lm=1"
+  },
+  "Edouard O.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "4 mars 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/659521-1764158833.png?lm=1"
+  },
+  "Thauvin F.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "26 janv. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/184892-1759159434.jpg?lm=1"
+  },
+  "Haraldsson H.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "10 avr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/652275-1662491592.jpg?lm=1"
+  },
+  "Godo M.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "14 mars 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/992686-1726650122.jpg?lm=1"
+  },
+  "Igamane H.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "2 nov. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/885445-1756290289.jpg?lm=1"
+  },
+  "Abline M.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "28 mars 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/659543-1704213657.jpg?lm=1"
+  },
+  "Giroud O.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "30 sept. 1986",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/82442-1725258600.jpg?lm=1"
+  },
+  "Cherif S.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "15 déc. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/986288-1750956854.png?lm=1"
+  },
+  "Cho M.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "19 janv. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/670847-1756824395.jpg?lm=1"
+  },
+  "Diallo H.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "4 mai 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/229005-1725822889.png?lm=1"
+  },
+  "Coulibaly M.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "30 juil. 1989",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/315040-1523617285.jpg?lm=1"
+  },
+  "Soumano S.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "3 janv. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/704270-1645697334.jpg?lm=1"
+  },
+  "Guirassy B.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "12 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/270541-1755989642.jpg?lm=1"
+  },
+  "Hidalgo S.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "17 févr. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/989574-1720465616.png?lm=1"
+  },
+  "Soumare I.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "27 févr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/344605-1746644742.jpg?lm=1"
+  },
+  "Ndiaye R.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "6 mars 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/623570-1765811829.jpg?lm=1"
+  },
+  "Donnum A.": {
+    "main": "Milieu - Milieu droit",
+    "other": [],
+    "birthDate": "20 avr. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/476836-1678012976.jpg?lm=1"
+  },
+  "emersonn": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "16 juil. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/743599-1744294419.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:39:44.919Z"
+  },
+  "El Arabi Y.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "3 févr. 1987",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/96533-1447230875.jpg?lm=1"
+  },
+  "Correia F.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "22 janv. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/479648-1710239596.jpg?lm=1"
+  },
+  "Makengo J.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "22 juin 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/92181-1598374248.jpg?lm=1"
+  },
+  "abner vinicius": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "15 janv. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1083634-1758919067.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:42:43.457Z"
+  },
+  "Peter P.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "9 août 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1103958-1758210995.jpg?lm=1"
+  },
+  "Meite M.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "11 oct. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1141560-1741011360.JPG?lm=1"
+  },
+  "Mbappé E.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "20 déc. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/342229-1682683695.jpg?lm=1"
+  },
+  "Tosin A.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "26 juin 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/239647-1647955304.jpg?lm=1"
+  },
+  "Dieng B.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "16 oct. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/410427-1615125228.jpg?lm=1"
+  },
+  "endrick": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "21 juil. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/971570-1723665994.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:16:59.997Z"
+  },
+  "Toure A.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "28 mars 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/708678-1645641626.jpg?lm=1"
+  },
+  "Baidoo S.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "31 mars 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/655217-1722523870.png?lm=1"
+  },
+  "Morton T.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "31 oct. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/618494-1719220555.jpg?lm=1"
+  },
+  "Akpa C.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "24 nov. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/806793-1709202392.jpg?lm=1"
+  },
+  "Belkhdim Y.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "14 févr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/807688-1750956388.png?lm=1"
+  },
+  "Kouassi A.": {
+    "main": "Milieu - Milieu gauche",
+    "other": [],
+    "birthDate": "11 sept. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1088199-1741881661.jpg?lm=1"
+  },
+  "Hojbjerg P.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "5 août 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/167799-1629882773.jpg?lm=1"
+  },
+  "Namaso D.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "28 août 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/392767-1669115274.png?lm=1"
+  },
+  "Tsitaishvili G.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "18 nov. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/419067-1742510704.jpg?lm=1"
+  },
+  "Awaziem C.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "1 janv. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/358143-1740820125.jpg?lm=1"
+  },
+  "Mouton L.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "3 juin 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/904662-1727722197.jpg?lm=1"
+  },
+  "Sidibe D.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "29 juil. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/161869-1604261378.jpg?lm=1"
+  },
+  "Perraud R.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "22 sept. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/318523-1582538263.jpg?lm=1"
+  },
+  "Kouao K.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "20 mai 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/481513-1697464162.png?lm=1"
+  },
+  "Le Bris T.": {
+    "main": "Milieu - Milieu droit",
+    "other": [],
+    "birthDate": "1 oct. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/766412-1747252694.png?lm=1"
+  },
+  "Andre B.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "16 juil. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/800176-1699348390.jpg?lm=1"
+  },
+  "Ganiou I.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "14 mars 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1020191-1738585625.jpg?lm=1"
+  },
+  "Bentaleb N.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "24 nov. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/245537-1672670443.jpg?lm=1"
+  },
+  "Biereth M.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "8 févr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/565821-1736777758.jpg?lm=1"
+  },
+  "Sane S.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "11 janv. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/192565-1694587968.jpg?lm=1"
+  },
+  "Doucoure F.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "1 janv. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/127187-1687966805.jpg?lm=1"
+  },
+  "Djibirin H.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "5 nov. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Centonze F.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "16 janv. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/384859-1703065658.jpg?lm=1"
+  },
+  "Rongier V.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "7 déc. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/332889-1703065877.jpg?lm=1"
+  },
+  "Gbamin J.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "25 sept. 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/182894-1705317996.png?lm=1"
+  },
+  "Sangare M.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "26 juin 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/808348-1726049980.jpg?lm=1"
+  },
+  "Mandi A.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "22 oct. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/80293-1704566125.jpg?lm=1"
+  },
+  "Maitland-Niles A.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "29 août 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/285845-1702991138.jpg?lm=1"
+  },
+  "Deminguet J.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "7 janv. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/539232-1540373365.jpg?lm=1"
+  },
+  "Mwanga J.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "11 mai 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1011200-1732575482.png?lm=1"
+  },
+  "Peprah K.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "16 déc. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/734658-1701328689.JPG?lm=1"
+  },
+  "Barco V.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "23 juil. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/849410-1750770955.png?lm=1"
+  },
+  "Frankowski P.": {
+    "main": "Milieu - Milieu droit",
+    "other": [],
+    "birthDate": "12 avr. 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/239743-1669189009.jpg?lm=1"
+  },
+  "Avom A.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "15 déc. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1074628-1733314520.jpg?lm=1"
+  },
+  "Merlin Q.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "16 mai 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/557613-1704213356.jpg?lm=1"
+  },
+  "Diomande S.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "4 déc. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/974982-1759778940.jpg?lm=1"
+  },
+  "Tessmann T.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "24 sept. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/670096-1722196121.jpg?lm=1"
+  },
+  "Enciso J.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "23 janv. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/660867-1669388786.jpg?lm=1"
+  },
+  "Traore B.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "25 janv. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/204103-1736153427.jpg?lm=1"
+  },
+  "El Azzouzi O.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "29 mai 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/531065-1707127581.jpg?lm=1"
+  },
+  "Doukoure I.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "24 juil. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/786436-1732576094.png?lm=1"
+  },
+  "Leroux L.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "23 janv. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1119456-1740392399.jpg?lm=1"
+  },
+  "Vossah A.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "11 mars 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1200427-1758106573.jpg?lm=1"
+  },
+  "Traore H. J.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "16 févr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/391065-1754900884.jpg?lm=1"
+  },
+  "Traore H.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "25 janv. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/204103-1736153427.jpg?lm=1"
+  },
+  "Ouattara A.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "14 oct. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/947360-1726834011.jpg?lm=1"
+  },
+  "Satriano M.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "20 févr. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/640109-1626685122.jpg?lm=1"
+  },
+  "Ait Boudlal A.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "16 avr. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1134251-1758528519.jpg?lm=1"
+  },
+  "igor silva": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "21 août 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/391720-1600971302.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:48:31.087Z"
+  },
+  "Mbemba Ch.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "8 août 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/203348-1767006126.jpg?lm=1"
+  },
+  "Karabec A.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "2 juil. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/652061-1728398646.jpg?lm=1"
+  },
+  "Boudaoui H.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "23 sept. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/560593-1756824680.jpg?lm=1"
+  },
+  "Karim D.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "19 déc. 1987",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/18922-1702414196.jpg?lm=1"
+  },
+  "Rouault A.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "29 mai 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/690799-1723707069.jpg?lm=1"
+  },
+  "Louchet T.": {
+    "main": "Milieu - Milieu droit",
+    "other": [],
+    "birthDate": "4 mai 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/750904-1756824707.jpg?lm=1"
+  },
+  "Mambimbi F.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "18 janv. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/507496-1721331170.png?lm=1"
+  },
+  "Kluivert R.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "21 mai 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/578421-1605468625.jpg?lm=1"
+  },
+  "Sane I.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "11 janv. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/192565-1694587968.jpg?lm=1"
+  },
+  "Amo-Ameyaw S.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "18 juil. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/933900-1750770965.png?lm=1"
+  },
+  "Lahdo M.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "30 déc. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/795274-1723819960.jpg?lm=1"
+  },
+  "Paez K.": {
+    "main": "Milieu - Milieu offensif",
+    "other": [],
+    "birthDate": "4 mai 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1052439-1739215811.png?lm=1"
+  },
+  "Quetant K.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "17 juil. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Dier E.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "15 janv. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/175722-1665608595.jpg?lm=1"
+  },
+  "Abuashvili G.": {
+    "main": "Attaquant - Ailier gauche",
+    "other": [],
+    "birthDate": "8 févr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/677057-1713418839.png?lm=1"
+  },
+  "Marin R.": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Vignaud A.": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Gueye L.": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Prouchet K.": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Sy L.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "16 déc. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Mara S.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "30 juil. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/557612-1731603567.png?lm=1"
+  },
+  "Kante I. Y.": {
+    "main": "Milieu - Milieu défensif",
+    "other": []
+  },
+  "Le Guen R.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "1 sept. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1166473-1762884638.jpg?lm=1"
+  },
+  "Cissokho M.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "20 déc. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "De Percin T.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "2 févr. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/695422-1672329898.jpg?lm=1"
+  },
+  "Diamalunda E.": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Petit Dol A.": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Argney P.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "23 mai 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/988275-1701165489.jpg?lm=1"
+  },
+  "Nego L.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "15 janv. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/122840-1700236720.jpg?lm=1"
+  },
+  "Seko A.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "7 mai 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/182893-1653394911.jpg?lm=1"
+  },
+  "Zouaoui Y.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "28 avr. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/691841-1741881750.jpg?lm=1"
+  },
+  "Ebonog S.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "16 août 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/770436-1758624584.jpg?lm=1"
+  },
+  "Zinga M.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "15 juil. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/748356-1697829805.png?lm=1"
+  },
+  "Arcus C.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "28 juin 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/371686-1750955924.png?lm=1"
+  },
+  "Hanin F.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "4 févr. 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/111811-1750955915.png?lm=1"
+  },
+  "Courcoul M.": {
+    "error": "Not a player page",
+    "birthDate": "1 janv. 2007",
+    "main": "Milieu défensif",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1075575-1750956409.png?lm=1"
+  },
+  "Bah T.": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Beau Djellel Y.": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Diabate A.": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Kyeremeh G.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "23 juin 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/358237-1759082837.jpg?lm=1"
+  },
+  "Mosengo D. N.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "11 août 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1119880-1758624811.jpg?lm=1"
+  },
+  "Obougou N.": {
+    "error": "No Search Result",
+    "birthDate": "15 mars 2006",
+    "main": "Avant-centre",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Rousseau T.": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Teixeira A.": {
+    "main": "Attaquant - Avant-centre",
+    "other": []
+  },
+  "Vinette E. K.": {
+    "error": "Not a player page",
+    "birthDate": "4 mars 2006",
+    "main": "Arrière gauche",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Biumla E.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "8 mai 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1071956-1750955479.png?lm=1"
+  },
+  "Capelle P.": {
+    "error": "Not a player page",
+    "birthDate": "15 avr. 1987",
+    "main": "Milieu central",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/214532-1750956399.png?lm=1"
+  },
+  "Ekomie J.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "19 août 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/970279-1750955900.png?lm=1"
+  },
+  "Kalumba J.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "25 déc. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1101641-1750956932.png?lm=1"
+  },
+  "Machine L.": {
+    "error": "Not a player page",
+    "birthDate": "13 oct. 2005",
+    "main": "Avant-centre",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1096744-1762884735.jpg?lm=1"
+  },
+  "Pona O.": {
+    "main": "Gardien",
+    "other": []
+  },
+  "Raolisoa L.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "16 juin 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/829874-1750955865.png?lm=1"
+  },
+  "Sinate D.": {
+    "main": "Défense - Arrière gauche",
+    "other": []
+  },
+  "Meite B.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "birthDate": "11 oct. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1141560-1741011360.JPG?lm=1"
+  },
+  "Adjei N.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "21 août 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/646829-1706408527.jpg?lm=1"
+  },
+  "Mvuka Mugisha J.": {
+    "main": "Milieu - Milieu droit",
+    "other": [],
+    "birthDate": "12 nov. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/700078-1709544633.jpg?lm=1"
+  },
+  "Cadiou N.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "26 oct. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/691958-1669326988.jpg?lm=1"
+  },
+  "Fischer J.": {
+    "error": "Not a player page",
+    "birthDate": "9 nov. 2001",
+    "main": "Gardien de but",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/542452-1711581097.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:30:32.107Z"
+  },
+  "Mboula U.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "30 avr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1038308-1691065668.png?lm=1"
+  },
+  "Colin M.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "birthDate": "15 nov. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/156618-1697464153.png?lm=1"
+  },
+  "Akakpo I.": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Leaudais L.": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Monnier I.": {
+    "main": "Défense - Défenseur central",
+    "other": []
+  },
+  "Sanusi T.": {
+    "error": "No Search Result"
+  },
+  "Semedo D.": {
+    "main": "Défense - Arrière droit",
+    "other": []
+  },
+  "Asoro J.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "27 avr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/375391-1697465755.png?lm=1"
+  },
+  "Ballo-Toure F.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "birthDate": "3 janv. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/296422-1614110347.jpg?lm=1"
+  },
+  "Ba O.": {
+    "main": "Milieu - Milieu droit",
+    "other": []
+  },
+  "Bokele Mputu M.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "12 févr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/647787-1759399776.png?lm=1"
+  },
+  "Melieres C.": {
+    "error": "No Search Result",
+    "birthDate": "13 avr. 2005",
+    "main": "Arrière droit",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Stambouli B.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "13 août 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/127160-1725991627.jpg?lm=1"
+  },
+  "Yegbe T.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/991054-1723719474.jpg?lm=1",
+    "birthDate": "25 janv. 2001"
+  },
+  "Egan-Riley C.": {
+    "error": "No Search Result",
+    "birthDate": "2 janv. 2003",
+    "main": "Défenseur central",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/581669-1751272190.jpg?lm=1"
+  },
+  "Medina F.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "28 mai 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/474800-1653402999.jpg?lm=1"
+  },
+  "Vermeeren A.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "7 févr. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/926694-1729520583.jpg?lm=1"
+  },
+  "emerson": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "3 août 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/181778-1660636930.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T18:15:57.995Z"
+  },
+  "Greif D.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "6 avr. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/316884-1581331466.png?lm=1"
+  },
+  "Risser R.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "2 déc. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/743515-1732575159.png?lm=1"
+  },
+  "Ozer B.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "25 mai 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/361256-1730285051.jpg?lm=1"
+  },
+  "Jacquet J.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "13 juil. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1004301-1714503850.jpg?lm=1"
+  },
+  "Penders M.": {
+    "main": "Gardien",
+    "other": [],
+    "birthDate": "31 juil. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/834397-1714036498.png?lm=1"
+  },
+  "Tati T.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "19 janv. 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1241207-1764146203.jpg?lm=1"
+  },
+  "Diaw M.": {
+    "main": "Gardien",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/164904-1679507026.jpg?lm=1",
+    "birthDate": "22 juin 1993"
+  },
+  "Mendy A.": {
+    "main": "Gardien",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/442531-1600951863.jpg?lm=1",
+    "birthDate": "8 juin 1995"
+  },
+  "Teze J.": {
+    "main": "Défense - Arrière droit",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/364245-1707214531.jpg?lm=1",
+    "birthDate": "30 sept. 1999"
+  },
+  "McKenzie M.": {
+    "error": "Not a player page",
+    "birthDate": "25 févr. 1999",
+    "main": "Défenseur central",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/429259-1714036622.png?lm=1"
+  },
+  "Ngoy N.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/548254-1705573683.jpg?lm=1",
+    "birthDate": "10 juin 2003"
+  },
+  "El Mourabet S.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1130514-1732576630.png?lm=1",
+    "birthDate": "6 oct. 2005"
+  },
+  "Vanhoutte C.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/569845-1757513060.jpg?lm=1",
+    "birthDate": "16 sept. 1998"
+  },
+  "Kohn P.": {
+    "error": "Not a player page",
+    "birthDate": "4 févr. 1999",
+    "main": "Arrière gauche",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/391780-1707464358.png?lm=1"
+  },
+  "Yongwa D.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/717118-1704299779.jpg?lm=1",
+    "birthDate": "22 sept. 2000"
+  },
+  "Methalie D.": {
+    "main": "Milieu - Milieu gauche",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1191444-1758104984.jpg?lm=1",
+    "birthDate": "15 févr. 2006"
+  },
+  "Ouattara K.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/823231-1737452292.jpg?lm=1",
+    "birthDate": "14 oct. 2004"
+  },
+  "Chilwell B.": {
+    "error": "Not a player page",
+    "birthDate": "21 déc. 1996",
+    "main": "Arrière gauche",
+    "other": [],
+    "image": "https://img.a.transfermarkt.technology/portrait/header/316125-1683899136.jpg?lm=1"
+  },
+  "Bah J.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1121298-1756823284.jpg?lm=1",
+    "birthDate": "9 déc. 1997"
+  },
+  "Cisse D.": {
+    "main": "Attaquant - Avant-centre",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/3966-1497545601.jpg?lm=1",
+    "birthDate": "12 août 1981"
+  },
+  "kwon hyeok-kyu": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "13 mars 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/550957-1718724323.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:42:08.759Z"
+  },
+  "Cozza N.": {
+    "main": "Défense - Arrière gauche",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/485965-1689865641.jpg?lm=1",
+    "birthDate": "8 janv. 1999"
+  },
+  "Tabibou D.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "birthDate": "17 avr. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1"
+  },
+  "Diatta K.": {
+    "main": "Attaquant - Ailier droit",
+    "other": [],
+    "birthDate": "25 févr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/413031-1668165738.jpg?lm=1"
+  },
+  "Hogsberg L.": {
+    "main": "Défense - Défenseur central",
+    "other": [],
+    "birthDate": "23 juin 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/123456-123456.jpg?lm=1"
+  },
+  "Abdul Samed S.": {
+    "main": "Milieu - Milieu défensif",
+    "other": [],
+    "birthDate": "26 mars 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/820436-1663660503.jpg?lm=1"
+  },
+  "Rabiot A.": {
+    "main": "Milieu - Milieu central",
+    "other": [],
+    "age": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/182913-1681462009.jpg?lm=1",
+    "birthDate": "3 avr. 1995"
+  },
+  "amian k": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "8 févr. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/344072-1638174640.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T18:14:42.492Z"
+  },
+  "restes g": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "11 mars 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/912902-1676656145.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T18:14:56.007Z"
+  },
+  "namli y": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "20 juin 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/227039-1618670255.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:09:30.661Z"
+  },
+  "kamanzi w": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "11 nov. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/794758-1671210731.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:09:41.625Z"
+  },
+  "machado d": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "2 sept. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/332560-1704797088.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:09:47.831Z"
+  },
+  "youte kinkoue e": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "14 janv. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/639712-1732894435.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:10:04.684Z"
+  },
+  "guilavogui m": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "10 mars 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/691786-1723632746.jpeg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:10:11.463Z"
+  },
+  "deuff b": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "10 mars 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1176215-1762884807.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:10:48.347Z"
+  },
+  "sauer m": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "15 mai 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/710885-1699980894.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:11:00.126Z"
+  },
+  "cabella r": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "8 mars 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/113707-1757716597.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:11:30.301Z"
+  },
+  "lemarechal f": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "7 août 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/659518-1732576183.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:11:50.431Z"
+  },
+  "kondogbia g": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "15 févr. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/127189-1703066053.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:11:55.881Z"
+  },
+  "santos t": {
+    "main": null,
+    "other": [],
+    "birthDate": "14 avr. 1912",
+    "image": "https://tmssl.akamaized.net//images/wappen/head/221.png?lm=1412879099",
+    "age": null,
+    "updated": "2026-02-06T14:18:35.422Z"
+  },
+  "khadra r": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "4 juil. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/405686-1723836051.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:12:06.791Z"
+  },
+  "benhattab y": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "18 nov. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/796589-1758286910.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:12:13.881Z"
+  },
+  "mawissa c": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "18 avr. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1005240-1708555606.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:12:33.077Z"
+  },
+  "safonov m": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "25 févr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/318470-1732658603.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:12:40.613Z"
+  },
+  "mpasi-nzau l": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "1 août 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/164915-1666190720.JPG?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:12:46.362Z"
+  },
+  "de lange j": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "1 avr. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/315253-1723035184.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:12:56.820Z"
+  },
+  "bodart a": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "11 mars 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/417278-1704961747.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:13:03.228Z"
+  },
+  "demba p": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "25 mai 1985",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/40205-1583155060.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:00.304Z"
+  },
+  "broholm m": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "26 déc. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/903359-1711132318.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:13:26.794Z"
+  },
+  "sissoko i": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "16 août 1989",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/46001-1770126068.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:05.124Z"
+  },
+  "idumbo s": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "29 juin 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/743387-1652692759.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:13:48.737Z"
+  },
+  "ndombele t": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "28 déc. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/450936-1756824689.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:13:55.806Z"
+  },
+  "coquelin f": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "13 mai 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/74869-1515684724.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:08.376Z"
+  },
+  "hong hyun-seok": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "16 juin 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/562948-1752587798.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:14.674Z"
+  },
+  "amougou m": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "18 janv. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1010854-1727721658.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:21.111Z"
+  },
+  "bombito m": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "30 mars 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1089202-1756826846.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:26.658Z"
+  },
+  "ghezzal r": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "9 mai 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/118287-1729518411.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:37.079Z"
+  },
+  "pereira e": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "1 janv. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/203394-1659355525.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:41.643Z"
+  },
+  "faye a": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "8 févr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/666971-1767361428.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:48.355Z"
+  },
+  "ahamada n": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "29 mars 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/538971-1657181756.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:14:55.806Z"
+  },
+  "nguene b": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "4 août 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1314671-1756823301.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:15:01.403Z"
+  },
+  "allevinah j": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "27 févr. 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/646733-1750956955.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:15:20.743Z"
+  },
+  "edjouma n": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "4 oct. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1078326-1708556104.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:15:39.421Z"
+  },
+  "garcia u": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "9 janv. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/466794-1693604801.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:15:44.445Z"
+  },
+  "faes w": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "3 avr. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/292808-1668080038.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:15:50.388Z"
+  },
+  "delaine t": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "24 mars 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/170961-1732575286.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:15:57.303Z"
+  },
+  "luis r": {
+    "main": "Centre-Forward",
+    "other": [],
+    "birthDate": null,
+    "image": "https://img.a.transfermarkt.technology/portrait/header/44352-1740775519.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:18:41.247Z"
+  },
+  "bakwa d": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "26 août 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/540664-1732575429.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:16:07.870Z"
+  },
+  "sotoca f": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "25 oct. 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/354726-1701294869.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:16:27.276Z"
+  },
+  "carlgren p": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "8 janv. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/190280-1726237403.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:16:33.809Z"
+  },
+  "gourna-douath l": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "5 août 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/620313-1758627856.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:16:45.907Z"
+  },
+  "mantsounga b": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "6 sept. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1134110-1741696513.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:16:53.310Z"
+  },
+  "nagida m": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "28 juin 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1176345-1702911497.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:16.977Z"
+  },
+  "sy p": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "13 août 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/238647-1712053879.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:21:59.565Z"
+  },
+  "timber q": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "17 juin 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/420213-1765214219.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:22:23.003Z"
+  },
+  "diaoune s": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "14 août 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1184007-1758821688.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:22:28.491Z"
+  },
+  "cabral p": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "10 juil. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/460632-1740820238.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:22:34.406Z"
+  },
+  "bakola d": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "30 nov. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1170286-1736792764.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:22:40.847Z"
+  },
+  "koumbassa s": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "20 juin 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:23.172Z"
+  },
+  "zagadou s": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "3 juin 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/344598-1756244458.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:22:55.430Z"
+  },
+  "vignolo j": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "7 déc. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1234988-1747676987.jpeg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:23:01.255Z"
+  },
+  "dicko n": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "14 mai 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/173750-1652434003.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:30.338Z"
+  },
+  "nwaneri e": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "21 mars 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/890719-1730794927.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:36.187Z"
+  },
+  "pembele t": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "9 sept. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/538998-1754900983.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:23:34.375Z"
+  },
+  "michal l": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "22 juin 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/810909-1693948175.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:47.675Z"
+  },
+  "le cardinal j": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "3 août 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/794349-1727808054.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:23:48.080Z"
+  },
+  "cornelius d": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "25 nov. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/328609-1618857970.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:13:54.274Z"
+  },
+  "bermont a": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "10 févr. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1088110-1741877893.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:14:01.036Z"
+  },
+  "nzingoula r": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "25 nov. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1068110-1716939175.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:24:25.857Z"
+  },
+  "wooh c": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "18 sept. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/572326-1757070323.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:24:36.478Z"
+  },
+  "munetsi m": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "22 juin 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/414908-1723836952.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:24:43.161Z"
+  },
+  "brunner p": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "15 févr. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/918414-1759780037.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:24:48.756Z"
+  },
+  "kamara g": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "23 nov. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/394327-1736160460.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:24:54.876Z"
+  },
+  "szymanski s": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "10 mai 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/320748-1765461620.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:25:01.811Z"
+  },
+  "doucoure s": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "1 janv. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/127187-1687966805.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:14:13.796Z"
+  },
+  "boudache k": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "15 juin 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1097113-1741655048.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:14:19.877Z"
+  },
+  "ben seghir e": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "16 févr. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/810895-1758703148.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:25:42.670Z"
+  },
+  "gueye i": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "24 janv. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/485963-1768814767.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:25:48.143Z"
+  },
+  "legendre e": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "22 avr. 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1227106-1741010867.JPG?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:14:25.984Z"
+  },
+  "goffi a": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "23 janv. 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:14:30.989Z"
+  },
+  "boufal s": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "17 sept. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/232271-1668757196.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:26:15.143Z"
+  },
+  "salah i": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "15 juin 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/148455-1727337594.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:26:21.291Z"
+  },
+  "lirola p": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "13 août 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/298975-1673514557.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:26:28.282Z"
+  },
+  "pogba p": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "15 mars 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/122153-1764059298.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:14:35.512Z"
+  },
+  "kaba m": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "27 oct. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/911328-1695033138.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:26:41.730Z"
+  },
+  "mangala o": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "18 mars 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/289592-1657181518.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:26:47.323Z"
+  },
+  "van den boomen b": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "21 juil. 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/203938-1682946572.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:26:53.838Z"
+  },
+  "munongo b": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "23 nov. 2009",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1297673-1761139330.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:06.839Z"
+  },
+  "mukiele n": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "1 nov. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/348026-1727378130.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:14.503Z"
+  },
+  "rosario p": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "7 janv. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/370791-1739972016.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:21.869Z"
+  },
+  "ganago i": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "16 févr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/531949-1740678544.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:26.705Z"
+  },
+  "katseris p": {
+    "main": "Milieu droit",
+    "other": [],
+    "birthDate": "5 juil. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/816308-1606484515.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:37.469Z"
+  },
+  "guerti i": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "30 juil. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/860053-1769702040.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:43.969Z"
+  },
+  "koyalipou g": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "15 févr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/525140-1714738152.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:55.694Z"
+  },
+  "radakovic u": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "31 mars 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/169511-1724074837.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:01.686Z"
+  },
+  "faivre r": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "14 juil. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/555076-1672831296.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:08.091Z"
+  },
+  "burlet v": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "23 sept. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/920939-1756762007.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:15.506Z"
+  },
+  "madjo b": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "12 janv. 2009",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1226357-1743068368.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:21.741Z"
+  },
+  "bouanani b": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "8 déc. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/707242-1756822874.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:26.107Z"
+  },
+  "louer m": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "11 mars 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:40.572Z"
+  },
+  "mmadi t": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "3 mars 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1206824-1760563123.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:45.217Z"
+  },
+  "acapandie m": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "14 déc. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/944355-1713535329.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:28:57.681Z"
+  },
+  "camblan a": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "30 août 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/924800-1764609816.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:04.073Z"
+  },
+  "diallo z": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "4 mai 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/229005-1725822889.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:17.174Z"
+  },
+  "molebe e": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "18 sept. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1106860-1737662771.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:22.887Z"
+  },
+  "bair t": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "27 août 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/501709-1618858914.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:27.273Z"
+  },
+  "himbert r": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "29 févr. 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1200423-1762881060.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:32.568Z"
+  },
+  "nsoki n": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "9 avr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/371141-1755624516.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:38.504Z"
+  },
+  "faye m": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "29 mars 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:51.435Z"
+  },
+  "rieder f": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "16 févr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/507341-1723707005.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:29:56.184Z"
+  },
+  "saka m": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "5 sept. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/433177-1684155052.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:01.036Z"
+  },
+  "nduquidi j": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "31 oct. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/919620-1697462326.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:08.250Z"
+  },
+  "hamdani a": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "21 janv. 2009",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1301102-1763974659.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:20.438Z"
+  },
+  "mbala n": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "19 févr. 2008",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:36.412Z"
+  },
+  "sylla f": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "25 nov. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/460655-1730796988.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:42.949Z"
+  },
+  "yassine g": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "22 nov. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1151929-1715877709.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:50.080Z"
+  },
+  "raghouber u": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "13 juil. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/707230-1678906674.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:55.848Z"
+  },
+  "yildirim b": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "15 janv. 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/993407-1757670421.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:31:02.398Z"
+  },
+  "maupay n": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "14 août 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/217115-1700737951.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:31:12.419Z"
+  },
+  "bernardeau g": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "24 janv. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1254786-1756822514.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:31:18.983Z"
+  },
+  "sylla a": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "25 nov. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/460655-1730796988.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:31:25.086Z"
+  },
+  "siwe t": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "29 juil. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/804933-1727174964.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:31:49.312Z"
+  },
+  "osho g": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "14 août 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/364409-1684493913.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:32:07.074Z"
+  },
+  "bley m": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "23 janv. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:32:34.449Z"
+  },
+  "mendy f": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "8 juin 1995",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/291417-1701294025.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:32:40.333Z"
+  },
+  "rowe j": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "30 avr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/672381-1750074903.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:02.316Z"
+  },
+  "ali youssef": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "5 août 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/501131-1762901665.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:13.104Z"
+  },
+  "toure o": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "28 mars 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/708678-1645641626.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:25.168Z"
+  },
+  "rosier l": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "19 août 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/441170-1666619891.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:31.970Z"
+  },
+  "descamps r": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "25 juin 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/282028-1608790532.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:43.649Z"
+  },
+  "koutoune h": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "17 sept. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1134250-1756822862.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:51.653Z"
+  },
+  "brahimi b": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "8 févr. 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/60517-1738110883.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:59.020Z"
+  },
+  "nartey n": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "22 févr. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/400546-1753307448.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:34:10.694Z"
+  },
+  "mikautadze g": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "31 oct. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/729814-1719222514.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:34:17.785Z"
+  },
+  "kumbedi s": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "26 mars 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/951579-1672831110.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:34:24.482Z"
+  },
+  "canvot j": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "29 juil. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1006411-1741897197.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:34:37.628Z"
+  },
+  "antonio k": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "13 juin 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/468301-1755221982.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:34:44.186Z"
+  },
+  "samatta a": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "23 déc. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/182201-1727967720.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:48:12.452Z"
+  },
+  "lepenant j": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "22 oct. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/585973-1672830993.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:48:18.769Z"
+  },
+  "merah k": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "24 févr. 2007",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1187942-1755626357.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:49:10.553Z"
+  },
+  "abdulhamid s": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "18 juil. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/631927-1730124451.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:50:02.803Z"
+  },
+  "gradit j": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "24 nov. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/126557-1738580496.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:50:12.619Z"
+  },
+  "mukau n": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "3 nov. 2004",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1016015-1741120243.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:50:18.453Z"
+  },
+  "sierralta f": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "6 mai 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/371436-1724773614.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:50:35.601Z"
+  },
+  "gouveia t": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "18 juin 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/479638-1757513051.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T21:51:02.136Z"
+  },
+  "hradecky l": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "24 nov. 1989",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/48015-1695367833.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T22:44:29.381Z"
+  },
+  "bulatovic a": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "27 déc. 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/986291-1749832910.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:07:30.805Z"
+  },
+  "zakaria d": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "20 nov. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/334526-1667990520.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:07:37.725Z"
+  },
+  "hateboer h": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "9 janv. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/275303-1661509184.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:07:59.885Z"
+  },
+  "francis a": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "13 mai 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/74869-1515684724.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:08:11.557Z"
+  },
+  "jansson i": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "31 janv. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/535820-1756823293.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:08:17.226Z"
+  },
+  "de carvalho m": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "1 mai 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/1004486-1758833712.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:09:00.196Z"
+  },
+  "dupe m": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "4 mars 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/127188-1756822707.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:09:20.010Z"
+  },
+  "pizarro d": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "28 mars 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/950593-1704212770.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:27:32.371Z"
+  },
+  "okoh b": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "16 mai 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/539795-1722523891.png?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:30:15.638Z"
+  },
+  "castro l": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "2 avr. 1988",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/58267-1658746842.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:33:07.180Z"
+  },
+  "martinez c": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "2 sept. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/111873-1668180824.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-04T23:34:31.913Z"
+  },
+  "omobamidele a": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "23 juin 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/621993-1750770741.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:11:18.113Z"
+  },
+  "messali r": {
+    "main": "Milieu droit",
+    "other": [],
+    "birthDate": "28 avr. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/883865-1741897311.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:11:23.836Z"
+  },
+  "nadir b": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "28 nov. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/659520-1741961204.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:11:48.691Z"
+  },
+  "camara l": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "30 juin 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/324795-1710182811.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:12:06.428Z"
+  },
+  "kevin": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "4 janv. 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/900195-1762354062.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:12:18.061Z"
+  },
+  "verdonk c": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "26 avr. 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/258364-1723716421.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T13:12:29.315Z"
+  },
+  "sarr m": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "29 août 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/910905-1732575264.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:06.465Z"
+  },
+  "chotard j": {
+    "main": "Milieu défensif",
+    "other": [],
+    "birthDate": "24 sept. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/624037-1702663463.JPG?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:12.787Z"
+  },
+  "lefort j": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "9 août 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/192492-1750956054.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:18.373Z"
+  },
+  "samba b": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "25 avr. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/191056-1602242038.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:23.533Z"
+  },
+  "udol m": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "20 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/344886-1697463909.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:29.266Z"
+  },
+  "belkebla h": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "28 janv. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/138055-1750956421.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:34.980Z"
+  },
+  "camara m": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "30 juin 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/324795-1710182811.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:42.865Z"
+  },
+  "zaire-emery w": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "8 mars 2006",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/810092-1672303575.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:28:49.608Z"
+  },
+  "leon d": {
+    "main": null,
+    "other": [],
+    "birthDate": "20 août 1944",
+    "image": "https://tmssl.akamaized.net//images/wappen/head/4941.png?lm=1720087488",
+    "age": null,
+    "updated": "2026-02-06T14:30:39.948Z"
+  },
+  "cresswell c": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "17 août 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/597659-1641461698.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:29:11.589Z"
+  },
+  "lala k": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "3 oct. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/174196-1677254936.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:29:20.525Z"
+  },
+  "mata c": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "7 nov. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/187718-1616529648.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:29:26.497Z"
+  },
+  "chardonnet b": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "22 déc. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/250779-1582538208.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:29:33.817Z"
+  },
+  "magnetti h": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "30 mai 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/474662-1582538510.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:29:40.250Z"
+  },
+  "ajorque l": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "25 févr. 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/283994-1692000251.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:30:46.409Z"
+  },
+  "casseres c": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "20 janv. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/467632-1646141354.JPG?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:30:54.190Z"
+  },
+  "nicolaisen r": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "16 mars 1997",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/283227-1626438001.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:00.881Z"
+  },
+  "gboho y": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "14 janv. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/463613-1672485001.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:10.321Z"
+  },
+  "brassier l": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "2 nov. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/485960-1736237346.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:18.279Z"
+  },
+  "mbow m": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "8 mars 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/649026-1639678186.png?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:24.959Z"
+  },
+  "koffi h": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "16 oct. 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/415383-1672499883.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:32.820Z"
+  },
+  "mvogo y": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "6 juin 1994",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/147051-1719215379.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:40.031Z"
+  },
+  "rulli g": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "20 mai 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/229604-1698670758.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:47.224Z"
+  },
+  "lopes a": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "1 oct. 1990",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/60561-1640775949.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:31:55.421Z"
+  },
+  "greenwood m": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "1 oct. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/532826-1693987766.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:01.758Z"
+  },
+  "akliouche m": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "25 févr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/745200-1717406573.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:08.045Z"
+  },
+  "sangante a": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "12 avr. 2002",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/768380-1738244271.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:15.253Z"
+  },
+  "clauss j": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "25 sept. 1992",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/175639-1756827010.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:23.502Z"
+  },
+  "bard m": {
+    "main": "Arrière gauche",
+    "other": [],
+    "birthDate": "6 nov. 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/532775-1756826939.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:29.592Z"
+  },
+  "camara o": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "30 juin 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/324795-1710182811.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:36.226Z"
+  },
+  "kebbal i": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "10 juil. 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/739769-1762353660.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:42.149Z"
+  },
+  "thomasson a": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "10 déc. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/215977-1673538425.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:47.361Z"
+  },
+  "hein g": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "7 août 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/344892-1648068537.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:32:55.471Z"
+  },
+  "camara a": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "30 juin 1998",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/324795-1710182811.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:01.713Z"
+  },
+  "paixao i": {
+    "main": "Ailier gauche",
+    "other": [],
+    "birthDate": "28 juin 2000",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/653610-1723200804.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:06.647Z"
+  },
+  "chevalier l": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "6 nov. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/463600-1708342501.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:13.819Z"
+  },
+  "salisu m": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "17 avr. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/563963-1668428508.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:21.099Z"
+  },
+  "talbi m": {
+    "main": "Ailier droit",
+    "other": [],
+    "birthDate": "9 mai 2005",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/743384-1764837422.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:29.468Z"
+  },
+  "diouf y": {
+    "main": "Milieu central",
+    "other": [],
+    "birthDate": "17 mai 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/711976-1756099849.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:35.742Z"
+  },
+  "meunier t": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "12 sept. 1991",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/100986-1741073106.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:42.400Z"
+  },
+  "lloris g": {
+    "main": "Gardien de but",
+    "other": [],
+    "birthDate": "26 déc. 1986",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/17965-1741202772.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:49.202Z"
+  },
+  "pavard b": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "28 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/353366-1713819215.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:33:54.840Z"
+  },
+  "aguilar r": {
+    "main": "Arrière droit",
+    "other": [],
+    "birthDate": "26 avr. 1993",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/203746-1614090581.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:34:00.485Z"
+  },
+  "niakhate m": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "8 mars 1996",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/291200-1700737208.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:34:06.994Z"
+  },
+  "pacho w": {
+    "main": "Défenseur central",
+    "other": [],
+    "birthDate": "16 oct. 2001",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/661171-1696508666.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:34:12.688Z"
+  },
+  "sinayoko l": {
+    "main": "Avant-centre",
+    "other": [],
+    "birthDate": "8 déc. 1999",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/569140-1635851830.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:34:19.801Z"
+  },
+  "lopez m": {
+    "main": "Milieu offensif",
+    "other": [],
+    "birthDate": "11 mai 2003",
+    "image": "https://img.a.transfermarkt.technology/portrait/header/636703-1698086824.jpg?lm=1",
+    "age": null,
+    "updated": "2026-02-06T14:34:27.429Z"
+  }
+}

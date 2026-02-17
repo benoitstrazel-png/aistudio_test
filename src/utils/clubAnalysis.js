@@ -76,7 +76,7 @@ export const analyzeClubEvents = (clubName, allMatches) => {
 
         // Sort events by time just in case, though they usually come sorted
         // Time format is "40'" or "90+3'"
-        const sortedEvents = [...match.events].sort((a, b) => {
+        const sortedEvents = [...(match.events || [])].sort((a, b) => {
             const tA = parseInt(a.time.replace('+', '')) || 0; // Simple sort
             const tB = parseInt(b.time.replace('+', '')) || 0;
             return tA - tB;

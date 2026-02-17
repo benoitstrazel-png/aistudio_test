@@ -142,6 +142,8 @@ export const calculateClusters = (teams, _unused, teamStats, playerData = [], sc
         };
     });
 
+    if (teamMetrics.length === 0) return [];
+
     // 2. Normalize Metrics (0-100)
     const bounds = {
         att: { min: Math.min(...teamMetrics.map(t => t.raw.att)), max: Math.max(...teamMetrics.map(t => t.raw.att)) },

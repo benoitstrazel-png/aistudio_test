@@ -5,6 +5,17 @@
 export const analyzeReferees = (matches) => {
     if (!matches || !Array.isArray(matches)) return [];
 
+    const COACHES_TO_EXCLUDE = [
+        "Roberto De Zerbi", "De Zerbi", "Luis Enrique", "Enrique L", "Luka Elsner", "Elsner L", "Adi Hutter", "Hutter A",
+        "Liam Rosenior", "Rosenior L", "Carles Martinez", "Martinez C", "Will Still", "Still W",
+        "Franck Haise", "Haise F", "Pierre Sage", "Sage P", "Bruno Genesio", "Genesio B",
+        "Antoine Kombouare", "Kombouare A", "Regis Le Bris", "Le Bris R", "Olivier Dall'Aglio", "Dall'Aglio O",
+        "Eric Roy", "Roy E", "Julien Stephan", "Stephan J", "Patrick Vieira", "Vieira P",
+        "Sebastien Pocognoli", "Pocognoli S", "Laszlo Boloni", "Boloni L"
+    ].map(n => n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim());
+
+    const normalize = (name) => name?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim() || "";
+
     const refereeStats = {};
 
     matches.forEach(match => {
@@ -36,6 +47,11 @@ export const analyzeReferees = (matches) => {
 
         if (match.events) {
             match.events.forEach(event => {
+                // Coach Filtering
+                if (event.player && COACHES_TO_EXCLUDE.some(c => normalize(event.player).includes(c))) {
+                    return;
+                }
+
                 // Determine time bucket (0-15, 16-30, ..., 76-90+)
                 const rawTime = parseInt(event.time);
                 const time = isNaN(rawTime) ? 0 : rawTime;

@@ -1,5 +1,6 @@
 
 import playerPhotosData from '../data/player_photos.json';
+import tmPositions from '../data/player_positions_tm.json';
 
 const CLUB_MAP = {
     'PSG': 'Paris Saint-Germain',
@@ -101,9 +102,13 @@ export const getPlayerPhoto = (clubName, playerName) => {
     // BUT the user says Sbai works in "Focus Joueurs". Focus probably uses the DB directly.
     // If we want it in PitchMap, we need it here.
 
-    // For now, let's strictly fix Sbai if we can, or better: 
-    // PitchMap.jsx passes the player object from roster which HAS the photo!
-    // We should check if the caller provided a photo URL fallback? use that.
+    // D. Strategy: Check tmPositions (Scraped data)
+    const normName = normalize(playerName);
+    for (const [key, val] of Object.entries(tmPositions)) {
+        if (normalize(key) === normName && val.image && !val.image.includes('placeholder')) {
+            return val.image;
+        }
+    }
 
     return null;
 };

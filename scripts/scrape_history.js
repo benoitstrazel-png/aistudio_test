@@ -11,214 +11,176 @@ const __dirname = path.dirname(__filename);
 const URLS_FILE = path.join(__dirname, '../src/data/matches_urls_2025_2026.json');
 const OUTPUT_FILE = path.join(__dirname, '../src/data/matches_history_detailed.json');
 
+function extractId(url) {
+    if (!url) return null;
+    const shortMatch = url.match(/\/match\/([A-Za-z0-9]+)/);
+    if (shortMatch && shortMatch[1] && shortMatch[1].length === 8) return shortMatch[1];
+    const midMatch = url.match(/[?&]mid=([A-Za-z0-9]+)/);
+    if (midMatch && midMatch[1]) return midMatch[1];
+    return url;
+}
+
 async function scrapeMatch(browser, url, roundInfo) {
     const page = await browser.newPage();
     try {
-        // Optimizing resources: block images, CSS (selective), and fonts
         await page.setRequestInterception(true);
         page.on('request', (req) => {
-            const resourceType = req.resourceType();
-            if (['image', 'media', 'font', 'stylesheet'].includes(resourceType)) {
-                // Keep CSS if needed, but for scraping matches, often not. 
-                // Let's block them to be super lightweight.
-                req.abort();
-            } else {
-                req.continue();
-            }
+            if (['image', 'media', 'font', 'stylesheet'].includes(req.resourceType())) req.abort();
+            else req.continue();
         });
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36');
-        console.log(`Navigating to ${url}...`);
-
-        // Use a slightly looser wait condition to prevent timeouts if network is busy
         await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
 
-        // AUTO-SCROLL to trigger lazy load of events
+        try {
+            const acceptBtn = await page.waitForSelector('#onetrust-accept-btn-handler', { timeout: 3000 });
+            if (acceptBtn) await acceptBtn.click();
+        } catch (e) { }
+
+        // Auto-scroll for dynamic content
         await page.evaluate(async () => {
             await new Promise((resolve) => {
                 let totalHeight = 0;
-                const distance = 150;
-                // Scroll down a fixed amount enough to trigger the lower section
-                const timer = setInterval(() => {
+                let distance = 200;
+                let timer = setInterval(() => {
                     window.scrollBy(0, distance);
                     totalHeight += distance;
-                    // Stop after scrolling reasonable amount (e.g. 2000px) or bottom
                     if (totalHeight >= 2000 || totalHeight >= document.body.scrollHeight) {
-                        clearInterval(timer);
-                        resolve();
+                        clearInterval(timer); resolve();
                     }
                 }, 100);
             });
         });
-
-        // Wait for potential network requests for events
         await new Promise(r => setTimeout(r, 1500));
 
-        // Wait for key elements
-        try {
-            // Check if we have the rows
-            await page.waitForSelector('.smv__participantRow', { timeout: 5000 });
-        } catch (e) {
-            console.log("Warning: No event rows found immediately.");
-        }
-
-        // Extract Basic Info
-        const matchData = await page.evaluate(() => {
-            const homeTeam = document.querySelector('.duelParticipant__home .participant__participantName')?.innerText.trim();
-            const awayTeam = document.querySelector('.duelParticipant__away .participant__participantName')?.innerText.trim();
-            const scoreHome = document.querySelector('.detailScore__wrapper span:nth-child(1)')?.innerText.trim();
-            const scoreAway = document.querySelector('.detailScore__wrapper span:nth-child(3)')?.innerText.trim();
-
-
-            const referee = Array.from(document.querySelectorAll('.mi__item'))
-                .find(item => item.textContent.toUpperCase().includes('ARBITRE'))
-                ?.querySelector('.mi__content')?.innerText.trim() || 'N/A';
-
-            return {
-                homeTeam,
-                awayTeam,
-                score: `${scoreHome}-${scoreAway}`,
-                referee
-            };
+        // CHECK DATE BEFORE SCRAPING
+        const dateCheck = await page.evaluate(() => {
+            const startTimeEl = document.querySelector('.duelParticipant__startTime');
+            if (startTimeEl) {
+                const dateText = startTimeEl.innerText.trim();
+                const [datePart, timePart] = dateText.split(' ');
+                if (datePart && timePart) {
+                    const [day, month, year] = datePart.split('.').map(Number);
+                    const [hour, minute] = timePart.split(':').map(Number);
+                    const matchDate = new Date(year, month - 1, day, hour, minute);
+                    const now = new Date();
+                    if (matchDate > now) return { future: true, reason: dateText };
+                }
+            }
+            return { future: false };
         });
 
-        // Extract Events
-        const events = await page.evaluate(() => {
-            const rows = Array.from(document.querySelectorAll('.smv__participantRow'));
-            return rows.map(el => {
-                const time = el.querySelector('.smv__timeBox')?.innerText.trim().replace("'", "") || '';
-                const player = el.querySelector('.smv__playerName')?.innerText.trim() || '';
+        if (dateCheck.future) {
+            await page.close();
+            return { url, round: roundInfo, error: `Future match: ${dateCheck.reason}`, skipped: true };
+        }
 
+        const data = await page.evaluate(() => {
+            const homeTeam = document.querySelector('.duelParticipant__home .participant__participantName')?.innerText.trim();
+            const awayTeam = document.querySelector('.duelParticipant__away .participant__participantName')?.innerText.trim();
+            const sH = document.querySelector('.detailScore__wrapper span:nth-child(1)')?.innerText.trim();
+            const sA = document.querySelector('.detailScore__wrapper span:nth-child(3)')?.innerText.trim();
+            const refereeContainer = Array.from(document.querySelectorAll('.wcl-summaryMatchInformation_U4gpU'))
+                .find(item => item.textContent.toUpperCase().includes('ARBITRE'));
+            const referee = refereeContainer?.querySelector('.wcl-infoValue_grawU')?.innerText.trim() || 'N/A';
+
+            const rows = Array.from(document.querySelectorAll('.smv__participantRow'));
+            const events = rows.map(el => {
+                const timeStr = el.querySelector('.smv__timeBox')?.innerText.trim().replace("'", "") || '';
+                const playerNames = Array.from(el.querySelectorAll('.smv__playerName')).map(p => p.innerText.trim());
                 const text = el.innerText || '';
+
                 const svg = el.querySelector('.smv__incidentIcon svg');
                 const svgClass = (svg && svg.getAttribute('class')) || '';
+                const subIcon = el.querySelector('.smv__incidentIconSub');
 
                 let type = 'Unknown';
                 let detail = '';
+                let player = playerNames[0] || '';
 
-                // Text-based detection for Goals (e.g., "1 - 0")
-                if (/\d+\s*-\s*\d+/.test(text)) {
+                // Classify Event
+                if (subIcon) {
+                    type = 'Substitution';
+                    // playerNames[0] is In, playerNames[1] is Out
+                    player = playerNames[0];
+                    if (playerNames[1]) detail = `Out: ${playerNames[1]}`;
+                }
+                else if (/\d+\s*-\s*\d+/.test(text)) {
                     type = 'Goal';
-                    const lowerText = text.toLowerCase();
-
-                    if (lowerText.includes('(csc)') || lowerText.includes('own goal') || lowerText.includes('(own goal)')) {
-                        detail = 'Own Goal';
-                    } else if (lowerText.includes('penalty')) {
-                        detail = 'Penalty';
-                    } else {
-                        // Check for Assist (content in parentheses that is not penalty/csc)
-                        const parenthesized = text.match(/\(([^)]+)\)/);
-                        if (parenthesized) {
-                            const content = parenthesized[1];
-                            const lowerContent = content.toLowerCase();
-                            // Double check to ensure we don't capture 'Penalty' or 'CSC' here if missed above
-                            if (!lowerContent.includes('penalty') && !lowerContent.includes('csc') && !lowerContent.includes('own goal')) {
-                                detail = `Assist: ${content}`;
-                            }
-                        }
+                    if (text.toLowerCase().includes('(csc)')) detail = 'Own Goal';
+                    else if (text.toLowerCase().includes('penalty')) detail = 'Penalty';
+                    else {
+                        const m = text.match(/\(([^)]+)\)/);
+                        if (m) detail = `Assist: ${m[1]}`;
                     }
                 }
                 else if (svgClass.includes('yellowCard')) type = 'Yellow Card';
                 else if (svgClass.includes('redCard')) type = 'Red Card';
-                else if (svgClass.includes('substitution')) type = 'Substitution';
-                else if (svgClass.includes('penalty-missed')) { type = 'Other'; detail = 'Pénalty manqué'; }
-
-                // Specific checks
-                if (el.querySelector('.smv__subIcon--penalty')) {
-                    type = 'Goal';
-                    detail = 'Penalty';
-                }
-                if (el.querySelector('.smv__subIcon--ownGoal')) detail = 'Own Goal';
+                else if (svgClass.includes('substitution')) type = 'Substitution'; // Fallback
 
                 const isHome = el.classList.contains('smv__homeParticipant');
-
-                return { time, player, type, detail, isHome };
+                return { time: timeStr, player, type, detail, team: isHome ? homeTeam : awayTeam };
             }).filter(e => e.type !== 'Unknown');
+
+            return { homeTeam, awayTeam, score: (sH && sA) ? `${sH}-${sA}` : "-", referee, events };
         });
 
-        // Post-process
-        const processedEvents = events.map(e => ({
-            ...e,
-            team: e.isHome ? matchData.homeTeam : matchData.awayTeam,
-            isHome: undefined // clean up
-        }));
-
         await page.close();
-        return {
-            ...matchData,
-            round: roundInfo,
-            events: processedEvents,
-            url
-        };
-
+        return { ...data, round: roundInfo, url };
     } catch (error) {
-        console.error(`Error scraping ${url}:`, error.message);
         await page.close();
-        // Return structured error but keep url/round so we know what failed
-        return { url, round: roundInfo, error: error.message, events: [] };
+        return { url, round: roundInfo, error: error.message }; // Return ERROR Message
     }
 }
 
 async function run() {
-    const rawData = fs.readFileSync(URLS_FILE, 'utf-8');
-    const rounds = JSON.parse(rawData);
+    try {
+        console.log("Starting run() with Sub detection...");
+        const rounds = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
+        let allMatches = fs.existsSync(OUTPUT_FILE) ? JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8')) : [];
+        console.log(`Loaded ${allMatches.length} existing matches.`);
 
-    console.log('--- Environment Check ---');
-    console.log('PUPPETEER_EXECUTABLE_PATH:', process.env.PUPPETEER_EXECUTABLE_PATH);
-    console.log('PUPPETEER_SKIP_CHROMIUM_DOWNLOAD:', process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD);
+        const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+        const save = (data) => {
+            const temp = `${OUTPUT_FILE}.tmp`;
+            fs.writeFileSync(temp, JSON.stringify(data, null, 2));
+            fs.renameSync(temp, OUTPUT_FILE);
+            console.log("Progress Saved.");
+        };
 
-    const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
-    console.log(`Using executablePath: ${executablePath || 'bundled'}`);
-    const browser = await puppeteer.launch({
-        executablePath: executablePath || undefined,
-        headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--no-zygote',
-            '--single-process'
-        ]
-    });
-    const allMatches = [];
+        let processed = 0;
+        for (const round of rounds) {
+            console.log(`Checking ${round.round}...`);
+            for (const m of round.matches) {
+                processed++;
+                const id = extractId(m.url);
+                const existing = allMatches.find(h => extractId(h.url) === id);
 
-    let totalMatches = 0;
-    for (const round of rounds) totalMatches += round.matches.length;
-    console.log(`Starting FULL scrape for ${totalMatches} matches...`);
+                const hasSubs = existing && existing.events && existing.events.some(e => e.type === 'Substitution');
 
-    let processedCount = 0;
+                if (existing && existing.score && existing.score !== "-" && !existing.error && existing.events?.length > 0 && hasSubs) continue;
 
-    for (const round of rounds) {
-        console.log(`--- Processing ${round.round} ---`);
+                console.log(`[${processed}] Scrape needed for ${id} (Missing Subs: ${!hasSubs})`);
+                const res = await scrapeMatch(browser, m.url, round.round);
 
-        // Batch Processing
-        for (const m of round.matches) {
-            const result = await scrapeMatch(browser, m.url, round.round);
+                // Fix: Log the error if present
+                if (res.score === "-" || res.error) {
+                    console.error(`  -> Skipped Error: ${res.error || 'No Score'}`);
+                    continue;
+                }
 
-            if (!result.error) allMatches.push(result);
-            else {
-                console.log(`Failed: ${result.url}`);
-                allMatches.push(result);
-            }
+                console.log(`  -> Success: ${res.events.length} events found.`);
 
-            processedCount++;
-            console.log(`Progress: ${processedCount}/${totalMatches}`);
+                if (existing) allMatches[allMatches.indexOf(existing)] = res;
+                else allMatches.push(res);
 
-            // Stability delay: 500ms - 1500ms
-            const delay = Math.floor(Math.random() * 1000) + 500;
-            await new Promise(r => setTimeout(r, delay));
-
-            // Intermediate Save every 10 matches
-            if (processedCount % 10 === 0) {
-                fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allMatches, null, 2));
+                if (processed % 5 === 0) save(allMatches);
+                await new Promise(r => setTimeout(r, 500));
             }
         }
-    }
-
-    await browser.close();
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allMatches, null, 2));
-    console.log(`\nScraping complete! Data saved to ${OUTPUT_FILE}`);
+        await browser.close();
+        save(allMatches);
+        console.log("Done.");
+    } catch (e) { console.error(e); }
 }
-
 run();

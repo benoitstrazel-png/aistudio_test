@@ -7,6 +7,7 @@ import PlayerFocus from './components/PlayerFocus';
 import ClubAnalysis from './components/ClubAnalysis';
 import ForecastReview from './components/ForecastReview';
 import Tipsters from './components/Tipsters';
+import MatchFocus from './components/MatchFocus';
 import RefereeAnalysis from './components/RefereeAnalysis';
 import { getLeagueLogo } from './utils/logos';
 import { Analytics } from "@vercel/analytics/react";
@@ -130,6 +131,9 @@ function App() {
                 <NavLink to="/comparator" className={navLinkClass}>
                     Comparateur Clubs
                 </NavLink>
+                <NavLink to="/match-focus" className={navLinkClass}>
+                    Match Focus
+                </NavLink>
                 <NavLink to="/players" className={navLinkClass}>
                     Focus Joueurs
                 </NavLink>
@@ -174,6 +178,8 @@ function App() {
                             currentWeek={APP_DATA.currentWeek}
                         />
                     } />
+
+                    <Route path="/match-focus" element={<MatchFocus teams={teams} />} />
 
                     <Route path="/players" element={<PlayerFocus />} />
 
