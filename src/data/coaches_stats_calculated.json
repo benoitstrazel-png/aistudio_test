@@ -1,0 +1,274 @@
+{
+  "Monaco": [
+    {
+      "name": "Pocognoli S.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "latestRound": 17
+    }
+  ],
+  "Toulouse": [
+    {
+      "name": "Martinez C.",
+      "team": "Toulouse",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "latestRound": 17
+    }
+  ],
+  "Nantes": [
+    {
+      "name": "Castro L.",
+      "team": "Nantes",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 6,
+      "redCards": 0,
+      "latestRound": 10
+    }
+  ],
+  "Lille": [
+    {
+      "name": "Genesio B.",
+      "team": "Lille",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 1,
+      "latestRound": 8
+    }
+  ],
+  "Paris FC": [
+    {
+      "name": "Gilli S.",
+      "team": "Paris FC",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 18
+    }
+  ],
+  "Auxerre": [
+    {
+      "name": "Pelissier C.",
+      "team": "Auxerre",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 7
+    }
+  ],
+  "Strasbourg": [
+    {
+      "name": "Rosenior L.",
+      "team": "Strasbourg",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 12
+    }
+  ],
+  "Le Havre": [
+    {
+      "name": "Digard D.",
+      "team": "Le Havre",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 11
+    }
+  ],
+  "Rennes": [
+    {
+      "name": "Beye H.",
+      "team": "Rennes",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 9
+    }
+  ],
+  "Metz": [
+    {
+      "name": "Le Mignan S.",
+      "team": "Metz",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 9
+    }
+  ],
+  "PSG": [
+    {
+      "name": "Luis Enrique",
+      "team": "PSG",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 8
+    }
+  ],
+  "Marseille": [
+    {
+      "name": "De Zerbi R.",
+      "team": "Marseille",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 1,
+      "latestRound": 5
+    }
+  ],
+  "Angers": [
+    {
+      "name": "Dujeux A.",
+      "team": "Angers",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 3
+    }
+  ],
+  "Brest": [
+    {
+      "name": "Roy E.",
+      "team": "Brest",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 22
+    }
+  ],
+  "Lyon": [
+    {
+      "name": "Fonseca P.",
+      "team": "Lyon",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 23
+    }
+  ],
+  "Nice": [
+    {
+      "name": "Puel C.",
+      "team": "Nice",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 23
+    }
+  ]
+}

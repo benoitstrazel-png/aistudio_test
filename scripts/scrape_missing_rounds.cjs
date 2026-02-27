@@ -55,13 +55,22 @@ async function scrapeMatch(browser, url, roundInfo) {
             const rows = Array.from(document.querySelectorAll('.smv__participantRow'));
             const events = rows.map(el => {
                 const time = el.querySelector('.smv__timeBox')?.innerText.trim().replace("'", "") || '';
-                const player = el.querySelector('.smv__playerName')?.innerText.trim() || '';
+                const playerNames = Array.from(el.querySelectorAll('.smv__playerName')).map(p => p.innerText.trim());
                 const text = el.innerText || '';
                 const svg = el.querySelector('.smv__incidentIcon svg');
                 const svgClass = (svg && svg.getAttribute('class')) || '';
+                const subIcon = el.querySelector('.smv__incidentIconSub');
+
                 let type = 'Unknown';
                 let detail = '';
-                if (/\d+\s*-\s*\d+/.test(text)) {
+                let player = playerNames[0] || '';
+
+                if (subIcon) {
+                    type = 'Substitution';
+                    player = playerNames[0];
+                    if (playerNames[1]) detail = `Out: ${playerNames[1]}`;
+                }
+                else if (/\d+\s*-\s*\d+/.test(text)) {
                     type = 'Goal';
                     if (text.toLowerCase().includes('(csc)')) detail = 'Own Goal';
                     else if (text.toLowerCase().includes('penalty')) detail = 'Penalty';

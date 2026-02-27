@@ -9,6 +9,7 @@ import ForecastReview from './components/ForecastReview';
 import Tipsters from './components/Tipsters';
 import MatchFocus from './components/MatchFocus';
 import RefereeAnalysis from './components/RefereeAnalysis';
+import CoachFocus from './components/CoachFocus';
 import { getLeagueLogo } from './utils/logos';
 import { Analytics } from "@vercel/analytics/react";
 
@@ -22,12 +23,32 @@ const TEAM_STATS = APP_DATA.teamStats || {};
 import { predictMatchLive } from './utils/prediction';
 import { calculateCalibration } from './utils/calibration';
 
+// Helper to find the last week with real results (majority of matches finished)
+function getInitialViewWeek(schedule, fallbackWeek) {
+    if (!schedule || schedule.length === 0) return fallbackWeek;
+
+    let lastRealWeek = 1;
+    for (let w = 1; w <= 34; w++) {
+        const matches = schedule.filter(m => m.week === w);
+        if (matches.length === 0) continue;
+
+        const finishedMatches = matches.filter(m => m.status === 'FINISHED').length;
+        if (finishedMatches > (matches.length / 2)) {
+            lastRealWeek = w;
+        }
+    }
+
+    // If we've found a week with results, use it. Otherwise, use fallback.
+    return lastRealWeek > 1 ? lastRealWeek : fallbackWeek;
+}
+
 function App() {
     // Shared State
     // Default to first match or mock
     const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0] || {});
     // Shared state for Calendar and Standings view (passed to Dashboard)
-    const [currentViewWeek, setCurrentViewWeek] = useState(APP_DATA.currentWeek + 1);
+    // Initialize to the last matchday with real results
+    const [currentViewWeek, setCurrentViewWeek] = useState(() => getInitialViewWeek(APP_DATA.fullSchedule, APP_DATA.currentWeek));
 
     // Dynamically derive teams from the schedule to ensure 100% consistency with data
     const [teams, setTeams] = useState([]);
@@ -137,6 +158,9 @@ function App() {
                 <NavLink to="/players" className={navLinkClass}>
                     Focus Joueurs
                 </NavLink>
+                <NavLink to="/coaches" className={navLinkClass}>
+                    Focus Entraîneurs
+                </NavLink>
                 <NavLink to="/club" className={navLinkClass}>
                     Focus Club
                 </NavLink>
@@ -182,6 +206,8 @@ function App() {
                     <Route path="/match-focus" element={<MatchFocus teams={teams} />} />
 
                     <Route path="/players" element={<PlayerFocus />} />
+
+                    <Route path="/coaches" element={<CoachFocus />} />
 
                     <Route path="/club" element={
                         <ClubAnalysis

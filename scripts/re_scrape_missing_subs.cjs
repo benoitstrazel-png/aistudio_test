@@ -1,14 +1,12 @@
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+puppeteer.use(StealthPlugin());
 
-// Paths
 const URLS_FILE = path.join(__dirname, '../src/data/matches_urls_2025_2026.json');
-const OUTPUT_FILE = path.join(__dirname, '../src/data/matches_history_detailed.json');
+const HISTORY_FILE = path.join(__dirname, '../src/data/matches_history_detailed.json');
 
 function extractId(url) {
     if (!url) return null;
@@ -19,6 +17,7 @@ function extractId(url) {
     return url;
 }
 
+// Corrected Scrape Function
 async function scrapeMatch(browser, url, roundInfo) {
     const page = await browser.newPage();
     try {
@@ -28,8 +27,6 @@ async function scrapeMatch(browser, url, roundInfo) {
             else req.continue();
         });
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-
-        console.log(`Navigating to ${url}...`);
         await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
 
         // Handle Cookies
@@ -38,7 +35,7 @@ async function scrapeMatch(browser, url, roundInfo) {
             if (acceptBtn) await acceptBtn.click();
         } catch (e) { }
 
-        // Auto-scroll for dynamic content (events)
+        // Auto-scroll
         await page.evaluate(async () => {
             await new Promise((resolve) => {
                 let totalHeight = 0;
@@ -54,37 +51,11 @@ async function scrapeMatch(browser, url, roundInfo) {
         });
         await new Promise(r => setTimeout(r, 1500));
 
-        // CHECK DATE BEFORE SCRAPING
-        const dateCheck = await page.evaluate(() => {
-            const startTimeEl = document.querySelector('.duelParticipant__startTime');
-            if (startTimeEl) {
-                const dateText = startTimeEl.innerText.trim(); // "17.01.2026 14:00"
-                const [datePart, timePart] = dateText.split(' ');
-                if (datePart && timePart) {
-                    const [day, month, year] = datePart.split('.').map(Number);
-                    const [hour, minute] = timePart.split(':').map(Number);
-                    const matchDate = new Date(year, month - 1, day, hour, minute);
-                    const now = new Date(); // Browser time
-                    return { future: matchDate > now, reason: dateText, extractedDate: matchDate.toISOString() };
-                }
-            }
-            return { future: false }; // Assume past if cant parse
-        });
-
-        // Debug info
-        // console.log(`Date Check for ${url}:`, dateCheck);
-
-        if (dateCheck.future) {
-            await page.close();
-            return { url, round: roundInfo, error: `Future match: ${dateCheck.reason}`, skipped: true };
-        }
-
         const data = await page.evaluate(() => {
             const homeTeam = document.querySelector('.duelParticipant__home .participant__participantName')?.innerText.trim();
             const awayTeam = document.querySelector('.duelParticipant__away .participant__participantName')?.innerText.trim();
             const sH = document.querySelector('.detailScore__wrapper span:nth-child(1)')?.innerText.trim();
             const sA = document.querySelector('.detailScore__wrapper span:nth-child(3)')?.innerText.trim();
-
             const refereeContainer = Array.from(document.querySelectorAll('.wcl-summaryMatchInformation_U4gpU'))
                 .find(item => item.textContent.toUpperCase().includes('ARBITRE'));
             const referee = refereeContainer?.querySelector('.wcl-infoValue_grawU')?.innerText.trim() || 'N/A';
@@ -94,6 +65,7 @@ async function scrapeMatch(browser, url, roundInfo) {
                 const timeStr = el.querySelector('.smv__timeBox')?.innerText.trim().replace("'", "") || '';
                 const playerNames = Array.from(el.querySelectorAll('.smv__playerName')).map(p => p.innerText.trim());
                 const text = el.innerText || '';
+
                 const svg = el.querySelector('.smv__incidentIcon svg');
                 const svgClass = (svg && svg.getAttribute('class')) || '';
                 const subIcon = el.querySelector('.smv__incidentIconSub');
@@ -105,6 +77,7 @@ async function scrapeMatch(browser, url, roundInfo) {
                 // Classify Event
                 if (subIcon) {
                     type = 'Substitution';
+                    // playerNames[0] is In, playerNames[1] is Out
                     player = playerNames[0];
                     if (playerNames[1]) detail = `Out: ${playerNames[1]}`;
                 }
@@ -119,7 +92,7 @@ async function scrapeMatch(browser, url, roundInfo) {
                 }
                 else if (svgClass.includes('yellowCard')) type = 'Yellow Card';
                 else if (svgClass.includes('redCard')) type = 'Red Card';
-                else if (svgClass.includes('substitution')) type = 'Substitution';
+                else if (svgClass.includes('substitution')) type = 'Substitution'; // Fallback
 
                 const isHome = el.classList.contains('smv__homeParticipant');
                 return { time: timeStr, player, type, detail, team: isHome ? homeTeam : awayTeam };
@@ -137,70 +110,50 @@ async function scrapeMatch(browser, url, roundInfo) {
 }
 
 async function run() {
-    try {
-        console.log("Starting Targeted Scrape (J21 & J22)...");
-        const rounds = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
-        let allMatches = fs.existsSync(OUTPUT_FILE) ? JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8')) : [];
-        console.log(`Loaded ${allMatches.length} existing history matches.`);
+    console.log("Starting TARGETED scrape for missing substitutions...");
 
-        // FILTER FOR J21 AND J22
-        const targetRounds = rounds.filter(r => r.round === "Journée 21" || r.round === "Journée 22");
-        console.log(`Found ${targetRounds.length} target rounds.`);
+    const allMatches = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf-8'));
 
-        if (targetRounds.length === 0) {
-            console.log("No J21 or J22 found in urls file!");
-            return;
-        }
+    // Identify matches missing substitutions entirely
+    const matchesToRescrape = allMatches.filter(m =>
+        m.events && m.events.length > 0 && !m.events.some(e => e.type === 'Substitution')
+    );
 
-        const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-        const save = (data) => {
-            const temp = `${OUTPUT_FILE}.tmp`;
-            fs.writeFileSync(temp, JSON.stringify(data, null, 2));
-            fs.renameSync(temp, OUTPUT_FILE);
-            console.log("Progress saved.");
-        };
+    // Some actual 0-0 matches might really have 0 events... but usually there is at least a sub or a yellow card.
+    // If a match literally had 0 subs, it would be caught here, but 19 matches is way too high for 0 real subs.
 
-        let processed = 0;
-        for (const round of targetRounds) {
-            console.log(`Processing ${round.round}... (${round.matches.length} matches)`);
-            for (const m of round.matches) {
-                processed++;
-                const id = m.id || extractId(m.url);
+    console.log(`Found ${matchesToRescrape.length} matches missing substitution events.`);
+    if (matchesToRescrape.length === 0) {
+        console.log("No missing substitutions found. Exiting.");
+        return;
+    }
 
-                const existingIndex = allMatches.findIndex(h => extractId(h.url) === id);
-                const existing = existingIndex >= 0 ? allMatches[existingIndex] : null;
+    const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
 
-                if (existing && existing.score && existing.score !== "-" && !existing.error) {
-                    console.log(`[${processed}] Already have valid data for ${id}. Skipping.`);
-                    continue;
+    for (let i = 0; i < matchesToRescrape.length; i++) {
+        const m = matchesToRescrape[i];
+        console.log(`[${i + 1}/${matchesToRescrape.length}] Re-scraping: ${m.url} (${m.round})`);
+        const res = await scrapeMatch(browser, m.url, m.round);
+
+        if (res.error || res.score === "-") {
+            console.warn(`  -> Failed/Skipped: ${res.url}`);
+        } else {
+            console.log(`  -> Success: Found ${res.events.length} events (Subs: ${res.events.some(e => e.type === 'Substitution')})`);
+            // Update the match in the array
+            const index = allMatches.findIndex(h => extractId(h.url) === extractId(m.url));
+            if (index !== -1) {
+                // Ensure we don't overwrite with a 0-event array unnecessarily
+                if (res.events && res.events.length > 0) {
+                    allMatches[index] = res;
                 }
-
-                const url = m.url || `https://www.flashscore.fr/match/${id}/#/resume`;
-                console.log(`[${processed}] Scraping ${id}...`);
-                const res = await scrapeMatch(browser, url, round.round);
-
-                if (res.skipped) {
-                    console.log(`  -> Skipped: ${res.error}`);
-                    continue;
-                }
-
-                if (res.score === "-" || res.error) {
-                    console.log(`  -> Failed/Skipped: ${res.error || 'No Score'}`);
-                    continue;
-                }
-
-                console.log(`  -> Success: ${res.homeTeam} ${res.score} ${res.awayTeam}`);
-
-                if (existingIndex >= 0) allMatches[existingIndex] = res;
-                else allMatches.push(res);
-
-                if (processed % 2 === 0) save(allMatches);
-                await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
             }
         }
-        await browser.close();
-        save(allMatches);
-        console.log("Done.");
-    } catch (e) { console.error(e); }
+        await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000)); // Delay to not get blocked
+    }
+
+    await browser.close();
+    fs.writeFileSync(HISTORY_FILE, JSON.stringify(allMatches, null, 2));
+    console.log("Done. Updated history file.");
 }
+
 run();

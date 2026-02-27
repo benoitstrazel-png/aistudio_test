@@ -45,7 +45,6 @@ function calculateStats() {
     // Helper to init player
     const initPlayer = (name, team, position = "", currentRound = 0) => {
         const key = normalize(name);
-        if (COACHES_TO_EXCLUDE.some(c => key.includes(c))) return null;
 
         if (!playerStats[key]) {
             playerStats[key] = {
@@ -209,12 +208,35 @@ function calculateStats() {
     // Let's verify existing players.json structure, but user said "Forget CSV".
     // Best format for frontend is probably Object keyed by Team, then Array of Players.
 
+    // Split players and coaches automatically
+    // Determine coaches by checking if they NEVER appeared in any lineup (starter or bench)
+    const playersInLineups = new Set();
+    lineupsData.forEach(l => {
+        if (l.lineups) {
+            (l.lineups.homeStarters || []).forEach(p => playersInLineups.add(normalize(p.name)));
+            (l.lineups.awayStarters || []).forEach(p => playersInLineups.add(normalize(p.name)));
+            (l.lineups.homeSubstitutes || []).forEach(p => playersInLineups.add(normalize(p.name)));
+            (l.lineups.awaySubstitutes || []).forEach(p => playersInLineups.add(normalize(p.name)));
+        }
+    });
+
     const outputByTeam = {};
+    const coachesByTeam = {};
 
     Object.values(playerStats).forEach(p => {
         if (!p.team) return; // Skip unknown team
-        if (!outputByTeam[p.team]) outputByTeam[p.team] = [];
-        outputByTeam[p.team].push(p);
+
+        const nName = normalize(p.name);
+        // If they played 0 mins, 0 starts, 0 subs AND they were never in a lineup bench/starter -> coach
+        const isCoach = (p.starter === 0 && p.subIn === 0 && p.minutesPlayed === 0 && !playersInLineups.has(nName));
+
+        if (isCoach) {
+            if (!coachesByTeam[p.team]) coachesByTeam[p.team] = [];
+            coachesByTeam[p.team].push(p);
+        } else {
+            if (!outputByTeam[p.team]) outputByTeam[p.team] = [];
+            outputByTeam[p.team].push(p);
+        }
     });
 
     console.log(`Total Matches Processed: ${matchCount}`);
@@ -222,7 +244,14 @@ function calculateStats() {
     console.log(`Matches with Round Found: ${roundFoundCount}`);
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(outputByTeam, null, 2));
-    console.log(`Saved stats for ${Object.keys(playerStats).length} players to ${OUTPUT_FILE}`);
+
+    const COACHES_OUTPUT_FILE = path.join(__dirname, '../src/data/coaches_stats_calculated.json');
+    fs.writeFileSync(COACHES_OUTPUT_FILE, JSON.stringify(coachesByTeam, null, 2));
+
+    const totalPlayers = Object.values(outputByTeam).flat().length;
+    const totalCoaches = Object.values(coachesByTeam).flat().length;
+    console.log(`Saved stats for ${totalPlayers} players to ${OUTPUT_FILE}`);
+    console.log(`Saved stats for ${totalCoaches} coaches to ${COACHES_OUTPUT_FILE}`);
 }
 
 calculateStats();

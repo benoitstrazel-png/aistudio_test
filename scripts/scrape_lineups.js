@@ -214,12 +214,12 @@ async function run() {
     try {
         let rounds = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
 
-        // Filter for Journée 1 to 18 as requested
+        // Filter for Journée 1 to 23
         rounds = rounds.filter(r => {
             const match = r.round.match(/Journée (\d+)/);
             if (match) {
                 const num = parseInt(match[1], 10);
-                return num >= 21 && num <= 22;
+                return num >= 21 && num <= 23;
             }
             return false;
         });
