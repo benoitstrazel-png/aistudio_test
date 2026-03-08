@@ -1959,94 +1959,58 @@
         "round": "Journée 25",
         "matches": [
             {
-                "id": "l6n7WZYj",
-                "date": "08.03. 17:00",
-                "homeTeam": "Auxerre",
-                "awayTeam": "Strasbourg",
-                "statsUrl": "https://www.flashscore.fr/match/l6n7WZYj/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/l6n7WZYj/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/l6n7WZYj/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
-            },
-            {
-                "id": "dfSgPIRN",
-                "date": "08.03. 17:00",
-                "homeTeam": "Brest",
-                "awayTeam": "Le Havre",
-                "statsUrl": "https://www.flashscore.fr/match/dfSgPIRN/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/dfSgPIRN/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/dfSgPIRN/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
-            },
-            {
-                "id": "Me2SwItH",
-                "date": "08.03. 17:00",
-                "homeTeam": "Lens",
-                "awayTeam": "Metz",
-                "statsUrl": "https://www.flashscore.fr/match/Me2SwItH/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/Me2SwItH/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/Me2SwItH/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
-            },
-            {
-                "id": "INeyxdBT",
-                "date": "08.03. 17:00",
-                "homeTeam": "Lille",
-                "awayTeam": "Lorient",
-                "statsUrl": "https://www.flashscore.fr/match/INeyxdBT/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/INeyxdBT/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/INeyxdBT/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
-            },
-            {
+                "url": "https://www.flashscore.fr/match/lr4KuvC4/#/resume",
                 "id": "lr4KuvC4",
-                "date": "08.03. 17:00",
-                "homeTeam": "Lyon",
-                "awayTeam": "Paris FC",
-                "statsUrl": "https://www.flashscore.fr/match/lr4KuvC4/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/lr4KuvC4/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/lr4KuvC4/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
+                "date": "08.03. 20:45",
+                "timestamp": 1772999100000
             },
             {
-                "id": "WUBivnhc",
-                "date": "08.03. 17:00",
-                "homeTeam": "Nantes",
-                "awayTeam": "Angers",
-                "statsUrl": "https://www.flashscore.fr/match/WUBivnhc/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/WUBivnhc/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/WUBivnhc/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
+                "url": "https://www.flashscore.fr/match/dfSgPIRN/#/resume",
+                "id": "dfSgPIRN",
+                "date": "08.03. 17:15",
+                "timestamp": 1772986500000
             },
             {
+                "url": "https://www.flashscore.fr/match/INeyxdBT/#/resume",
+                "id": "INeyxdBT",
+                "date": "08.03. 17:15",
+                "timestamp": 1772986500000
+            },
+            {
+                "url": "https://www.flashscore.fr/match/tS3QJdko/#/resume",
                 "id": "tS3QJdko",
-                "date": "08.03. 17:00",
-                "homeTeam": "Nice",
-                "awayTeam": "Rennes",
-                "statsUrl": "https://www.flashscore.fr/match/tS3QJdko/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/tS3QJdko/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/tS3QJdko/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
+                "date": "08.03. 17:15",
+                "timestamp": 1772986500000
             },
             {
-                "id": "IoAaxQM9",
-                "date": "08.03. 17:00",
-                "homeTeam": "PSG",
-                "awayTeam": "Monaco",
-                "statsUrl": "https://www.flashscore.fr/match/IoAaxQM9/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/IoAaxQM9/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/IoAaxQM9/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
+                "url": "https://www.flashscore.fr/match/Me2SwItH/#/resume",
+                "id": "Me2SwItH",
+                "date": "08.03. 15:00",
+                "timestamp": 1772978400000
             },
             {
+                "url": "https://www.flashscore.fr/match/lUOoRvcB/#/resume",
                 "id": "lUOoRvcB",
-                "date": "08.03. 17:00",
-                "homeTeam": "Toulouse",
-                "awayTeam": "Marseille",
-                "statsUrl": "https://www.flashscore.fr/match/lUOoRvcB/#/statistiques-du-match/0",
-                "statsUrlFirstHalf": "https://www.flashscore.fr/match/lUOoRvcB/#/statistiques-du-match/1",
-                "statsUrlSecondHalf": "https://www.flashscore.fr/match/lUOoRvcB/#/statistiques-du-match/2",
-                "timestamp": 1772985600000
+                "date": "07.03. 21:05",
+                "timestamp": 1772913900000
+            },
+            {
+                "url": "https://www.flashscore.fr/match/l6n7WZYj/#/resume",
+                "id": "l6n7WZYj",
+                "date": "07.03. 19:00",
+                "timestamp": 1772906400000
+            },
+            {
+                "url": "https://www.flashscore.fr/match/WUBivnhc/#/resume",
+                "id": "WUBivnhc",
+                "date": "07.03. 17:00",
+                "timestamp": 1772899200000
+            },
+            {
+                "url": "https://www.flashscore.fr/match/IoAaxQM9/#/resume",
+                "id": "IoAaxQM9",
+                "date": "06.03. 20:45",
+                "timestamp": 1772826300000
             }
         ]
     },

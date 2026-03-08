@@ -23,12 +23,12 @@
       "minutesPlayed": 1467,
       "starter": 16,
       "subIn": 2,
-      "subOut": 6,
+      "subOut": 7,
       "goals": 1,
       "assists": 4,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Zabarnyi I.",
@@ -128,42 +128,42 @@
       "minutesPlayed": 458,
       "starter": 4,
       "subIn": 6,
-      "subOut": 9,
+      "subOut": 10,
       "goals": 4,
       "assists": 2,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Dembélé O.",
       "team": "PSG",
       "position": "",
-      "matchesPlayed": 10,
-      "minutesPlayed": 392,
+      "matchesPlayed": 11,
+      "minutesPlayed": 422,
       "starter": 3,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 7,
       "goals": 8,
       "assists": 4,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Mayulu S.",
       "team": "PSG",
       "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 923,
+      "matchesPlayed": 15,
+      "minutesPlayed": 953,
       "starter": 12,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 12,
       "goals": 3,
       "assists": 4,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 21
+      "latestRound": 25
     },
     {
       "name": "Barcola B.",
@@ -174,26 +174,26 @@
       "starter": 7,
       "subIn": 7,
       "subOut": 10,
-      "goals": 9,
+      "goals": 10,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Ramos G.",
       "team": "PSG",
       "position": "",
-      "matchesPlayed": 19,
-      "minutesPlayed": 742,
+      "matchesPlayed": 20,
+      "minutesPlayed": 758,
       "starter": 7,
-      "subIn": 12,
+      "subIn": 13,
       "subOut": 5,
       "goals": 5,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Marquinhos",
@@ -248,12 +248,12 @@
       "minutesPlayed": 934,
       "starter": 10,
       "subIn": 8,
-      "subOut": 9,
+      "subOut": 10,
       "goals": 4,
       "assists": 3,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Hakimi A.",
@@ -265,10 +265,10 @@
       "subIn": 3,
       "subOut": 0,
       "goals": 2,
-      "assists": 0,
-      "yellowCards": 2,
+      "assists": 1,
+      "yellowCards": 3,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Beraldo L.",
@@ -289,16 +289,16 @@
       "name": "Lee Kang-In",
       "team": "PSG",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 864,
+      "matchesPlayed": 17,
+      "minutesPlayed": 894,
       "starter": 10,
-      "subIn": 6,
+      "subIn": 7,
       "subOut": 9,
       "goals": 2,
       "assists": 3,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Ndjantou Q.",
@@ -368,12 +368,12 @@
       "minutesPlayed": 158,
       "starter": 2,
       "subIn": 2,
-      "subOut": 2,
+      "subOut": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     }
   ],
   "Paris FC": [
@@ -475,12 +475,12 @@
       "minutesPlayed": 510,
       "starter": 5,
       "subIn": 9,
-      "subOut": 5,
+      "subOut": 6,
       "goals": 1,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Lopez M.",
@@ -516,16 +516,16 @@
       "name": "Gory A.",
       "team": "Paris FC",
       "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 542,
+      "matchesPlayed": 15,
+      "minutesPlayed": 559,
       "starter": 5,
-      "subIn": 9,
+      "subIn": 10,
       "subOut": 6,
       "goals": 1,
       "assists": 1,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Geubbels W.",
@@ -561,16 +561,16 @@
       "name": "Marchetti V.",
       "team": "Paris FC",
       "position": "",
-      "matchesPlayed": 15,
-      "minutesPlayed": 540,
+      "matchesPlayed": 16,
+      "minutesPlayed": 543,
       "starter": 6,
-      "subIn": 9,
+      "subIn": 10,
       "subOut": 8,
       "goals": 2,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Lopez J.",
@@ -606,16 +606,16 @@
       "name": "Ollila T.",
       "team": "Paris FC",
       "position": "",
-      "matchesPlayed": 8,
+      "matchesPlayed": 9,
       "minutesPlayed": 211,
       "starter": 3,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 20
+      "latestRound": 25
     },
     {
       "name": "Matondo R.",
@@ -625,12 +625,12 @@
       "minutesPlayed": 718,
       "starter": 7,
       "subIn": 11,
-      "subOut": 3,
+      "subOut": 4,
       "goals": 0,
       "assists": 0,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Nkambadio O.",
@@ -700,12 +700,12 @@
       "minutesPlayed": 740,
       "starter": 9,
       "subIn": 4,
-      "subOut": 17,
+      "subOut": 18,
       "goals": 3,
       "assists": 2,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Krasso J.",
@@ -715,12 +715,12 @@
       "minutesPlayed": 797,
       "starter": 8,
       "subIn": 12,
-      "subOut": 10,
+      "subOut": 11,
       "goals": 2,
       "assists": 2,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Dicko N.",
@@ -741,16 +741,16 @@
       "name": "Koleosho L.",
       "team": "Paris FC",
       "position": "",
-      "matchesPlayed": 6,
-      "minutesPlayed": 192,
+      "matchesPlayed": 7,
+      "minutesPlayed": 209,
       "starter": 1,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 1,
       "goals": 1,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Munetsi M.",
@@ -760,12 +760,12 @@
       "minutesPlayed": 234,
       "starter": 3,
       "subIn": 4,
-      "subOut": 3,
-      "goals": 2,
+      "subOut": 4,
+      "goals": 3,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Chergui S.",
@@ -816,16 +816,16 @@
       "name": "Immobile C.",
       "team": "Paris FC",
       "position": "",
-      "matchesPlayed": 3,
-      "minutesPlayed": 224,
+      "matchesPlayed": 4,
+      "minutesPlayed": 241,
       "starter": 3,
-      "subIn": 0,
+      "subIn": 1,
       "subOut": 4,
       "goals": 0,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Coppola D.",
@@ -863,16 +863,16 @@
       "name": "Zogbé L.",
       "team": "Brest",
       "position": "",
-      "matchesPlayed": 5,
+      "matchesPlayed": 6,
       "minutesPlayed": 100,
       "starter": 1,
-      "subIn": 4,
+      "subIn": 5,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 18
+      "latestRound": 25
     },
     {
       "name": "Chardonnet B.",
@@ -885,9 +885,9 @@
       "subOut": 2,
       "goals": 0,
       "assists": 3,
-      "yellowCards": 3,
+      "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Coulibaly S.",
@@ -927,12 +927,12 @@
       "minutesPlayed": 1154,
       "starter": 15,
       "subIn": 0,
-      "subOut": 13,
-      "goals": 7,
+      "subOut": 14,
+      "goals": 8,
       "assists": 2,
       "yellowCards": 1,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Chotard J.",
@@ -968,16 +968,16 @@
       "name": "Labeau Lascary R.",
       "team": "Brest",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 602,
+      "matchesPlayed": 17,
+      "minutesPlayed": 622,
       "starter": 6,
-      "subIn": 10,
+      "subIn": 11,
       "subOut": 8,
       "goals": 4,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Baldé M.",
@@ -1002,42 +1002,42 @@
       "minutesPlayed": 1389,
       "starter": 16,
       "subIn": 0,
-      "subOut": 2,
-      "goals": 6,
+      "subOut": 3,
+      "goals": 7,
       "assists": 7,
-      "yellowCards": 8,
+      "yellowCards": 9,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mboup P.",
       "team": "Brest",
       "position": "",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "minutesPlayed": 804,
       "starter": 7,
-      "subIn": 11,
+      "subIn": 12,
       "subOut": 8,
       "goals": 1,
       "assists": 0,
       "yellowCards": 5,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Tousart L.",
       "team": "Brest",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 455,
+      "matchesPlayed": 17,
+      "minutesPlayed": 466,
       "starter": 4,
-      "subIn": 12,
+      "subIn": 13,
       "subOut": 4,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Locko B.",
@@ -1047,12 +1047,12 @@
       "minutesPlayed": 640,
       "starter": 7,
       "subIn": 5,
-      "subOut": 5,
+      "subOut": 6,
       "goals": 0,
       "assists": 1,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Majecki R.",
@@ -1079,10 +1079,10 @@
       "subIn": 0,
       "subOut": 2,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Diaz Jr. M.",
@@ -1107,12 +1107,12 @@
       "minutesPlayed": 787,
       "starter": 10,
       "subIn": 1,
-      "subOut": 14,
+      "subOut": 15,
       "goals": 5,
-      "assists": 2,
-      "yellowCards": 5,
+      "assists": 3,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Dina Ebimbe J.",
@@ -1122,27 +1122,27 @@
       "minutesPlayed": 569,
       "starter": 7,
       "subIn": 11,
-      "subOut": 7,
+      "subOut": 8,
       "goals": 2,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Makalou H.",
       "team": "Brest",
       "position": "",
-      "matchesPlayed": 9,
+      "matchesPlayed": 10,
       "minutesPlayed": 87,
       "starter": 0,
-      "subIn": 9,
+      "subIn": 10,
       "subOut": 1,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 19
+      "latestRound": 25
     },
     {
       "name": "Le Cardinal J.",
@@ -1225,16 +1225,16 @@
       "name": "Sy L.",
       "team": "Auxerre",
       "position": "",
-      "matchesPlayed": 13,
-      "minutesPlayed": 789,
+      "matchesPlayed": 14,
+      "minutesPlayed": 802,
       "starter": 9,
-      "subIn": 4,
+      "subIn": 5,
       "subOut": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Senaya M.",
@@ -1244,12 +1244,12 @@
       "minutesPlayed": 1007,
       "starter": 11,
       "subIn": 2,
-      "subOut": 5,
+      "subOut": 6,
       "goals": 1,
       "assists": 0,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Diomande S.",
@@ -1277,9 +1277,9 @@
       "subOut": 8,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Owusu E.",
@@ -1319,12 +1319,12 @@
       "minutesPlayed": 870,
       "starter": 9,
       "subIn": 8,
-      "subOut": 9,
+      "subOut": 10,
       "goals": 1,
       "assists": 0,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mara S.",
@@ -1450,16 +1450,16 @@
       "name": "Ahamada N.",
       "team": "Auxerre",
       "position": "",
-      "matchesPlayed": 5,
-      "minutesPlayed": 262,
+      "matchesPlayed": 6,
+      "minutesPlayed": 275,
       "starter": 4,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 5,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "El Azzouzi O.",
@@ -1696,12 +1696,12 @@
       "minutesPlayed": 1257,
       "starter": 15,
       "subIn": 1,
-      "subOut": 1,
+      "subOut": 2,
       "goals": 2,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Zouaoui Y.",
@@ -1711,12 +1711,12 @@
       "minutesPlayed": 1266,
       "starter": 16,
       "subIn": 1,
-      "subOut": 8,
+      "subOut": 9,
       "goals": 1,
       "assists": 1,
-      "yellowCards": 4,
+      "yellowCards": 5,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Ebonog S.",
@@ -1752,16 +1752,16 @@
       "name": "Kechta Y.",
       "team": "Le Havre",
       "position": "",
-      "matchesPlayed": 17,
-      "minutesPlayed": 607,
+      "matchesPlayed": 18,
+      "minutesPlayed": 616,
       "starter": 7,
-      "subIn": 10,
+      "subIn": 11,
       "subOut": 11,
       "goals": 1,
       "assists": 1,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mambimbi F.",
@@ -1786,12 +1786,12 @@
       "minutesPlayed": 302,
       "starter": 3,
       "subIn": 4,
-      "subOut": 3,
+      "subOut": 4,
       "goals": 1,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Soumare I.",
@@ -1842,16 +1842,16 @@
       "name": "Vinette E. K.",
       "team": "Le Havre",
       "position": "",
-      "matchesPlayed": 7,
-      "minutesPlayed": 110,
+      "matchesPlayed": 8,
+      "minutesPlayed": 136,
       "starter": 0,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 1,
       "goals": 0,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Kyeremeh G.",
@@ -1902,31 +1902,31 @@
       "name": "Khadra R.",
       "team": "Le Havre",
       "position": "",
-      "matchesPlayed": 6,
-      "minutesPlayed": 200,
+      "matchesPlayed": 7,
+      "minutesPlayed": 210,
       "starter": 1,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 1,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 14
+      "latestRound": 25
     },
     {
       "name": "Samatta A.",
       "team": "Le Havre",
       "position": "",
-      "matchesPlayed": 13,
-      "minutesPlayed": 583,
+      "matchesPlayed": 14,
+      "minutesPlayed": 609,
       "starter": 6,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 9,
       "goals": 0,
       "assists": 0,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Doucoure F.",
@@ -1996,12 +1996,12 @@
       "minutesPlayed": 1070,
       "starter": 13,
       "subIn": 0,
-      "subOut": 7,
+      "subOut": 8,
       "goals": 1,
       "assists": 1,
       "yellowCards": 3,
       "redCards": 1,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Pembele T.",
@@ -2026,12 +2026,12 @@
       "minutesPlayed": 235,
       "starter": 3,
       "subIn": 2,
-      "subOut": 5,
+      "subOut": 6,
       "goals": 0,
       "assists": 2,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Pizarro D.",
@@ -2067,16 +2067,16 @@
       "name": "Zagadou S.",
       "team": "Le Havre",
       "position": "",
-      "matchesPlayed": 3,
-      "minutesPlayed": 233,
+      "matchesPlayed": 4,
+      "minutesPlayed": 259,
       "starter": 3,
-      "subIn": 0,
+      "subIn": 1,
       "subOut": 4,
       "goals": 1,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     }
   ],
   "Angers": [
@@ -2103,12 +2103,27 @@
       "minutesPlayed": 1276,
       "starter": 15,
       "subIn": 0,
-      "subOut": 5,
+      "subOut": 6,
       "goals": 0,
       "assists": 3,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
+    },
+    {
+      "name": "Bamba A.",
+      "team": "Angers",
+      "position": "",
+      "matchesPlayed": 9,
+      "minutesPlayed": 253,
+      "starter": 2,
+      "subIn": 7,
+      "subOut": 5,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 25
     },
     {
       "name": "Lefort J.",
@@ -2120,10 +2135,10 @@
       "subIn": 0,
       "subOut": 0,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Hanin F.",
@@ -2178,27 +2193,27 @@
       "minutesPlayed": 1341,
       "starter": 16,
       "subIn": 1,
-      "subOut": 13,
+      "subOut": 14,
       "goals": 2,
       "assists": 1,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mouton L.",
       "team": "Angers",
       "position": "",
-      "matchesPlayed": 17,
-      "minutesPlayed": 1194,
+      "matchesPlayed": 18,
+      "minutesPlayed": 1197,
       "starter": 15,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 18,
       "goals": 2,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Sbai A.",
@@ -2208,12 +2223,12 @@
       "minutesPlayed": 862,
       "starter": 12,
       "subIn": 2,
-      "subOut": 12,
-      "goals": 1,
+      "subOut": 13,
+      "goals": 2,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Cherif S.",
@@ -2249,16 +2264,16 @@
       "name": "Raolisoa L.",
       "team": "Angers",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 717,
+      "matchesPlayed": 17,
+      "minutesPlayed": 761,
       "starter": 7,
-      "subIn": 9,
+      "subIn": 10,
       "subOut": 8,
       "goals": 2,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Peter P.",
@@ -2279,16 +2294,16 @@
       "name": "Machine L.",
       "team": "Angers",
       "position": "",
-      "matchesPlayed": 13,
-      "minutesPlayed": 213,
+      "matchesPlayed": 14,
+      "minutesPlayed": 216,
       "starter": 0,
-      "subIn": 13,
+      "subIn": 14,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Koffi H.",
@@ -2343,12 +2358,12 @@
       "minutesPlayed": 130,
       "starter": 1,
       "subIn": 2,
-      "subOut": 1,
+      "subOut": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 7
+      "latestRound": 25
     },
     {
       "name": "Louer M.",
@@ -2399,16 +2414,16 @@
       "name": "Capelle P.",
       "team": "Angers",
       "position": "",
-      "matchesPlayed": 6,
-      "minutesPlayed": 95,
+      "matchesPlayed": 7,
+      "minutesPlayed": 170,
       "starter": 0,
-      "subIn": 6,
+      "subIn": 7,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "van den Boomen B.",
@@ -2433,12 +2448,12 @@
       "minutesPlayed": 256,
       "starter": 3,
       "subIn": 1,
-      "subOut": 3,
+      "subOut": 4,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Pona O.",
@@ -2452,458 +2467,6 @@
       "goals": 0,
       "assists": 0,
       "yellowCards": 1,
-      "redCards": 0,
-      "latestRound": 24
-    }
-  ],
-  "Monaco": [
-    {
-      "name": "Bamba A.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 8,
-      "minutesPlayed": 253,
-      "starter": 2,
-      "subIn": 6,
-      "subOut": 4,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Hradecký L.",
-      "team": "Monaco",
-      "position": "G",
-      "matchesPlayed": 5,
-      "minutesPlayed": 372,
-      "starter": 5,
-      "subIn": 0,
-      "subOut": 2,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 17
-    },
-    {
-      "name": "Mawissa C.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 4,
-      "minutesPlayed": 218,
-      "starter": 3,
-      "subIn": 1,
-      "subOut": 3,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Kehrer T.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 12,
-      "minutesPlayed": 1070,
-      "starter": 12,
-      "subIn": 0,
-      "subOut": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 6,
-      "redCards": 1,
-      "latestRound": 24
-    },
-    {
-      "name": "Salisu M.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 11,
-      "minutesPlayed": 990,
-      "starter": 11,
-      "subIn": 0,
-      "subOut": 0,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 4,
-      "redCards": 0,
-      "latestRound": 17
-    },
-    {
-      "name": "Caio Henrique",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 15,
-      "minutesPlayed": 1028,
-      "starter": 11,
-      "subIn": 4,
-      "subOut": 2,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 2,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Coulibaly M.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 809,
-      "starter": 10,
-      "subIn": 4,
-      "subOut": 7,
-      "goals": 4,
-      "assists": 3,
-      "yellowCards": 6,
-      "redCards": 1,
-      "latestRound": 23
-    },
-    {
-      "name": "Teze J.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 1119,
-      "starter": 12,
-      "subIn": 4,
-      "subOut": 5,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 8,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Golovin A.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 12,
-      "minutesPlayed": 786,
-      "starter": 10,
-      "subIn": 2,
-      "subOut": 12,
-      "goals": 4,
-      "assists": 5,
-      "yellowCards": 2,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Akliouche M.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 1073,
-      "starter": 12,
-      "subIn": 2,
-      "subOut": 7,
-      "goals": 5,
-      "assists": 3,
-      "yellowCards": 2,
-      "redCards": 0,
-      "latestRound": 22
-    },
-    {
-      "name": "Biereth M.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 18,
-      "minutesPlayed": 641,
-      "starter": 7,
-      "subIn": 11,
-      "subOut": 11,
-      "goals": 2,
-      "assists": 2,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Balogun F.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 851,
-      "starter": 10,
-      "subIn": 4,
-      "subOut": 11,
-      "goals": 7,
-      "assists": 2,
-      "yellowCards": 3,
-      "redCards": 1,
-      "latestRound": 24
-    },
-    {
-      "name": "Kohn P.",
-      "team": "Monaco",
-      "position": "G",
-      "matchesPlayed": 12,
-      "minutesPlayed": 989,
-      "starter": 10,
-      "subIn": 2,
-      "subOut": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 2,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Ouattara K.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 11,
-      "minutesPlayed": 731,
-      "starter": 9,
-      "subIn": 2,
-      "subOut": 7,
-      "goals": 0,
-      "assists": 5,
-      "yellowCards": 4,
-      "redCards": 0,
-      "latestRound": 19
-    },
-    {
-      "name": "Ilenikhena G.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 311,
-      "starter": 2,
-      "subIn": 12,
-      "subOut": 3,
-      "goals": 2,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 19
-    },
-    {
-      "name": "Idumbo S.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 8,
-      "minutesPlayed": 162,
-      "starter": 0,
-      "subIn": 8,
-      "subOut": 0,
-      "goals": 1,
-      "assists": 1,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 20
-    },
-    {
-      "name": "Dier E.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 3,
-      "minutesPlayed": 221,
-      "starter": 2,
-      "subIn": 1,
-      "subOut": 1,
-      "goals": 1,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 19
-    },
-    {
-      "name": "Faes W.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 4,
-      "minutesPlayed": 299,
-      "starter": 4,
-      "subIn": 0,
-      "subOut": 1,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Zakaria D.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 7,
-      "minutesPlayed": 436,
-      "starter": 6,
-      "subIn": 1,
-      "subOut": 3,
-      "goals": 2,
-      "assists": 1,
-      "yellowCards": 3,
-      "redCards": 1,
-      "latestRound": 24
-    },
-    {
-      "name": "Vanderson",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 10,
-      "minutesPlayed": 388,
-      "starter": 3,
-      "subIn": 7,
-      "subOut": 4,
-      "goals": 0,
-      "assists": 2,
-      "yellowCards": 4,
-      "redCards": 0,
-      "latestRound": 22
-    },
-    {
-      "name": "Fati A.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 608,
-      "starter": 5,
-      "subIn": 11,
-      "subOut": 5,
-      "goals": 8,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Brunner P.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 5,
-      "minutesPlayed": 67,
-      "starter": 0,
-      "subIn": 5,
-      "subOut": 1,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 1,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Minamino T.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 10,
-      "minutesPlayed": 561,
-      "starter": 6,
-      "subIn": 4,
-      "subOut": 11,
-      "goals": 3,
-      "assists": 2,
-      "yellowCards": 5,
-      "redCards": 0,
-      "latestRound": 16
-    },
-    {
-      "name": "Cabral P.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 5,
-      "minutesPlayed": 94,
-      "starter": 0,
-      "subIn": 5,
-      "subOut": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 12
-    },
-    {
-      "name": "Diatta K.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 12,
-      "minutesPlayed": 698,
-      "starter": 7,
-      "subIn": 5,
-      "subOut": 4,
-      "goals": 0,
-      "assists": 1,
-      "yellowCards": 1,
-      "redCards": 0,
-      "latestRound": 23
-    },
-    {
-      "name": "Camara L.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 8,
-      "minutesPlayed": 555,
-      "starter": 6,
-      "subIn": 2,
-      "subOut": 5,
-      "goals": 0,
-      "assists": 3,
-      "yellowCards": 3,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Pogba P.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 3,
-      "minutesPlayed": 30,
-      "starter": 0,
-      "subIn": 3,
-      "subOut": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 15
-    },
-    {
-      "name": "Ben Seghir E.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 2,
-      "minutesPlayed": 43,
-      "starter": 0,
-      "subIn": 2,
-      "subOut": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 2
-    },
-    {
-      "name": "Adingra S.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 2,
-      "minutesPlayed": 113,
-      "starter": 1,
-      "subIn": 1,
-      "subOut": 2,
-      "goals": 3,
-      "assists": 0,
-      "yellowCards": 0,
-      "redCards": 0,
-      "latestRound": 24
-    },
-    {
-      "name": "Nibombe S.",
-      "team": "Monaco",
-      "position": "",
-      "matchesPlayed": 1,
-      "minutesPlayed": 0,
-      "starter": 0,
-      "subIn": 1,
-      "subOut": 0,
-      "goals": 0,
-      "assists": 0,
-      "yellowCards": 0,
       "redCards": 0,
       "latestRound": 24
     }
@@ -2934,10 +2497,10 @@
       "subIn": 2,
       "subOut": 4,
       "goals": 0,
-      "assists": 2,
-      "yellowCards": 3,
+      "assists": 3,
+      "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Adjei N.",
@@ -3018,16 +2581,16 @@
       "name": "Le Bris T.",
       "team": "Lorient",
       "position": "",
-      "matchesPlayed": 18,
-      "minutesPlayed": 998,
+      "matchesPlayed": 19,
+      "minutesPlayed": 1022,
       "starter": 13,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 11,
       "goals": 2,
       "assists": 2,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Makengo J.",
@@ -3037,27 +2600,27 @@
       "minutesPlayed": 854,
       "starter": 10,
       "subIn": 7,
-      "subOut": 13,
+      "subOut": 14,
       "goals": 4,
       "assists": 2,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Soumano S.",
       "team": "Lorient",
       "position": "",
-      "matchesPlayed": 20,
-      "minutesPlayed": 639,
+      "matchesPlayed": 21,
+      "minutesPlayed": 655,
       "starter": 5,
-      "subIn": 15,
+      "subIn": 16,
       "subOut": 8,
       "goals": 4,
       "assists": 2,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Pagis P.",
@@ -3078,16 +2641,16 @@
       "name": "Dieng B.",
       "team": "Lorient",
       "position": "",
-      "matchesPlayed": 10,
-      "minutesPlayed": 469,
+      "matchesPlayed": 11,
+      "minutesPlayed": 493,
       "starter": 5,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 7,
       "goals": 6,
       "assists": 1,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Bamba M.",
@@ -3112,12 +2675,12 @@
       "minutesPlayed": 627,
       "starter": 6,
       "subIn": 11,
-      "subOut": 9,
+      "subOut": 10,
       "goals": 1,
       "assists": 2,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Talbi M.",
@@ -3142,12 +2705,12 @@
       "minutesPlayed": 1195,
       "starter": 13,
       "subIn": 1,
-      "subOut": 7,
+      "subOut": 8,
       "goals": 2,
       "assists": 5,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Bley M.",
@@ -3173,11 +2736,11 @@
       "starter": 8,
       "subIn": 6,
       "subOut": 4,
-      "goals": 1,
+      "goals": 2,
       "assists": 1,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Faye A.",
@@ -3202,27 +2765,27 @@
       "minutesPlayed": 423,
       "starter": 4,
       "subIn": 8,
-      "subOut": 8,
+      "subOut": 9,
       "goals": 3,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Yongwa D.",
       "team": "Lorient",
       "position": "",
-      "matchesPlayed": 17,
-      "minutesPlayed": 1072,
+      "matchesPlayed": 18,
+      "minutesPlayed": 1088,
       "starter": 11,
-      "subIn": 6,
+      "subIn": 7,
       "subOut": 1,
       "goals": 0,
       "assists": 1,
       "yellowCards": 3,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Katseris P.",
@@ -3232,12 +2795,12 @@
       "minutesPlayed": 42,
       "starter": 0,
       "subIn": 4,
-      "subOut": 1,
+      "subOut": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mendy F.",
@@ -3253,6 +2816,21 @@
       "yellowCards": 1,
       "redCards": 0,
       "latestRound": 2
+    },
+    {
+      "name": "Semedo D.",
+      "team": "Lorient",
+      "position": "",
+      "matchesPlayed": 1,
+      "minutesPlayed": 10,
+      "starter": 0,
+      "subIn": 1,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 25
     }
   ],
   "Metz": [
@@ -3305,16 +2883,16 @@
       "name": "Mboula U.",
       "team": "Metz",
       "position": "",
-      "matchesPlayed": 5,
-      "minutesPlayed": 263,
+      "matchesPlayed": 6,
+      "minutesPlayed": 280,
       "starter": 3,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 2,
       "goals": 1,
       "assists": 0,
-      "yellowCards": 0,
+      "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Colin M.",
@@ -3335,16 +2913,16 @@
       "name": "Deminguet J.",
       "team": "Metz",
       "position": "",
-      "matchesPlayed": 19,
-      "minutesPlayed": 1105,
+      "matchesPlayed": 20,
+      "minutesPlayed": 1149,
       "starter": 14,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 17,
       "goals": 1,
       "assists": 0,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Traore B.",
@@ -3354,12 +2932,12 @@
       "minutesPlayed": 901,
       "starter": 10,
       "subIn": 3,
-      "subOut": 9,
+      "subOut": 10,
       "goals": 1,
       "assists": 0,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mbaye M.",
@@ -3380,31 +2958,31 @@
       "name": "Hein G.",
       "team": "Metz",
       "position": "",
-      "matchesPlayed": 15,
-      "minutesPlayed": 1090,
+      "matchesPlayed": 16,
+      "minutesPlayed": 1126,
       "starter": 13,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 6,
       "goals": 6,
       "assists": 4,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Tsitaishvili G.",
       "team": "Metz",
       "position": "",
-      "matchesPlayed": 18,
-      "minutesPlayed": 1258,
+      "matchesPlayed": 19,
+      "minutesPlayed": 1276,
       "starter": 14,
-      "subIn": 4,
+      "subIn": 5,
       "subOut": 11,
       "goals": 2,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Sane I.",
@@ -3432,9 +3010,9 @@
       "subOut": 10,
       "goals": 2,
       "assists": 1,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Asoro J.",
@@ -3492,9 +3070,9 @@
       "subOut": 2,
       "goals": 1,
       "assists": 1,
-      "yellowCards": 1,
+      "yellowCards": 2,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Yegbe T.",
@@ -3564,12 +3142,12 @@
       "minutesPlayed": 538,
       "starter": 7,
       "subIn": 1,
-      "subOut": 8,
+      "subOut": 9,
       "goals": 0,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Madjo B.",
@@ -3594,27 +3172,27 @@
       "minutesPlayed": 184,
       "starter": 2,
       "subIn": 2,
-      "subOut": 2,
+      "subOut": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mbala N.",
       "team": "Metz",
       "position": "",
-      "matchesPlayed": 4,
-      "minutesPlayed": 27,
+      "matchesPlayed": 5,
+      "minutesPlayed": 63,
       "starter": 0,
-      "subIn": 4,
+      "subIn": 5,
       "subOut": 0,
       "goals": 1,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Michal L.",
@@ -3714,12 +3292,12 @@
       "minutesPlayed": 63,
       "starter": 0,
       "subIn": 4,
-      "subOut": 0,
+      "subOut": 1,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Sarr B.",
@@ -3729,12 +3307,12 @@
       "minutesPlayed": 83,
       "starter": 1,
       "subIn": 1,
-      "subOut": 1,
+      "subOut": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     }
   ],
   "Marseille": [
@@ -3794,9 +3372,9 @@
       "subOut": 3,
       "goals": 1,
       "assists": 0,
-      "yellowCards": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Weah T.",
@@ -3809,24 +3387,24 @@
       "subOut": 9,
       "goals": 2,
       "assists": 2,
-      "yellowCards": 2,
+      "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Vermeeren A.",
       "team": "Marseille",
       "position": "",
-      "matchesPlayed": 13,
-      "minutesPlayed": 614,
+      "matchesPlayed": 14,
+      "minutesPlayed": 622,
       "starter": 8,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 3,
       "goals": 0,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 1,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Hojbjerg P.",
@@ -3847,16 +3425,16 @@
       "name": "Emerson",
       "team": "Marseille",
       "position": "",
-      "matchesPlayed": 18,
-      "minutesPlayed": 1386,
+      "matchesPlayed": 19,
+      "minutesPlayed": 1393,
       "starter": 16,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 3,
       "goals": 0,
       "assists": 3,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Greenwood M.",
@@ -3866,12 +3444,12 @@
       "minutesPlayed": 1257,
       "starter": 15,
       "subIn": 2,
-      "subOut": 8,
-      "goals": 14,
+      "subOut": 9,
+      "goals": 15,
       "assists": 4,
-      "yellowCards": 2,
+      "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Paixao I.",
@@ -3883,10 +3461,10 @@
       "subIn": 7,
       "subOut": 11,
       "goals": 5,
-      "assists": 3,
+      "assists": 4,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Aubameyang P.",
@@ -3896,12 +3474,12 @@
       "minutesPlayed": 1093,
       "starter": 11,
       "subIn": 7,
-      "subOut": 10,
+      "subOut": 11,
       "goals": 8,
       "assists": 5,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Nadir B.",
@@ -3967,16 +3545,16 @@
       "name": "Gouiri A.",
       "team": "Marseille",
       "position": "",
-      "matchesPlayed": 8,
-      "minutesPlayed": 454,
+      "matchesPlayed": 9,
+      "minutesPlayed": 478,
       "starter": 5,
-      "subIn": 3,
+      "subIn": 4,
       "subOut": 9,
       "goals": 5,
       "assists": 2,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Balerdi L.",
@@ -4061,12 +3639,12 @@
       "minutesPlayed": 289,
       "starter": 4,
       "subIn": 0,
-      "subOut": 4,
+      "subOut": 5,
       "goals": 0,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Nwaneri E.",
@@ -4106,12 +3684,12 @@
       "minutesPlayed": 294,
       "starter": 4,
       "subIn": 1,
-      "subOut": 6,
+      "subOut": 7,
       "goals": 0,
       "assists": 0,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mmadi T.",
@@ -4237,16 +3815,16 @@
       "name": "Nnadi T.",
       "team": "Marseille",
       "position": "",
-      "matchesPlayed": 1,
-      "minutesPlayed": 0,
+      "matchesPlayed": 2,
+      "minutesPlayed": 24,
       "starter": 0,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     }
   ],
   "Nantes": [
@@ -4273,12 +3851,12 @@
       "minutesPlayed": 353,
       "starter": 4,
       "subIn": 6,
-      "subOut": 2,
+      "subOut": 3,
       "goals": 3,
       "assists": 0,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Amian K.",
@@ -4333,42 +3911,42 @@
       "minutesPlayed": 389,
       "starter": 6,
       "subIn": 2,
-      "subOut": 7,
+      "subOut": 8,
       "goals": 0,
       "assists": 1,
-      "yellowCards": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Tabibou D.",
       "team": "Nantes",
       "position": "",
-      "matchesPlayed": 17,
-      "minutesPlayed": 729,
+      "matchesPlayed": 18,
+      "minutesPlayed": 754,
       "starter": 8,
-      "subIn": 9,
+      "subIn": 10,
       "subOut": 11,
       "goals": 0,
       "assists": 0,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Coquelin F.",
       "team": "Nantes",
       "position": "",
-      "matchesPlayed": 8,
-      "minutesPlayed": 212,
+      "matchesPlayed": 9,
+      "minutesPlayed": 237,
       "starter": 2,
-      "subIn": 6,
+      "subIn": 7,
       "subOut": 6,
       "goals": 0,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Abline M.",
@@ -4423,27 +4001,27 @@
       "minutesPlayed": 765,
       "starter": 8,
       "subIn": 3,
-      "subOut": 6,
+      "subOut": 7,
       "goals": 1,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Cabella R.",
       "team": "Nantes",
       "position": "",
-      "matchesPlayed": 4,
-      "minutesPlayed": 227,
+      "matchesPlayed": 5,
+      "minutesPlayed": 242,
       "starter": 2,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 1,
       "goals": 1,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Lepenant J.",
@@ -4524,16 +4102,16 @@
       "name": "Mostafa Mohamed",
       "team": "Nantes",
       "position": "",
-      "matchesPlayed": 12,
-      "minutesPlayed": 452,
+      "matchesPlayed": 13,
+      "minutesPlayed": 476,
       "starter": 4,
-      "subIn": 8,
+      "subIn": 9,
       "subOut": 9,
       "goals": 4,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 21
+      "latestRound": 25
     },
     {
       "name": "Awaziem C.",
@@ -4543,12 +4121,12 @@
       "minutesPlayed": 1156,
       "starter": 13,
       "subIn": 0,
-      "subOut": 2,
+      "subOut": 3,
       "goals": 2,
       "assists": 1,
       "yellowCards": 7,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Sissoko I.",
@@ -4573,12 +4151,12 @@
       "minutesPlayed": 177,
       "starter": 2,
       "subIn": 2,
-      "subOut": 2,
+      "subOut": 3,
       "goals": 1,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Hong Hyun-Seok",
@@ -4699,6 +4277,21 @@
       "yellowCards": 0,
       "redCards": 0,
       "latestRound": 12
+    },
+    {
+      "name": "Guilbert F.",
+      "team": "Nantes",
+      "position": "",
+      "matchesPlayed": 1,
+      "minutesPlayed": 15,
+      "starter": 0,
+      "subIn": 1,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 25
     }
   ],
   "Strasbourg": [
@@ -4770,12 +4363,12 @@
       "minutesPlayed": 902,
       "starter": 10,
       "subIn": 1,
-      "subOut": 4,
+      "subOut": 5,
       "goals": 0,
       "assists": 2,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Ouattara A.",
@@ -4800,27 +4393,27 @@
       "minutesPlayed": 1101,
       "starter": 13,
       "subIn": 5,
-      "subOut": 12,
+      "subOut": 13,
       "goals": 0,
       "assists": 1,
-      "yellowCards": 3,
+      "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Barco V.",
       "team": "Strasbourg",
       "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 1161,
+      "matchesPlayed": 15,
+      "minutesPlayed": 1186,
       "starter": 13,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 3,
       "goals": 1,
       "assists": 4,
       "yellowCards": 4,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Moreira D.",
@@ -4856,16 +4449,16 @@
       "name": "Panichelli J.",
       "team": "Strasbourg",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 1255,
+      "matchesPlayed": 17,
+      "minutesPlayed": 1281,
       "starter": 15,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 5,
       "goals": 14,
       "assists": 1,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Godo M.",
@@ -4875,27 +4468,27 @@
       "minutesPlayed": 733,
       "starter": 8,
       "subIn": 8,
-      "subOut": 7,
+      "subOut": 8,
       "goals": 7,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Amo-Ameyaw S.",
       "team": "Strasbourg",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 452,
+      "matchesPlayed": 17,
+      "minutesPlayed": 496,
       "starter": 3,
-      "subIn": 13,
+      "subIn": 14,
       "subOut": 4,
       "goals": 1,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Paez K.",
@@ -4983,24 +4576,24 @@
       "subOut": 3,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 2,
+      "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Nanasi S.",
       "team": "Strasbourg",
       "position": "",
-      "matchesPlayed": 9,
-      "minutesPlayed": 337,
+      "matchesPlayed": 10,
+      "minutesPlayed": 362,
       "starter": 3,
-      "subIn": 6,
+      "subIn": 7,
       "subOut": 3,
       "goals": 3,
       "assists": 1,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Yassine G.",
@@ -5010,12 +4603,12 @@
       "minutesPlayed": 3,
       "starter": 0,
       "subIn": 4,
-      "subOut": 1,
+      "subOut": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Emegha E.",
@@ -5070,12 +4663,12 @@
       "minutesPlayed": 5,
       "starter": 0,
       "subIn": 1,
-      "subOut": 0,
+      "subOut": 1,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Anselmino A.",
@@ -5096,16 +4689,16 @@
       "name": "Oyedele M.",
       "team": "Strasbourg",
       "position": "",
-      "matchesPlayed": 1,
-      "minutesPlayed": 0,
+      "matchesPlayed": 2,
+      "minutesPlayed": 12,
       "starter": 0,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     }
   ],
   "Lille": [
@@ -5120,24 +4713,24 @@
       "subOut": 0,
       "goals": 0,
       "assists": 1,
-      "yellowCards": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Meunier T.",
       "team": "Lille",
       "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 1011,
+      "matchesPlayed": 15,
+      "minutesPlayed": 1028,
       "starter": 11,
-      "subIn": 3,
+      "subIn": 4,
       "subOut": 3,
       "goals": 0,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Ngoy N.",
@@ -5209,10 +4802,10 @@
       "subIn": 12,
       "subOut": 3,
       "goals": 2,
-      "assists": 1,
-      "yellowCards": 1,
+      "assists": 2,
+      "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Broholm M.",
@@ -5237,12 +4830,12 @@
       "minutesPlayed": 1044,
       "starter": 13,
       "subIn": 3,
-      "subOut": 13,
+      "subOut": 14,
       "goals": 5,
       "assists": 1,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Fernandez-Pardo M.",
@@ -5252,12 +4845,12 @@
       "minutesPlayed": 974,
       "starter": 12,
       "subIn": 2,
-      "subOut": 8,
-      "goals": 3,
+      "subOut": 9,
+      "goals": 4,
       "assists": 3,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Giroud O.",
@@ -5278,16 +4871,16 @@
       "name": "Correia F.",
       "team": "Lille",
       "position": "",
-      "matchesPlayed": 18,
-      "minutesPlayed": 950,
+      "matchesPlayed": 19,
+      "minutesPlayed": 966,
       "starter": 11,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 15,
       "goals": 3,
       "assists": 5,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Bouaddi A.",
@@ -5297,27 +4890,27 @@
       "minutesPlayed": 1069,
       "starter": 13,
       "subIn": 2,
-      "subOut": 7,
+      "subOut": 8,
       "goals": 0,
       "assists": 1,
       "yellowCards": 5,
       "redCards": 1,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Diaoune S.",
       "team": "Lille",
       "position": "",
-      "matchesPlayed": 9,
-      "minutesPlayed": 175,
+      "matchesPlayed": 10,
+      "minutesPlayed": 177,
       "starter": 1,
-      "subIn": 8,
+      "subIn": 9,
       "subOut": 1,
       "goals": 1,
       "assists": 1,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Santos T.",
@@ -5327,12 +4920,12 @@
       "minutesPlayed": 360,
       "starter": 5,
       "subIn": 4,
-      "subOut": 6,
+      "subOut": 7,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Sahraoui O.",
@@ -5360,9 +4953,9 @@
       "subOut": 4,
       "goals": 1,
       "assists": 0,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Perraud R.",
@@ -5383,16 +4976,16 @@
       "name": "Mukau N.",
       "team": "Lille",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 614,
+      "matchesPlayed": 17,
+      "minutesPlayed": 631,
       "starter": 6,
-      "subIn": 10,
+      "subIn": 11,
       "subOut": 9,
       "goals": 1,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mbappé E.",
@@ -5443,16 +5036,16 @@
       "name": "Edjouma N.",
       "team": "Lille",
       "position": "",
-      "matchesPlayed": 11,
-      "minutesPlayed": 151,
+      "matchesPlayed": 12,
+      "minutesPlayed": 154,
       "starter": 0,
-      "subIn": 11,
+      "subIn": 12,
       "subOut": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mbemba Ch.",
@@ -5537,12 +5130,12 @@
       "minutesPlayed": 190,
       "starter": 2,
       "subIn": 2,
-      "subOut": 2,
+      "subOut": 3,
       "goals": 1,
       "assists": 0,
-      "yellowCards": 0,
+      "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     }
   ],
   "Rennes": [
@@ -5646,10 +5239,10 @@
       "subIn": 0,
       "subOut": 1,
       "goals": 1,
-      "assists": 2,
+      "assists": 4,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Merlin Q.",
@@ -5674,27 +5267,27 @@
       "minutesPlayed": 923,
       "starter": 11,
       "subIn": 7,
-      "subOut": 13,
+      "subOut": 14,
       "goals": 3,
-      "assists": 4,
+      "assists": 5,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Embolo B.",
       "team": "Rennes",
       "position": "",
-      "matchesPlayed": 17,
-      "minutesPlayed": 945,
+      "matchesPlayed": 18,
+      "minutesPlayed": 965,
       "starter": 11,
-      "subIn": 6,
+      "subIn": 7,
       "subOut": 8,
       "goals": 6,
-      "assists": 2,
+      "assists": 3,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Meite M.",
@@ -5719,27 +5312,27 @@
       "minutesPlayed": 1094,
       "starter": 15,
       "subIn": 1,
-      "subOut": 18,
-      "goals": 12,
+      "subOut": 19,
+      "goals": 13,
       "assists": 3,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Blas L.",
       "team": "Rennes",
       "position": "",
-      "matchesPlayed": 18,
-      "minutesPlayed": 561,
+      "matchesPlayed": 19,
+      "minutesPlayed": 581,
       "starter": 3,
-      "subIn": 15,
+      "subIn": 16,
       "subOut": 6,
-      "goals": 3,
+      "goals": 4,
       "assists": 3,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Legendre E.",
@@ -5790,31 +5383,31 @@
       "name": "Cisse D.",
       "team": "Rennes",
       "position": "",
-      "matchesPlayed": 17,
-      "minutesPlayed": 753,
+      "matchesPlayed": 18,
+      "minutesPlayed": 797,
       "starter": 10,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 12,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 2,
+      "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Mukiele N.",
       "team": "Rennes",
       "position": "",
-      "matchesPlayed": 2,
-      "minutesPlayed": 28,
+      "matchesPlayed": 3,
+      "minutesPlayed": 48,
       "starter": 0,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 0,
-      "goals": 0,
+      "goals": 1,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Nagida M.",
@@ -5824,12 +5417,12 @@
       "minutesPlayed": 283,
       "starter": 2,
       "subIn": 6,
-      "subOut": 1,
+      "subOut": 2,
       "goals": 0,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Szymanski S.",
@@ -5839,12 +5432,12 @@
       "minutesPlayed": 199,
       "starter": 2,
       "subIn": 2,
-      "subOut": 4,
-      "goals": 0,
+      "subOut": 5,
+      "goals": 1,
       "assists": 2,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Kamara G.",
@@ -5865,16 +5458,16 @@
       "name": "Ait Boudlal A.",
       "team": "Rennes",
       "position": "",
-      "matchesPlayed": 7,
-      "minutesPlayed": 572,
+      "matchesPlayed": 8,
+      "minutesPlayed": 574,
       "starter": 6,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 2,
       "goals": 2,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 1,
-      "latestRound": 21
+      "latestRound": 25
     },
     {
       "name": "Rosier L.",
@@ -5989,12 +5582,12 @@
       "minutesPlayed": 168,
       "starter": 2,
       "subIn": 0,
-      "subOut": 4,
+      "subOut": 5,
       "goals": 1,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Zabiri Y.",
@@ -6081,12 +5674,12 @@
       "minutesPlayed": 1241,
       "starter": 14,
       "subIn": 1,
-      "subOut": 4,
+      "subOut": 5,
       "goals": 1,
       "assists": 0,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Bard M.",
@@ -6156,12 +5749,12 @@
       "minutesPlayed": 1100,
       "starter": 13,
       "subIn": 2,
-      "subOut": 10,
+      "subOut": 11,
       "goals": 4,
       "assists": 3,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Diop S.",
@@ -6171,27 +5764,27 @@
       "minutesPlayed": 1235,
       "starter": 15,
       "subIn": 6,
-      "subOut": 15,
+      "subOut": 16,
       "goals": 7,
       "assists": 2,
       "yellowCards": 5,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Gouveia T.",
       "team": "Nice",
       "position": "",
-      "matchesPlayed": 12,
-      "minutesPlayed": 442,
+      "matchesPlayed": 13,
+      "minutesPlayed": 462,
       "starter": 4,
-      "subIn": 8,
+      "subIn": 9,
       "subOut": 3,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Wahi E.",
@@ -6272,16 +5865,16 @@
       "name": "Mendy A.",
       "team": "Nice",
       "position": "",
-      "matchesPlayed": 12,
-      "minutesPlayed": 1032,
+      "matchesPlayed": 13,
+      "minutesPlayed": 1042,
       "starter": 12,
-      "subIn": 0,
+      "subIn": 1,
       "subOut": 3,
       "goals": 0,
       "assists": 0,
       "yellowCards": 5,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Bombito M.",
@@ -6351,12 +5944,12 @@
       "minutesPlayed": 551,
       "starter": 5,
       "subIn": 6,
-      "subOut": 5,
+      "subOut": 6,
       "goals": 1,
       "assists": 2,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Jansson I.",
@@ -6411,42 +6004,42 @@
       "minutesPlayed": 715,
       "starter": 7,
       "subIn": 8,
-      "subOut": 8,
+      "subOut": 9,
       "goals": 3,
       "assists": 2,
       "yellowCards": 1,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Kevin",
       "team": "Nice",
       "position": "",
-      "matchesPlayed": 12,
-      "minutesPlayed": 480,
+      "matchesPlayed": 13,
+      "minutesPlayed": 524,
       "starter": 5,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 6,
       "goals": 0,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Dante",
       "team": "Nice",
       "position": "",
-      "matchesPlayed": 4,
-      "minutesPlayed": 240,
+      "matchesPlayed": 5,
+      "minutesPlayed": 312,
       "starter": 3,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 3,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 0,
+      "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Bernardeau G.",
@@ -6467,16 +6060,16 @@
       "name": "Boudache K.",
       "team": "Nice",
       "position": "",
-      "matchesPlayed": 5,
-      "minutesPlayed": 242,
+      "matchesPlayed": 6,
+      "minutesPlayed": 286,
       "starter": 0,
-      "subIn": 5,
+      "subIn": 6,
       "subOut": 0,
       "goals": 1,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Rosario P.",
@@ -6537,6 +6130,443 @@
       "yellowCards": 0,
       "redCards": 0,
       "latestRound": 1
+    }
+  ],
+  "Monaco": [
+    {
+      "name": "Hradecký L.",
+      "team": "Monaco",
+      "position": "G",
+      "matchesPlayed": 5,
+      "minutesPlayed": 372,
+      "starter": 5,
+      "subIn": 0,
+      "subOut": 2,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 17
+    },
+    {
+      "name": "Mawissa C.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 5,
+      "minutesPlayed": 254,
+      "starter": 3,
+      "subIn": 2,
+      "subOut": 3,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Kehrer T.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 12,
+      "minutesPlayed": 1070,
+      "starter": 12,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 6,
+      "redCards": 1,
+      "latestRound": 24
+    },
+    {
+      "name": "Salisu M.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 11,
+      "minutesPlayed": 990,
+      "starter": 11,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 4,
+      "redCards": 0,
+      "latestRound": 17
+    },
+    {
+      "name": "Caio Henrique",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 15,
+      "minutesPlayed": 1028,
+      "starter": 11,
+      "subIn": 4,
+      "subOut": 3,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 2,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Coulibaly M.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 14,
+      "minutesPlayed": 809,
+      "starter": 10,
+      "subIn": 4,
+      "subOut": 7,
+      "goals": 4,
+      "assists": 3,
+      "yellowCards": 6,
+      "redCards": 1,
+      "latestRound": 23
+    },
+    {
+      "name": "Teze J.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 17,
+      "minutesPlayed": 1194,
+      "starter": 12,
+      "subIn": 5,
+      "subOut": 5,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 8,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Golovin A.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 13,
+      "minutesPlayed": 822,
+      "starter": 10,
+      "subIn": 3,
+      "subOut": 12,
+      "goals": 5,
+      "assists": 5,
+      "yellowCards": 2,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Akliouche M.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 14,
+      "minutesPlayed": 1073,
+      "starter": 12,
+      "subIn": 2,
+      "subOut": 8,
+      "goals": 6,
+      "assists": 4,
+      "yellowCards": 2,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Biereth M.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 19,
+      "minutesPlayed": 650,
+      "starter": 7,
+      "subIn": 12,
+      "subOut": 11,
+      "goals": 2,
+      "assists": 2,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Balogun F.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 14,
+      "minutesPlayed": 851,
+      "starter": 10,
+      "subIn": 4,
+      "subOut": 12,
+      "goals": 8,
+      "assists": 3,
+      "yellowCards": 4,
+      "redCards": 1,
+      "latestRound": 25
+    },
+    {
+      "name": "Kohn P.",
+      "team": "Monaco",
+      "position": "G",
+      "matchesPlayed": 12,
+      "minutesPlayed": 989,
+      "starter": 10,
+      "subIn": 2,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "latestRound": 24
+    },
+    {
+      "name": "Ouattara K.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 11,
+      "minutesPlayed": 731,
+      "starter": 9,
+      "subIn": 2,
+      "subOut": 7,
+      "goals": 0,
+      "assists": 5,
+      "yellowCards": 4,
+      "redCards": 0,
+      "latestRound": 19
+    },
+    {
+      "name": "Ilenikhena G.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 14,
+      "minutesPlayed": 311,
+      "starter": 2,
+      "subIn": 12,
+      "subOut": 3,
+      "goals": 2,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 19
+    },
+    {
+      "name": "Idumbo S.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 8,
+      "minutesPlayed": 162,
+      "starter": 0,
+      "subIn": 8,
+      "subOut": 0,
+      "goals": 1,
+      "assists": 1,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 20
+    },
+    {
+      "name": "Dier E.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 3,
+      "minutesPlayed": 221,
+      "starter": 2,
+      "subIn": 1,
+      "subOut": 1,
+      "goals": 1,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 19
+    },
+    {
+      "name": "Faes W.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 4,
+      "minutesPlayed": 299,
+      "starter": 4,
+      "subIn": 0,
+      "subOut": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 2,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Zakaria D.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 7,
+      "minutesPlayed": 436,
+      "starter": 6,
+      "subIn": 1,
+      "subOut": 3,
+      "goals": 2,
+      "assists": 1,
+      "yellowCards": 3,
+      "redCards": 1,
+      "latestRound": 24
+    },
+    {
+      "name": "Vanderson",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 10,
+      "minutesPlayed": 388,
+      "starter": 3,
+      "subIn": 7,
+      "subOut": 5,
+      "goals": 0,
+      "assists": 2,
+      "yellowCards": 4,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Fati A.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 16,
+      "minutesPlayed": 608,
+      "starter": 5,
+      "subIn": 11,
+      "subOut": 5,
+      "goals": 8,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 24
+    },
+    {
+      "name": "Brunner P.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 5,
+      "minutesPlayed": 67,
+      "starter": 0,
+      "subIn": 5,
+      "subOut": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 24
+    },
+    {
+      "name": "Minamino T.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 10,
+      "minutesPlayed": 561,
+      "starter": 6,
+      "subIn": 4,
+      "subOut": 11,
+      "goals": 3,
+      "assists": 2,
+      "yellowCards": 5,
+      "redCards": 0,
+      "latestRound": 16
+    },
+    {
+      "name": "Cabral P.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 5,
+      "minutesPlayed": 94,
+      "starter": 0,
+      "subIn": 5,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 12
+    },
+    {
+      "name": "Diatta K.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 12,
+      "minutesPlayed": 698,
+      "starter": 7,
+      "subIn": 5,
+      "subOut": 4,
+      "goals": 0,
+      "assists": 1,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 23
+    },
+    {
+      "name": "Camara L.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 8,
+      "minutesPlayed": 555,
+      "starter": 6,
+      "subIn": 2,
+      "subOut": 5,
+      "goals": 0,
+      "assists": 3,
+      "yellowCards": 4,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Pogba P.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 3,
+      "minutesPlayed": 30,
+      "starter": 0,
+      "subIn": 3,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 15
+    },
+    {
+      "name": "Ben Seghir E.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 2,
+      "minutesPlayed": 43,
+      "starter": 0,
+      "subIn": 2,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 2
+    },
+    {
+      "name": "Adingra S.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 3,
+      "minutesPlayed": 122,
+      "starter": 1,
+      "subIn": 2,
+      "subOut": 2,
+      "goals": 3,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 25
+    },
+    {
+      "name": "Nibombe S.",
+      "team": "Monaco",
+      "position": "",
+      "matchesPlayed": 1,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 1,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 24
     }
   ],
   "Lyon": [
@@ -6608,12 +6638,12 @@
       "minutesPlayed": 979,
       "starter": 10,
       "subIn": 5,
-      "subOut": 2,
+      "subOut": 3,
       "goals": 0,
       "assists": 3,
-      "yellowCards": 3,
+      "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Abner Vinicius",
@@ -6641,24 +6671,24 @@
       "subOut": 2,
       "goals": 2,
       "assists": 2,
-      "yellowCards": 4,
+      "yellowCards": 5,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Tolisso C.",
       "team": "Lyon",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 1169,
+      "matchesPlayed": 17,
+      "minutesPlayed": 1201,
       "starter": 15,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 8,
-      "goals": 6,
+      "goals": 7,
       "assists": 1,
       "yellowCards": 5,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Merah K.",
@@ -6668,12 +6698,12 @@
       "minutesPlayed": 491,
       "starter": 6,
       "subIn": 6,
-      "subOut": 9,
+      "subOut": 10,
       "goals": 0,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Sulc P.",
@@ -6713,12 +6743,12 @@
       "minutesPlayed": 836,
       "starter": 12,
       "subIn": 3,
-      "subOut": 6,
+      "subOut": 7,
       "goals": 1,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Karabec A.",
@@ -6728,12 +6758,12 @@
       "minutesPlayed": 525,
       "starter": 6,
       "subIn": 8,
-      "subOut": 9,
+      "subOut": 10,
       "goals": 1,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 20
+      "latestRound": 25
     },
     {
       "name": "Mangala O.",
@@ -6814,16 +6844,16 @@
       "name": "Endrick",
       "team": "Lyon",
       "position": "",
-      "matchesPlayed": 4,
-      "minutesPlayed": 269,
+      "matchesPlayed": 5,
+      "minutesPlayed": 294,
       "starter": 4,
-      "subIn": 0,
+      "subIn": 1,
       "subOut": 3,
       "goals": 3,
       "assists": 3,
       "yellowCards": 2,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Himbert R.",
@@ -6833,12 +6863,12 @@
       "minutesPlayed": 45,
       "starter": 0,
       "subIn": 5,
-      "subOut": 0,
+      "subOut": 1,
       "goals": 1,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Hateboer H.",
@@ -6859,31 +6889,31 @@
       "name": "Hamdani A.",
       "team": "Lyon",
       "position": "",
-      "matchesPlayed": 2,
-      "minutesPlayed": 5,
+      "matchesPlayed": 3,
+      "minutesPlayed": 13,
       "starter": 0,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 19
+      "latestRound": 25
     },
     {
       "name": "Nartey N.",
       "team": "Lyon",
       "position": "",
-      "matchesPlayed": 3,
-      "minutesPlayed": 242,
+      "matchesPlayed": 4,
+      "minutesPlayed": 267,
       "starter": 2,
-      "subIn": 1,
+      "subIn": 2,
       "subOut": 0,
       "goals": 2,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Ghezzal R.",
@@ -6949,16 +6979,16 @@
       "name": "Yaremchuk R.",
       "team": "Lyon",
       "position": "",
-      "matchesPlayed": 3,
-      "minutesPlayed": 101,
+      "matchesPlayed": 4,
+      "minutesPlayed": 133,
       "starter": 1,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 1,
       "goals": 0,
       "assists": 1,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Kamara N.",
@@ -7003,9 +7033,9 @@
       "subOut": 2,
       "goals": 0,
       "assists": 2,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Cresswell C.",
@@ -7048,24 +7078,24 @@
       "subOut": 2,
       "goals": 3,
       "assists": 3,
-      "yellowCards": 5,
+      "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 22
+      "latestRound": 25
     },
     {
       "name": "Vossah A.",
       "team": "Toulouse",
       "position": "",
-      "matchesPlayed": 16,
-      "minutesPlayed": 678,
+      "matchesPlayed": 17,
+      "minutesPlayed": 699,
       "starter": 7,
-      "subIn": 9,
+      "subIn": 10,
       "subOut": 5,
       "goals": 1,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Casseres C.",
@@ -7075,12 +7105,12 @@
       "minutesPlayed": 1266,
       "starter": 14,
       "subIn": 2,
-      "subOut": 4,
+      "subOut": 5,
       "goals": 1,
       "assists": 0,
       "yellowCards": 5,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Sidibe D.",
@@ -7135,12 +7165,12 @@
       "minutesPlayed": 936,
       "starter": 11,
       "subIn": 4,
-      "subOut": 10,
+      "subOut": 11,
       "goals": 3,
       "assists": 2,
       "yellowCards": 3,
       "redCards": 1,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Koumbassa S.",
@@ -7161,46 +7191,46 @@
       "name": "Hidalgo S.",
       "team": "Toulouse",
       "position": "",
-      "matchesPlayed": 17,
-      "minutesPlayed": 599,
+      "matchesPlayed": 18,
+      "minutesPlayed": 643,
       "starter": 5,
-      "subIn": 12,
+      "subIn": 13,
       "subOut": 5,
       "goals": 4,
       "assists": 3,
       "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Sauer M.",
       "team": "Toulouse",
       "position": "",
-      "matchesPlayed": 14,
-      "minutesPlayed": 280,
+      "matchesPlayed": 15,
+      "minutesPlayed": 286,
       "starter": 2,
-      "subIn": 12,
+      "subIn": 13,
       "subOut": 5,
       "goals": 0,
       "assists": 0,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Vignolo J.",
       "team": "Toulouse",
       "position": "",
-      "matchesPlayed": 11,
-      "minutesPlayed": 173,
+      "matchesPlayed": 12,
+      "minutesPlayed": 184,
       "starter": 1,
-      "subIn": 10,
+      "subIn": 11,
       "subOut": 1,
       "goals": 2,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Kamanzi W.",
@@ -7210,12 +7240,12 @@
       "minutesPlayed": 402,
       "starter": 3,
       "subIn": 11,
-      "subOut": 4,
+      "subOut": 5,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Demba P.",
@@ -7225,12 +7255,12 @@
       "minutesPlayed": 438,
       "starter": 5,
       "subIn": 0,
-      "subOut": 4,
+      "subOut": 5,
       "goals": 1,
       "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Magri F.",
@@ -7255,12 +7285,12 @@
       "minutesPlayed": 1004,
       "starter": 11,
       "subIn": 4,
-      "subOut": 11,
+      "subOut": 12,
       "goals": 0,
       "assists": 0,
       "yellowCards": 6,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Francis A.",
@@ -7311,16 +7341,16 @@
       "name": "Russell-Rowe J.",
       "team": "Toulouse",
       "position": "",
-      "matchesPlayed": 4,
-      "minutesPlayed": 79,
+      "matchesPlayed": 5,
+      "minutesPlayed": 91,
       "starter": 0,
-      "subIn": 4,
+      "subIn": 5,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     }
   ],
   "Lens": [
@@ -7393,11 +7423,11 @@
       "starter": 7,
       "subIn": 10,
       "subOut": 3,
-      "goals": 0,
+      "goals": 1,
       "assists": 2,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Thomasson A.",
@@ -7409,25 +7439,25 @@
       "subIn": 0,
       "subOut": 5,
       "goals": 2,
-      "assists": 6,
+      "assists": 7,
       "yellowCards": 8,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Bulatovic A.",
       "team": "Lens",
       "position": "",
-      "matchesPlayed": 11,
-      "minutesPlayed": 478,
+      "matchesPlayed": 12,
+      "minutesPlayed": 495,
       "starter": 4,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 2,
       "goals": 0,
       "assists": 1,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Udol M.",
@@ -7439,10 +7469,10 @@
       "subIn": 0,
       "subOut": 3,
       "goals": 0,
-      "assists": 6,
+      "assists": 7,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Thauvin F.",
@@ -7452,12 +7482,12 @@
       "minutesPlayed": 1347,
       "starter": 17,
       "subIn": 1,
-      "subOut": 18,
-      "goals": 7,
+      "subOut": 19,
+      "goals": 8,
       "assists": 3,
       "yellowCards": 5,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Said W.",
@@ -7482,27 +7512,27 @@
       "minutesPlayed": 1058,
       "starter": 16,
       "subIn": 1,
-      "subOut": 19,
+      "subOut": 20,
       "goals": 9,
       "assists": 3,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Fofana R.",
       "team": "Lens",
       "position": "",
-      "matchesPlayed": 15,
-      "minutesPlayed": 353,
+      "matchesPlayed": 16,
+      "minutesPlayed": 380,
       "starter": 1,
-      "subIn": 14,
+      "subIn": 15,
       "subOut": 5,
       "goals": 5,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Guilavogui M.",
@@ -7523,31 +7553,31 @@
       "name": "Sotoca F.",
       "team": "Lens",
       "position": "",
-      "matchesPlayed": 18,
-      "minutesPlayed": 105,
+      "matchesPlayed": 19,
+      "minutesPlayed": 132,
       "starter": 0,
-      "subIn": 18,
+      "subIn": 19,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 1,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Bermont A.",
       "team": "Lens",
       "position": "",
-      "matchesPlayed": 7,
-      "minutesPlayed": 59,
+      "matchesPlayed": 8,
+      "minutesPlayed": 66,
       "starter": 0,
-      "subIn": 7,
+      "subIn": 8,
       "subOut": 0,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 25
     },
     {
       "name": "Gradit J.",
@@ -7587,12 +7617,12 @@
       "minutesPlayed": 1225,
       "starter": 14,
       "subIn": 2,
-      "subOut": 5,
+      "subOut": 6,
       "goals": 2,
       "assists": 2,
       "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Sima A.",
@@ -7602,12 +7632,12 @@
       "minutesPlayed": 264,
       "starter": 1,
       "subIn": 12,
-      "subOut": 1,
+      "subOut": 2,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Antonio K.",
@@ -7658,16 +7688,16 @@
       "name": "Haidara A.",
       "team": "Lens",
       "position": "",
-      "matchesPlayed": 2,
-      "minutesPlayed": 29,
+      "matchesPlayed": 3,
+      "minutesPlayed": 73,
       "starter": 0,
-      "subIn": 2,
+      "subIn": 3,
       "subOut": 0,
-      "goals": 0,
+      "goals": 1,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Celik N.",
@@ -7677,12 +7707,12 @@
       "minutesPlayed": 270,
       "starter": 3,
       "subIn": 0,
-      "subOut": 0,
+      "subOut": 1,
       "goals": 0,
       "assists": 0,
       "yellowCards": 0,
       "redCards": 0,
-      "latestRound": 24
+      "latestRound": 25
     },
     {
       "name": "Masuaku A.",
