@@ -68032,7 +68032,7 @@
   },
   {
     "sourceWeek": 24,
-    "timestamp": 1771290610625,
+    "timestamp": 1772637544412,
     "predictions": [
       {
         "id": "l6n7WZYj",
@@ -68041,14 +68041,23 @@
         "away": "Strasbourg",
         "prediction": {
           "score": "0-1",
-          "score_conf": 17,
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 16,
           "winner": "Strasbourg",
-          "winner_conf": 50,
+          "winner_conf": 61,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 69,
-          "confidence": 50,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 55,
+          "confidence": 61,
+          "advice": "Victoire Strasbourg - Risque Exclusion",
+          "red_card_prob": 33,
+          "probs": {
+            "1": 0.172,
+            "2": 0.614,
+            "N": 0.214
+          }
         }
       },
       {
@@ -68058,14 +68067,23 @@
         "away": "Le Havre",
         "prediction": {
           "score": "1-0",
-          "score_conf": 17,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 15,
           "winner": "Brest",
-          "winner_conf": 46,
+          "winner_conf": 47,
           "goals_pred": "-2.5 Buts",
           "goals_conf": 64,
-          "confidence": 46,
+          "confidence": 47,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 26,
+          "probs": {
+            "1": 0.474,
+            "2": 0.24,
+            "N": 0.286
+          }
         }
       },
       {
@@ -68075,14 +68093,23 @@
         "away": "Metz",
         "prediction": {
           "score": "3-0",
-          "score_conf": 13,
+          "scores": {
+            "home": 3,
+            "away": 0
+          },
+          "score_conf": 12,
           "winner": "Lens",
-          "winner_conf": 90,
+          "winner_conf": 88,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 73,
-          "confidence": 90,
+          "goals_conf": 74,
+          "confidence": 88,
           "advice": "Victoire Lens",
-          "red_card_prob": 19
+          "red_card_prob": 24,
+          "probs": {
+            "1": 0.884,
+            "2": 0.048,
+            "N": 0.068
+          }
         }
       },
       {
@@ -68091,15 +68118,24 @@
         "home": "Lille",
         "away": "Lorient",
         "prediction": {
-          "score": "2-0",
-          "score_conf": 10,
+          "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 11,
           "winner": "Lille",
-          "winner_conf": 51,
+          "winner_conf": 55,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 57,
-          "confidence": 51,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 59,
+          "confidence": 55,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 31,
+          "probs": {
+            "1": 0.552,
+            "2": 0.236,
+            "N": 0.212
+          }
         }
       },
       {
@@ -68108,15 +68144,24 @@
         "home": "Lyon",
         "away": "Paris FC",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 13,
+          "score": "2-0",
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
+          "score_conf": 12,
           "winner": "Lyon",
-          "winner_conf": 72,
+          "winner_conf": 66,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 61,
-          "confidence": 72,
+          "goals_conf": 56,
+          "confidence": 66,
           "advice": "Victoire Lyon",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.656,
+            "2": 0.164,
+            "N": 0.18
+          }
         }
       },
       {
@@ -68125,15 +68170,24 @@
         "home": "Nantes",
         "away": "Angers",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 16,
+          "score": "0-0",
+          "scores": {
+            "home": 0,
+            "away": 0
+          },
+          "score_conf": 18,
           "winner": "Angers",
-          "winner_conf": 47,
+          "winner_conf": 40,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 65,
-          "confidence": 47,
+          "goals_conf": 69,
+          "confidence": 40,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 8,
+          "probs": {
+            "1": 0.298,
+            "2": 0.404,
+            "N": 0.298
+          }
         }
       },
       {
@@ -68142,15 +68196,24 @@
         "home": "Nice",
         "away": "Rennes",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 9,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 10,
           "winner": "Rennes",
-          "winner_conf": 41,
+          "winner_conf": 48,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 55,
-          "confidence": 41,
+          "goals_conf": 62,
+          "confidence": 48,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 16,
+          "probs": {
+            "1": 0.308,
+            "2": 0.482,
+            "N": 0.21
+          }
         }
       },
       {
@@ -68159,15 +68222,24 @@
         "home": "PSG",
         "away": "Monaco",
         "prediction": {
-          "score": "2-0",
-          "score_conf": 12,
+          "score": "2-1",
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
+          "score_conf": 10,
           "winner": "PSG",
-          "winner_conf": 74,
+          "winner_conf": 71,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 66,
-          "confidence": 74,
+          "goals_conf": 69,
+          "confidence": 71,
           "advice": "Victoire PSG",
-          "red_card_prob": 19
+          "red_card_prob": 23,
+          "probs": {
+            "1": 0.71,
+            "2": 0.104,
+            "N": 0.186
+          }
         }
       },
       {
@@ -68176,15 +68248,24 @@
         "home": "Toulouse",
         "away": "Marseille",
         "prediction": {
-          "score": "1-2",
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
           "score_conf": 9,
           "winner": "Marseille",
           "winner_conf": 42,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 57,
+          "goals_conf": 63,
           "confidence": 42,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 26,
+          "probs": {
+            "1": 0.348,
+            "2": 0.424,
+            "N": 0.228
+          }
         }
       },
       {
@@ -68193,15 +68274,24 @@
         "home": "Angers",
         "away": "Nice",
         "prediction": {
-          "score": "1-0",
-          "score_conf": 16,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Angers",
-          "winner_conf": 47,
+          "winner_conf": 40,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 61,
-          "confidence": 47,
+          "goals_conf": 58,
+          "confidence": 40,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 9,
+          "probs": {
+            "1": 0.4,
+            "2": 0.334,
+            "N": 0.266
+          }
         }
       },
       {
@@ -68210,15 +68300,24 @@
         "home": "Le Havre",
         "away": "Lyon",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 23,
+          "score": "0-0",
+          "scores": {
+            "home": 0,
+            "away": 0
+          },
+          "score_conf": 22,
           "winner": "Lyon",
-          "winner_conf": 46,
+          "winner_conf": 47,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 82,
-          "confidence": 46,
+          "goals_conf": 79,
+          "confidence": 47,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 28,
+          "probs": {
+            "1": 0.198,
+            "2": 0.466,
+            "N": 0.336
+          }
         }
       },
       {
@@ -68228,14 +68327,23 @@
         "away": "Lens",
         "prediction": {
           "score": "0-2",
-          "score_conf": 14,
+          "scores": {
+            "home": 0,
+            "away": 2
+          },
+          "score_conf": 11,
           "winner": "Lens",
-          "winner_conf": 64,
-          "goals_pred": "-2.5 Buts",
-          "goals_conf": 51,
-          "confidence": 64,
+          "winner_conf": 61,
+          "goals_pred": "+2.5 Buts",
+          "goals_conf": 57,
+          "confidence": 61,
           "advice": "Victoire Lens",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.16,
+            "2": 0.612,
+            "N": 0.228
+          }
         }
       },
       {
@@ -68244,15 +68352,24 @@
         "home": "Marseille",
         "away": "Auxerre",
         "prediction": {
-          "score": "2-0",
-          "score_conf": 17,
+          "score": "3-0",
+          "scores": {
+            "home": 3,
+            "away": 0
+          },
+          "score_conf": 13,
           "winner": "Marseille",
-          "winner_conf": 74,
+          "winner_conf": 77,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 52,
-          "confidence": 74,
-          "advice": "Victoire Marseille",
-          "red_card_prob": 19
+          "goals_conf": 64,
+          "confidence": 77,
+          "advice": "Victoire Marseille - Risque Exclusion",
+          "red_card_prob": 33,
+          "probs": {
+            "1": 0.774,
+            "2": 0.078,
+            "N": 0.148
+          }
         }
       },
       {
@@ -68262,14 +68379,23 @@
         "away": "Toulouse",
         "prediction": {
           "score": "0-1",
-          "score_conf": 12,
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 13,
           "winner": "Toulouse",
           "winner_conf": 63,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 52,
+          "goals_conf": 51,
           "confidence": 63,
           "advice": "Victoire Toulouse",
-          "red_card_prob": 19
+          "red_card_prob": 21,
+          "probs": {
+            "1": 0.156,
+            "2": 0.632,
+            "N": 0.212
+          }
         }
       },
       {
@@ -68278,15 +68404,24 @@
         "home": "Monaco",
         "away": "Brest",
         "prediction": {
-          "score": "2-1",
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
           "score_conf": 10,
           "winner": "Monaco",
-          "winner_conf": 50,
+          "winner_conf": 51,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 57,
-          "confidence": 50,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 64,
+          "confidence": 51,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 37,
+          "probs": {
+            "1": 0.506,
+            "2": 0.27,
+            "N": 0.224
+          }
         }
       },
       {
@@ -68295,15 +68430,24 @@
         "home": "PSG",
         "away": "Nantes",
         "prediction": {
-          "score": "4-0",
-          "score_conf": 11,
+          "score": "2-0",
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
+          "score_conf": 13,
           "winner": "PSG",
-          "winner_conf": 92,
+          "winner_conf": 87,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 81,
-          "confidence": 92,
+          "goals_conf": 70,
+          "confidence": 87,
           "advice": "Victoire PSG",
-          "red_card_prob": 19
+          "red_card_prob": 10,
+          "probs": {
+            "1": 0.866,
+            "2": 0.036,
+            "N": 0.098
+          }
         }
       },
       {
@@ -68312,15 +68456,24 @@
         "home": "Rennes",
         "away": "Lille",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 9,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Rennes",
-          "winner_conf": 39,
+          "winner_conf": 40,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 61,
-          "confidence": 39,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 58,
+          "confidence": 40,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 37,
+          "probs": {
+            "1": 0.404,
+            "2": 0.332,
+            "N": 0.264
+          }
         }
       },
       {
@@ -68329,15 +68482,24 @@
         "home": "Strasbourg",
         "away": "Paris FC",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 12,
+          "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 11,
           "winner": "Strasbourg",
-          "winner_conf": 65,
+          "winner_conf": 68,
           "goals_pred": "+2.5 Buts",
           "goals_conf": 63,
-          "confidence": 65,
+          "confidence": 68,
           "advice": "Victoire Strasbourg",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.678,
+            "2": 0.142,
+            "N": 0.18
+          }
         }
       },
       {
@@ -68347,14 +68509,23 @@
         "away": "Brest",
         "prediction": {
           "score": "0-1",
-          "score_conf": 18,
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 16,
           "winner": "Brest",
-          "winner_conf": 43,
+          "winner_conf": 46,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 70,
-          "confidence": 43,
+          "goals_conf": 68,
+          "confidence": 46,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 30,
+          "probs": {
+            "1": 0.266,
+            "2": 0.458,
+            "N": 0.276
+          }
         }
       },
       {
@@ -68364,14 +68535,23 @@
         "away": "Angers",
         "prediction": {
           "score": "1-0",
-          "score_conf": 22,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 23,
           "winner": "Lens",
-          "winner_conf": 62,
+          "winner_conf": 57,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 69,
-          "confidence": 62,
-          "advice": "Victoire Lens",
-          "red_card_prob": 19
+          "goals_conf": 79,
+          "confidence": 57,
+          "advice": "Les deux marquent (BTTS)",
+          "red_card_prob": 15,
+          "probs": {
+            "1": 0.574,
+            "2": 0.11,
+            "N": 0.316
+          }
         }
       },
       {
@@ -68380,15 +68560,24 @@
         "home": "Lyon",
         "away": "Monaco",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 11,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 10,
           "winner": "Lyon",
-          "winner_conf": 61,
+          "winner_conf": 51,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 57,
-          "confidence": 61,
-          "advice": "Victoire Lyon",
-          "red_card_prob": 19
+          "goals_conf": 58,
+          "confidence": 51,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 37,
+          "probs": {
+            "1": 0.51,
+            "2": 0.252,
+            "N": 0.238
+          }
         }
       },
       {
@@ -68398,14 +68587,23 @@
         "away": "Lille",
         "prediction": {
           "score": "2-1",
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
           "score_conf": 11,
           "winner": "Marseille",
-          "winner_conf": 59,
+          "winner_conf": 53,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 74,
-          "confidence": 59,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 63,
+          "confidence": 53,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 41,
+          "probs": {
+            "1": 0.534,
+            "2": 0.252,
+            "N": 0.214
+          }
         }
       },
       {
@@ -68414,15 +68612,24 @@
         "home": "Nantes",
         "away": "Strasbourg",
         "prediction": {
-          "score": "1-2",
-          "score_conf": 11,
+          "score": "0-1",
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 14,
           "winner": "Strasbourg",
-          "winner_conf": 63,
+          "winner_conf": 59,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 59,
-          "confidence": 63,
-          "advice": "Victoire Strasbourg",
-          "red_card_prob": 19
+          "goals_conf": 50,
+          "confidence": 59,
+          "advice": "Les deux marquent (BTTS)",
+          "red_card_prob": 23,
+          "probs": {
+            "1": 0.198,
+            "2": 0.592,
+            "N": 0.21
+          }
         }
       },
       {
@@ -68432,14 +68639,23 @@
         "away": "PSG",
         "prediction": {
           "score": "0-2",
-          "score_conf": 11,
+          "scores": {
+            "home": 0,
+            "away": 2
+          },
+          "score_conf": 14,
           "winner": "PSG",
-          "winner_conf": 73,
+          "winner_conf": 75,
           "goals_pred": "+2.5 Buts",
           "goals_conf": 62,
-          "confidence": 73,
+          "confidence": 75,
           "advice": "Victoire PSG",
-          "red_card_prob": 19
+          "red_card_prob": 9,
+          "probs": {
+            "1": 0.09,
+            "2": 0.752,
+            "N": 0.158
+          }
         }
       },
       {
@@ -68448,15 +68664,24 @@
         "home": "Paris FC",
         "away": "Le Havre",
         "prediction": {
-          "score": "1-1",
-          "score_conf": 17,
-          "winner": "Nul",
-          "winner_conf": 35,
+          "score": "0-0",
+          "scores": {
+            "home": 0,
+            "away": 0
+          },
+          "score_conf": 16,
+          "winner": "Paris FC",
+          "winner_conf": 37,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 71,
-          "confidence": 35,
+          "goals_conf": 72,
+          "confidence": 37,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.37,
+            "2": 0.3,
+            "N": 0.33
+          }
         }
       },
       {
@@ -68465,15 +68690,24 @@
         "home": "Rennes",
         "away": "Metz",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 9,
+          "score": "2-0",
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
+          "score_conf": 12,
           "winner": "Rennes",
-          "winner_conf": 69,
+          "winner_conf": 73,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 66,
-          "confidence": 69,
+          "goals_conf": 63,
+          "confidence": 73,
           "advice": "Victoire Rennes",
-          "red_card_prob": 19
+          "red_card_prob": 23,
+          "probs": {
+            "1": 0.726,
+            "2": 0.108,
+            "N": 0.166
+          }
         }
       },
       {
@@ -68482,15 +68716,24 @@
         "home": "Toulouse",
         "away": "Lorient",
         "prediction": {
-          "score": "1-0",
-          "score_conf": 12,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 13,
           "winner": "Toulouse",
-          "winner_conf": 50,
+          "winner_conf": 48,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 52,
-          "confidence": 50,
+          "goals_conf": 53,
+          "confidence": 48,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.484,
+            "2": 0.232,
+            "N": 0.284
+          }
         }
       },
       {
@@ -68500,14 +68743,23 @@
         "away": "Lyon",
         "prediction": {
           "score": "0-1",
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
           "score_conf": 22,
           "winner": "Lyon",
           "winner_conf": 47,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 84,
+          "goals_conf": 78,
           "confidence": 47,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 23,
+          "probs": {
+            "1": 0.19,
+            "2": 0.466,
+            "N": 0.344
+          }
         }
       },
       {
@@ -68516,15 +68768,24 @@
         "home": "Brest",
         "away": "Rennes",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 9,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 11,
           "winner": "Brest",
-          "winner_conf": 40,
+          "winner_conf": 38,
           "goals_pred": "+2.5 Buts",
           "goals_conf": 59,
-          "confidence": 40,
+          "confidence": 38,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 29,
+          "probs": {
+            "1": 0.382,
+            "2": 0.366,
+            "N": 0.252
+          }
         }
       },
       {
@@ -68534,14 +68795,23 @@
         "away": "Auxerre",
         "prediction": {
           "score": "1-0",
-          "score_conf": 18,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 23,
           "winner": "Le Havre",
-          "winner_conf": 44,
+          "winner_conf": 45,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 72,
-          "confidence": 44,
+          "goals_conf": 81,
+          "confidence": 45,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.452,
+            "2": 0.198,
+            "N": 0.35
+          }
         }
       },
       {
@@ -68550,15 +68820,24 @@
         "home": "Lille",
         "away": "Lens",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 14,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Lens",
-          "winner_conf": 56,
-          "goals_pred": "-2.5 Buts",
-          "goals_conf": 53,
-          "confidence": 56,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "winner_conf": 52,
+          "goals_pred": "+2.5 Buts",
+          "goals_conf": 51,
+          "confidence": 52,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 34,
+          "probs": {
+            "1": 0.23,
+            "2": 0.524,
+            "N": 0.246
+          }
         }
       },
       {
@@ -68568,14 +68847,23 @@
         "away": "Paris FC",
         "prediction": {
           "score": "2-1",
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
           "score_conf": 10,
           "winner": "Lorient",
-          "winner_conf": 50,
+          "winner_conf": 52,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 59,
-          "confidence": 50,
+          "goals_conf": 61,
+          "confidence": 52,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 9,
+          "probs": {
+            "1": 0.52,
+            "2": 0.278,
+            "N": 0.202
+          }
         }
       },
       {
@@ -68584,15 +68872,24 @@
         "home": "Metz",
         "away": "Nantes",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 10,
-          "winner": "Metz",
-          "winner_conf": 39,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 15,
+          "winner": "Nantes",
+          "winner_conf": 42,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 52,
-          "confidence": 39,
+          "goals_conf": 51,
+          "confidence": 42,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 16,
+          "probs": {
+            "1": 0.28,
+            "2": 0.416,
+            "N": 0.304
+          }
         }
       },
       {
@@ -68601,15 +68898,24 @@
         "home": "Monaco",
         "away": "Marseille",
         "prediction": {
-          "score": "1-3",
+          "score": "1-2",
+          "scores": {
+            "home": 1,
+            "away": 2
+          },
           "score_conf": 7,
           "winner": "Marseille",
-          "winner_conf": 54,
+          "winner_conf": 45,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 75,
-          "confidence": 54,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 81,
+          "confidence": 45,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 37,
+          "probs": {
+            "1": 0.352,
+            "2": 0.45,
+            "N": 0.198
+          }
         }
       },
       {
@@ -68619,14 +68925,23 @@
         "away": "Toulouse",
         "prediction": {
           "score": "1-0",
-          "score_conf": 22,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 19,
           "winner": "PSG",
-          "winner_conf": 58,
+          "winner_conf": 63,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 72,
-          "confidence": 58,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 66,
+          "confidence": 63,
+          "advice": "Victoire PSG",
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.63,
+            "2": 0.13,
+            "N": 0.24
+          }
         }
       },
       {
@@ -68636,14 +68951,23 @@
         "away": "Nice",
         "prediction": {
           "score": "2-1",
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
           "score_conf": 11,
           "winner": "Strasbourg",
-          "winner_conf": 65,
+          "winner_conf": 66,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 61,
-          "confidence": 65,
+          "goals_conf": 66,
+          "confidence": 66,
           "advice": "Victoire Strasbourg",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.66,
+            "2": 0.17,
+            "N": 0.17
+          }
         }
       },
       {
@@ -68652,15 +68976,24 @@
         "home": "Auxerre",
         "away": "Nantes",
         "prediction": {
-          "score": "1-0",
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
           "score_conf": 15,
           "winner": "Auxerre",
-          "winner_conf": 39,
+          "winner_conf": 38,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 70,
-          "confidence": 39,
+          "goals_conf": 63,
+          "confidence": 38,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.378,
+            "2": 0.296,
+            "N": 0.326
+          }
         }
       },
       {
@@ -68669,15 +69002,24 @@
         "home": "Brest",
         "away": "Strasbourg",
         "prediction": {
-          "score": "1-2",
-          "score_conf": 10,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Strasbourg",
-          "winner_conf": 42,
-          "goals_pred": "-2.5 Buts",
-          "goals_conf": 52,
-          "confidence": 42,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "winner_conf": 40,
+          "goals_pred": "+2.5 Buts",
+          "goals_conf": 61,
+          "confidence": 40,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 38,
+          "probs": {
+            "1": 0.348,
+            "2": 0.404,
+            "N": 0.248
+          }
         }
       },
       {
@@ -68686,15 +69028,24 @@
         "home": "Lens",
         "away": "PSG",
         "prediction": {
-          "score": "1-0",
-          "score_conf": 17,
-          "winner": "Lens",
-          "winner_conf": 40,
+          "score": "0-1",
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 15,
+          "winner": "PSG",
+          "winner_conf": 42,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 69,
-          "confidence": 40,
+          "goals_conf": 67,
+          "confidence": 42,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.306,
+            "2": 0.418,
+            "N": 0.276
+          }
         }
       },
       {
@@ -68703,15 +69054,24 @@
         "home": "Lyon",
         "away": "Lorient",
         "prediction": {
-          "score": "1-0",
-          "score_conf": 13,
+          "score": "2-1",
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
+          "score_conf": 11,
           "winner": "Lyon",
-          "winner_conf": 60,
-          "goals_pred": "-2.5 Buts",
-          "goals_conf": 51,
-          "confidence": 60,
+          "winner_conf": 59,
+          "goals_pred": "+2.5 Buts",
+          "goals_conf": 57,
+          "confidence": 59,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.594,
+            "2": 0.178,
+            "N": 0.228
+          }
         }
       },
       {
@@ -68720,15 +69080,24 @@
         "home": "Marseille",
         "away": "Metz",
         "prediction": {
-          "score": "3-1",
-          "score_conf": 9,
+          "score": "3-0",
+          "scores": {
+            "home": 3,
+            "away": 0
+          },
+          "score_conf": 10,
           "winner": "Marseille",
-          "winner_conf": 86,
+          "winner_conf": 88,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 83,
-          "confidence": 86,
-          "advice": "Victoire Marseille",
-          "red_card_prob": 19
+          "goals_conf": 87,
+          "confidence": 88,
+          "advice": "Victoire Marseille - Risque Exclusion",
+          "red_card_prob": 32,
+          "probs": {
+            "1": 0.876,
+            "2": 0.056,
+            "N": 0.068
+          }
         }
       },
       {
@@ -68738,14 +69107,23 @@
         "away": "Le Havre",
         "prediction": {
           "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
           "score_conf": 12,
           "winner": "Nice",
-          "winner_conf": 35,
+          "winner_conf": 45,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 68,
-          "confidence": 35,
+          "goals_conf": 54,
+          "confidence": 45,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.448,
+            "2": 0.292,
+            "N": 0.26
+          }
         }
       },
       {
@@ -68754,15 +69132,24 @@
         "home": "Paris FC",
         "away": "Monaco",
         "prediction": {
-          "score": "1-2",
-          "score_conf": 9,
+          "score": "2-2",
+          "scores": {
+            "home": 2,
+            "away": 2
+          },
+          "score_conf": 11,
           "winner": "Monaco",
-          "winner_conf": 50,
+          "winner_conf": 49,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 67,
-          "confidence": 50,
+          "goals_conf": 71,
+          "confidence": 49,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 21,
+          "probs": {
+            "1": 0.266,
+            "2": 0.49,
+            "N": 0.244
+          }
         }
       },
       {
@@ -68772,14 +69159,23 @@
         "away": "Angers",
         "prediction": {
           "score": "1-0",
-          "score_conf": 13,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 12,
           "winner": "Rennes",
-          "winner_conf": 46,
+          "winner_conf": 48,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 57,
-          "confidence": 46,
+          "goals_conf": 56,
+          "confidence": 48,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.484,
+            "2": 0.26,
+            "N": 0.256
+          }
         }
       },
       {
@@ -68788,15 +69184,24 @@
         "home": "Toulouse",
         "away": "Lille",
         "prediction": {
-          "score": "1-0",
-          "score_conf": 11,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 13,
           "winner": "Toulouse",
-          "winner_conf": 40,
+          "winner_conf": 42,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 56,
-          "confidence": 40,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 51,
+          "confidence": 42,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 34,
+          "probs": {
+            "1": 0.424,
+            "2": 0.326,
+            "N": 0.25
+          }
         }
       },
       {
@@ -68806,14 +69211,23 @@
         "away": "Le Havre",
         "prediction": {
           "score": "0-0",
-          "score_conf": 35,
+          "scores": {
+            "home": 0,
+            "away": 0
+          },
+          "score_conf": 37,
           "winner": "Nul",
           "winner_conf": 47,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 91,
+          "goals_conf": 92,
           "confidence": 47,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.304,
+            "2": 0.226,
+            "N": 0.47
+          }
         }
       },
       {
@@ -68823,14 +69237,23 @@
         "away": "Toulouse",
         "prediction": {
           "score": "1-0",
-          "score_conf": 20,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 24,
           "winner": "Lens",
-          "winner_conf": 55,
+          "winner_conf": 51,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 71,
-          "confidence": 55,
+          "goals_conf": 74,
+          "confidence": 51,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.51,
+            "2": 0.15,
+            "N": 0.34
+          }
         }
       },
       {
@@ -68839,15 +69262,24 @@
         "home": "Lille",
         "away": "Nice",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 10,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Lille",
-          "winner_conf": 60,
+          "winner_conf": 57,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 60,
-          "confidence": 60,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 50,
+          "confidence": 57,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 31,
+          "probs": {
+            "1": 0.572,
+            "2": 0.192,
+            "N": 0.236
+          }
         }
       },
       {
@@ -68856,15 +69288,24 @@
         "home": "Lorient",
         "away": "Marseille",
         "prediction": {
-          "score": "1-2",
-          "score_conf": 8,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 9,
           "winner": "Marseille",
-          "winner_conf": 54,
+          "winner_conf": 53,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 69,
-          "confidence": 54,
+          "goals_conf": 64,
+          "confidence": 53,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.256,
+            "2": 0.526,
+            "N": 0.218
+          }
         }
       },
       {
@@ -68873,15 +69314,24 @@
         "home": "Metz",
         "away": "Paris FC",
         "prediction": {
-          "score": "1-2",
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
           "score_conf": 12,
           "winner": "Paris FC",
-          "winner_conf": 53,
-          "goals_pred": "+2.5 Buts",
-          "goals_conf": 56,
-          "confidence": 53,
+          "winner_conf": 47,
+          "goals_pred": "-2.5 Buts",
+          "goals_conf": 54,
+          "confidence": 47,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.274,
+            "2": 0.468,
+            "N": 0.258
+          }
         }
       },
       {
@@ -68890,15 +69340,24 @@
         "home": "Monaco",
         "away": "Auxerre",
         "prediction": {
-          "score": "1-0",
-          "score_conf": 16,
+          "score": "2-0",
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
+          "score_conf": 14,
           "winner": "Monaco",
-          "winner_conf": 57,
+          "winner_conf": 65,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 60,
-          "confidence": 57,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 51,
+          "confidence": 65,
+          "advice": "Victoire Monaco - Risque Exclusion",
+          "red_card_prob": 32,
+          "probs": {
+            "1": 0.652,
+            "2": 0.134,
+            "N": 0.214
+          }
         }
       },
       {
@@ -68908,14 +69367,23 @@
         "away": "Brest",
         "prediction": {
           "score": "0-1",
-          "score_conf": 12,
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 15,
           "winner": "Brest",
-          "winner_conf": 46,
+          "winner_conf": 51,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 54,
-          "confidence": 46,
+          "goals_conf": 58,
+          "confidence": 51,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.254,
+            "2": 0.512,
+            "N": 0.234
+          }
         }
       },
       {
@@ -68925,14 +69393,23 @@
         "away": "Lyon",
         "prediction": {
           "score": "1-0",
-          "score_conf": 19,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 20,
           "winner": "PSG",
-          "winner_conf": 45,
+          "winner_conf": 49,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 75,
-          "confidence": 45,
+          "goals_conf": 76,
+          "confidence": 49,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 28,
+          "probs": {
+            "1": 0.494,
+            "2": 0.172,
+            "N": 0.334
+          }
         }
       },
       {
@@ -68941,15 +69418,24 @@
         "home": "Strasbourg",
         "away": "Rennes",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 9,
+          "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 10,
           "winner": "Strasbourg",
-          "winner_conf": 53,
+          "winner_conf": 51,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 64,
-          "confidence": 53,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 53,
+          "confidence": 51,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 32,
+          "probs": {
+            "1": 0.506,
+            "2": 0.252,
+            "N": 0.242
+          }
         }
       },
       {
@@ -68959,14 +69445,23 @@
         "away": "PSG",
         "prediction": {
           "score": "0-1",
-          "score_conf": 20,
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 23,
           "winner": "PSG",
-          "winner_conf": 56,
+          "winner_conf": 59,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 71,
-          "confidence": 56,
+          "goals_conf": 73,
+          "confidence": 59,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 10,
+          "probs": {
+            "1": 0.094,
+            "2": 0.586,
+            "N": 0.32
+          }
         }
       },
       {
@@ -68975,15 +69470,24 @@
         "home": "Brest",
         "away": "Lens",
         "prediction": {
-          "score": "0-2",
+          "score": "0-1",
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
           "score_conf": 12,
           "winner": "Lens",
-          "winner_conf": 69,
-          "goals_pred": "+2.5 Buts",
-          "goals_conf": 55,
-          "confidence": 69,
-          "advice": "Victoire Lens",
-          "red_card_prob": 19
+          "winner_conf": 54,
+          "goals_pred": "-2.5 Buts",
+          "goals_conf": 54,
+          "confidence": 54,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 31,
+          "probs": {
+            "1": 0.198,
+            "2": 0.544,
+            "N": 0.258
+          }
         }
       },
       {
@@ -68993,14 +69497,23 @@
         "away": "Metz",
         "prediction": {
           "score": "1-0",
-          "score_conf": 13,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 20,
           "winner": "Le Havre",
           "winner_conf": 55,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 59,
+          "goals_conf": 66,
           "confidence": 55,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 21,
+          "probs": {
+            "1": 0.548,
+            "2": 0.176,
+            "N": 0.276
+          }
         }
       },
       {
@@ -69009,15 +69522,24 @@
         "home": "Lorient",
         "away": "Strasbourg",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 11,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 13,
           "winner": "Strasbourg",
-          "winner_conf": 45,
-          "goals_pred": "-2.5 Buts",
-          "goals_conf": 52,
-          "confidence": 45,
+          "winner_conf": 43,
+          "goals_pred": "+2.5 Buts",
+          "goals_conf": 57,
+          "confidence": 43,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.328,
+            "2": 0.432,
+            "N": 0.24
+          }
         }
       },
       {
@@ -69026,15 +69548,24 @@
         "home": "Lyon",
         "away": "Auxerre",
         "prediction": {
-          "score": "1-0",
+          "score": "2-0",
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
           "score_conf": 19,
           "winner": "Lyon",
-          "winner_conf": 68,
+          "winner_conf": 70,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 64,
-          "confidence": 68,
-          "advice": "Victoire Lyon",
-          "red_card_prob": 19
+          "goals_conf": 59,
+          "confidence": 70,
+          "advice": "Victoire Lyon - Risque Exclusion",
+          "red_card_prob": 33,
+          "probs": {
+            "1": 0.702,
+            "2": 0.106,
+            "N": 0.192
+          }
         }
       },
       {
@@ -69043,15 +69574,24 @@
         "home": "Marseille",
         "away": "Nice",
         "prediction": {
-          "score": "3-1",
-          "score_conf": 8,
+          "score": "3-0",
+          "scores": {
+            "home": 3,
+            "away": 0
+          },
+          "score_conf": 9,
           "winner": "Marseille",
-          "winner_conf": 79,
+          "winner_conf": 74,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 82,
-          "confidence": 79,
+          "goals_conf": 76,
+          "confidence": 74,
           "advice": "Victoire Marseille",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.736,
+            "2": 0.124,
+            "N": 0.14
+          }
         }
       },
       {
@@ -69060,15 +69600,24 @@
         "home": "Paris FC",
         "away": "Lille",
         "prediction": {
-          "score": "1-2",
-          "score_conf": 11,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 13,
           "winner": "Lille",
-          "winner_conf": 53,
+          "winner_conf": 44,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 59,
-          "confidence": 53,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 54,
+          "confidence": 44,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 31,
+          "probs": {
+            "1": 0.31,
+            "2": 0.438,
+            "N": 0.252
+          }
         }
       },
       {
@@ -69077,15 +69626,24 @@
         "home": "Rennes",
         "away": "Nantes",
         "prediction": {
-          "score": "2-0",
-          "score_conf": 11,
+          "score": "2-1",
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Rennes",
-          "winner_conf": 66,
+          "winner_conf": 65,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 60,
-          "confidence": 66,
+          "goals_conf": 63,
+          "confidence": 65,
           "advice": "Victoire Rennes",
-          "red_card_prob": 19
+          "red_card_prob": 16,
+          "probs": {
+            "1": 0.65,
+            "2": 0.16,
+            "N": 0.19
+          }
         }
       },
       {
@@ -69094,15 +69652,24 @@
         "home": "Toulouse",
         "away": "Monaco",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 11,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 14,
           "winner": "Toulouse",
-          "winner_conf": 47,
-          "goals_pred": "+2.5 Buts",
-          "goals_conf": 59,
-          "confidence": 47,
+          "winner_conf": 40,
+          "goals_pred": "-2.5 Buts",
+          "goals_conf": 50,
+          "confidence": 40,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 25,
+          "probs": {
+            "1": 0.402,
+            "2": 0.346,
+            "N": 0.252
+          }
         }
       },
       {
@@ -69112,14 +69679,23 @@
         "away": "Angers",
         "prediction": {
           "score": "0-0",
-          "score_conf": 18,
+          "scores": {
+            "home": 0,
+            "away": 0
+          },
+          "score_conf": 22,
           "winner": "Nul",
-          "winner_conf": 39,
+          "winner_conf": 36,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 79,
-          "confidence": 39,
+          "goals_conf": 83,
+          "confidence": 36,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 18,
+          "probs": {
+            "1": 0.294,
+            "2": 0.342,
+            "N": 0.364
+          }
         }
       },
       {
@@ -69129,14 +69705,23 @@
         "away": "Le Havre",
         "prediction": {
           "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
           "score_conf": 17,
           "winner": "Lille",
-          "winner_conf": 51,
+          "winner_conf": 50,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 61,
-          "confidence": 51,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 71,
+          "confidence": 50,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 34,
+          "probs": {
+            "1": 0.502,
+            "2": 0.188,
+            "N": 0.31
+          }
         }
       },
       {
@@ -69145,15 +69730,24 @@
         "home": "Lyon",
         "away": "Rennes",
         "prediction": {
-          "score": "2-0",
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
           "score_conf": 12,
           "winner": "Lyon",
-          "winner_conf": 60,
+          "winner_conf": 48,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 50,
-          "confidence": 60,
-          "advice": "Victoire Lyon",
-          "red_card_prob": 19
+          "goals_conf": 53,
+          "confidence": 48,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 32,
+          "probs": {
+            "1": 0.478,
+            "2": 0.282,
+            "N": 0.24
+          }
         }
       },
       {
@@ -69163,14 +69757,23 @@
         "away": "Monaco",
         "prediction": {
           "score": "1-2",
-          "score_conf": 10,
+          "scores": {
+            "home": 1,
+            "away": 2
+          },
+          "score_conf": 13,
           "winner": "Monaco",
-          "winner_conf": 65,
+          "winner_conf": 70,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 64,
-          "confidence": 65,
-          "advice": "Victoire Monaco",
-          "red_card_prob": 19
+          "goals_conf": 69,
+          "confidence": 70,
+          "advice": "Victoire Monaco - Risque Exclusion",
+          "red_card_prob": 31,
+          "probs": {
+            "1": 0.138,
+            "2": 0.696,
+            "N": 0.166
+          }
         }
       },
       {
@@ -69179,15 +69782,24 @@
         "home": "Nantes",
         "away": "Marseille",
         "prediction": {
-          "score": "1-3",
-          "score_conf": 9,
+          "score": "0-2",
+          "scores": {
+            "home": 0,
+            "away": 2
+          },
+          "score_conf": 12,
           "winner": "Marseille",
-          "winner_conf": 73,
+          "winner_conf": 70,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 73,
-          "confidence": 73,
+          "goals_conf": 64,
+          "confidence": 70,
           "advice": "Victoire Marseille",
-          "red_card_prob": 19
+          "red_card_prob": 23,
+          "probs": {
+            "1": 0.144,
+            "2": 0.702,
+            "N": 0.154
+          }
         }
       },
       {
@@ -69197,14 +69809,23 @@
         "away": "Lens",
         "prediction": {
           "score": "0-2",
+          "scores": {
+            "home": 0,
+            "away": 2
+          },
           "score_conf": 14,
           "winner": "Lens",
-          "winner_conf": 69,
-          "goals_pred": "+2.5 Buts",
-          "goals_conf": 55,
-          "confidence": 69,
+          "winner_conf": 64,
+          "goals_pred": "-2.5 Buts",
+          "goals_conf": 51,
+          "confidence": 64,
           "advice": "Victoire Lens",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.154,
+            "2": 0.64,
+            "N": 0.206
+          }
         }
       },
       {
@@ -69213,15 +69834,24 @@
         "home": "Paris FC",
         "away": "Brest",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 11,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Brest",
-          "winner_conf": 39,
+          "winner_conf": 41,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 54,
-          "confidence": 39,
+          "goals_conf": 56,
+          "confidence": 41,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.316,
+            "2": 0.414,
+            "N": 0.27
+          }
         }
       },
       {
@@ -69231,14 +69861,23 @@
         "away": "Lorient",
         "prediction": {
           "score": "2-0",
-          "score_conf": 14,
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
+          "score_conf": 15,
           "winner": "PSG",
-          "winner_conf": 75,
+          "winner_conf": 73,
           "goals_pred": "+2.5 Buts",
           "goals_conf": 54,
-          "confidence": 75,
+          "confidence": 73,
           "advice": "Victoire PSG",
-          "red_card_prob": 19
+          "red_card_prob": 9,
+          "probs": {
+            "1": 0.728,
+            "2": 0.086,
+            "N": 0.186
+          }
         }
       },
       {
@@ -69248,14 +69887,23 @@
         "away": "Toulouse",
         "prediction": {
           "score": "1-0",
-          "score_conf": 10,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 13,
           "winner": "Strasbourg",
-          "winner_conf": 44,
+          "winner_conf": 42,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 52,
-          "confidence": 44,
+          "goals_conf": 62,
+          "confidence": 42,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 26,
+          "probs": {
+            "1": 0.418,
+            "2": 0.322,
+            "N": 0.26
+          }
         }
       },
       {
@@ -69265,14 +69913,23 @@
         "away": "Strasbourg",
         "prediction": {
           "score": "0-1",
-          "score_conf": 15,
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 16,
           "winner": "Strasbourg",
-          "winner_conf": 41,
+          "winner_conf": 46,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 61,
-          "confidence": 41,
+          "goals_conf": 67,
+          "confidence": 46,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 23,
+          "probs": {
+            "1": 0.234,
+            "2": 0.458,
+            "N": 0.308
+          }
         }
       },
       {
@@ -69281,15 +69938,24 @@
         "home": "Auxerre",
         "away": "Nice",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 13,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 15,
           "winner": "Nice",
-          "winner_conf": 35,
+          "winner_conf": 34,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 67,
-          "confidence": 35,
+          "goals_conf": 66,
+          "confidence": 34,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.332,
+            "2": 0.342,
+            "N": 0.326
+          }
         }
       },
       {
@@ -69298,15 +69964,24 @@
         "home": "Le Havre",
         "away": "Marseille",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 11,
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
+          "score_conf": 13,
           "winner": "Marseille",
-          "winner_conf": 55,
-          "goals_pred": "+2.5 Buts",
-          "goals_conf": 53,
-          "confidence": 55,
+          "winner_conf": 52,
+          "goals_pred": "-2.5 Buts",
+          "goals_conf": 59,
+          "confidence": 52,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 28,
+          "probs": {
+            "1": 0.208,
+            "2": 0.524,
+            "N": 0.268
+          }
         }
       },
       {
@@ -69315,15 +69990,24 @@
         "home": "Lens",
         "away": "Nantes",
         "prediction": {
-          "score": "3-0",
-          "score_conf": 16,
+          "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 17,
           "winner": "Lens",
-          "winner_conf": 82,
+          "winner_conf": 80,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 63,
-          "confidence": 82,
+          "goals_conf": 55,
+          "confidence": 80,
           "advice": "Victoire Lens",
-          "red_card_prob": 19
+          "red_card_prob": 14,
+          "probs": {
+            "1": 0.804,
+            "2": 0.062,
+            "N": 0.134
+          }
         }
       },
       {
@@ -69332,15 +70016,24 @@
         "home": "Metz",
         "away": "Lorient",
         "prediction": {
-          "score": "1-2",
+          "score": "1-1",
+          "scores": {
+            "home": 1,
+            "away": 1
+          },
           "score_conf": 12,
           "winner": "Lorient",
           "winner_conf": 55,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 61,
+          "goals_conf": 54,
           "confidence": 55,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.232,
+            "2": 0.548,
+            "N": 0.22
+          }
         }
       },
       {
@@ -69350,14 +70043,23 @@
         "away": "Lille",
         "prediction": {
           "score": "2-1",
-          "score_conf": 12,
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
+          "score_conf": 11,
           "winner": "Monaco",
-          "winner_conf": 46,
+          "winner_conf": 44,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 72,
-          "confidence": 46,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 61,
+          "confidence": 44,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 40,
+          "probs": {
+            "1": 0.44,
+            "2": 0.358,
+            "N": 0.202
+          }
         }
       },
       {
@@ -69367,14 +70069,23 @@
         "away": "Brest",
         "prediction": {
           "score": "2-0",
-          "score_conf": 12,
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
+          "score_conf": 16,
           "winner": "PSG",
-          "winner_conf": 79,
-          "goals_pred": "+2.5 Buts",
-          "goals_conf": 67,
-          "confidence": 79,
+          "winner_conf": 70,
+          "goals_pred": "-2.5 Buts",
+          "goals_conf": 53,
+          "confidence": 70,
           "advice": "Victoire PSG",
-          "red_card_prob": 19
+          "red_card_prob": 27,
+          "probs": {
+            "1": 0.704,
+            "2": 0.088,
+            "N": 0.208
+          }
         }
       },
       {
@@ -69383,15 +70094,24 @@
         "home": "Rennes",
         "away": "Paris FC",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 10,
+          "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 12,
           "winner": "Rennes",
-          "winner_conf": 55,
+          "winner_conf": 59,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 60,
-          "confidence": 55,
+          "goals_conf": 53,
+          "confidence": 59,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 17,
+          "probs": {
+            "1": 0.59,
+            "2": 0.178,
+            "N": 0.232
+          }
         }
       },
       {
@@ -69400,15 +70120,24 @@
         "home": "Toulouse",
         "away": "Lyon",
         "prediction": {
-          "score": "0-1",
+          "score": "0-0",
+          "scores": {
+            "home": 0,
+            "away": 0
+          },
           "score_conf": 22,
-          "winner": "Lyon",
-          "winner_conf": 40,
+          "winner": "Nul",
+          "winner_conf": 38,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 77,
-          "confidence": 40,
+          "goals_conf": 81,
+          "confidence": 38,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 26,
+          "probs": {
+            "1": 0.286,
+            "2": 0.334,
+            "N": 0.38
+          }
         }
       },
       {
@@ -69417,15 +70146,24 @@
         "home": "Paris FC",
         "away": "PSG",
         "prediction": {
-          "score": "0-2",
-          "score_conf": 12,
+          "score": "0-1",
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 14,
           "winner": "PSG",
-          "winner_conf": 76,
+          "winner_conf": 69,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 68,
-          "confidence": 76,
+          "goals_conf": 53,
+          "confidence": 69,
           "advice": "Victoire PSG",
-          "red_card_prob": 19
+          "red_card_prob": 9,
+          "probs": {
+            "1": 0.106,
+            "2": 0.692,
+            "N": 0.202
+          }
         }
       },
       {
@@ -69435,14 +70173,23 @@
         "away": "Angers",
         "prediction": {
           "score": "1-0",
-          "score_conf": 13,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 19,
           "winner": "Brest",
-          "winner_conf": 43,
+          "winner_conf": 48,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 61,
-          "confidence": 43,
+          "goals_conf": 73,
+          "confidence": 48,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 22,
+          "probs": {
+            "1": 0.478,
+            "2": 0.224,
+            "N": 0.298
+          }
         }
       },
       {
@@ -69452,14 +70199,23 @@
         "away": "Le Havre",
         "prediction": {
           "score": "1-0",
-          "score_conf": 14,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 18,
           "winner": "Lorient",
-          "winner_conf": 43,
+          "winner_conf": 46,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 63,
-          "confidence": 43,
+          "goals_conf": 73,
+          "confidence": 46,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.462,
+            "2": 0.228,
+            "N": 0.31
+          }
         }
       },
       {
@@ -69469,14 +70225,23 @@
         "away": "Rennes",
         "prediction": {
           "score": "2-1",
-          "score_conf": 9,
+          "scores": {
+            "home": 2,
+            "away": 1
+          },
+          "score_conf": 12,
           "winner": "Marseille",
-          "winner_conf": 62,
+          "winner_conf": 60,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 78,
-          "confidence": 62,
-          "advice": "Victoire Marseille",
-          "red_card_prob": 19
+          "goals_conf": 67,
+          "confidence": 60,
+          "advice": "Victoire Marseille - Risque Exclusion",
+          "red_card_prob": 32,
+          "probs": {
+            "1": 0.602,
+            "2": 0.21,
+            "N": 0.188
+          }
         }
       },
       {
@@ -69485,15 +70250,24 @@
         "home": "Nantes",
         "away": "Toulouse",
         "prediction": {
-          "score": "1-2",
-          "score_conf": 11,
+          "score": "0-1",
+          "scores": {
+            "home": 0,
+            "away": 1
+          },
+          "score_conf": 17,
           "winner": "Toulouse",
-          "winner_conf": 60,
-          "goals_pred": "+2.5 Buts",
-          "goals_conf": 57,
-          "confidence": 60,
+          "winner_conf": 55,
+          "goals_pred": "-2.5 Buts",
+          "goals_conf": 63,
+          "confidence": 55,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 13,
+          "probs": {
+            "1": 0.196,
+            "2": 0.552,
+            "N": 0.252
+          }
         }
       },
       {
@@ -69503,14 +70277,23 @@
         "away": "Auxerre",
         "prediction": {
           "score": "1-0",
-          "score_conf": 18,
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 20,
           "winner": "Lille",
-          "winner_conf": 58,
+          "winner_conf": 65,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 63,
-          "confidence": 58,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 58,
+          "confidence": 65,
+          "advice": "Victoire Lille - Risque Exclusion",
+          "red_card_prob": 37,
+          "probs": {
+            "1": 0.652,
+            "2": 0.126,
+            "N": 0.222
+          }
         }
       },
       {
@@ -69519,15 +70302,24 @@
         "home": "Nice",
         "away": "Metz",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 10,
+          "score": "2-0",
+          "scores": {
+            "home": 2,
+            "away": 0
+          },
+          "score_conf": 12,
           "winner": "Nice",
-          "winner_conf": 54,
+          "winner_conf": 58,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 63,
-          "confidence": 54,
+          "goals_conf": 53,
+          "confidence": 58,
           "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "red_card_prob": 16,
+          "probs": {
+            "1": 0.576,
+            "2": 0.216,
+            "N": 0.208
+          }
         }
       },
       {
@@ -69536,15 +70328,24 @@
         "home": "Strasbourg",
         "away": "Monaco",
         "prediction": {
-          "score": "2-1",
-          "score_conf": 8,
+          "score": "1-0",
+          "scores": {
+            "home": 1,
+            "away": 0
+          },
+          "score_conf": 11,
           "winner": "Strasbourg",
-          "winner_conf": 49,
+          "winner_conf": 50,
           "goals_pred": "+2.5 Buts",
-          "goals_conf": 66,
-          "confidence": 49,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 63,
+          "confidence": 50,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 37,
+          "probs": {
+            "1": 0.502,
+            "2": 0.268,
+            "N": 0.23
+          }
         }
       },
       {
@@ -69553,15 +70354,24 @@
         "home": "Lyon",
         "away": "Lens",
         "prediction": {
-          "score": "0-1",
-          "score_conf": 17,
-          "winner": "Lens",
-          "winner_conf": 37,
+          "score": "0-0",
+          "scores": {
+            "home": 0,
+            "away": 0
+          },
+          "score_conf": 21,
+          "winner": "Nul",
+          "winner_conf": 36,
           "goals_pred": "-2.5 Buts",
-          "goals_conf": 75,
-          "confidence": 37,
-          "advice": "Les deux marquent (BTTS)",
-          "red_card_prob": 19
+          "goals_conf": 82,
+          "confidence": 36,
+          "advice": "Les deux marquent (BTTS) - Risque Exclusion",
+          "red_card_prob": 33,
+          "probs": {
+            "1": 0.3,
+            "2": 0.344,
+            "N": 0.356
+          }
         }
       }
     ]
