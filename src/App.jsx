@@ -45,7 +45,12 @@ function getInitialViewWeek(schedule, fallbackWeek) {
 function App() {
     // Shared State
     // Default to first match or mock
-    const [selectedMatch, setSelectedMatch] = useState(APP_DATA.nextMatches[0] || {});
+    const [selectedMatch, setSelectedMatch] = useState(() => {
+        if (APP_DATA.nextMatches && APP_DATA.nextMatches.length > 0) return APP_DATA.nextMatches[0];
+        const nextScheduled = APP_DATA.fullSchedule?.find(m => m.status === 'SCHEDULED' && m.week >= APP_DATA.currentWeek) || APP_DATA.fullSchedule?.find(m => m.status === 'SCHEDULED');
+        if (nextScheduled) return nextScheduled;
+        return { homeTeam: 'PSG', awayTeam: 'Marseille' };
+    });
     // Shared state for Calendar and Standings view (passed to Dashboard)
     // Initialize to the last matchday with real results
     const [currentViewWeek, setCurrentViewWeek] = useState(() => getInitialViewWeek(APP_DATA.fullSchedule, APP_DATA.currentWeek));

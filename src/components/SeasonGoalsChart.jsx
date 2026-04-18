@@ -80,8 +80,9 @@ const SeasonGoalsChart = ({ schedule = [], currentWeek = 1, teamStats = {} }) =>
             const isFinishedWeek = finishedMatches > (matches.length / 2); // Mostly finished
 
             if (isFinishedWeek) {
-                // REAL DATA
+                // REAL DATA — Exclude POSTPONED from goal count
                 const weekGoals = matches.reduce((acc, m) => {
+                    if (m.status === 'POSTPONED' || m.status !== 'FINISHED') return acc;
                     const h = m.score?.home ?? 0;
                     const a = m.score?.away ?? 0;
                     return acc + h + a;

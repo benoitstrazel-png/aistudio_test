@@ -227,6 +227,8 @@ const LeagueCalendar = ({ schedule, selectedWeek, onWeekChange, highlightTeams =
 
                                 if (match.status === 'FINISHED') {
                                     displayScore = `${match.score.home}-${match.score.away}`;
+                                } else if (match.status === 'POSTPONED') {
+                                    displayScore = '?-?';
                                 }
                                 // -----------------------------------------------------------------------
 
@@ -256,6 +258,10 @@ const LeagueCalendar = ({ schedule, selectedWeek, onWeekChange, highlightTeams =
                                                 {match.status === 'FINISHED' ? (
                                                     <span className="text-xl font-black font-mono text-accent tracking-widest mb-1">
                                                         {displayScore}
+                                                    </span>
+                                                ) : match.status === 'POSTPONED' ? (
+                                                    <span className="text-xl font-black font-mono text-slate-600 tracking-widest mb-1">
+                                                        -
                                                     </span>
                                                 ) : (
                                                     <div className="mb-1">
@@ -287,6 +293,17 @@ const LeagueCalendar = ({ schedule, selectedWeek, onWeekChange, highlightTeams =
                                                                 <span className="text-[9px]">🟥</span>
                                                                 <span>{match.prediction.red_card_prob}% Exclusion</span>
                                                             </div>
+                                                        )}
+                                                    </div>
+                                                )}
+                                                {/* POSTPONED badge */}
+                                                {match.status === 'POSTPONED' && (
+                                                    <div className="flex flex-col items-center gap-1 mt-1">
+                                                        <span className="text-[10px] font-bold uppercase tracking-wider text-orange-400 bg-orange-400/10 border border-orange-400/30 px-2 py-0.5 rounded-full">
+                                                            ⏸ Reporté
+                                                        </span>
+                                                        {match.date && (
+                                                            <span className="text-[9px] text-slate-500">{match.date}</span>
                                                         )}
                                                     </div>
                                                 )}

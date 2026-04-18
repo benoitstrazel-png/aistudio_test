@@ -116,6 +116,21 @@
       "yellowCards": 1,
       "redCards": 0,
       "latestRound": 12
+    },
+    {
+      "name": "O'Neil G.",
+      "team": "Strasbourg",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 26
     }
   ],
   "Le Havre": [
@@ -215,9 +230,9 @@
       "subOut": 0,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 1,
+      "yellowCards": 2,
       "redCards": 0,
-      "latestRound": 3
+      "latestRound": 26
     }
   ],
   "Brest": [
@@ -249,9 +264,9 @@
       "subOut": 0,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 1,
+      "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 23
+      "latestRound": 27
     }
   ],
   "Nice": [

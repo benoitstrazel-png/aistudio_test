@@ -71,6 +71,7 @@ export const calculateStandingsAtWeek = (currentStandings, schedule, targetWeek,
     sortedSchedule.forEach(match => {
         if (!match.week || match.week > targetWeek) return;
         if (processedMatchIds.has(match.id)) return; // CHANGE: Prevent double counting
+        if (match.status === 'POSTPONED') return; // POSTPONED matches are never counted
 
         processedMatchIds.add(match.id);
 
