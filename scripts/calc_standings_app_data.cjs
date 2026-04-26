@@ -6,8 +6,23 @@ const HIST_FILE = 'src/data/matches_history_detailed.json';
 const app = JSON.parse(fs.readFileSync(APP_FILE, 'utf-8'));
 const history = JSON.parse(fs.readFileSync(HIST_FILE, 'utf-8'));
 
-app.currentWeek = 29;
-
+// Calculate currentWeek based on the highest round with played matches
+let maxPlayedWeek = 1;
+history.forEach(m => {
+    if (m.score && m.score !== "-") {
+        if (m.round) {
+            const weekMatch = m.round.match(/Journée (\d+)/i);
+            if (weekMatch) {
+                const weekNum = parseInt(weekMatch[1], 10);
+                if (weekNum > maxPlayedWeek) {
+                    maxPlayedWeek = weekNum;
+                }
+            }
+        }
+    }
+});
+app.currentWeek = maxPlayedWeek;
+console.log(`Dynamically set currentWeek to ${app.currentWeek}`);
 // Function to normalize team names to match the standings list format exactly
 function cleanTeamName(name) {
     if (!name) return "Unknown";

@@ -103,9 +103,9 @@ async function run() {
     const rounds = JSON.parse(fs.readFileSync(URLS_FILE, 'utf-8'));
     const allMatches = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf-8'));
 
-    // Filter rounds
-    const targetRounds = rounds.filter(r => r.round === 'Journée 6' || r.round === 'Journée 7');
-    console.log(`Found ${targetRounds.length} target rounds.`);
+    // Filter rounds (All rounds to find any missing matches)
+    const targetRounds = rounds;
+    console.log(`Checking ${targetRounds.length} total rounds for missing matches.`);
 
     // Identify missing URLs
     const existingUrls = new Set(allMatches.map(m => m.url));

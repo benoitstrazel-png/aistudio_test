@@ -28,9 +28,9 @@
       "subOut": 0,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 2,
+      "yellowCards": 3,
       "redCards": 0,
-      "latestRound": 17
+      "latestRound": 30
     }
   ],
   "Nantes": [
@@ -48,6 +48,21 @@
       "yellowCards": 6,
       "redCards": 0,
       "latestRound": 10
+    },
+    {
+      "name": "Halilhodzic V.",
+      "team": "Nantes",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 1,
+      "latestRound": 30
     }
   ],
   "Lille": [
@@ -131,6 +146,21 @@
       "yellowCards": 1,
       "redCards": 0,
       "latestRound": 26
+    },
+    {
+      "name": "Sabaly I.",
+      "team": "Strasbourg",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 0,
+      "redCards": 0,
+      "latestRound": 30
     }
   ],
   "Le Havre": [
@@ -264,9 +294,9 @@
       "subOut": 0,
       "goals": 0,
       "assists": 0,
-      "yellowCards": 3,
+      "yellowCards": 4,
       "redCards": 0,
-      "latestRound": 27
+      "latestRound": 30
     }
   ],
   "Nice": [
