@@ -161,6 +161,21 @@
       "yellowCards": 0,
       "redCards": 0,
       "latestRound": 30
+    },
+    {
+      "name": "Dieme Y.",
+      "team": "Strasbourg",
+      "position": "",
+      "matchesPlayed": 0,
+      "minutesPlayed": 0,
+      "starter": 0,
+      "subIn": 0,
+      "subOut": 1,
+      "goals": 0,
+      "assists": 0,
+      "yellowCards": 1,
+      "redCards": 0,
+      "latestRound": 32
     }
   ],
   "Le Havre": [
